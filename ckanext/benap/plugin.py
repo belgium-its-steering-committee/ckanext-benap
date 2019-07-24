@@ -23,4 +23,4 @@ class BenapPlugin(plugins.SingletonPlugin):
         toolkit.add_resource('fanstatic', 'benap')
 
     def get_helpers(self):
-        return {'benap_geographic_granularity_helper': lambda x: map_for_form_select(self.geographic_granularity_map, x)}
+        return {'benap_geographic_granularity_helper': lambda x: map_for_form_select(self.geographic_granularity_map)}
