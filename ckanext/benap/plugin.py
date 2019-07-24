@@ -1,10 +1,23 @@
+import copy
+import json
+
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 
+from ckanext.benap.util.forms import map_for_form_select
+
 
 class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
-    plugins.implements(plugins.IConfigurer)
-    plugins.implements(plugins.IDatasetForm)
+    plugins.implements(plugins.IConfigurer, inherit=True)
+    plugins.implements(plugins.IDatasetForm, inherit=True)
+    plugins.implements(plugins.ITemplateHelpers, inherit=False)
+
+    geographic_granularity_map = [('', ''),
+                                  ('national', 'National'),
+                                  ('regional', 'Regional'),
+                                  ('province', 'province-'),
+                                  ('municipality', 'municipality'),
+                                  ('other', 'other')]
 
     # IConfigurer
 
@@ -12,6 +25,9 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         toolkit.add_template_directory(config_, 'templates')
         toolkit.add_public_directory(config_, 'public')
         toolkit.add_resource('fanstatic', 'benap')
+
+    def get_helpers(self):
+        return {'benap_geographic_granularity_map': lambda: map_for_form_select(self.geographic_granularity_map)}
 
     # IDatasetForm custom schema for BENAP
 
@@ -22,6 +38,10 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
                 toolkit.get_converter('convert_to_extras')
             ],
             'dataset_location': [
+                toolkit.get_validator('ignore_missing'),
+                toolkit.get_converter('convert_to_extras')
+            ],
+            'geographic_granularity': [
                 toolkit.get_validator('ignore_missing'),
                 toolkit.get_converter('convert_to_extras')
             ]
@@ -46,6 +66,10 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
                 toolkit.get_validator('ignore_missing')
             ],
             'dataset_location': [
+                toolkit.get_converter('convert_from_extras'),
+                toolkit.get_validator('ignore_missing')
+            ],
+            'geographic_granularity': [
                 toolkit.get_converter('convert_from_extras'),
                 toolkit.get_validator('ignore_missing')
             ]
