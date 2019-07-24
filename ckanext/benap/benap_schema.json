@@ -53,10 +53,12 @@
       "form_placeholder": "1.0"
     },
     {
-      "field_name": "author",
+      "field_name": "authors",
       "label": "Author",
       "form_placeholder": "Joe Bloggs",
-      "display_property": "dc:creator"
+      "display_property": "dc:creator",
+      "preset": "repeating_text",
+      "form_blanks": 3
     },
     {
       "field_name": "author_email",
