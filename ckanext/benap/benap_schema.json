@@ -90,11 +90,16 @@
         "nl": "NAP informatie (test)"
       },
       "validators": "ignore_missing unicode",
+      "display_property": "dct:temporal",
       "form_placeholder": "..."
     },
     {
       "field_name": "nap_region",
       "label": "Region (test)",
+      "help_text": {
+        "en": "Enter a region name",
+        "nl": "Geef de naam van regio"
+      },
       "validators": "ignore_missing unicode",
       "form_placeholder": "Flanders, Brussels, Wallonia"
     },
