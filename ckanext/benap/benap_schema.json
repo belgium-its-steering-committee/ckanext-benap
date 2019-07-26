@@ -141,6 +141,12 @@
       "label": "Geographic granularity (test)",
       "preset": "select",
       "choices_helper": "benap_geographic_granularity_helper"
+    },
+    {
+      "field_name": "ontology_test",
+      "label": "Ontology (test)",
+      "preset": "select",
+      "choices_helper": "benap_ontology_helper"
     }
   ],
   "resource_fields": [
