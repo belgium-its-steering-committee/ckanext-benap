@@ -53,12 +53,10 @@
       "form_placeholder": "1.0"
     },
     {
-      "field_name": "authors",
+      "field_name": "author",
       "label": "Author",
       "form_placeholder": "Joe Bloggs",
-      "display_property": "dc:creator",
-      "preset": "repeating_text",
-      "form_blanks": 3
+      "display_property": "dc:creator"
     },
     {
       "field_name": "author_email",
@@ -83,71 +81,30 @@
       "display_email_name_field": "maintainer"
     },
     {
-      "field_name": "nap_info",
-      "label": {
-        "en": "NAP information (test)",
-        "fr": "NAP information (test)",
-        "nl": "NAP informatie (test)"
-      },
-      "validators": "ignore_missing unicode",
-      "display_property": "dct:temporal",
-      "form_placeholder": "..."
-    },
-    {
-      "field_name": "nap_region",
-      "label": "Region (test)",
-      "help_text": {
-        "en": "Enter a region name",
-        "nl": "Geef de naam van regio"
-      },
-      "validators": "ignore_missing unicode",
-      "form_placeholder": "Flanders, Brussels, Wallonia"
-    },
-    {
-      "field_name": "category",
-      "label": "Category (test)",
-      "help_text": {
-        "en": "Category selection",
-        "fr": "Sélection de la catégorie",
-        "nl": "Categorie selectie"
-      },
-      "help_inline": true,
+      "field_name": "theme",
+      "label": "Dataset theme",
+      "display_property": "dcat:theme",
       "preset": "select",
-      "choices": [
-        {
-          "value": "bactrian",
-          "label": "Bactrian Camel"
-        },
-        {
-          "value": "hybrid",
-          "label": "Hybrid Camel"
-        },
-        {
-          "value": "f2hybrid",
-          "label": "F2 Hybrid Camel"
-        },
-        {
-          "value": "snowwhite",
-          "label": "Snow-white Dromedary"
-        },
-        {
-          "value": "black",
-          "label": "Black Camel"
-        }
-      ]
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "data-theme"
     },
     {
-      "field_name": "geographic_granularity",
-      "label": "Geographic granularity (test)",
+      "field_name": "language",
+      "label": "Dataset language",
+      "display_property": "dct:language",
       "preset": "select",
-      "choices_helper": "benap_geographic_granularity_helper"
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "language"
     },
     {
-      "field_name": "ontology_test",
-      "label": "Ontology (test)",
+      "field_name": "frequency",
+      "label": "Accrual periodicity",
+      "display_property": "dct:accrualPeriodicity",
       "preset": "select",
-      "choices_helper": "benap_ontology_helper"
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "frequency"
     }
+
   ],
   "resource_fields": [
     {

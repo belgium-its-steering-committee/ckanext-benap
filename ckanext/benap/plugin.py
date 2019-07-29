@@ -1,3 +1,4 @@
+# coding=utf-8
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 
@@ -16,14 +17,59 @@ class BenapPlugin(plugins.SingletonPlugin):
                                   ('other', 'other')]
 
     def _ontology_helper(self, context):
-        helper_out = map_for_form_select([
-            ('http://publications.europa.eu/resource/authority/data-theme/TRAN', {
-                "en": "Transport",
-                "fr": "Transports",
-                "nl": "Vervoer"
-            })
-        ])
-        return helper_out
+        ontology = context.get("benap_helper_ontology", None)
+        if ontology == "language":
+            return map_for_form_select([
+                ('http://publications.europa.eu/resource/authority/language/FRA', {
+                    "en": "French",
+                    "fr": "français",
+                    "nl": "Frans",
+                    "de": "Französisch"
+                }),
+                ('http://publications.europa.eu/resource/authority/language/ENG', {
+                    "en": "English",
+                    "fr": "anglais",
+                    "nl": "Engels",
+                    "de": "Englisch"
+                }),
+                ('http://publications.europa.eu/resource/authority/language/NLD', {
+                    "en": "Dutch",
+                    "fr": "néerlandais",
+                    "nl": "Nederlands",
+                    "de": "Niederländisch"
+                }),
+                ('http://publications.europa.eu/resource/authority/language/DEU', {
+                    "en": "German",
+                    "fr": "allemand",
+                    "nl": "Duits",
+                    "de": "Deutsch"
+                }),
+            ])
+        elif ontology == "data-theme":
+            return map_for_form_select([
+                ('http://publications.europa.eu/resource/authority/data-theme/TRAN', {
+                    "en": "Transport",
+                    "fr": "Transports",
+                    "nl": "Vervoer",
+                    "de": "Verkehr"
+                })
+            ])
+        elif ontology == "frequency":
+            return map_for_form_select([
+                ('http://publications.europa.eu/resource/authority/frequency/NEVER', {
+                    "en": "Never"
+                }),
+                ('http://publications.europa.eu/resource/authority/frequency/ANNUAL', {
+                    "en": "Annual"
+                }),
+                ('http://publications.europa.eu/resource/authority/frequency/MONTHLY', {
+                    "en": "Monthly"
+                }),
+                ('http://publications.europa.eu/resource/authority/frequency/WEEKLY', {
+                    "en": "Weekly"
+                })
+            ])
+        return None
 
     # IConfigurer
 
