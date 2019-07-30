@@ -53,6 +53,13 @@
       "form_placeholder": "1.0"
     },
     {
+      "field_name": "version_notes",
+      "label": "Version notes",
+      "validators": "ignore_missing unicode",
+      "form_snippet": "markdown.html",
+      "form_placeholder": "eg. Some useful notes about the version"
+    },
+    {
       "field_name": "author",
       "label": "Author",
       "form_placeholder": "Joe Bloggs",
