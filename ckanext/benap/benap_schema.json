@@ -111,7 +111,6 @@
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "frequency"
     }
-
   ],
   "resource_fields": [
     {
@@ -134,6 +133,14 @@
       "field_name": "format",
       "label": "Format",
       "preset": "resource_format_autocomplete"
+    },
+    {
+      "field_name": "language",
+      "label": "Resource language",
+      "display_property": "dct:language",
+      "preset": "select",
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "language"
     }
   ]
 }
