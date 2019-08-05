@@ -66,6 +66,20 @@
       "display_property": "dc:creator"
     },
     {
+      "field_name": "more_info",
+      "label": "More information",
+      "preset": "fluent_text",
+      "form_placeholder": "...",
+      "form_languages": ["en", "fr", "nl", "de"]
+    },
+    {
+      "field_name": "more_text",
+      "label": "More text",
+      "preset": "fluent_markdown",
+      "form_placeholder": "...",
+      "form_languages": ["en", "fr", "nl", "de"]
+    },
+    {
       "field_name": "author_email",
       "label": "Author Email",
       "form_placeholder": "joe@example.com",
