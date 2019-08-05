@@ -5,34 +5,112 @@
   "about_url": "https://github.com/belgium-its-steering-committee/ckanext-benap",
   "dataset_fields": [
     {
+      "field_name": "language",
+      "label": "Metadata language",
+      "display_property": "dct:language",
+      "preset": "multiple_select",
+      "help_text": "Describes the language(s) in which the metadata is described",
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "language",
+      "required":"true"
+    },
+    {
       "field_name": "title",
-      "label": "Title",
+      "label": "Name of dataset",
       "preset": "title",
-      "form_placeholder": "eg. A descriptive title"
+      "form_placeholder": "e.g. Highway Network",
+      "help_text": "Describes the dataset in a generic term or gives a short description. The author is encouraged to write a meaningful description",
+      "required":"true"
     },
     {
       "field_name": "name",
       "label": "URL",
       "preset": "dataset_slug",
-      "form_placeholder": "eg. my-dataset"
+      "form_placeholder": "eg. highway-network"
     },
     {
       "field_name": "notes",
-      "label": "Description",
+      "label": "Description of dataset",
       "form_snippet": "markdown.html",
-      "form_placeholder": "eg. Some useful notes about the data"
+      "form_placeholder": "eg. “Contains static high priority network of Belgium: Road Name, Lane number, Direction”",
+      "help_text":"Gives the user more information about content of the dataset or service. The used language for the description should be the language from the field metadata language",
+      "required":"true"
+    },
+    {
+      "field_name": "cont_res",
+      "label": "Resource type",
+      "preset": "select",
+      "choices": [
+    	{
+      		"value": "Data set",
+      		"label": "Data set"
+    	},
+    	{
+      		"value": "Service",
+      		"label": "Service"
+    	}
+    ],
+      "help_text": "'Travel information service' means an ITS service, including digital maps, that provides users, and end-users, with travel and traffic information of at least one transport mode",
+      "required":"true"
+    },
+    {
+      "field_name": "temporal_start",
+      "label": "Start date of publication",
+      "preset": "datetime",
+      "help_text": "Describes from which date and time on the data delivery is applicable. If left empty, the publication is considered as available immediately"
+    },
+    {
+      "field_name": "temporal_end",
+      "label": "End date of publication",
+      "preset": "datetime",
+      "help_text": "Describes the date when data delivery to this publication terminates. If left empty, the publication does not expire"
     },
     {
       "field_name": "tag_string",
-      "label": "Tags",
+      "label": "Transportation modes covered",
       "preset": "tag_string_autocomplete",
-      "form_placeholder": "eg. economy, mental health, government"
+      "form_placeholder": "[TO BE ADAPTED] this field is will have to contain a predefined list of items",
+      "help_text":"Describes the transportation mode covered by the data set. Please select at least one item",
+      "required":"true"
     },
     {
       "field_name": "license_id",
-      "label": "License",
-      "form_snippet": "license.html",
-      "help_text": "License definitions and additional information can be found at http://opendefinition.org/"
+      "label": "Contract or licence",
+      "preset": "select",
+      "choices": [
+    	{
+      		"value": "No licence – No contract",
+      		"label": "No licence – No contract"
+    	},
+    	{
+      		"value": "Licence and Free of charge",
+      		"label": "Licence and Free of charge"
+    	},
+    	{
+      		"value": "Licence and Fee",
+      		"label": "Licence and Fee"
+    	},
+    	{
+      		"value": "Contract and Free of charge",
+      		"label": "Contract and Free of charge"
+    	},
+    	{
+      		"value": "Contract and Fee",
+      		"label": "Contract and Fee"
+    	},
+     	{
+      		"value": "Not relevant",
+      		"label": "Not relevant"
+    	}
+    ],
+      "help_text": "Describes the conditions of use of the data set",
+      "required":"true"
+    },
+    {
+      "field_name": "con_description",
+      "label": "Condition for use",
+      "form_placeholder": "eg. www.myorganization.com/terms.pdf",
+      "help_text":"If applicable, please provide an URL (eg. to a PDF document) which contains all important information, or describe the conditions explicitly",
     },
     {
       "field_name": "owner_org",
@@ -96,14 +174,6 @@
       "benap_helper_ontology": "data-theme"
     },
     {
-      "field_name": "language",
-      "label": "Dataset language",
-      "display_property": "dct:language",
-      "preset": "select",
-      "choices_helper": "benap_ontology_helper",
-      "benap_helper_ontology": "language"
-    },
-    {
       "field_name": "frequency",
       "label": "Accrual periodicity",
       "display_property": "dct:accrualPeriodicity",
@@ -136,11 +206,11 @@
     },
     {
       "field_name": "language",
-      "label": "Resource language",
+      "label": "Dataset language",
       "display_property": "dct:language",
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
-      "benap_helper_ontology": "language"
+      "benap_helper_ontology": "EU-language"
     }
   ]
 }
