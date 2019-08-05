@@ -70,6 +70,7 @@
       "label": "More information",
       "preset": "fluent_text",
       "form_placeholder": "...",
+      "form_attrs": {"class": "form-control"},
       "form_languages": ["en", "fr", "nl", "de"]
     },
     {
@@ -77,6 +78,7 @@
       "label": "More text",
       "preset": "fluent_markdown",
       "form_placeholder": "...",
+      "form_attrs": {"class": "form-control"},
       "form_languages": ["en", "fr", "nl", "de"]
     },
     {
