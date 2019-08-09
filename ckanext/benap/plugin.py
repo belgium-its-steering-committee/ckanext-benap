@@ -21,185 +21,188 @@ class BenapPlugin(plugins.SingletonPlugin):
         if ontology == "language":
             return map_for_form_select([
                 ('http://publications.europa.eu/resource/authority/language/FRA', {
-                    "en": "French",
-                    "fr": "Français",
-                    "nl": "Frans",
-                    "de": "Französisch"
-                }),
-                ('http://publications.europa.eu/resource/authority/language/NLD', {
-                    "en": "Dutch",
-                    "fr": "Néerlandais",
-                    "nl": "Nederlands",
-                    "de": "Niederländisch"
-                }),
-                ('http://publications.europa.eu/resource/authority/language/DEU', {
-                    "en": "German",
-                    "fr": "Allemand",
-                    "nl": "Duits",
-                    "de": "Deutsch"
+                    "en": u"French",
+                    "fr": u"Français",
+                    "nl": u"Frans",
+                    "de": u"Französisch"
                 }),
                 ('http://publications.europa.eu/resource/authority/language/ENG', {
-                    "en": "English",
-                    "fr": "Anglais",
-                    "nl": "Engels",
-                    "de": "Englisch"
+                    "en": u"English",
+                    "fr": u"Anglais",
+                    "nl": u"Engels",
+                    "de": u"Englisch"
+                }),
+                ('http://publications.europa.eu/resource/authority/language/NLD', {
+                    "en": u"Dutch",
+                    "fr": u"Néerlandais",
+                    "nl": u"Nederlands",
+                    "de": u"Niederländisch"
+                }),
+                ('http://publications.europa.eu/resource/authority/language/DEU', {
+                    "en": u"German",
+                    "fr": u"Allemand",
+                    "nl": u"Duits",
+                    "de": u"Deutsch"
                 }),
             ])
-            if ontology == "EU-language":
-                return map_for_form_select([
-                    ('http://publications.europa.eu/resource/authority/language/BUL', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
-                    }),
+
+        if ontology == "EU-language":
+            return map_for_form_select([
+                ('http://publications.europa.eu/resource/authority/language/BUL', {
+                    "en": u"Bulgarian",
+                    "fr": u"Bulgare",
+                    "nl": u"Bulgaars",
+                    "de": u"Bulgarisch"
+                }),
                     ('http://publications.europa.eu/resource/authority/language/HRV', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"Croatian",
+                        "fr": u"Croate",
+                        "nl": u"Kroatisch",
+                        "de": u"Kroatisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/CES', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"Czech",
+                        "fr": u"Tchèque",
+                        "nl": u"Tsjechisch",
+                        "de": u"Tschechisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/DAN', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"Danish",
+                        "fr": u"Danois",
+                        "nl": u"Deens",
+                        "de": u"Dänisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/NLD', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"Dutch",
+                        "fr": u"Néerlandais",
+                        "nl": u"Nederlands",
+                        "de": u"Niederländisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/ENG', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"English",
+                        "fr": u"Anglais",
+                        "nl": u"Engels",
+                        "de": u"Englisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/EST', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"Estonian",
+                        "fr": u"Estonien",
+                        "nl": u"Ests",
+                        "de": u"Estnisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/FIN', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"Finnish",
+                        "fr": u"Finnois",
+                        "nl": u"Fins",
+                        "de": u"Finnisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/FRA', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"French",
+                        "fr": u"Français",
+                        "nl": u"Frans",
+                        "de": u"Französisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/DEU', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"German",
+                        "fr": u"Allemand",
+                        "nl": u"Duits",
+                        "de": u"Deutsch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/ELL', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"Greek",
+                        "fr": u"Grec",
+                        "nl": u"Grieks",
+                        "de": u"Griechisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/HUN', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"Hungarian",
+                        "fr": u"Hongrois",
+                        "nl": u"Hongaars",
+                        "de": u"Ungarisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/GLE', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"Irish",
+                        "fr": u"Irlandais",
+                        "nl": u"Iers",
+                        "de": u"Irisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/ITA', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"Italian",
+                        "fr": u"Italien",
+                        "nl": u"Italiaans",
+                        "de": u"Italienisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/LAV', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"Latvian",
+                        "fr": u"Letton",
+                        "nl": u"Lets",
+                        "de": u"Lettisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/LIT', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"Lithuanian",
+                        "fr": u"Lituanien",
+                        "nl": u"Litouws",
+                        "de": u"Litauisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/MLT', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"Maltese",
+                        "fr": u"Maltais",
+                        "nl": u"Maltees",
+                        "de": u"Maltesisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/POL', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"Polish",
+                        "fr": u"Polonais",
+                        "nl": u"Pools",
+                        "de": u"Polnisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/POR', {
-                        "en": "French",
-                        "fr": "Français",
-                        "nl": "Frans",
-                        "de": "Französisch"
+                        "en": u"Portuguese",
+                        "fr": u"Portugais",
+                        "nl": u"Portugees",
+                        "de": u"Portugiesisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/RON', {
-                        "en": "Dutch",
-                        "fr": "Néerlandais",
-                        "nl": "Nederlands",
-                        "de": "Niederländisch"
+                        "en": u"Romanian",
+                        "fr": u"Roumain",
+                        "nl": u"Roemeens",
+                        "de": u"Rumänisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/SLK', {
-                        "en": "German",
-                        "fr": "Allemand",
-                        "nl": "Duits",
-                        "de": "Deutsch"
+                        "en": u"Slovak",
+                        "fr": u"Slovaque",
+                        "nl": u"Slowaaks",
+                        "de": u"Slowakisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/SLV', {
-                        "en": "English",
-                        "fr": "Anglais",
-                        "nl": "Engels",
-                        "de": "Englisch"
+                        "en": u"Slovenian",
+                        "fr": u"Slovène",
+                        "nl": u"Sloveens",
+                        "de": u"Slowenisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/SPA', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"Spanish",
+                        "fr": u"Espagnol",
+                        "nl": u"Spaans",
+                        "de": u"Spanisch"
                     }),
                     ('http://publications.europa.eu/resource/authority/language/SWE', {
-                        "en": "",
-                        "fr": "",
-                        "nl": "",
-                        "de": ""
+                        "en": u"Swedish",
+                        "fr": u"Suédois",
+                        "nl": u"Zweeds",
+                        "de": u"Schwedisch"
                     }),
-                ])
+            ])
+
+
 
         elif ontology == "data-theme":
             return map_for_form_select([
                 ('http://publications.europa.eu/resource/authority/data-theme/TRAN', {
-                    "en": "Transport",
-                    "fr": "Transports",
-                    "nl": "Vervoer",
-                    "de": "Verkehr"
+                    "en": u"Transport",
+                    "fr": u"Transports",
+                    "nl": u"Vervoer",
+                    "de": u"Verkehr"
                 })
             ])
         elif ontology == "frequency":
@@ -232,4 +235,4 @@ class BenapPlugin(plugins.SingletonPlugin):
         return {
             'benap_geographic_granularity_helper': lambda context: map_for_form_select(self.geographic_granularity_map),
             'benap_ontology_helper': self._ontology_helper
-        }
+}
