@@ -46,10 +46,7 @@
          "nl": "Datasetomschrijving",
          "de": "Beschreibung des datensatzes"
  	},
-      "preset": "fluent_markdown",
       "form_placeholder": "eg. “Contains static high priority network of Belgium: Road Name, Lane number, Direction”",
-      "form_attrs": {"class": "form-control"},
-      "form_languages": ["en", "fr", "nl", "de"],
       "help_text":"Gives the user more information about the content of the dataset or service. The used language for the description should be the language from the field metadata language"
     },
     {
