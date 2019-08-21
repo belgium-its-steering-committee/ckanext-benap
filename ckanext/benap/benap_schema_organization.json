@@ -6,7 +6,12 @@
   "fields": [
     {
       "field_name": "title",
-      "label": "Organisation name",
+      "label":{
+         "en": "Organisation name",
+         "fr": "Organisation name",
+         "nl": "Organisation name",
+         "de": "Organisation name"
+ 	},
       "required": true,
       "form_snippet": "large_text.html",
       "form_attrs": {"data-module": "slug-preview-target"},
@@ -14,20 +19,35 @@
     },
     {
       "field_name": "name",
-      "label": "URL",
+     "label":{
+         "en": "URL",
+         "fr": "URL",
+         "nl": "URL",
+         "de": "URL"
+ 	},
       "form_snippet": "slug.html",
       "form_placeholder": "my-organization"
     },
     {
       "field_name": "description",
-      "label": "Description",
+      "label":{
+         "en": "Description",
+         "fr": "Description",
+         "nl": "Description",
+         "de": "Description"
+ 	},
       "form_snippet": "markdown.html",
       "form_placeholder": "A little information about my organization...",
       "required": true
     },
     {
       "field_name": "image_url",
-      "label": "Image URL",
+      "label":{
+         "en": "Image URL",
+         "fr": "Image URL",
+         "nl": "Image URL",
+         "de": "Image URL"
+ 	},
       "validators": "unicode remove_whitespace",
       "form_snippet": "upload.html",
       "form_placeholder": "https://www.my-organization.com/my-logo",
@@ -51,13 +71,23 @@
     },
     {
       "field_name": "do_website",
-      "label": "Website",
+      "label":{
+         "en": "Website",
+         "fr": "Website",
+         "nl": "Website",
+         "de": "Website"
+ 	},
       "validators": "scheming_required url_validator",
       "required": true
     },
     {
       "field_name": "do_tel",
-      "label": "Telephone number",
+      "label":{
+         "en": "Telephone number",
+         "fr": "Telephone number",
+         "nl": "Telephone number",
+         "de": "Telephone number"
+ 	},
       "required": true
     }
    ]
