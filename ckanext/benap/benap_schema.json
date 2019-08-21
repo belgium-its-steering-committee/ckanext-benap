@@ -30,7 +30,7 @@
       "preset": "title",
       "form_placeholder": "e.g. Highway Network",
       "help_text": "Describes the dataset in a generic term or gives a short description. The author is encouraged to write a meaningful description",
-      "required":"true"
+      "required": "true"
     },
     {
       "field_name": "name",

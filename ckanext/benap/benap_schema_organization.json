@@ -1,0 +1,65 @@
+{
+  "scheming_version": 1,
+  "organization_type": "organization",
+  "about": "A CKAN schema for organizations on the Belgian NAP",
+  "about_url": "https://github.com/belgium-its-steering-committee/ckanext-benap",
+  "fields": [
+    {
+      "field_name": "title",
+      "label": "Organisation name",
+      "required": true,
+      "form_snippet": "large_text.html",
+      "form_attrs": {"data-module": "slug-preview-target"},
+      "form_placeholder": "My Organization full name"
+    },
+    {
+      "field_name": "name",
+      "label": "URL",
+      "form_snippet": "slug.html",
+      "form_placeholder": "my-organization"
+    },
+    {
+      "field_name": "description",
+      "label": "Description",
+      "form_snippet": "markdown.html",
+      "form_placeholder": "A little information about my organization...",
+      "required": true
+    },
+    {
+      "field_name": "image_url",
+      "label": "Image URL",
+      "validators": "unicode remove_whitespace",
+      "form_snippet": "upload.html",
+      "form_placeholder": "https://www.my-organization.com/my-logo",
+      "upload_field": "image_upload",
+      "upload_clear": "clear_upload",
+      "upload_label": "Image",
+      "display_snippet": null
+    },
+    {
+      "field_name": "do_address",
+      "label": "Address",
+      "form_placeholder": "Boulevard Anspach, 1 - 1000 Bruxelles (Belgium)",
+      "required": true
+    },
+    {
+      "field_name": "do_email",
+      "label": "E-mail",
+      "validators": "scheming_required email_validator",
+      "form_placeholder": "data@my-organization.com",
+      "required": true
+    },
+    {
+      "field_name": "do_website",
+      "label": "Website",
+      "validators": "scheming_required url_validator",
+      "required": true
+    },
+    {
+      "field_name": "do_tel",
+      "label": "Telephone number",
+      "required": true
+    }
+   ]
+}
+
