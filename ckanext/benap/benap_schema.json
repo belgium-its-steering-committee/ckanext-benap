@@ -258,7 +258,8 @@
          "de": "Transportation modes covered"
  	},
       "preset": "tag_string_autocomplete",
-      "form_placeholder": "[TO BE ADAPTED] this field is will have to contain a predefined list of items"
+      "form_placeholder": "[UNDER CONSTRUCTION] this field could become a predefined list of tags (items) as defined under paragraph 2.2.5.1 of the Coordinated Metadata Cataloque",
+      "help_text": "Describes the transportation mode covered by the data set."
     },
     {
       "field_name": "license_id",

@@ -5,9 +5,10 @@ import ckan.plugins.toolkit as toolkit
 from ckanext.benap.util.forms import map_for_form_select
 
 
-class BenapPlugin(plugins.SingletonPlugin):
+class BenapPlugin(plugins.SingletonPlugin,toolkit.DefaultDatasetForm):
     plugins.implements(plugins.IConfigurer, inherit=True)
     plugins.implements(plugins.ITemplateHelpers, inherit=False)
+
 
     geographic_granularity_map = [('', ''),
                                   ('national', 'National'),
