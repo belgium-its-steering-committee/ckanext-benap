@@ -236,6 +236,20 @@
       "help_text": "Describes the date when data delivery to this publication terminates. If left empty, the publication does not expire"
     },
     {
+      "field_name": "spatial_uri",
+      "label":{
+         "en": "Area covered by publication",
+         "fr": "Area covered by publication",
+         "nl": "Area covered by publication",
+         "de": "Area covered by publication"
+ 	},
+      "preset": "multiple_checkbox",
+      "help_text": "Describes the geographic area covered by the data set, based on the Nomenclature of Territorial Units for Statistics (NUTS)",
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "NUTS3_BE",
+      "required":"true"
+    },
+    {
       "field_name": "tag_string",
       "label":{
          "en": "Transportation modes covered",
