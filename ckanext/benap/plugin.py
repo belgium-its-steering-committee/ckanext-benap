@@ -193,7 +193,6 @@ class BenapPlugin(plugins.SingletonPlugin):
                         "de": u"Schwedisch"
                     }),
             ])
-
         if ontology == "NUTS3_BE":
             return map_for_form_select([
                 ('http://data.europa.eu/nuts/code/BE100', {
@@ -239,7 +238,7 @@ class BenapPlugin(plugins.SingletonPlugin):
                         "de": u"Arr. Tongeren"
                     }),
                     ('http://data.europa.eu/nuts/code/BE231', {
-                        "en": u"Arr. Aalst"
+                        "en": u"Arr. Aalst",
                         "fr": u"Arr. Aalst",
                         "nl": u"Arr. Aalst",
                         "de": u"Arr. Aalst"
