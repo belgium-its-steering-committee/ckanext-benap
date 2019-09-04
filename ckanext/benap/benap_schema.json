@@ -42,10 +42,10 @@
       "field_name": "notes_translated",
       "preset": "fluent_markdown",
       "label": {
-        "en": "Description of dataset (TEST ML CORE)",
-        "fr": "Description du jeux de données (TEST ML CORE)",
-        "nl": "Datasetomschrijving (TEST ML CORE)",
-        "de": "Beschreibung des datensatzes (TEST ML CORE)"
+        "en": "Description of dataset",
+        "fr": "Description du jeux de données",
+        "nl": "Datasetomschrijving",
+        "de": "Beschreibung des datensatzes"
       },
       "form_placeholder": "eg. “Contains static high priority network of Belgium: Road Name, Lane number, Direction”",
       "help_text": "Gives the user more information about the content of the dataset or service. The used language for the description should be the language from the field metadata language",
