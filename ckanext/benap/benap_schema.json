@@ -39,13 +39,16 @@
       "form_placeholder": "eg. highway-network"
     },
     {
-      "field_name": "notes",
+      "field_name": "notes_translated",
+      "preset": "fluent_core_translated",
       "label":{
          "en": "Description of dataset",
          "fr": "Description du jeux de données",
          "nl": "Datasetomschrijving",
          "de": "Beschreibung des datensatzes"
  	},
+      "form_languages": ["en", "fr", "nl", "de"],
+      "form_attrs": {"class": "form-control"},
       "form_placeholder": "eg. “Contains static high priority network of Belgium: Road Name, Lane number, Direction”",
       "help_text":"Gives the user more information about the content of the dataset or service. The used language for the description should be the language from the field metadata language"
     },
