@@ -1,0 +1,95 @@
+{
+  "scheming_version": 1,
+  "organization_type": "organization",
+  "about": "A CKAN schema for organizations on the Belgian NAP",
+  "about_url": "https://github.com/belgium-its-steering-committee/ckanext-benap",
+  "fields": [
+    {
+      "field_name": "title",
+      "label":{
+         "en": "Organisation name",
+         "fr": "Organisation name",
+         "nl": "Organisation name",
+         "de": "Organisation name"
+ 	},
+      "required": true,
+      "form_snippet": "large_text.html",
+      "form_attrs": {"data-module": "slug-preview-target"},
+      "form_placeholder": "My Organization full name"
+    },
+    {
+      "field_name": "name",
+     "label":{
+         "en": "URL",
+         "fr": "URL",
+         "nl": "URL",
+         "de": "URL"
+ 	},
+      "form_snippet": "slug.html",
+      "form_placeholder": "my-organization"
+    },
+    {
+      "field_name": "description",
+      "label":{
+         "en": "Description",
+         "fr": "Description",
+         "nl": "Description",
+         "de": "Description"
+ 	},
+      "form_snippet": "markdown.html",
+      "form_placeholder": "A little information about my organization...",
+      "required": true
+    },
+    {
+      "field_name": "image_url",
+      "label":{
+         "en": "Image URL",
+         "fr": "Image URL",
+         "nl": "Image URL",
+         "de": "Image URL"
+ 	},
+      "validators": "unicode remove_whitespace",
+      "form_snippet": "upload.html",
+      "form_placeholder": "https://www.my-organization.com/my-logo",
+      "upload_field": "image_upload",
+      "upload_clear": "clear_upload",
+      "upload_label": "Image",
+      "display_snippet": null
+    },
+    {
+      "field_name": "do_address",
+      "label": "Address",
+      "form_placeholder": "Boulevard Anspach, 1 - 1000 Bruxelles (Belgium)",
+      "required": true
+    },
+    {
+      "field_name": "do_email",
+      "label": "E-mail",
+      "validators": "scheming_required email_validator",
+      "form_placeholder": "data@my-organization.com",
+      "required": true
+    },
+    {
+      "field_name": "do_website",
+      "label":{
+         "en": "Website",
+         "fr": "Website",
+         "nl": "Website",
+         "de": "Website"
+ 	},
+      "validators": "scheming_required url_validator",
+      "required": true
+    },
+    {
+      "field_name": "do_tel",
+      "label":{
+         "en": "Telephone number",
+         "fr": "Telephone number",
+         "nl": "Telephone number",
+         "de": "Telephone number"
+ 	},
+      "required": true
+    }
+   ]
+}
+
