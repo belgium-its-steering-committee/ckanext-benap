@@ -29,7 +29,7 @@
  	},
       "preset": "title",
       "form_placeholder": "e.g. Highway Network",
-      "help_text": "Describes the dataset in a generic term or gives a short description. The author is encouraged to write a meaningful description",
+      "help_text": "Describes the dataset in generic terms or gives a short description. The author is encouraged to write a meaningful description",
       "required": "true"
     },
     {
@@ -298,23 +298,33 @@
     {
       "field_name": "url",
       "label": "URL",
-      "preset": "resource_url_upload"
+      "preset": "resource_url_upload",
+      "help_text": "Resource (dataset or service) to be linked or uploaded. This may be a file containing the data itself or a link to a webpage or file providing functional/technical information"
     },
     {
       "field_name": "name",
-      "label": "Name",
-      "form_placeholder": "eg. January 2011 Gold Prices"
-    },
-    {
-      "field_name": "description",
-      "label": "Description",
-      "form_snippet": "markdown.html",
-      "form_placeholder": "Some useful notes about the data"
+      "label":{
+         "en": "Name",
+         "fr": "Name",
+         "nl": "Name",
+         "de": "Name"
+ 	},
+      "form_placeholder": "eg. Plan of the Belgian highway network ",
+      "help_text": "Describes the resource you linked or uploaded in generic terms or gives a short description. The author is encouraged to write a meaningful description",
+      "required": "true"
     },
     {
       "field_name": "format",
-      "label": "Format",
-      "preset": "resource_format_autocomplete"
+      "label":{
+         "en": "Data format - Syntax",
+         "fr": "Data format - Syntax",
+         "nl": "Data format - Syntax",
+         "de": "Data format - Syntax"
+ 	},
+      "preset": "resource_format_autocomplete",
+      "form_placeholder": "JSON, XML, etc.",
+      "help_text": "Describes the resource you linked or uploaded in generic terms or gives a short description. The author is encouraged to write a meaningful description",
+      "required": "true"
     },
     {
       "field_name": "language",
