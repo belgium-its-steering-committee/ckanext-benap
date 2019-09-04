@@ -6,27 +6,27 @@
   "dataset_fields": [
     {
       "field_name": "language",
-      "label":{
-         "en": "Metadata language",
-         "fr": "Langue des métadonnées",
-         "nl": "Metadata taal",
-         "de": "Metadatensprache"
- 	},
+      "label": {
+        "en": "Metadata language",
+        "fr": "Langue des métadonnées",
+        "nl": "Metadata taal",
+        "de": "Metadatensprache"
+      },
       "display_property": "dct:language",
       "preset": "multiple_select",
       "help_text": "Describes the language(s) in which you will fill in the metadata in this form",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "language",
-      "required":"true"
+      "required": "true"
     },
     {
       "field_name": "title",
-      "label":{
-         "en": "Name of dataset",
-         "fr": "Name of dataset",
-         "nl": "Name of dataset",
-         "de": "Name of dataset"
- 	},
+      "label": {
+        "en": "Name of dataset",
+        "fr": "Name of dataset",
+        "nl": "Name of dataset",
+        "de": "Name of dataset"
+      },
       "preset": "title",
       "form_placeholder": "e.g. Highway Network",
       "help_text": "Describes the dataset in a generic term or gives a short description. The author is encouraged to write a meaningful description",
@@ -39,46 +39,59 @@
       "form_placeholder": "eg. highway-network"
     },
     {
-      "field_name": "notes",
-      "label":{
-         "en": "Description of dataset",
-         "fr": "Description du jeux de données",
-         "nl": "Datasetomschrijving",
-         "de": "Beschreibung des datensatzes"
- 	},
+      "field_name": "notes_translated",
+      "preset": "fluent_markdown",
+      "label": {
+        "en": "Description of dataset (TEST ML CORE)",
+        "fr": "Description du jeux de données (TEST ML CORE)",
+        "nl": "Datasetomschrijving (TEST ML CORE)",
+        "de": "Beschreibung des datensatzes (TEST ML CORE)"
+      },
       "form_placeholder": "eg. “Contains static high priority network of Belgium: Road Name, Lane number, Direction”",
-      "help_text":"Gives the user more information about the content of the dataset or service. The used language for the description should be the language from the field metadata language"
+      "help_text": "Gives the user more information about the content of the dataset or service. The used language for the description should be the language from the field metadata language",
+      "form_languages": [
+        "en",
+        "fr",
+        "nl",
+        "de"
+      ],
+      "display_snippet": "fluent_markdown_fallback.html"
     },
     {
       "field_name": "cont_res",
-      "label":{
-         "en": "Resource type",
-         "fr": "Resource type",
-         "nl": "Resource type",
-         "de": "Resource type"
- 	},
+      "label": {
+        "en": "Resource type",
+        "fr": "Resource type",
+        "nl": "Resource type",
+        "de": "Resource type"
+      },
       "preset": "select",
       "choices": [
-    	{
-      		"value": "Data set",
-      		"label": "Data set"
-    	},
-    	{
-      		"value": "Service",
-      		"label": "Service"
-    	}
-    ],
+        {
+          "value": "Data set",
+          "label": "Data set"
+        },
+        {
+          "value": "Service",
+          "label": "Service"
+        }
+      ],
       "help_text": "'Travel information service' means an ITS service, including digital maps, that provides users, and end-users, with travel and traffic information of at least one transport mode",
-      "required":"true"
+      "required": "true"
+    },
+     {
+      "field_name": "owner_org",
+      "label": "Organization",
+      "preset": "dataset_organization"
     },
     {
       "field_name": "contact_name",
-      "label":{
-         "en": "Name [contact point]",
-         "fr": "Name [contact point]",
-         "nl": "Name [contact point]",
-         "de": "Name [contact point]"
- 	},
+      "label": {
+        "en": "Name [contact point]",
+        "fr": "Name [contact point]",
+        "nl": "Name [contact point]",
+        "de": "Name [contact point]"
+      },
       "form_placeholder": "John Doe",
       "display_property": "dc:creator",
       "help_text": "Describes an organisation, if applicable a person, which is responsible for creation and maintenance of the metadata. This person or organization is the single point of contact for the present metadata set",
@@ -86,35 +99,35 @@
     },
     {
       "field_name": "cp_org_name",
-      "label":{
-         "en": "Organisation name [contact point]",
-         "fr": "Organisation name [contact point]",
-         "nl": "Organisation name [contact point]",
-         "de": "Organisation name [contact point]"
- 	},
+      "label": {
+        "en": "Organisation name [contact point]",
+        "fr": "Organisation name [contact point]",
+        "nl": "Organisation name [contact point]",
+        "de": "Organisation name [contact point]"
+      },
       "display_property": "dc:creator",
       "required": "true"
     },
     {
       "field_name": "cp_address",
-      "label":{
-         "en": "Address [contact point]",
-         "fr": "Address [contact point]",
-         "nl": "Address [contact point]",
-         "de": "Address [contact point]"
- 	},
+      "label": {
+        "en": "Address [contact point]",
+        "fr": "Address [contact point]",
+        "nl": "Address [contact point]",
+        "de": "Address [contact point]"
+      },
       "form_placeholder": "Boulevard Anspach, 1 - 1000 Bruxelles (Belgique)",
       "display_property": "dc:creator",
       "required": "true"
     },
     {
       "field_name": "contact_email",
-      "label":{
-         "en": "E-mail [contact point]",
-         "fr": "E-mail [contact point]",
-         "nl": "E-mail [contact point]",
-         "de": "E-mail [contact point]"
- 	},
+      "label": {
+        "en": "E-mail [contact point]",
+        "fr": "E-mail [contact point]",
+        "nl": "E-mail [contact point]",
+        "de": "E-mail [contact point]"
+      },
       "form_placeholder": "example@example.com",
       "display_property": "dc:creator",
       "display_snippet": "email.html",
@@ -123,70 +136,68 @@
     },
     {
       "field_name": "cp_website",
-      "label":{
-         "en": "Website [contact point]",
-         "fr": "Website [contact point]",
-         "nl": "Website [contact point]",
-         "de": "Website [contact point]"
- 	},
-      "display_snippet":"link.html",
+      "label": {
+        "en": "Website [contact point]",
+        "fr": "Website [contact point]",
+        "nl": "Website [contact point]",
+        "de": "Website [contact point]"
+      },
+      "display_snippet": "link.html",
       "display_property": "dc:creator"
     },
     {
       "field_name": "cp_tel",
-      "label":{
-         "en": "Telephone number [contact point]",
-         "fr": "Telephone number [contact point]",
-         "nl": "Telephone number [contact point]",
-         "de": "Telephone number [contact point]"
- 	},
+      "label": {
+        "en": "Telephone number [contact point]",
+        "fr": "Telephone number [contact point]",
+        "nl": "Telephone number [contact point]",
+        "de": "Telephone number [contact point]"
+      },
       "form_placeholder": "+32 2 XXX XX XX",
       "display_property": "dc:creator",
       "required": "true"
     },
     {
       "field_name": "publisher_name",
-      "label":{
-         "en": "Name [publisher]",
-         "fr": "Name [publisher]",
-         "nl": "Name [publisher]",
-         "de": "Name [publisher]"
- 	},
+      "label": {
+        "en": "Name [publisher]",
+        "fr": "Name [publisher]",
+        "nl": "Name [publisher]",
+        "de": "Name [publisher]"
+      },
       "form_placeholder": "John Doe",
       "help_text": "Describes an entity (company and person) that publishes the data sets. He or she is responsible for the given information and must be contacted by data consumers if a contract needs to be concluded",
       "required": "true"
     },
     {
-      "field_name": "owner_org",
-      "label":{
-         "en": "Organisation name [publisher]",
-         "fr": "Organisation name [publisher]",
-         "nl": "Organisation name [publisher]",
-         "de": "Organisation name [publisher]"
- 	},
-      "preset": "dataset_organization",
+      "field_name": "publisher_org",
+      "label": {
+        "en": "Organisation name [publisher]",
+        "fr": "Organisation name [publisher]",
+        "nl": "Organisation name [publisher]",
+        "de": "Organisation name [publisher]"
+      },
       "required": "true"
-
     },
     {
       "field_name": "p_address",
-      "label":{
-         "en": "Address [publisher]",
-         "fr": "Address [publisher]",
-         "nl": "Address [publisher]",
-         "de": "Address [publisher]"
- 	},
+      "label": {
+        "en": "Address [publisher]",
+        "fr": "Address [publisher]",
+        "nl": "Address [publisher]",
+        "de": "Address [publisher]"
+      },
       "form_placeholder": "Boulevard Anspach, 1 - 1000 Bruxelles (Belgique)",
       "required": "true"
     },
     {
       "field_name": "publisher_email",
-      "label":{
-         "en": "E-mail [publisher]",
-         "fr": "E-mail [publisher]",
-         "nl": "E-mail [publisher]",
-         "de": "E-mail [publisher]"
- 	},
+      "label": {
+        "en": "E-mail [publisher]",
+        "fr": "E-mail [publisher]",
+        "nl": "E-mail [publisher]",
+        "de": "E-mail [publisher]"
+      },
       "form_placeholder": "example@example.com",
       "display_snippet": "email.html",
       "display_email_name_field": "publisher_name",
@@ -194,84 +205,84 @@
     },
     {
       "field_name": "publisher_url",
-      "label":{
-         "en": "Website [publisher]",
-         "fr": "Website [publisher]",
-         "nl": "Website [publisher]",
-         "de": "Website [publisher]"
- 	},
-      "display_snippet":"link.html"
+      "label": {
+        "en": "Website [publisher]",
+        "fr": "Website [publisher]",
+        "nl": "Website [publisher]",
+        "de": "Website [publisher]"
+      },
+      "display_snippet": "link.html"
     },
     {
       "field_name": "p_tel",
-      "label":{
-         "en": "Telephone number [publisher]",
-         "fr": "Telephone number [publisher]",
-         "nl": "Telephone number [publisher]",
-         "de": "Telephone number [publisher]"
- 	},
+      "label": {
+        "en": "Telephone number [publisher]",
+        "fr": "Telephone number [publisher]",
+        "nl": "Telephone number [publisher]",
+        "de": "Telephone number [publisher]"
+      },
       "form_placeholder": "+32 2 XXX XX XX",
       "required": "true"
     },
     {
       "field_name": "temporal_start",
-      "label":{
-         "en": "Start date of publication",
-         "fr": "Start date of publication",
-         "nl": "Start date of publication",
-         "de": "Start date of publication"
- 	},
+      "label": {
+        "en": "Start date of publication",
+        "fr": "Start date of publication",
+        "nl": "Start date of publication",
+        "de": "Start date of publication"
+      },
       "preset": "datetime",
       "help_text": "Describes from which date and time on the data delivery is applicable. If left empty, the publication is considered as available immediately"
     },
     {
       "field_name": "temporal_end",
-      "label":{
-         "en": "End date of publication",
-         "fr": "End date of publication",
-         "nl": "End date of publication",
-         "de": "End date of publication"
- 	},
+      "label": {
+        "en": "End date of publication",
+        "fr": "End date of publication",
+        "nl": "End date of publication",
+        "de": "End date of publication"
+      },
       "preset": "datetime",
       "help_text": "Describes the date when data delivery to this publication terminates. If left empty, the publication does not expire"
     },
     {
       "field_name": "geo_area",
-      "label":{
-         "en": "Area covered by publication",
-         "fr": "Area covered by publication",
-         "nl": "Area covered by publication",
-         "de": "Area covered by publication"
- 	},
+      "label": {
+        "en": "Area covered by publication",
+        "fr": "Area covered by publication",
+        "nl": "Area covered by publication",
+        "de": "Area covered by publication"
+      },
       "preset": "multiple_select",
       "help_text": "Describes the geographic area covered by the data set, based on the Nomenclature of Territorial Units for Statistics (NUTS)",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "NUTS3_BE",
-      "required":"true"
+      "required": "true"
     },
     {
       "field_name": "tag_string",
-      "label":{
-         "en": "Transportation modes covered",
-         "fr": "Transportation modes covered",
-         "nl": "Transportation modes covered",
-         "de": "Transportation modes covered"
- 	},
+      "label": {
+        "en": "Transportation modes covered",
+        "fr": "Transportation modes covered",
+        "nl": "Transportation modes covered",
+        "de": "Transportation modes covered"
+      },
       "preset": "tag_string_autocomplete",
       "form_placeholder": "[UNDER CONSTRUCTION] this field could become a predefined list of tags (items) as defined under paragraph 2.2.5.1 of the Coordinated Metadata Cataloque",
       "help_text": "Describes the transportation mode covered by the data set."
     },
     {
       "field_name": "license_id",
-      "label":{
-         "en": "Contract or licence",
-         "fr": "Contract or licence",
-         "nl": "Contract or licence",
-         "de": "Contract or licence"
- 	},
+      "label": {
+        "en": "Contract or licence",
+        "fr": "Contract or licence",
+        "nl": "Contract or licence",
+        "de": "Contract or licence"
+      },
       "form_snippet": "license.html",
       "help_text": "Describes the conditions of use of the data set",
-      "required":"true"
+      "required": "true"
     },
     {
       "field_name": "frequency",
