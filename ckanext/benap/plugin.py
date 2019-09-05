@@ -340,25 +340,25 @@ class BenapPlugin(plugins.SingletonPlugin,toolkit.DefaultDatasetForm):
                         "nl": u"Arr. Nivelles",
                         "de": u"Arr. Nivelles"
                     }),
-                    ('http://data.europa.eu/nuts/code/321', {
+                    ('http://data.europa.eu/nuts/code/BE321', {
                         "en": u"Arr. Ath",
                         "fr": u"Arr. Ath",
                         "nl": u"Arr. Ath",
                         "de": u"Arr. Ath"
                     }),
-                    ('http://data.europa.eu/nuts/code/322', {
+                    ('http://data.europa.eu/nuts/code/BE322', {
                         "en": u"Arr. Charleroi",
                         "fr": u"Arr. Charleroi",
                         "nl": u"Arr. Charleroi",
                         "de": u"Arr. Charleroi"
                     }),
-                    ('http://data.europa.eu/nuts/code/323', {
+                    ('http://data.europa.eu/nuts/code/BE323', {
                         "en": u"Arr. Mons",
                         "fr": u"Arr. Mons",
                         "nl": u"Arr. Mons",
                         "de": u"Arr. Mons"
                     }),
-                    ('http://data.europa.eu/nuts/code/', {
+                    ('http://data.europa.eu/nuts/code/BE324', {
                         "en": u"Arr. Mouscron",
                         "fr": u"Arr. Mouscron",
                         "nl": u"Arr. Mouscron",
@@ -366,21 +366,61 @@ class BenapPlugin(plugins.SingletonPlugin,toolkit.DefaultDatasetForm):
                     }),
             ])
 
+        if ontology == "encoding":
+            return map_for_form_select([
+                ('ASCII', {
+                    "en": u"ASCII",
+                    "fr": u"ASCII",
+                    "nl": u"ASCII",
+                    "de": u"ASCII"
+                }),
+                ('UTF-8', {
+                    "en": u"UTF-8",
+                    "fr": u"UTF-8",
+                    "nl": u"UTF-8",
+                    "de": u"UTF-8"
+                }),
+                ('UTF-16', {
+                    "en": u"UTF-16",
+                    "fr": u"UTF-16",
+                    "nl": u"UTF-16",
+                    "de": u"UTF-16"
+                }),
+                ('ISO-8859-1', {
+                    "en": u"ISO-8859-1",
+                    "fr": u"ISO-8859-1",
+                    "nl": u"ISO-8859-1",
+                    "de": u"ISO-8859-1"
+                }),
+                ('ISO-8859-15', {
+                    "en": u"ISO-8859-15",
+                    "fr": u"ISO-8859-15",
+                    "nl": u"ISO-8859-15",
+                    "de": u"ISO-8859-15"
+                }),
+                ('Other', {
+                    "en": u"Other",
+                    "fr": u"Other",
+                    "nl": u"Other",
+                    "de": u"Other"
+                }),
+            ])
+
         if ontology == "syntax":
             return map_for_form_select([
-                ('http://publications.europa.eu/resource/authority/file-type/XML', {
+                ('XML', {
                     "en": u"XML",
                     "fr": u"XML",
                     "nl": u"XML",
                     "de": u"XML"
                 }),
-                ('http://publications.europa.eu/resource/authority/file-type/JSON', {
+                ('JSON', {
                     "en": u"JSON",
                     "fr": u"JSON",
                     "nl": u"JSON",
                     "de": u"JSON"
                 }),
-                ('http://publications.europa.eu/resource/authority/file-type/CSV', {
+                ('CSV', {
                     "en": u"CSV",
                     "fr": u"CSV",
                     "nl": u"CSV",
@@ -391,6 +431,233 @@ class BenapPlugin(plugins.SingletonPlugin,toolkit.DefaultDatasetForm):
                     "fr": u"ASN.1 encoding rules",
                     "nl": u"ASN.1 encoding rules",
                     "de": u"ASN.1 encoding rules"
+                }),
+                ('Protocol buffers', {
+                    "en": u"Protocol buffers",
+                    "fr": u"Protocol buffers",
+                    "nl": u"Protocol buffers",
+                    "de": u"Protocol buffers"
+                }),
+                ('Other', {
+                    "en": u"Other",
+                    "fr": u"Other",
+                    "nl": u"Other",
+                    "de": u"Other"
+                }),
+            ])
+
+        if ontology == "grammar":
+            return map_for_form_select([
+                ('http://publications.europa.eu/resource/authority/file-type/SCHEMA_XML', {
+                    "en": u"XSD",
+                    "fr": u"XSD",
+                    "nl": u"XSD",
+                    "de": u"XSD"
+                }),
+                ('JSON Schema', {
+                    "en": u"JSON Schema",
+                    "fr": u"JSON Schema",
+                    "nl": u"JSON Schema",
+                    "de": u"JSON Schema"
+                }),
+                ('http://purl.org/ASN/schema/core/StandardDocument', {
+                    "en": u"ASN.1",
+                    "fr": u"ASN.1",
+                    "nl": u"ASN.1",
+                    "de": u"ASN.1"
+                }),
+                ('Protocol buffers', {
+                    "en": u"Protocol buffers",
+                    "fr": u"Protocol buffers",
+                    "nl": u"Protocol buffers",
+                    "de": u"Protocol buffers"
+                }),
+                ('Other', {
+                    "en": u"Other",
+                    "fr": u"Other",
+                    "nl": u"Other",
+                    "de": u"Other"
+                }),
+            ])
+
+        if ontology == "datamodel":
+            return map_for_form_select([
+                ('DATEX II profile', {
+                    "en": u"DATEX II profile",
+                    "fr": u"DATEX II profile",
+                    "nl": u"DATEX II profile",
+                    "de": u"DATEX II profile"
+                }),
+                ('OCIT-C', {
+                    "en": u"OCIT-C",
+                    "fr": u"OCIT-C",
+                    "nl": u"OCIT-C",
+                    "de": u"OCIT-C"
+                }),
+                ('DATEX II Light', {
+                    "en": u"DATEX II Light",
+                    "fr": u"DATEX II Light",
+                    "nl": u"DATEX II Light",
+                    "de": u"DATEX II Light"
+                }),
+                ('NeTEX', {
+                    "en": u"NeTEX (CEN/TS 16614)",
+                    "fr": u"NeTEX (CEN/TS 16614)",
+                    "nl": u"NeTEX (CEN/TS 16614)",
+                    "de": u"NeTEX (CEN/TS 16614)"
+                }),
+                ('SIRI', {
+                    "en": u"SIRI (CEN/TS 15531)",
+                    "fr": u"SIRI (CEN/TS 15531)",
+                    "nl": u"SIRI (CEN/TS 15531)",
+                    "de": u"SIRI (CEN/TS 15531)"
+                }),
+                ('GTFS', {
+                    "en": u"GTFS",
+                    "fr": u"GTFS",
+                    "nl": u"GTFS",
+                    "de": u"GTFS"
+                }),
+                ('VDV Standard', {
+                    "en": u"VDV Standard (VDV 452, 455, 462,…)",
+                    "fr": u"VDV Standard (VDV 452, 455, 462,…)",
+                    "nl": u"VDV Standard (VDV 452, 455, 462,…)",
+                    "de": u"VDV Standard (VDV 452, 455, 462,…)"
+                }),
+                ('IFOPT', {
+                    "en": u"IFOPT",
+                    "fr": u"IFOPT",
+                    "nl": u"IFOPT",
+                    "de": u"IFOPT"
+                }),
+                ('ETSI / ISO Model', {
+                    "en": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,…)",
+                    "fr": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,…)",
+                    "nl": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,…)",
+                    "de": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,…)"
+                }),
+                ('tpegML Model', {
+                    "en": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,…)",
+                    "fr": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,…)",
+                    "nl": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,…)",
+                    "de": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,…)"
+                }),
+                ('http://publications.europa.eu/resource/authority/file-type/KML', {
+                    "en": u"KML",
+                    "fr": u"KML",
+                    "nl": u"KML",
+                    "de": u"KML"
+                }),
+
+                ('http://publications.europa.eu/resource/authority/file-type/MPEG4', {
+                    "en": u"MPEG-4",
+                    "fr": u"MPEG-4",
+                    "nl": u"MPEG-4",
+                    "de": u"MPEG-4"
+                }),
+                ('MDM-Container', {
+                    "en": u"MDM-Container",
+                    "fr": u"MDM-Container",
+                    "nl": u"MDM-Container",
+                    "de": u"MDM-Container"
+                }),
+                ('DINO', {
+                    "en": u"DINO",
+                    "fr": u"DINO",
+                    "nl": u"DINO",
+                    "de": u"DINO"
+                }),
+                ('OpenAPI', {
+                    "en": u"OpenAPI",
+                    "fr": u"OpenAPI",
+                    "nl": u"OpenAPI",
+                    "de": u"OpenAPI"
+                }),
+                ('Other', {
+                    "en": u"Other",
+                    "fr": u"Other",
+                    "nl": u"Other",
+                    "de": u"Other"
+                }),
+            ])
+
+        if ontology == "protocol":
+            return map_for_form_select([
+                ('SOAP', {
+                    "en": u"SOAP",
+                    "fr": u"SOAP",
+                    "nl": u"SOAP",
+                    "de": u"SOAP"
+                }),
+                ('OTS2', {
+                    "en": u"OTS2",
+                    "fr": u"OTS2",
+                    "nl": u"OTS2",
+                    "de": u"OTS2"
+                }),
+                ('http://publications.europa.eu/resource/authority/file-type/MSG_HTTP', {
+                    "en": u"HTTP/HTTPS",
+                    "fr": u"HTTP/HTTPS",
+                    "nl": u"HTTP/HTTPS",
+                    "de": u"HTTP/HTTPS"
+                }),
+                ('FTP', {
+                    "en": u"FTP",
+                    "fr": u"FTP",
+                    "nl": u"FTP",
+                    "de": u"FTP"
+                }),
+               ('http://publications.europa.eu/resource/authority/file-type/RSS', {
+                    "en": u"RSS",
+                    "fr": u"RSS",
+                    "nl": u"RSS",
+                    "de": u"RSS"
+                }),
+               ('AMQP', {
+                    "en": u"AMQP",
+                    "fr": u"AMQP",
+                    "nl": u"AMQP",
+                    "de": u"AMQP"
+                }),
+               ('MQTT', {
+                    "en": u"MQTT",
+                    "fr": u"MQTT",
+                    "nl": u"MQTT",
+                    "de": u"MQTT"
+                }),
+               ('gRPC', {
+                    "en": u"gRPC",
+                    "fr": u"gRPC",
+                    "nl": u"gRPC",
+                    "de": u"gRPC"
+                }),
+                ('Other', {
+                    "en": u"Other",
+                    "fr": u"Other",
+                    "nl": u"Other",
+                    "de": u"Other"
+                }),
+            ])
+
+        if ontology == "communication":
+            return map_for_form_select([
+                ('Push', {
+                    "en": u"Push",
+                    "fr": u"Push",
+                    "nl": u"Push",
+                    "de": u"Push"
+                }),
+                ('Push on occurence', {
+                    "en": u"Push on occurence",
+                    "fr": u"Push on occurence",
+                    "nl": u"Push on occurence",
+                    "de": u"Push on occurence"
+                }),
+                ('Pull', {
+                    "en": u"Pull",
+                    "fr": u"Pull",
+                    "nl": u"Pull",
+                    "de": u"Pull"
                 }),
             ])
 
@@ -405,18 +672,109 @@ class BenapPlugin(plugins.SingletonPlugin,toolkit.DefaultDatasetForm):
             ])
         elif ontology == "frequency":
             return map_for_form_select([
-                ('http://publications.europa.eu/resource/authority/frequency/NEVER', {
-                    "en": "Never"
+                ('On occurence', {
+                    "en": u"On occurence",
+                    "fr": u"On occurence",
+                    "nl": u"On occurence",
+                    "de": u"On occurence"
                 }),
-                ('http://publications.europa.eu/resource/authority/frequency/ANNUAL', {
-                    "en": "Annual"
+                ('Up to 1min', {
+                    "en": u"Up to 1min",
+                    "fr": u"Up to 1min",
+                    "nl": u"Up to 1min",
+                    "de": u"Up to 1min"
                 }),
-                ('http://publications.europa.eu/resource/authority/frequency/MONTHLY', {
-                    "en": "Monthly"
+                ('Up to 5min', {
+                    "en": u"Up to 5min",
+                    "fr": u"Up to 5min",
+                    "nl": u"Up to 5min",
+                    "de": u"Up to 5min"
+                }),
+                ('Up to 10min', {
+                    "en": u"Up to 10min",
+                    "fr": u"Up to 10min",
+                    "nl": u"Up to 10min",
+                    "de": u"Up to 10min"
+                }),
+                ('Up to 15min', {
+                    "en": u"Up to 15min",
+                    "fr": u"Up to 15min",
+                    "nl": u"Up to 15min",
+                    "de": u"Up to 15min"
+                }),
+                ('http://publications.europa.eu/resource/authority/frequency/BIHOURLY', {
+                    "en": u"Up to 30min",
+                    "fr": u"Up to 30min",
+                    "nl": u"Up to 30min",
+                    "de": u"Up to 30min"
+                }),
+                ('http://publications.europa.eu/resource/authority/frequency/HOURLY', {
+                    "en": u"Up to 1h",
+                    "fr": u"Up to 1h",
+                    "nl": u"Up to 1h",
+                    "de": u"Up to 1h"
+                }),
+                ('Up to 2h', {
+                    "en": u"Up to 2h",
+                    "fr": u"Up to 2h",
+                    "nl": u"Up to 2h",
+                    "de": u"Up to 2h"
+                }),
+                ('Up to 3h', {
+                    "en": u"Up to 3h",
+                    "fr": u"Up to 3hn",
+                    "nl": u"Up to 3h",
+                    "de": u"Up to 3h"
+                }),
+                ('http://publications.europa.eu/resource/authority/frequency/DAILY_2', {
+                    "en": u"Up to 12h",
+                    "fr": u"Up to 12h",
+                    "nl": u"Up to 12h",
+                    "de": u"Up to 12h"
+                }),
+                ('http://publications.europa.eu/resource/authority/frequency/DAILY', {
+                    "en": u"Up to 24h",
+                    "fr": u"Up to 24h",
+                    "nl": u"Up to 24h",
+                    "de": u"Up to 24h"
                 }),
                 ('http://publications.europa.eu/resource/authority/frequency/WEEKLY', {
-                    "en": "Weekly"
-                })
+                    "en": u"Up to Weekly",
+                    "fr": u"Up to Weekly",
+                    "nl": u"Up to Weekly",
+                    "de": u"Up to Weekly"
+                }),
+                ('http://publications.europa.eu/resource/authority/frequency/MONTHLY', {
+                    "en": u"Up to Monthly",
+                    "fr": u"Up to Monthly",
+                    "nl": u"Up to Monthly",
+                    "de": u"Up to Monthly"
+                }),
+                ('http://publications.europa.eu/resource/authority/frequency/QUARTERLY', {
+                    "en": u"Up to every 3month",
+                    "fr": u"Up to every 3month",
+                    "nl": u"Up to every 3month",
+                    "de": u"Up to every 3month"
+                }),
+                ('http://publications.europa.eu/resource/authority/frequency/ANNUAL_2', {
+                    "en": u"Up to every 6month",
+                    "fr": u"Up to every 6month",
+                    "nl": u"Up to every 6month",
+                    "de": u"Up to every 6month"
+                }),
+                ('Uhttp://publications.europa.eu/resource/authority/frequency/ANNUAL', {
+                    "en": u"Up to yearly",
+                    "fr": u"Up to yearly",
+                    "nl": u"Up to yearly",
+                    "de": u"Up to yearly"
+                }),
+                ('Less frequent than yearly', {
+                    "en": u"Less frequent than yearly",
+                    "fr": u"Less frequent than yearly",
+                    "nl": u"Less frequent than yearly",
+                    "de": u"Less frequent than yearly"
+                }),
+
             ])
         return None
 
