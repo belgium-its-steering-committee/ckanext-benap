@@ -1,4 +1,5 @@
 # coding=utf-8
+import json
 
 from ckanext.benap.util.forms import map_for_form_select
 
@@ -381,3 +382,7 @@ def ontology_helper(context):
 
 def scheming_language_text_fallback(field_data, language_data):
     return field_data['en'] or field_data['nl'] or field_data['fr'] or field_data['de']
+
+
+def json_loads(data):
+    return json.dumps(json.loads(data))

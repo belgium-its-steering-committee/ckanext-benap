@@ -1,0 +1,38 @@
+<div id="form_extent_map" style="height: 280px; "></div>
+
+<script language="JavaScript">
+    var map = L.map('form_extent_map').setView([50.859933, 4.351969], 7);
+     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+     }).addTo(map);
+     // FeatureGroup is to store editable layers
+     var drawnItems = new L.FeatureGroup();
+     map.addLayer(drawnItems);
+     var drawControl = new L.Control.Draw({
+        draw: {
+             polygon: false,
+             polyline: false,
+             marker: false,
+             circle: false,
+             circlemarker: false
+         },
+         edit: {
+             featureGroup: drawnItems
+         }
+     });
+     map.addControl(drawControl);
+
+</script>
+
+<br/><br/>
+
+
+
+
+
+
+
+
+
+
+

@@ -261,6 +261,13 @@
       "required": "true"
     },
     {
+      "field_name": "spatial",
+      "label": "Datset extent",
+      "help_text": "Add the extent of the dataset in GeoJSON format",
+      "display_snippet": "map.html",
+      "form_snippet": "form_map.html"
+    },
+    {
       "field_name": "tag_string",
       "label": {
         "en": "Transportation modes covered",
