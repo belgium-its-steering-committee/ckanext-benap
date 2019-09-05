@@ -366,6 +366,34 @@ class BenapPlugin(plugins.SingletonPlugin,toolkit.DefaultDatasetForm):
                     }),
             ])
 
+        if ontology == "syntax":
+            return map_for_form_select([
+                ('http://publications.europa.eu/resource/authority/file-type/XML', {
+                    "en": u"XML",
+                    "fr": u"XML",
+                    "nl": u"XML",
+                    "de": u"XML"
+                }),
+                ('http://publications.europa.eu/resource/authority/file-type/JSON', {
+                    "en": u"JSON",
+                    "fr": u"JSON",
+                    "nl": u"JSON",
+                    "de": u"JSON"
+                }),
+                ('http://publications.europa.eu/resource/authority/file-type/CSV', {
+                    "en": u"CSV",
+                    "fr": u"CSV",
+                    "nl": u"CSV",
+                    "de": u"CSV"
+                }),
+                ('http://purl.org/ASN/schema/core/StandardDocument', {
+                    "en": u"ASN.1 encoding rules",
+                    "fr": u"ASN.1 encoding rules",
+                    "nl": u"ASN.1 encoding rules",
+                    "de": u"ASN.1 encoding rules"
+                }),
+            ])
+
         elif ontology == "data-theme":
             return map_for_form_select([
                 ('http://publications.europa.eu/resource/authority/data-theme/TRAN', {

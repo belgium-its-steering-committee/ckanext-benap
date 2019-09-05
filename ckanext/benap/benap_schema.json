@@ -323,8 +323,21 @@
  	},
       "preset": "resource_format_autocomplete",
       "form_placeholder": "JSON, XML, etc.",
-      "help_text": "Describes the resource you linked or uploaded in generic terms or gives a short description. The author is encouraged to write a meaningful description",
+      "help_text": "This describes the base standard that specifies syntactically correct documents",
       "required": "true"
+    },
+    {
+      "field_name": "acc_enc",
+      "label":{
+         "en": "Data format - Encoding",
+         "fr": "Data format - Encoding",
+         "nl": "Data format - Encoding",
+         "de": "Data format - Encoding"
+ 	},
+      "preset": "select",
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "syntax",
+      "help_text": "This describes the atomic element of the transfer syntax description"
     },
     {
       "field_name": "language",
