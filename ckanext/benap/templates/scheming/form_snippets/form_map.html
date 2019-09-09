@@ -19,49 +19,47 @@ is_required=h.scheming_field_required(field)
 
 <script language="JavaScript">
     var map = L.map('form_extent_map').setView([50.859933, 4.351969], 7);
-     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
          attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-     }).addTo(map);
+    }).addTo(map);
 
-     var drawnItems = new L.FeatureGroup();
-     map.addLayer(drawnItems, {crs: L.CRS.EPSG4326});
-     var drawControl = new L.Control.Draw({
-        draw: {
-             polygon: false,
-             polyline: false,
-             marker: false,
-             circle: false,
-             circlemarker: false
-         },
-         edit: {
-             featureGroup: drawnItems
-         }
-     });
-     map.addControl(drawControl);
+    var drawnItems = new L.FeatureGroup();
+    map.addLayer(drawnItems, {crs: L.CRS.EPSG4326});
+    map.pm.addControls({
+        position: 'topleft',
+        drawMarker: false,
+        drawCircleMarker: false,
+        drawPolyline: false,
+        drawRectangle: true,
+        drawPolygon: false,
+        drawCircle: false,
+        editMode: false,
+        dragMode: false,
+        cutPolygon: false,
+        removalMode: true,
+    });
 
      var input_field = document.getElementById('field-{{field.field_name}}');
      if(input_field.value){
-        L.geoJSON(JSON.parse(input_field.value)).addTo(map);
+        var layer = L.geoJSON(JSON.parse(input_field.value));
+        drawnItems.addLayer(layer);
      }
 
-    map.on('draw:created',  function (e) {
-       var type = e.layerType,layer = e.layer;
-
-       drawnItems.addLayer(layer);
-
-       var layerGeoJSON = layer.toGeoJSON()["geometry"]
+    map.on('pm:create',  function (e) {
+       layer = e.layer;
+       var layerGeoJSON = layer.toGeoJSON()["geometry"];
        console.log(layerGeoJSON);
-       console.log(JSON.stringify(layerGeoJSON, null));
-
+       drawnItems.addLayer(layer);
        var input_field = document.getElementById('field-{{field.field_name}}');
        input_field.value = JSON.stringify(layerGeoJSON, null);
     });
 
-    map.on('draw:deleted',  function (e) {
-       var type = e.layerType,layer = e.layer;
-
+    map.on('pm:remove',  function (e) {
+       layer = e.layer;
+       var layerGeoJSON = layer.toGeoJSON()["geometry"];
+       console.log(layerGeoJSON);
        var input_field = document.getElementById('field-{{field.field_name}}');
-       input_field.value = JSON.stringify(drawnItems.toGeoJSON(), null);;
+       input_field.value = null;
     });
 
 
