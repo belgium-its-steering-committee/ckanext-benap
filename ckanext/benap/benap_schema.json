@@ -262,8 +262,8 @@
     },
     {
       "field_name": "spatial",
-      "label": "Datset extent",
-      "help_text": "Add the extent of the dataset in GeoJSON format",
+      "label": "Dataset extent",
+      "help_text": "Select the extent of the dataset on the map",
       "display_snippet": "map.html",
       "form_snippet": "form_map.html"
     },
