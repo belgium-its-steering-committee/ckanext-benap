@@ -2,7 +2,8 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 
-from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallback, json_loads
+from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallback, json_loads, \
+    package_notes_translated_fallback
 from ckanext.benap.util.forms import map_for_form_select
 
 
@@ -31,5 +32,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
             'benap_geographic_granularity_helper': lambda context: map_for_form_select(self.geographic_granularity_map),
             'benap_ontology_helper': ontology_helper,
             'benap_scheming_language_text_fallback': scheming_language_text_fallback,
+            'benap_package_notes_translated_fallback': package_notes_translated_fallback,
             'json_loads': json_loads
         }

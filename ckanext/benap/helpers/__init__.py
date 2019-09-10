@@ -4,6 +4,14 @@ import json
 from ckanext.benap.util.forms import map_for_form_select
 
 
+def user_language():
+    try:
+        from ckantoolkit import h
+        return h.lang()
+    except TypeError:
+        return None  # lang() call will fail when no user language available
+
+
 def ontology_helper(context):
     ontology = context.get("benap_helper_ontology", None)
     if ontology == "language":
@@ -768,6 +776,19 @@ def ontology_helper(context):
 
 def scheming_language_text_fallback(field_data, language_data):
     return field_data['en'] or field_data['nl'] or field_data['fr'] or field_data['de']
+
+
+def package_notes_translated_fallback(package):
+    notes_value = None
+    user_lang = user_language()
+    notes_translated = package.get('notes_translated', None)
+    if notes_translated:
+        if user_lang:
+            notes_value = notes_translated.get(user_lang, None)
+        if not notes_value:
+            notes_value = notes_translated['en'] or notes_translated['nl'] or notes_translated['fr'] \
+                          or notes_translated['de'] or None
+    return notes_value
 
 
 def json_loads(data):
