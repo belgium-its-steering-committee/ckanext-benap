@@ -11,9 +11,6 @@ phone_number_pattern = re.compile(
 
 
 def phone_number_validator(value, context):
-    print("#" * 35)
-    print(value)
-    print("#" * 35)
     if value:
         if not phone_number_pattern.match(value):
             raise Invalid(_('Phone number {number} is not a valid format').format(number=value))
