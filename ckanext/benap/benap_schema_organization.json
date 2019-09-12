@@ -65,7 +65,7 @@
     {
       "field_name": "do_email",
       "label": "E-mail",
-      "validators": "scheming_required email_validator",
+      "validators": "scheming_required email_validator not_empty",
       "form_placeholder": "data@my-organization.com",
       "required": true
     },
@@ -77,7 +77,7 @@
          "nl": "Website",
          "de": "Website"
  	},
-      "validators": "scheming_required url_validator",
+      "validators": "scheming_required url_validator not_empty",
       "required": true
     },
     {

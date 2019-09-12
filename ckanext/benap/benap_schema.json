@@ -132,7 +132,8 @@
       "display_property": "dc:creator",
       "display_snippet": "email.html",
       "display_email_name_field": "contact_name",
-      "required": "true"
+      "required": "true",
+      "validators": "email_validator not_empty"
     },
     {
       "field_name": "cp_website",
@@ -143,6 +144,7 @@
         "de": "Website [contact point]"
       },
       "display_snippet": "link.html",
+      "validators": "url_validator",
       "display_property": "dc:creator"
     },
     {
@@ -155,7 +157,8 @@
       },
       "form_placeholder": "+32 2 XXX XX XX",
       "display_property": "dc:creator",
-      "required": "true"
+      "required": "true",
+      "validators": "phone_number_validator not_empty"
     },
     {
       "field_name": "publisher_name",
@@ -201,7 +204,8 @@
       "form_placeholder": "example@example.com",
       "display_snippet": "email.html",
       "display_email_name_field": "publisher_name",
-      "required": "true"
+      "required": "true",
+      "validators": "email_validator not_empty"
     },
     {
       "field_name": "publisher_url",
@@ -211,7 +215,8 @@
         "nl": "Website [publisher]",
         "de": "Website [publisher]"
       },
-      "display_snippet": "link.html"
+      "display_snippet": "link.html",
+      "validators": "url_validator"
     },
     {
       "field_name": "p_tel",
@@ -222,7 +227,8 @@
         "de": "Telephone number [publisher]"
       },
       "form_placeholder": "+32 2 XXX XX XX",
-      "required": "true"
+      "required": "true",
+      "validators": "phone_number_validator not_empty"
     },
     {
       "field_name": "temporal_start",
