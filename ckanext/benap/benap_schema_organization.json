@@ -77,8 +77,7 @@
          "nl": "Website",
          "de": "Website"
  	},
-      "validators": "scheming_required url_validator not_empty",
-      "required": true
+      "validators": "scheming_required url_validator not_empty"
     },
     {
       "field_name": "do_tel",
