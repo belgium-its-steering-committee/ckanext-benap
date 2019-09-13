@@ -14,7 +14,12 @@
       },
       "display_property": "dct:language",
       "preset": "multiple_select",
-      "help_text": "Describes the language(s) in which you will fill in the metadata in this form",
+      "help_text": {
+        "en": "Describes the language(s) in which you will fill in the metadata in this form",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "language",
       "required": "true"
@@ -29,7 +34,12 @@
       },
       "preset": "title",
       "form_placeholder": "e.g. Highway Network",
-      "help_text": "Describes the dataset in generic terms or gives a short description. The author is encouraged to write a meaningful description in one of the selected metadata language",
+      "help_text": {
+        "en": "Describes the dataset in generic terms or gives a short description. The author is encouraged to write a meaningful description in one of the selected metadata language",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "required": "true"
     },
     {
@@ -48,7 +58,12 @@
         "de": "Beschreibung des datensatzes"
       },
       "form_placeholder": "eg. “Contains static high priority network of Belgium: Road Name, Lane number, Direction”",
-      "help_text": "Gives the user more information about the content of the dataset or service. This MUST be filled in all selected metadata languages",
+      "help_text": {
+        "en": "Gives the user more information about the content of the dataset or service. This MUST be filled in all selected metadata languages",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "form_languages": [
         "en",
         "fr",
@@ -76,7 +91,12 @@
           "label": "Service"
         }
       ],
-      "help_text": "'Travel information service' means an ITS service, including digital maps, that provides users and end-users, with travel and traffic information of at least one transport mode",
+      "help_text": {
+        "en": "'Travel information service' means an ITS service, including digital maps, that provides users and end-users, with travel and traffic information of at least one transport mode",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "required": "true"
     },
      {
@@ -88,7 +108,12 @@
         "de": "Organisation name [contact point]"
       },
       "preset": "dataset_organization",
-      "help_text": "The 'contact point' describes an organisation, if applicable a person, which is responsible for the creation and maintenance of the metadata. This person or organization is the single point of contact for the present metadata set",
+      "help_text": {
+        "en": "The 'contact point' describes an organisation, if applicable a person, which is responsible for the creation and maintenance of the metadata. This person or organization is the single point of contact for the present metadata set",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "required": "true"
     },
     {
@@ -127,7 +152,12 @@
       "display_property": "dc:creator",
       "display_snippet": "email.html",
       "display_email_name_field": "contact_name",
-      "help_text": "The email adress must contain @ and a dot",
+      "help_text": {
+        "en": "The email adress must contain @ and a dot",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "required": "true",
       "validators": "email_validator not_empty"
     },
@@ -141,7 +171,12 @@
       },
       "display_snippet": "link.html",
       "validators": "url_validator",
-      "help_text": "The website address must start with 'http://' or 'https://'",
+      "help_text": {
+        "en": "The website address must start with 'http://' or 'https://'",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "display_property": "dc:creator"
     },
     {
@@ -155,7 +190,12 @@
       "form_placeholder": "+32 2 XXX XX XX",
       "display_property": "dc:creator",
       "required": "true",
-      "help_text": "The telephone number may only contain numbers from 0 to 9, single spaces and '+'",
+      "help_text": {
+        "en": "The telephone number may only contain numbers from 0 to 9, single spaces and '+'",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "validators": "phone_number_validator not_empty"
     },
     {
@@ -166,7 +206,12 @@
         "nl": "Organisation name [publisher]",
         "de": "Organisation name [publisher]"
       },
-      "help_text": "The 'publisher' describes an entity (company and person) that publishes the datasets (we are not refering to the metadata here, but rather to the data themselves). He or she is responsible for the given information and must be contacted by data consumers if a contract needs to be concluded",
+      "help_text": {
+        "en": "The 'publisher' describes an entity (company and person) that publishes the datasets (we are not refering to the metadata here, but rather to the data themselves). He or she is responsible for the given information and must be contacted by data consumers if a contract needs to be concluded",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "required": "true"
     },
     {
@@ -202,7 +247,12 @@
       "form_placeholder": "example@example.com",
       "display_snippet": "email.html",
       "display_email_name_field": "publisher_name",
-      "help_text": "The email adress must contain @ and a dot",
+      "help_text": {
+        "en": "The email adress must contain @ and a dot",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "required": "true",
       "validators": "email_validator not_empty"
     },
@@ -215,7 +265,12 @@
         "de": "Website [publisher]"
       },
       "display_snippet": "link.html",
-      "help_text": "The website address must start with 'http://' or 'https://'",
+      "help_text": {
+        "en": "The website address must start with 'http://' or 'https://'",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "validators": "url_validator"
     },
     {
@@ -227,7 +282,12 @@
         "de": "Telephone number [publisher]"
       },
       "form_placeholder": "+32 2 XXX XX XX",
-      "help_text": "The telephone number may only contain numbers from 0 to 9, single spaces and '+'",
+      "help_text": {
+        "en": "The telephone number may only contain numbers from 0 to 9, single spaces and '+'",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "required": "true",
       "validators": "phone_number_validator not_empty"
     },
@@ -239,7 +299,12 @@
         "nl": "Start date of publication",
         "de": "Start date of publication"
       },
-      "help_text": "Describes from which date and time on the data delivery is applicable. If left empty, the publication is considered as available immediately",
+      "help_text": {
+        "en": "Describes from which date and time on the data delivery is applicable. If left empty, the publication is considered as available immediately",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "form_snippet": "date_time.html"
     },
     {
@@ -251,7 +316,12 @@
         "de": "End date of publication"
       },
       "preset": "datetime",
-      "help_text": "Describes the date when data delivery to this publication terminates. If left empty, the publication does not expire",
+      "help_text": {
+        "en": "Describes the date when data delivery to this publication terminates. If left empty, the publication does not expire",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "form_snippet": "date_time.html"
     },
     {
@@ -263,7 +333,12 @@
         "de": "Area covered by publication"
       },
       "preset": "multiple_select",
-      "help_text": "Describes the geographic area covered by the data set, based on the Nomenclature of Territorial Units for Statistics (NUTS)",
+      "help_text": {
+        "en": "Describes the geographic area covered by the data set, based on the Nomenclature of Territorial Units for Statistics (NUTS)",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "NUTS3_BE",
       "required": "true"
@@ -276,7 +351,12 @@
         "nl": "Dataset extent",
         "de": "Dataset extent"
       },
-      "help_text": "Select the extent of the dataset on the map",
+      "help_text": {
+        "en": "Select the extent of the dataset on the map",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "display_snippet": "map.html",
       "form_snippet": "form_map.html"
     },
@@ -289,8 +369,13 @@
         "de": "Transportation modes covered"
       },
       "preset": "tag_string_autocomplete",
-      "form_placeholder": "[UNDER CONSTRUCTION] research will be made to see if this field could become a predefined list of tags (items) as defined under paragraph 2.2.5.1 of the Coordinated Metadata Cataloque",
-      "help_text": "Describes the transportation mode covered by the data set."
+      "help_text": {
+        "en": "Describes the transportation mode covered by the data set."
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
+      "form_placeholder": "[UNDER CONSTRUCTION] research will be made to see if this field could become a predefined list of tags (items) as defined under paragraph 2.2.5.1 of the Coordinated Metadata Cataloque"
     },
     {
       "field_name": "license_id",
@@ -301,7 +386,12 @@
         "de": "Contract or licence"
       },
       "form_snippet": "license.html",
-      "help_text": "Describes the conditions of use of the data set",
+      "help_text": {
+        "en": "Describes the conditions of use of the data set",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "required": "true"
     },
     {
@@ -310,7 +400,12 @@
       "display_property": "dct:accrualPeriodicity",
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
-      "help_text": "Describes the update rate of the data set",
+      "help_text": {
+        "en": "Describes the update rate of the data set",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "benap_helper_ontology": "frequency"
     },
     {
@@ -321,12 +416,17 @@
          "fr": "Quality assessment",
          "nl": "Quality assessment",
          "de": "Quality assessment"
- 	},
+ 	  },
       "display_snippet": "fluent_markdown_fallback.html",
+      "help_text": {
+        "en": "Describes methods and results of a quality assessment",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "form_languages": ["en", "fr", "nl", "de"],
       "form_attrs": {"class": "form-control"},
-      "form_placeholder": "eg. “Quality Criteria “Correctness” and “Completeness” fulfilled to 99%, assessed by ground-truth testing”",
-      "help_text":"Describes methods and results of a quality assessment"
+      "form_placeholder": "eg. “Quality Criteria “Correctness” and “Completeness” fulfilled to 99%, assessed by ground-truth testing”"
     },
     {
       "field_name": "theme",
@@ -343,7 +443,12 @@
       "field_name": "url",
       "label": "Access URL",
       "preset": "resource_url_upload",
-      "help_text": "Provides a general link for access to the current data set or a connection link to a service. You may add documentation also as second ressource (button 'Save and add another' herunder)",
+      "help_text": {
+        "en": "Provides a general link for access to the current data set or a connection link to a service. You may add documentation also as second ressource (button 'Save and add another' herunder)",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "required": "true"
     },
     {
@@ -367,9 +472,14 @@
          "de": "Data format - Encoding"
  	},
       "preset": "select",
+      "help_text": {
+        "en": "This describes the atomic element of the transfer syntax description",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "choices_helper": "benap_ontology_helper",
-      "benap_helper_ontology": "encoding",
-      "help_text": "This describes the atomic element of the transfer syntax description"
+      "benap_helper_ontology": "encoding"
     },
     {
       "field_name": "format",
@@ -382,7 +492,12 @@
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "syntax",
-      "help_text": "This describes the base standard that specifies syntactically correct documents",
+      "help_text": {
+        "en": "This describes the base standard that specifies syntactically correct documents",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "required": "true"
     },
     {
@@ -395,8 +510,13 @@
  	},
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
-      "benap_helper_ontology": "grammar",
-      "help_text": "This describes standards on top of the elementary syntax that describe data structures in the dataset"
+      "help_text": {
+        "en": "This describes standards on top of the elementary syntax that describe data structures in the dataset",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
+      "benap_helper_ontology": "grammar"
     },
     {
       "field_name": "acc_mod",
@@ -409,7 +529,12 @@
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "datamodel",
-      "help_text": "This describes the specific data model used in the data",
+      "help_text": {
+        "en": "This describes the specific data model used in the data",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "required": "true"
     },
     {
@@ -421,7 +546,12 @@
          "de": "Data format - Description"
  	},
       "form_placeholder": "eg. Proprietary model in accordance to CEN TC278 / WG17 / Urban ITS",
-      "help_text": "Can be optionally used to provide additional information on the data format",
+      "help_text": {
+        "en": "Can be optionally used to provide additional information on the data format",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "form_snippet": "markdown.html"
     },
     {
@@ -435,7 +565,12 @@
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "protocol",
-      "help_text": "Describes the IT protocol of the data interface that will be used to transfer data",
+      "help_text": {
+        "en": "Describes the IT protocol of the data interface that will be used to transfer data",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "required": "true"
     },
     {
@@ -449,7 +584,12 @@
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "communication",
-      "help_text": "Describes the transmitting procedure from data provider to data receiver",
+      "help_text": {
+        "en": "Describes the transmitting procedure from data provider to data receiver",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "required": "true"
     },
     {
@@ -459,7 +599,12 @@
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "EU-language",
-      "help_text": "Describes the language of the data contents (text fields, addresses etc.)",
+      "help_text": {
+        "en": "Describes the language of the data contents (text fields, addresses etc.)",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "required": "true"
     }
   ]
