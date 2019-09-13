@@ -187,11 +187,11 @@
         "nl": "Telephone number [contact point]",
         "de": "Telephone number [contact point]"
       },
-      "form_placeholder": "+32 2 XXX XX XX",
+      "form_placeholder": "+322XXXXXXX",
       "display_property": "dc:creator",
       "required": "true",
       "help_text": {
-        "en": "The telephone number may only contain numbers from 0 to 9, single spaces and '+'",
+        "en": "The telephone number may only contain numbers from 0 to 9 and the '+' sign",
         "fr": "See English version",
         "nl": "See English version",
         "de": "See English version"
@@ -281,9 +281,9 @@
         "nl": "Telephone number [publisher]",
         "de": "Telephone number [publisher]"
       },
-      "form_placeholder": "+32 2 XXX XX XX",
+      "form_placeholder": "+322XXXXXXX",
       "help_text": {
-        "en": "The telephone number may only contain numbers from 0 to 9, single spaces and '+'",
+        "en": "The telephone number may only contain numbers from 0 to 9 and the '+' sign",
         "fr": "See English version",
         "nl": "See English version",
         "de": "See English version"
