@@ -29,7 +29,7 @@
       },
       "preset": "title",
       "form_placeholder": "e.g. Highway Network",
-      "help_text": "Describes the dataset in generic terms or gives a short description. The author is encouraged to write a meaningful description",
+      "help_text": "Describes the dataset in generic terms or gives a short description. The author is encouraged to write a meaningful description in one of the selected metadata language",
       "required": "true"
     },
     {
@@ -48,7 +48,7 @@
         "de": "Beschreibung des datensatzes"
       },
       "form_placeholder": "eg. “Contains static high priority network of Belgium: Road Name, Lane number, Direction”",
-      "help_text": "Gives the user more information about the content of the dataset or service. The used language for the description should be the language from the field metadata language",
+      "help_text": "Gives the user more information about the content of the dataset or service. This MUST be filled in all selected metadata languages",
       "form_languages": [
         "en",
         "fr",
@@ -76,13 +76,20 @@
           "label": "Service"
         }
       ],
-      "help_text": "'Travel information service' means an ITS service, including digital maps, that provides users, and end-users, with travel and traffic information of at least one transport mode",
+      "help_text": "'Travel information service' means an ITS service, including digital maps, that provides users and end-users, with travel and traffic information of at least one transport mode",
       "required": "true"
     },
      {
       "field_name": "owner_org",
-      "label": "Organization",
-      "preset": "dataset_organization"
+      "label": {
+        "en": "Organisation name [contact point]",
+        "fr": "Organisation name [contact point]",
+        "nl": "Organisation name [contact point]",
+        "de": "Organisation name [contact point]"
+      },
+      "preset": "dataset_organization",
+      "help_text": "The 'contact point' describes an organisation, if applicable a person, which is responsible for the creation and maintenance of the metadata. This person or organization is the single point of contact for the present metadata set",
+      "required": "true"
     },
     {
       "field_name": "contact_name",
@@ -93,18 +100,6 @@
         "de": "Name [contact point]"
       },
       "form_placeholder": "John Doe",
-      "display_property": "dc:creator",
-      "help_text": "Describes an organisation, if applicable a person, which is responsible for creation and maintenance of the metadata. This person or organization is the single point of contact for the present metadata set",
-      "required": "true"
-    },
-    {
-      "field_name": "cp_org_name",
-      "label": {
-        "en": "Organisation name [contact point]",
-        "fr": "Organisation name [contact point]",
-        "nl": "Organisation name [contact point]",
-        "de": "Organisation name [contact point]"
-      },
       "display_property": "dc:creator",
       "required": "true"
     },
@@ -132,6 +127,7 @@
       "display_property": "dc:creator",
       "display_snippet": "email.html",
       "display_email_name_field": "contact_name",
+      "help_text": "The email adress must contain @ and a dot",
       "required": "true",
       "validators": "email_validator not_empty"
     },
@@ -145,6 +141,7 @@
       },
       "display_snippet": "link.html",
       "validators": "url_validator",
+      "help_text": "The website address must start with 'http://' or 'https://'",
       "display_property": "dc:creator"
     },
     {
@@ -158,7 +155,19 @@
       "form_placeholder": "+32 2 XXX XX XX",
       "display_property": "dc:creator",
       "required": "true",
+      "help_text": "The telephone number may only contain numbers from 0 to 9, single spaces and '+'",
       "validators": "phone_number_validator not_empty"
+    },
+    {
+      "field_name": "publisher_org",
+      "label": {
+        "en": "Organisation name [publisher]",
+        "fr": "Organisation name [publisher]",
+        "nl": "Organisation name [publisher]",
+        "de": "Organisation name [publisher]"
+      },
+      "help_text": "The 'publisher' describes an entity (company and person) that publishes the datasets (we are not refering to the metadata here, but rather to the data themselves). He or she is responsible for the given information and must be contacted by data consumers if a contract needs to be concluded",
+      "required": "true"
     },
     {
       "field_name": "publisher_name",
@@ -169,17 +178,6 @@
         "de": "Name [publisher]"
       },
       "form_placeholder": "John Doe",
-      "help_text": "Describes an entity (company and person) that publishes the data sets. He or she is responsible for the given information and must be contacted by data consumers if a contract needs to be concluded",
-      "required": "true"
-    },
-    {
-      "field_name": "publisher_org",
-      "label": {
-        "en": "Organisation name [publisher]",
-        "fr": "Organisation name [publisher]",
-        "nl": "Organisation name [publisher]",
-        "de": "Organisation name [publisher]"
-      },
       "required": "true"
     },
     {
@@ -204,6 +202,7 @@
       "form_placeholder": "example@example.com",
       "display_snippet": "email.html",
       "display_email_name_field": "publisher_name",
+      "help_text": "The email adress must contain @ and a dot",
       "required": "true",
       "validators": "email_validator not_empty"
     },
@@ -216,6 +215,7 @@
         "de": "Website [publisher]"
       },
       "display_snippet": "link.html",
+      "help_text": "The website address must start with 'http://' or 'https://'",
       "validators": "url_validator"
     },
     {
@@ -227,6 +227,7 @@
         "de": "Telephone number [publisher]"
       },
       "form_placeholder": "+32 2 XXX XX XX",
+      "help_text": "The telephone number may only contain numbers from 0 to 9, single spaces and '+'",
       "required": "true",
       "validators": "phone_number_validator not_empty"
     },
@@ -269,7 +270,12 @@
     },
     {
       "field_name": "spatial",
-      "label": "Dataset extent",
+      "label": {
+        "en": "Dataset extent",
+        "fr": "Dataset extent",
+        "nl": "Dataset extent",
+        "de": "Dataset extent"
+      },
       "help_text": "Select the extent of the dataset on the map",
       "display_snippet": "map.html",
       "form_snippet": "form_map.html"
@@ -283,7 +289,7 @@
         "de": "Transportation modes covered"
       },
       "preset": "tag_string_autocomplete",
-      "form_placeholder": "[UNDER CONSTRUCTION] this field could become a predefined list of tags (items) as defined under paragraph 2.2.5.1 of the Coordinated Metadata Cataloque",
+      "form_placeholder": "[UNDER CONSTRUCTION] research will be made to see if this field could become a predefined list of tags (items) as defined under paragraph 2.2.5.1 of the Coordinated Metadata Cataloque",
       "help_text": "Describes the transportation mode covered by the data set."
     },
     {
@@ -304,6 +310,7 @@
       "display_property": "dct:accrualPeriodicity",
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
+      "help_text": "Describes the update rate of the data set",
       "benap_helper_ontology": "frequency"
     },
     {
