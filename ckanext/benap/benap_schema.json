@@ -191,7 +191,7 @@
       "display_property": "dc:creator",
       "required": "true",
       "help_text": {
-        "en": "The telephone number may only contain numbers from 0 to 9 and the '+' sign",
+        "en": "The telephone number must start with the country prefix (e.g. '+32' for Belgium) and may only contain numbers from 0 to 9 besides the '+' sign",
         "fr": "See English version",
         "nl": "See English version",
         "de": "See English version"
@@ -283,7 +283,7 @@
       },
       "form_placeholder": "+322XXXXXXX",
       "help_text": {
-        "en": "The telephone number may only contain numbers from 0 to 9 and the '+' sign",
+        "en": "The telephone number must start with the country prefix (e.g. '+32' for Belgium) and may only contain numbers from 0 to 9 besides the '+' sign",
         "fr": "See English version",
         "nl": "See English version",
         "de": "See English version"
