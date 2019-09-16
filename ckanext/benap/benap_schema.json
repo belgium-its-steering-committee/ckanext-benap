@@ -299,13 +299,13 @@
         "nl": "Start date of publication",
         "de": "Start date of publication"
       },
+      "preset": "datetime",
       "help_text": {
         "en": "Describes from which date and time on the data delivery is applicable. If left empty, the publication is considered as available immediately",
         "fr": "See English version",
         "nl": "See English version",
         "de": "See English version"
-      },
-      "form_snippet": "date_time.html"
+      }
     },
     {
       "field_name": "temporal_end",
@@ -321,8 +321,7 @@
         "fr": "See English version",
         "nl": "See English version",
         "de": "See English version"
-      },
-      "form_snippet": "date_time.html"
+      }
     },
     {
       "field_name": "geo_area",
@@ -593,7 +592,7 @@
       "required": "true"
     },
     {
-      "field_name": "language",
+      "field_name": "resource_language",
       "label": "Dataset language",
       "display_property": "dct:language",
       "preset": "select",
