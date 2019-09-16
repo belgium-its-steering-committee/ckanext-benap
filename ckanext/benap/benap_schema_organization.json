@@ -41,8 +41,7 @@
       "error_snippet": "fluent_text.html",
       "validators": "fluent_text",
       "output_validators": "fluent_core_translated_output",
-      "form_placeholder": "A little information about my organization...",
-      "required": true
+      "form_placeholder": "A little information about my organization..."
     },
     {
       "field_name": "image_url",
@@ -81,7 +80,7 @@
          "nl": "Website",
          "de": "Website"
  	},
-      "validators": "scheming_required url_validator not_empty"
+      "validators": "scheming_required url_validator"
     },
     {
       "field_name": "do_tel",
