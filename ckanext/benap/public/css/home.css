@@ -110,11 +110,12 @@ button {
 }
 
 #content-box {
-    background-color: #ffffff;
+    background: white;
 }
 
 .highlight-box {
     background-color: #e0f3ff;
+    min-height: 100%;
 }
 
 .highlight-box img {
@@ -146,6 +147,62 @@ button {
     color: #333333;
 }
 
-.join-button {
+.button-width {
     min-width: 82px;
+}
+
+.flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.mt-5px {
+    margin-top: 5px;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.border-grey {
+    border: 1px solid #dddddd;
+    padding: 20px;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-email {
+    border-radius: 0;
+    border: 1px solid #dddddd;
+    height: 34px;
+    width: calc( 100% - 132px );
+}
+
+.input-email::placeholder {
+    color: #666666;
+}
+
+.button-height-34px {
+    height: 34px;
+    padding: 0 15px;
+    box-sizing: content-box;
+}
+
+#newsletter {
+    margin-bottom: 20px;
+}
+
+.my-10px {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

@@ -1,7 +1,8 @@
-body {
+body, .custom-font {
     font-family: 'Barlow Condensed';
     margin: 0;
     padding: 0;
+    background-color: #ffffff;
 }
 
 h1.logo {

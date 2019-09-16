@@ -8,7 +8,7 @@
     <div class="searchbox">
         <h2>{{ _("SEARCH FOR DATA SETS") }}</h2>
         <form class="flex" style="align-items: center" method="get" action="{% url_for controller='package', action='search' %}">
-            <input placeholder="{{ _('ex. transport, cars, trains, ...') }}" id="field-main-search" type="text" class="form-control" name="q" value="" autocomplete="off"/>
+            <input placeholder="{{ _('ex. transport, cars, trains, ...') }}" id="field-main-search" type="text" class="form-control" name="q" autocomplete="off"/>
             <div>
                 <button type="submit" style="height:45px;font-size:18px;"><i class="fa fa-search"></i></button>
             </div>
