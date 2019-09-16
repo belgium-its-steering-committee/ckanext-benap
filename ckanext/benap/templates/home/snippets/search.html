@@ -1,0 +1,54 @@
+{% set tags = h.get_facet_items_dict('tags', limit=3) %}
+{% set placeholder = _('E.g. environment') %}
+
+
+<div class="large-title">{{ _("BELGIUM'S NATIONAL ACCESS POINT FOR MULITIMODAL TRAVEL INFORMATION SERVICES") }}</div>
+        <!-- search / add data-->
+<div class="flex">
+    <div class="searchbox">
+        <h2>{{ _("SEARCH FOR DATA SETS") }}</h2>
+        <form class="flex" style="align-items: center" method="get" action="{% url_for controller='package', action='search' %}">
+            <input placeholder="{{ _('ex. transport, cars, trains, ...') }}" id="field-main-search" type="text" class="form-control" name="q" value="" autocomplete="off"/>
+            <div>
+                <button type="submit" style="height:45px;font-size:18px;"><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+        <div class="tags">
+            <h3 id="pop-tags">{{ _('Popular Tags') }}</h3>
+            {% for tag in tags %}
+                <a class="btn btn-light" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
+            {% endfor %}
+            <!-- TODO remove placeholder tags -->
+            <a class="btn btn-light" href="{% url_for controller='package', action='search', tags=Brussels %}">{{ h.truncate(_('Brussels'), 22) }}</a>
+            <a class="btn btn-light" href="{% url_for controller='package', action='search', tags=Bus %}">{{ h.truncate(_('Bus'), 22) }}</a>
+            <a class="btn btn-light" href="{% url_for controller='package', action='search', tags=GFTS %}">{{ h.truncate(_('GFTS'), 22) }}</a>
+        </div>
+    </div>
+    <div class="add-databox">
+        <h3>{{ _("ADD NEW DATA") }}</h3>
+        <div class="register-flex">
+            <p>{{ _("Data providers can easily add data to the catalogue.") }}</p>
+            <button class="bt-large">{{ _("Register") }}</button>
+        </div>
+    </div>
+</div>
+
+
+<!--div class="module module-search module-narrow module-shallow box">
+  <form class="module-content search-form" method="get" action="{% url_for controller='package', action='search' %}">
+    <h3 class="heading">{{ _("Search data") }}</h3>
+    <div class="search-input form-group search-giant">
+      <input aria-label="{% block header_site_search_label %}{{ _('Search datasets') }}{% endblock %}" id="field-main-search" type="text" class="form-control" name="q" value="" autocomplete="off" placeholder="{% block search_placeholder %}{{ placeholder }}{% endblock %}" />
+      <button type="submit">
+        <i class="fa fa-search"></i>
+        <span class="sr-only">{{ _('Search') }}</span>
+      </button>
+    </div>
+  </form>
+  <div class="tags">
+    <h3>{{ _('Popular tags') }}</h3>
+    {% for tag in tags %}
+      <a class="tag" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
+    {% endfor %}
+  </div>
+</div-->
