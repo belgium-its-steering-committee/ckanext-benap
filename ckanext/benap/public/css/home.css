@@ -77,6 +77,7 @@ button {
     font-size: 16px;
     margin: 0 0 0 10px;
     height: 45px;
+    font-weight: bold;
 }
 
 .tags {
@@ -136,7 +137,15 @@ button {
     color: #919191;
 }
 
+.highlight-box-header {
+    min-height: 70px;
+}
+
 #highlight-box-text p {
     font-size: 1.8rem;
     color: #333333;
+}
+
+.join-button {
+    min-width: 82px;
 }
