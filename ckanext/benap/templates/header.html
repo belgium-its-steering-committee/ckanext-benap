@@ -64,7 +64,7 @@
   <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
   {% endif %} {% endblock %}
   <div id="header-container" class="container">
-      <hgroup class="{{ g.header_class }}">
+      <hgroup id="header-logo">
           <a href="{{ h.url_for('home.index') }}"><h1 class="logo">TRANSPORTDATA<span>.BE</span></h1></a>
         </hgroup>
       <div id="header-content">

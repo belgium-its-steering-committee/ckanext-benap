@@ -98,6 +98,11 @@ h1.logo span {
 
 
 
+@media only screen and (min-width: 758px) {
+    .masthead .navigation.section {
+        float: left;
+    }
+}
 
 @media only screen and (min-width: 767px) {
     #nav-menu-items {
@@ -116,5 +121,13 @@ h1.logo span {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    #header-container #header-logo {
+        margin-left: 50px;
+    }
+
+    #header-container #header-content {
+        margin-right: 50px;
     }
 }
