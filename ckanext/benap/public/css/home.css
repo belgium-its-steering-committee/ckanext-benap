@@ -113,9 +113,14 @@ button {
     background: white;
 }
 
+.special-col {
+    padding: 25px 15px;
+    height: 100%;
+}
+
 .highlight-box {
     background-color: #e0f3ff;
-    min-height: 100%;
+    min-height: 399px;
 }
 
 .highlight-box img {
