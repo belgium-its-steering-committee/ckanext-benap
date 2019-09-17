@@ -69,3 +69,7 @@ footer p, .site-footer a, .site-footer, .site-footer label, .site-footer small {
 .pr-1 {
     padding-right: 4px !important;
 }
+
+.pb-5px {
+    padding-bottom: 5px;
+}
