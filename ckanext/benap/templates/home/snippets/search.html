@@ -18,10 +18,6 @@
             {% for tag in tags %}
                 <a class="btn btn-light" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
             {% endfor %}
-            <!-- TODO remove placeholder tags -->
-            <a class="btn btn-light" href="{% url_for controller='package', action='search', tags=Brussels %}">{{ h.truncate(_('Brussels'), 22) }}</a>
-            <a class="btn btn-light" href="{% url_for controller='package', action='search', tags=Bus %}">{{ h.truncate(_('Bus'), 22) }}</a>
-            <a class="btn btn-light" href="{% url_for controller='package', action='search', tags=GFTS %}">{{ h.truncate(_('GFTS'), 22) }}</a>
         </div>
     </div>
     <div class="add-databox">
