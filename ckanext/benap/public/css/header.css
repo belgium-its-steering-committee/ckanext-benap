@@ -37,6 +37,8 @@ h1.logo span {
 
 .account-masthead .account ul li a {
     color: #333333;
+    font-size: 16px;
+    font-weight: normal;
 }
 
 .account-masthead .account ul li a:hover {
