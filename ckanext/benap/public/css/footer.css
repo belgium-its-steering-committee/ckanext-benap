@@ -29,7 +29,7 @@
 }
 
 .pb-0 {
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
 }
 
 .ml-50 {
@@ -59,4 +59,13 @@ footer p, .site-footer a, .site-footer, .site-footer label, .site-footer small {
 
 .w-33 {
     min-width: 33%;
+}
+
+
+.pt-0 {
+    padding-top: 0 !important;
+}
+
+.pr-1 {
+    padding-right: 4px !important;
 }
