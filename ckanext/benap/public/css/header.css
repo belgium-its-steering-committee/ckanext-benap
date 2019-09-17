@@ -22,6 +22,28 @@ h1.logo span {
     min-height: 60px;
 }
 
+.account-masthead {
+    background: #fff;
+    border-bottom: 1px solid #efefef;
+}
+
+.account-masthead .account ul li {
+    border-left: 1px solid #efefef;
+}
+
+.account-masthead .account ul li:last-of-type {
+    border-right: 1px solid #efefef;
+}
+
+.account-masthead .account ul li a {
+    color: #333333;
+}
+
+.account-masthead .account ul li a:hover {
+    background: #ffffff;
+    color: #333333;
+}
+
 .masthead {
     padding: 0;
 }
@@ -66,6 +88,9 @@ h1.logo span {
 .form-control#field-sitewide-search::placeholder, .simple-input .field .btn-search{
     color: #333333;
 }
+
+
+
 
 
 @media only screen and (min-width: 767px) {
