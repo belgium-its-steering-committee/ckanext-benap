@@ -17,6 +17,10 @@ h1.logo span {
     color: #919191
 }
 
+.container::before, .container::after {
+    display: none;
+}
+
 .header-menu {
     background: #fff;
     min-height: 60px;
