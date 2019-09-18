@@ -5,11 +5,13 @@ import ckan.plugins.toolkit as toolkit
 from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallback, json_loads, \
     package_notes_translated_fallback
 from ckanext.benap.util.forms import map_for_form_select
+from ckanext.benap.validators import phone_number_validator
 
 
 class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     plugins.implements(plugins.IConfigurer, inherit=True)
     plugins.implements(plugins.ITemplateHelpers, inherit=False)
+    plugins.implements(plugins.IValidators, inherit=True)
 
     geographic_granularity_map = [('', ''),
                                   ('national', 'National'),
@@ -34,4 +36,11 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
             'benap_scheming_language_text_fallback': scheming_language_text_fallback,
             'benap_package_notes_translated_fallback': package_notes_translated_fallback,
             'json_loads': json_loads
+        }
+
+    # IValidators
+
+    def get_validators(self):
+        return {
+            'phone_number_validator': phone_number_validator
         }

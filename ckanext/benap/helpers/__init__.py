@@ -421,7 +421,7 @@ def ontology_helper(context):
                 "nl": u"CSV",
                 "de": u"CSV"
             }),
-            ('http://purl.org/ASN/schema/core/StandardDocument', {
+            ('ASN.1 encoding rules', {
                 "en": u"ASN.1 encoding rules",
                 "fr": u"ASN.1 encoding rules",
                 "nl": u"ASN.1 encoding rules",

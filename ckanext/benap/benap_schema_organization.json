@@ -29,16 +29,19 @@
       "form_placeholder": "my-organization"
     },
     {
-      "field_name": "description",
+      "field_name": "description_translated",
       "label":{
          "en": "Description",
          "fr": "Description",
          "nl": "Description",
          "de": "Description"
  	},
-      "form_snippet": "markdown.html",
-      "form_placeholder": "A little information about my organization...",
-      "required": true
+      "form_snippet": "fluent_markdown.html",
+      "display_snippet": "fluent_markdown.html",
+      "error_snippet": "fluent_text.html",
+      "validators": "fluent_text",
+      "output_validators": "fluent_core_translated_output",
+      "form_placeholder": "A little information about my organization..."
     },
     {
       "field_name": "image_url",
@@ -65,7 +68,7 @@
     {
       "field_name": "do_email",
       "label": "E-mail",
-      "validators": "scheming_required email_validator",
+      "validators": "scheming_required email_validator not_empty",
       "form_placeholder": "data@my-organization.com",
       "required": true
     },
@@ -77,8 +80,7 @@
          "nl": "Website",
          "de": "Website"
  	},
-      "validators": "scheming_required url_validator",
-      "required": true
+      "validators": "scheming_required url_validator"
     },
     {
       "field_name": "do_tel",

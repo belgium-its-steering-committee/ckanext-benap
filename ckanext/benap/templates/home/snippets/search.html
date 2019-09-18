@@ -24,7 +24,11 @@
         <h3>{{ _("ADD NEW DATA") }}</h3>
         <div class="register-flex">
             <p>{{ _("Data providers can easily add data to the catalogue.") }}</p>
-            <button class="bt-large">{{ _("Register") }}</button>
+            {% if c.userobj %}
+                <button class="bt-large" onclick="location.href='{{ h.url_for(controller='package', action='search') }}'">{{ _("Add Data") }}</button>
+            {% else %}
+                <button class="bt-large" onclick="location.href='{{ h.url_for(controller='user', action='login') }}'">{{ _("Register") }}</button>
+            {% endif %}
         </div>
     </div>
 </div>
