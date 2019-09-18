@@ -1,8 +1,8 @@
 <footer class="site-footer">
   <div class="container">
     {% block footer_content %}
-    <div class="flex my-25px">
-      <div class="flex-col w-33 footer-links">
+    <div class="footer-grid flex">
+      <div id="links" class="flex-col w-33 footer-links">
         {% block footer_nav %}
           <ul class="footer-link list-unstyled">
             {% block footer_links %}
@@ -18,12 +18,12 @@
           </ul>
         {% endblock %}
       </div>
-        <div class="flex-between w-33">
+        <div id="images" class="flex-between w-33">
           <img class="footer-img" src="/images/logo-its.png" alt="logo its">
           <img class="footer-img" src="/images/logo-NGI.png" alt="logo ngi">
         </div>
-      <div class="flex-col attribution w-33">
-        <div class="ml-50">
+      <div id="lang" class="flex-col attribution w-33">
+        <div class="ml-50 ml-0-media-max-982px">
           {% block footer_attribution %}
             <p>{% trans %}Powered by <a href="http://ckan.org">CKAN</a>{% endtrans %}</p>
           {% endblock %}
