@@ -35,6 +35,7 @@
 #pop-tags {
     font-size: 16px;
     display: inline;
+    margin-right: 15px;
 }
 
 .add-databox {
@@ -85,7 +86,7 @@ button {
 }
 
 .btn-light {
-    margin: 0 2px;
+    margin: 0 4px;
     background-color: #efefef;
     color: #333333;
     font-size: 16px
@@ -119,7 +120,7 @@ button {
 }
 
 .highlight-box {
-    background-color: #e0f3ff;
+    background-color: #ebf3f5;
     min-height: 399px;
 }
 
@@ -176,6 +177,10 @@ button {
     margin-top: 5px;
 }
 
+.mr-5 {
+    margin-right: 10px;
+}
+
 .p-0 {
     padding: 0;
 }
@@ -185,8 +190,16 @@ button {
 }
 
 .border-grey {
-    border: 1px solid #dddddd;
+    border: 1px solid #9e9d9d;
     padding: 20px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.lh-1 {
+    line-height: 1;
 }
 
 .flex-col {
@@ -196,7 +209,7 @@ button {
 
 .input-email {
     border-radius: 0;
-    border: 1px solid #dddddd;
+    border: 1px solid #9e9d9d;
     height: 34px;
     width: calc( 100% - 132px );
 }
