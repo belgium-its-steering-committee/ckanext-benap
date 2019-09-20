@@ -5,6 +5,10 @@ body, .custom-font {
     background-color: #ffffff;
 }
 
+#header-container #header-logo {
+    margin-left:
+}
+
 h1.logo {
     color: #11406E;
     font-weight: bold;
@@ -70,6 +74,10 @@ h1.logo span {
 
 .active {
     border-bottom: 3px solid #1c71bf;
+}
+
+.breadcrumb .active {
+    border: none;
 }
 
 .form-control#field-sitewide-search::placeholder {
