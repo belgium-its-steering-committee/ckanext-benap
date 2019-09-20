@@ -5,6 +5,10 @@ body, .custom-font {
     background-color: #ffffff;
 }
 
+#header-container #header-logo {
+    margin-left:
+}
+
 h1.logo {
     color: #11406E;
     font-weight: bold;
@@ -17,9 +21,46 @@ h1.logo span {
     color: #919191
 }
 
+.container::before, .container::after {
+    display: none;
+}
+
 .header-menu {
     background: #fff;
     min-height: 60px;
+}
+
+.account-masthead {
+    background: #fff;
+    border-bottom: 1px solid #efefef;
+}
+
+.account-masthead .account ul li {
+    border-left: 1px solid #efefef;
+}
+
+.account-masthead .account ul li:last-of-type {
+    border-right: 1px solid #efefef;
+}
+
+.account-masthead .account ul li a {
+    color: #333333;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.account-masthead .account ul li a:hover {
+    background: #ffffff;
+    color: #333333;
+}
+
+.account-masthead .account ul li label[for=field-lang-select] {
+    display: none;
+}
+
+.account-masthead .account ul li #field-lang-select {
+    border: none;
+    height: 31px;
 }
 
 .masthead {
@@ -30,6 +71,15 @@ h1.logo span {
     text-decoration: none;
     font-size: 20px;
 }
+
+.active {
+    border-bottom: 3px solid #1c71bf;
+}
+
+.breadcrumb .active {
+    border: none;
+}
+
 .form-control#field-sitewide-search::placeholder {
     font-size: 18px
 }
@@ -68,6 +118,14 @@ h1.logo span {
 }
 
 
+
+
+@media only screen and (min-width: 758px) {
+    .masthead .navigation.section {
+        float: left;
+    }
+}
+
 @media only screen and (min-width: 767px) {
     #nav-menu-items {
         margin-left: 16px
@@ -85,5 +143,13 @@ h1.logo span {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    #header-container #header-logo {
+        margin-left: 50px;
+    }
+
+    #header-container #header-content {
+        margin-right: 50px;
     }
 }

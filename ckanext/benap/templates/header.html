@@ -18,6 +18,11 @@
                   <span class="username">{{ c.userobj.display_name }}</span>
                 </a>
         </li>
+        <li>
+            {% block header_lang %}
+                {% snippet "snippets/language_selector.html" %}
+            {% endblock %}
+        </li>
         {% set new_activities = h.new_activities() %}
         <li class="notifications {% if new_activities > 0 %}notifications-important{% endif %}">
           {% set notifications_tooltip = ngettext('Dashboard (%(num)d new item)', 'Dashboard (%(num)d new items)', new_activities)
@@ -64,7 +69,7 @@
   <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
   {% endif %} {% endblock %}
   <div id="header-container" class="container">
-      <hgroup class="{{ g.header_class }}">
+      <hgroup id="header-logo">
           <a href="{{ h.url_for('home.index') }}"><h1 class="logo">TRANSPORTDATA<span>.BE</span></h1></a>
         </hgroup>
       <div id="header-content">
