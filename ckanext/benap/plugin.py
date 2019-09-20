@@ -3,7 +3,7 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 
 from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallback, json_loads, \
-    package_notes_translated_fallback
+    package_notes_translated_fallback, field_translated_fallback
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.validators import phone_number_validator
 
@@ -35,6 +35,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
             'benap_ontology_helper': ontology_helper,
             'benap_scheming_language_text_fallback': scheming_language_text_fallback,
             'benap_package_notes_translated_fallback': package_notes_translated_fallback,
+            'benap_field_translated_fallback': field_translated_fallback,
             'json_loads': json_loads
         }
 

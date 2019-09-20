@@ -791,5 +791,17 @@ def package_notes_translated_fallback(package):
     return notes_value
 
 
+def field_translated_fallback(translated_field):
+    field_value = None
+    user_lang = user_language()
+    if translated_field:
+        if user_lang:
+            field_value = translated_field.get(user_lang, None)
+        if not field_value:
+            field_value = translated_field['en'] or translated_field['nl'] or translated_field['fr'] \
+                          or translated_field['de'] or None
+    return field_value
+
+
 def json_loads(data):
     return json.dumps(json.loads(data))
