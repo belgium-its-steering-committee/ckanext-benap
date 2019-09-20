@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-20 11:26+0200\n"
-"PO-Revision-Date: 2019-09-20 14:08+0200\n"
+"POT-Creation-Date: 2019-09-20 17:01+0200\n"
+"PO-Revision-Date: 2019-09-20 17:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: nl\n"
 "Language-Team: nl <LL@li.org>\n"
@@ -31,8 +31,14 @@ msgstr ""
 msgid "CKAN API"
 msgstr ""
 
-#: ckanext/benap/templates/footer.html:27
+#: ckanext/benap/templates/footer.html:31
 msgid "Powered by <a href=\"http://ckan.org\">CKAN</a>"
+msgstr ""
+
+#: ckanext/benap/templates/footer.html:50
+msgid ""
+"2019 - By the National Geographic Institute on behalf of the ITS steering"
+" commitee."
 msgstr ""
 
 #: ckanext/benap/templates/header.html:9
@@ -47,62 +53,110 @@ msgstr ""
 msgid "View profile"
 msgstr ""
 
-#: ckanext/benap/templates/header.html:23
+#: ckanext/benap/templates/header.html:28
 #, python-format
 msgid "Dashboard (%(num)d new item)"
 msgid_plural "Dashboard (%(num)d new items)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ckanext/benap/templates/header.html:27
+#: ckanext/benap/templates/header.html:32
 msgid "Dashboard"
 msgstr ""
 
-#: ckanext/benap/templates/header.html:33
+#: ckanext/benap/templates/header.html:38
 msgid "Edit settings"
 msgstr ""
 
-#: ckanext/benap/templates/header.html:35
+#: ckanext/benap/templates/header.html:40
 msgid "Settings"
 msgstr ""
 
-#: ckanext/benap/templates/header.html:40
-#: ckanext/benap/templates/header.html:42
+#: ckanext/benap/templates/header.html:45
+#: ckanext/benap/templates/header.html:47
 msgid "Log out"
 msgstr ""
 
-#: ckanext/benap/templates/header.html:52
+#: ckanext/benap/templates/header.html:57
 msgid "Log in"
 msgstr ""
 
-#: ckanext/benap/templates/header.html:54
+#: ckanext/benap/templates/header.html:59
 #: ckanext/benap/templates/home/snippets/search.html:30
 msgid "Register"
 msgstr ""
 
-#: ckanext/benap/templates/header.html:80
+#: ckanext/benap/templates/header.html:85
 msgid "Datasets"
 msgstr ""
 
-#: ckanext/benap/templates/header.html:80
+#: ckanext/benap/templates/header.html:85
 msgid "Organizations"
 msgstr ""
 
-#: ckanext/benap/templates/header.html:81
+#: ckanext/benap/templates/header.html:86
 msgid "Groups"
 msgstr ""
 
-#: ckanext/benap/templates/header.html:81
+#: ckanext/benap/templates/header.html:86
 msgid "About"
 msgstr ""
 
-#: ckanext/benap/templates/header.html:87
-#: ckanext/benap/templates/home/snippets/search.html:44
+#: ckanext/benap/templates/header.html:92
 msgid "Search"
+msgstr ""
+
+#: ckanext/benap/templates/home/snippets/community.html:6
+msgid "JOIN OUR COMMUNITY FORUM"
+msgstr ""
+
+#: ckanext/benap/templates/home/snippets/community.html:11
+#: ckanext/benap/templates/home/snippets/promoted.html:11
+msgid ""
+"Transportdata.be is the preferred access point for information on "
+"Intelligent Transport Systems (ITS). This national platform aims to "
+"centralize access to ITS datasets and web services."
+msgstr ""
+
+#: ckanext/benap/templates/home/snippets/community.html:16
+msgid "Join"
+msgstr ""
+
+#: ckanext/benap/templates/home/snippets/feedback.html:4
+msgid "HELP US WITH OUR SITE"
+msgstr ""
+
+#: ckanext/benap/templates/home/snippets/feedback.html:5
+msgid "GIVE SOME FEEDBACK"
+msgstr ""
+
+#: ckanext/benap/templates/home/snippets/newsletter.html:5
+#: ckanext/benap/templates/home/snippets/newsletter.html:11
+msgid "SUBSCRIBE"
+msgstr ""
+
+#: ckanext/benap/templates/home/snippets/newsletter.html:6
+msgid "TO NEWSLETTER"
 msgstr ""
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:10
 msgid "Enter your email address"
+msgstr ""
+
+#: ckanext/benap/templates/home/snippets/promoted.html:6
+msgid "DISCOVER TRANSPORTDATA.BE"
+msgstr ""
+
+#: ckanext/benap/templates/home/snippets/promoted.html:7
+msgid "WHAT THE PURPOSE IS AND HOW YOU ARE INVOLVED"
+msgstr ""
+
+#: ckanext/benap/templates/home/snippets/report.html:4
+msgid "LINK DOESN' T WORK?"
+msgstr ""
+
+#: ckanext/benap/templates/home/snippets/report.html:5
+msgid "REPORT IT HERE"
 msgstr ""
 
 #: ckanext/benap/templates/home/snippets/search.html:2
@@ -137,18 +191,6 @@ msgstr ""
 
 #: ckanext/benap/templates/home/snippets/search.html:28
 msgid "Add Data"
-msgstr ""
-
-#: ckanext/benap/templates/home/snippets/search.html:39
-msgid "Search data"
-msgstr ""
-
-#: ckanext/benap/templates/home/snippets/search.html:41
-msgid "Search datasets"
-msgstr ""
-
-#: ckanext/benap/templates/home/snippets/search.html:49
-msgid "Popular tags"
 msgstr ""
 
 #: ckanext/benap/templates/snippets/language_selector.html:3
