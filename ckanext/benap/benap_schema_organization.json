@@ -53,7 +53,7 @@
       "error_snippet": "fluent_text.html",
       "validators": "fluent_text",
       "output_validators": "fluent_core_translated_output",
-      "form_placeholder": "A little information about my organization..."
+      "form_placeholder": "We provide on-demand transport services in whole Belgium, etc."
     },
     {
       "field_name": "image_url",
@@ -116,6 +116,7 @@
         "nl": "See English version",
         "de": "See English version"
       },
+      "form_placeholder": "https://www.my-organization.com"
       "validators": "scheming_required url_validator"
     },
     {
@@ -132,6 +133,7 @@
         "nl": "See English version",
         "de": "See English version"
       },
+      "form_placeholder": "+32XXXXXXXX"
       "required": true
     }
    ]
