@@ -90,7 +90,8 @@
          "nl": "Telephone number",
          "de": "Telephone number"
  	},
-      "required": true
+      "required": true,
+      "validators": "phone_number_validator not_empty"
     }
    ]
 }
