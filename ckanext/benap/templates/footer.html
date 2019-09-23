@@ -19,10 +19,11 @@
       </div>
         <div id="images" class="flex-between w-33">
           <a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='pages_show', page='/about') }}">
-            <img class="footer-img" src="/images/logo-its.png" alt="logo its">
+            <!--img class="footer-img" src="/images/logo-its.png" alt="logo its"-->
+            <img class="footer-img" src="{{ h.url_for_static('/images/logo-its.png') }}" alt="logo its">
           </a>
           <a href="http://www.ngi.be/" target="_blank">
-            <img class="footer-img" src="/images/logo-NGI.png" alt="logo ngi">
+            <img class="footer-img" src="{{ h.url_for_static('/images/logo-NGI.png') }}" alt="logo ngi">
           </a>
         </div>
       <div id="lang" class="flex-col attribution w-33">

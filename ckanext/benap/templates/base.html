@@ -25,15 +25,16 @@
 {% endblock %}
 
 {% block links %}
-    <!-- TODO replace href with orrect url -->
+    <!-- TODO replace href with correct url -->
     <link rel="shortcut icon" type="image/png" href="http://its.be/sites/all/themes/its/images/logo.jpg" />
 {% endblock %}
 
 {% block meta %}
     {{ super() }}
-    <meta property="og:url" content="http://ec2-63-33-90-161.eu-west-1.compute.amazonaws.com/nl/" />
+    <meta property="og:url" content="http://ec2-63-33-90-161.eu-west-1.compute.amazonaws.com" />
     <meta property="og:type" content="article" />
-    <meta property="og:title"  content="BELGIUM'S NATIONAL ACCESS POINT FOR MULITIMODAL TRAVEL INFORMATION SERVICES" />
-    <meta property="og:description" content="description ..." />
-    <meta property="og:image" content="/images/logo-its.png" />
+    <meta property="og:title"  content="transportdata.be" />
+    <meta property="og:description" content="Belgium's national access point for multiational travel information services." />
+    <meta property="og:image" content="{{ h.url_for_static('/images/logo-its.png') }}" />
+    <meta name="twitter:card" content="summary_large_image" />
 {% endblock %}
