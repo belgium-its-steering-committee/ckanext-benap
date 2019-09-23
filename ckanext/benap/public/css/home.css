@@ -232,3 +232,16 @@ button {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+
+
+
+/* fix for edit resource */
+.info-block {
+    position: relative;
+    display: block;
+    font-size: 11px;
+    color: #aaaaaa;
+    line-height: 1.3;
+    margin-top: 6px;
+}
