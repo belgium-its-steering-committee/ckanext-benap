@@ -405,7 +405,8 @@
         "nl": "See English version",
         "de": "See English version"
       },
-      "benap_helper_ontology": "frequency"
+      "benap_helper_ontology": "frequency",
+      "required": "true"
     },
     {
       "field_name": "qual_ass",
