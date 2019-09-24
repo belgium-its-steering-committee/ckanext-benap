@@ -31,10 +31,11 @@
 
 {% block meta %}
     {{ super() }}
+    <!-- should work for facebook, twitter and linkedin -->
     <meta property="og:url" content="http://ec2-63-33-90-161.eu-west-1.compute.amazonaws.com" />
     <meta property="og:type" content="article" />
     <meta property="og:title"  content="transportdata.be" />
     <meta property="og:description" content="Belgium's national access point for multiational travel information services." />
-    <meta property="og:image" content="{{ h.url_for_static('/images/logo-its.png') }}" />
+    <meta property="og:image" content="{{ h.get_site_protocol_and_host()[1] }}/images/logo-its.png" />
     <meta name="twitter:card" content="summary_large_image" />
 {% endblock %}
