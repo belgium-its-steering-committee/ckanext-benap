@@ -1,0 +1,52 @@
+<footer class="site-footer">
+  <div class="container">
+    {% block footer_content %}
+    <div class="footer-grid flex">
+      <div id="links" class="flex-col w-33 footer-links">
+        {% block footer_nav %}
+          <ul class="footer-link list-unstyled">
+            {% block footer_links %}
+              <li><a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='pages_show', page='/about') }}">{{ _('About Transportdata.be') }}</a></li>
+            {% endblock %}
+          </ul>
+          <ul class="list-unstyled">
+            {% block footer_links_ckan %}
+              {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
+              <li><a href="{{ api_url }}">{{ _('CKAN API') }}</a></li>
+            {% endblock %}
+          </ul>
+        {% endblock %}
+      </div>
+        <div id="images" class="flex-between w-33">
+          <a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='pages_show', page='/about') }}">
+            <!--img class="footer-img" src="/images/logo-its.png" alt="logo its"-->
+            <img class="footer-img" src="{{ h.url_for_static('/images/logo-its.png') }}" alt="logo its">
+          </a>
+          <a href="http://www.ngi.be/" target="_blank">
+            <img class="footer-img" src="{{ h.url_for_static('/images/logo-NGI.png') }}" alt="logo ngi">
+          </a>
+        </div>
+      <div id="lang" class="flex-col attribution w-33">
+        <div class="ml-50 ml-0-media-max-982px">
+          {% block footer_attribution %}
+            <p>{% trans %}Powered by <a href="http://ckan.org">CKAN</a>{% endtrans %}</p>
+          {% endblock %}
+          {% block footer_lang %}
+            {% snippet "snippets/language_selector.html" %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+  </div>
+
+  {% block footer_debug %}
+    {% if g.debug %}
+      {% include 'snippets/debug.html' %}
+    {% endif %}
+  {% endblock %}
+</footer>
+<footer class="site-footer mt-1px flex-center pb-5px">
+  <img src="/images/copyright.svg" class="pb-0 pt-0 pr-1"/>
+  <p class="m-0">{{ _('2019 - By the National Geographic Institute on behalf of the ITS steering commitee.') }}</p>
+</footer>

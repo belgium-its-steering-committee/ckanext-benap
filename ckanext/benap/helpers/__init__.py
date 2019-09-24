@@ -421,7 +421,7 @@ def ontology_helper(context):
                 "nl": u"CSV",
                 "de": u"CSV"
             }),
-            ('http://purl.org/ASN/schema/core/StandardDocument', {
+            ('ASN.1 encoding rules', {
                 "en": u"ASN.1 encoding rules",
                 "fr": u"ASN.1 encoding rules",
                 "nl": u"ASN.1 encoding rules",
@@ -789,6 +789,18 @@ def package_notes_translated_fallback(package):
             notes_value = notes_translated['en'] or notes_translated['nl'] or notes_translated['fr'] \
                           or notes_translated['de'] or None
     return notes_value
+
+
+def field_translated_fallback(translated_field):
+    field_value = None
+    user_lang = user_language()
+    if translated_field:
+        if user_lang:
+            field_value = translated_field.get(user_lang, None)
+        if not field_value:
+            field_value = translated_field['en'] or translated_field['nl'] or translated_field['fr'] \
+                          or translated_field['de'] or None
+    return field_value
 
 
 def json_loads(data):

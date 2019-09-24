@@ -15,7 +15,26 @@
     <script src="https://unpkg.com/leaflet.pm@2.2.0/dist/leaflet.pm.min.js"
    integrity="sha256-PVcX3RpEY+mXe2xyhqrzNdjpQdlcZqdlbJP2+9x/OQg="
    crossorigin=""></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/other.css" />
+    <link rel="stylesheet" href="/css/icons.css" />
 {% endblock %}
 
+{% block links %}
+    <!-- TODO replace href with correct url -->
+    <link rel="shortcut icon" type="image/png" href="http://its.be/sites/all/themes/its/images/logo.jpg" />
+{% endblock %}
 
-
+{% block meta %}
+    {{ super() }}
+    <meta property="og:url" content="http://ec2-63-33-90-161.eu-west-1.compute.amazonaws.com" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title"  content="transportdata.be" />
+    <meta property="og:description" content="Belgium's national access point for multiational travel information services." />
+    <meta property="og:image" content="{{ h.url_for_static('/images/logo-its.png') }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+{% endblock %}

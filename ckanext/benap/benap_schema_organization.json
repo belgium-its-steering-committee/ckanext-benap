@@ -116,7 +116,7 @@
         "nl": "See English version",
         "de": "See English version"
       },
-      "form_placeholder": "https://www.my-organization.com"
+      "form_placeholder": "https://www.my-organization.com",
       "validators": "scheming_required url_validator"
     },
     {
@@ -133,8 +133,9 @@
         "nl": "See English version",
         "de": "See English version"
       },
-      "form_placeholder": "+32XXXXXXXX"
-      "required": true
+      "form_placeholder": "+32XXXXXXXX",
+      "required": true,
+      "validators": "phone_number_validator not_empty"
     }
    ]
 }
