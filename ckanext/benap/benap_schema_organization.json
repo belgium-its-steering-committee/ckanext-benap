@@ -13,6 +13,12 @@
          "de": "Organisation name"
  	},
       "required": true,
+      "help_text": {
+        "en": "Describes the name of your organisation. If necessary, please fill it in in multiple languages, each separated by '/'. Your organisation is responsible for the creation and maintenance of its own metadata sets",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "form_snippet": "large_text.html",
       "form_attrs": {"data-module": "slug-preview-target"},
       "form_placeholder": "My Organization full name"
@@ -35,13 +41,19 @@
          "fr": "Description",
          "nl": "Description",
          "de": "Description"
- 	},
+   	},
+      "help_text": {
+        "en": "Describes your organization, e.g. its mission, core activities and how it is involved with transport data",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "form_snippet": "fluent_markdown.html",
       "display_snippet": "fluent_markdown.html",
       "error_snippet": "fluent_text.html",
       "validators": "fluent_text",
       "output_validators": "fluent_core_translated_output",
-      "form_placeholder": "A little information about my organization..."
+      "form_placeholder": "We provide on-demand transport services in whole Belgium, etc."
     },
     {
       "field_name": "image_url",
@@ -52,6 +64,12 @@
          "de": "Image URL"
  	},
       "validators": "unicode remove_whitespace",
+      "help_text": {
+        "en": "The logo of your organisation",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "form_snippet": "upload.html",
       "form_placeholder": "https://www.my-organization.com/my-logo",
       "upload_field": "image_upload",
@@ -62,6 +80,12 @@
     {
       "field_name": "do_address",
       "label": "Address",
+      "help_text": {
+        "en": "Official address of your organisation in Belgium",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "form_placeholder": "Boulevard Anspach, 1 - 1000 Bruxelles (Belgium)",
       "required": true
     },
@@ -70,6 +94,12 @@
       "label": "E-mail",
       "validators": "scheming_required email_validator not_empty",
       "form_placeholder": "data@my-organization.com",
+      "help_text": {
+        "en": "E-mail address to be contacted for transport data related matters. The address must contain @ and a dot",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
       "required": true
     },
     {
@@ -79,7 +109,14 @@
          "fr": "Website",
          "nl": "Website",
          "de": "Website"
- 	},
+ 	  },
+    "help_text": {
+        "en": "The website address must start with 'http://' or 'https://'",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
+      "form_placeholder": "https://www.my-organization.com"
       "validators": "scheming_required url_validator"
     },
     {
@@ -89,7 +126,14 @@
          "fr": "Telephone number",
          "nl": "Telephone number",
          "de": "Telephone number"
- 	},
+   	},
+    "help_text": {
+        "en": "The telephone number must start with the country prefix (e.g. '+32' for Belgium) and may only contain numbers from 0 to 9 besides the '+' sign",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
+      "form_placeholder": "+32XXXXXXXX",
       "required": true,
       "validators": "phone_number_validator not_empty"
     }

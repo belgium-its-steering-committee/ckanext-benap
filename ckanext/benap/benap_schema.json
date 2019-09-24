@@ -129,76 +129,6 @@
       "required": "true"
     },
     {
-      "field_name": "cp_address",
-      "label": {
-        "en": "Address [contact point]",
-        "fr": "Address [contact point]",
-        "nl": "Address [contact point]",
-        "de": "Address [contact point]"
-      },
-      "form_placeholder": "Boulevard Anspach, 1 - 1000 Bruxelles (Belgique)",
-      "display_property": "dc:creator",
-      "required": "true"
-    },
-    {
-      "field_name": "contact_email",
-      "label": {
-        "en": "E-mail [contact point]",
-        "fr": "E-mail [contact point]",
-        "nl": "E-mail [contact point]",
-        "de": "E-mail [contact point]"
-      },
-      "form_placeholder": "example@example.com",
-      "display_property": "dc:creator",
-      "display_snippet": "email.html",
-      "display_email_name_field": "contact_name",
-      "help_text": {
-        "en": "The email adress must contain @ and a dot",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
-      },
-      "required": "true",
-      "validators": "email_validator not_empty"
-    },
-    {
-      "field_name": "cp_website",
-      "label": {
-        "en": "Website [contact point]",
-        "fr": "Website [contact point]",
-        "nl": "Website [contact point]",
-        "de": "Website [contact point]"
-      },
-      "display_snippet": "link.html",
-      "validators": "url_validator",
-      "help_text": {
-        "en": "The website address must start with 'http://' or 'https://'",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
-      },
-      "display_property": "dc:creator"
-    },
-    {
-      "field_name": "cp_tel",
-      "label": {
-        "en": "Telephone number [contact point]",
-        "fr": "Telephone number [contact point]",
-        "nl": "Telephone number [contact point]",
-        "de": "Telephone number [contact point]"
-      },
-      "form_placeholder": "+322XXXXXXX",
-      "display_property": "dc:creator",
-      "required": "true",
-      "help_text": {
-        "en": "The telephone number must start with the country prefix (e.g. '+32' for Belgium) and may only contain numbers from 0 to 9 besides the '+' sign",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
-      },
-      "validators": "phone_number_validator not_empty"
-    },
-    {
       "field_name": "publisher_org",
       "label": {
         "en": "Organisation name [publisher]",
@@ -405,7 +335,8 @@
         "nl": "See English version",
         "de": "See English version"
       },
-      "benap_helper_ontology": "frequency"
+      "benap_helper_ontology": "frequency",
+      "required": "true"
     },
     {
       "field_name": "qual_ass",
