@@ -116,7 +116,7 @@
         "nl": "See English version",
         "de": "See English version"
       },
-      "form_placeholder": "https://www.my-organization.com"
+      "form_placeholder": "https://www.my-organization.com",
       "validators": "scheming_required url_validator"
     },
     {
