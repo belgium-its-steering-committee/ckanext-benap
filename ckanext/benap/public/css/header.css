@@ -76,6 +76,11 @@ h1.logo span {
     border-bottom: 3px solid #1c71bf;
 }
 
+.nav > li > a:hover, .nav > li > a:focus {
+    border-bottom: 3px solid #1c71bf;
+    padding: 10px 10px 7px 10px;
+}
+
 .breadcrumb .active {
     border: none;
 }
@@ -85,7 +90,7 @@ h1.logo span {
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
-    text-decoration: underline;
+    text-decoration: none;
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -115,6 +120,15 @@ h1.logo span {
 
 .form-control#field-sitewide-search::placeholder, .simple-input .field .btn-search{
     color: #333333;
+}
+
+#header-search {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#header-search .field {
+    max-width: 150px;
 }
 
 
