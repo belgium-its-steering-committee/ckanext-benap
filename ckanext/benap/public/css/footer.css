@@ -52,7 +52,7 @@ footer p, .site-footer a, .site-footer, .site-footer label, .site-footer small {
 
 #field-lang-select {
     border: 1px solid black;
-    width: 50px;
+    width: 100px;
     border-radius: .25rem;
     background-color: #fff;
 

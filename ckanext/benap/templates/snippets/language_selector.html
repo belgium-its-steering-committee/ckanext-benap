@@ -3,10 +3,17 @@
   <label for="field-lang-select" class="m-0">{{ _('Language') }}</label>
   <select id="field-lang-select" class="m-0" name="url" data-module-dropdown-class="lang-dropdown" data-module-container-class="lang-container">
     {% for locale in h.get_available_locales() %}
-      <option value="{% url_for h.current_url(), locale=locale.short_name %}" {% if locale.identifier == current_lang %}selected="selected"{% endif %}>
-        {{ locale.short_name or locale.english_name }}
+      <option class="lang-option" value="{% url_for h.current_url(), locale=locale.short_name %}" {% if locale.identifier == current_lang %}selected="selected"{% endif %}>
+        {{ locale.display_name or locale.english_name }}
       </option>
     {% endfor %}
   </select>
   <button class="btn btn-default js-hide" type="submit">{{ _('Go') }}</button>
 </form>
+
+<!--script>
+  $('footer #field-lang-select .lang-option')
+    .sort(function(a,b){
+      return $(b).text().trim() - $(a).text().trim();
+    });
+</script-->

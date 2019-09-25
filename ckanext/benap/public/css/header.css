@@ -72,13 +72,13 @@ h1.logo span {
     font-size: 20px;
 }
 
-.active {
+.active a {
     border-bottom: 3px solid #1c71bf;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
     border-bottom: 3px solid #1c71bf;
-    padding: 10px 10px 7px 10px;
+    /*padding: 10px 10px 7px 10px;*/
 }
 
 .breadcrumb .active {
