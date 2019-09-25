@@ -99,7 +99,7 @@
       },
       "required": "true"
     },
-     {
+    {
       "field_name": "owner_org",
       "label": {
         "en": "Organisation name [contact point]",
@@ -341,12 +341,12 @@
     {
       "field_name": "qual_ass",
       "preset": "fluent_markdown",
-      "label":{
-         "en": "Quality assessment",
-         "fr": "Quality assessment",
-         "nl": "Quality assessment",
-         "de": "Quality assessment"
- 	  },
+      "label": {
+        "en": "Quality assessment",
+        "fr": "Quality assessment",
+        "nl": "Quality assessment",
+        "de": "Quality assessment"
+      },
       "display_snippet": "fluent_markdown_fallback.html",
       "help_text": {
         "en": "Describes methods and results of a quality assessment",
@@ -354,8 +354,15 @@
         "nl": "See English version",
         "de": "See English version"
       },
-      "form_languages": ["en", "fr", "nl", "de"],
-      "form_attrs": {"class": "form-control"},
+      "form_languages": [
+        "en",
+        "fr",
+        "nl",
+        "de"
+      ],
+      "form_attrs": {
+        "class": "form-control"
+      },
       "form_placeholder": "eg. “Quality Criteria “Correctness” and “Completeness” fulfilled to 99%, assessed by ground-truth testing”"
     },
     {
@@ -383,24 +390,24 @@
     },
     {
       "field_name": "name",
-      "label":{
-         "en": "Name",
-         "fr": "Name",
-         "nl": "Name",
-         "de": "Name"
- 	},
+      "label": {
+        "en": "Name",
+        "fr": "Name",
+        "nl": "Name",
+        "de": "Name"
+      },
       "form_placeholder": "eg. Plan of the Belgian highway network ",
       "help_text": "Describes the resource you linked or uploaded in generic terms or gives a short description. The author is encouraged to write a meaningful description",
       "required": "true"
     },
     {
       "field_name": "acc_enc",
-      "label":{
-         "en": "Data format - Encoding",
-         "fr": "Data format - Encoding",
-         "nl": "Data format - Encoding",
-         "de": "Data format - Encoding"
- 	},
+      "label": {
+        "en": "Data format - Encoding",
+        "fr": "Data format - Encoding",
+        "nl": "Data format - Encoding",
+        "de": "Data format - Encoding"
+      },
       "preset": "select",
       "help_text": {
         "en": "This describes the atomic element of the transfer syntax description",
@@ -413,12 +420,12 @@
     },
     {
       "field_name": "format",
-      "label":{
-         "en": "Data format - Syntax",
-         "fr": "Data format - Syntax",
-         "nl": "Data format - Syntax",
-         "de": "Data format - Syntax"
- 	},
+      "label": {
+        "en": "Data format - Syntax",
+        "fr": "Data format - Syntax",
+        "nl": "Data format - Syntax",
+        "de": "Data format - Syntax"
+      },
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "syntax",
@@ -432,12 +439,12 @@
     },
     {
       "field_name": "acc_gra",
-      "label":{
-         "en": "Data format - Grammar",
-         "fr": "Data format - Grammar",
-         "nl": "Data format - Grammar",
-         "de": "Data format - Grammar"
- 	},
+      "label": {
+        "en": "Data format - Grammar",
+        "fr": "Data format - Grammar",
+        "nl": "Data format - Grammar",
+        "de": "Data format - Grammar"
+      },
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "help_text": {
@@ -450,12 +457,12 @@
     },
     {
       "field_name": "acc_mod",
-      "label":{
-         "en": "Data format - Data model",
-         "fr": "Data format - Data model",
-         "nl": "Data format - Data model",
-         "de": "Data format - Data model"
- 	},
+      "label": {
+        "en": "Data format - Data model",
+        "fr": "Data format - Data model",
+        "nl": "Data format - Data model",
+        "de": "Data format - Data model"
+      },
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "datamodel",
@@ -469,12 +476,12 @@
     },
     {
       "field_name": "acc_description",
-      "label":{
-         "en": "Data format - Description",
-         "fr": "Data format - Description",
-         "nl": "Data format - Description",
-         "de": "Data format - Description"
- 	},
+      "label": {
+        "en": "Data format - Description",
+        "fr": "Data format - Description",
+        "nl": "Data format - Description",
+        "de": "Data format - Description"
+      },
       "form_placeholder": "eg. Proprietary model in accordance to CEN TC278 / WG17 / Urban ITS",
       "help_text": {
         "en": "Can be optionally used to provide additional information on the data format",
@@ -486,12 +493,12 @@
     },
     {
       "field_name": "acc_int",
-      "label":{
-         "en": "Access interface – Application layer protocol",
-         "fr": "Access interface – Application layer protocol",
-         "nl": "Access interface – Application layer protocol",
-         "de": "Access interface – Application layer protocol"
- 	},
+      "label": {
+        "en": "Access interface – Application layer protocol",
+        "fr": "Access interface – Application layer protocol",
+        "nl": "Access interface – Application layer protocol",
+        "de": "Access interface – Application layer protocol"
+      },
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "protocol",
@@ -505,12 +512,12 @@
     },
     {
       "field_name": "acc_con",
-      "label":{
-         "en": "Communication method",
-         "fr": "Communication method",
-         "nl": "Communication method",
-         "de": "Communication method"
- 	},
+      "label": {
+        "en": "Communication method",
+        "fr": "Communication method",
+        "nl": "Communication method",
+        "de": "Communication method"
+      },
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "communication",
