@@ -80,6 +80,10 @@ footer p, .site-footer a, .site-footer, .site-footer label, .site-footer small {
 }
 
 
+select {
+    color: black;
+}
+
 @media only screen and (max-width: 982px) {
     .footer-grid {
         display: grid;
@@ -116,3 +120,9 @@ footer p, .site-footer a, .site-footer, .site-footer label, .site-footer small {
     }
 }
 
+
+@media only screen and (max-width: 500px) {
+        #images img {
+        margin: 0 5px;
+    }
+}
