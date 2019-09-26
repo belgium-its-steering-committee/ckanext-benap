@@ -5,6 +5,10 @@ body, .custom-font {
     background-color: #ffffff;
 }
 
+a, a:hover {
+    color: #efefef;
+}
+
 #header-container #header-logo {
     margin-left:
 }
@@ -540,6 +544,11 @@ div[role=main] {
     }
 }
 
+@media only screen and (max-width: 969px) {
+    .footer-link li {
+        text-align: center;
+    }
+}
 
 @media only screen and (max-width: 500px) {
         #images img {
