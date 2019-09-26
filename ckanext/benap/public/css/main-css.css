@@ -478,6 +478,11 @@ div[role=main] {
 
     ul.nav {
         display: flex;
+        flex-wrap: wrap;
+    }
+
+    ul.nav li.nav-item {
+        border: none;
     }
 
     .nav > li > a {
