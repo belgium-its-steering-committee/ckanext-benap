@@ -76,9 +76,9 @@ h1.logo span {
     border-bottom: 3px solid #1c71bf;
 }
 
-.masthead  .nav > li > a:hover, .masthead  .nav > li > a:focus {
+.masthead  .nav > li > a:hover, .masthead  .nav > li > a:focus, .masthead  .nav > li.active > a {
     border-bottom: 3px solid #1c71bf;
-    /*padding: 10px 10px 7px 10px;*/
+    padding: 10px 10px 7px 10px;
 }
 
 .breadcrumb .active {
