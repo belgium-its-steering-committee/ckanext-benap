@@ -67,16 +67,16 @@ h1.logo span {
     padding: 0;
 }
 
-.nav > li > a, .nav > li > a {
+.masthead  .nav > li > a, .nav > li > a {
     text-decoration: none;
     font-size: 20px;
 }
 
-.active a {
+.masthead .active a {
     border-bottom: 3px solid #1c71bf;
 }
 
-.nav > li > a:hover, .nav > li > a:focus {
+.masthead  .nav > li > a:hover, .masthead  .nav > li > a:focus {
     border-bottom: 3px solid #1c71bf;
     /*padding: 10px 10px 7px 10px;*/
 }
@@ -430,7 +430,7 @@ footer p, .site-footer a, .site-footer, .site-footer label, .site-footer small {
 
 #field-lang-select {
     border: 1px solid black;
-    width: 100px;
+    width: 50px;
     border-radius: .25rem;
     background-color: #fff;
 

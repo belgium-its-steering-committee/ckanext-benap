@@ -4,7 +4,8 @@
   <select id="field-lang-select" class="m-0" name="url" data-module-dropdown-class="lang-dropdown" data-module-container-class="lang-container">
     {% for locale in h.get_available_locales() %}
       <option class="lang-option" value="{% url_for h.current_url(), locale=locale.short_name %}" {% if locale.identifier == current_lang %}selected="selected"{% endif %}>
-        {{ locale.display_name or locale.english_name }}
+        <!--{{ locale.display_name or locale.english_name }}-->
+          {{ locale.short_name or locale.english_name }}
       </option>
     {% endfor %}
   </select>
@@ -12,8 +13,15 @@
 </form>
 
 <!--script>
-  $('footer #field-lang-select .lang-option')
-    .sort(function(a,b){
-      return $(b).text().trim() - $(a).text().trim();
-    });
+    var my_options = $("footer #field-lang-select .lang-option");
+    var selected = $("footer #field-lang-select").val();
+
+    my_options.sort(function(a,b) {
+        if (a.text > b.text) return 1;
+        if (a.text < b.text) return -1;
+        return 0
+    })
+
+    $("footer #field-lang-select").empty().append( my_options );
+    $("footer #field-lang-select").val(selected);
 </script-->
