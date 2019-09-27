@@ -1,12 +1,27 @@
 {% set current_lang = request.environ.CKAN_LANG %}
 <form class="form-inline form-select lang-select flex align-items-center" action="{% url_for controller='util', action='redirect' %}" data-module="select-switch" method="POST">
   <label for="field-lang-select" class="m-0">{{ _('Language') }}</label>
-  <select id="field-lang-select" class="m-0" name="url" data-module="autocomplete" data-module-dropdown-class="lang-dropdown" data-module-container-class="lang-container">
+  <select id="field-lang-select" class="m-0" name="url" data-module-dropdown-class="lang-dropdown" data-module-container-class="lang-container">
     {% for locale in h.get_available_locales() %}
-      <option value="{% url_for h.current_url(), locale=locale.short_name %}" {% if locale.identifier == current_lang %}selected="selected"{% endif %}>
-        {{ locale.short_name or locale.english_name }}
+      <option class="lang-option" value="{% url_for h.current_url(), locale=locale.short_name %}" {% if locale.identifier == current_lang %}selected="selected"{% endif %}>
+        <!--{{ locale.display_name or locale.english_name }}-->
+          {{ locale.short_name | upper or locale.english_name }}
       </option>
     {% endfor %}
   </select>
   <button class="btn btn-default js-hide" type="submit">{{ _('Go') }}</button>
 </form>
+
+<!--script>
+    var my_options = $("footer #field-lang-select .lang-option");
+    var selected = $("footer #field-lang-select").val();
+
+    my_options.sort(function(a,b) {
+        if (a.text > b.text) return 1;
+        if (a.text < b.text) return -1;
+        return 0
+    })
+
+    $("footer #field-lang-select").empty().append( my_options );
+    $("footer #field-lang-select").val(selected);
+</script-->

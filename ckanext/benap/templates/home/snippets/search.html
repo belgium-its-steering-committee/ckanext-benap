@@ -16,14 +16,14 @@
         <div class="tags">
             <h3 id="pop-tags">{{ _('Popular Tags') }}</h3>
             {% for tag in tags %}
-                <a class="btn btn-light" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
+                <a class="rounded btn btn-light" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
             {% endfor %}
         </div>
     </div>
     <div class="add-databox">
         <h3>{{ _("ADD NEW DATA") }}</h3>
         <div class="register-flex">
-            <p>{{ _("Data providers can easily add data to the catalogue.") }}</p>
+            <p class="lh-1-2">{{ _("Data providers can easily add data to the catalogue.") }}</p>
             {% if c.userobj %}
                 <button class="bt-large" onclick="location.href='{{ h.url_for(controller='package', action='search') }}'">{{ _("Add Data") }}</button>
             {% else %}

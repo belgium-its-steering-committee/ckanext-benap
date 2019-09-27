@@ -17,16 +17,16 @@
    crossorigin=""></script>
 
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/header.css" />
-    <link rel="stylesheet" href="/css/home.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
-    <link rel="stylesheet" href="/css/other.css" />
-    <link rel="stylesheet" href="/css/icons.css" />
+    <link rel="stylesheet" href="/css/main-css.css" />
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+			  crossorigin="anonymous"></script>
 {% endblock %}
 
 {% block links %}
     <!-- TODO replace href with correct url -->
-    <link rel="shortcut icon" type="image/png" href="http://its.be/sites/all/themes/its/images/logo.jpg" />
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.ico" />
 {% endblock %}
 
 {% block meta %}
@@ -36,6 +36,6 @@
     <meta property="og:type" content="article" />
     <meta property="og:title"  content="transportdata.be" />
     <meta property="og:description" content="Belgium's national access point for multiational travel information services." />
-    <meta property="og:image" content="{{ h.get_site_protocol_and_host()[1] }}/images/logo-its.png" />
+    <meta property="og:image" content="{{ h.get_site_protocol_and_host()[0] }}{{ h.get_site_protocol_and_host()[1] }}/images/logo-its.png" />
     <meta name="twitter:card" content="summary_large_image" />
 {% endblock %}

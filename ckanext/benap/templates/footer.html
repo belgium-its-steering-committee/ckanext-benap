@@ -9,8 +9,9 @@
               <li><a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='pages_show', page='/about') }}">{{ _('About Transportdata.be') }}</a></li>
             {% endblock %}
           </ul>
-          <ul class="list-unstyled">
+          <ul class="footer-link list-unstyled">
             {% block footer_links_ckan %}
+              <li><a href="https://github.com/belgium-its-steering-committee" target="_blank">{{ _('Github') }}</a></li>
               {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
               <li><a href="{{ api_url }}">{{ _('CKAN API') }}</a></li>
             {% endblock %}
