@@ -2,7 +2,7 @@ body, .custom-font {
     font-family: 'Barlow Condensed';
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 a, a:hover {
@@ -69,14 +69,14 @@ h1.logo span {
 }
 
 .account-masthead .account ul li a {
-    color: #333333;
+    color: #333;
     font-size: 16px;
     font-weight: normal;
 }
 
 .account-masthead .account ul li a:hover {
-    background: #ffffff;
-    color: #333333;
+    background: #fff;
+    color: #333;
 }
 
 .account-masthead .account ul li label[for=field-lang-select] {
@@ -144,7 +144,7 @@ h1.logo span {
 }
 
 .form-control#field-sitewide-search::placeholder, .simple-input .field .btn-search{
-    color: #333333;
+    color: #333;
 }
 
 #header-search {
@@ -176,7 +176,10 @@ h1.logo span {
 
 .flex {display:flex}
 
-.align-items-center {align-items: center}
+.align-items-center {
+    align-items: center
+}
+
 .searchbox {
     background: #0CA0C9;
     color: #fff;
@@ -245,7 +248,7 @@ button {
 .btn-light {
     margin: 0 4px;
     background-color: #efefef;
-    color: #333333;
+    color: #333;
     font-size: 16px
 }
 
@@ -264,7 +267,7 @@ button {
 }
 
 #field-main-search::placeholder {
-    color: #333333;
+    color: #333;
 }
 
 #content-box {
@@ -292,7 +295,7 @@ button {
 #highlight-box-text h3 {
     font-size: 2rem;
     margin: 0;
-    color: #333333;
+    color: #333;
 }
 
 #highlight-box-text h4 {
@@ -307,7 +310,7 @@ button {
 
 #highlight-box-text p {
     font-size: 1.8rem;
-    color: #333333;
+    color: #333;
 }
 
 .button-width {
@@ -376,7 +379,7 @@ button {
 }
 
 .input-email::placeholder {
-    color: #666666;
+    color: #666;
 }
 
 .button-height-34px {
@@ -448,7 +451,7 @@ button {
 }
 
 footer p, .site-footer a, .site-footer, .site-footer label, .site-footer small {
-    color: #666666;
+    color: #666;
     font-weight: bold;
 }
 
@@ -465,14 +468,14 @@ footer p, .site-footer a, .site-footer, .site-footer label, .site-footer small {
     /*-moz-appearance:none;
     -webkit-appearance:none;
     appearance:none;
-    background: url("/images/arrow-down.svg") no-repeat right #ffffff;*/
+    background: url("/images/arrow-down.svg") no-repeat right #fff;*/
 }
 
 select {
     -moz-appearance:none;
     -webkit-appearance:none;
     appearance:none;
-    background: url("/images/arrow-down.svg") no-repeat right !important;
+    background: url("/images/arrow-down.svg") no-repeat right #fff !important;
 }
 
 .w-33 {
@@ -494,11 +497,11 @@ select {
 
 select {
     color: black;
-    background: url("/images/arrow-down.svg") no-repeat right #ffffff;
+    background: url("/images/arrow-down.svg") no-repeat right #fff;
 }
 
 div[role=main] {
-    background: #ffffff;
+    background: #fff;
 }
 
 .wrapper {
@@ -510,7 +513,7 @@ div[role=main] {
 
 .module-heading {
     border: 0;
-    background: #ffffff;
+    background: #fff;
     font-size: 16px;
 }
 
@@ -519,7 +522,7 @@ span.item-label {
 }
 
 .info-block {
-    color: #666666 !important;
+    color: #666 !important;
 }
 
 .nav-item.active > a {
@@ -527,7 +530,7 @@ span.item-label {
 }
 
 .media-grid {
-    background: #ffffff;
+    background: #fff;
     border: none;
 }
 
@@ -541,7 +544,7 @@ span.item-label {
 
 span.item-count {
     background: #efefef;
-    color: #666666;
+    color: #666;
 }
 
 .media-view {
@@ -552,6 +555,12 @@ span.item-count {
     border-color: black;
     -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0);
     box-shadow: 0 0 0 0 rgba(0,0,0,0);
+}
+
+.tag-list li a:hover {
+    background: #11406e;
+    -webkit-box-shadow: inset 0 1px 0 #11406e;
+    box-shadow: inset 0 1px 0 #11406e;
 }
 
 @media only screen and (min-width: 758px) {
@@ -636,7 +645,63 @@ span.item-count {
 }
 
 @media only screen and (max-width: 500px) {
-        #images img {
+    #images img {
         margin: 0 5px;
     }
 }
+
+@media only screen and (max-width: 1191px) {
+    .searchbox {
+        max-width: 65%;
+    }
+}
+
+@media only screen and (max-width: 995px) {
+    .hero {
+        background: #fff !important;
+        height: auto;
+    }
+
+    .flex-responsive-sm {
+        flex-direction: column;
+    }
+
+    .searchbox {
+        max-width: 100%;
+    }
+
+    .register-flex {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .register-flex p {
+        margin: 0;
+    }
+
+    .add-databox {
+        background: #ebf3f5;
+    }
+
+    .add-databox h3, .add-databox p {
+        color: #333;
+        font-size: 1.8rem;
+    }
+
+    .searchbox .tags a {
+        margin: 4px;
+    }
+}
+
+@media only screen and (max-width: 636px) {
+    div.container div.large-title {
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    div.toolbar {
+        display: none;
+    }
+}
+
