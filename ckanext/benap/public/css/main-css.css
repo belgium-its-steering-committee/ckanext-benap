@@ -227,7 +227,6 @@ button {
     background:#11406E;
     border:0;
     color:#fff;
-    text-transform:uppercase;
     padding:5px 15px
 }
 
@@ -530,6 +529,29 @@ span.item-label {
 .media-grid {
     background: #ffffff;
     border: none;
+}
+
+.no-dec:hover {
+    text-decoration: none;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+span.item-count {
+    background: #efefef;
+    color: #666666;
+}
+
+.media-view {
+    border-radius: 0;
+}
+
+.media-view:hover {
+    border-color: black;
+    -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0);
+    box-shadow: 0 0 0 0 rgba(0,0,0,0);
 }
 
 @media only screen and (min-width: 758px) {
