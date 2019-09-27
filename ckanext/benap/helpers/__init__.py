@@ -757,7 +757,7 @@ def ontology_helper(context):
                 "nl": u"Up to every 6month",
                 "de": u"Up to every 6month"
             }),
-            ('Uhttp://publications.europa.eu/resource/authority/frequency/ANNUAL', {
+            ('http://publications.europa.eu/resource/authority/frequency/ANNUAL', {
                 "en": u"Up to yearly",
                 "fr": u"Up to yearly",
                 "nl": u"Up to yearly",
