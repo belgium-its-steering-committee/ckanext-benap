@@ -76,8 +76,7 @@
       "form_placeholder": "https://www.my-organization.com/my-logo",
       "upload_field": "image_upload",
       "upload_clear": "clear_upload",
-      "upload_label": "Image",
-      "display_snippet": null
+      "upload_label": "Image"
     },
     {
       "field_name": "do_address",

@@ -379,13 +379,17 @@
     {
       "field_name": "url",
       "label": "Access URL",
-      "preset": "resource_url_upload",
       "help_text": {
         "en": "Provides a general link for access to either the current data set or a connection link to a service (must start with 'http://' or 'https://'), or provides a data file. You may add documentation also as second ressource (button 'Save and add another' hereunder)",
         "fr": "See English version",
         "nl": "See English version",
         "de": "See English version"
       },
+      "form_snippet": "upload.html",
+      "form_placeholder": "http://example.com/my-data.csv",
+      "upload_field": "upload",
+      "upload_clear": "clear_upload",
+      "upload_label": "File",
       "required": "true"
     },
     {
