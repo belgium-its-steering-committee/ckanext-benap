@@ -109,7 +109,7 @@
       },
       "preset": "dataset_organization",
       "help_text": {
-        "en": "The 'contact point' describes an organisation, if applicable a person, which is responsible for the creation and maintenance of the metadata. This person or organization is the single point of contact for the present metadata set",
+        "en": "The 'contact point' describes an organisation, if applicable a person, which is responsible for the creation and maintenance of the metadata. This person or organization is the single point of contact for the present metadata set. The next field may be used to keep the dataset 'private' within the organisation",
         "fr": "See English version",
         "nl": "See English version",
         "de": "See English version"
