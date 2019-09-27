@@ -82,7 +82,7 @@
       "field_name": "do_address",
       "label": "Address",
       "help_text": {
-        "en": "Official address of your organisation in Belgium",
+        "en": "Official address of your organisation in Belgium. If necessary, please fill it in in multiple languages, each separated by '/'",
         "fr": "See English version",
         "nl": "See English version",
         "de": "See English version"
