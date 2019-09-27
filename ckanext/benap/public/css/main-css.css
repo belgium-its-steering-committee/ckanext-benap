@@ -441,6 +441,11 @@ button {
     padding-bottom: 0 !important;
 }
 
+.px-5 {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
 .ml-50 {
     margin-left: 40%
 }
@@ -704,4 +709,3 @@ span.item-count {
         display: none;
     }
 }
-
