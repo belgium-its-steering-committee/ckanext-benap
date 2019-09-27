@@ -299,7 +299,7 @@
       },
       "preset": "tag_string_autocomplete",
       "help_text": {
-        "en": "Describes the transportation mode covered by the data set",
+        "en": "Describes the transportation mode(s) covered by the data set",
         "fr": "See English version",
         "nl": "See English version",
         "de": "See English version"
