@@ -125,6 +125,11 @@ h1.logo span {
     color: #1c71bf;
 }
 
+#main-navigation-toggle.collapse.in {
+    display: flex;
+    flex-direction: column;
+}
+
 .form-control#field-sitewide-search {
     background-color: #efefef;
     border: none;
@@ -487,7 +492,6 @@ select {
     min-width: 33%;
 }
 
-
 .pt-0 {
     padding-top: 0 !important;
 }
@@ -567,6 +571,7 @@ span.item-count {
     -webkit-box-shadow: inset 0 1px 0 #11406e;
     box-shadow: inset 0 1px 0 #11406e;
 }
+
 
 @media only screen and (min-width: 758px) {
     .masthead .navigation.section {
