@@ -360,6 +360,27 @@ def ontology_helper(context):
                 "de": u"Schweden"
             }),
         ])
+    if ontology == "NUTS1_BE":
+        return map_for_form_select([
+            ('http://data.europa.eu/nuts/code/BE1', {
+                "en": u"Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad",
+                "fr": u"Arr. de Bruxelles-Capitale",
+                "nl": u"Arr. van Brussel-Hoofdstad",
+                "de": u"Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad"
+            }),
+            ('http://data.europa.eu/nuts/code/BE2', {
+                "en": u"Vlaams Gewest",
+                "fr": u"Vlaams Gewest",
+                "nl": u"Vlaams Gewest",
+                "de": u"Vlaams Gewest"
+            }),
+            ('http://data.europa.eu/nuts/code/BE3', {
+                "en": u"Région Wallonne",
+                "fr": u"Région Wallonne",
+                "nl": u"Région Wallonne",
+                "de": u"Région Wallonne"
+            }),
+        ])
     if ontology == "NUTS3_BE":
         return map_for_form_select([
             ('http://data.europa.eu/nuts/code/BE100', {

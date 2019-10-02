@@ -256,10 +256,10 @@
     {
       "field_name": "countries_covered",
       "label": {
-        "en": "Area covered by publication",
-        "fr": "Area covered by publication",
-        "nl": "Area covered by publication",
-        "de": "Area covered by publication"
+        "en": "Countries covered by publication",
+        "fr": "Countries covered by publication",
+        "nl": "Countries covered by publication",
+        "de": "Countries covered by publication"
       },
       "preset": "multiple_select",
       "help_text": {
@@ -274,7 +274,7 @@
       "validators": "scheming_required scheming_multiple_choice benap_countries_covered_belgium"
     },
     {
-      "field_name": "geo_area",
+      "field_name": "regions_covered",
       "label": {
         "en": "Area covered by publication",
         "fr": "Area covered by publication",
@@ -289,7 +289,7 @@
         "de": "See English version"
       },
       "choices_helper": "benap_ontology_helper",
-      "benap_helper_ontology": "NUTS3_BE",
+      "benap_helper_ontology": "NUTS1_BE",
       "required": "true"
     },
     {
