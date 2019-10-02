@@ -26,9 +26,9 @@ fieldset.checkboxes label input {
     is_required=h.scheming_field_required(field)
     )
 %}
-  {%- set choices = [(['Air', 'Rail (including high speed rail)', 'Conventional rail', 'Light rail', 'Long-distance coach', 'Maritime (including ferry)', 'Metro', 'Tram', 'Bus', 'Trolley-bus'], 'Scheduled'),
-            (['Shuttle bus', 'Shuttle ferry', 'Taxi', 'Car-sharing', 'Car-pooling', 'Car-hire', 'Bike-sharing', 'Bike-hire'], 'Demand-responsive'),
-            (['Car', 'Truck', 'Motorcycle', 'Cycle', 'Pedestrian'], 'Personal')] -%}
+  {%- set choices = [([('Air', 'Air'), ('Rail', 'Rail (including high speed rail)'), ('Conventional rail', 'Conventional rail'), ('Light rail', 'Light rail'), ('Long-distance coach', 'Long-distance coach'), ('Maritime', 'Maritime (including ferry)'), ('Metro', 'Metro'), ('Tram', 'Tram'), ('Bus', 'Bus'), ('Trolley-bus','Trolley-bus')], 'Scheduled'),
+            ([('Shuttle bus','Shuttle bus'), ('Shuttle ferry', 'Shuttle ferry'), ('Taxi', 'Taxi'), ('Car-sharing', 'Car-sharing'), ('Car-pooling', 'Car-pooling'), ('Car-hire', 'Car-hire'), ('Bike-sharing', 'Bike-sharing'), ('Bike-hire', 'Bike-hire')], 'Demand-responsive'),
+            ([('Car', 'Car'), ('Truck', 'Truck'), ('Motorcycle', 'Motorcycle'), ('Cycle', 'Cycle'), ('Pedestrian', 'Pedestrian')], 'Personal')] -%}
   {%- if field.get('sorted_choices') -%}
     {%- set choices = choices|sort(case_sensitive=false, attribute=1) -%}
   {%- endif -%}
@@ -48,16 +48,15 @@ fieldset.checkboxes label input {
                 </div>
             </div>
             <div id="collapse-content-{{ category }}" class="border-1 pl-12 transport-mode-collapse-content">
-                {%- for val in tags -%}
+                {%- for val, label in tags -%}
                     <label for="field-{{ field.field_name }}-{{ val }}">
                         <input id="field-{{ field.field_name }}-{{ val }}"
                             type="checkbox"
-                            name="{{ field.field_name }}"
                             value="{{ val }}"
-                            {{"checked " if val in data[field.field_name] }} />
-                        {{ val }}
+                            {{ "checked " if val in data[field.field_name] }} />
+                        {{ label }}
                         <script>
-
+                            $('#field-tag_string').toggle();
 
                             $('input[value="{{ val }}"]').change(function() {
                                 if (this.checked) {
