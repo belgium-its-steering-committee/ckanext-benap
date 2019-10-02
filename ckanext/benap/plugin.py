@@ -43,5 +43,5 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
     def get_validators(self):
         return {
-            'phone_number_validator': phone_number_validator
+            'phone_number_validator': phone_number_validator,
         }
