@@ -2,9 +2,9 @@
 {% set placeholder = _('E.g. environment') %}
 
 
-<div class="large-title uppercase">{{ _("BELGIUM'S NATIONAL ACCESS POINT FOR MULITIMODAL TRAVEL INFORMATION SERVICES") }}</div>
+<div class="large-title uppercase">{{ _("BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES") }}</div>
         <!-- search / add data-->
-<div class="flex">
+<div class="flex flex-responsive-sm">
     <div class="searchbox">
         <h2>{{ _("SEARCH FOR DATA SETS") }}</h2>
         <form class="flex" style="align-items: center" method="get" action="{% url_for controller='package', action='search' %}">
@@ -18,6 +18,9 @@
             {% for tag in tags %}
                 <a class="rounded btn btn-light" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
             {% endfor %}
+            <a class="rounded btn btn-light" >testing</a>
+            <a class="rounded btn btn-light" >testing</a>
+            <a class="rounded btn btn-light" >testing</a>
         </div>
     </div>
     <div class="add-databox">

@@ -1,0 +1,95 @@
+{% import 'macros/form.html' as form %}
+
+<style>
+fieldset.checkboxes label {
+    font-weight: normal;
+    display: block;
+}
+fieldset.checkboxes label:after {
+    content: none;
+}
+fieldset.checkboxes label input {
+    width: auto;
+    top: 0;
+}
+</style>
+
+{% call form.input(
+    field.field_name,
+    id='field-' + field.field_name,
+    label=h.scheming_language_text(field.label),
+    placeholder=h.scheming_language_text(field.form_placeholder),
+    value=data[field.field_name],
+    error=errors[field.field_name],
+    classes=field.classes if 'classes' in field else ['control-medium'],
+    attrs=dict({"class": "form-control"}, **(field.get('form_attrs', {}))),
+    is_required=h.scheming_field_required(field)
+    )
+%}
+  {%- set choices = [([('Air', 'Air'), ('Rail', 'Rail (including high speed rail)'), ('Conventional rail', 'Conventional rail'), ('Light rail', 'Light rail'), ('Long-distance coach', 'Long-distance coach'), ('Maritime', 'Maritime (including ferry)'), ('Metro', 'Metro'), ('Tram', 'Tram'), ('Bus', 'Bus'), ('Trolley-bus','Trolley-bus')], 'Scheduled'),
+            ([('Shuttle bus','Shuttle bus'), ('Shuttle ferry', 'Shuttle ferry'), ('Taxi', 'Taxi'), ('Car-sharing', 'Car-sharing'), ('Car-pooling', 'Car-pooling'), ('Car-hire', 'Car-hire'), ('Bike-sharing', 'Bike-sharing'), ('Bike-hire', 'Bike-hire')], 'Demand-responsive'),
+            ([('Car', 'Car'), ('Truck', 'Truck'), ('Motorcycle', 'Motorcycle'), ('Cycle', 'Cycle'), ('Pedestrian', 'Pedestrian')], 'Personal')] -%}
+  {%- if field.get('sorted_choices') -%}
+    {%- set choices = choices|sort(case_sensitive=false, attribute=1) -%}
+  {%- endif -%}
+    <fieldset class="checkboxes">
+        {%- for tags, category in choices -%}
+            <div id="collapse-{{ category }}" class="flex-between border-1" style="padding: 6px 12px">
+                <h3 class="m-0" style="font-size: 14px; font-weight: bold;">
+                    {{ category }}
+                </h3>
+                <div id="collapse-{{ category }}-open" style="padding-right: 4px; font-size: 10px;">
+                    <span class="caret"></span>
+                </div>
+                <div id="collapse-{{ category }}-close" style="padding-right: 4px; font-size: 10px;">
+                    <span class="dropup">
+                        <span class="caret"></span>
+                    </span>
+                </div>
+            </div>
+            <div id="collapse-content-{{ category }}" class="border-1 pl-12 transport-mode-collapse-content">
+                {%- for val, label in tags -%}
+                    <label for="field-{{ field.field_name }}-{{ val }}">
+                        <input id="field-{{ field.field_name }}-{{ val }}"
+                            type="checkbox"
+                            value="{{ val }}"
+                            {{ "checked " if val in data[field.field_name] }} />
+                        {{ label }}
+                        <script>
+                            $('#field-tag_string').toggle();
+
+                            $('input[value="{{ val }}"]').change(function() {
+                                if (this.checked) {
+                                    let tags = $('#field-tag_string').val().split(',');
+                                    tags.push(this.value);
+                                    $('#field-tag_string').val(tags.join().replace(/^,/, ''));
+                                } else {
+                                    let tags = $('#field-tag_string').val().split(',');
+                                    let remainingTags = [];
+                                    tags.forEach(tag => {
+                                        if (tag.trim() !== this.value) {
+                                            remainingTags.push(tag);
+                                        }
+                                    });
+                                    remainingTags.join();
+                                    $('#field-tag_string').val(remainingTags);
+                                }
+                            });
+                        </script>
+                    </label>
+                {%- endfor -%}
+            </div>
+            <script>
+                $('#collapse-content-{{ category }}').toggle();
+                $('#collapse-{{ category }}-close').toggle();
+                $('#collapse-{{ category }}').click(function() {
+                    $('#collapse-content-{{ category }}').toggle();
+                    $('#collapse-{{ category }}-close').toggle();
+                    $('#collapse-{{ category }}-open').toggle();
+                });
+            </script>
+        {%- endfor -%}
+
+    </fieldset>
+    {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
+{%- endcall -%}

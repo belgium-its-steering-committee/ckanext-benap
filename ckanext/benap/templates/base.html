@@ -25,7 +25,6 @@
 {% endblock %}
 
 {% block links %}
-    <!-- TODO replace href with correct url -->
     <link rel="shortcut icon" type="image/png" href="/images/favicon.ico" />
 {% endblock %}
 
@@ -36,6 +35,6 @@
     <meta property="og:type" content="article" />
     <meta property="og:title"  content="transportdata.be" />
     <meta property="og:description" content="Belgium's national access point for multiational travel information services." />
-    <meta property="og:image" content="{{ h.get_site_protocol_and_host()[0] }}{{ h.get_site_protocol_and_host()[1] }}/images/logo-its.png" />
+    <meta property="og:image" content="{{ h.get_site_protocol_and_host()[0] }}://{{ h.get_site_protocol_and_host()[1] }}/images/map-belgiumv2.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
 {% endblock %}
