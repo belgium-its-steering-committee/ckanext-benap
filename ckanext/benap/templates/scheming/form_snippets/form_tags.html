@@ -28,8 +28,20 @@ fieldset.checkboxes label input {
   {%- endif -%}
     <fieldset class="checkboxes">
         {%- for tags, category in choices -%}
-            <div id="collapse-{{ category }}">{{ category }}</div>
-            <div id="collapse-content-{{ category }}">
+            <div id="collapse-{{ category }}" class="flex-between border-1" style="padding: 6px 12px">
+                <h3 class="m-0" style="font-size: 14px; font-weight: bold;">
+                    {{ category }}
+                </h3>
+                <div id="collapse-{{ category }}-open" style="padding-right: 4px; font-size: 10px;">
+                    <span class="caret"></span>
+                </div>
+                <div id="collapse-{{ category }}-close" style="padding-right: 4px; font-size: 10px;">
+                    <span class="dropup">
+                        <span class="caret"></span>
+                    </span>
+                </div>
+            </div>
+            <div id="collapse-content-{{ category }}" class="border-1 pl-12 transport-mode-collapse-content">
                 {%- for val, label in tags -%}
                     <label for="field-{{ field.field_name }}-{{ val }}">
                         <input id="field-{{ field.field_name }}-{{ val }}"
@@ -64,11 +76,15 @@ fieldset.checkboxes label input {
             </div>
             <script>
                 $('#collapse-content-{{ category }}').toggle();
+                $('#collapse-{{ category }}-close').toggle();
                 $('#collapse-{{ category }}').click(function() {
                     $('#collapse-content-{{ category }}').toggle();
+                    $('#collapse-{{ category }}-close').toggle();
+                    $('#collapse-{{ category }}-open').toggle();
                 });
             </script>
         {%- endfor -%}
+
     </fieldset>
     {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
 {%- endcall -%}

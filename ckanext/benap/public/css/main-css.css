@@ -322,6 +322,15 @@ button {
     min-width: 82px;
 }
 
+.border-1 {
+    border: 1px solid #efefef;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
 .flex-center {
     display: flex;
     flex-wrap: wrap;
@@ -352,6 +361,10 @@ button {
 
 .pl-5 {
     padding-left: 5px;
+}
+
+.pl-12 {
+    padding-left: 12px;
 }
 
 .border-grey {
@@ -714,5 +727,4 @@ span.item-count {
         display: none;
     }
 }
-
 
