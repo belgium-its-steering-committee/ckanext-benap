@@ -254,6 +254,26 @@
       }
     },
     {
+      "field_name": "countries_covered",
+      "label": {
+        "en": "Area covered by publication",
+        "fr": "Area covered by publication",
+        "nl": "Area covered by publication",
+        "de": "Area covered by publication"
+      },
+      "preset": "multiple_select",
+      "help_text": {
+        "en": "Describes the countries covered by the data set (Belgium is mandatory)",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "EU_COUNTRY",
+      "required": "true",
+      "validators": "scheming_required scheming_multiple_choice benap_countries_covered_belgium"
+    },
+    {
       "field_name": "geo_area",
       "label": {
         "en": "Area covered by publication",

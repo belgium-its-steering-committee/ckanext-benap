@@ -15,3 +15,10 @@ def phone_number_validator(value, context):
         if not phone_number_pattern.match(value):
             raise Invalid(_('Phone number {number} is not a valid format').format(number=value))
     return value
+
+
+def countries_covered_belgium(value, context):
+    if value:
+        if len(value) != 0 and u'http://publications.europa.eu/resource/authority/country/BEL' not in value:
+            raise Invalid(_('Belgium is a required country'))
+    return value
