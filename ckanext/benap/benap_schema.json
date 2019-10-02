@@ -289,7 +289,7 @@
       "display_snippet": "map.html",
       "form_snippet": "form_map.html"
     },
-    {
+        {
       "field_name": "tag_string",
       "label": {
         "en": "Transportation modes covered",
@@ -303,23 +303,8 @@
         "nl": "See English version",
         "de": "See English version"
       },
-      "form_placeholder": "[UNDER CONSTRUCTION] research will be made to see if this field could become a predefined list of tags (items) as defined under paragraph 2.2.5.1 of the Coordinated Metadata Cataloque"
-    },
-        {
-      "field_name": "tag_string2",
-      "label": {
-        "en": "Transportation modes covered",
-        "fr": "Transportation modes covered",
-        "nl": "Transportation modes covered",
-        "de": "Transportation modes covered"
-      },
-      "help_text": {
-        "en": "Describes the transportation mode covered by the data set",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
-      },
-      "form_snippet": "form_tags.html"
+      "form_snippet": "form_tags.html",
+          "form_placeholder": "[UNDER CONSTRUCTION] research will be made to see if this field could become a predefined list of tags (items) as defined under paragraph 2.2.5.1 of the Coordinated Metadata Cataloque"
     },
     {
       "field_name": "license_id",
