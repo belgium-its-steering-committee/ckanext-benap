@@ -19,9 +19,9 @@ fieldset.checkboxes label input {
     classes=['control-medium'],
     error=errors[field.field_name],
     is_required=h.scheming_field_required(field)) -%}
-  {%- set choices = [([('Air', 'Air'), ('rail', 'rail'), ('conventional rail', 'conventional rail')], 'Scheduled'),
-            ([('Shuttle bus', 'Shuttle bus'), ('Shuttle ferry', 'Shuttle ferry'), ('Taxi', 'Taxi')], 'Demand-responsive'),
-            ([('Car', 'Car'), ('truck', 'truck'), ('motorcycle', 'motorcycle')], 'Personal')] -%}
+  {%- set choices = [(['Air', 'Rail (including high speed rail)', 'Conventional rail', 'Light rail', 'Long-distance coach', 'Maritime (including ferry)', 'Metro', 'Tram', 'Bus', 'Trolley-bus'], 'Scheduled'),
+            (['Shuttle bus', 'Shuttle ferry', 'Taxi', 'Car-sharing', 'Car-pooling', 'Car-hire', 'Bike-sharing', 'Bike-hire'], 'Demand-responsive'),
+            (['Car', 'Truck', 'Motorcycle', 'Cycle', 'Pedestrian'], 'Personal')] -%}
     <p>{{ list3 }}</p>
   {%- if field.get('sorted_choices') -%}
     {%- set choices = choices|sort(case_sensitive=false, attribute=1) -%}
@@ -42,14 +42,14 @@ fieldset.checkboxes label input {
                 </div>
             </div>
             <div id="collapse-content-{{ category }}" class="border-1 pl-12 transport-mode-collapse-content">
-                {%- for val, label in tags -%}
+                {%- for val in tags -%}
                     <label for="field-{{ field.field_name }}-{{ val }}">
                         <input id="field-{{ field.field_name }}-{{ val }}"
                             type="checkbox"
                             name="{{ field.field_name }}"
                             value="{{ val }}"
                             {{"checked " if val in data[field.field_name] }} />
-                        {{ label }}
+                        {{ val }}
                         <script>
                             $('#field-tag_string').parent().parent().hide();
 
