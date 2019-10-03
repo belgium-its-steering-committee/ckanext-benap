@@ -229,13 +229,14 @@
         "nl": "Start date of publication",
         "de": "Start date of publication"
       },
-      "preset": "datetime",
+      "preset": "datetime_tz",
       "help_text": {
         "en": "Describes from which date and time on the data delivery is applicable. If left empty, the publication is considered as available immediately",
         "fr": "See English version",
         "nl": "See English version",
         "de": "See English version"
-      }
+      },
+      "required": "true"
     },
     {
       "field_name": "temporal_end",
@@ -324,7 +325,8 @@
         "de": "See English version"
       },
       "form_snippet": "form_tags.html",
-      "validators": "ignore_missing tag_string_convert"
+      "required": "true",
+      "validators": "scheming_required tag_string_convert"
     },
     {
       "field_name": "license_id",

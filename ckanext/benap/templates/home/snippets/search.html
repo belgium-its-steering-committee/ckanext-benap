@@ -18,9 +18,6 @@
             {% for tag in tags %}
                 <a class="rounded btn btn-light" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
             {% endfor %}
-            <a class="rounded btn btn-light" >testing</a>
-            <a class="rounded btn btn-light" >testing</a>
-            <a class="rounded btn btn-light" >testing</a>
         </div>
     </div>
     <div class="add-databox">
