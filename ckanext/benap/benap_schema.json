@@ -246,14 +246,13 @@
         "nl": "End date of publication",
         "de": "End date of publication"
       },
-      "preset": "datetime_tz",
+      "preset": "datetime",
       "help_text": {
         "en": "Describes the date when data delivery to this publication terminates. If left empty, the publication does not expire",
         "fr": "See English version",
         "nl": "See English version",
         "de": "See English version"
-      },
-      "required": "true"
+      }
     },
     {
       "field_name": "geo_area",
