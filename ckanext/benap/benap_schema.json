@@ -305,7 +305,8 @@
         "de": "See English version"
       },
       "form_snippet": "form_tags.html",
-      "validators": "ignore_missing tag_string_convert"
+      "required": "true",
+      "validators": "scheming_required tag_string_convert"
     },
     {
       "field_name": "license_id",
