@@ -189,6 +189,198 @@ def ontology_helper(context):
                 "de": u"Schwedisch"
             }),
         ])
+    if ontology == "EU_COUNTRY":
+        return map_for_form_select([
+            ('http://publications.europa.eu/resource/authority/country/BEL', {
+                "en": u"Belgium",
+                "fr": u"Belgique",
+                "nl": u"België",
+                "de": u"Belgien"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/NLD', {
+                "en": u"Netherlands",
+                "fr": u"Pays-Bas",
+                "nl": u"Nederland",
+                "de": u"Niederlande"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/FRA', {
+                "en": u"France",
+                "fr": u"France",
+                "nl": u"Frankrijk",
+                "de": u"Frankreich"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/DEU', {
+                "en": u"Germany",
+                "fr": u"Allemagne",
+                "nl": u"Duitsland",
+                "de": u"Deutschland"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/LUX', {
+                "en": u"Luxembourg",
+                "fr": u"Luxembourg",
+                "nl": u"Luxemburg",
+                "de": u"Luxemburg"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/GBR', {
+                "en": u"United Kingdom",
+                "fr": u"Royaume-Uni",
+                "nl": u"Verenigd Koninkrijk",
+                "de": u"Vereinigtes Königreich"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/BGR', {
+                "en": u"Bulgaria",
+                "fr": u"Bulgarie",
+                "nl": u"Bulgarije",
+                "de": u"Bulgarien"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/CZE', {
+                "en": u"Czechia",
+                "fr": u"Tchéquie",
+                "nl": u"Tsjechië",
+                "de": u"Tschechien"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/DNK', {
+                "en": u"Denmark",
+                "fr": u"Danemark",
+                "nl": u"Denemarken",
+                "de": u"Dänemark"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/EST', {
+                "en": u"Estonia",
+                "fr": u"Estonie",
+                "nl": u"Estland",
+                "de": u"Estland"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/IRL', {
+                "en": u"Ireland",
+                "fr": u"Irlande",
+                "nl": u"Ierland",
+                "de": u"Irland"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/GRC', {
+                "en": u"Greece",
+                "fr": u"Grèce",
+                "nl": u"Griekenland",
+                "de": u"Griechenland"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/ESP', {
+                "en": u"Spain",
+                "fr": u"Espagne",
+                "nl": u"Spanje",
+                "de": u"Spanien"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/HRV', {
+                "en": u"Croatia",
+                "fr": u"Croatie",
+                "nl": u"Kroatië",
+                "de": u"Kroatien"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/ITA', {
+                "en": u"Italy",
+                "fr": u"Italie",
+                "nl": u"Italië",
+                "de": u"Italien"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/CYP', {
+                "en": u"Cyprus",
+                "fr": u"Chypre",
+                "nl": u"Cyprus",
+                "de": u"Zypern"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/LVA', {
+                "en": u"Latvia",
+                "fr": u"Lettonie",
+                "nl": u"Letland",
+                "de": u"Lettland"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/LTU', {
+                "en": u"Lithuania",
+                "fr": u"Lituanie",
+                "nl": u"Litouwen",
+                "de": u"Litauen"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/HUN', {
+                "en": u"Hungary",
+                "fr": u"Hongrie",
+                "nl": u"Hongarije",
+                "de": u"Ungarn"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/MLT', {
+                "en": u"Malta",
+                "fr": u"Malte",
+                "nl": u"Malta",
+                "de": u"Malta"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/AUT', {
+                "en": u"Austria",
+                "fr": u"Autriche",
+                "nl": u"Oostenrijk",
+                "de": u"Österreich"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/POL', {
+                "en": u"Poland",
+                "fr": u"Pologne",
+                "nl": u"Polen",
+                "de": u"Polen"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/PRT', {
+                "en": u"Portugal",
+                "fr": u"Portugal",
+                "nl": u"Portugal",
+                "de": u"Portugal"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/ROU', {
+                "en": u"Romania",
+                "fr": u"Roumanie",
+                "nl": u"Roemenië",
+                "de": u"Rumänien"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/SVN', {
+                "en": u"Slovenia",
+                "fr": u"Slovénie",
+                "nl": u"Slovenië",
+                "de": u"Slowenien"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/SVK', {
+                "en": u"Slovakia",
+                "fr": u"Slovaquie",
+                "nl": u"Slowakije",
+                "de": u"Slowakei"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/FIN', {
+                "en": u"Finland",
+                "fr": u"Finlande",
+                "nl": u"Finland",
+                "de": u"Finnland"
+            }),
+            ('http://publications.europa.eu/resource/authority/country/SWE', {
+                "en": u"Sweden",
+                "fr": u"Suède",
+                "nl": u"Zweden",
+                "de": u"Schweden"
+            }),
+        ])
+    if ontology == "NUTS1_BE":
+        return map_for_form_select([
+            ('http://data.europa.eu/nuts/code/BE1', {
+                "en": u"Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad",
+                "fr": u"Arr. de Bruxelles-Capitale",
+                "nl": u"Arr. van Brussel-Hoofdstad",
+                "de": u"Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad"
+            }),
+            ('http://data.europa.eu/nuts/code/BE2', {
+                "en": u"Vlaams Gewest",
+                "fr": u"Vlaams Gewest",
+                "nl": u"Vlaams Gewest",
+                "de": u"Vlaams Gewest"
+            }),
+            ('http://data.europa.eu/nuts/code/BE3', {
+                "en": u"Région Wallonne",
+                "fr": u"Région Wallonne",
+                "nl": u"Région Wallonne",
+                "de": u"Région Wallonne"
+            }),
+        ])
     if ontology == "NUTS3_BE":
         return map_for_form_select([
             ('http://data.europa.eu/nuts/code/BE100', {
