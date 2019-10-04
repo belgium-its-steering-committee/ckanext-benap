@@ -66,7 +66,6 @@
             addActive(autocompleteOptions);
             e.preventDefault();
         } else if (e.which === 13) {
-            console.log(currentFocus);
             e.preventDefault();
             if (currentFocus > -1) {
                 if (autocompleteOptions) {
@@ -87,15 +86,12 @@
         if (currentFocus < 0) {
             currentFocus = (autocompleteOptions.length - 1);
         }
-        console.log(autocompleteOptions[currentFocus]);
         $(autocompleteOptions[currentFocus]).addClass("autocomplete-{{ field.field_name }}-option-active");
-        $(autocompleteOptions[currentFocus]).removeClass("border-1");
-        }
+    }
 
     function removeActive(autocompleteOptions) {
         for (var i = 0; i < autocompleteOptions.length; i++) {
             autocompleteOptions[i].classList.remove("autocomplete-{{ field.field_name }}-option-active");
-            autocompleteOptions[i].classList.add("border-1");
         }
     }
 
@@ -110,7 +106,6 @@
 
     .autocomplete-{{ field.field_name }}-option {
         position: absolute;
-        top: 34px;
         left: 0px;
         z-index: 1;
         width: 100%;
