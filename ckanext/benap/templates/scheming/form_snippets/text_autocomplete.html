@@ -27,14 +27,17 @@
     $('#field-{{ field.field_name }}').on('input', function(e) {
         if (e.which !== 40 || e.which !== 38 || e.which !== 13) {
             currentFocus = -1;
-            if (this.value !== "" ) {
+            let inputText = this.value;
+            if (inputText !== "" ) {
                 $('.autocomplete-{{ field.field_name }}-option').remove();
-                let matches = autocompleteOptions.filter(x => { return  x.indexOf(this.value) > -1; })
-                matches.sort(function(a,b) {
-                    return a.indexOf(this.value) < b.indexOf(this.value);
+                let matches = autocompleteOptions.filter(x => { return  x.toLowerCase().indexOf(inputText.toLowerCase()) > -1; })
+                console.log(inputText);
+                let sorted = matches.sort(function(a,b) {
+                    return b.toLowerCase().indexOf(inputText.toLowerCase()) < a.toLowerCase().indexOf(inputText.toLowerCase());
                 });
-                if (matches.length > 10) {
-                    matches = matches.slice(0, 10);
+                console.log(sorted);
+                if (matches.length > 5) {
+                    matches = matches.slice(0, 5);
                 }
                 matches.forEach((m, i) => {
                     $('#autocomplete-{{ field.field_name }}')
