@@ -142,6 +142,7 @@
         "nl": "See English version",
         "de": "See English version"
       },
+      "form_snippet": "text_autocomplete.html",
       "required": "true"
     },
     {

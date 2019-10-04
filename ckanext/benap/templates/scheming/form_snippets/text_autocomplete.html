@@ -1,0 +1,124 @@
+{% import 'macros/form.html' as form %}
+
+    {% call form.input(
+        field.field_name,
+        id='field-' + field.field_name,
+        label=h.scheming_language_text(field.label),
+        placeholder=h.scheming_language_text(field.form_placeholder),
+        value=data[field.field_name],
+        error=errors[field.field_name],
+        classes=field.classes if 'classes' in field else ['control-medium'],
+        attrs=dict({"class": "form-control"}, **(field.get('form_attrs', {}))),
+        is_required=h.scheming_field_required(field)
+        )
+    %}
+        {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
+    {% endcall %}
+
+
+<script>
+    let autocompleteOptions = JSON.parse("{{ h.benap_organisation_names_for_autocomplete() }}".replace(/&#39;/g, '"'));
+
+    $('#field-{{ field.field_name }}').wrap('<div id="autocomplete-{{ field.field_name }}"></div>');
+    $('#field-{{ field.field_name }}').attr('autocomplete', 'off');
+
+    let currentFocus = -1;
+
+    $('#field-{{ field.field_name }}').on('input', function(e) {
+        if (e.which !== 40 || e.which !== 38 || e.which !== 13) {
+            currentFocus = -1;
+            if (this.value !== "" ) {
+                $('.autocomplete-{{ field.field_name }}-option').remove();
+                let matches = autocompleteOptions.filter(x => { return  x.indexOf(this.value) > -1; })
+                matches.sort(function(a,b) {
+                    return a.indexOf(this.value) < b.indexOf(this.value);
+                });
+                if (matches.length > 10) {
+                    matches = matches.slice(0, 10);
+                }
+                matches.forEach((m, i) => {
+                    $('#autocomplete-{{ field.field_name }}')
+                        .append(
+                            '<div class="autocomplete-{{ field.field_name }}-option border-1" ' +
+                            'style="top: ' + (i+1)*34 + 'px;" ' +
+                            'onclick="selectOption(&#39;' + m + '&#39;)">' + m + '</div>'
+                         );
+                });
+            } else {
+                $('.autocomplete-{{ field.field_name }}-option').remove();
+            }
+        }
+    });
+
+    function selectOption(selectedValue) {
+        $('#field-{{ field.field_name }}').val(selectedValue);
+        $('.autocomplete-{{ field.field_name }}-option').remove();
+    }
+
+    $('#field-{{ field.field_name }}').on("keydown", function(e) {
+        let autocompleteOptions = $('.autocomplete-{{ field.field_name }}-option');
+        if (e.which === 40) { // down
+            currentFocus++;
+            addActive(autocompleteOptions);
+            e.preventDefault();
+        } else if (e.which === 38) { // up
+            currentFocus--;
+            addActive(autocompleteOptions);
+            e.preventDefault();
+        } else if (e.which === 13) {
+            e.preventDefault();
+            if (currentFocus > -1) {
+                if (autocompleteOptions) {
+                    autocompleteOptions[currentFocus].click();
+                }
+            }
+        }
+    });
+
+    function addActive(autocompleteOptions) {
+        if (!autocompleteOptions) {
+            return false;
+        }
+        removeActive(autocompleteOptions);
+        if (currentFocus >= autocompleteOptions.length) {
+            currentFocus = 0;
+        }
+        if (currentFocus < 0) {
+            currentFocus = (autocompleteOptions.length - 1);
+        }
+        $(autocompleteOptions[currentFocus]).addClass("autocomplete-{{ field.field_name }}-option-active");
+    }
+
+    function removeActive(autocompleteOptions) {
+        for (var i = 0; i < autocompleteOptions.length; i++) {
+            autocompleteOptions[i].classList.remove("autocomplete-{{ field.field_name }}-option-active");
+        }
+    }
+
+    $(document).click(function() {
+        $('.autocomplete-{{ field.field_name }}-option').remove();
+    });
+</script>
+<style>
+    #autocomplete-{{ field.field_name }} {
+        position: relative;
+    }
+
+    .autocomplete-{{ field.field_name }}-option {
+        position: absolute;
+        left: 0px;
+        z-index: 1;
+        width: 100%;
+        background: white;
+        cursor: pointer;
+        height: 34px;
+        padding: 6px 12px;
+    }
+
+    .autocomplete-{{ field.field_name }}-option-active, .autocomplete-{{ field.field_name }}-option:hover {
+        border-color: #66afe9;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,0.6);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,0.6);
+    }
+</style>

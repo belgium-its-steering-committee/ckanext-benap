@@ -997,3 +997,9 @@ def field_translated_fallback(translated_field):
 
 def json_loads(data):
     return json.dumps(json.loads(data))
+
+
+def organisation_names_for_autocomplete():
+    from ckantoolkit import h
+    return map(lambda org: org['title'].encode("utf-8"), h.organizations_available('create_dataset'))
+
