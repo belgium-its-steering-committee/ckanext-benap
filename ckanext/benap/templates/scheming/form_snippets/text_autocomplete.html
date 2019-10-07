@@ -17,7 +17,7 @@
 
 
 <script>
-    let autocompleteOptions = JSON.parse("{{ h.benap_organisation_names_for_autocomplete() }}".replace(/&#39;/g, '"'));
+    let autocompleteOptions = JSON.parse(decodeURIComponent(escape("{{ h.benap_organisation_names_for_autocomplete() }}")).replace(/&#39;/g, '"'));
 
     $('#field-{{ field.field_name }}').wrap('<div id="autocomplete-{{ field.field_name }}"></div>');
     $('#field-{{ field.field_name }}').attr('autocomplete', 'off');
@@ -31,11 +31,9 @@
             if (inputText !== "" ) {
                 $('.autocomplete-{{ field.field_name }}-option').remove();
                 let matches = autocompleteOptions.filter(x => { return  x.toLowerCase().indexOf(inputText.toLowerCase()) > -1; })
-                console.log(inputText);
                 let sorted = matches.sort(function(a,b) {
                     return b.toLowerCase().indexOf(inputText.toLowerCase()) < a.toLowerCase().indexOf(inputText.toLowerCase());
                 });
-                console.log(sorted);
                 if (matches.length > 5) {
                     matches = matches.slice(0, 5);
                 }
