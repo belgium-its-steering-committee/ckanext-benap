@@ -27,7 +27,7 @@
 
 {% block notes %}
   {% if h.benap_package_notes_translated_fallback(package) %}
-      <div>{{ h.benap_package_notes_translated_fallback(package) }}</div>
+      <div>{{ h.render_markdown(h.benap_package_notes_translated_fallback(package)) }}</div>
   {% else %}
       <p class="empty">{{ _("This dataset has no description") }}</p>
   {% endif %}
