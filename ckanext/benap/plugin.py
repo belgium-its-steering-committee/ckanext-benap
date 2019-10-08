@@ -3,7 +3,8 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 
 from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallback, json_loads, \
-    package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete
+    package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete,\
+    get_translated_tags, scheming_language_text
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.validators import phone_number_validator, countries_covered_belgium
 
@@ -37,7 +38,9 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
             'benap_package_notes_translated_fallback': package_notes_translated_fallback,
             'benap_field_translated_fallback': field_translated_fallback,
             'json_loads': json_loads,
-            'benap_organisation_names_for_autocomplete': organisation_names_for_autocomplete
+            'benap_organisation_names_for_autocomplete': organisation_names_for_autocomplete,
+            'get_translated_tags': get_translated_tags,
+            'benap_scheming_language_text': scheming_language_text,
         }
 
     # IValidators
