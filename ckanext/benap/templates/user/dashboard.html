@@ -1,0 +1,24 @@
+{% ckan_extends %}
+
+{% block primary_content_inner %}
+    <div data-module="dashboard">
+        <div class="border-1-blue p-4 flex-center flex-col mb-16px"
+             onclick="location.ref='{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='pages_show', page='/about') }}'">
+            <h3>{{ _('Have you just just created an account?') }}</h3>
+            <p>
+                {{ _('If yes, you will find more information on what to do in our ') }}
+                <a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='pages_show', page='/about') }}">{{ _('about section.') }}</a>
+            </p>
+        </div>
+        {% snippet 'user/snippets/followee_dropdown.html', context=dashboard_activity_stream_context, followees=followee_list %}
+        <h2 class="page-heading">
+            {% block page_heading %}
+                {{ _('News feed') }}
+            {% endblock %}
+            <small>{{ _("Activity from items that I'm following") }}</small>
+        </h2>
+        {% block activity_stream %}
+            {{ dashboard_activity_stream|safe }}
+        {% endblock %}
+    </div>
+{% endblock %}
