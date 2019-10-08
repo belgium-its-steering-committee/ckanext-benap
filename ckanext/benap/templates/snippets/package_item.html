@@ -1,5 +1,30 @@
 {% ckan_extends %}
 
+{% block heading %}
+    <h3 class="dataset-heading" style="display: inline;">
+        {% block heading_private %}
+            {% if package.private %}
+                <span class="dataset-private label label-inverse">
+                    <i class="fa fa-lock"></i>
+                    {{ _('Private') }}
+                </span>
+            {% endif %}
+        {% endblock %}
+        {% block heading_title %}
+            {{ h.link_to(h.truncate(title, truncate_title), h.url_for(package.type + '_read', controller='package', action='read', id=package.name)) }}
+        {% endblock %}
+        {% block heading_meta %}
+            {% if package.get('state', '').startswith('draft') %}
+                <span class="label label-info">{{ _('Draft') }}</span>
+            {% elif package.get('state', '').startswith('deleted') %}
+                <span class="label label-danger">{{ _('Deleted') }}</span>
+            {% endif %}
+            {{ h.popular('recent views', package.tracking_summary.recent, min=10) if package.tracking_summary }}
+        {% endblock %}
+    </h3>
+    <a href="{{ h.url_for(package.organization.type ~ '_read', action='read', id=package.organization.name) }}" style="display: inline; padding-left: 8px;"><i>{{ package.organization.title }}</i></a>
+{% endblock %}
+
 {% block notes %}
   {% if h.benap_package_notes_translated_fallback(package) %}
       <div>{{ h.benap_package_notes_translated_fallback(package) }}</div>
