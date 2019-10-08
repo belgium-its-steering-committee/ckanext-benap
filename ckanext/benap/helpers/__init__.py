@@ -705,6 +705,18 @@ def ontology_helper(context):
                 "nl": u"GTFS",
                 "de": u"GTFS"
             }),
+            ('GBFS', {
+                "en": u"GBFS",
+                "fr": u"GBFS",
+                "nl": u"GBFS",
+                "de": u"GBFS"
+            }),
+            ('MDS', {
+                "en": u"MDS",
+                "fr": u"MDS",
+                "nl": u"MDS",
+                "de": u"MDS"
+            }),
             ('VDV Standard', {
                 "en": u"VDV Standard (VDV 452, 455, 462,…)",
                 "fr": u"VDV Standard (VDV 452, 455, 462,…)",
