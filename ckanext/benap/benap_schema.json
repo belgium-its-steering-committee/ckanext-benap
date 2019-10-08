@@ -312,7 +312,7 @@
       "form_snippet": "form_map.html"
     },
         {
-      "field_name": "tag_string",
+      "field_name": "fluent_tags",
       "label": {
         "en": "Transportation modes covered",
         "fr": "Transportation modes covered",
@@ -325,7 +325,9 @@
         "nl": "See English version",
         "de": "See English version"
       },
-      "form_snippet": "form_tags.html"
+      "form_snippet": "form_tags.html",
+      "required": "true",
+      "validators": "scheming_required tag_string_convert"
     },
     {
       "field_name": "license_id",
