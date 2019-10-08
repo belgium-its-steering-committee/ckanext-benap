@@ -56,15 +56,15 @@ fieldset.checkboxes label input {
                             {{ "checked " if val in data[field.field_name] }} />
                         {{ label }}
                         <script>
-                            $('#field-tag_string').toggle();
+                            $('#field-{{ field.field_name }}').toggle();
 
                             $('input[value="{{ val }}"]').change(function() {
                                 if (this.checked) {
-                                    let tags = $('#field-tag_string').val().split(',');
+                                    let tags = $('#field-{{ field.field_name }}').val().split(',');
                                     tags.push(this.value);
-                                    $('#field-tag_string').val(tags.join().replace(/^,/, ''));
+                                    $('#field-{{ field.field_name }}').val(tags.join().replace(/^,/, ''));
                                 } else {
-                                    let tags = $('#field-tag_string').val().split(',');
+                                    let tags = $('#field-{{ field.field_name }}').val().split(',');
                                     let remainingTags = [];
                                     tags.forEach(tag => {
                                         if (tag.trim() !== this.value) {
@@ -72,7 +72,7 @@ fieldset.checkboxes label input {
                                         }
                                     });
                                     remainingTags.join();
-                                    $('#field-tag_string').val(remainingTags);
+                                    $('#field-{{ field.field_name }}').val(remainingTags);
                                 }
                             });
                         </script>
