@@ -1,0 +1,39 @@
+{% extends "page.html" %}
+
+{% block subtitle %}{{ _('Register') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li class="active">{{ h.nav_link(_('Registration'), named_route='user.register') }}</li>
+{% endblock %}
+
+{% block primary_content %}
+  <article class="module">
+    <div class="module-content">
+      {% block primary_content_inner %}
+      <h1 class="page-heading">
+        {% block page_heading %}{{ _('Register for an Account') }}{% endblock %}
+      </h1>
+      {{ form | safe }}
+      {% endblock %}
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary_content %}
+  {% block help %}
+  <section class="module module-narrow module-shallow">
+    {% block help_inner %}
+    <h2 class="module-heading">{{ _('Why Sign Up?') }}</h2>
+    <div class="module-content">
+        <p>
+            {{ _('Check our <a href="{{ h.get_site_protocol_and_host()[0] }}://{{ h.get_site_protocol_and_host()[1] }}/pages/information-data-providers">about section</a> to know more!') }}
+        </p>
+        <h3>{{ _('How to sign up?') }}</h3>
+        <p>
+            {{ _('Please choose a username (and make sure never to forget it) containing only lowercase letters and no special character except - and _ Fill in the other fields and press "Create account"') }}
+        </p>
+    </div>
+{% endblock %}
+  </section>
+  {% endblock %}
+{% endblock %}
