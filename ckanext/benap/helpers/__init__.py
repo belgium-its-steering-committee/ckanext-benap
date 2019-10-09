@@ -42,7 +42,7 @@ def ontology_helper(context):
             }),
         ])
 
-    if ontology == "EU-language":
+    elif ontology == "EU-language":
         return map_for_form_select([
             ('http://publications.europa.eu/resource/authority/language/BUL', {
                 "en": u"Bulgarian",
@@ -189,7 +189,7 @@ def ontology_helper(context):
                 "de": u"Schwedisch"
             }),
         ])
-    if ontology == "EU_COUNTRY":
+    elif ontology == "EU_COUNTRY":
         return map_for_form_select([
             ('http://publications.europa.eu/resource/authority/country/BEL', {
                 "en": u"Belgium",
@@ -360,7 +360,7 @@ def ontology_helper(context):
                 "de": u"Schweden"
             }),
         ])
-    if ontology == "NUTS1_BE":
+    elif ontology == "NUTS1_BE":
         return map_for_form_select([
             ('http://data.europa.eu/nuts/code/BE1', {
                 "en": u"Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad",
@@ -381,7 +381,7 @@ def ontology_helper(context):
                 "de": u"Région Wallonne"
             }),
         ])
-    if ontology == "NUTS3_BE":
+    elif ontology == "NUTS3_BE":
         return map_for_form_select([
             ('http://data.europa.eu/nuts/code/BE100', {
                 "en": u"Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad",
@@ -553,7 +553,7 @@ def ontology_helper(context):
             }),
         ])
 
-    if ontology == "encoding":
+    elif ontology == "encoding":
         return map_for_form_select([
             ('ASCII', {
                 "en": u"ASCII",
@@ -593,7 +593,7 @@ def ontology_helper(context):
             }),
         ])
 
-    if ontology == "syntax":
+    elif ontology == "syntax":
         return map_for_form_select([
             ('XML', {
                 "en": u"XML",
@@ -633,7 +633,7 @@ def ontology_helper(context):
             }),
         ])
 
-    if ontology == "grammar":
+    elif ontology == "grammar":
         return map_for_form_select([
             ('http://publications.europa.eu/resource/authority/file-type/SCHEMA_XML', {
                 "en": u"XSD",
@@ -667,7 +667,7 @@ def ontology_helper(context):
             }),
         ])
 
-    if ontology == "datamodel":
+    elif ontology == "datamodel":
         return map_for_form_select([
             ('DATEX II profile', {
                 "en": u"DATEX II profile",
@@ -780,7 +780,7 @@ def ontology_helper(context):
             }),
         ])
 
-    if ontology == "protocol":
+    elif ontology == "protocol":
         return map_for_form_select([
             ('SOAP', {
                 "en": u"SOAP",
@@ -838,7 +838,7 @@ def ontology_helper(context):
             }),
         ])
 
-    if ontology == "communication":
+    elif ontology == "communication":
         return map_for_form_select([
             ('Push', {
                 "en": u"Push",
@@ -857,6 +857,45 @@ def ontology_helper(context):
                 "fr": u"Pull",
                 "nl": u"Pull",
                 "de": u"Pull"
+            }),
+        ])
+    elif ontology == "contract_license":
+        return map_for_form_select([
+            ('nolinoco', {
+                "en": u"No license – No contract",
+                "fr": u"No license – No contract",
+                "nl": u"No license – No contract",
+                "de": u"No license – No contract"
+            }),
+            ('lifree', {
+                "en": u"Licence and Free of charge",
+                "fr": u"Licence and Free of charge",
+                "nl": u"Licence and Free of charge",
+                "de": u"Licence and Free of charge"
+            }),
+            ('linotfree', {
+                "en": u"Licence and Fee",
+                "fr": u"Licence and Fee",
+                "nl": u"Licence and Fee",
+                "de": u"Licence and Fee"
+            }),
+            ('cofree', {
+                "en": u"Contract and Free of charge",
+                "fr": u"Contract and Free of charge",
+                "nl": u"Contract and Free of charge",
+                "de": u"Contract and Free of charge"
+            }),
+            ('conotfree', {
+                "en": u"Contract and Fee",
+                "fr": u"Contract and Fee",
+                "nl": u"Contract and Fee",
+                "de": u"Contract and Fee"
+            }),
+            ('notrelevant', {
+                "en": u"Not relevant",
+                "fr": u"Not relevant",
+                "nl": u"Not relevant",
+                "de": u"Not relevant"
             }),
         ])
 

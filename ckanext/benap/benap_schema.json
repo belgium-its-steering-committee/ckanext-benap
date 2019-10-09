@@ -330,6 +330,25 @@
       "validators": "scheming_required tag_string_convert"
     },
     {
+      "field_name": "contract_license",
+      "label": {
+        "en": "License type",
+        "fr": "License type",
+        "nl": "License type",
+        "de": "License type"
+      },
+      "preset": "select",
+      "choices_helper": "benap_ontology_helper",
+      "help_text": {
+        "en": "Describes the conditions of use of the data set",
+        "fr": "See English version",
+        "nl": "See English version",
+        "de": "See English version"
+      },
+      "benap_helper_ontology": "contract_license",
+      "required": "true"
+    },
+    {
       "field_name": "license_id",
       "label": {
         "en": "Contract or licence",
