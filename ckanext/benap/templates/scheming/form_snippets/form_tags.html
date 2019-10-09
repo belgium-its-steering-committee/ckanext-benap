@@ -26,35 +26,34 @@ fieldset.checkboxes label input {
     is_required=h.scheming_field_required(field)
     )
 %}
-  {%- set choices = [([('Air', 'Air'), ('Rail', 'Rail (including high speed rail)'), ('Conventional rail', 'Conventional rail'), ('Light rail', 'Light rail'), ('Long-distance coach', 'Long-distance coach'), ('Maritime', 'Maritime (including ferry)'), ('Metro', 'Metro'), ('Tram', 'Tram'), ('Bus', 'Bus'), ('Trolley-bus','Trolley-bus')], 'Scheduled'),
-            ([('Shuttle bus','Shuttle bus'), ('Shuttle ferry', 'Shuttle ferry'), ('Taxi', 'Taxi'), ('Car-sharing', 'Car-sharing'), ('Car-pooling', 'Car-pooling'), ('Car-hire', 'Car-hire'), ('Bike-sharing', 'Bike-sharing'), ('Bike-hire', 'Bike-hire')], 'Demand-responsive'),
-            ([('Car', 'Car'), ('Truck', 'Truck'), ('Motorcycle', 'Motorcycle'), ('Cycle', 'Cycle'), ('Pedestrian', 'Pedestrian')], 'Personal')] -%}
+    {%- set lang = h.lang() -%}
+  {%- set choices = h.get_translated_tags() -%}
   {%- if field.get('sorted_choices') -%}
     {%- set choices = choices|sort(case_sensitive=false, attribute=1) -%}
   {%- endif -%}
     <fieldset class="checkboxes">
         {%- for tags, category in choices -%}
-            <div id="collapse-{{ category }}" class="flex-between border-1" style="padding: 6px 12px">
+            <div id="collapse-{{ h.benap_scheming_language_text(category, lang) }}" class="flex-between border-1" style="padding: 6px 12px">
                 <h3 class="m-0" style="font-size: 14px; font-weight: bold;">
-                    {{ category }}
+                    {{ h.benap_scheming_language_text(category, lang) }}
                 </h3>
-                <div id="collapse-{{ category }}-open" style="padding-right: 4px; font-size: 10px;">
+                <div id="collapse-{{ h.benap_scheming_language_text(category, lang) }}-open" style="padding-right: 4px; font-size: 10px;">
                     <span class="caret"></span>
                 </div>
-                <div id="collapse-{{ category }}-close" style="padding-right: 4px; font-size: 10px;">
+                <div id="collapse-{{ h.benap_scheming_language_text(category, lang) }}-close" style="padding-right: 4px; font-size: 10px;">
                     <span class="dropup">
                         <span class="caret"></span>
                     </span>
                 </div>
             </div>
-            <div id="collapse-content-{{ category }}" class="border-1 pl-12 transport-mode-collapse-content">
+            <div id="collapse-content-{{ h.benap_scheming_language_text(category, lang) }}" class="border-1 pl-12 transport-mode-collapse-content">
                 {%- for val, label in tags -%}
                     <label for="field-{{ field.field_name }}-{{ val }}">
                         <input id="field-{{ field.field_name }}-{{ val }}"
                             type="checkbox"
                             value="{{ val }}"
                             {{ "checked " if val in data[field.field_name] }} />
-                        {{ label }}
+                        {{ h.benap_scheming_language_text(label, lang) }}
                         <script>
                             $('#field-{{ field.field_name }}').toggle();
 
@@ -80,12 +79,12 @@ fieldset.checkboxes label input {
                 {%- endfor -%}
             </div>
             <script>
-                $('#collapse-content-{{ category }}').toggle();
-                $('#collapse-{{ category }}-close').toggle();
-                $('#collapse-{{ category }}').click(function() {
-                    $('#collapse-content-{{ category }}').toggle();
-                    $('#collapse-{{ category }}-close').toggle();
-                    $('#collapse-{{ category }}-open').toggle();
+                $('#collapse-content-{{ h.benap_scheming_language_text(category, lang) }}').toggle();
+                $('#collapse-{{ h.benap_scheming_language_text(category, lang) }}-close').toggle();
+                $('#collapse-{{ h.benap_scheming_language_text(category, lang) }}').click(function() {
+                    $('#collapse-content-{{ h.benap_scheming_language_text(category, lang) }}').toggle();
+                    $('#collapse-{{ h.benap_scheming_language_text(category, lang) }}-close').toggle();
+                    $('#collapse-{{ h.benap_scheming_language_text(category, lang) }}-open').toggle();
                 });
             </script>
         {%- endfor -%}

@@ -705,6 +705,18 @@ def ontology_helper(context):
                 "nl": u"GTFS",
                 "de": u"GTFS"
             }),
+            ('GBFS', {
+                "en": u"GBFS",
+                "fr": u"GBFS",
+                "nl": u"GBFS",
+                "de": u"GBFS"
+            }),
+            ('MDS', {
+                "en": u"MDS",
+                "fr": u"MDS",
+                "nl": u"MDS",
+                "de": u"MDS"
+            }),
             ('VDV Standard', {
                 "en": u"VDV Standard (VDV 452, 455, 462,…)",
                 "fr": u"VDV Standard (VDV 452, 455, 462,…)",
@@ -1042,3 +1054,191 @@ def organisation_names_for_autocomplete():
     from ckantoolkit import h
     return map(lambda org: org['title'].encode("utf-8"), h.organizations_available('create_dataset'))
 
+
+def scheming_language_text(field_data, language_data):
+    return field_data[language_data]
+
+
+def get_translated_tags():
+    return [
+        ([
+             ("Air",
+              {
+                  "en": u"Air",
+                  "nl": u"Lucht",
+                  "fr": u"Aero",
+                  "de": u"Luft"
+              }),
+             ("Rail",
+              {
+                  "en": u"Rail (including high speed rail)",
+                  "nl": u"Spoor (inclusief hogesnelheidstrein)",
+                  "fr": u"Rail (y compris le train à grande vitesse)",
+                  "de": u"Schiene (einschließlich Hochgeschwindigkeitsschiene)"
+              }),
+             ("Conventional rail",
+              {
+                  "en": u"Conventional rail",
+                  "nl": u"Conventioneel spoor",
+                  "fr": u"Rail conventionnel",
+                  "de": u"Konventionelle Schiene"
+              }),
+             ("Light rail",
+              {
+                  "en": u"Light rail",
+                  "nl": u"Light rail",
+                  "fr": u"Métro léger",
+                  "de": u"Stadtbahn"
+              }),
+             ("Long-distance coach",
+              {
+                  "en": u"Long-distance coach",
+                  "nl": u"Lange afstand coach",
+                  "fr": u"Autocar de longue distance",
+                  "de": u"Fernbus"
+              }),
+             ("Maritime",
+              {
+                  "en": u"Maritime (including ferry)",
+                  "nl": u"Maritiem (inclusief veerboot)",
+                  "fr": u"Maritime (ferry compris)",
+                  "de": u"Schifffahrt (einschließlich Fähre)"
+              }),
+             ("Metro",
+              {
+                  "en": u"Metro",
+                  "nl": u"Metro",
+                  "fr": u"Métro",
+                  "de": u"Metro"
+              }),
+             ("Tram",
+              {
+                  "en": u"Tram",
+                  "nl": u"Tram",
+                  "fr": u"Tram",
+                  "de": u"Straßenbahn"
+              }),
+             ("Bus",
+              {
+                  "en": u"Bus",
+                  "nl": u"Bus",
+                  "fr": u"Autobus",
+                  "de": u"Bus"
+              }),
+             ("Trolley-bus",
+              {
+                  "en": u"Trolley-bus",
+                  "nl": u"Trolley-bus",
+                  "fr": u"Trolleybus",
+                  "de": u"Obus"
+              })
+         ], {
+                "en": u"Scheduled",
+                "nl": u"gepland",
+                "fr": u"Prévu",
+                "de": u"Geplant"
+            }),
+        ([
+             ("Shuttle bus",
+              {
+                  "en": u"Shuttle bus",
+                  "nl": u"Pendelbus",
+                  "fr": u"Navette",
+                  "de": u"Shuttlebus"
+              }),
+             ("Shuttle ferry",
+              {
+                  "en": u"Shuttle ferry",
+                  "nl": u"Pendel veerboot",
+                  "fr": u"Navette ferry",
+                  "de": u"Shuttle Fähre"}),
+             ("Taxi",
+              {
+                  "en": u"Taxi",
+                  "nl": u"Taxi",
+                  "fr": u"Taxi",
+                  "de": u"Taxi"
+              }),
+             ("Car-sharing",
+              {
+                  "en": u"Car-sharing",
+                  "nl": u"Auto delen",
+                  "fr": u"Partage de voiture",
+                  "de": u"Fahrgemeinschaft"
+              }),
+             ("Car-pooling",
+              {
+                  "en": u"Car-pooling",
+                  "nl": u"Carpoolen",
+                  "fr": u"Faire du covoiturage",
+                  "de": u"Fahrgemeinschaften"
+              }),
+             ("Car-hire",
+              {
+                  "en": u"Car-hire",
+                  "nl": u"Car-hire",
+                  "fr": u"Location de voiture",
+                  "de": u"Autovermietung"
+              }),
+             ("Bike-sharing",
+              {
+                  "en": u"Bike-sharing",
+                  "nl": u"Fiets delen",
+                  "fr": u"Partage vélo",
+                  "de": u"Fahrrad teilen"
+              }),
+             ("Bike-hire",
+              {
+                  "en": u"Bike-hire",
+                  "nl": u"Bike-hire",
+                  "fr": u"Location de vélo",
+                  "de": u"Fahrradverleih"
+              })
+         ], {
+                "en": u"Demand-responsive",
+                "nl": u"Vraagafhankelijk",
+                "fr": u"Sensible à la demande",
+                "de": u"Bedarfsgerecht"
+            }),
+        ([
+             ("Car",
+              {
+                  "en": u"Car",
+                  "nl": u"Auto",
+                  "fr": u"Voiture",
+                  "de": u"Auto"
+              }),
+             ("Truck",
+              {
+                  "en": u"Truck",
+                  "nl": u"Vrachtauto",
+                  "fr": u"Camion",
+                  "de": u"LKW"
+              }),
+             ("Motorcycle",
+              {
+                  "en": u"Motorcycle",
+                  "nl": u"Motorfiets",
+                  "fr": u"Moto",
+                  "de": u"Motorrad"
+              }),
+             ("Cycle",
+              {
+                  "en": u"Cycle",
+                  "nl": u"Fiets",
+                  "fr": u"Bicyclette",
+                  "de": u"Fahrrad"
+              }),
+             ("Pedestrian",
+              {
+                  "en": u"Pedestrian",
+                  "nl": u"Voetganger",
+                  "fr": u"Piéton",
+                  "de": u"Fußgänger"
+              })
+         ], {
+                "en": u"Personal",
+                "nl": u"Persoonlijk",
+                "fr": u"Personnel",
+                "de": u"Persönlich"
+        })]
