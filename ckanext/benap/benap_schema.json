@@ -253,7 +253,8 @@
         "fr": "See English version",
         "nl": "See English version",
         "de": "See English version"
-      }
+      },
+      "validators": "benap_is_after_start"
     },
     {
       "field_name": "countries_covered",
@@ -311,7 +312,7 @@
       "display_snippet": "map.html",
       "form_snippet": "form_map.html"
     },
-        {
+    {
       "field_name": "fluent_tags",
       "label": {
         "en": "Transportation modes covered",

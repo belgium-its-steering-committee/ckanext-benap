@@ -6,7 +6,7 @@ from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallba
     package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete,\
     get_translated_tags, scheming_language_text, format_datetime
 from ckanext.benap.util.forms import map_for_form_select
-from ckanext.benap.validators import phone_number_validator, countries_covered_belgium
+from ckanext.benap.validators import phone_number_validator, countries_covered_belgium, is_after_start
 
 
 class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
@@ -49,5 +49,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     def get_validators(self):
         return {
             'phone_number_validator': phone_number_validator,
-            'benap_countries_covered_belgium': countries_covered_belgium
+            'benap_countries_covered_belgium': countries_covered_belgium,
+            'benap_is_after_start': is_after_start
         }
