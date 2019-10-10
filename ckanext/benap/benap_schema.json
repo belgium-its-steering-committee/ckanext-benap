@@ -247,7 +247,7 @@
         "nl": "End date of publication",
         "de": "End date of publication"
       },
-      "preset": "datetime",
+      "preset": "datetime_tz",
       "help_text": {
         "en": "Describes the date when data delivery to this publication terminates. If left empty, the publication does not expire",
         "fr": "See English version",
