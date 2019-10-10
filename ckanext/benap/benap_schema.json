@@ -332,10 +332,10 @@
     {
       "field_name": "contract_license",
       "label": {
-        "en": "License type",
-        "fr": "License type",
-        "nl": "License type",
-        "de": "License type"
+        "en": "Contract or licence",
+        "fr": "Contract or licence",
+        "nl": "Contract or licence",
+        "de": "Contract or licence"
       },
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
@@ -351,10 +351,10 @@
     {
       "field_name": "license_id",
       "label": {
-        "en": "Contract or licence",
-        "fr": "Contract or licence",
-        "nl": "Contract or licence",
-        "de": "Contract or licence"
+        "en": "License type",
+        "fr": "License type",
+        "nl": "License type",
+        "de": "License type"
       },
       "form_snippet": "license.html",
       "help_text": {

@@ -1055,6 +1055,10 @@ def organisation_names_for_autocomplete():
     return map(lambda org: org['title'].encode("utf-8"), h.organizations_available('create_dataset'))
 
 
+def format_datetime(datetime):
+    return datetime.replace('T', ' ')[:-7]
+
+
 def scheming_language_text(field_data, language_data):
     return field_data[language_data]
 
