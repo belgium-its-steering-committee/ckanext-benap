@@ -81,8 +81,8 @@
       },
       "form_languages": [
         "en",
-        "fr",
         "nl",
+        "fr",
         "de"
       ],
       "display_snippet": "fluent_markdown_fallback.html"
@@ -239,7 +239,7 @@
       },
       "form_placeholder": "+322XXXXXXX",
       "help_text": {
-        "en": "The telephone number must start with the country prefix (e.g. \",+32\" for Belgium) and may only contain numbers from 0 to 9 besides the \"+\"sign.",
+        "en": "The telephone number must start with the country prefix (e.g. \",+32\" for Belgium) and may only contain numbers from 0 to 9 besides the \"+\" sign.",
         "fr": "Le numéro de téléphone doit commencer par le préfixe du pays (ex. \"+32\" pour la Belgique) et ne peut contenir que des chiffres de 0 à 9 en plus du signe \"+\".",
         "nl": "Het telefoonnummer moet met het netnummer van het land beginnen (bv. \"+32\" voor België) en kan naast de teken \"+\" alleen maar cijfers van 0 tot 9 inhouden.",
         "de": "Die Telefonnummer muss mit der Vorwahl des Landes (zum B. \"+32\" für Belgien) und kann nur neben dem Zeichen \"+\" Zahlen von 0 bis 9 beinhalten."
@@ -435,8 +435,8 @@
       },
       "form_languages": [
         "en",
-        "fr",
         "nl",
+        "fr",
         "de"
       ],
       "form_attrs": {

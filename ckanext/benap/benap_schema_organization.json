@@ -8,22 +8,27 @@
       "field_name": "title",
       "label": {
         "en": "Organisation name",
-        "fr": "Organisation name",
-        "nl": "Organisation name",
-        "de": "Organisation name"
+        "fr": "Nom de l'organisation",
+        "nl": "Naam van de organisatie",
+        "de": "Name der Organisation"
       },
       "required": true,
       "help_text": {
-        "en": "Describes the name of your organisation. If necessary, please fill it in in multiple languages, each separated by '/'. Your organisation is responsible for the creation and maintenance of its own metadata sets",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Describes the name of your organisation. If necessary, please fill it in in multiple languages, each separated by \"/\". Your organisation is responsible for the creation and maintenance of its own metadata sets.",
+        "fr": "Décrit le nom de votre organisation. Si nécessaire, merci de le compléter dans plusieurs langues, chacune séparée par une \"/\". Votre organisation est responsible de la création et de la mise à jour de ses propres jeux de métadonnées.",
+        "nl": "Beschrijft de naam van je organisatie. Indien nodig, gelieve de naam in verschillende talen in te vullen, elke gescheid door een \"/\". Je organisatie is verantwoordelijk voor de aanmaak en de bijwerking van haar eigen metadatasets.",
+        "de": "Beschreibt den Namen Ihrer Organisation. Wenn nötig, bitte den Namen in verschiedenen Sprachen ausfüllen, jede getrennt durch ein \"/\". Ihre Organisation ist verantwortlich für die Herstellung und das Updaten ihrer eigenen Metadatensätze."
       },
       "form_snippet": "large_text.html",
       "form_attrs": {
         "data-module": "slug-preview-target"
       },
-      "form_placeholder": "My Organization full name"
+      "form_placeholder": {
+        "en": "My Organization full name",
+        "fr": "Nom complet de mon organisation",
+        "nl": "Volledige naam van je organisatie",
+        "de": "Vollständiger Name meiner Organisation"
+      }
     },
     {
       "field_name": "name",
@@ -34,43 +39,59 @@
         "de": "URL"
       },
       "form_snippet": "slug.html",
-      "form_placeholder": "my-organization"
+      "form_placeholder": {
+        "en": "my-organization",
+        "fr": "mon-organisation",
+        "nl": "mijn-organisatie",
+        "de": "meine-Organisation"
+      }
     },
     {
       "field_name": "description_translated",
       "label": {
         "en": "Description",
         "fr": "Description",
-        "nl": "Description",
-        "de": "Description"
+        "nl": "Beschrijving",
+        "de": "Beschreibung"
       },
       "help_text": {
-        "en": "Describes your organization, e.g. its mission, core activities and how it is involved with transport data",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Describes your organization, e.g. its mission, core activities and how it is involved with transport data.",
+        "fr": "Décrit votre organisation, par ex. sa mission, ses activités principales et quelle est son implication avec les données de transport.",
+        "nl": "Beschrijft je organisatie, bijv. Haar missie, haar kernactiviteiten en  hoe zij betrokken is bij vervoersgegevens.",
+        "de": "Beschreibt Ihre Organisation, zum B. ihre Aufgabe, ihre Haupttätigkeiten und ihren Verband mit Verkehrsdaten."
       },
       "form_snippet": "fluent_markdown.html",
       "display_snippet": "fluent_markdown.html",
       "error_snippet": "fluent_text.html",
       "validators": "fluent_text",
       "output_validators": "fluent_core_translated_output",
-      "form_placeholder": "We provide on-demand transport services in whole Belgium, etc."
+      "form_placeholder": {
+        "en": "We provide on-demand transport services in whole Belgium, etc.",
+        "fr": "Nous fournissons des services de transport dans toute la Belgique, etc.",
+        "nl": "We leveren vervoersdiensten in heel België, enz.",
+        "de": "Wir bieten Verkehrsdienste in ganz Belgien, usw. , an."
+      },
+      "form_languages": [
+        "en",
+        "nl",
+        "fr",
+        "de"
+      ]
     },
     {
       "field_name": "image_url",
       "label": {
         "en": "Image URL",
-        "fr": "Image URL",
-        "nl": "Image URL",
-        "de": "Image URL"
+        "fr": "URL de l'image",
+        "nl": "URL van het beeld",
+        "de": "URL des Bildes"
       },
       "validators": "unicode remove_whitespace",
       "help_text": {
         "en": "The logo of your organisation",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "fr": "Le logo de votre organisation",
+        "nl": "Het logo van je organisatie",
+        "de": "Das Logo Ihrer Organisation"
       },
       "form_snippet": "upload.html",
       "form_placeholder": "https://www.my-organization.com/my-logo",
@@ -82,10 +103,10 @@
       "field_name": "do_address",
       "label": "Address",
       "help_text": {
-        "en": "Official address of your organisation in Belgium. If necessary, please fill it in in multiple languages, each separated by '/'",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Official address of your organisation in Belgium. If necessary, please fill it in in multiple languages, each separated by \"/\".",
+        "fr": "Adresse officielle de votre organisation en Belgique. Si nécessaire, merci de compléter dans plusieurs langues, chacune séparée par une \"/\".",
+        "nl": "Officiëel adres van je organisatie in België. Indien nodig, gelieve  in verschillende talen in te vullen, elke gescheid door een \"/\".",
+        "de": "Offizielle Adresse Ihrer Organisation in Belgien. Wenn nötig, bitte in verschiedenen Sprachen ausfüllen, jede getrennt durch ein \"/\"."
       },
       "form_placeholder": "Boulevard Anspach, 1 - 1000 Bruxelles (Belgium)",
       "required": true
@@ -96,10 +117,10 @@
       "validators": "scheming_required email_validator not_empty",
       "form_placeholder": "data@my-organization.com",
       "help_text": {
-        "en": "E-mail address to be contacted for transport data related matters. The address must contain @ and a dot",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "E-mail address to be contacted for transport data related matters. The address must contain @ and a dot.",
+        "fr": "Adresse e-mail à contacter pour les question liées aux données de transport. L'adresse doit contenir une @ et un point.",
+        "nl": "E-mailadres te contacteren voor vragen met betrekking tot vervoersgegevens. Het adres moet een @ en een punt inhouden.",
+        "de": "E-Mail zu kontaktieren für Fragen bezüglich der Verkehrsdaten. Die Adresse muss @ und einen Punkt beinhalten."
       },
       "required": true
     },
@@ -107,15 +128,15 @@
       "field_name": "do_website",
       "label": {
         "en": "Website",
-        "fr": "Website",
+        "fr": "Site web",
         "nl": "Website",
         "de": "Website"
       },
       "help_text": {
-        "en": "The website address must start with 'http://' or 'https://'",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "The website address must start with \"http://\", or \"https://\"",
+        "fr": "L'adresse du site web doit commencer par \"http://\" ou \"https://\".",
+        "nl": "Het adres van de website moet beginnen met \"http://\" ou \"https://\".",
+        "de": "Die Adresse der Website muss mit \"http://\" oder \"https://\" anfangen."
       },
       "form_placeholder": "https://www.my-organization.com",
       "validators": "scheming_required url_validator"
@@ -124,15 +145,15 @@
       "field_name": "do_tel",
       "label": {
         "en": "Telephone number",
-        "fr": "Telephone number",
-        "nl": "Telephone number",
-        "de": "Telephone number"
+        "fr": "Numéro de téléphone",
+        "nl": "Telefoonnummer",
+        "de": "Telefonnummer"
       },
       "help_text": {
-        "en": "The telephone number must start with the country prefix (e.g. '+32' for Belgium) and may only contain numbers from 0 to 9 besides the '+' sign",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "The telephone number must start with the country prefix (e.g. \",+32\" for Belgium) and may only contain numbers from 0 to 9 besides the \"+\" sign.",
+        "fr": "Le numéro de téléphone doit commencer par le préfixe du pays (par ex. \"+32\" pour la Belgique) et ne peut contenir que des chiffres de 0 à 9 en plus du signe \"+\".",
+        "nl": "Het telefoonnummer moet met het netnummer van het land beginnen (bv. \"+32\" voor België) en kan naast de teken \"+\" alleen maar cijfers van 0 tot 9 inhouden.",
+        "de": "Die Telefonnummer muss mit der Vorwahl des Landes anfangen (zum B. \"+32\" für Belgien) und kann neben dem Zeichen \"+\" nur Zahlen von 0 bis 9 beinhalten."
       },
       "form_placeholder": "+32XXXXXXXX",
       "required": true,
