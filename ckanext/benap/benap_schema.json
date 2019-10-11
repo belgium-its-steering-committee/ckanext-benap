@@ -285,16 +285,16 @@
       "field_name": "countries_covered",
       "label": {
         "en": "Countries covered by publication",
-        "fr": "Countries covered by publication",
-        "nl": "Countries covered by publication",
-        "de": "Countries covered by publication"
+        "fr": "Pays couverts par la publication",
+        "nl": "Landen gedekt door publicatie",
+        "de": "Länder gedeckt von der Publikation"
       },
       "preset": "multiple_select",
       "help_text": {
         "en": "Describes the countries covered by the data set (Belgium is mandatory)",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "fr": "Beschrijft de EU-lidstaten gedekt door de dataset ",
+        "nl": "Décrit les Etats membres de l'UE couverts par le jeu de données",
+        "de": "Beschreibt die EU-Mitgliedstaaten, die vom Datensatz gedeckt werden "
       },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "EU_COUNTRY",
@@ -378,16 +378,16 @@
       "field_name": "license_id",
       "label": {
         "en": "License type",
-        "fr": "License type",
-        "nl": "License type",
-        "de": "License type"
+        "fr": "Type de licence",
+        "nl": "Type licentie",
+        "de": "Lizenz-Typ"
       },
       "form_snippet": "license.html",
       "help_text": {
-        "en": "Describes the conditions of use of the data set",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Describes the conditions of use of the data set.",
+        "fr": "Décrit les conditions d'utilisation du jeu de données.",
+        "nl": "Beschrijft de gebruiksvoorwaarden van de dataset.",
+        "de": "Beschreibt die Nutzungsbedingungen des Datensatzes."
       },
       "required": "true"
     },
