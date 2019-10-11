@@ -1069,43 +1069,43 @@ def get_translated_tags():
              ("Air",
               {
                   "en": u"Air",
-                  "nl": u"Lucht",
-                  "fr": u"Aero",
-                  "de": u"Luft"
+                  "nl": u"Vliegtuig",
+                  "fr": u"Aérien",
+                  "de": u"Luftverkehr"
               }),
              ("Rail",
               {
                   "en": u"Rail (including high speed rail)",
-                  "nl": u"Spoor (inclusief hogesnelheidstrein)",
-                  "fr": u"Rail (y compris le train à grande vitesse)",
-                  "de": u"Schiene (einschließlich Hochgeschwindigkeitsschiene)"
+                  "nl": u"Trein (m.i.v. hogesnelheidstrein)",
+                  "fr": u"Ferroviaire (y compris ferroviaire à grande vitesse)",
+                  "de": u"Eisenbahn (einschl. Hochgeschwindigkeit)"
               }),
              ("Conventional rail",
               {
                   "en": u"Conventional rail",
-                  "nl": u"Conventioneel spoor",
-                  "fr": u"Rail conventionnel",
-                  "de": u"Konventionelle Schiene"
+                  "nl": u"Klassieke trein",
+                  "fr": u"Ferroviaire conventionnel",
+                  "de": u"Konventioneller Bahnverkehr"
               }),
              ("Light rail",
               {
                   "en": u"Light rail",
                   "nl": u"Light rail",
-                  "fr": u"Métro léger",
+                  "fr": u"Ferroviaire léger",
                   "de": u"Stadtbahn"
               }),
              ("Long-distance coach",
               {
                   "en": u"Long-distance coach",
-                  "nl": u"Lange afstand coach",
-                  "fr": u"Autocar de longue distance",
+                  "nl": u"Langeafstandsbus",
+                  "fr": u"Autocar longue distance",
                   "de": u"Fernbus"
               }),
              ("Maritime",
               {
                   "en": u"Maritime (including ferry)",
-                  "nl": u"Maritiem (inclusief veerboot)",
-                  "fr": u"Maritime (ferry compris)",
+                  "nl": u"schip (m.i.v. veerboten)",
+                  "fr": u"Maritime (y compris les ferries)",
                   "de": u"Schifffahrt (einschließlich Fähre)"
               }),
              ("Metro",
@@ -1113,7 +1113,7 @@ def get_translated_tags():
                   "en": u"Metro",
                   "nl": u"Metro",
                   "fr": u"Métro",
-                  "de": u"Metro"
+                  "de": u"Untergrundbahn"
               }),
              ("Tram",
               {
@@ -1126,36 +1126,36 @@ def get_translated_tags():
               {
                   "en": u"Bus",
                   "nl": u"Bus",
-                  "fr": u"Autobus",
+                  "fr": u"Bus",
                   "de": u"Bus"
               }),
              ("Trolley-bus",
               {
-                  "en": u"Trolley-bus",
-                  "nl": u"Trolley-bus",
-                  "fr": u"Trolleybus",
+                  "en": u"Trolleybus",
+                  "nl": u"Trolleybus",
+                  "fr": u"Oberleitungsbus",
                   "de": u"Obus"
               })
          ], {
                 "en": u"Scheduled",
-                "nl": u"gepland",
-                "fr": u"Prévu",
-                "de": u"Geplant"
+                "nl": u"Geregeld vervoer",
+                "fr": u"Services réguliers",
+                "de": u"Linienverkehrsdienste"
             }),
         ([
              ("Shuttle bus",
               {
                   "en": u"Shuttle bus",
-                  "nl": u"Pendelbus",
-                  "fr": u"Navette",
-                  "de": u"Shuttlebus"
+                  "nl": u"Shuttlebus",
+                  "fr": u"Bus",
+                  "de": u"Pendelbus"
               }),
              ("Shuttle ferry",
               {
                   "en": u"Shuttle ferry",
-                  "nl": u"Pendel veerboot",
-                  "fr": u"Navette ferry",
-                  "de": u"Shuttle Fähre"}),
+                  "nl": u"Shuttleveerboot",
+                  "fr": u"Ferry",
+                  "de": u"Pendelfähre"}),
              ("Taxi",
               {
                   "en": u"Taxi",
@@ -1166,43 +1166,43 @@ def get_translated_tags():
              ("Car-sharing",
               {
                   "en": u"Car-sharing",
-                  "nl": u"Auto delen",
-                  "fr": u"Partage de voiture",
-                  "de": u"Fahrgemeinschaft"
+                  "nl": u"Deelauto",
+                  "fr": u"Autopartage",
+                  "de": u"Gemeinsame Pkw-Nutzung (Car-Sharing)"
               }),
              ("Car-pooling",
               {
                   "en": u"Car-pooling",
-                  "nl": u"Carpoolen",
-                  "fr": u"Faire du covoiturage",
-                  "de": u"Fahrgemeinschaften"
+                  "nl": u"Carpooling",
+                  "fr": u"Covoiturage",
+                  "de": u"Fahrgemeinschaften (Car-Pooling)"
               }),
              ("Car-hire",
               {
                   "en": u"Car-hire",
-                  "nl": u"Car-hire",
-                  "fr": u"Location de voiture",
-                  "de": u"Autovermietung"
+                  "nl": u"Huurauto",
+                  "fr": u"Location de voitures",
+                  "de": u"Mietwagen"
               }),
              ("Bike-sharing",
               {
                   "en": u"Bike-sharing",
-                  "nl": u"Fiets delen",
-                  "fr": u"Partage vélo",
-                  "de": u"Fahrrad teilen"
+                  "nl": u"Deelfiets",
+                  "fr": u"Vélopartage",
+                  "de": u"Gemeinsame Nutzung von Fahrrädern (Bike-Sharing)"
               }),
              ("Bike-hire",
               {
                   "en": u"Bike-hire",
-                  "nl": u"Bike-hire",
-                  "fr": u"Location de vélo",
-                  "de": u"Fahrradverleih"
+                  "nl": u"Huurfiets",
+                  "fr": u"Location de vélos",
+                  "de": u"Leihfahrrad"
               })
          ], {
                 "en": u"Demand-responsive",
-                "nl": u"Vraagafhankelijk",
-                "fr": u"Sensible à la demande",
-                "de": u"Bedarfsgerecht"
+                "nl": u"Aanbod afhankelijke inzet",
+                "fr": u"Services à la demande",
+                "de": u"Abruf-Verkehrsdienste"
             }),
         ([
              ("Car",
@@ -1210,14 +1210,14 @@ def get_translated_tags():
                   "en": u"Car",
                   "nl": u"Auto",
                   "fr": u"Voiture",
-                  "de": u"Auto"
+                  "de": u"Pkw"
               }),
              ("Truck",
               {
                   "en": u"Truck",
-                  "nl": u"Vrachtauto",
+                  "nl": u"Vrachtwagen",
                   "fr": u"Camion",
-                  "de": u"LKW"
+                  "de": u"Lastwagen"
               }),
              ("Motorcycle",
               {
@@ -1230,7 +1230,7 @@ def get_translated_tags():
               {
                   "en": u"Cycle",
                   "nl": u"Fiets",
-                  "fr": u"Bicyclette",
+                  "fr": u"Vélo",
                   "de": u"Fahrrad"
               }),
              ("Pedestrian",
@@ -1242,7 +1242,7 @@ def get_translated_tags():
               })
          ], {
                 "en": u"Personal",
-                "nl": u"Persoonlijk",
-                "fr": u"Personnel",
-                "de": u"Persönlich"
+                "nl": u"Persoonlijk vervoer",
+                "fr": u"Modes personnels",
+                "de": u"Individualverkehr"
         })]
