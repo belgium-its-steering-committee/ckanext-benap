@@ -57,8 +57,8 @@ msgstr "Voir profil"
 #, python-format
 msgid "Dashboard (%(num)d new item)"
 msgid_plural "Dashboard (%(num)d new items)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Tableau de bord (%(num)d nouvel élément)"
+msgstr[1] "Tableau de bord (%(num)d nouveaux éléments)"
 
 #: ckanext/benap/templates/header.html:32
 msgid "Dashboard"
@@ -84,7 +84,7 @@ msgstr "Connexion"
 #: ckanext/benap/templates/header.html:59
 #: ckanext/benap/templates/home/snippets/search.html:30
 msgid "Register"
-msgstr "Enregistrer"
+msgstr "S'enregistrer"
 
 #: ckanext/benap/templates/header.html:85
 msgid "Datasets"

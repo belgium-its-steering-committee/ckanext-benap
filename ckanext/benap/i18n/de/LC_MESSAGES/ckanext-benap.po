@@ -13,7 +13,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
 "Language-Team: de <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: ckanext/benap/validators.py:16
 msgid "Phone number {number} is not a valid format"
-msgstr ""
+msgstr "Die Telefonnummer {number} ist nicht in einem  gultigen Format."
 
 #: ckanext/benap/templates/footer.html:9
 msgid "About Transportdata.be"
-msgstr ""
+msgstr "uber Transportdata.be"
 
 #: ckanext/benap/templates/footer.html:15
 msgid "CKAN API"
@@ -43,7 +43,7 @@ msgstr ""
 
 #: ckanext/benap/templates/header.html:9
 msgid "Sysadmin settings"
-msgstr ""
+msgstr "Parameter des Systemadministrators"
 
 #: ckanext/benap/templates/header.html:11
 msgid "Admin"
@@ -51,35 +51,35 @@ msgstr ""
 
 #: ckanext/benap/templates/header.html:16
 msgid "View profile"
-msgstr ""
+msgstr "Profil ansehen"
 
 #: ckanext/benap/templates/header.html:28
 #, python-format
 msgid "Dashboard (%(num)d new item)"
 msgid_plural "Dashboard (%(num)d new items)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Dashboard (%(Nummer)d neuer Punkt)"
+msgstr[1] "Dashboard (%(Nummer)d neue Punkte)"
 
 #: ckanext/benap/templates/header.html:32
 msgid "Dashboard"
-msgstr ""
+msgstr "Dashboard"
 
 #: ckanext/benap/templates/header.html:38
 msgid "Edit settings"
-msgstr ""
+msgstr "Parameter editieren"
 
 #: ckanext/benap/templates/header.html:40
 msgid "Settings"
-msgstr ""
+msgstr "Parameter"
 
 #: ckanext/benap/templates/header.html:45
 #: ckanext/benap/templates/header.html:47
 msgid "Log out"
-msgstr ""
+msgstr "Abmeldung"
 
 #: ckanext/benap/templates/header.html:57
 msgid "Log in"
-msgstr ""
+msgstr "Anmeldung"
 
 #: ckanext/benap/templates/header.html:59
 #: ckanext/benap/templates/home/snippets/search.html:30
@@ -88,7 +88,7 @@ msgstr ""
 
 #: ckanext/benap/templates/header.html:85
 msgid "Datasets"
-msgstr ""
+msgstr "Speichern"
 
 #: ckanext/benap/templates/header.html:85
 msgid "Organizations"
@@ -100,15 +100,15 @@ msgstr ""
 
 #: ckanext/benap/templates/header.html:86
 msgid "About"
-msgstr ""
+msgstr "&#220;ber"
 
 #: ckanext/benap/templates/header.html:92
 msgid "Search"
-msgstr ""
+msgstr "Suche"
 
 #: ckanext/benap/templates/home/snippets/community.html:6
 msgid "JOIN OUR COMMUNITY FORUM"
-msgstr ""
+msgstr "SCHLIESSEN SIE SICH UNSEREM GEMEINSCHAFTLICHEN FORUM AN"
 
 #: ckanext/benap/templates/home/snippets/community.html:11
 #: ckanext/benap/templates/home/snippets/promoted.html:11
@@ -116,28 +116,30 @@ msgid ""
 "Transportdata.be is the preferred access point for information on "
 "Intelligent Transport Systems (ITS). This national platform aims to "
 "centralize access to ITS datasets and web services."
-msgstr ""
+msgstr "Transportdata.be ist der beg&#252;nstigte Zugangspunkt f&#252;r Informationen &#252;ber intelligente "
+"Verkehrssysteme (IVS). Diese nationale Plattform beabsichtigt die Zentralisierung des Zugangs "
+"zu IVS-Datens&#228;tzen und -Webdiensten."
 
 #: ckanext/benap/templates/home/snippets/community.html:16
 msgid "Join"
-msgstr ""
+msgstr "Melden Sie sich an"
 
 #: ckanext/benap/templates/home/snippets/feedback.html:4
 msgid "HELP US WITH OUR SITE"
-msgstr ""
+msgstr "HELFEN SIE UNS MIT UNSERER WEBSITE"
 
 #: ckanext/benap/templates/home/snippets/feedback.html:5
 msgid "GIVE SOME FEEDBACK"
-msgstr ""
+msgstr "GEBEN SIE UNS FEEDBACK"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:5
 #: ckanext/benap/templates/home/snippets/newsletter.html:11
 msgid "SUBSCRIBE"
-msgstr ""
+msgstr "ABONNIEREN SIE"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:6
 msgid "TO NEWSLETTER"
-msgstr ""
+msgstr "UNSEREN NEWSLETTER"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:10
 msgid "Enter your email address"
@@ -145,63 +147,61 @@ msgstr ""
 
 #: ckanext/benap/templates/home/snippets/promoted.html:6
 msgid "DISCOVER TRANSPORTDATA.BE"
-msgstr ""
+msgstr "ENTDECKEN SIE TRANSPORTDATA.BE"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:7
 msgid "WHAT THE PURPOSE IS AND HOW YOU ARE INVOLVED"
-msgstr ""
+msgstr "WAS DIE ABSICHT IST UND WIE SIE DARAN BETEILIGT SIND"
 
 #: ckanext/benap/templates/home/snippets/report.html:4
 msgid "LINK DOESN' T WORK?"
-msgstr ""
+msgstr "FUNKTIONIERT DER LINK NICHT?"
 
 #: ckanext/benap/templates/home/snippets/report.html:5
 msgid "REPORT IT HERE"
-msgstr ""
+msgstr "MELDEN SIE ES HIER"
 
 #: ckanext/benap/templates/home/snippets/search.html:2
 msgid "E.g. environment"
-msgstr ""
+msgstr "Zum B. Umwelt"
 
 #: ckanext/benap/templates/home/snippets/search.html:5
 msgid ""
 "BELGIUM'S NATIONAL ACCESS POINT FOR MULITIMODAL TRAVEL INFORMATION "
 "SERVICES"
-msgstr ""
+msgstr "NATIONALER BELGISCHER ZUGANGSPUNKT F&#220;R INFORMATIONSDIENSTE ZU MULTIMODALEN REISEN"
 
 #: ckanext/benap/templates/home/snippets/search.html:9
 msgid "SEARCH FOR DATA SETS"
-msgstr ""
+msgstr "SUCHEN NACH DATENS&#196;TZEN"
 
 #: ckanext/benap/templates/home/snippets/search.html:11
 msgid "ex. transport, cars, trains, ..."
-msgstr ""
+msgstr "Zum B. Carsharing, Zug, Fahrradvermietung, usw."
 
 #: ckanext/benap/templates/home/snippets/search.html:17
 msgid "Popular Tags"
-msgstr ""
+msgstr "Frequente Tags"
 
 #: ckanext/benap/templates/home/snippets/search.html:24
 msgid "ADD NEW DATA"
-msgstr ""
+msgstr "NEUE DATEN HINZUF&#220;GEN"
 
 #: ckanext/benap/templates/home/snippets/search.html:26
 msgid "Data providers can easily add data to the catalogue."
-msgstr ""
+msgstr "Die Datenanbieter k&#246;nnen einfach Daten zum Katalog hinzuf&#252;gen."
 
 #: ckanext/benap/templates/home/snippets/search.html:28
 msgid "Add Data"
-msgstr ""
+msgstr "Daten hinzuf&#252;gen"
 
 #: ckanext/benap/templates/snippets/language_selector.html:3
 msgid "Language"
-msgstr ""
+msgstr "Sprache"
 
 #: ckanext/benap/templates/snippets/language_selector.html:11
 msgid "Go"
-msgstr ""
+msgstr "Gehen"
 
 #: ckanext/benap/templates/snippets/package_item.html:7
 msgid "This dataset has no description"
-msgstr ""
-

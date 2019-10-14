@@ -615,21 +615,21 @@ def ontology_helper(context):
             }),
             ('ASN.1 encoding rules', {
                 "en": u"ASN.1 encoding rules",
-                "fr": u"ASN.1 encoding rules",
-                "nl": u"ASN.1 encoding rules",
-                "de": u"ASN.1 encoding rules"
+                "fr": u"Règles d'encodage d'ASN.1",
+                "nl": u"ASN.1 coderingsregels",
+                "de": u"ASN.1 Kodierunsregel"
             }),
             ('Protocol buffers', {
                 "en": u"Protocol buffers",
-                "fr": u"Protocol buffers",
-                "nl": u"Protocol buffers",
-                "de": u"Protocol buffers"
+                "fr": u"Tampons de protocole",
+                "nl": u"Protocolbuffers",
+                "de": u"Protokoll-Buffer"
             }),
             ('Other', {
                 "en": u"Other",
-                "fr": u"Other",
-                "nl": u"Other",
-                "de": u"Other"
+                "fr": u"Autre",
+                "nl": u"Andere",
+                "de": u"Andere"
             }),
         ])
 
@@ -643,9 +643,9 @@ def ontology_helper(context):
             }),
             ('JSON Schema', {
                 "en": u"JSON Schema",
-                "fr": u"JSON Schema",
-                "nl": u"JSON Schema",
-                "de": u"JSON Schema"
+                "fr": u"Schéma JSON",
+                "nl": u"JSON-schema",
+                "de": u"JSON-Schema"
             }),
             ('http://purl.org/ASN/schema/core/StandardDocument', {
                 "en": u"ASN.1",
@@ -655,15 +655,15 @@ def ontology_helper(context):
             }),
             ('Protocol buffers', {
                 "en": u"Protocol buffers",
-                "fr": u"Protocol buffers",
-                "nl": u"Protocol buffers",
-                "de": u"Protocol buffers"
+                "fr": u"Tampons de protocole",
+                "nl": u"Protocolbuffers",
+                "de": u"Protokoll-Buffer"
             }),
             ('Other', {
                 "en": u"Other",
-                "fr": u"Other",
-                "nl": u"Other",
-                "de": u"Other"
+                "fr": u"Autre",
+                "nl": u"Andere",
+                "de": u"Andere"
             }),
         ])
 
@@ -671,9 +671,9 @@ def ontology_helper(context):
         return map_for_form_select([
             ('DATEX II profile', {
                 "en": u"DATEX II profile",
-                "fr": u"DATEX II profile",
-                "nl": u"DATEX II profile",
-                "de": u"DATEX II profile"
+                "fr": u"Profil DATEX II",
+                "nl": u"DATEX II profiel",
+                "de": u"DATEX II-Profil"
             }),
             ('OCIT-C', {
                 "en": u"OCIT-C",
@@ -774,9 +774,9 @@ def ontology_helper(context):
             }),
             ('Other', {
                 "en": u"Other",
-                "fr": u"Other",
-                "nl": u"Other",
-                "de": u"Other"
+                "fr": u"Autre",
+                "nl": u"Andere",
+                "de": u"Andere"
             }),
         ])
 
@@ -832,9 +832,9 @@ def ontology_helper(context):
             }),
             ('Other', {
                 "en": u"Other",
-                "fr": u"Other",
-                "nl": u"Other",
-                "de": u"Other"
+                "fr": u"Autre",
+                "nl": u"Andere",
+                "de": u"Andere"
             }),
         ])
 
@@ -847,10 +847,10 @@ def ontology_helper(context):
                 "de": u"Push"
             }),
             ('Push on occurence', {
-                "en": u"Push on occurence",
-                "fr": u"Push on occurence",
-                "nl": u"Push on occurence",
-                "de": u"Push on occurence"
+                "en": u"Push on occurrence",
+                "fr": u"Push on occurrence",
+                "nl": u"Push on occurrence",
+                "de": u"Push on occurrence"
             }),
             ('Pull', {
                 "en": u"Pull",
@@ -912,105 +912,105 @@ def ontology_helper(context):
         return map_for_form_select([
             ('On occurence', {
                 "en": u"On occurence",
-                "fr": u"On occurence",
-                "nl": u"On occurence",
-                "de": u"On occurence"
+                "fr": u"Dès que disponible",
+                "nl": u"Zodra beschikbaar",
+                "de": u"sofort"
             }),
             ('Up to 1min', {
                 "en": u"Up to 1min",
-                "fr": u"Up to 1min",
-                "nl": u"Up to 1min",
-                "de": u"Up to 1min"
+                "fr": u"Jusqu'à une fois par minute",
+                "nl": u"Tot één keer per minuut",
+                "de": u"Bis einmal pro Minute"
             }),
             ('Up to 5min', {
                 "en": u"Up to 5min",
-                "fr": u"Up to 5min",
-                "nl": u"Up to 5min",
-                "de": u"Up to 5min"
+                "fr": u"Jusqu'à une fois toutes les 5 minutes",
+                "nl": u"Tot één keer per 5 minuten",
+                "de": u"Bis einmal pro 5 Minuten"
             }),
             ('Up to 10min', {
                 "en": u"Up to 10min",
-                "fr": u"Up to 10min",
-                "nl": u"Up to 10min",
-                "de": u"Up to 10min"
+                "fr": u"Jusqu'à une fois toutes les 10 minutes",
+                "nl": u"Tot één keer per 10 minuten",
+                "de": u"Bis einmal pro 10 Minuten"
             }),
             ('Up to 15min', {
                 "en": u"Up to 15min",
-                "fr": u"Up to 15min",
-                "nl": u"Up to 15min",
-                "de": u"Up to 15min"
+                "fr": u"Jusqu'à une fois toutes les 15 minutes",
+                "nl": u"Tot één keer per 15 minuten",
+                "de": u"Bis einmal pro 15 Minuten"
             }),
             ('http://publications.europa.eu/resource/authority/frequency/BIHOURLY', {
                 "en": u"Up to 30min",
-                "fr": u"Up to 30min",
-                "nl": u"Up to 30min",
-                "de": u"Up to 30min"
+                "fr": u"Jusqu'à une fois toutes les 30 minutes",
+                "nl": u"Tot één keer per 30 minuten",
+                "de": u"Bis einmal pro 30 Minuten"
             }),
             ('http://publications.europa.eu/resource/authority/frequency/HOURLY', {
                 "en": u"Up to 1h",
-                "fr": u"Up to 1h",
-                "nl": u"Up to 1h",
-                "de": u"Up to 1h"
+                "fr": u"Jusqu'à une fois toutes les heures",
+                "nl": u"Tot één keer per uur",
+                "de": u"Bis einmal pro Stunde"
             }),
             ('Up to 2h', {
                 "en": u"Up to 2h",
-                "fr": u"Up to 2h",
-                "nl": u"Up to 2h",
-                "de": u"Up to 2h"
+                "fr": u"Jusqu'à une fois toutes les 2 heures",
+                "nl": u"Tot één keer per 2 uren",
+                "de": u"Bis einmal pro 2 Stunden"
             }),
             ('Up to 3h', {
                 "en": u"Up to 3h",
-                "fr": u"Up to 3hn",
-                "nl": u"Up to 3h",
-                "de": u"Up to 3h"
+                "fr": u"Jusqu'à une fois toutes les 3 heures",
+                "nl": u"Tot één keer per 3 uren",
+                "de": u"Bis einmal pro 3 Stunden"
             }),
             ('http://publications.europa.eu/resource/authority/frequency/DAILY_2', {
                 "en": u"Up to 12h",
-                "fr": u"Up to 12h",
-                "nl": u"Up to 12h",
-                "de": u"Up to 12h"
+                "fr": u"Jusqu'à une fois toutes les 12 heures",
+                "nl": u"Tot één keer per 12 uren",
+                "de": u"Bis einmal pro 12 Stunden"
             }),
             ('http://publications.europa.eu/resource/authority/frequency/DAILY', {
                 "en": u"Up to 24h",
-                "fr": u"Up to 24h",
-                "nl": u"Up to 24h",
-                "de": u"Up to 24h"
+                "fr": u"Jusqu'à une fois toutes les 24 heures",
+                "nl": u"Tot één keer per 24 uren",
+                "de": u"Bis einmal pro 24 Stunden"
             }),
             ('http://publications.europa.eu/resource/authority/frequency/WEEKLY', {
                 "en": u"Up to Weekly",
-                "fr": u"Up to Weekly",
-                "nl": u"Up to Weekly",
-                "de": u"Up to Weekly"
+                "fr": u"Jusqu'à une fois par semaine",
+                "nl": u"Tot één keer per week",
+                "de": u"Bis einmal pro Woche"
             }),
             ('http://publications.europa.eu/resource/authority/frequency/MONTHLY', {
                 "en": u"Up to Monthly",
-                "fr": u"Up to Monthly",
-                "nl": u"Up to Monthly",
-                "de": u"Up to Monthly"
+                "fr": u"Jusqu'à une fois par mois",
+                "nl": u"Tot één keer per maand",
+                "de": u"Bis einmal pro Monat"
             }),
             ('http://publications.europa.eu/resource/authority/frequency/QUARTERLY', {
                 "en": u"Up to every 3month",
-                "fr": u"Up to every 3month",
-                "nl": u"Up to every 3month",
-                "de": u"Up to every 3month"
+                "fr": u"Jusqu'à une fois tous les trois mois",
+                "nl": u"Tot één keer per drie maanden",
+                "de": u"Bis einmal pro drei Monaten"
             }),
             ('http://publications.europa.eu/resource/authority/frequency/ANNUAL_2', {
                 "en": u"Up to every 6month",
-                "fr": u"Up to every 6month",
-                "nl": u"Up to every 6month",
-                "de": u"Up to every 6month"
+                "fr": u"Jusqu'à une fois tous les six mois",
+                "nl": u"Tot één keer per zes maanden",
+                "de": u"Bis einmal pro sechs Monaten"
             }),
             ('http://publications.europa.eu/resource/authority/frequency/ANNUAL', {
                 "en": u"Up to yearly",
-                "fr": u"Up to yearly",
-                "nl": u"Up to yearly",
-                "de": u"Up to yearly"
+                "fr": u"Jusqu'à une fois par an",
+                "nl": u"Tot één keer per jaar",
+                "de": u"Bis einmal pro Jahr"
             }),
             ('Less frequent than yearly', {
                 "en": u"Less frequent than yearly",
-                "fr": u"Less frequent than yearly",
-                "nl": u"Less frequent than yearly",
-                "de": u"Less frequent than yearly"
+                "fr": u"Moins qu'une fois par an",
+                "nl": u"Minder vaak dan één keer per jaar ",
+                "de": u"Weniger häufig als einmal pro Jahr"
             }),
 
         ])
