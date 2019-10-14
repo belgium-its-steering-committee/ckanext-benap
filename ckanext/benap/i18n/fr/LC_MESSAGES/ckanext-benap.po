@@ -21,7 +21,7 @@ msgstr ""
 
 #: ckanext/benap/validators.py:16
 msgid "Phone number {number} is not a valid format"
-msgstr "Le numéro de téléphone {numéro} n'a pas un format valide."
+msgstr "Le numéro de téléphone {number} n'a pas un format valide."
 
 #: ckanext/benap/templates/footer.html:9
 msgid "About Transportdata.be"
