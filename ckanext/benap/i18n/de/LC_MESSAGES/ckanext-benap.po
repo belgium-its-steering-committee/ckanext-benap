@@ -57,8 +57,8 @@ msgstr "Profil ansehen"
 #, python-format
 msgid "Dashboard (%(num)d new item)"
 msgid_plural "Dashboard (%(num)d new items)"
-msgstr[0] "Dashboard (%(Nummer)d neuer Punkt)"
-msgstr[1] "Dashboard (%(Nummer)d neue Punkte)"
+msgstr[0] "Dashboard (%(num)d neuer Punkt)"
+msgstr[1] "Dashboard (%(num)d neue Punkte)"
 
 #: ckanext/benap/templates/header.html:32
 msgid "Dashboard"
