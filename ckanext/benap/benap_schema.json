@@ -15,10 +15,10 @@
       "display_property": "dct:language",
       "preset": "multiple_select",
       "help_text": {
-        "en": "Describes the language(s) in which you will fill in the metadata in this form",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Describes the language(s) in which you will fill in the metadata in this form.",
+        "fr": "Décrit la(les) langue(s) dans laquelle (lesquelles) vous compléterez les métadonnées dans ce formulaire.",
+        "nl": "Beschrijft de taal(talen) waarin je de metadata in deze formulier zal invullen.",
+        "de": "Beschreibt die Sprache(n), in denen Sie die Metadaten in diesem Formular ausfüllen werden."
       },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "language",
@@ -28,17 +28,22 @@
       "field_name": "title",
       "label": {
         "en": "Name of dataset",
-        "fr": "Name of dataset",
-        "nl": "Name of dataset",
-        "de": "Name of dataset"
+        "fr": "Nom du jeu de données",
+        "nl": "Naam van de dataset",
+        "de": "Name des Datensatzes"
       },
       "preset": "title",
-      "form_placeholder": "e.g. Highway Network",
+      "form_placeholder": {
+        "en": "e.g. Highway Network",
+        "fr": "par ex. réseau d'autoroutes",
+        "nl": "bv. snelwegennet",
+        "de": "zum B. Autobahnennetz"
+      },
       "help_text": {
-        "en": "Describes the dataset in generic terms or gives a short description. The author is encouraged to write a meaningful description in one of the selected metadata language",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Describes the dataset in generic terms or gives a short description. The author is encouraged to write a meaningful description in one of the selected metadata language.",
+        "fr": "Décrit le jeu de données en termes génériques ou donne une brève description. L'auteur est invité à écrire une description significative dans l'une des langues des métadonnées sélectionnées.",
+        "nl": "Beschrijft de dataset in generieke termen of geeft een beknopte beschrijving. De auteur wordt verzocht een zinvolle beschrijving in één van de talen van de geselecteerde metadata te schrijven.",
+        "de": "Beschreibt den Datensatz in grossen Zügen oder gibt eine kurze Beschreibung. Der Verfasser wird ersucht eine sinnvolle Beschreibung in einer der Sprachen  der ausgewählten Metadaten zu schreiben."
       },
       "required": "true"
     },
@@ -46,7 +51,12 @@
       "field_name": "name",
       "label": "URL",
       "preset": "dataset_slug",
-      "form_placeholder": "eg. highway-network"
+      "form_placeholder": {
+        "en": "e.g. Highway Network",
+        "fr": "par ex. réseau d'autoroutes",
+        "nl": "bv. snelwegennet",
+        "de": "zum B. Autobahnennetz"
+      }
     },
     {
       "field_name": "notes_translated",
@@ -57,17 +67,22 @@
         "nl": "Datasetomschrijving",
         "de": "Beschreibung des datensatzes"
       },
-      "form_placeholder": "eg. “Contains static high priority network of Belgium: Road Name, Lane number, Direction”",
+      "form_placeholder": {
+        "en": "eg. “Contains static high priority network of Belgium: Road Name, Lane number, Direction”",
+        "fr": "par ex. “Contient un réseau statique de haute priorité de la Belgique: Nom de route, Numéro d'avenue, Direction”",
+        "nl": "bv. “Houdt statisch netwerk met hoge prioriteit voor België: Wegennaam, Straatnummer, Richting”",
+        "de": "zum B. “Beinhaltet ein statisches Netz mit höher Prirotät für Belgien: Wegenname, Strassennummer, Richtung”"
+      },
       "help_text": {
-        "en": "Gives the user more information about the content of the dataset or service. This MUST be filled in all selected metadata languages",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Gives the user more information about the content of the dataset or service. This MUST be filled in all selected metadata languages.",
+        "fr": "Donne à l'utilisateur de plus amples informations sur le contenu du jeu de données ou du service. Ce champ DOIT être rempli dans toutes les langues des métadonnées sélectionnées.",
+        "nl": "Geeft aan de gebruiker meer gedetailleerde informatie over de inhoud van de dataset of van de dienst. Dit veld MOET in elke taal van de geselecteerde metadata gevuld worden.",
+        "de": "Gibt dem Benutzer weitere Informationen zum Inhalt des Datensatzes oder des Dienstes. Dieses Feld MUSS in allen Sprachen der ausgewählmten Metadaten ausgefüllt werden."
       },
       "form_languages": [
         "en",
-        "fr",
         "nl",
+        "fr",
         "de"
       ],
       "display_snippet": "fluent_markdown_fallback.html"
@@ -76,26 +91,36 @@
       "field_name": "cont_res",
       "label": {
         "en": "Resource type",
-        "fr": "Resource type",
-        "nl": "Resource type",
-        "de": "Resource type"
+        "fr": "Type de ressource",
+        "nl": "Ressourcetype",
+        "de": "Ressourcentyp"
       },
       "preset": "select",
       "choices": [
         {
           "value": "Data set",
-          "label": "Data set"
+          "label": {
+            "en": "Data set",
+            "nl": "Dataset",
+            "fr": "Jeu de données",
+            "de": "Datensatz"
+          }
         },
         {
           "value": "Service",
-          "label": "Service"
+          "label": {
+            "en": "Service",
+            "nl": "Dienst",
+            "fr": "Service",
+            "de": "Dienst"
+          }
         }
       ],
       "help_text": {
-        "en": "'Travel information service' means an ITS service, including digital maps, that provides users and end-users, with travel and traffic information of at least one transport mode",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "\"Travel information service\" means an ITS service, including digital maps, that provides users and end-users, with travel and traffic information of at least one transport mode.",
+        "fr": "On entend par \"Service d'information sur les déplacements\" un service STI incluant des cartes numériques  et fournissant aux utilisateurs et utilisateurs finaux  des informations de trafic et de déplacement d'au moins un mode de transport.",
+        "nl": "Door \"Reisinformatiedienst\" wordt een ITS dienst verstaan, die digitale kaarten inhoudt en aan gebruikers en eindgebruikers verkeers- en reisinformatie voor minstens één vervoersmiddel bezorgt.  ",
+        "de": "Mit \"Reiseinformationsdienst\" wird ein IVS-Dienst verstanden, der digitale Karten beinhaltet und Benutzern und End-Benutzern Verkehrs- und Reiseinformationen für zumindest ein Beförderungsmittel erteilt."
       },
       "required": "true"
     },
@@ -103,16 +128,16 @@
       "field_name": "owner_org",
       "label": {
         "en": "Organisation name [contact point]",
-        "fr": "Organisation name [contact point]",
-        "nl": "Organisation name [contact point]",
-        "de": "Organisation name [contact point]"
+        "fr": "Nom de l'organisation [point de contact] ",
+        "nl": "Naam van de organisatie  [contactpunt]",
+        "de": "Name der Organisation  [Kontaktpunkt]"
       },
       "preset": "dataset_organization",
       "help_text": {
-        "en": "The 'contact point' describes an organisation, if applicable a person, which is responsible for the creation and maintenance of the metadata. This person or organization is the single point of contact for the present metadata set. The next field may be used to keep the dataset 'private' within the organisation for internal review before effective publication",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "The \"contact point\", describes an organisation, if applicable a person, which is responsible for the creation and maintenance of the metadata. This person or organization is the single point of contact for the present metadata set. The next field may be used to keep the dataset \"private\" within the organisation for internal review before effective publication.",
+        "fr": "Le \"point de contact\" décrit une organisation, ou une personne si d'application, qui est responsable de la création et de la mise à jour des métadonnées. Cette personne ou organisation est le point de contact unique pour le présent jeu de métadonnées.  Le champ suivant peut être utilisé pour garder le jeu de données \"privé\" au sein de l'organisation pour révision interne avant publication effective.",
+        "nl": "Het \"contactpunt\" beschrijft een organisatie, of een persoon indien van toepassing, die verantwoordelijk is voor de aanmaak en bijwerking van de metadata. Deze persoon of organisatie is het één contactpunt voor deze set van metadata. Het volgende veld kan gebruikt worden om ter interne herziening voor effectieve publicatie de dataset \"privé\" te houden binnen de organisatie. ",
+        "de": "Der \"Kontaktpunkt\" beschreibt eine Organisation, oder gegebenenfalls eine Person, die für die Herstellung und Aktualisierung von Metadaten verantwortlich ist. Diese Person oder Organisation ist der einzige Kontaktpunkt für diesen Metadatensatz. Das folgende Feld kann benutzt werden, um für interne Prüfung vor der effektiven Publikation den Datensatz \"privat\" zu halten innerhalb von der Organisation.  "
       },
       "required": "true"
     },
@@ -120,9 +145,9 @@
       "field_name": "contact_name",
       "label": {
         "en": "Name [contact point]",
-        "fr": "Name [contact point]",
-        "nl": "Name [contact point]",
-        "de": "Name [contact point]"
+        "fr": "Nom [point de contact]",
+        "nl": "Naam [contactpunt]",
+        "de": "Name [Kontaktpunkt]"
       },
       "form_placeholder": "John Doe",
       "display_property": "dc:creator",
@@ -132,15 +157,15 @@
       "field_name": "publisher_org",
       "label": {
         "en": "Organisation name [publisher]",
-        "fr": "Organisation name [publisher]",
-        "nl": "Organisation name [publisher]",
-        "de": "Organisation name [publisher]"
+        "fr": "Nom de l'organisation [éditeur] ",
+        "nl": "Naam van de organisatie [uitgever]",
+        "de": "Name der Organisation  [Herausgeber]"
       },
       "help_text": {
-        "en": "The 'publisher' describes an entity (company and person) that publishes the datasets (we are not refering to the metadata here, but rather to the data themselves). He or she is responsible for the given information and must be contacted by data consumers if a contract needs to be concluded",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "The \"publisher\" describes an entity (company and person) that publishes the datasets (we are not refering to the metadata here, but rather to the data themselves). He or she is responsible for the given information and must be contacted by data consumers if a contract needs to be concluded.",
+        "fr": "L'\"éditeur\" décrit une entité (entreprise et personne) qui publie les jeux de données (nous ne nous référons pas ici aux métadonnées mais plutôt aux données elles-mêmes). Il ou elle est responsable des informations données et doit être contacté(e) par les consommateurs de données si un contrat doit être conclu.",
+        "nl": "De \"uitgever\" beschrijft een entiteit (bedrijf of persoon) die de datasets publiceert (we verwijzen hier niet naar de metadata maar eerder naar de gegevens zelfs). Hij of zij is verantwoordelijk voor de gegeven informatie en moet door gegevensverbruikers gecontacteerd worden indien een overeenkomst moet worden gesloten. ",
+        "de": "Der \"Herausgeber\" beschreibt eine Entität (Unternehmen oder Person), die die Datensätze publiziert (wir beziehen uns hier nicht auf die Metadaten sondern eher auf die Daten selbst). Er oder sie ist verantwortlich für die gegebene Information und muss von Datenverbrauchern kontaktiert werden, wenn ein Vertrag geschlossen werden muss. "
       },
       "form_snippet": "text_autocomplete.html",
       "required": "true"
@@ -149,9 +174,9 @@
       "field_name": "publisher_name",
       "label": {
         "en": "Name [publisher]",
-        "fr": "Name [publisher]",
-        "nl": "Name [publisher]",
-        "de": "Name [publisher]"
+        "fr": "Nom [éditeur]",
+        "nl": "Naam [uitgever]",
+        "de": "Name [Herausgeber]"
       },
       "form_placeholder": "John Doe",
       "required": "true"
@@ -160,9 +185,9 @@
       "field_name": "p_address",
       "label": {
         "en": "Address [publisher]",
-        "fr": "Address [publisher]",
-        "nl": "Address [publisher]",
-        "de": "Address [publisher]"
+        "fr": "Adresse  [éditeur]",
+        "nl": "Adres [uitgever]",
+        "de": "Adresse [Herausgeber]"
       },
       "form_placeholder": "Boulevard Anspach, 1 - 1000 Bruxelles (Belgique)",
       "required": "true"
@@ -171,18 +196,18 @@
       "field_name": "publisher_email",
       "label": {
         "en": "E-mail [publisher]",
-        "fr": "E-mail [publisher]",
-        "nl": "E-mail [publisher]",
-        "de": "E-mail [publisher]"
+        "fr": "E-mail [éditeur]",
+        "nl": "E-mail [uitgever]",
+        "de": "E-Mail [Herausgeber]"
       },
       "form_placeholder": "example@example.com",
       "display_snippet": "email.html",
       "display_email_name_field": "publisher_name",
       "help_text": {
-        "en": "The email adress must contain @ and a dot",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "The email adress must contain @ and a dot.",
+        "fr": "L'adresse e-mail doit contenir @ et un point.",
+        "nl": "Het e-mailadres moet  @ en een punt inhouden.",
+        "de": "Die E-Mail muss  @ und einen Punkt beinhalten."
       },
       "required": "true",
       "validators": "email_validator not_empty"
@@ -191,16 +216,16 @@
       "field_name": "publisher_url",
       "label": {
         "en": "Website [publisher]",
-        "fr": "Website [publisher]",
-        "nl": "Website [publisher]",
-        "de": "Website [publisher]"
+        "fr": "Site web  [éditeur]",
+        "nl": "Website [uitgever] ",
+        "de": "Website [Herausgeber]"
       },
       "display_snippet": "link.html",
       "help_text": {
-        "en": "The website address must start with 'http://' or 'https://'",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "The website address must start with \"http://\", or \"https://\".",
+        "fr": "L'adresse du site web doit commencer par \"http://\" ou \"https://\".",
+        "nl": "Het adres van de website moet met  \"http://\" of \"https://\" beginnen.",
+        "de": "Die Adresse der Website muss mit \"http://\" of \"https://\" anfangen. "
       },
       "validators": "url_validator"
     },
@@ -208,16 +233,16 @@
       "field_name": "p_tel",
       "label": {
         "en": "Telephone number [publisher]",
-        "fr": "Telephone number [publisher]",
-        "nl": "Telephone number [publisher]",
-        "de": "Telephone number [publisher]"
+        "fr": "Numéro de téléphone [éditeur]",
+        "nl": "Telefoonnummer [uitgever] ",
+        "de": "Telefonnummer  [Herausgeber]"
       },
       "form_placeholder": "+322XXXXXXX",
       "help_text": {
-        "en": "The telephone number must start with the country prefix (e.g. '+32' for Belgium) and may only contain numbers from 0 to 9 besides the '+' sign",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "The telephone number must start with the country prefix (e.g. \",+32\" for Belgium) and may only contain numbers from 0 to 9 besides the \"+\" sign.",
+        "fr": "Le numéro de téléphone doit commencer par le préfixe du pays (ex. \"+32\" pour la Belgique) et ne peut contenir que des chiffres de 0 à 9 en plus du signe \"+\".",
+        "nl": "Het telefoonnummer moet met het netnummer van het land beginnen (bv. \"+32\" voor België) en kan naast de teken \"+\" alleen maar cijfers van 0 tot 9 inhouden.",
+        "de": "Die Telefonnummer muss mit der Vorwahl des Landes (zum B. \"+32\" für Belgien) und kann nur neben dem Zeichen \"+\" Zahlen von 0 bis 9 beinhalten."
       },
       "required": "true",
       "validators": "phone_number_validator not_empty"
@@ -226,16 +251,16 @@
       "field_name": "temporal_start",
       "label": {
         "en": "Start date of publication",
-        "fr": "Start date of publication",
-        "nl": "Start date of publication",
-        "de": "Start date of publication"
+        "fr": "Date de début de publication",
+        "nl": "Begindatum publicatie",
+        "de": "Anfangsdatum"
       },
       "preset": "datetime_tz",
       "help_text": {
-        "en": "Describes from which date and time on the data delivery is applicable. If left empty, the publication is considered as available immediately",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Describes from which date and time on the data delivery is applicable. If left empty, the publication is considered as available immediately.",
+        "fr": "Décrit à partir de quelle date et heure s'applique la livraison des  données. Si laissé vide, la publication est considérée comme disponible immédiatement.",
+        "nl": "Beschrijft vanaf welke datum en uur de gegevenslevering van toepassing is. Indien leeg gelaten, wordt de publicatie als rechtstreeks beschikbaar beschouwd.",
+        "de": "Beschreibt ab welchem Datum und welcher Uhr die Datenlieferung gilt. Wenn es leer gelassen wird, wird die Publikation als sofort verfügbar betrachtet. "
       },
       "required": "true"
     },
@@ -243,16 +268,16 @@
       "field_name": "temporal_end",
       "label": {
         "en": "End date of publication",
-        "fr": "End date of publication",
-        "nl": "End date of publication",
-        "de": "End date of publication"
+        "fr": "Date de fin de publication",
+        "nl": "Einddatum publicatie",
+        "de": "Enddatum"
       },
       "preset": "datetime_tz",
       "help_text": {
-        "en": "Describes the date when data delivery to this publication terminates. If left empty, the publication does not expire",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Describes the date when data delivery to this publication terminates. If left empty, the publication does not expire.",
+        "fr": "Décrit la date à laquelle la livraison des données à cette publication se termine. Si laissé vide, la publication n'a pas de date d'expiration.",
+        "nl": "Beschrijft de datum waarop de gegevenslevering voor deze publicatie eindigt. Indien leeg gelaten, heeft de publicatie geen einddatum.",
+        "de": "Beschreibt das Datum, worauf die Datenlieferung zu dieser Publikation endet. Wenn es leer gelassen wird, hat die Publikation kein Enddatum."
       },
       "validators": "benap_is_after_start"
     },
@@ -260,16 +285,16 @@
       "field_name": "countries_covered",
       "label": {
         "en": "Countries covered by publication",
-        "fr": "Countries covered by publication",
-        "nl": "Countries covered by publication",
-        "de": "Countries covered by publication"
+        "fr": "Pays couverts par la publication",
+        "nl": "Landen gedekt door publicatie",
+        "de": "Länder gedeckt von der Publikation"
       },
       "preset": "multiple_select",
       "help_text": {
         "en": "Describes the countries covered by the data set (Belgium is mandatory)",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "fr": "Beschrijft de EU-lidstaten gedekt door de dataset ",
+        "nl": "Décrit les Etats membres de l'UE couverts par le jeu de données",
+        "de": "Beschreibt die EU-Mitgliedstaaten, die vom Datensatz gedeckt werden "
       },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "EU_COUNTRY",
@@ -280,16 +305,16 @@
       "field_name": "regions_covered",
       "label": {
         "en": "Area covered by publication",
-        "fr": "Area covered by publication",
-        "nl": "Area covered by publication",
-        "de": "Area covered by publication"
+        "fr": "Zone couverte par la publication",
+        "nl": "Gebied gedekt door publicatie",
+        "de": "Deckungsgebiet der Publikation"
       },
       "preset": "multiple_select",
       "help_text": {
-        "en": "Describes the geographic area covered by the data set, based on the Nomenclature of Territorial Units for Statistics (NUTS)",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Describes the geographic area covered by the data set, based on the Nomenclature of Territorial Units for Statistics (NUTS).",
+        "fr": "Décrit la zone géographique couverte par le jeu de données, sur la base de la Nomenclature des Unités territoriales statistiques (NUTS).",
+        "nl": "Beschrijft de geografische zone die door de dataset gedekt is, op basis van de Nomenclatuur van territoriale eenheden voor de statistiek (NUTS).",
+        "de": "Beschreibt die geographische Zone, die vom Datensatz gedeckt wird, aufgrund der Systematik der Gebietseinheiten für die Statistik (NUTS). "
       },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "NUTS1_BE",
@@ -299,15 +324,15 @@
       "field_name": "spatial",
       "label": {
         "en": "Dataset extent",
-        "fr": "Dataset extent",
-        "nl": "Dataset extent",
-        "de": "Dataset extent"
+        "fr": "Portée du jeu de données",
+        "nl": "Scope van de dataset",
+        "de": "Bereich des Datensatzes"
       },
       "help_text": {
-        "en": "Select the extent of the dataset on the map",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Select the extent of the dataset on the map.",
+        "fr": "Sélectionnez la portée du jeu de données sur la carte.",
+        "nl": "Selecteer de scope van de dataset op de kaart.",
+        "de": "Wählt den Bereich des Datensatzes auf der Karte aus."
       },
       "display_snippet": "map.html",
       "form_snippet": "form_map.html"
@@ -316,15 +341,15 @@
       "field_name": "fluent_tags",
       "label": {
         "en": "Transportation modes covered",
-        "fr": "Transportation modes covered",
-        "nl": "Transportation modes covered",
-        "de": "Transportation modes covered"
+        "fr": "Moyens de transport couverts",
+        "nl": "Gedekte vervoersmiddelen ",
+        "de": "Gedeckte Beförderungsmittel"
       },
       "help_text": {
-        "en": "Describes the transportation mode(s) covered by the data set",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Describes the transportation mode(s) covered by the data set.",
+        "fr": "Décrit le(s) moyen(s) de transport couvert(s) par le jeu de données.",
+        "nl": "Beschrijft het (de) vervoersmiddel(en) die door de dataset gedekt zijn.",
+        "de": "Beschreibt das (die) Beförderungsmittel, das (die) vom Datensatz gedeckt wird (werden)."
       },
       "form_snippet": "form_tags.html",
       "required": "true",
@@ -334,17 +359,17 @@
       "field_name": "contract_license",
       "label": {
         "en": "Contract or licence",
-        "fr": "Contract or licence",
-        "nl": "Contract or licence",
-        "de": "Contract or licence"
+        "de": "Contrat ou licence",
+        "fr": "Contract of licentie",
+        "nl": "Vertrag oder Lizenz"
       },
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "help_text": {
-        "en": "Describes the conditions of use of the data set",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Describes the conditions of use of the data set.",
+        "fr": "Décrit les conditions d'utilisation du jeu de données.",
+        "nl": "Beschrijft de gebruiksvoorwaarden van de dataset.",
+        "de": "Beschreibt die Nutzungsbedingungen des Datensatzes."
       },
       "benap_helper_ontology": "contract_license",
       "required": "true"
@@ -353,30 +378,35 @@
       "field_name": "license_id",
       "label": {
         "en": "License type",
-        "fr": "License type",
-        "nl": "License type",
-        "de": "License type"
+        "fr": "Type de licence",
+        "nl": "Type licentie",
+        "de": "Lizenz-Typ"
       },
       "form_snippet": "license.html",
       "help_text": {
-        "en": "Describes the conditions of use of the data set",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Describes the conditions of use of the data set.",
+        "fr": "Décrit les conditions d'utilisation du jeu de données.",
+        "nl": "Beschrijft de gebruiksvoorwaarden van de dataset.",
+        "de": "Beschreibt die Nutzungsbedingungen des Datensatzes."
       },
       "required": "true"
     },
     {
       "field_name": "frequency",
-      "label": "Update frequency",
+      "label": {
+        "en": "Update frequency",
+        "de": "Fréquence de mise à jour",
+        "fr": "Bijwerkingsfrequentie",
+        "nl": "Update-Rate"
+      },
       "display_property": "dct:accrualPeriodicity",
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "help_text": {
-        "en": "Describes the update rate of the data set",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Describes the update rate of the data set.",
+        "fr": "Décrit le taux de mise à jour du jeu de données.",
+        "nl": "Beschrijft de bijwerkingsfrequentie van de dataset.",
+        "de": "Beschreibt die Update-Rate des Datensatzes."
       },
       "benap_helper_ontology": "frequency",
       "required": "true"
@@ -386,31 +416,42 @@
       "preset": "fluent_markdown",
       "label": {
         "en": "Quality assessment",
-        "fr": "Quality assessment",
-        "nl": "Quality assessment",
-        "de": "Quality assessment"
+        "fr": "Evaluation de la qualité",
+        "nl": "Kwaliteitsbeoordeling",
+        "de": "Qualitätsbewertung"
       },
       "display_snippet": "fluent_markdown_fallback.html",
+      "form_placeholder": {
+        "en": "eg. \"Quality Criteria \"Correctness\", and \"Completeness\" fulfilled to 99%, assessed by ground-truth testing\"",
+        "fr": "Bv. \"Kwaliteitscriteria \"nauwkeurigheid\" en \"volledigheid\" volbracht tot 99%, geschat door testen op het terrein\"",
+        "nl": "Par ex. \"Critères de qualité \"Exactitude\" et \"Exhaustivité\" complétés à 99%, évalués par des tests dans la réalité du terrain",
+        "de": "Zum B. \"Qualitätskriterien \"Genauigkeit\" und \"Vollständigkeit\" erfüllt auf 99%, bewertet von Bodenrealitätstesten."
+      },
       "help_text": {
-        "en": "Describes methods and results of a quality assessment",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Describes methods and results of a quality assessment.",
+        "fr": "Décrit les méthodes et les résultats d'une évaluation de la qualité.",
+        "nl": "Beschrijft de handelswijzen en de resultaten van een kwaliteitsbeoordeling.",
+        "de": "Beschreibt die Methoden und Resultate einer Qualitätsbewertung."
       },
       "form_languages": [
         "en",
-        "fr",
         "nl",
+        "fr",
         "de"
       ],
       "form_attrs": {
         "class": "form-control"
-      },
-      "form_placeholder": "eg. “Quality Criteria “Correctness” and “Completeness” fulfilled to 99%, assessed by ground-truth testing”"
+      }
     },
     {
       "field_name": "theme",
-      "label": "Dataset theme",
+      "label": {
+        "en": "Dataset theme",
+        "fr": "Thème du jeu de données",
+        "nl": "Thema dataset",
+        "de": "Thema des Datensatzes"
+      },
+
       "display_property": "dcat:theme",
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
@@ -421,12 +462,17 @@
   "resource_fields": [
     {
       "field_name": "url",
-      "label": "Access URL",
+      "label": {
+        "en": "Access URL",
+        "fr": "URL d'accès",
+        "nl": "Toegangs-URL",
+        "de": "Zugangs-URL"
+      },
       "help_text": {
-        "en": "See explanation on the left side. Links must start with 'http://' or 'https://'. Max. filesize is 25Mb)",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "See explanation on the left side. Links must start with \"http://\", or \"https://\". Max. filesize is 25Mb)",
+        "fr": "Voir l'explication à gauche. Les liens doivent commencer par \"http: //\", ou \"https: //\". La taille maximale du fichier est de 25 Mo",
+        "nl": "Zie uitleg aan de linkerkant. Links moeten beginnen met \"http: //\", of \"https: //\". Maximale bestandsgrootte is 25Mb",
+        "de": "Siehe Erklärung auf der linken Seite. Links müssen mit \"http: //\" oder \"https: //\" beginnen. Die maximale Dateigröße beträgt 25 MB"
       },
       "form_snippet": "upload.html",
       "form_placeholder": "http://example.com/my-data.csv",
@@ -439,28 +485,38 @@
       "field_name": "name",
       "label": {
         "en": "Name",
-        "fr": "Name",
-        "nl": "Name",
+        "fr": "Nom",
+        "nl": "Naam",
         "de": "Name"
       },
-      "form_placeholder": "eg. Plan of the Belgian highway network ",
-      "help_text": "Describes the resource you linked or uploaded in generic terms or gives a short description. The author is encouraged to write a meaningful description",
+      "form_placeholder": {
+        "en": "eg. Plan of the Belgian highway network",
+        "fr": "ex. Plan du réseau autoroutier belge",
+        "nl": "bv. Plan van het Belgische snelwegennet",
+        "de": "Zum B.  Plan des belgischen Autobahnennetzes"
+      },
+      "help_text": {
+        "en": "Describes the resource you linked or uploaded in generic terms or gives a short description. The author is encouraged to write a meaningful description.",
+        "fr": "Décrit la ressource que vous avez liée ou téléchargée en termes génériques ou donne une brève description. L'auteur est invité à écrire une description significative.",
+        "nl": "Beschrijft de ressource die je gebonden of  geüpload hebt in generieke termen of geeft een beknopte beschrijving. De auteur wordt verzocht een zinvolle beschrijving te schrijven. ",
+        "de": "Beschreibt in grossen Zügen die Ressourcen, die Sie verbunden oder geüpload haben oder gibt eine kurze Beschreibung. Der Verfasser wird ersucht eine sinnvolle Beschreibung zu schreiben."
+      },
       "required": "true"
     },
     {
       "field_name": "acc_enc",
       "label": {
         "en": "Data format - Encoding",
-        "fr": "Data format - Encoding",
-        "nl": "Data format - Encoding",
-        "de": "Data format - Encoding"
+        "fr": "Format de donnée - Encodage",
+        "nl": "Gegevensformaat - Codering",
+        "de": "Datenformat - Kodierung"
       },
       "preset": "select",
       "help_text": {
-        "en": "This describes the atomic element of the transfer syntax description",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "This describes the atomic element of the transfer syntax description.",
+        "fr": "Ceci décrit l'élément atomique de la description de la syntaxe du transfert.",
+        "nl": "Dit beschrijft het kernelement van de beschrijving van de  overdrachtssyntax.",
+        "de": "Es beschreibt das Kernelement der Berschreibung des Übertragungssyntaxes."
       },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "encoding"
@@ -469,18 +525,18 @@
       "field_name": "format",
       "label": {
         "en": "Data format - Syntax",
-        "fr": "Data format - Syntax",
-        "nl": "Data format - Syntax",
-        "de": "Data format - Syntax"
+        "fr": "Format de donnée - Syntaxe",
+        "nl": "Gegevensformaat - Syntax",
+        "de": "Datenformat - Syntax"
       },
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "syntax",
       "help_text": {
-        "en": "This describes the base standard that specifies syntactically correct documents",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "This describes the base standard that specifies syntactically correct documents.",
+        "fr": "Ceci décrit le standard de la base spécifiant les documents syntaxiquement corrects.",
+        "nl": "Dit beschrijft de databasestandaard die syntactisch correcte documenten bepaalt.",
+        "de": "Es beschreibt den Datenbankstandard, der syntaktisch korrekte Dokumente spezifiziert."
       },
       "required": "true"
     },
@@ -488,17 +544,17 @@
       "field_name": "acc_gra",
       "label": {
         "en": "Data format - Grammar",
-        "fr": "Data format - Grammar",
-        "nl": "Data format - Grammar",
-        "de": "Data format - Grammar"
+        "fr": "Format de donnée - Grammaire",
+        "nl": "Gegevensformaat - Grammatica",
+        "de": "Datenformat - Grammatik"
       },
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "help_text": {
-        "en": "This describes standards on top of the elementary syntax that describe data structures in the dataset",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "This describes standards on top of the elementary syntax that describe data structures in the dataset.",
+        "fr": "Ceci décrit les standards au-delà de la syntaxe élémentaire décrivant les structures de données dans le jeu de données.",
+        "nl": "Dit beschrijft de standaarden bovenop de elementaire syntax die de datastructuren binnen de dataset beschrijven. ",
+        "de": "Es beschreibt neben der elementären Syntax die Standarde, die die Datenstrukturen innerhalb vom Datensatz beschreiben."
       },
       "benap_helper_ontology": "grammar"
     },
@@ -506,18 +562,18 @@
       "field_name": "acc_mod",
       "label": {
         "en": "Data format - Data model",
-        "fr": "Data format - Data model",
-        "nl": "Data format - Data model",
-        "de": "Data format - Data model"
+        "fr": "Format de donnée - Modèle de donnée",
+        "nl": "Gegevensformaat - Gegevensmodel",
+        "de": "Datenformat - Datenmodell"
       },
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "datamodel",
       "help_text": {
-        "en": "This describes the specific data model used in the data",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "This describes the specific data model used in the data.",
+        "fr": "Ceci décrit le modèle de donnée spécifique utilisé dans les données",
+        "nl": "Dit beschrijft het specifieke gegevensmodel dat in de gegeven gebruikt wordt. ",
+        "de": "Es beschreibt das spezifische Datenmodell,das in den Daten benutzt wird."
       },
       "required": "true"
     },
@@ -525,16 +581,21 @@
       "field_name": "acc_description",
       "label": {
         "en": "Data format - Description",
-        "fr": "Data format - Description",
-        "nl": "Data format - Description",
-        "de": "Data format - Description"
+        "fr": "Format de donnée - Description",
+        "nl": "Gegevensformaat - Beschrijving",
+        "de": "Datenformat - Beschreibung"
       },
-      "form_placeholder": "eg. Proprietary model in accordance to CEN TC278 / WG17 / Urban ITS",
+      "form_placeholder": {
+        "en": "eg. Proprietary model in accordance to CEN TC278 / WG17 / Urban ITS",
+        "fr": "ex. Modèle propriétaire en conformité avec  CEN TC278 / WG17 / Urban ITS",
+        "nl": "bv. Propriëtair model  overeenkomstig CEN TC278 / WG17 / Urban ITS",
+        "de": "Zum B. Proprietäres Modell laut CEN TC278 / WG17 / Urban ITS"
+      },
       "help_text": {
-        "en": "Can be optionally used to provide additional information on the data format",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Can be optionally used to provide additional information on the data format.",
+        "fr": "Peut être utilisé de manière facultative pour fournir des informations supplémentaires sur le format de donnée.",
+        "nl": "Kan optioneel gebruikt worden om extra informatie over het gegevensformaat te geven.",
+        "de": "Kann eventuell benutzt werden um weitere Informationen zum Datenformat zu geben."
       },
       "form_snippet": "markdown.html"
     },
@@ -542,18 +603,18 @@
       "field_name": "acc_int",
       "label": {
         "en": "Access interface – Application layer protocol",
-        "fr": "Access interface – Application layer protocol",
-        "nl": "Access interface – Application layer protocol",
-        "de": "Access interface – Application layer protocol"
+        "fr": "Interface d'accès - Protocole de la couche d'application",
+        "nl": "Toegansinterface - Protocol van de applicatielaag",
+        "de": "Zugangsinterface - Protokoll der Applikationsschicht"
       },
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "protocol",
       "help_text": {
-        "en": "Describes the IT protocol of the data interface that will be used to transfer data",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Describes the IT protocol of the data interface that will be used to transfer data.",
+        "fr": "Décrit le protocole informatique de l'interface de donnée qui sera utilisée pour transférer les données.",
+        "nl": "Beschrijft het IT-protocol van de data-interface  die zal worden gebruikt om gegevens over te dragen. ",
+        "de": "Beschreibt das IT-Protokoll der Dateninterface, die für die Datenübertragung benutzt werden wird."
       },
       "required": "true"
     },
@@ -561,33 +622,38 @@
       "field_name": "acc_con",
       "label": {
         "en": "Communication method",
-        "fr": "Communication method",
-        "nl": "Communication method",
-        "de": "Communication method"
+        "fr": "Méthode de communication",
+        "nl": "Communicatiemethode",
+        "de": "Kommunikationsmethode"
       },
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "communication",
       "help_text": {
-        "en": "Describes the transmitting procedure from data provider to data receiver",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "en": "Describes the transmitting procedure from data provider to data receiver.",
+        "fr": "Décrit la procédure de transmission du fournisseur de données au destinataire des données.",
+        "nl": "Beschrijft de overbrengingsprocedure van de gegevensleverancier naar de gegevensontvanger.   ",
+        "de": "Beschreibt das Übertragungsverfahren des Datenanbieters nach dem Datenempfänger."
       },
       "required": "true"
     },
     {
       "field_name": "resource_language",
-      "label": "Dataset language",
+      "label": {
+        "en": "Dataset language",
+        "nl": "Langue du jeu de données",
+        "fr": "Taal van de ataset",
+        "de": "Sprache des Datensatzes"
+      },
       "display_property": "dct:language",
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "EU-language",
       "help_text": {
         "en": "Describes the language of the data contents (text fields, addresses etc.)",
-        "fr": "See English version",
-        "nl": "See English version",
-        "de": "See English version"
+        "fr": "Décrit la langue des contenus de données (champs textuels, adresses, etc.) ",
+        "nl": "Beschrijft de taal van de gegevensinhouden (tekstvelden, adressen, enz.).",
+        "de": "Beschreibt die Sprache der Dateninhälte (Textfelde, Adressen, usw.)."
       },
       "required": "true"
     }
