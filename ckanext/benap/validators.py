@@ -27,9 +27,6 @@ def countries_covered_belgium(value, context):
 
 
 def is_after_start(key, flattened_data, errors, context):
-    print("\n"*5)
-    print(flattened_data)
-    print("\n" * 5)
     try:
         for k in flattened_data:
             if k == ('__extras',):
