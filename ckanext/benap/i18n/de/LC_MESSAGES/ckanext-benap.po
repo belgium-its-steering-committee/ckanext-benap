@@ -205,3 +205,4 @@ msgstr "Gehen"
 
 #: ckanext/benap/templates/snippets/package_item.html:7
 msgid "This dataset has no description"
+msgstr "Dieser Datensatz hat keine Beschreibung."
