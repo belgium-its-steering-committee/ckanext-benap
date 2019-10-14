@@ -27,18 +27,25 @@ def countries_covered_belgium(value, context):
 
 
 def is_after_start(key, flattened_data, errors, context):
+    print("\n"*5)
+    print(flattened_data)
+    print("\n" * 5)
     try:
         for k in flattened_data:
             if k == ('__extras',):
                 temporal_end_dict = flattened_data[k]
             elif k == (u'temporal_end',):
-                if temporal_end_dict['temporal_end_date'] and temporal_end_dict['temporal_end_time']:
-                    flattened_data[k] = temporal_end_dict['temporal_end_date'] + ' ' + temporal_end_dict[
-                        'temporal_end_time']
-                elif temporal_end_dict['temporal_end_date']:
-                    flattened_data[k] = temporal_end_dict['temporal_end_date'] + ' 00:00:00.000000'
-                else:
-                    flattened_data[k] = ''
+                try:
+                    temporal_end_dict
+                    if temporal_end_dict['temporal_end_date'] and temporal_end_dict['temporal_end_time']:
+                        flattened_data[k] = temporal_end_dict['temporal_end_date'] + ' ' + temporal_end_dict[
+                            'temporal_end_time']
+                    elif temporal_end_dict['temporal_end_date']:
+                        flattened_data[k] = temporal_end_dict['temporal_end_date'] + ' 00:00:00.000000'
+                    else:
+                        flattened_data[k] = ''
+                except NameError:
+                    return True
     except KeyError:
         return True
     start_date = temporal_end_dict['temporal_start_date'] + ' ' + temporal_end_dict['temporal_start_time']
