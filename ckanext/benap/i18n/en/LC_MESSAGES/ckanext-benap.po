@@ -92,7 +92,7 @@ msgstr "Datasets"
 
 #: ckanext/benap/templates/header.html:85
 msgid "Organizations"
-msgstr "Orginazations"
+msgstr "Organizations"
 
 #: ckanext/benap/templates/header.html:86
 msgid "Groups"
