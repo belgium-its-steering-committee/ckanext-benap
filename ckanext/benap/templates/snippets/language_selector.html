@@ -4,7 +4,6 @@
   <select id="field-lang-select" class="m-0" name="url" data-module-dropdown-class="lang-dropdown" data-module-container-class="lang-container">
     {% for locale in h.get_available_locales() %}
       <option class="lang-option" value="{% url_for h.current_url(), locale=locale.short_name %}" {% if locale.identifier == current_lang %}selected="selected"{% endif %}>
-        <!--{{ locale.display_name or locale.english_name }}-->
           {{ locale.short_name | upper or locale.english_name }}
       </option>
     {% endfor %}
