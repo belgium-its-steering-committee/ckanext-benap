@@ -317,14 +317,15 @@ msgstr ""
 
 #: ckanext/benap/templates/user/login.html:39
 msgid "Forgotten your username?"
-msgstr ""
+msgstr "Nom d'utilisateur oublié?"
 
 #: ckanext/benap/templates/user/login.html:42
 msgid ""
 "Send us an e-mail at <a href=\"mailto:contact@transportdata.be\" "
 "target=\"_top\">contact@transportdata.be</a> mentioning your name and, if"
 " applicable, your organisation. "
-msgstr ""
+msgstr "Envoyez-nous un email à <a href=\"mailto:contact@transportdata.be\" "
+"target=\"_top\">contact@transportdata.be</a> en mentionnant votre nom et, le cas échéant, votre organisation."
 
 #: ckanext/benap/templates/user/new.html:6
 msgid "Registration"

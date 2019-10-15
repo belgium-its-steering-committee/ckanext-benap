@@ -25,17 +25,18 @@ msgstr "Phone number {number} is not a valid format"
 
 #: ckanext/benap/validators.py:25
 msgid "Belgium is a required country"
-msgstr ""
+msgstr "Belgium is a required country"
 
 #: ckanext/benap/validators.py:52
 msgid "Start date must be before end date"
-msgstr ""
+msgstr "Start date must be before end date"
 
 #: ckanext/benap/templates/base.html:37
 msgid ""
 "Belgium&#39;s national access point for multimodal travel information "
 "services."
-msgstr ""
+msgstr "Belgium&#39;s national access point for multimodal travel information "
+"services."
 
 #: ckanext/benap/templates/footer.html:9
 msgid "About Transportdata.be"
@@ -43,11 +44,11 @@ msgstr "About Transportdata.be"
 
 #: ckanext/benap/templates/footer.html:14
 msgid "Github"
-msgstr ""
+msgstr "Github"
 
 #: ckanext/benap/templates/footer.html:16
 msgid "CKAN API"
-msgstr "Sysadmin settings"
+msgstr "CKAN API"
 
 #: ckanext/benap/templates/footer.html:33
 msgid "Powered by <a href=\"http://ckan.org\">CKAN</a>"
@@ -216,7 +217,7 @@ msgstr "Popular Tags"
 msgid "ADD NEW DATA"
 msgstr "ADD NEW DATA"
 
-#: ckanext/benap/templates/home/snippets/search.html:26
+#: ckanext/<abenap/templates/home/snippets/search.html:26
 msgid "Data providers can easily add data to the catalogue."
 msgstr "Data providers can easily add data to the catalogue."
 
@@ -226,7 +227,7 @@ msgstr "Add Data"
 
 #: ckanext/benap/templates/package/snippets/resource_help.html:2
 msgid "What's a resource?"
-msgstr ""
+msgstr "What's a resource?"
 
 #: ckanext/benap/templates/package/snippets/resource_help.html:4
 msgid ""
@@ -253,15 +254,15 @@ msgstr "Go"
 
 #: ckanext/benap/templates/snippets/package_item.html:9
 msgid "Private"
-msgstr ""
+msgstr "Private"
 
 #: ckanext/benap/templates/snippets/package_item.html:18
 msgid "Draft"
-msgstr ""
+msgstr "Draft"
 
 #: ckanext/benap/templates/snippets/package_item.html:20
 msgid "Deleted"
-msgstr ""
+msgstr "Deleted"
 
 #: ckanext/benap/templates/snippets/package_item.html:32
 msgid "This dataset has no description"
@@ -270,7 +271,7 @@ msgstr "This dataset has no description"
 #: ckanext/benap/templates/user/dashboard.html:9
 #: ckanext/benap/templates/user/dashboard.html:29
 msgid "News feed"
-msgstr ""
+msgstr "News feed"
 
 #: ckanext/benap/templates/user/dashboard.html:10
 #, fuzzy
@@ -284,54 +285,56 @@ msgstr "Organizations"
 
 #: ckanext/benap/templates/user/dashboard.html:20
 msgid "Have you just just created an account?"
-msgstr ""
+msgstr "Have you just just created an account?"
 
 #: ckanext/benap/templates/user/dashboard.html:22
 msgid "If yes, you will find more information on what to do in our "
-msgstr ""
+msgstr "If yes, you will find more information on what to do in our "
 
 #: ckanext/benap/templates/user/dashboard.html:23
 msgid "about section."
-msgstr ""
+msgstr "about section."
 
 #: ckanext/benap/templates/user/dashboard.html:31
 msgid "Activity from items that I'm following"
-msgstr ""
+msgstr "Activity from items that I'm following"
 
 #: ckanext/benap/templates/user/login.html:8
 msgid "Need an Account?"
-msgstr ""
+msgstr "Need an Account?"
 
 #: ckanext/benap/templates/user/login.html:10
 msgid "Then sign right up, it only takes a minute."
-msgstr ""
+msgstr "Then sign right up, it only takes a minute."
 
 #: ckanext/benap/templates/user/login.html:13
 msgid "Create an Account"
-msgstr ""
+msgstr "Create an Account"
 
 #: ckanext/benap/templates/user/login.html:25
 msgid "Forgotten your password?"
-msgstr ""
+msgstr "Forgotten your password?"
 
 #: ckanext/benap/templates/user/login.html:27
 msgid "No problem, use our password recovery form to reset it."
-msgstr ""
+msgstr "No problem, use our password recovery form to reset it."
 
 #: ckanext/benap/templates/user/login.html:30
 msgid "Forgot your password?"
-msgstr ""
+msgstr "Forgot your password?"
 
 #: ckanext/benap/templates/user/login.html:39
 msgid "Forgotten your username?"
-msgstr ""
+msgstr "Forgotten your username?"
 
 #: ckanext/benap/templates/user/login.html:42
 msgid ""
 "Send us an e-mail at <a href=\"mailto:contact@transportdata.be\" "
 "target=\"_top\">contact@transportdata.be</a> mentioning your name and, if"
 " applicable, your organisation. "
-msgstr ""
+msgstr "Send us an e-mail at <a href=\"mailto:contact@transportdata.be\" "
+"target=\"_top\">contact@transportdata.be</a> mentioning your name and, if"
+" applicable, your organisation. "
 
 #: ckanext/benap/templates/user/new.html:6
 #, fuzzy
@@ -340,34 +343,36 @@ msgstr "Organizations"
 
 #: ckanext/benap/templates/user/new.html:14
 msgid "Register for an Account"
-msgstr ""
+msgstr "Register for an Account"
 
 #: ckanext/benap/templates/user/new.html:26
 msgid "Why Sign Up?"
-msgstr ""
+msgstr "Why Sign Up?"
 
 #: ckanext/benap/templates/user/new.html:29
 msgid "Check our "
-msgstr ""
+msgstr "Check our "
 
 #: ckanext/benap/templates/user/new.html:29
 msgid "about section"
-msgstr ""
+msgstr "about section"
 
 #: ckanext/benap/templates/user/new.html:29
 msgid " to know more!"
-msgstr ""
+msgstr "to know more!"
 
 #: ckanext/benap/templates/user/new.html:31
 msgid "How to sign up?"
-msgstr ""
+msgstr "How to sign up?"
 
 #: ckanext/benap/templates/user/new.html:33
 msgid ""
 "Please choose a username (and make sure never to forget it) containing "
 "only lowercase letters and no special character except - and _ Fill in "
 "the other fields and press \"Create account\""
-msgstr ""
+msgstr "Please choose a username (and make sure never to forget it) containing "
+"only lowercase letters and no special character except - and _ Fill in "
+"the other fields and press \"Create account\""
 
 #~ msgid ""
 #~ msgstr ""
