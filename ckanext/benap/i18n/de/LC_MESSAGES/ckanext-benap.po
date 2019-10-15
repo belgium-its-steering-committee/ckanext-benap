@@ -108,7 +108,7 @@ msgstr ""
 
 #: ckanext/benap/templates/header.html:90
 msgid "Datasets"
-msgstr "Speichern"
+msgstr ""
 
 #: ckanext/benap/templates/header.html:90
 msgid "Organizations"
@@ -276,7 +276,7 @@ msgstr ""
 #: ckanext/benap/templates/user/dashboard.html:10
 #, fuzzy
 msgid "My Datasets"
-msgstr "Speichern"
+msgstr ""
 
 #: ckanext/benap/templates/user/dashboard.html:11
 msgid "My Organizations"
