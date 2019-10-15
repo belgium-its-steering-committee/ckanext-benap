@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-15 11:37+0200\n"
+"POT-Creation-Date: 2019-10-15 14:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -129,7 +129,7 @@ msgstr ""
 #: ckanext/benap/templates/home/snippets/community.html:12
 msgid ""
 "As transport data producer or user, join our online community and benefit "
-"from experience-sharing with your fellows !"
+"from experience-sharing with your fellows!"
 msgstr ""
 
 #: ckanext/benap/templates/home/snippets/community.html:16
@@ -137,7 +137,7 @@ msgid "Join"
 msgstr ""
 
 #: ckanext/benap/templates/home/snippets/feedback.html:4
-msgid "HELP US WITH OUR SITE"
+msgid "HELP US"
 msgstr ""
 
 #: ckanext/benap/templates/home/snippets/feedback.html:5
@@ -165,7 +165,7 @@ msgid "DISCOVER TRANSPORTDATA.BE"
 msgstr ""
 
 #: ckanext/benap/templates/home/snippets/promoted.html:9
-msgid "WHAT THE PURPOSE IS AND HOW YOU ARE INVOLVED"
+msgid "AND HOW YOU ARE INVOLVED"
 msgstr ""
 
 #: ckanext/benap/templates/home/snippets/promoted.html:13

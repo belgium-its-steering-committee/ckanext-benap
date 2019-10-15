@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-15 11:37+0200\n"
+"POT-Creation-Date: 2019-10-15 14:52+0200\n"
 "PO-Revision-Date: 2019-09-20 17:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -133,7 +133,7 @@ msgstr "SCHLIESSEN SIE SICH UNSEREM GEMEINSCHAFTLICHEN FORUM AN"
 #: ckanext/benap/templates/home/snippets/community.html:12
 msgid ""
 "As transport data producer or user, join our online community and benefit"
-" from experience-sharing with your fellows !"
+" from experience-sharing with your fellows!"
 msgstr ""
 
 #: ckanext/benap/templates/home/snippets/community.html:16
@@ -141,12 +141,12 @@ msgid "Join"
 msgstr "Melden Sie sich an"
 
 #: ckanext/benap/templates/home/snippets/feedback.html:4
-msgid "HELP US WITH OUR SITE"
-msgstr "HELFEN SIE UNS MIT UNSERER WEBSITE"
+msgid "HELP US"
+msgstr "HELFEN SIE UNS"
 
 #: ckanext/benap/templates/home/snippets/feedback.html:5
 msgid "GIVE SOME FEEDBACK"
-msgstr "GEBEN SIE UNS FEEDBACK"
+msgstr "GIB UNS FEEDBACK"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:5
 msgid "SUBSCRIBE"
@@ -169,8 +169,8 @@ msgid "DISCOVER TRANSPORTDATA.BE"
 msgstr "ENTDECKEN SIE TRANSPORTDATA.BE"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:9
-msgid "WHAT THE PURPOSE IS AND HOW YOU ARE INVOLVED"
-msgstr "WAS DIE ABSICHT IST UND WIE SIE DARAN BETEILIGT SIND"
+msgid "AND HOW YOU ARE INVOLVED"
+msgstr "UND WIE SIE DARAN BETEILIGT SIND"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:13
 msgid ""
@@ -185,7 +185,7 @@ msgstr ""
 
 #: ckanext/benap/templates/home/snippets/report.html:4
 msgid "LINK DOESN' T WORK?"
-msgstr "FUNKTIONIERT DER LINK NICHT?"
+msgstr "Defekter Link?"
 
 #: ckanext/benap/templates/home/snippets/report.html:5
 msgid "REPORT IT HERE"
@@ -197,7 +197,9 @@ msgstr "Zum B. Umwelt"
 
 #: ckanext/benap/templates/home/snippets/search.html:5
 msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
-msgstr "NATIONALER BELGISCHER ZUGANGSPUNKT F&#220;R INFORMATIONSDIENSTE ZU MULTIMODALEN REISEN"
+msgstr ""
+"NATIONALER BELGISCHER ZUGANGSPUNKT F&#220;R INFORMATIONSDIENSTE ZU "
+"MULTIMODALEN REISEN"
 
 #: ckanext/benap/templates/home/snippets/search.html:9
 msgid "SEARCH FOR DATA SETS"
@@ -329,8 +331,10 @@ msgid ""
 "Send us an e-mail at <a href=\"mailto:contact@transportdata.be\" "
 "target=\"_top\">contact@transportdata.be</a> mentioning your name and, if"
 " applicable, your organisation. "
-msgstr "Senden Sie uns eine E-Mail an <a href=\"mailto:contact@transportdata.be\" "
-"target=\"_top\">contact@transportdata.be</a> und nennen Sie Ihren Namen und gegebenenfalls Ihre Organisation."
+msgstr ""
+"Senden Sie uns eine E-Mail an <a href=\"mailto:contact@transportdata.be\""
+" target=\"_top\">contact@transportdata.be</a> und nennen Sie Ihren Namen "
+"und gegebenenfalls Ihre Organisation."
 
 #: ckanext/benap/templates/user/new.html:6
 msgid "Registration"
@@ -378,4 +382,17 @@ msgstr ""
 
 #~ msgid "Your username is the last part of the URL"
 #~ msgstr ""
+
+#~ msgid ""
+#~ "As transport data producer or user, "
+#~ "join our online community and benefit"
+#~ " from experience-sharing with your "
+#~ "fellows !"
+#~ msgstr ""
+
+#~ msgid "HELP US WITH OUR SITE"
+#~ msgstr "HELFEN SIE UNS MIT UNSERER WEBSITE"
+
+#~ msgid "WHAT THE PURPOSE IS AND HOW YOU ARE INVOLVED"
+#~ msgstr "WAS DIE ABSICHT IST UND WIE SIE DARAN BETEILIGT SIND"
 

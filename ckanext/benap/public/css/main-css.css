@@ -420,7 +420,7 @@ button {
     border-radius: 0;
     border: 1px solid #9e9d9d;
     height: 34px;
-    width: calc( 100% - 132px );
+    width: calc( 100% - 152px );
 }
 
 .input-email::placeholder {
@@ -688,7 +688,7 @@ span.item-count {
 /* todo fix correct pixels? */
 @media only screen and (min-width: 982px) {
     .flex-start-982px {
-        justify-content: center;
+        justify-content: flex-start;
     }
 }
 
