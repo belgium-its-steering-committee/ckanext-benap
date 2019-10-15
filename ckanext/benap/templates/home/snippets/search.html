@@ -4,7 +4,7 @@
 
 <div class="large-title uppercase">{{ _("BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES") }}</div>
         <!-- search / add data-->
-<div class="flex flex-responsive-sm">
+<div class="flex flex-responsive-sm search-flex">
     <div class="searchbox">
         <h2>{{ _("SEARCH FOR DATA SETS") }}</h2>
         <form class="flex" style="align-items: center" method="get" action="{% url_for controller='package', action='search' %}">
@@ -25,9 +25,9 @@
         <div class="register-flex">
             <p class="lh-1-2">{{ _("Data providers can easily add data to the catalogue.") }}</p>
             {% if c.userobj %}
-                <button class="bt-large" onclick="location.href='{{ h.url_for(controller='package', action='search') }}'">{{ _("Add Data") }}</button>
+                <button class="bt-large" style="height: auto;" onclick="location.href='{{ h.url_for(controller='package', action='search') }}'">{{ _("Add Data") }}</button>
             {% else %}
-                <button class="bt-large" onclick="location.href='{{ h.url_for(controller='user', action='login') }}'">{{ _('Log in') }}</button>
+                <button class="bt-large" style="height: auto;" onclick="location.href='{{ h.url_for(controller='user', action='login') }}'">{{ _('Log in') }}</button>
             {% endif %}
         </div>
     </div>

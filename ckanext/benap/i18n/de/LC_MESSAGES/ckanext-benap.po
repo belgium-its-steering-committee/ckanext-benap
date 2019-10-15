@@ -197,7 +197,7 @@ msgstr "Zum B. Umwelt"
 
 #: ckanext/benap/templates/home/snippets/search.html:5
 msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
-msgstr ""
+msgstr "NATIONALER BELGISCHER ZUGANGSPUNKT F&#220;R INFORMATIONSDIENSTE ZU MULTIMODALEN REISEN"
 
 #: ckanext/benap/templates/home/snippets/search.html:9
 msgid "SEARCH FOR DATA SETS"

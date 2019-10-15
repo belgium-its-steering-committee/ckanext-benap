@@ -25,17 +25,17 @@ msgstr "Het telefoonnummer {number}  is niet in een geldig formaat."
 
 #: ckanext/benap/validators.py:25
 msgid "Belgium is a required country"
-msgstr ""
+msgstr "België is een verplicht land"
 
 #: ckanext/benap/validators.py:52
 msgid "Start date must be before end date"
-msgstr ""
+msgstr "Startdatum moet voor de einddatum zijn"
 
 #: ckanext/benap/templates/base.html:37
 msgid ""
 "Belgium&#39;s national access point for multimodal travel information "
 "services."
-msgstr ""
+msgstr "Belgisch nationaal toegangspunt voor informatiediensten over multimodale verplaatsingen."
 
 #: ckanext/benap/templates/footer.html:9
 msgid "About Transportdata.be"

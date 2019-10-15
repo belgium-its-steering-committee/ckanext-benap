@@ -221,9 +221,20 @@ h1.logo span {
     font-size:14px
 }
 
+.mw-75 {
+    max-width: 60%;
+}
+
+.community-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .register-flex {
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
 }
 
 .register-flex p {
@@ -677,7 +688,7 @@ span.item-count {
 /* todo fix correct pixels? */
 @media only screen and (min-width: 982px) {
     .flex-start-982px {
-        justify-content: flex-start;
+        justify-content: center;
     }
 }
 
