@@ -363,22 +363,22 @@ def ontology_helper(context):
     elif ontology == "NUTS1_BE":
         return map_for_form_select([
             ('http://data.europa.eu/nuts/code/BE1', {
-                "en": u"Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad",
-                "fr": u"Arr. de Bruxelles-Capitale",
-                "nl": u"Arr. van Brussel-Hoofdstad",
-                "de": u"Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad"
+                "en": u"RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
+                "fr": u"RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
+                "nl": u"RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
+                "de": u"RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST"
             }),
             ('http://data.europa.eu/nuts/code/BE2', {
-                "en": u"Vlaams Gewest",
-                "fr": u"Vlaams Gewest",
-                "nl": u"Vlaams Gewest",
-                "de": u"Vlaams Gewest"
+                "en": u"VLAAMS GEWEST",
+                "fr": u"VLAAMS GEWEST",
+                "nl": u"VLAAMS GEWEST",
+                "de": u"VLAAMS GEWEST"
             }),
             ('http://data.europa.eu/nuts/code/BE3', {
-                "en": u"Région Wallonne",
-                "fr": u"Région Wallonne",
-                "nl": u"Région Wallonne",
-                "de": u"Région Wallonne"
+                "en": u"RÉGION WALLONNE",
+                "fr": u"RÉGION WALLONNE",
+                "nl": u"RÉGION WALLONNE",
+                "de": u"RÉGION WALLONNE"
             }),
         ])
     elif ontology == "NUTS3_BE":

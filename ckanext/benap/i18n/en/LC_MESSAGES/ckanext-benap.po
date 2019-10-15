@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-15 08:56+0200\n"
+"POT-Creation-Date: 2019-10-15 09:27+0200\n"
 "PO-Revision-Date: 2019-09-20 17:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -231,8 +231,8 @@ msgstr ""
 #: ckanext/benap/templates/package/snippets/resource_help.html:4
 msgid ""
 "A resource is preferrably a link to your transport dataset or transport "
-"data service. However, if access require authentification or signature of"
-" a license agreement, you may just add a link to your website/data "
+"data service. However, if access requires authentification or signature "
+"of a license agreement, you may just add a link to your website/data "
 "portal. If your data is not hosted on an existing website, in that case "
 "you may upload it on transportdata.be"
 msgstr ""
@@ -274,13 +274,11 @@ msgstr ""
 
 #: ckanext/benap/templates/user/dashboard.html:10
 #, fuzzy
-#| msgid "Datasets"
 msgid "My Datasets"
 msgstr "Datasets"
 
 #: ckanext/benap/templates/user/dashboard.html:11
 #, fuzzy
-#| msgid "Organizations"
 msgid "My Organizations"
 msgstr "Organizations"
 
@@ -342,7 +340,6 @@ msgstr ""
 
 #: ckanext/benap/templates/user/new.html:6
 #, fuzzy
-#| msgid "Organizations"
 msgid "Registration"
 msgstr "Organizations"
 
@@ -378,9 +375,18 @@ msgid ""
 msgstr ""
 
 #~ msgid ""
-#~ "BELGIUM'S NATIONAL ACCESS POINT FOR "
-#~ "MULITIMODAL TRAVEL INFORMATION SERVICES"
 #~ msgstr ""
-#~ "BELGIUM'S NATIONAL ACCESS POINT FOR "
-#~ "MULITIMODAL TRAVEL INFORMATION SERVICES"
+
+#~ msgid ""
+#~ "A resource is preferrably a link "
+#~ "to your transport dataset or transport"
+#~ " data service. However, if access "
+#~ "require authentification or signature of "
+#~ "a license agreement, you may just "
+#~ "add a link to your website/data "
+#~ "portal. If your data is not hosted"
+#~ " on an existing website, in that "
+#~ "case you may upload it on "
+#~ "transportdata.be"
+#~ msgstr ""
 
