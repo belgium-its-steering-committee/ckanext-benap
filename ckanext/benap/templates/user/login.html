@@ -38,13 +38,9 @@
   <section class="module module-narrow module-shallow">
     <h2 class="module-heading">{{ _('Forgotten your username?') }}</h2>
     <div class="module-content">
-        <ol class="pl-12">
-            <li>{{ _('Find your name in the') }}
-                <a href="{{ h.get_site_protocol_and_host()[0] }}://{{ h.get_site_protocol_and_host()[1] }}/{{ h.lang() }}/user">{{ _('list of users') }}</a>
-            </li>
-            <li>Click on it</li>
-            <li>{{ _('Your username is the last part of the URL') }} ({{ h.get_site_protocol_and_host()[0] }}://{{ h.get_site_protocol_and_host()[1] }}/{{ h.lang() }}/user/username)</li>
-        </ol>
+        <p>
+          {{ _('Send us an e-mail at <a href="mailto:contact@transportdata.be" target="_top">contact@transportdata.be</a> mentioning your name and, if applicable, your organisation. ') }}
+        </p>
     </div>
   </section>
 {% endblock %}
