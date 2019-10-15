@@ -1,19 +1,17 @@
-# Dutch translations for ckanext-benap.
+# Translations template for ckanext-benap.
 # Copyright (C) 2019 ORGANIZATION
-# This file is distributed under the same license as the ckanext-benap
-# project.
+# This file is distributed under the same license as the ckanext-benap project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-10-15 14:52+0200\n"
-"PO-Revision-Date: 2019-09-20 17:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: nl\n"
-"Language-Team: nl <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,27 +19,25 @@ msgstr ""
 
 #: ckanext/benap/validators.py:18
 msgid "Phone number {number} is not a valid format"
-msgstr "Het telefoonnummer {number}  is niet in een geldig formaat."
+msgstr ""
 
 #: ckanext/benap/validators.py:25
 msgid "Belgium is a required country"
-msgstr "België is een verplicht land"
+msgstr ""
 
 #: ckanext/benap/validators.py:52
 msgid "Start date must be before end date"
-msgstr "Startdatum moet voor de einddatum zijn"
+msgstr ""
 
 #: ckanext/benap/templates/base.html:37
 msgid ""
 "Belgium&#39;s national access point for multimodal travel information "
 "services."
 msgstr ""
-"Belgisch nationaal toegangspunt voor informatiediensten over multimodale "
-"verplaatsingen."
 
 #: ckanext/benap/templates/footer.html:9
 msgid "About Transportdata.be"
-msgstr "over Transportdata.be"
+msgstr ""
 
 #: ckanext/benap/templates/footer.html:14
 msgid "Github"
@@ -49,7 +45,7 @@ msgstr ""
 
 #: ckanext/benap/templates/footer.html:16
 msgid "CKAN API"
-msgstr "CKAN API"
+msgstr ""
 
 #: ckanext/benap/templates/footer.html:33
 msgid "Powered by <a href=\"http://ckan.org\">CKAN</a>"
@@ -57,106 +53,104 @@ msgstr ""
 
 #: ckanext/benap/templates/footer.html:52
 msgid ""
-"2019 - By the National Geographic Institute on behalf of the ITS steering"
-" commitee."
+"2019 - By the National Geographic Institute on behalf of the ITS steering "
+"commitee."
 msgstr ""
 
 #: ckanext/benap/templates/header.html:9
 msgid "Sysadmin settings"
-msgstr "Instelligen van systeemadministrator"
+msgstr ""
 
 #: ckanext/benap/templates/header.html:11
 msgid "Admin"
-msgstr "Admin"
+msgstr ""
 
 #: ckanext/benap/templates/header.html:16
 msgid "View profile"
-msgstr "Profiel bekijken"
+msgstr ""
 
 #: ckanext/benap/templates/header.html:28
 #, python-format
 msgid "Dashboard (%(num)d new item)"
 msgid_plural "Dashboard (%(num)d new items)"
-msgstr[0] "Dashboard (%(num)d nieuw item)"
-msgstr[1] "Dashboard (%(num)d nieuwe items)"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ckanext/benap/templates/header.html:32
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr ""
 
 #: ckanext/benap/templates/header.html:38
 #: ckanext/benap/templates/user/dashboard.html:6
 msgid "Edit settings"
-msgstr "Instellingen editen "
+msgstr ""
 
 #: ckanext/benap/templates/header.html:40
 msgid "Settings"
-msgstr "Instellingen"
+msgstr ""
 
-#: ckanext/benap/templates/header.html:45
-#: ckanext/benap/templates/header.html:47
+#: ckanext/benap/templates/header.html:45 ckanext/benap/templates/header.html:47
 msgid "Log out"
-msgstr "Log-out"
+msgstr ""
 
 #: ckanext/benap/templates/header.html:62
 #: ckanext/benap/templates/home/snippets/search.html:30
 msgid "Log in"
-msgstr "Log-in"
+msgstr ""
 
-#: ckanext/benap/templates/header.html:64
-#: ckanext/benap/templates/user/new.html:3
+#: ckanext/benap/templates/header.html:64 ckanext/benap/templates/user/new.html:3
 msgid "Register"
-msgstr "Registreren"
+msgstr ""
 
 #: ckanext/benap/templates/header.html:90
 msgid "Datasets"
-msgstr "Datasets"
+msgstr ""
 
 #: ckanext/benap/templates/header.html:90
 msgid "Organizations"
-msgstr "Organisaties"
+msgstr ""
 
 #: ckanext/benap/templates/header.html:91
 msgid "Groups"
-msgstr "Groepen"
+msgstr ""
 
 #: ckanext/benap/templates/header.html:91
 msgid "About"
-msgstr "Over"
+msgstr ""
 
 #: ckanext/benap/templates/header.html:97
 msgid "Search"
-msgstr "Zoek"
+msgstr ""
 
 #: ckanext/benap/templates/home/snippets/community.html:7
 msgid "JOIN OUR COMMUNITY FORUM"
-msgstr "VOEG JE BIJ ONZE GEMEENSCHAPPELIJKE FORUM"
+msgstr ""
 
 #: ckanext/benap/templates/home/snippets/community.html:12
 msgid ""
-"As transport data producer or user, join our online community and benefit"
-" from experience-sharing with your fellows!"
+"As transport data producer or user, join our online community and benefit "
+"from experience-sharing with your fellows!"
 msgstr ""
 
 #: ckanext/benap/templates/home/snippets/community.html:16
 msgid "Join"
-msgstr "Sluit je aan"
+msgstr ""
 
 #: ckanext/benap/templates/home/snippets/feedback.html:4
 msgid "HELP US"
-msgstr "JE KAN ONS HELPEN"
+msgstr ""
 
 #: ckanext/benap/templates/home/snippets/feedback.html:5
 msgid "GIVE SOME FEEDBACK"
-msgstr "GEEF ONS FEEDBACK"
+msgstr ""
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:5
 msgid "SUBSCRIBE"
-msgstr "SCHRIJF IN"
+msgstr ""
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:6
 msgid "TO NEWSLETTER"
-msgstr "OP ONZE NIEUWSBRIEF"
+msgstr ""
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:10
 msgid "Enter your email address"
@@ -168,33 +162,30 @@ msgstr ""
 
 #: ckanext/benap/templates/home/snippets/promoted.html:8
 msgid "DISCOVER TRANSPORTDATA.BE"
-msgstr "ONTDEK TRANSPORTDATA.BE"
+msgstr ""
 
 #: ckanext/benap/templates/home/snippets/promoted.html:9
 msgid "AND HOW YOU ARE INVOLVED"
-msgstr "EN HOE JE DAARIN BETROKKEN BENT"
+msgstr ""
 
 #: ckanext/benap/templates/home/snippets/promoted.html:13
 msgid ""
-"Transportdata.be is the preferred access point for information on "
-"Intelligent Transport Systems (ITS). This national platform aims to "
-"centralize access to ITS datasets and web services."
+"Transportdata.be is the preferred access point for information on Intelligent"
+" Transport Systems (ITS). This national platform aims to centralize access to"
+" ITS datasets and web services."
 msgstr ""
-"Transportdata.be is het bevoorrechte toegangspunt voor informatie over "
-"intelligente vervoerssystemen (ITS). Deze nationale platform heeft als "
-"doel de toegang tot ITS datasets en webdiensten te centraliseren."
 
 #: ckanext/benap/templates/home/snippets/report.html:4
 msgid "LINK DOESN' T WORK?"
-msgstr "WERKT DE LINK NIET?"
+msgstr ""
 
 #: ckanext/benap/templates/home/snippets/report.html:5
 msgid "REPORT IT HERE"
-msgstr "MELD HET HIER"
+msgstr ""
 
 #: ckanext/benap/templates/home/snippets/search.html:2
 msgid "E.g. environment"
-msgstr "Bv. leefmilieu"
+msgstr ""
 
 #: ckanext/benap/templates/home/snippets/search.html:5
 msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
@@ -202,29 +193,27 @@ msgstr ""
 
 #: ckanext/benap/templates/home/snippets/search.html:9
 msgid "SEARCH FOR DATA SETS"
-msgstr "ZOEK NAAR DATASETS"
+msgstr ""
 
 #: ckanext/benap/templates/home/snippets/search.html:11
 msgid "ex. transport, cars, trains, ..."
-msgstr "Bv. autodelen, trein, fietsverhuur, enz."
+msgstr ""
 
 #: ckanext/benap/templates/home/snippets/search.html:17
 msgid "Popular Tags"
-msgstr "Populaire tags"
+msgstr ""
 
 #: ckanext/benap/templates/home/snippets/search.html:24
 msgid "ADD NEW DATA"
-msgstr "NIEUWE GEGEVENS TOEVOEGEN"
+msgstr ""
 
 #: ckanext/benap/templates/home/snippets/search.html:26
 msgid "Data providers can easily add data to the catalogue."
 msgstr ""
-"Gegevensleveranciers kunnen gemakkelijk gegevens aan de catalogus "
-"toevoegen."
 
 #: ckanext/benap/templates/home/snippets/search.html:28
 msgid "Add Data"
-msgstr "Gegevens toevoegen"
+msgstr ""
 
 #: ckanext/benap/templates/package/snippets/resource_help.html:2
 msgid "What's a resource?"
@@ -232,26 +221,26 @@ msgstr ""
 
 #: ckanext/benap/templates/package/snippets/resource_help.html:4
 msgid ""
-"A resource is preferrably a link to your transport dataset or transport "
-"data service. However, if access requires authentification or signature "
-"of a license agreement, you may just add a link to your website/data "
-"portal. If your data is not hosted on an existing website, in that case "
-"you may upload it on transportdata.be"
+"A resource is preferrably a link to your transport dataset or transport data "
+"service. However, if access requires authentification or signature of a "
+"license agreement, you may just add a link to your website/data portal. If "
+"your data is not hosted on an existing website, in that case you may upload "
+"it on transportdata.be"
 msgstr ""
 
 #: ckanext/benap/templates/package/snippets/resource_help.html:5
 msgid ""
-"Adding a link (or uploading a file) is compulsory as per Commission "
-"Delegated Regulation (EU) 2017/1926."
+"Adding a link (or uploading a file) is compulsory as per Commission Delegated"
+" Regulation (EU) 2017/1926."
 msgstr ""
 
 #: ckanext/benap/templates/snippets/language_selector.html:3
 msgid "Language"
-msgstr "Taal"
+msgstr ""
 
 #: ckanext/benap/templates/snippets/language_selector.html:11
 msgid "Go"
-msgstr "Gaan"
+msgstr ""
 
 #: ckanext/benap/templates/snippets/package_item.html:9
 msgid "Private"
@@ -267,7 +256,7 @@ msgstr ""
 
 #: ckanext/benap/templates/snippets/package_item.html:32
 msgid "This dataset has no description"
-msgstr "Er is geen beschrijving voor deze dataset."
+msgstr ""
 
 #: ckanext/benap/templates/user/dashboard.html:9
 #: ckanext/benap/templates/user/dashboard.html:29
@@ -275,14 +264,12 @@ msgid "News feed"
 msgstr ""
 
 #: ckanext/benap/templates/user/dashboard.html:10
-#, fuzzy
 msgid "My Datasets"
-msgstr "Datasets"
+msgstr ""
 
 #: ckanext/benap/templates/user/dashboard.html:11
-#, fuzzy
 msgid "My Organizations"
-msgstr "Organisaties"
+msgstr ""
 
 #: ckanext/benap/templates/user/dashboard.html:20
 msgid "Have you just just created an account?"
@@ -326,22 +313,18 @@ msgstr ""
 
 #: ckanext/benap/templates/user/login.html:39
 msgid "Forgotten your username?"
-msgstr "Gebruikersnaam vergeten?"
+msgstr ""
 
 #: ckanext/benap/templates/user/login.html:42
 msgid ""
 "Send us an e-mail at <a href=\"mailto:contact@transportdata.be\" "
-"target=\"_top\">contact@transportdata.be</a> mentioning your name and, if"
-" applicable, your organisation. "
+"target=\"_top\">contact@transportdata.be</a> mentioning your name and, if "
+"applicable, your organisation. "
 msgstr ""
-"Stuur ons een e-mail op <a href=\"mailto:contact@transportdata.be\" "
-"target=\"_top\">contact@transportdata.be</a> met uw naam en, indien van "
-"toepassing, uw organisatie."
 
 #: ckanext/benap/templates/user/new.html:6
-#, fuzzy
 msgid "Registration"
-msgstr "Organisaties"
+msgstr ""
 
 #: ckanext/benap/templates/user/new.html:14
 msgid "Register for an Account"
@@ -369,33 +352,8 @@ msgstr ""
 
 #: ckanext/benap/templates/user/new.html:33
 msgid ""
-"Please choose a username (and make sure never to forget it) containing "
-"only lowercase letters and no special character except - and _ Fill in "
-"the other fields and press \"Create account\""
+"Please choose a username (and make sure never to forget it) containing only "
+"lowercase letters and no special character except - and _ Fill in the other "
+"fields and press \"Create account\""
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Find your name in the"
-#~ msgstr ""
-
-#~ msgid "list of users"
-#~ msgstr ""
-
-#~ msgid "Your username is the last part of the URL"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "As transport data producer or user, "
-#~ "join our online community and benefit"
-#~ " from experience-sharing with your "
-#~ "fellows !"
-#~ msgstr ""
-
-#~ msgid "HELP US WITH OUR SITE"
-#~ msgstr "JE KAN ONS MET ONZE WEBSITE HELPEN"
-
-#~ msgid "WHAT THE PURPOSE IS AND HOW YOU ARE INVOLVED"
-#~ msgstr "WAT DAARMEE BEDOELD IS EN HOE JE DAARIN BETROKKEN BENT"
 

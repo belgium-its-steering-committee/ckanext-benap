@@ -117,10 +117,10 @@
       "validators": "scheming_required email_validator not_empty",
       "form_placeholder": "data@my-organization.com",
       "help_text": {
-        "en": "E-mail address to be contacted for transport data related matters. The address must contain @ and a dot.",
-        "fr": "Adresse e-mail à contacter pour les question liées aux données de transport. L'adresse doit contenir une @ et un point.",
-        "nl": "E-mailadres te contacteren voor vragen met betrekking tot vervoersgegevens. Het adres moet een @ en een punt inhouden.",
-        "de": "E-Mail zu kontaktieren für Fragen bezüglich der Verkehrsdaten. Die Adresse muss @ und einen Punkt beinhalten."
+        "en": "E-mail address to be contacted for transport data related matters. Please use a general e-mail address (not a personal one). The address must contain @ and a dot.",
+        "fr": "Veuillez utiliser une adresse e-mail générale (et non personnelle). Adresse e-mail à contacter pour les question liées aux données de transport. L'adresse doit contenir une @ et un point.",
+        "nl": "Gelieve bij voorkeer een algemeen e-mailadres te gebruiken (geen persoonlijk). E-mailadres te contacteren voor vragen met betrekking tot vervoersgegevens. Het adres moet een @ en een punt inhouden.",
+        "de": "Bitte verwenden Sie eine allgemeine E-Mail-Adresse (keine persönliche). E-Mail zu kontaktieren für Fragen bezüglich der Verkehrsdaten. Die Adresse muss @ und einen Punkt beinhalten."
       },
       "required": true
     },

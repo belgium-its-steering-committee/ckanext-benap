@@ -27,23 +27,27 @@ def countries_covered_belgium(value, context):
 
 
 def is_after_start(key, flattened_data, errors, context):
+    temporal_end_dict = None
     try:
         for k in flattened_data:
             if k == ('__extras',):
                 temporal_end_dict = flattened_data[k]
             elif k == (u'temporal_end',):
-                if temporal_end_dict['temporal_end_date'] and temporal_end_dict['temporal_end_time']:
+                if temporal_end_dict and temporal_end_dict.get('temporal_end_date', None) and \
+                        temporal_end_dict.get('temporal_end_time', None):
                     flattened_data[k] = temporal_end_dict['temporal_end_date'] + ' ' + temporal_end_dict[
                         'temporal_end_time']
-                elif temporal_end_dict['temporal_end_date']:
+                elif temporal_end_dict and temporal_end_dict.get('temporal_end_date', None):
                     flattened_data[k] = temporal_end_dict['temporal_end_date'] + ' 00:00:00.000000'
                 else:
                     flattened_data[k] = ''
     except KeyError:
         return True
-    start_date = temporal_end_dict['temporal_start_date'] + ' ' + temporal_end_dict['temporal_start_time']
-    end_date = temporal_end_dict['temporal_end_date'] + ' ' + temporal_end_dict['temporal_end_time']
-    if temporal_end_dict['temporal_end_date']:
-        if start_date > end_date:
-            raise Invalid(_('Start date must be before end date'))
+    if temporal_end_dict:
+        start_date = temporal_end_dict.get('temporal_start_date', '') + ' ' + \
+                     temporal_end_dict.get('temporal_start_time', '')
+        end_date = temporal_end_dict.get('temporal_end_date', '') + ' ' + temporal_end_dict.get('temporal_end_time', '')
+        if temporal_end_dict.get('temporal_end_date', None):
+            if start_date > end_date:
+                raise Invalid(_('Start date must be before end date'))
     return True

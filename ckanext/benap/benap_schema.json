@@ -204,10 +204,10 @@
       "display_snippet": "email.html",
       "display_email_name_field": "publisher_name",
       "help_text": {
-        "en": "The email adress must contain @ and a dot.",
-        "fr": "L'adresse e-mail doit contenir @ et un point.",
-        "nl": "Het e-mailadres moet  @ en een punt inhouden.",
-        "de": "Die E-Mail muss  @ und einen Punkt beinhalten."
+        "en": "Please use a general e-mail address (not a personal one). The email adress must contain @ and a dot.",
+        "fr": "Veuillez utiliser une adresse e-mail générale (et non personnelle). L'adresse e-mail doit contenir @ et un point.",
+        "nl": "Gelieve bij voorkeer een algemeen e-mailadres te gebruiken (geen persoonlijk). Het e-mailadres moet  @ en een punt inhouden.",
+        "de": "Bitte verwenden Sie eine allgemeine E-Mail-Adresse (keine persönliche). Die E-Mail muss  @ und einen Punkt beinhalten."
       },
       "required": "true",
       "validators": "email_validator not_empty"

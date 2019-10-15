@@ -27,26 +27,27 @@ fieldset.checkboxes label input {
     )
 %}
     {%- set lang = h.lang() -%}
+    {%- set english = 'en' -%}
   {%- set choices = h.get_translated_tags() -%}
   {%- if field.get('sorted_choices') -%}
     {%- set choices = choices|sort(case_sensitive=false, attribute=1) -%}
   {%- endif -%}
     <fieldset class="checkboxes">
         {%- for tags, category in choices -%}
-            <div id="collapse-{{ h.benap_scheming_language_text(category, lang) }}" class="flex-between border-1" style="padding: 6px 12px">
+            <div id="collapse-{{ h.benap_scheming_language_text(category, english) }}" class="flex-between border-1" style="padding: 6px 12px">
                 <h3 class="m-0" style="font-size: 14px; font-weight: bold;">
                     {{ h.benap_scheming_language_text(category, lang) }}
                 </h3>
-                <div id="collapse-{{ h.benap_scheming_language_text(category, lang) }}-open" style="padding-right: 4px; font-size: 10px;">
+                <div id="collapse-{{ h.benap_scheming_language_text(category, english) }}-open" style="padding-right: 4px; font-size: 10px;">
                     <span class="caret"></span>
                 </div>
-                <div id="collapse-{{ h.benap_scheming_language_text(category, lang) }}-close" style="padding-right: 4px; font-size: 10px;">
+                <div id="collapse-{{ h.benap_scheming_language_text(category, english) }}-close" style="padding-right: 4px; font-size: 10px;">
                     <span class="dropup">
                         <span class="caret"></span>
                     </span>
                 </div>
             </div>
-            <div id="collapse-content-{{ h.benap_scheming_language_text(category, lang) }}" class="border-1 pl-12 transport-mode-collapse-content">
+            <div id="collapse-content-{{ h.benap_scheming_language_text(category, english) }}" class="border-1 pl-12 transport-mode-collapse-content">
                 {%- for val, label in tags -%}
                     <label for="field-{{ field.field_name }}-{{ val }}">
                         <input id="field-{{ field.field_name }}-{{ val }}"
@@ -79,12 +80,12 @@ fieldset.checkboxes label input {
                 {%- endfor -%}
             </div>
             <script>
-                $('#collapse-content-{{ h.benap_scheming_language_text(category, lang) }}').toggle();
-                $('#collapse-{{ h.benap_scheming_language_text(category, lang) }}-close').toggle();
-                $('#collapse-{{ h.benap_scheming_language_text(category, lang) }}').click(function() {
-                    $('#collapse-content-{{ h.benap_scheming_language_text(category, lang) }}').toggle();
-                    $('#collapse-{{ h.benap_scheming_language_text(category, lang) }}-close').toggle();
-                    $('#collapse-{{ h.benap_scheming_language_text(category, lang) }}-open').toggle();
+                $('#collapse-content-{{ h.benap_scheming_language_text(category, english) }}').toggle();
+                $('#collapse-{{ h.benap_scheming_language_text(category, english) }}-close').toggle();
+                $('#collapse-{{ h.benap_scheming_language_text(category, english) }}').click(function() {
+                    $('#collapse-content-{{ h.benap_scheming_language_text(category, english) }}').toggle();
+                    $('#collapse-{{ h.benap_scheming_language_text(category, english) }}-close').toggle();
+                    $('#collapse-{{ h.benap_scheming_language_text(category, english) }}-open').toggle();
                 });
             </script>
         {%- endfor -%}

@@ -221,9 +221,20 @@ h1.logo span {
     font-size:14px
 }
 
+.mw-75 {
+    max-width: 60%;
+}
+
+.community-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .register-flex {
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
 }
 
 .register-flex p {
@@ -409,7 +420,7 @@ button {
     border-radius: 0;
     border: 1px solid #9e9d9d;
     height: 34px;
-    width: calc( 100% - 132px );
+    width: calc( 100% - 152px );
 }
 
 .input-email::placeholder {
