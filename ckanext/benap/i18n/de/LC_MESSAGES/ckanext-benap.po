@@ -134,7 +134,7 @@ msgstr "SCHLIESSEN SIE SICH UNSEREM GEMEINSCHAFTLICHEN FORUM AN"
 msgid ""
 "As transport data producer or user, join our online community and benefit"
 " from experience-sharing with your fellows!"
-msgstr ""
+msgstr "Treten Sie als Transportdatenproduzent oder -benutzer unserer Online-Community bei und profitieren Sie vom Erfahrungsaustausch mit Ihren Kollegen!"
 
 #: ckanext/benap/templates/home/snippets/community.html:16
 msgid "Join"
