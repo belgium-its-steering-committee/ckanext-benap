@@ -41,7 +41,7 @@ msgstr ""
 
 #: ckanext/benap/templates/footer.html:9
 msgid "About Transportdata.be"
-msgstr "over Transportdata.be"
+msgstr "Over Transportdata.be"
 
 #: ckanext/benap/templates/footer.html:14
 msgid "Github"
@@ -160,7 +160,7 @@ msgstr "OP ONZE NIEUWSBRIEF"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:10
 msgid "Enter your email address"
-msgstr ""
+msgstr "Vul je e-mailadres in"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:11
 msgid "Subscribe"
@@ -198,7 +198,7 @@ msgstr "Bv. leefmilieu"
 
 #: ckanext/benap/templates/home/snippets/search.html:5
 msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
-msgstr ""
+msgstr "BELGISCH NATIONAAL TOEGANGSPUNT VOOR INFORMATIEDIENSTEN OVER MULTIMODALE VERPLAATSINGEN"
 
 #: ckanext/benap/templates/home/snippets/search.html:9
 msgid "SEARCH FOR DATA SETS"
@@ -286,15 +286,15 @@ msgstr "Organisaties"
 
 #: ckanext/benap/templates/user/dashboard.html:20
 msgid "Have you just just created an account?"
-msgstr ""
+msgstr "Heb je zojuist een account aangemaakt?"
 
 #: ckanext/benap/templates/user/dashboard.html:22
 msgid "If yes, you will find more information on what to do in our "
-msgstr ""
+msgstr "Indien wel, dan vind je meer informatie over wat je kan doen op onze "
 
 #: ckanext/benap/templates/user/dashboard.html:23
 msgid "about section."
-msgstr ""
+msgstr "pagina Over."
 
 #: ckanext/benap/templates/user/dashboard.html:31
 msgid "Activity from items that I'm following"
@@ -302,27 +302,27 @@ msgstr ""
 
 #: ckanext/benap/templates/user/login.html:8
 msgid "Need an Account?"
-msgstr ""
+msgstr "Heb je een Account nodig?"
 
 #: ckanext/benap/templates/user/login.html:10
 msgid "Then sign right up, it only takes a minute."
-msgstr ""
+msgstr "Schrijf je nu in, het kost je alleen een minuut."
 
 #: ckanext/benap/templates/user/login.html:13
 msgid "Create an Account"
-msgstr ""
+msgstr "Account aanmaken"
 
 #: ckanext/benap/templates/user/login.html:25
 msgid "Forgotten your password?"
-msgstr ""
+msgstr "Wachtwoord vergeten?"
 
 #: ckanext/benap/templates/user/login.html:27
 msgid "No problem, use our password recovery form to reset it."
-msgstr ""
+msgstr "Geen probleem, gebruik ons wachtwoordherstelformulier om je wachtwoord opnieuw in te stellen."
 
 #: ckanext/benap/templates/user/login.html:30
 msgid "Forgot your password?"
-msgstr ""
+msgstr "Wachtwoord vergeten?"
 
 #: ckanext/benap/templates/user/login.html:39
 msgid "Forgotten your username?"

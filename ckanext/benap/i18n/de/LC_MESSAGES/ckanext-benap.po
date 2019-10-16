@@ -39,7 +39,7 @@ msgstr ""
 
 #: ckanext/benap/templates/footer.html:9
 msgid "About Transportdata.be"
-msgstr "uber Transportdata.be"
+msgstr "&#220;ber Transportdata.be"
 
 #: ckanext/benap/templates/footer.html:14
 msgid "Github"
@@ -142,11 +142,11 @@ msgstr "Melden Sie sich an"
 
 #: ckanext/benap/templates/home/snippets/feedback.html:4
 msgid "HELP US"
-msgstr "HELFEN SIE UNS"
+msgstr "GEBEN SIE"
 
 #: ckanext/benap/templates/home/snippets/feedback.html:5
 msgid "GIVE SOME FEEDBACK"
-msgstr "GIB UNS FEEDBACK"
+msgstr "UNS FEEDBACK"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:5
 msgid "SUBSCRIBE"
@@ -158,7 +158,7 @@ msgstr "UNSEREN NEWSLETTER"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:10
 msgid "Enter your email address"
-msgstr ""
+msgstr "Geben sie ihre E-Mailadresse ein"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:11
 msgid "Subscribe"
@@ -284,15 +284,16 @@ msgstr ""
 
 #: ckanext/benap/templates/user/dashboard.html:20
 msgid "Have you just just created an account?"
-msgstr ""
+msgstr "Haben Sie gerade ein Benutzerkonto erstellt?"
 
 #: ckanext/benap/templates/user/dashboard.html:22
 msgid "If yes, you will find more information on what to do in our "
 msgstr ""
+"Wenn ja, konsultieren Sie unseren Abschnitt für "
 
 #: ckanext/benap/templates/user/dashboard.html:23
 msgid "about section."
-msgstr ""
+msgstr "weitere Informationen."
 
 #: ckanext/benap/templates/user/dashboard.html:31
 msgid "Activity from items that I'm following"
@@ -300,27 +301,27 @@ msgstr ""
 
 #: ckanext/benap/templates/user/login.html:8
 msgid "Need an Account?"
-msgstr ""
+msgstr "Benötigen Sie ein Benutzerkonto?"
 
 #: ckanext/benap/templates/user/login.html:10
 msgid "Then sign right up, it only takes a minute."
-msgstr ""
+msgstr "Dann registrieren Sie sich, es dauert nur eine Minute."
 
 #: ckanext/benap/templates/user/login.html:13
 msgid "Create an Account"
-msgstr ""
+msgstr "Erstelle ein Benutzerkonto"
 
 #: ckanext/benap/templates/user/login.html:25
 msgid "Forgotten your password?"
-msgstr ""
+msgstr "Haben Sie Ihr Kennwort vergessen?"
 
 #: ckanext/benap/templates/user/login.html:27
 msgid "No problem, use our password recovery form to reset it."
-msgstr ""
+msgstr "Kein Problem, nutzen Sie unser Formular um Ihr Passwort zurückzusetzen."
 
 #: ckanext/benap/templates/user/login.html:30
 msgid "Forgot your password?"
-msgstr ""
+msgstr "Haben Sie Ihr Kennwort vergessen?"
 
 #: ckanext/benap/templates/user/login.html:39
 msgid "Forgotten your username?"
@@ -381,13 +382,6 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Your username is the last part of the URL"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "As transport data producer or user, "
-#~ "join our online community and benefit"
-#~ " from experience-sharing with your "
-#~ "fellows !"
 #~ msgstr ""
 
 #~ msgid "HELP US WITH OUR SITE"

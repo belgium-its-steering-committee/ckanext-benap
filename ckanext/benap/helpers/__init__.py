@@ -1104,7 +1104,7 @@ def get_translated_tags():
              ("Maritime",
               {
                   "en": u"Maritime (including ferry)",
-                  "nl": u"schip (m.i.v. veerboten)",
+                  "nl": u"Schip (m.i.v. veerboten)",
                   "fr": u"Maritime (y compris les ferries)",
                   "de": u"Schifffahrt (einschließlich Fähre)"
               }),

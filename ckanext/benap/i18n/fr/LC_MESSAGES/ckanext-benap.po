@@ -160,7 +160,7 @@ msgstr "A LA LETTRE DE DIFFUSION"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:10
 msgid "Enter your email address"
-msgstr ""
+msgstr "Entrez votre adresse email"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:11
 msgid "Subscribe"
@@ -179,7 +179,7 @@ msgid ""
 "Transportdata.be is the preferred access point for information on "
 "Intelligent Transport Systems (ITS). This national platform aims to "
 "centralize access to ITS datasets and web services."
-msgstr ""
+msgstr "Transportdata.be est le point d'accès privilégié pour les informations sur les Systèmes de transport intelligents (STI). Cette plateforme nationale vise à centraliser l'accès aux jeux de données et services web STI."
 
 #: ckanext/benap/templates/home/snippets/report.html:4
 msgid "LINK DOESN' T WORK?"
@@ -283,15 +283,15 @@ msgstr ""
 
 #: ckanext/benap/templates/user/dashboard.html:20
 msgid "Have you just just created an account?"
-msgstr ""
+msgstr "Vous venez de créer un compte?"
 
 #: ckanext/benap/templates/user/dashboard.html:22
 msgid "If yes, you will find more information on what to do in our "
-msgstr ""
+msgstr "Si oui, vous trouverez plus d'informations sur ce qu'il faut faire dans notre "
 
 #: ckanext/benap/templates/user/dashboard.html:23
 msgid "about section."
-msgstr ""
+msgstr "section A propos."
 
 #: ckanext/benap/templates/user/dashboard.html:31
 msgid "Activity from items that I'm following"
@@ -299,27 +299,27 @@ msgstr ""
 
 #: ckanext/benap/templates/user/login.html:8
 msgid "Need an Account?"
-msgstr ""
+msgstr "Vous avez besoin d'un Compte?"
 
 #: ckanext/benap/templates/user/login.html:10
 msgid "Then sign right up, it only takes a minute."
-msgstr ""
+msgstr "Alors inscrivez-vous tout de suite, il n'y en a que pour une minute."
 
 #: ckanext/benap/templates/user/login.html:13
 msgid "Create an Account"
-msgstr ""
+msgstr "Créer un Compte"
 
 #: ckanext/benap/templates/user/login.html:25
 msgid "Forgotten your password?"
-msgstr ""
+msgstr "Mot de passe oublié?"
 
 #: ckanext/benap/templates/user/login.html:27
 msgid "No problem, use our password recovery form to reset it."
-msgstr ""
+msgstr "Aucun problème, utilisez notre formulaire de regénération du mot de passe pour le réinitialiser."
 
 #: ckanext/benap/templates/user/login.html:30
 msgid "Forgot your password?"
-msgstr ""
+msgstr "Mot de passe oublié?"
 
 #: ckanext/benap/templates/user/login.html:39
 msgid "Forgotten your username?"
