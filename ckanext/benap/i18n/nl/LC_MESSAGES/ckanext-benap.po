@@ -186,7 +186,7 @@ msgstr ""
 
 #: ckanext/benap/templates/home/snippets/report.html:4
 msgid "LINK DOESN' T WORK?"
-msgstr "WERKT DE LINK NIET?"
+msgstr "WERKT EEN LINK NIET?"
 
 #: ckanext/benap/templates/home/snippets/report.html:5
 msgid "REPORT IT HERE"
