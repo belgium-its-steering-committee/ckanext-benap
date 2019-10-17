@@ -863,39 +863,39 @@ def ontology_helper(context):
         return map_for_form_select([
             ('nolinoco', {
                 "en": u"No license – No contract",
-                "fr": u"No license – No contract",
-                "nl": u"No license – No contract",
-                "de": u"No license – No contract"
+                "fr": u"Pas de licence - Pas de contrat",
+                "nl": u"Geen licentie - Geen contract",
+                "de": u"Keine Lizenz - Kein Vertrag"
             }),
             ('lifree', {
                 "en": u"Licence and Free of charge",
-                "fr": u"Licence and Free of charge",
-                "nl": u"Licence and Free of charge",
-                "de": u"Licence and Free of charge"
+                "fr": u"Licence et gratuit",
+                "nl": u"Licentie en gratis",
+                "de": u"Lizenz und kostenlos"
             }),
             ('linotfree', {
                 "en": u"Licence and Fee",
-                "fr": u"Licence and Fee",
-                "nl": u"Licence and Fee",
-                "de": u"Licence and Fee"
+                "fr": u"Licence et frais",
+                "nl": u"Licentie en vergoeding",
+                "de": u"Lizenz und Gebühr"
             }),
             ('cofree', {
                 "en": u"Contract and Free of charge",
-                "fr": u"Contract and Free of charge",
-                "nl": u"Contract and Free of charge",
-                "de": u"Contract and Free of charge"
+                "fr": u"Contrat et gratuit",
+                "nl": u"Contract en gratis",
+                "de": u"Vertrag und kostenlos"
             }),
             ('conotfree', {
                 "en": u"Contract and Fee",
-                "fr": u"Contract and Fee",
-                "nl": u"Contract and Fee",
-                "de": u"Contract and Fee"
+                "fr": u"Contrat et frais",
+                "nl": u"Contract en vergoeding",
+                "de": u"Vertrag und Gebühr"
             }),
             ('notrelevant', {
                 "en": u"Not relevant",
-                "fr": u"Not relevant",
-                "nl": u"Not relevant",
-                "de": u"Not relevant"
+                "fr": u"Non pertinent",
+                "nl": u"Niet relevant",
+                "de": u"Nicht relevant"
             }),
         ])
 
