@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-15 14:52+0200\n"
+"POT-Creation-Date: 2019-10-18 15:49+0200\n"
 "PO-Revision-Date: 2019-09-20 17:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -25,17 +25,17 @@ msgstr "Die Telefonnummer {number} ist nicht in einem  gultigen Format."
 
 #: ckanext/benap/validators.py:25
 msgid "Belgium is a required country"
-msgstr ""
+msgstr "Belgien ist ein erforderliches Land"
 
 #: ckanext/benap/validators.py:52
 msgid "Start date must be before end date"
-msgstr ""
+msgstr "Das Startdatum muss vor dem Enddatum liegen"
 
 #: ckanext/benap/templates/base.html:37
 msgid ""
 "Belgium&#39;s national access point for multimodal travel information "
 "services."
-msgstr ""
+msgstr "Nationaler belgischer Zugangspunkt für Informationendienste zu multimodalen Reisen."
 
 #: ckanext/benap/templates/footer.html:9
 msgid "About Transportdata.be"
@@ -43,21 +43,22 @@ msgstr "uber Transportdata.be"
 
 #: ckanext/benap/templates/footer.html:14
 msgid "Github"
-msgstr ""
+msgstr "Github"
 
 #: ckanext/benap/templates/footer.html:16
 msgid "CKAN API"
-msgstr ""
+msgstr "CKAN API"
 
 #: ckanext/benap/templates/footer.html:33
 msgid "Powered by <a href=\"http://ckan.org\">CKAN</a>"
-msgstr ""
+msgstr "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 
 #: ckanext/benap/templates/footer.html:52
 msgid ""
 "2019 - By the National Geographic Institute on behalf of the ITS steering"
 " commitee."
-msgstr ""
+msgstr "2019 - By the National Geographic Institute on behalf of the ITS steering"
+" commitee."
 
 #: ckanext/benap/templates/header.html:9
 msgid "Sysadmin settings"
@@ -65,7 +66,7 @@ msgstr "Parameter des Systemadministrators"
 
 #: ckanext/benap/templates/header.html:11
 msgid "Admin"
-msgstr ""
+msgstr "Administrator"
 
 #: ckanext/benap/templates/header.html:16
 msgid "View profile"
@@ -104,19 +105,19 @@ msgstr "Anmeldung"
 #: ckanext/benap/templates/header.html:64
 #: ckanext/benap/templates/user/new.html:3
 msgid "Register"
-msgstr ""
+msgstr "Registrieren"
 
 #: ckanext/benap/templates/header.html:90
 msgid "Datasets"
-msgstr ""
+msgstr "Datensätze"
 
 #: ckanext/benap/templates/header.html:90
 msgid "Organizations"
-msgstr ""
+msgstr "Organisationen"
 
 #: ckanext/benap/templates/header.html:91
 msgid "Groups"
-msgstr ""
+msgstr "Gruppen"
 
 #: ckanext/benap/templates/header.html:91
 msgid "About"
@@ -134,7 +135,7 @@ msgstr "SCHLIESSEN SIE SICH UNSEREM GEMEINSCHAFTLICHEN FORUM AN"
 msgid ""
 "As transport data producer or user, join our online community and benefit"
 " from experience-sharing with your fellows!"
-msgstr ""
+msgstr "Als Hersteller oder Benutzer von Verkehrsdaten können Sie sich unserer online Gemeinschaft anschliessen und vom Erfahrungsaustausch mit Ihren Kollegen geniessen!"
 
 #: ckanext/benap/templates/home/snippets/community.html:16
 msgid "Join"
@@ -158,11 +159,11 @@ msgstr "UNSEREN NEWSLETTER"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:10
 msgid "Enter your email address"
-msgstr ""
+msgstr "Geben sie ihre E-Mailadresse ein"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:11
 msgid "Subscribe"
-msgstr ""
+msgstr "Abonnieren"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:8
 msgid "DISCOVER TRANSPORTDATA.BE"
@@ -177,8 +178,7 @@ msgid ""
 "Transportdata.be is the preferred access point for information on "
 "Intelligent Transport Systems (ITS). This national platform aims to "
 "centralize access to ITS datasets and web services."
-msgstr ""
-"Transportdata.be ist der beg&#252;nstigte Zugangspunkt f&#252;r "
+msgstr "Transportdata.be ist der beg&#252;nstigte Zugangspunkt f&#252;r "
 "Informationen &#252;ber intelligente Verkehrssysteme (IVS). Diese "
 "nationale Plattform beabsichtigt die Zentralisierung des Zugangs zu IVS-"
 "Datens&#228;tzen und -Webdiensten."
@@ -197,8 +197,7 @@ msgstr "Zum B. Umwelt"
 
 #: ckanext/benap/templates/home/snippets/search.html:5
 msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
-msgstr ""
-"NATIONALER BELGISCHER ZUGANGSPUNKT F&#220;R INFORMATIONSDIENSTE ZU "
+msgstr "NATIONALER BELGISCHER ZUGANGSPUNKT F&#220;R INFORMATIONSDIENSTE ZU "
 "MULTIMODALEN REISEN"
 
 #: ckanext/benap/templates/home/snippets/search.html:9
@@ -227,7 +226,7 @@ msgstr "Daten hinzuf&#252;gen"
 
 #: ckanext/benap/templates/package/snippets/resource_help.html:2
 msgid "What's a resource?"
-msgstr ""
+msgstr "Was ist eine Ressource?"
 
 #: ckanext/benap/templates/package/snippets/resource_help.html:4
 msgid ""
@@ -236,13 +235,13 @@ msgid ""
 "of a license agreement, you may just add a link to your website/data "
 "portal. If your data is not hosted on an existing website, in that case "
 "you may upload it on transportdata.be"
-msgstr ""
+msgstr "Eine Ressource ist vorzugsweise eine Verknüpfung zu Ihrem Transportdatensatz oder Transportdatendienst. Wenn für den Zugriff jedoch die Authentifizierung oder die Unterzeichnung einer Lizenzvereinbarung erforderlich ist, können Sie einfach einen Link zu Ihrer Website/Ihrem Datenportal hinzufügen. Wenn Ihre Daten nicht auf einer vorhandenen Website gehostet werden, können Sie sie in diesem Fall auf transportdata.be hochladen"
 
 #: ckanext/benap/templates/package/snippets/resource_help.html:5
 msgid ""
 "Adding a link (or uploading a file) is compulsory as per Commission "
 "Delegated Regulation (EU) 2017/1926."
-msgstr ""
+msgstr "Das Hinzufügen eines Links (oder das Hochladen einer Datei) ist gemäß der delegierten Verordnung (EU) 2017/1926 der Kommission obligatorisch."
 
 #: ckanext/benap/templates/snippets/language_selector.html:3
 msgid "Language"
@@ -254,15 +253,15 @@ msgstr "Gehen"
 
 #: ckanext/benap/templates/snippets/package_item.html:9
 msgid "Private"
-msgstr ""
+msgstr "Privat"
 
 #: ckanext/benap/templates/snippets/package_item.html:18
 msgid "Draft"
-msgstr ""
+msgstr "Entworf"
 
 #: ckanext/benap/templates/snippets/package_item.html:20
 msgid "Deleted"
-msgstr ""
+msgstr "gelöscht"
 
 #: ckanext/benap/templates/snippets/package_item.html:32
 msgid "This dataset has no description"
@@ -271,56 +270,56 @@ msgstr "Dieser Datensatz hat keine Beschreibung."
 #: ckanext/benap/templates/user/dashboard.html:9
 #: ckanext/benap/templates/user/dashboard.html:29
 msgid "News feed"
-msgstr ""
+msgstr "Neuigkeiten"
 
 #: ckanext/benap/templates/user/dashboard.html:10
 #, fuzzy
 msgid "My Datasets"
-msgstr ""
+msgstr "meine Datensätze"
 
 #: ckanext/benap/templates/user/dashboard.html:11
 msgid "My Organizations"
-msgstr ""
+msgstr "meine Organisationen"
 
 #: ckanext/benap/templates/user/dashboard.html:20
 msgid "Have you just just created an account?"
-msgstr ""
+msgstr "Haben Sie gerade ein Konto erstellt?"
 
 #: ckanext/benap/templates/user/dashboard.html:22
 msgid "If yes, you will find more information on what to do in our "
-msgstr ""
+msgstr "Wenn ja, finden Sie weitere Informationen in unserer "
 
 #: ckanext/benap/templates/user/dashboard.html:23
 msgid "about section."
-msgstr ""
+msgstr "über abschnitt"
 
 #: ckanext/benap/templates/user/dashboard.html:31
 msgid "Activity from items that I'm following"
-msgstr ""
+msgstr "Aktivität von Elementen, denen ich folge"
 
 #: ckanext/benap/templates/user/login.html:8
 msgid "Need an Account?"
-msgstr ""
+msgstr "brauchen Sie ein Konto?"
 
 #: ckanext/benap/templates/user/login.html:10
 msgid "Then sign right up, it only takes a minute."
-msgstr ""
+msgstr "Dann melde dich gleich an, es dauert nur eine Minute."
 
 #: ckanext/benap/templates/user/login.html:13
 msgid "Create an Account"
-msgstr ""
+msgstr "Ein Konto erstellen"
 
 #: ckanext/benap/templates/user/login.html:25
 msgid "Forgotten your password?"
-msgstr ""
+msgstr "Kennwort vergessen?"
 
 #: ckanext/benap/templates/user/login.html:27
 msgid "No problem, use our password recovery form to reset it."
-msgstr ""
+msgstr "Kein Problem, verwenden Sie unser Kennwort-Wiederherstellungsformular, um es zurückzusetzen."
 
 #: ckanext/benap/templates/user/login.html:30
 msgid "Forgot your password?"
-msgstr ""
+msgstr "Kennwort vergessen?"
 
 #: ckanext/benap/templates/user/login.html:39
 msgid "Forgotten your username?"
@@ -331,68 +330,42 @@ msgid ""
 "Send us an e-mail at <a href=\"mailto:contact@transportdata.be\" "
 "target=\"_top\">contact@transportdata.be</a> mentioning your name and, if"
 " applicable, your organisation. "
-msgstr ""
-"Senden Sie uns eine E-Mail an <a href=\"mailto:contact@transportdata.be\""
+msgstr "Senden Sie uns eine E-Mail an <a href=\"mailto:contact@transportdata.be\""
 " target=\"_top\">contact@transportdata.be</a> und nennen Sie Ihren Namen "
 "und gegebenenfalls Ihre Organisation."
 
 #: ckanext/benap/templates/user/new.html:6
 msgid "Registration"
-msgstr ""
+msgstr "Registrierung"
 
 #: ckanext/benap/templates/user/new.html:14
 msgid "Register for an Account"
-msgstr ""
+msgstr "Registrieren Sie sich für ein Konto"
 
 #: ckanext/benap/templates/user/new.html:26
 msgid "Why Sign Up?"
-msgstr ""
+msgstr "Warum anmelden?"
 
 #: ckanext/benap/templates/user/new.html:29
 msgid "Check our "
-msgstr ""
+msgstr "In unserem "
 
 #: ckanext/benap/templates/user/new.html:29
 msgid "about section"
-msgstr ""
+msgstr "Abschnitt über"
 
 #: ckanext/benap/templates/user/new.html:29
 msgid " to know more!"
-msgstr ""
+msgstr " erfahren Sie mehr!"
 
 #: ckanext/benap/templates/user/new.html:31
 msgid "How to sign up?"
-msgstr ""
+msgstr "Wie melde ich mich an?"
 
 #: ckanext/benap/templates/user/new.html:33
 msgid ""
 "Please choose a username (and make sure never to forget it) containing "
 "only lowercase letters and no special character except - and _ Fill in "
 "the other fields and press \"Create account\""
-msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Find your name in the"
-#~ msgstr ""
-
-#~ msgid "list of users"
-#~ msgstr ""
-
-#~ msgid "Your username is the last part of the URL"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "As transport data producer or user, "
-#~ "join our online community and benefit"
-#~ " from experience-sharing with your "
-#~ "fellows !"
-#~ msgstr ""
-
-#~ msgid "HELP US WITH OUR SITE"
-#~ msgstr "HELFEN SIE UNS MIT UNSERER WEBSITE"
-
-#~ msgid "WHAT THE PURPOSE IS AND HOW YOU ARE INVOLVED"
-#~ msgstr "WAS DIE ABSICHT IST UND WIE SIE DARAN BETEILIGT SIND"
+msgstr "Bitte wählen Sie einen Benutzernamen (und vergessen Sie ihn nicht), der nur Kleinbuchstaben und keine Sonderzeichen außer - und _ enthält. Füllen Sie die anderen Felder aus und drücken Sie \"Konto erstellen\"."
 

@@ -1,4 +1,5 @@
 {% set tags = h.get_facet_items_dict('tags', limit=3) %}
+{% set lang = h.lang() %}
 {% set placeholder = _('E.g. environment') %}
 
 
@@ -15,8 +16,10 @@
         </form>
         <div class="tags">
             <h3 id="pop-tags">{{ _('Popular Tags') }}</h3>
+
             {% for tag in tags %}
-                <a class="rounded btn btn-light" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
+                {% set testingx = h.get_translated_tag(tag, h.lang()) %}
+                <a class="rounded btn btn-light" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(h.get_translated_tag(tag, lang), 22) }}</a>
             {% endfor %}
         </div>
     </div>
