@@ -320,7 +320,7 @@ msgstr "Geen probleem, gebruik ons wachtwoordherstelformulier om het opnieuw in 
 
 #: ckanext/benap/templates/user/login.html:30
 msgid "Forgot your password?"
-msgstr "Uw wachtwoord vergeten?""
+msgstr "Uw wachtwoord vergeten?"
 
 #: ckanext/benap/templates/user/login.html:39
 msgid "Forgotten your username?"
