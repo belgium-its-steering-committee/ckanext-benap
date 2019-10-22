@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-15 14:52+0200\n"
+"POT-Creation-Date: 2019-10-18 15:49+0200\n"
 "PO-Revision-Date: 2019-10-14 16:52+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -25,18 +25,17 @@ msgstr "Le numéro de téléphone {number} n'a pas un format valide."
 
 #: ckanext/benap/validators.py:25
 msgid "Belgium is a required country"
-msgstr ""
+msgstr "La Belgique est un pays requis"
 
 #: ckanext/benap/validators.py:52
 msgid "Start date must be before end date"
-msgstr ""
+msgstr "La date de début doit être antérieure à la date de fin"
 
 #: ckanext/benap/templates/base.html:37
 msgid ""
 "Belgium&#39;s national access point for multimodal travel information "
 "services."
-msgstr ""
-"Point d&#39;accès national belge pour les services d'information sur les "
+msgstr "Point d&#39;accès national belge pour les services d'information sur les "
 "déplacements multimodaux"
 
 #: ckanext/benap/templates/footer.html:9
@@ -45,21 +44,22 @@ msgstr "A propos de Transportdata.be"
 
 #: ckanext/benap/templates/footer.html:14
 msgid "Github"
-msgstr ""
+msgstr "Github"
 
 #: ckanext/benap/templates/footer.html:16
 msgid "CKAN API"
-msgstr ""
+msgstr "CKAN API"
 
 #: ckanext/benap/templates/footer.html:33
 msgid "Powered by <a href=\"http://ckan.org\">CKAN</a>"
-msgstr ""
+msgstr "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 
 #: ckanext/benap/templates/footer.html:52
 msgid ""
 "2019 - By the National Geographic Institute on behalf of the ITS steering"
 " commitee."
-msgstr ""
+msgstr "2019 - By the National Geographic Institute on behalf of the ITS steering"
+" commitee."
 
 #: ckanext/benap/templates/header.html:9
 msgid "Sysadmin settings"
@@ -67,7 +67,7 @@ msgstr "Paramètres de l'administrateur système"
 
 #: ckanext/benap/templates/header.html:11
 msgid "Admin"
-msgstr ""
+msgstr "Admin"
 
 #: ckanext/benap/templates/header.html:16
 msgid "View profile"
@@ -110,15 +110,15 @@ msgstr "S'enregistrer"
 
 #: ckanext/benap/templates/header.html:90
 msgid "Datasets"
-msgstr ""
+msgstr "Jeux de données"
 
 #: ckanext/benap/templates/header.html:90
 msgid "Organizations"
-msgstr ""
+msgstr "Les organisations"
 
 #: ckanext/benap/templates/header.html:91
 msgid "Groups"
-msgstr ""
+msgstr "Groupes"
 
 #: ckanext/benap/templates/header.html:91
 msgid "About"
@@ -195,8 +195,7 @@ msgstr "Par ex. environnement"
 
 #: ckanext/benap/templates/home/snippets/search.html:5
 msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
-msgstr ""
-"POINT D'ACCÈS NATIONAL BELGE POUR LES SERVICES D'INFORMATION SUR LES "
+msgstr "POINT D'ACCÈS NATIONAL BELGE POUR LES SERVICES D'INFORMATION SUR LES "
 "DÉPLACEMENTS MULTIMODAUX"
 
 #: ckanext/benap/templates/home/snippets/search.html:9
@@ -217,8 +216,7 @@ msgstr "AJOUTER NOUVELLES DONNEES"
 
 #: ckanext/benap/templates/home/snippets/search.html:26
 msgid "Data providers can easily add data to the catalogue."
-msgstr ""
-"Les fournisseurs de données peuvent facilement ajouter des données au "
+msgstr "Les fournisseurs de données peuvent facilement ajouter des données au "
 "catalogue."
 
 #: ckanext/benap/templates/home/snippets/search.html:28
@@ -227,7 +225,7 @@ msgstr "Ajouter données"
 
 #: ckanext/benap/templates/package/snippets/resource_help.html:2
 msgid "What's a resource?"
-msgstr ""
+msgstr "Qu'est-ce qu'une ressource?"
 
 #: ckanext/benap/templates/package/snippets/resource_help.html:4
 msgid ""
@@ -236,13 +234,13 @@ msgid ""
 "of a license agreement, you may just add a link to your website/data "
 "portal. If your data is not hosted on an existing website, in that case "
 "you may upload it on transportdata.be"
-msgstr ""
+msgstr "Une ressource est de préférence un lien vers votre jeu de données de transport ou votre service de données de transport. Toutefois, si l'accès nécessite une authentification ou la signature d'un contrat de licence, vous pouvez simplement ajouter un lien vers votre site Web / portail de données. Si vos données ne sont pas hébergées sur un site web existant, dans ce cas, vous pouvez les télécharger sur transportdata.be."
 
 #: ckanext/benap/templates/package/snippets/resource_help.html:5
 msgid ""
 "Adding a link (or uploading a file) is compulsory as per Commission "
 "Delegated Regulation (EU) 2017/1926."
-msgstr ""
+msgstr "L'ajout d'un lien (ou le téléchargement d'un fichier) est obligatoire conformément au règlement délégué (UE) 2017/1926 de la Commission."
 
 #: ckanext/benap/templates/snippets/language_selector.html:3
 msgid "Language"
@@ -254,15 +252,15 @@ msgstr "Aller"
 
 #: ckanext/benap/templates/snippets/package_item.html:9
 msgid "Private"
-msgstr ""
+msgstr "Privé"
 
 #: ckanext/benap/templates/snippets/package_item.html:18
 msgid "Draft"
-msgstr ""
+msgstr "Brouillon"
 
 #: ckanext/benap/templates/snippets/package_item.html:20
 msgid "Deleted"
-msgstr ""
+msgstr "Supprimé"
 
 #: ckanext/benap/templates/snippets/package_item.html:32
 msgid "This dataset has no description"
@@ -271,15 +269,15 @@ msgstr "Ce jeu de données n'a pas de description."
 #: ckanext/benap/templates/user/dashboard.html:9
 #: ckanext/benap/templates/user/dashboard.html:29
 msgid "News feed"
-msgstr ""
+msgstr "Fil d'actualité"
 
 #: ckanext/benap/templates/user/dashboard.html:10
 msgid "My Datasets"
-msgstr ""
+msgstr "Mes jeux de données"
 
 #: ckanext/benap/templates/user/dashboard.html:11
 msgid "My Organizations"
-msgstr ""
+msgstr "Mes organisations"
 
 #: ckanext/benap/templates/user/dashboard.html:20
 msgid "Have you just just created an account?"
@@ -295,7 +293,7 @@ msgstr "section A propos."
 
 #: ckanext/benap/templates/user/dashboard.html:31
 msgid "Activity from items that I'm following"
-msgstr ""
+msgstr "Activité à partir d'éléments que je suis"
 
 #: ckanext/benap/templates/user/login.html:8
 msgid "Need an Account?"
@@ -330,68 +328,43 @@ msgid ""
 "Send us an e-mail at <a href=\"mailto:contact@transportdata.be\" "
 "target=\"_top\">contact@transportdata.be</a> mentioning your name and, if"
 " applicable, your organisation. "
-msgstr ""
-"Envoyez-nous un email à <a href=\"mailto:contact@transportdata.be\" "
+msgstr "Envoyez-nous un email à <a href=\"mailto:contact@transportdata.be\" "
 "target=\"_top\">contact@transportdata.be</a> en mentionnant votre nom et,"
 " le cas échéant, votre organisation."
 
 #: ckanext/benap/templates/user/new.html:6
 msgid "Registration"
-msgstr ""
+msgstr "Enregistrement"
 
 #: ckanext/benap/templates/user/new.html:14
 msgid "Register for an Account"
-msgstr ""
+msgstr "Inscrivez-vous pour un compte"
 
 #: ckanext/benap/templates/user/new.html:26
 msgid "Why Sign Up?"
-msgstr ""
+msgstr "Pourquoi s'inscrire?"
 
 #: ckanext/benap/templates/user/new.html:29
 msgid "Check our "
-msgstr ""
+msgstr "consultez notre "
 
 #: ckanext/benap/templates/user/new.html:29
 msgid "about section"
-msgstr ""
+msgstr "section à propos"
 
 #: ckanext/benap/templates/user/new.html:29
 msgid " to know more!"
-msgstr ""
+msgstr " pour en savoir plus!"
 
 #: ckanext/benap/templates/user/new.html:31
 msgid "How to sign up?"
-msgstr ""
+msgstr "Comment s'inscrire?"
 
 #: ckanext/benap/templates/user/new.html:33
 msgid ""
 "Please choose a username (and make sure never to forget it) containing "
 "only lowercase letters and no special character except - and _ Fill in "
 "the other fields and press \"Create account\""
-msgstr ""
+msgstr "Veuillez choisir un nom d'utilisateur (et assurez-vous de ne jamais l'oublier) contenant uniquement des lettres minuscules et aucun caractère spécial sauf - et _ Remplissez les autres champs et appuyez sur \"Créer un compte\""
 
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Find your name in the"
-#~ msgstr ""
-
-#~ msgid "list of users"
-#~ msgstr ""
-
-#~ msgid "Your username is the last part of the URL"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "As transport data producer or user, "
-#~ "join our online community and benefit"
-#~ " from experience-sharing with your "
-#~ "fellows !"
-#~ msgstr ""
-
-#~ msgid "HELP US WITH OUR SITE"
-#~ msgstr "AIDEZ-NOUS AVEC NOTRE SITE"
-
-#~ msgid "WHAT THE PURPOSE IS AND HOW YOU ARE INVOLVED"
-#~ msgstr "QUEL EST L'OBJECTIF ET COMMENT VOUS ÊTES IMPLIQUÉ"
 

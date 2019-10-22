@@ -1,0 +1,301 @@
+[
+  (
+  'Air',
+  {
+    'fr': u
+    'A\xe9rien',
+    'en': u
+    'Air',
+    'nl': u
+    'Vliegtuig',
+    'de': u
+    'Luftverkehr'
+  }
+  ),
+  (
+  'Rail',
+  {
+    'fr': u
+    'Ferroviaire (y compris ferroviaire \xe0 grande vitesse)',
+    'en': u
+    'Rail (including high speed rail)',
+    'nl': u
+    'Trein (m.i.v. hogesnelheidstrein)',
+    'de': u
+    'Eisenbahn (einschl. Hochgeschwindigkeit)'
+  }
+  ),
+  (
+  'Conventional rail',
+  {
+    'fr': u
+    'Ferroviaire conventionnel',
+    'en': u
+    'Conventional rail',
+    'nl': u
+    'Klassieke trein',
+    'de': u
+    'Konventioneller Bahnverkehr'
+  }
+  ),
+  (
+  'Light rail',
+  {
+    'fr': u
+    'Ferroviaire l\xe9ger',
+    'en': u
+    'Light rail',
+    'nl': u
+    'Light rail',
+    'de': u
+    'Stadtbahn'
+  }
+  ),
+  (
+  'Long-distance coach',
+  {
+    'fr': u
+    'Autocar longue distance',
+    'en': u
+    'Long-distance coach',
+    'nl': u
+    'Langeafstandsbus',
+    'de': u
+    'Fernbus'
+  }
+  ),
+  (
+  'Maritime',
+  {
+    'fr': u
+    'Maritime (y compris les ferries)',
+    'en': u
+    'Maritime (including ferry)',
+    'nl': u
+    'schip (m.i.v. veerboten)',
+    'de': u
+    'Schifffahrt (einschlie\xdflich F\xe4hre)'
+  }
+  ),
+  (
+  'Metro',
+  {
+    'fr': u
+    'M\xe9tro',
+    'en': u
+    'Metro',
+    'nl': u
+    'Metro',
+    'de': u
+    'Untergrundbahn'
+  }
+  ),
+  (
+  'Tram',
+  {
+    'fr': u
+    'Tram',
+    'en': u
+    'Tram',
+    'nl': u
+    'Tram',
+    'de': u
+    'Stra\xdfenbahn'
+  }
+  ),
+  (
+  'Bus',
+  {
+    'fr': u
+    'Bus',
+    'en': u
+    'Bus',
+    'nl': u
+    'Bus',
+    'de': u
+    'Bus'
+  }
+  ),
+  (
+  'Trolley-bus',
+  {
+    'fr': u
+    'Oberleitungsbus',
+    'en': u
+    'Trolleybus',
+    'nl': u
+    'Trolleybus',
+    'de': u
+    'Obus'
+  }
+  ),
+  (
+  'Shuttle bus',
+  {
+    'fr': u
+    'Bus',
+    'en': u
+    'Shuttle bus',
+    'nl': u
+    'Shuttlebus',
+    'de': u
+    'Pendelbus'
+  }
+  ),
+  (
+  'Shuttle ferry',
+  {
+    'fr': u
+    'Ferry',
+    'en': u
+    'Shuttle ferry',
+    'nl': u
+    'Shuttleveerboot',
+    'de': u
+    'Pendelf\xe4hre'
+  }
+  ),
+  (
+  'Taxi',
+  {
+    'fr': u
+    'Taxi',
+    'en': u
+    'Taxi',
+    'nl': u
+    'Taxi',
+    'de': u
+    'Taxi'
+  }
+  ),
+  (
+  'Car-sharing',
+  {
+    'fr': u
+    'Autopartage',
+    'en': u
+    'Car-sharing',
+    'nl': u
+    'Deelauto',
+    'de': u
+    'Gemeinsame Pkw-Nutzung (Car-Sharing)'
+  }
+  ),
+  (
+  'Car-pooling',
+  {
+    'fr': u
+    'Covoiturage',
+    'en': u
+    'Car-pooling',
+    'nl': u
+    'Carpooling',
+    'de': u
+    'Fahrgemeinschaften (Car-Pooling)'
+  }
+  ),
+  (
+  'Car-hire',
+  {
+    'fr': u
+    'Location de voitures',
+    'en': u
+    'Car-hire',
+    'nl': u
+    'Huurauto',
+    'de': u
+    'Mietwagen'
+  }
+  ),
+  (
+  'Bike-sharing',
+  {
+    'fr': u
+    'V\xe9lopartage',
+    'en': u
+    'Bike-sharing',
+    'nl': u
+    'Deelfiets',
+    'de': u
+    'Gemeinsame Nutzung von Fahrr\xe4dern (Bike-Sharing)'
+  }
+  ),
+  (
+  'Bike-hire',
+  {
+    'fr': u
+    'Location de v\xe9los',
+    'en': u
+    'Bike-hire',
+    'nl': u
+    'Huurfiets',
+    'de': u
+    'Leihfahrrad'
+  }
+  ),
+  (
+  'Car',
+  {
+    'fr': u
+    'Voiture',
+    'en': u
+    'Car',
+    'nl': u
+    'Auto',
+    'de': u
+    'Pkw'
+  }
+  ),
+  (
+  'Truck',
+  {
+    'fr': u
+    'Camion',
+    'en': u
+    'Truck',
+    'nl': u
+    'Vrachtwagen',
+    'de': u
+    'Lastwagen'
+  }
+  ),
+  (
+  'Motorcycle',
+  {
+    'fr': u
+    'Moto',
+    'en': u
+    'Motorcycle',
+    'nl': u
+    'Motorfiets',
+    'de': u
+    'Motorrad'
+  }
+  ),
+  (
+  'Cycle',
+  {
+    'fr': u
+    'V\xe9lo',
+    'en': u
+    'Cycle',
+    'nl': u
+    'Fiets',
+    'de': u
+    'Fahrrad'
+  }
+  ),
+  (
+  'Pedestrian',
+  {
+    'fr': u
+    'Pi\xe9ton',
+    'en': u
+    'Pedestrian',
+    'nl': u
+    'Voetganger',
+    'de': u
+    'Fu\xdfg\xe4nger'
+  }
+  )
+]
