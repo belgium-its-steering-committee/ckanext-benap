@@ -39,7 +39,7 @@ msgstr "Nationaler belgischer Zugangspunkt für Informationendienste zu multimod
 
 #: ckanext/benap/templates/footer.html:9
 msgid "About Transportdata.be"
-msgstr "uber Transportdata.be"
+msgstr "&#220;ber Transportdata.be"
 
 #: ckanext/benap/templates/footer.html:14
 msgid "Github"
@@ -135,7 +135,7 @@ msgstr "SCHLIESSEN SIE SICH UNSEREM GEMEINSCHAFTLICHEN FORUM AN"
 msgid ""
 "As transport data producer or user, join our online community and benefit"
 " from experience-sharing with your fellows!"
-msgstr "Als Hersteller oder Benutzer von Verkehrsdaten können Sie sich unserer online Gemeinschaft anschliessen und vom Erfahrungsaustausch mit Ihren Kollegen geniessen!"
+msgstr "Treten Sie als Transportdatenproduzent oder -benutzer unserer Online-Community bei und profitieren Sie vom Erfahrungsaustausch mit Ihren Kollegen!"
 
 #: ckanext/benap/templates/home/snippets/community.html:16
 msgid "Join"
@@ -143,11 +143,11 @@ msgstr "Melden Sie sich an"
 
 #: ckanext/benap/templates/home/snippets/feedback.html:4
 msgid "HELP US"
-msgstr "HELFEN SIE UNS"
+msgstr "GEBEN SIE"
 
 #: ckanext/benap/templates/home/snippets/feedback.html:5
 msgid "GIVE SOME FEEDBACK"
-msgstr "GIB UNS FEEDBACK"
+msgstr "UNS FEEDBACK"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:5
 msgid "SUBSCRIBE"
@@ -283,15 +283,17 @@ msgstr "meine Organisationen"
 
 #: ckanext/benap/templates/user/dashboard.html:20
 msgid "Have you just just created an account?"
-msgstr "Haben Sie gerade ein Konto erstellt?"
+msgstr "Haben Sie gerade ein Benutzerkonto erstellt?"
 
 #: ckanext/benap/templates/user/dashboard.html:22
 msgid "If yes, you will find more information on what to do in our "
-msgstr "Wenn ja, finden Sie weitere Informationen in unserer "
+msgstr ""
+"Wenn ja, konsultieren Sie unseren Abschnitt für "
 
 #: ckanext/benap/templates/user/dashboard.html:23
 msgid "about section."
-msgstr "über abschnitt"
+msgstr "weitere Informationen."
+
 
 #: ckanext/benap/templates/user/dashboard.html:31
 msgid "Activity from items that I'm following"
@@ -299,27 +301,27 @@ msgstr "Aktivität von Elementen, denen ich folge"
 
 #: ckanext/benap/templates/user/login.html:8
 msgid "Need an Account?"
-msgstr "brauchen Sie ein Konto?"
+msgstr "Benötigen Sie ein Benutzerkonto?"
 
 #: ckanext/benap/templates/user/login.html:10
 msgid "Then sign right up, it only takes a minute."
-msgstr "Dann melde dich gleich an, es dauert nur eine Minute."
+msgstr "Dann registrieren Sie sich, es dauert nur eine Minute."
 
 #: ckanext/benap/templates/user/login.html:13
 msgid "Create an Account"
-msgstr "Ein Konto erstellen"
+msgstr "Erstelle ein Benutzerkonto"
 
 #: ckanext/benap/templates/user/login.html:25
 msgid "Forgotten your password?"
-msgstr "Kennwort vergessen?"
+msgstr "Haben Sie Ihr Kennwort vergessen?"
 
 #: ckanext/benap/templates/user/login.html:27
 msgid "No problem, use our password recovery form to reset it."
-msgstr "Kein Problem, verwenden Sie unser Kennwort-Wiederherstellungsformular, um es zurückzusetzen."
+msgstr "Kein Problem, nutzen Sie unser Formular um Ihr Passwort zurückzusetzen."
 
 #: ckanext/benap/templates/user/login.html:30
 msgid "Forgot your password?"
-msgstr "Kennwort vergessen?"
+msgstr "Haben Sie Ihr Kennwort vergessen?"
 
 #: ckanext/benap/templates/user/login.html:39
 msgid "Forgotten your username?"
@@ -368,4 +370,5 @@ msgid ""
 "only lowercase letters and no special character except - and _ Fill in "
 "the other fields and press \"Create account\""
 msgstr "Bitte wählen Sie einen Benutzernamen (und vergessen Sie ihn nicht), der nur Kleinbuchstaben und keine Sonderzeichen außer - und _ enthält. Füllen Sie die anderen Felder aus und drücken Sie \"Konto erstellen\"."
+
 

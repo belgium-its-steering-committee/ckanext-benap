@@ -136,7 +136,7 @@ msgstr "REJOIGNEZ NOTRE FORUM COMMUNAUTAIRE"
 msgid ""
 "As transport data producer or user, join our online community and benefit"
 " from experience-sharing with your fellows!"
-msgstr "En tant que producteur ou utilisateur de données de transport, rejoignez notre communauté en ligne et profitez du partage d'expériences avec vos pairs!"
+msgstr "En tant que producteur ou utilisateur de données de transport, rejoignez notre communauté en ligne et profitez du partage d'expérience avec vos collègues!"
 
 #: ckanext/benap/templates/home/snippets/community.html:16
 msgid "Join"
@@ -289,7 +289,7 @@ msgstr "Si oui, vous trouverez plus d'informations sur ce qu'il faut faire dans 
 
 #: ckanext/benap/templates/user/dashboard.html:23
 msgid "about section."
-msgstr "section à propos."
+msgstr "section A propos."
 
 #: ckanext/benap/templates/user/dashboard.html:31
 msgid "Activity from items that I'm following"
@@ -297,15 +297,15 @@ msgstr "Activité à partir d'éléments que je suis"
 
 #: ckanext/benap/templates/user/login.html:8
 msgid "Need an Account?"
-msgstr "Besoin d'un compte?"
+msgstr "Vous avez besoin d'un Compte?"
 
 #: ckanext/benap/templates/user/login.html:10
 msgid "Then sign right up, it only takes a minute."
-msgstr "Alors inscrivez-vous, cela ne prend qu'une minute."
+msgstr "Alors inscrivez-vous tout de suite, il n'y en a que pour une minute."
 
 #: ckanext/benap/templates/user/login.html:13
 msgid "Create an Account"
-msgstr "Créer un compte"
+msgstr "Créer un Compte"
 
 #: ckanext/benap/templates/user/login.html:25
 msgid "Forgotten your password?"
@@ -313,7 +313,7 @@ msgstr "Mot de passe oublié?"
 
 #: ckanext/benap/templates/user/login.html:27
 msgid "No problem, use our password recovery form to reset it."
-msgstr "Pas de problème, utilisez notre formulaire de récupération de mot de passe pour le réinitialiser."
+msgstr "Aucun problème, utilisez notre formulaire de regénération du mot de passe pour le réinitialiser."
 
 #: ckanext/benap/templates/user/login.html:30
 msgid "Forgot your password?"
