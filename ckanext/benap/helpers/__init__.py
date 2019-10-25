@@ -1257,3 +1257,4 @@ def get_translated_tags():
                 "fr": u"Modes personnels",
                 "de": u"Individualverkehr"
         })]
+
