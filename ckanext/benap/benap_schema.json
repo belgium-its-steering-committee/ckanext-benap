@@ -359,8 +359,8 @@
       "field_name": "contract_license",
       "label": {
         "en": "Contract or licence",
-        "de": "Contrat ou licence",
-        "fr": "Contract of licentie",
+        "fr": "Contrat ou licence",
+        "de": "Contract of licentie",
         "nl": "Vertrag oder Lizenz"
       },
       "preset": "select",
@@ -395,8 +395,8 @@
       "field_name": "frequency",
       "label": {
         "en": "Update frequency",
-        "de": "Fréquence de mise à jour",
-        "fr": "Bijwerkingsfrequentie",
+        "fr": "Fréquence de mise à jour",
+        "de": "Bijwerkingsfrequentie",
         "nl": "Update-Rate"
       },
       "display_property": "dct:accrualPeriodicity",

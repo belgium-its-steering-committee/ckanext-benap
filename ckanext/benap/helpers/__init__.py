@@ -1144,8 +1144,8 @@ def get_translated_tags():
               {
                   "en": u"Trolleybus",
                   "nl": u"Trolleybus",
-                  "fr": u"Oberleitungsbus",
-                  "de": u"Obus"
+                  "fr": u"Trolleybus",
+                  "de": u"Oberleitungsbus"
               })
          ], {
                 "en": u"Scheduled",
