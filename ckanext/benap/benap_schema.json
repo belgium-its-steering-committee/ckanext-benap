@@ -360,8 +360,8 @@
       "label": {
         "en": "Contract or licence",
         "fr": "Contrat ou licence",
-        "de": "Contract of licentie",
-        "nl": "Vertrag oder Lizenz"
+        "nl": "Contract of licentie",
+        "de": "Vertrag oder Lizenz"
       },
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
@@ -396,8 +396,8 @@
       "label": {
         "en": "Update frequency",
         "fr": "Fréquence de mise à jour",
-        "de": "Bijwerkingsfrequentie",
-        "nl": "Update-Rate"
+        "nl": "Bijwerkingsfrequentie",
+        "de": "Update-Rate"
       },
       "display_property": "dct:accrualPeriodicity",
       "preset": "select",
