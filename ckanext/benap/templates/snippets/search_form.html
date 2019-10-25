@@ -55,7 +55,6 @@
 
   {% block search_facets %}
     {% if facets %}
-    <script>console.log('{{ facets }}'.replace("u&#39;", "'").replace("&#39;", "'"));</script>
       <p class="filter-list">
         {% for field in facets.fields %}
           {% set search_facets_items = facets.search.get(field)['items'] %}

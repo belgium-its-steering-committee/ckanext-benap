@@ -641,8 +641,8 @@
       "field_name": "resource_language",
       "label": {
         "en": "Dataset language",
-        "nl": "Langue du jeu de données",
-        "fr": "Taal van de ataset",
+        "fr": "Langue du jeu de données",
+        "nl": "Taal van de dataset",
         "de": "Sprache des Datensatzes"
       },
       "display_property": "dct:language",
