@@ -33,13 +33,13 @@ msgstr "Das Startdatum muss vor dem Enddatum liegen"
 
 #: ckanext/benap/templates/base.html:37
 msgid ""
-"Belgium&#39;s national access point for multimodal travel information "
+"Belgium's national access point for multimodal travel information "
 "services."
 msgstr "Nationaler belgischer Zugangspunkt für Informationendienste zu multimodalen Reisen."
 
 #: ckanext/benap/templates/footer.html:9
 msgid "About Transportdata.be"
-msgstr "&#220;ber Transportdata.be"
+msgstr "Über Transportdata.be"
 
 #: ckanext/benap/templates/footer.html:14
 msgid "Github"
@@ -121,7 +121,7 @@ msgstr "Gruppen"
 
 #: ckanext/benap/templates/header.html:91
 msgid "About"
-msgstr "&#220;ber"
+msgstr "Über"
 
 #: ckanext/benap/templates/header.html:97
 msgid "Search"
@@ -178,10 +178,10 @@ msgid ""
 "Transportdata.be is the preferred access point for information on "
 "Intelligent Transport Systems (ITS). This national platform aims to "
 "centralize access to ITS datasets and web services."
-msgstr "Transportdata.be ist der beg&#252;nstigte Zugangspunkt f&#252;r "
-"Informationen &#252;ber intelligente Verkehrssysteme (IVS). Diese "
+msgstr "Transportdata.be ist der begünstigte Zugangspunkt für "
+"Informationen über intelligente Verkehrssysteme (IVS). Diese "
 "nationale Plattform beabsichtigt die Zentralisierung des Zugangs zu IVS-"
-"Datens&#228;tzen und -Webdiensten."
+"Datensätzen und -Webdiensten."
 
 #: ckanext/benap/templates/home/snippets/report.html:4
 msgid "LINK DOESN' T WORK?"
@@ -197,12 +197,12 @@ msgstr "Zum B. Umwelt"
 
 #: ckanext/benap/templates/home/snippets/search.html:5
 msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
-msgstr "NATIONALER BELGISCHER ZUGANGSPUNKT F&#220;R INFORMATIONSDIENSTE ZU "
+msgstr "NATIONALER BELGISCHER ZUGANGSPUNKT FÜR INFORMATIONSDIENSTE ZU "
 "MULTIMODALEN REISEN"
 
 #: ckanext/benap/templates/home/snippets/search.html:9
 msgid "SEARCH FOR DATA SETS"
-msgstr "SUCHEN NACH DATENS&#196;TZEN"
+msgstr "SUCHEN NACH DATENSÄTZEN"
 
 #: ckanext/benap/templates/home/snippets/search.html:11
 msgid "ex. transport, cars, trains, ..."
@@ -214,15 +214,15 @@ msgstr "Frequente Tags"
 
 #: ckanext/benap/templates/home/snippets/search.html:24
 msgid "ADD NEW DATA"
-msgstr "NEUE DATEN HINZUF&#220;GEN"
+msgstr "NEUE DATEN HINZUFÜGEN"
 
 #: ckanext/benap/templates/home/snippets/search.html:26
 msgid "Data providers can easily add data to the catalogue."
-msgstr "Die Datenanbieter k&#246;nnen einfach Daten zum Katalog hinzuf&#252;gen."
+msgstr "Die Datenanbieter können einfach Daten zum Katalog hinzufügen."
 
 #: ckanext/benap/templates/home/snippets/search.html:28
 msgid "Add Data"
-msgstr "Daten hinzuf&#252;gen"
+msgstr "Daten hinzufügen"
 
 #: ckanext/benap/templates/package/snippets/resource_help.html:2
 msgid "What's a resource?"
