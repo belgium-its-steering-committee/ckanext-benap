@@ -1071,7 +1071,10 @@ def get_translated_tag(tag, lang):
     try:
         return filter(lambda x: x[0] == tag['name'], [translated_tag for translated_taglist in [categorized_tags[0] for categorized_tags in get_translated_tags()] for translated_tag in translated_taglist])[0][1][lang]
     except:
-        return tag['display_name']
+        try:
+            return tag['display_name']
+        except KeyError:
+            return tag['name']
 
 
 def get_translated_tags():
