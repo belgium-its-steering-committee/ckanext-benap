@@ -578,7 +578,12 @@
       "required": "true"
     },
     {
-      "field_name": "acc_description",
+      "field_name": "acc_desc",
+      "preset": "fluent_markdown",
+      "display_snippet": "fluent_markdown_fallback.html",
+      "form_attrs": {
+        "class": "form-control"
+      },
       "label": {
         "en": "Data format - Description",
         "fr": "Format de donnée - Description",
@@ -597,7 +602,12 @@
         "nl": "Kan optioneel gebruikt worden om extra informatie over het gegevensformaat te geven.",
         "de": "Kann eventuell benutzt werden um weitere Informationen zum Datenformat zu geben."
       },
-      "form_snippet": "markdown.html"
+      "form_languages": [
+        "en",
+        "nl",
+        "fr",
+        "de"
+      ]
     },
     {
       "field_name": "acc_int",
