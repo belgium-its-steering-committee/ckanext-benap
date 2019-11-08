@@ -1074,7 +1074,7 @@ def get_translated_tag(tag, lang):
         try:
             return tag['display_name']
         except KeyError:
-            return tag['name']
+            print('ignore')
 
 
 def get_translated_tags():
