@@ -1,6 +1,27 @@
 {% ckan_extends %}
 
+{% block meta %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153119613-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'UA-153119613-1');
+    </script>
+    {{ super() }}
+    <!--  META TAGS FOR SHARING  -->
+    <meta property="og:url" content="{{ h.get_site_protocol_and_host()[0] }}://{{ h.get_site_protocol_and_host()[1] }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title"  content="transportdata.be" />
+    <meta property="og:description" content="{{ _('Belgium&#39;s national access point for multimodal travel information services.') }}" />
+    <meta property="og:image" content="{{ h.get_site_protocol_and_host()[0] }}://{{ h.get_site_protocol_and_host()[1] }}/images/map-belgiumv2.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!--  DISPLAY ON GOOGLE -->
+    <meta name="description" content="Belgium's National Access Point for multimodal travel information services" />
+{% endblock %}
 {% block styles %}
     {{ super() }}
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
@@ -26,27 +47,4 @@
 
 {% block links %}
     <link rel="shortcut icon" type="image/png" href="/images/favicon.ico" />
-{% endblock %}
-
-{% block meta %}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153120156-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-153120156-1');
-    </script>
-    {{ super() }}
-    <!--  META TAGS FOR SHARING  -->
-    <meta property="og:url" content="{{ h.get_site_protocol_and_host()[0] }}://{{ h.get_site_protocol_and_host()[1] }}" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title"  content="transportdata.be" />
-    <meta property="og:description" content="{{ _('Belgium&#39;s national access point for multimodal travel information services.') }}" />
-    <meta property="og:image" content="{{ h.get_site_protocol_and_host()[0] }}://{{ h.get_site_protocol_and_host()[1] }}/images/map-belgiumv2.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <!--  DISPLAY ON GOOGLE -->
-    <meta name="description" content="Belgium's National Access Point for multimodal travel information services" />
 {% endblock %}
