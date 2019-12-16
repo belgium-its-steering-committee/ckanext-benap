@@ -359,9 +359,9 @@
       "field_name": "contract_license",
       "label": {
         "en": "Contract or licence",
-        "de": "Contrat ou licence",
-        "fr": "Contract of licentie",
-        "nl": "Vertrag oder Lizenz"
+        "fr": "Contrat ou licence",
+        "nl": "Contract of licentie",
+        "de": "Vertrag oder Lizenz"
       },
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
@@ -395,9 +395,9 @@
       "field_name": "frequency",
       "label": {
         "en": "Update frequency",
-        "de": "Fréquence de mise à jour",
-        "fr": "Bijwerkingsfrequentie",
-        "nl": "Update-Rate"
+        "fr": "Fréquence de mise à jour",
+        "nl": "Bijwerkingsfrequentie",
+        "de": "Update-Rate"
       },
       "display_property": "dct:accrualPeriodicity",
       "preset": "select",
@@ -578,7 +578,12 @@
       "required": "true"
     },
     {
-      "field_name": "acc_description",
+      "field_name": "acc_desc",
+      "preset": "fluent_markdown",
+      "display_snippet": "fluent_markdown_fallback.html",
+      "form_attrs": {
+        "class": "form-control"
+      },
       "label": {
         "en": "Data format - Description",
         "fr": "Format de donnée - Description",
@@ -597,7 +602,12 @@
         "nl": "Kan optioneel gebruikt worden om extra informatie over het gegevensformaat te geven.",
         "de": "Kann eventuell benutzt werden um weitere Informationen zum Datenformat zu geben."
       },
-      "form_snippet": "markdown.html"
+      "form_languages": [
+        "en",
+        "nl",
+        "fr",
+        "de"
+      ]
     },
     {
       "field_name": "acc_int",
@@ -641,8 +651,8 @@
       "field_name": "resource_language",
       "label": {
         "en": "Dataset language",
-        "nl": "Langue du jeu de données",
-        "fr": "Taal van de ataset",
+        "fr": "Langue du jeu de données",
+        "nl": "Taal van de dataset",
         "de": "Sprache des Datensatzes"
       },
       "display_property": "dct:language",

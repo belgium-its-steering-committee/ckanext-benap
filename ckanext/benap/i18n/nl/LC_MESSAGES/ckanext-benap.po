@@ -40,7 +40,7 @@ msgstr "Belgisch nationaal toegangspunt voor informatiediensten over multimodale
 
 #: ckanext/benap/templates/footer.html:9
 msgid "About Transportdata.be"
-msgstr "over Transportdata.be"
+msgstr "Over Transportdata.be"
 
 #: ckanext/benap/templates/footer.html:14
 msgid "Github"
@@ -136,7 +136,7 @@ msgstr "VOEG JE BIJ ONZE GEMEENSCHAPPELIJKE FORUM"
 msgid ""
 "As transport data producer or user, join our online community and benefit"
 " from experience-sharing with your fellows!"
-msgstr "Als producent of gebruiker van vervoersgegevens kan je je aansluiten bij onze online gemeenschap en genieten van het delen van ervaringen met je collega's!"
+msgstr "Als producent of gebruiker van transportgegevens, word lid van onze online community en profiteer van het delen van ervaringen met uw collega's!"
 
 #: ckanext/benap/templates/home/snippets/community.html:16
 msgid "Join"
@@ -196,7 +196,7 @@ msgid "E.g. environment"
 msgstr "Bv. leefmilieu"
 
 #: ckanext/benap/templates/home/snippets/search.html:5
-msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
+msgid "BELGIUM&#39;S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
 msgstr "BELGISCH NATIONAAL TOEGANGSPUNT VOOR INFORMATIEDIENSTEN OVER MULTIMODALE VERPLAATSINGEN"
 
 #: ckanext/benap/templates/home/snippets/search.html:9
@@ -288,11 +288,12 @@ msgstr "Heb je zojuist een account aangemaakt?"
 
 #: ckanext/benap/templates/user/dashboard.html:22
 msgid "If yes, you will find more information on what to do in our "
-msgstr "If yes, you will find more information on what to do in our "
+msgstr "Indien wel, dan vind je meer informatie over wat je kan doen op onze "
 
 #: ckanext/benap/templates/user/dashboard.html:23
 msgid "about section."
-msgstr "over sectie"
+msgstr "pagina Over."
+
 
 #: ckanext/benap/templates/user/dashboard.html:31
 msgid "Activity from items that I'm following"
@@ -300,11 +301,11 @@ msgstr "Activiteit van items die ik volg"
 
 #: ckanext/benap/templates/user/login.html:8
 msgid "Need an Account?"
-msgstr "Een account nodig?"
+msgstr "Heb je een Account nodig?"
 
 #: ckanext/benap/templates/user/login.html:10
 msgid "Then sign right up, it only takes a minute."
-msgstr "Meld je dan meteen aan, het duurt maar een minuutje."
+msgstr "Schrijf je nu in, het kost je alleen een minuut."
 
 #: ckanext/benap/templates/user/login.html:13
 msgid "Create an Account"
@@ -312,15 +313,15 @@ msgstr "Account aanmaken"
 
 #: ckanext/benap/templates/user/login.html:25
 msgid "Forgotten your password?"
-msgstr "
+msgstr "Wachtwoord vergeten?"
 
 #: ckanext/benap/templates/user/login.html:27
 msgid "No problem, use our password recovery form to reset it."
-msgstr "Geen probleem, gebruik ons wachtwoordherstelformulier om het opnieuw in te stellen."
+msgstr "Geen probleem, gebruik ons wachtwoordherstelformulier om je wachtwoord opnieuw in te stellen."
 
 #: ckanext/benap/templates/user/login.html:30
 msgid "Forgot your password?"
-msgstr "Uw wachtwoord vergeten?"
+msgstr "Wachtwoord vergeten?"
 
 #: ckanext/benap/templates/user/login.html:39
 msgid "Forgotten your username?"

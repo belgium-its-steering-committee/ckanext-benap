@@ -101,7 +101,12 @@
     },
     {
       "field_name": "do_address",
-      "label": "Address",
+      "label": {
+        "en": "Address",
+        "fr": "Adresse",
+        "nl": "Adres",
+        "de": "Adresse"
+      },
       "help_text": {
         "en": "Official address of your organisation in Belgium. If necessary, please fill it in in multiple languages, each separated by \"/\".",
         "fr": "Adresse officielle de votre organisation en Belgique. Si nécessaire, merci de compléter dans plusieurs langues, chacune séparée par une \"/\".",
@@ -113,7 +118,12 @@
     },
     {
       "field_name": "do_email",
-      "label": "E-mail",
+      "label": {
+        "en": "Email",
+        "fr": "Email",
+        "nl": "E-mail",
+        "de": "Email"
+      },
       "validators": "scheming_required email_validator not_empty",
       "form_placeholder": "data@my-organization.com",
       "help_text": {
