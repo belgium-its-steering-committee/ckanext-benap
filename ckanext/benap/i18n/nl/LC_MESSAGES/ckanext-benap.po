@@ -130,7 +130,7 @@ msgstr "Zoek"
 
 #: ckanext/benap/templates/home/snippets/community.html:7
 msgid "JOIN OUR COMMUNITY FORUM"
-msgstr "VOEG JE BIJ ONZE GEMEENSCHAPPELIJKE FORUM"
+msgstr "VOEG JE BIJ ONS GEMEENSCHAPPELIJK FORUM"
 
 #: ckanext/benap/templates/home/snippets/community.html:12
 msgid ""
