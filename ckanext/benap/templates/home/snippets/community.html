@@ -12,10 +12,10 @@
                     {{ _('As transport data producer or user, join our online community and benefit from experience-sharing with your fellows!') }}
                 </p>
                 <button class="bt-large button-width"
-                        onclick="window.open('{{ckan.pages.forum.link}}');">
+                        onclick="window.open('{{ h.benap_forum_url() }}');">
                     {{ _('Join') }}
                 </button>
-                link: {{ckan.pages.forum.link}}
+                link: {{ h.benap_forum_url() }}
             </div>
         </div>
     </div>

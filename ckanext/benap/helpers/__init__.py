@@ -1,6 +1,6 @@
 # coding=utf-8
 import json
-
+from ckan.common import config
 from ckanext.benap.util.forms import map_for_form_select
 
 
@@ -1050,6 +1050,10 @@ def json_loads(data):
     return json.dumps(json.loads(data))
 
 
+def forum_url():
+    return config.get('ckan.pages.forum.link', '')
+
+
 def organisation_names_for_autocomplete():
     from ckantoolkit import h
     return map(lambda org: org['title'].encode("utf-8"), h.organizations_available('create_dataset'))
@@ -1069,7 +1073,10 @@ def get_translated_tag_with_name(tagName, lang):
 
 def get_translated_tag(tag, lang):
     try:
-        return filter(lambda x: x[0] == tag['name'], [translated_tag for translated_taglist in [categorized_tags[0] for categorized_tags in get_translated_tags()] for translated_tag in translated_taglist])[0][1][lang]
+        return filter(lambda x: x[0] == tag['name'], [translated_tag for translated_taglist in
+                                                      [categorized_tags[0] for categorized_tags in
+                                                       get_translated_tags()] for translated_tag in
+                                                      translated_taglist])[0][1][lang]
     except:
         try:
             return tag['display_name']
@@ -1151,11 +1158,11 @@ def get_translated_tags():
                   "de": u"Oberleitungsbus"
               })
          ], {
-                "en": u"Scheduled",
-                "nl": u"Geregeld vervoer",
-                "fr": u"Services réguliers",
-                "de": u"Linienverkehrsdienste"
-            }),
+             "en": u"Scheduled",
+             "nl": u"Geregeld vervoer",
+             "fr": u"Services réguliers",
+             "de": u"Linienverkehrsdienste"
+         }),
         ([
              ("Shuttle bus",
               {
@@ -1213,11 +1220,11 @@ def get_translated_tags():
                   "de": u"Leihfahrrad"
               })
          ], {
-                "en": u"Demand-responsive",
-                "nl": u"Aanbod afhankelijke inzet",
-                "fr": u"Services à la demande",
-                "de": u"Abruf-Verkehrsdienste"
-            }),
+             "en": u"Demand-responsive",
+             "nl": u"Aanbod afhankelijke inzet",
+             "fr": u"Services à la demande",
+             "de": u"Abruf-Verkehrsdienste"
+         }),
         ([
              ("Car",
               {
@@ -1255,9 +1262,8 @@ def get_translated_tags():
                   "de": u"Fußgänger"
               })
          ], {
-                "en": u"Personal",
-                "nl": u"Persoonlijk vervoer",
-                "fr": u"Modes personnels",
-                "de": u"Individualverkehr"
-        })]
-
+             "en": u"Personal",
+             "nl": u"Persoonlijk vervoer",
+             "fr": u"Modes personnels",
+             "de": u"Individualverkehr"
+         })]

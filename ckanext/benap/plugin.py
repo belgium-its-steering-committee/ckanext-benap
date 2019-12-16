@@ -5,7 +5,8 @@ from ckan.lib.plugins import DefaultTranslation
 
 from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallback, json_loads, \
     package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete,\
-    get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, get_translated_tag_with_name
+    get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, get_translated_tag_with_name, \
+    forum_url
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.validators import phone_number_validator, countries_covered_belgium, is_after_start
 
@@ -45,7 +46,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'get_translated_tags': get_translated_tags,
             'get_translated_tag': get_translated_tag,
             'benap_scheming_language_text': scheming_language_text,
-            'format_datetime': format_datetime
+            'format_datetime': format_datetime,
+            'benap_forum_url': forum_url
         }
 
     # IValidators
