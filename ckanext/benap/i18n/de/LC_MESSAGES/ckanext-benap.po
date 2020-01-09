@@ -205,9 +205,6 @@ msgid "E.g. environment"
 msgstr "Zum B. Umwelt"
 
 #: ckanext/benap/templates/home/snippets/search.html:5
-#, fuzzy
-#| msgid "" "Belgium's national access point for multimodal travel information
-#| " "services."
 msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
 msgstr ""
 "Nationaler belgischer Zugangspunkt für Informationendienste zu "
