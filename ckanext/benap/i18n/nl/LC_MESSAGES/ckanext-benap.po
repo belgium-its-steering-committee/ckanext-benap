@@ -35,7 +35,8 @@ msgstr "Startdatum moet voor de einddatum zijn"
 msgid ""
 "Belgium&#39;s national access point for multimodal travel information "
 "services."
-msgstr "Belgisch nationaal toegangspunt voor informatiediensten over multimodale "
+msgstr ""
+"Belgisch nationaal toegangspunt voor informatiediensten over multimodale "
 "verplaatsingen."
 
 #: ckanext/benap/templates/footer.html:9
@@ -58,7 +59,8 @@ msgstr "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 msgid ""
 "2019 - By the National Geographic Institute on behalf of the ITS steering"
 " commitee."
-msgstr "2019 - By the National Geographic Institute on behalf of the ITS steering"
+msgstr ""
+"2019 - By the National Geographic Institute on behalf of the ITS steering"
 " commitee."
 
 #: ckanext/benap/templates/header.html:9
@@ -136,7 +138,10 @@ msgstr "VOEG JE BIJ ONS GEMEENSCHAPPELIJK FORUM"
 msgid ""
 "As transport data producer or user, join our online community and benefit"
 " from experience-sharing with your fellows!"
-msgstr "Bent u eigenaar of gebruiker van transportgegevens, word dan lid van onze online community en profiteer van het delen van ervaringen met uw collega's!"
+msgstr ""
+"Bent u eigenaar of gebruiker van transportgegevens, word dan lid van onze"
+" online community en profiteer van het delen van ervaringen met uw "
+"collega's!"
 
 #: ckanext/benap/templates/home/snippets/community.html:16
 msgid "Join"
@@ -179,9 +184,10 @@ msgid ""
 "Transportdata.be is the preferred access point for information on "
 "Intelligent Transport Systems (ITS). This national platform aims to "
 "centralize access to ITS datasets and web services."
-msgstr "Transportdata.be is het bevoorrechte toegangspunt voor informatie over "
-"intelligente vervoerssystemen (ITS). Deze nationale platform heeft als "
-"doel de toegang tot ITS datasets en webdiensten te centraliseren."
+msgstr ""
+"Transportdata.be is het nationale toegangspunt voor gegevens van het "
+"personenvervoer. Door datasets en webservices samen te brengen, willen we"
+" multimodale reisplanners ondersteunen."
 
 #: ckanext/benap/templates/home/snippets/report.html:4
 msgid "LINK DOESN' T WORK?"
@@ -196,8 +202,13 @@ msgid "E.g. environment"
 msgstr "Bv. leefmilieu"
 
 #: ckanext/benap/templates/home/snippets/search.html:5
-msgid "BELGIUM&#39;S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
-msgstr "BELGISCH NATIONAAL TOEGANGSPUNT VOOR INFORMATIEDIENSTEN OVER MULTIMODALE VERPLAATSINGEN"
+#, fuzzy
+#| msgid "" "Belgium&#39;s national access point for multimodal travel
+#| information " "services."
+msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
+msgstr ""
+"Belgisch nationaal toegangspunt voor informatiediensten over multimodale "
+"verplaatsingen."
 
 #: ckanext/benap/templates/home/snippets/search.html:9
 msgid "SEARCH FOR DATA SETS"
@@ -217,7 +228,8 @@ msgstr "NIEUWE GEGEVENS TOEVOEGEN"
 
 #: ckanext/benap/templates/home/snippets/search.html:26
 msgid "Data providers can easily add data to the catalogue."
-msgstr "Gegevensleveranciers kunnen gemakkelijk gegevens aan de catalogus "
+msgstr ""
+"Gegevensleveranciers kunnen gemakkelijk gegevens aan de catalogus "
 "toevoegen."
 
 #: ckanext/benap/templates/home/snippets/search.html:28
@@ -235,13 +247,21 @@ msgid ""
 "of a license agreement, you may just add a link to your website/data "
 "portal. If your data is not hosted on an existing website, in that case "
 "you may upload it on transportdata.be"
-msgstr "Een resource is bij voorkeur een link naar uw transportdataset of transportdataservice. Als toegang echter authenticatie of ondertekening van een licentieovereenkomst vereist, kunt u gewoon een link naar uw website/gegevensportaal toevoegen. Als uw gegevens niet op een bestaande website worden gehost, kunt u deze in dat geval uploaden op transportdata.be"
+msgstr ""
+"Een resource is bij voorkeur een link naar uw transportdataset of "
+"transportdataservice. Als toegang echter authenticatie of ondertekening "
+"van een licentieovereenkomst vereist, kunt u gewoon een link naar uw "
+"website/gegevensportaal toevoegen. Als uw gegevens niet op een bestaande "
+"website worden gehost, kunt u deze in dat geval uploaden op "
+"transportdata.be"
 
 #: ckanext/benap/templates/package/snippets/resource_help.html:5
 msgid ""
 "Adding a link (or uploading a file) is compulsory as per Commission "
 "Delegated Regulation (EU) 2017/1926."
-msgstr "Het toevoegen van een link (of het uploaden van een bestand) is verplicht volgens de Gedelegeerde Verordening (EU) 2017/1926 van de Commissie."
+msgstr ""
+"Het toevoegen van een link (of het uploaden van een bestand) is verplicht"
+" volgens de Gedelegeerde Verordening (EU) 2017/1926 van de Commissie."
 
 #: ckanext/benap/templates/snippets/language_selector.html:3
 msgid "Language"
@@ -294,7 +314,6 @@ msgstr "Indien wel, dan vind je meer informatie over wat je kan doen op onze "
 msgid "about section."
 msgstr "pagina Over."
 
-
 #: ckanext/benap/templates/user/dashboard.html:31
 msgid "Activity from items that I'm following"
 msgstr "Activiteit van items die ik volg"
@@ -317,7 +336,9 @@ msgstr "Wachtwoord vergeten?"
 
 #: ckanext/benap/templates/user/login.html:27
 msgid "No problem, use our password recovery form to reset it."
-msgstr "Geen probleem, gebruik ons wachtwoordherstelformulier om je wachtwoord opnieuw in te stellen."
+msgstr ""
+"Geen probleem, gebruik ons wachtwoordherstelformulier om je wachtwoord "
+"opnieuw in te stellen."
 
 #: ckanext/benap/templates/user/login.html:30
 msgid "Forgot your password?"
@@ -332,7 +353,8 @@ msgid ""
 "Send us an e-mail at <a href=\"mailto:contact@transportdata.be\" "
 "target=\"_top\">contact@transportdata.be</a> mentioning your name and, if"
 " applicable, your organisation. "
-msgstr "Stuur ons een e-mail op <a href=\"mailto:contact@transportdata.be\" "
+msgstr ""
+"Stuur ons een e-mail op <a href=\"mailto:contact@transportdata.be\" "
 "target=\"_top\">contact@transportdata.be</a> met uw naam en, indien van "
 "toepassing, uw organisatie."
 
@@ -370,6 +392,15 @@ msgid ""
 "Please choose a username (and make sure never to forget it) containing "
 "only lowercase letters and no special character except - and _ Fill in "
 "the other fields and press \"Create account\""
-msgstr "Kies een gebruikersnaam (en zorg ervoor dat u deze nooit vergeet) met alleen kleine letters en geen speciaal teken behalve - en _ Vul de andere velden in en druk op \"Account maken\""
+msgstr ""
+"Kies een gebruikersnaam (en zorg ervoor dat u deze nooit vergeet) met "
+"alleen kleine letters en geen speciaal teken behalve - en _ Vul de andere"
+" velden in en druk op \"Account maken\""
 
+#~ msgid ""
+#~ "BELGIUM&#39;S NATIONAL ACCESS POINT FOR "
+#~ "MULTIMODAL TRAVEL INFORMATION SERVICES"
+#~ msgstr ""
+#~ "BELGISCH NATIONAAL TOEGANGSPUNT VOOR "
+#~ "INFORMATIEDIENSTEN OVER MULTIMODALE VERPLAATSINGEN"
 

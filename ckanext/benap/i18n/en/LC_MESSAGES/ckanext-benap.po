@@ -138,7 +138,9 @@ msgstr "JOIN OUR COMMUNITY FORUM"
 msgid ""
 "As transport data producer or user, join our online community and benefit"
 " from experience-sharing with your fellows!"
-msgstr "As transport data producer or user, join our online community and benefit from experience-sharing with your fellows!"
+msgstr ""
+"As transport data producer or user, join our online community and benefit"
+" from experience-sharing with your fellows!"
 
 #: ckanext/benap/templates/home/snippets/community.html:16
 msgid "Join"
@@ -182,9 +184,9 @@ msgid ""
 "Intelligent Transport Systems (ITS). This national platform aims to "
 "centralize access to ITS datasets and web services."
 msgstr ""
-"Transportdata.be is the preferred access point for information on "
-"Intelligent Transport Systems (ITS). This national platform aims to "
-"centralize access to ITS datasets and web services."
+"Transportdata.be is the National Access Point for data regarding "
+"passenger transport. By bringing together datasets and webservices, we "
+"want to facilitate multimodal travel planners."
 
 #: ckanext/benap/templates/home/snippets/report.html:4
 msgid "LINK DOESN' T WORK?"
@@ -199,8 +201,13 @@ msgid "E.g. environment"
 msgstr "E.g. environment"
 
 #: ckanext/benap/templates/home/snippets/search.html:5
-msgid "BELGIUM&#39;S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
-msgstr "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
+#, fuzzy
+#| msgid "" "Belgium&#39;s national access point for multimodal travel
+#| information " "services."
+msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
+msgstr ""
+"Belgium&#39;s national access point for multimodal travel information "
+"services."
 
 #: ckanext/benap/templates/home/snippets/search.html:9
 msgid "SEARCH FOR DATA SETS"
@@ -237,7 +244,8 @@ msgid ""
 "of a license agreement, you may just add a link to your website/data "
 "portal. If your data is not hosted on an existing website, in that case "
 "you may upload it on transportdata.be"
-msgstr "A resource is preferrably a link to your transport dataset or transport "
+msgstr ""
+"A resource is preferrably a link to your transport dataset or transport "
 "data service. However, if access requires authentification or signature "
 "of a license agreement, you may just add a link to your website/data "
 "portal. If your data is not hosted on an existing website, in that case "
@@ -247,7 +255,8 @@ msgstr "A resource is preferrably a link to your transport dataset or transport 
 msgid ""
 "Adding a link (or uploading a file) is compulsory as per Commission "
 "Delegated Regulation (EU) 2017/1926."
-msgstr "Adding a link (or uploading a file) is compulsory as per Commission "
+msgstr ""
+"Adding a link (or uploading a file) is compulsory as per Commission "
 "Delegated Regulation (EU) 2017/1926."
 
 #: ckanext/benap/templates/snippets/language_selector.html:3
@@ -381,3 +390,11 @@ msgstr ""
 "Please choose a username (and make sure never to forget it) containing "
 "only lowercase letters and no special character except - and _ Fill in "
 "the other fields and press \"Create account\""
+
+#~ msgid ""
+#~ "BELGIUM&#39;S NATIONAL ACCESS POINT FOR "
+#~ "MULTIMODAL TRAVEL INFORMATION SERVICES"
+#~ msgstr ""
+#~ "BELGIUM'S NATIONAL ACCESS POINT FOR "
+#~ "MULTIMODAL TRAVEL INFORMATION SERVICES"
+

@@ -32,10 +32,15 @@ msgid "Start date must be before end date"
 msgstr "Das Startdatum muss vor dem Enddatum liegen"
 
 #: ckanext/benap/templates/base.html:37
+#, fuzzy
+#| msgid "" "Belgium's national access point for multimodal travel information
+#| " "services."
 msgid ""
-"Belgium's national access point for multimodal travel information "
+"Belgium&#39;s national access point for multimodal travel information "
 "services."
-msgstr "Nationaler belgischer Zugangspunkt für Informationendienste zu multimodalen Reisen."
+msgstr ""
+"Nationaler belgischer Zugangspunkt für Informationendienste zu "
+"multimodalen Reisen."
 
 #: ckanext/benap/templates/footer.html:9
 msgid "About Transportdata.be"
@@ -57,7 +62,8 @@ msgstr "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 msgid ""
 "2019 - By the National Geographic Institute on behalf of the ITS steering"
 " commitee."
-msgstr "2019 - By the National Geographic Institute on behalf of the ITS steering"
+msgstr ""
+"2019 - By the National Geographic Institute on behalf of the ITS steering"
 " commitee."
 
 #: ckanext/benap/templates/header.html:9
@@ -135,7 +141,10 @@ msgstr "SCHLIESSEN SIE SICH UNSEREM GEMEINSCHAFTLICHEN FORUM AN"
 msgid ""
 "As transport data producer or user, join our online community and benefit"
 " from experience-sharing with your fellows!"
-msgstr "Treten Sie als Transportdatenproduzent oder -benutzer unserer Online-Community bei und profitieren Sie vom Erfahrungsaustausch mit Ihren Kollegen!"
+msgstr ""
+"Treten Sie als Transportdatenproduzent oder -benutzer unserer Online-"
+"Community bei und profitieren Sie vom Erfahrungsaustausch mit Ihren "
+"Kollegen!"
 
 #: ckanext/benap/templates/home/snippets/community.html:16
 msgid "Join"
@@ -178,10 +187,10 @@ msgid ""
 "Transportdata.be is the preferred access point for information on "
 "Intelligent Transport Systems (ITS). This national platform aims to "
 "centralize access to ITS datasets and web services."
-msgstr "Transportdata.be ist der begünstigte Zugangspunkt für "
-"Informationen über intelligente Verkehrssysteme (IVS). Diese "
-"nationale Plattform beabsichtigt die Zentralisierung des Zugangs zu IVS-"
-"Datensätzen und -Webdiensten."
+msgstr ""
+"Transportdata.be ist der nationale Zugangspunkt für Daten zum "
+"Personenverkehr. Durch die Zusammenführung von Datensätzend und "
+"Webdiensten wollen wir multimodale Reiseplaner unterstützen."
 
 #: ckanext/benap/templates/home/snippets/report.html:4
 msgid "LINK DOESN' T WORK?"
@@ -196,9 +205,13 @@ msgid "E.g. environment"
 msgstr "Zum B. Umwelt"
 
 #: ckanext/benap/templates/home/snippets/search.html:5
-msgid "BELGIUM&#39;S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
-msgstr "NATIONALER BELGISCHER ZUGANGSPUNKT FÜR INFORMATIONSDIENSTE ZU "
-"MULTIMODALEN REISEN"
+#, fuzzy
+#| msgid "" "Belgium's national access point for multimodal travel information
+#| " "services."
+msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
+msgstr ""
+"Nationaler belgischer Zugangspunkt für Informationendienste zu "
+"multimodalen Reisen."
 
 #: ckanext/benap/templates/home/snippets/search.html:9
 msgid "SEARCH FOR DATA SETS"
@@ -235,13 +248,22 @@ msgid ""
 "of a license agreement, you may just add a link to your website/data "
 "portal. If your data is not hosted on an existing website, in that case "
 "you may upload it on transportdata.be"
-msgstr "Eine Ressource ist vorzugsweise eine Verknüpfung zu Ihrem Transportdatensatz oder Transportdatendienst. Wenn für den Zugriff jedoch die Authentifizierung oder die Unterzeichnung einer Lizenzvereinbarung erforderlich ist, können Sie einfach einen Link zu Ihrer Website/Ihrem Datenportal hinzufügen. Wenn Ihre Daten nicht auf einer vorhandenen Website gehostet werden, können Sie sie in diesem Fall auf transportdata.be hochladen"
+msgstr ""
+"Eine Ressource ist vorzugsweise eine Verknüpfung zu Ihrem "
+"Transportdatensatz oder Transportdatendienst. Wenn für den Zugriff jedoch"
+" die Authentifizierung oder die Unterzeichnung einer Lizenzvereinbarung "
+"erforderlich ist, können Sie einfach einen Link zu Ihrer Website/Ihrem "
+"Datenportal hinzufügen. Wenn Ihre Daten nicht auf einer vorhandenen "
+"Website gehostet werden, können Sie sie in diesem Fall auf "
+"transportdata.be hochladen"
 
 #: ckanext/benap/templates/package/snippets/resource_help.html:5
 msgid ""
 "Adding a link (or uploading a file) is compulsory as per Commission "
 "Delegated Regulation (EU) 2017/1926."
-msgstr "Das Hinzufügen eines Links (oder das Hochladen einer Datei) ist gemäß der delegierten Verordnung (EU) 2017/1926 der Kommission obligatorisch."
+msgstr ""
+"Das Hinzufügen eines Links (oder das Hochladen einer Datei) ist gemäß der"
+" delegierten Verordnung (EU) 2017/1926 der Kommission obligatorisch."
 
 #: ckanext/benap/templates/snippets/language_selector.html:3
 msgid "Language"
@@ -287,13 +309,11 @@ msgstr "Haben Sie gerade ein Benutzerkonto erstellt?"
 
 #: ckanext/benap/templates/user/dashboard.html:22
 msgid "If yes, you will find more information on what to do in our "
-msgstr ""
-"Wenn ja, konsultieren Sie unseren Abschnitt für "
+msgstr "Wenn ja, konsultieren Sie unseren Abschnitt für "
 
 #: ckanext/benap/templates/user/dashboard.html:23
 msgid "about section."
 msgstr "weitere Informationen."
-
 
 #: ckanext/benap/templates/user/dashboard.html:31
 msgid "Activity from items that I'm following"
@@ -332,7 +352,8 @@ msgid ""
 "Send us an e-mail at <a href=\"mailto:contact@transportdata.be\" "
 "target=\"_top\">contact@transportdata.be</a> mentioning your name and, if"
 " applicable, your organisation. "
-msgstr "Senden Sie uns eine E-Mail an <a href=\"mailto:contact@transportdata.be\""
+msgstr ""
+"Senden Sie uns eine E-Mail an <a href=\"mailto:contact@transportdata.be\""
 " target=\"_top\">contact@transportdata.be</a> und nennen Sie Ihren Namen "
 "und gegebenenfalls Ihre Organisation."
 
@@ -369,6 +390,15 @@ msgid ""
 "Please choose a username (and make sure never to forget it) containing "
 "only lowercase letters and no special character except - and _ Fill in "
 "the other fields and press \"Create account\""
-msgstr "Bitte wählen Sie einen Benutzernamen (und vergessen Sie ihn nicht), der nur Kleinbuchstaben und keine Sonderzeichen außer - und _ enthält. Füllen Sie die anderen Felder aus und drücken Sie \"Konto erstellen\"."
+msgstr ""
+"Bitte wählen Sie einen Benutzernamen (und vergessen Sie ihn nicht), der "
+"nur Kleinbuchstaben und keine Sonderzeichen außer - und _ enthält. Füllen"
+" Sie die anderen Felder aus und drücken Sie \"Konto erstellen\"."
 
+#~ msgid ""
+#~ "BELGIUM&#39;S NATIONAL ACCESS POINT FOR "
+#~ "MULTIMODAL TRAVEL INFORMATION SERVICES"
+#~ msgstr ""
+#~ "NATIONALER BELGISCHER ZUGANGSPUNKT FÜR "
+#~ "INFORMATIONSDIENSTE ZU MULTIMODALEN REISEN"
 
