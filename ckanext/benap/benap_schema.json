@@ -68,9 +68,9 @@
         "de": "Beschreibung des datensatzes"
       },
       "form_placeholder": {
-        "en": "eg. “Contains static high priority network of Belgium: Road Name, Lane number, Direction”",
+        "en": "e.g. “Contains a static high priority network of Belgium: Road name, Lane Number, Direction”",
         "fr": "par ex. “Contient un réseau statique de haute priorité de la Belgique: Nom de route, Numéro d'avenue, Direction”",
-        "nl": "bv. “Houdt statisch netwerk met hoge prioriteit voor België: Wegennaam, Straatnummer, Richting”",
+        "nl": "bv. “Bevat een statisch netwerk met hoge prioriteit voor België: Wegennaam, Straatnummer, Richting”",
         "de": "zum B. “Beinhaltet ein statisches Netz mit höher Prirotät für Belgien: Wegenname, Strassennummer, Richtung”"
       },
       "help_text": {
