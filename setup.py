@@ -21,7 +21,7 @@ setup(
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com//ckanext-benap',
+    url='https://github.com/belgium-its-steering-committee/ckanext-benap/',
 
     # Author details
     author='''Bart Saelen''',
