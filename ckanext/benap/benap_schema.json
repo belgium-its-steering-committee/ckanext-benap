@@ -422,10 +422,10 @@
       },
       "display_snippet": "fluent_markdown_fallback.html",
       "form_placeholder": {
-        "en": "eg. \"Quality Criteria \"Correctness\", and \"Completeness\" fulfilled to 99%, assessed by ground-truth testing\"",
-        "fr": "Bv. \"Kwaliteitscriteria \"nauwkeurigheid\" en \"volledigheid\" volbracht tot 99%, geschat door testen op het terrein\"",
-        "nl": "Par ex. \"Critères de qualité \"Exactitude\" et \"Exhaustivité\" complétés à 99%, évalués par des tests dans la réalité du terrain",
-        "de": "Zum B. \"Qualitätskriterien \"Genauigkeit\" und \"Vollständigkeit\" erfüllt auf 99%, bewertet von Bodenrealitätstesten."
+        "en": "eg. \"Quality Criteria \"Correctness\", and \"Completeness\" fulfilled to 99%, assessed by ground-truth testing.\"",
+        "fr": "Par ex. \"Critères de qualité \"Exactitude\" et \"Exhaustivité\" complétés à 99%, évalués par des tests dans la réalité du terrain.\"",
+        "nl": "Bv. \"Kwaliteitscriteria \"nauwkeurigheid\" en \"volledigheid\" volbracht tot 99%, geschat door testen op het terrein.\"",
+        "de": "Zum B. \"Qualitätskriterien \"Genauigkeit\" und \"Vollständigkeit\" erfüllt auf 99%, bewertet von Bodenrealitätstesten.\""
       },
       "help_text": {
         "en": "Describes methods and results of a quality assessment.",
