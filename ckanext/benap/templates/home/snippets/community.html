@@ -11,9 +11,8 @@
                 <p class="lh-1-2 mw-75">
                     {{ _('As transport data producer or user, join our online community and benefit from experience-sharing with your fellows!') }}
                 </p>
-                <button class="bt-large button-width"
-                        onclick="window.open('{{ h.benap_forum_url() }}');">
-                    {{ _('Join') }}
+                <button class="bt-large button-width">
+                    <a href="/{{ h.lang() }}/forum">{{ _('Join') }}</a>
                 </button>
             </div>
         </div>
