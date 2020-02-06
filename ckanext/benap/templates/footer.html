@@ -19,8 +19,12 @@
         {% endblock %}
       </div>
         <div id="images" class="flex-between w-33">
-          <a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='pages_show', page='/about') }}">
-            <!--img class="footer-img" src="/images/logo-its.png" alt="logo its"-->
+          <i>{{ h.lang() }}</i>
+            {% if h.lang() == 'fr' %}
+            <a href="https://mobilit.belgium.be/fr/mobilite/systemes_de_transports_intelligents/comite_de_pilotage_its">
+              {% else %}
+              <a href="https://mobilit.belgium.be/nl/mobiliteit/intelligente_vervoersystemen/its_stuurgroep">
+            {% endif %}
             <img class="footer-img" src="{{ h.url_for_static('/images/logo-its.png') }}" alt="logo its">
           </a>
           <a href="http://www.ngi.be/" target="_blank">
