@@ -666,6 +666,23 @@
         "de": "Beschreibt die Sprache der Dateninhälte (Textfelde, Adressen, usw.)."
       },
       "required": "true"
+    },
+    {
+      "field_name": "agreement",
+      "label": {
+        "en": "Agreement",
+        "fr": "Accord",
+        "nl": "Overeenkomst",
+        "de": "Auf Deutsh"
+      },
+      "preset": "single_checkbox",
+      "help_text": {
+        "en": "Agreement",
+        "fr": "Accord",
+        "nl": "Overeenkomst",
+        "de": "Auf Deutsh"
+      },
+      "required": "false"
     }
   ]
 }
