@@ -668,24 +668,6 @@
       "required": "true"
     },
     {
-      "field_name": "agreement",
-      "label": {
-        "en": "Agreement",
-        "fr": "Accord",
-        "nl": "Overeenkomst",
-        "de": "Auf Deutsh"
-      },
-      "preset": "single_checkbox",
-      "display_snippet": null,
-      "help_text": {
-        "en": "Agreement",
-        "fr": "Accord",
-        "nl": "Overeenkomst",
-        "de": "Auf Deutsh"
-      },
-      "required": "false"
-    },
-    {
       "field_name": "agreement_multiple",
       "label": {
         "en": "Agreement",
