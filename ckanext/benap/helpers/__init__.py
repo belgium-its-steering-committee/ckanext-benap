@@ -1014,6 +1014,15 @@ def ontology_helper(context):
             }),
 
         ])
+    elif ontology == "agreement":
+        return map_for_form_select([
+            (True, {
+                "en": u"I agree",
+                "fr": u"d'Accord",
+                "nl": u"Akkoord",
+                "de": u"Auf Deutsch"
+            })
+        ])
     return None
 
 

@@ -676,6 +676,7 @@
         "de": "Auf Deutsh"
       },
       "preset": "single_checkbox",
+      "display_snippet": null,
       "help_text": {
         "en": "Agreement",
         "fr": "Accord",
@@ -683,6 +684,41 @@
         "de": "Auf Deutsh"
       },
       "required": "false"
+    },
+    {
+      "field_name": "agreement_multiple",
+      "label": {
+        "en": "Agreement",
+        "fr": "Accord",
+        "nl": "Overeenkomst",
+        "de": "Auf Deutsh"
+      },
+      "preset": "multiple_checkbox",
+      "help_text": {
+        "en": "Agreement",
+        "fr": "Accord",
+        "nl": "Overeenkomst",
+        "de": "Auf Deutsh"
+      },
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "agreement",
+      "required": "false"
+    },
+    {
+      "field_name": "agreement_document",
+      "label": {
+        "en": "Agreement document",
+        "fr": "Accord document",
+        "nl": "Overeenkomst document",
+        "de": "Auf Deutsh document"
+      },
+      "help_text": {
+        "en": "Agreement document",
+        "fr": "Accord document",
+        "nl": "Overeenkomst document",
+        "de": "Auf Deutsh document"
+      },
+      "form_snippet": "form_markup.html"
     }
   ]
 }
