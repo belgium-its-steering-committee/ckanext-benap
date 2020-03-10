@@ -473,6 +473,7 @@
         "de": "Auf Deutsh... "
       },
       "help_link": "https://www.ngi.be",
+      "help_link_text": "Agreement Declaration",
       "preset": "multiple_checkbox",
       "choices": [
          {
