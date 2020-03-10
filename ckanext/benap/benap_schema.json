@@ -461,16 +461,16 @@
     {
       "field_name": "agreement_declaration",
       "label": {
-        "en": "Agreement <a href=\"#\">Here you can find the directive.</a> ",
-        "fr": "Accord <a href=\"#\">Here you can find the directive.</a> ",
-        "nl": "Overeenkomst <a href=\"#\">Here you can find the directive.</a> ",
-        "de": "Auf Deutsh <a href=\"#\">Here you can find the directive.</a> "
+        "en": "Agreement",
+        "fr": "Accord",
+        "nl": "Overeenkomst",
+        "de": "Auf Deutsh"
       },
       "help_text": {
-        "en": "Agreement...",
-        "fr": "Accord...",
-        "nl": "Overeenkomst...",
-        "de": "Auf Deutsh..."
+        "en": "Agreement... <a href=\"#\">Here you can find the directive.</a> ",
+        "fr": "Accord... <a href=\"#\">Here you can find the directive.</a> ",
+        "nl": "Overeenkomst... <a href=\"#\">Here you can find the directive.</a> ",
+        "de": "Auf Deutsh... <a href=\"#\">Here you can find the directive.</a> "
       },
       "preset": "multiple_checkbox",
       "choices": [
