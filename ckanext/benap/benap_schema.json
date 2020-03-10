@@ -466,6 +466,7 @@
         "nl": "Overeenkomst",
         "de": "Auf Deutsh"
       },
+      "help_inline": "true",
       "help_text": {
         "en": "Agreement... <a href=\"#\">Here you can find the directive.</a> ",
         "fr": "Accord... <a href=\"#\">Here you can find the directive.</a> ",
