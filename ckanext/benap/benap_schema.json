@@ -457,6 +457,34 @@
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "data-theme",
       "required": "true"
+    },
+    {
+      "field_name": "agreement_declaration",
+      "label": {
+        "en": "Agreement <a href=\"#\">Here you can find the directive.</a> ",
+        "fr": "Accord <a href=\"#\">Here you can find the directive.</a> ",
+        "nl": "Overeenkomst <a href=\"#\">Here you can find the directive.</a> ",
+        "de": "Auf Deutsh <a href=\"#\">Here you can find the directive.</a> "
+      },
+      "help_text": {
+        "en": "Agreement...",
+        "fr": "Accord...",
+        "nl": "Overeenkomst...",
+        "de": "Auf Deutsh..."
+      },
+      "preset": "multiple_checkbox",
+      "choices": [
+         {
+          "value": "Y",
+          "label": {
+              "en": "Yes",
+              "fr": "Oui",
+              "nl": "Ja",
+              "de": "Ja"
+            }
+         }
+      ],
+      "required": "true"
     }
   ],
   "resource_fields": [
