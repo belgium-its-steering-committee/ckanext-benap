@@ -469,11 +469,16 @@
       "help_text": {
         "en": "Agreement... ",
         "fr": "Accord... ",
-        "nl": "Overeenkomst... ",
+        "nl": "Deze dataset is in overeenstemming met: ",
         "de": "Auf Deutsh... "
       },
       "help_link": "https://www.ngi.be",
-      "help_link_text": "Agreement Declaration",
+      "help_link_text": {
+        "en": "Agreement declaration",
+        "fr": "Accord... ",
+        "nl": "Verklaring van overeenstemming",
+        "de": "Auf Deutsh... "
+      },
       "preset": "multiple_checkbox",
       "choices": [
          {
