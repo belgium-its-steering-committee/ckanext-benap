@@ -491,7 +491,8 @@
             }
          }
       ],
-      "required": "true"
+      "required": "true",
+      "validators": "agreement_validator not_empty"
     }
   ],
   "resource_fields": [
