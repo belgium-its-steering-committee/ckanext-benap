@@ -52,7 +52,3 @@ def is_after_start(key, flattened_data, errors, context):
                 raise Invalid(_('Start date must be before end date'))
     return True
 
-def agreement_validator(value, context):
-    if value is None:
-        raise Invalid(_('The agreement declaration has to be checked.'))
-    return value

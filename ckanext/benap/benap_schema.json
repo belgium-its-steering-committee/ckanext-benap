@@ -492,7 +492,7 @@
          }
       ],
       "required": "true",
-      "validators": "agreement_validator not_empty"
+      "validators": "not_empty"
     }
   ],
   "resource_fields": [
