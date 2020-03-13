@@ -255,6 +255,12 @@
         "nl": "Begindatum publicatie",
         "de": "Anfangsdatum"
       },
+      "label_time": {
+        "en": "Time",
+        "fr": "Temps",
+        "nl": "Tijd",
+        "de": "Zeit"
+      },
       "preset": "datetime_tz",
       "help_text": {
         "en": "Describes from which date and time on the data delivery is applicable. If left empty, the publication is considered as available immediately.",
@@ -271,6 +277,12 @@
         "fr": "Date de fin de publication",
         "nl": "Einddatum publicatie",
         "de": "Enddatum"
+      },
+      "label_time": {
+        "en": "Time",
+        "fr": "Temps",
+        "nl": "Tijd",
+        "de": "Zeit"
       },
       "preset": "datetime_tz",
       "help_text": {
