@@ -92,7 +92,7 @@
       "label": {
         "en": "Resource type",
         "fr": "Type de ressource",
-        "nl": "Ressourcetype",
+        "nl": "Brontype",
         "de": "Ressourcentyp"
       },
       "preset": "select",
