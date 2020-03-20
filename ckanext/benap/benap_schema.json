@@ -134,9 +134,9 @@
       },
       "label_dataset_organization": {
         "en": "Visibility",
-        "fr": "Visibilité",
-        "nl": "Zichtbaarheid",
-        "de": "Sichtweite"
+        "fr": "Accessibilité",
+        "nl": "Toegankelijkheid",
+        "de": "Zugang"
       },
       "preset": "dataset_organization",
       "help_text": {
