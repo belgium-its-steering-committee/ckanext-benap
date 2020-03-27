@@ -472,22 +472,43 @@
         "nl": "Deze dataset is in overeenstemming met: ",
         "de": "Auf Deutsh... "
       },
-      "help_link": "https://www.ngi.be",
-      "help_link_text": {
-        "en": "Agreement declaration",
-        "fr": "Accord... ",
-        "nl": "Verklaring van overeenstemming",
-        "de": "Auf Deutsh... "
-      },
       "preset": "multiple_checkbox",
       "choices": [
          {
           "value": "Y",
           "label": {
-              "en": "Yes",
+              "en": "I hereby declare to be compliant to articles 3 to 8 of the European regulation (EU) 2017/1926 for this dataset.",
               "fr": "Oui",
               "nl": "Ja",
               "de": "Ja"
+            },
+          "help_text": {
+              "en": "For more inforation see \"Declaration of compliance\" in the About-section (link!)",
+              "fr": "Accord... ",
+              "nl": "Deze dataset is in overeenstemming met: ",
+              "de": "Auf Deutsh... "
+           },
+          "help_link": "https://www.ngi.be",
+          "help_link_text": {
+              "en": "Agreement declaration",
+              "fr": "Accord... ",
+              "nl": "Verklaring van overeenstemming",
+              "de": "Auf Deutsh... "
+          }
+         },
+        {
+          "value": "N",
+          "label": {
+              "en": "I do not yet submit a declaration of compliance.",
+              "fr": "Non",
+              "nl": "Nee",
+              "de": "Nein"
+            },
+           "help_text": {
+              "en": "It is possible to submit this declaration at a later moment. However, do not forget to do this as the declaration of compliance is necessary for the assessment of compliance.",
+              "fr": "Accord... ",
+              "nl": "Deze dataset is in overeenstemming met: ",
+              "de": "Auf Deutsh... "
             }
          }
       ],
