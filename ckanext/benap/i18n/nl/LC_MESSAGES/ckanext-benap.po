@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-18 15:49+0200\n"
+"POT-Creation-Date: 2020-04-09 17:17+0200\n"
 "PO-Revision-Date: 2019-09-20 17:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: nl\n"
@@ -31,7 +31,7 @@ msgstr "België is een verplicht land"
 msgid "Start date must be before end date"
 msgstr "Startdatum moet voor de einddatum zijn"
 
-#: ckanext/benap/templates/base.html:37
+#: ckanext/benap/templates/base.html:18
 msgid ""
 "Belgium&#39;s national access point for multimodal travel information "
 "services."
@@ -51,11 +51,11 @@ msgstr "Github"
 msgid "CKAN API"
 msgstr "CKAN API"
 
-#: ckanext/benap/templates/footer.html:33
+#: ckanext/benap/templates/footer.html:36
 msgid "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 msgstr "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 
-#: ckanext/benap/templates/footer.html:52
+#: ckanext/benap/templates/footer.html:55
 msgid ""
 "2019 - By the National Geographic Institute on behalf of the ITS steering"
 " commitee."
@@ -101,7 +101,7 @@ msgid "Log out"
 msgstr "Log-out"
 
 #: ckanext/benap/templates/header.html:62
-#: ckanext/benap/templates/home/snippets/search.html:30
+#: ckanext/benap/templates/home/snippets/search.html:33
 msgid "Log in"
 msgstr "Log-in"
 
@@ -143,7 +143,7 @@ msgstr ""
 " online community en profiteer van het delen van ervaringen met uw "
 "collega's!"
 
-#: ckanext/benap/templates/home/snippets/community.html:16
+#: ckanext/benap/templates/home/snippets/community.html:15
 msgid "Join"
 msgstr "Sluit je aan"
 
@@ -197,39 +197,39 @@ msgstr "WERKT EEN LINK NIET?"
 msgid "REPORT IT HERE"
 msgstr "MELD HET HIER"
 
-#: ckanext/benap/templates/home/snippets/search.html:2
+#: ckanext/benap/templates/home/snippets/search.html:3
 msgid "E.g. environment"
 msgstr "Bv. leefmilieu"
 
-#: ckanext/benap/templates/home/snippets/search.html:5
+#: ckanext/benap/templates/home/snippets/search.html:6
 msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
 msgstr ""
 "Belgisch nationaal toegangspunt voor informatiediensten over multimodale "
 "verplaatsingen."
 
-#: ckanext/benap/templates/home/snippets/search.html:9
+#: ckanext/benap/templates/home/snippets/search.html:10
 msgid "SEARCH FOR DATA SETS"
 msgstr "ZOEK NAAR DATASETS"
 
-#: ckanext/benap/templates/home/snippets/search.html:11
+#: ckanext/benap/templates/home/snippets/search.html:12
 msgid "ex. transport, cars, trains, ..."
 msgstr "Bv. autodelen, trein, fietsverhuur, enz."
 
-#: ckanext/benap/templates/home/snippets/search.html:17
+#: ckanext/benap/templates/home/snippets/search.html:18
 msgid "Popular Tags"
 msgstr "Populaire tags"
 
-#: ckanext/benap/templates/home/snippets/search.html:24
+#: ckanext/benap/templates/home/snippets/search.html:27
 msgid "ADD NEW DATA"
 msgstr "NIEUWE GEGEVENS TOEVOEGEN"
 
-#: ckanext/benap/templates/home/snippets/search.html:26
+#: ckanext/benap/templates/home/snippets/search.html:29
 msgid "Data providers can easily add data to the catalogue."
 msgstr ""
 "Gegevensleveranciers kunnen gemakkelijk gegevens aan de catalogus "
 "toevoegen."
 
-#: ckanext/benap/templates/home/snippets/search.html:28
+#: ckanext/benap/templates/home/snippets/search.html:31
 msgid "Add Data"
 msgstr "Gegevens toevoegen"
 
@@ -260,11 +260,24 @@ msgstr ""
 "Het toevoegen van een link (of het uploaden van een bestand) is verplicht"
 " volgens de Gedelegeerde Verordening (EU) 2017/1926 van de Commissie."
 
+#: ckanext/benap/templates/snippets/facet_list.html:82
+msgid "Show More {facet_type}"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/facet_list.html:85
+msgid "Show Only Popular {facet_type}"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/facet_list.html:89
+msgid "There are no {facet_type} that match this search"
+msgstr ""
+
 #: ckanext/benap/templates/snippets/language_selector.html:3
 msgid "Language"
 msgstr "Taal"
 
 #: ckanext/benap/templates/snippets/language_selector.html:11
+#: ckanext/benap/templates/snippets/search_form.html:42
 msgid "Go"
 msgstr "Gaan"
 
@@ -284,8 +297,42 @@ msgstr "Verwijderde"
 msgid "This dataset has no description"
 msgstr "Er is geen beschrijving voor deze dataset."
 
+#: ckanext/benap/templates/snippets/search_form.html:3
+msgid "Search datasets..."
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:4
+msgid "Name Ascending"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:4
+msgid "Name Descending"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:33
+msgid "Order by"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:65
+msgid "Remove"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:70
+msgid "Filter Results"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:77
+msgid " <p class=\"extra\">Please try another search.</p> "
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:83
+msgid ""
+" <p id=\"search-error\"><strong>There was an error while "
+"searching.</strong> Please try again.</p> "
+msgstr ""
+
 #: ckanext/benap/templates/user/dashboard.html:9
-#: ckanext/benap/templates/user/dashboard.html:29
+#: ckanext/benap/templates/user/dashboard.html:32
 msgid "News feed"
 msgstr "Nieuwsfeed"
 
@@ -311,7 +358,11 @@ msgstr "Indien wel, dan vind je meer informatie over wat je kan doen op onze "
 msgid "about section."
 msgstr "pagina Over."
 
-#: ckanext/benap/templates/user/dashboard.html:31
+#: ckanext/benap/templates/user/dashboard.html:26
+msgid "Make sure to check your spam folder for the subscription e-mail."
+msgstr "Zorg ervoor dat u uw spam-map controleert voor de abbonerings e-mail."
+
+#: ckanext/benap/templates/user/dashboard.html:34
 msgid "Activity from items that I'm following"
 msgstr "Activiteit van items die ik volg"
 
@@ -395,9 +446,5 @@ msgstr ""
 " velden in en druk op \"Account maken\""
 
 #~ msgid ""
-#~ "BELGIUM&#39;S NATIONAL ACCESS POINT FOR "
-#~ "MULTIMODAL TRAVEL INFORMATION SERVICES"
 #~ msgstr ""
-#~ "BELGISCH NATIONAAL TOEGANGSPUNT VOOR "
-#~ "INFORMATIEDIENSTEN OVER MULTIMODALE VERPLAATSINGEN"
 
