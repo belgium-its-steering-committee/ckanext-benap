@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-18 15:49+0200\n"
+"POT-Creation-Date: 2020-04-09 17:17+0200\n"
 "PO-Revision-Date: 2019-09-20 17:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -31,7 +31,7 @@ msgstr "Belgium is a required country"
 msgid "Start date must be before end date"
 msgstr "Start date must be before end date"
 
-#: ckanext/benap/templates/base.html:37
+#: ckanext/benap/templates/base.html:18
 msgid ""
 "Belgium&#39;s national access point for multimodal travel information "
 "services."
@@ -51,11 +51,11 @@ msgstr "Github"
 msgid "CKAN API"
 msgstr "CKAN API"
 
-#: ckanext/benap/templates/footer.html:33
+#: ckanext/benap/templates/footer.html:36
 msgid "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 msgstr "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 
-#: ckanext/benap/templates/footer.html:52
+#: ckanext/benap/templates/footer.html:55
 msgid ""
 "2019 - By the National Geographic Institute on behalf of the ITS steering"
 " commitee."
@@ -101,7 +101,7 @@ msgid "Log out"
 msgstr "Log out"
 
 #: ckanext/benap/templates/header.html:62
-#: ckanext/benap/templates/home/snippets/search.html:30
+#: ckanext/benap/templates/home/snippets/search.html:33
 msgid "Log in"
 msgstr "Log in"
 
@@ -142,7 +142,7 @@ msgstr ""
 "As transport data producer or user, join our online community and benefit"
 " from experience-sharing with your fellows!"
 
-#: ckanext/benap/templates/home/snippets/community.html:16
+#: ckanext/benap/templates/home/snippets/community.html:15
 msgid "Join"
 msgstr "Join"
 
@@ -196,37 +196,37 @@ msgstr "LINK DOESN' T WORK?"
 msgid "REPORT IT HERE"
 msgstr "REPORT IT HERE"
 
-#: ckanext/benap/templates/home/snippets/search.html:2
+#: ckanext/benap/templates/home/snippets/search.html:3
 msgid "E.g. environment"
 msgstr "E.g. environment"
 
-#: ckanext/benap/templates/home/snippets/search.html:5
+#: ckanext/benap/templates/home/snippets/search.html:6
 msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
 msgstr ""
 "Belgium&#39;s national access point for multimodal travel information "
 "services."
 
-#: ckanext/benap/templates/home/snippets/search.html:9
+#: ckanext/benap/templates/home/snippets/search.html:10
 msgid "SEARCH FOR DATA SETS"
 msgstr "SEARCH FOR DATA SETS"
 
-#: ckanext/benap/templates/home/snippets/search.html:11
+#: ckanext/benap/templates/home/snippets/search.html:12
 msgid "ex. transport, cars, trains, ..."
 msgstr "ex. car-sharing, train, bike-hire,…"
 
-#: ckanext/benap/templates/home/snippets/search.html:17
+#: ckanext/benap/templates/home/snippets/search.html:18
 msgid "Popular Tags"
 msgstr "Popular Tags"
 
-#: ckanext/benap/templates/home/snippets/search.html:24
+#: ckanext/benap/templates/home/snippets/search.html:27
 msgid "ADD NEW DATA"
 msgstr "ADD NEW DATA"
 
-#: ckanext/benap/templates/home/snippets/search.html:26
+#: ckanext/benap/templates/home/snippets/search.html:29
 msgid "Data providers can easily add data to the catalogue."
 msgstr "Data providers can easily add data to the catalogue."
 
-#: ckanext/benap/templates/home/snippets/search.html:28
+#: ckanext/benap/templates/home/snippets/search.html:31
 msgid "Add Data"
 msgstr "Add Data"
 
@@ -256,11 +256,24 @@ msgstr ""
 "Adding a link (or uploading a file) is compulsory as per Commission "
 "Delegated Regulation (EU) 2017/1926."
 
+#: ckanext/benap/templates/snippets/facet_list.html:82
+msgid "Show More {facet_type}"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/facet_list.html:85
+msgid "Show Only Popular {facet_type}"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/facet_list.html:89
+msgid "There are no {facet_type} that match this search"
+msgstr ""
+
 #: ckanext/benap/templates/snippets/language_selector.html:3
 msgid "Language"
 msgstr "Language"
 
 #: ckanext/benap/templates/snippets/language_selector.html:11
+#: ckanext/benap/templates/snippets/search_form.html:42
 msgid "Go"
 msgstr "Go"
 
@@ -280,8 +293,42 @@ msgstr "Deleted"
 msgid "This dataset has no description"
 msgstr "This dataset has no description"
 
+#: ckanext/benap/templates/snippets/search_form.html:3
+msgid "Search datasets..."
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:4
+msgid "Name Ascending"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:4
+msgid "Name Descending"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:33
+msgid "Order by"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:65
+msgid "Remove"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:70
+msgid "Filter Results"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:77
+msgid " <p class=\"extra\">Please try another search.</p> "
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:83
+msgid ""
+" <p id=\"search-error\"><strong>There was an error while "
+"searching.</strong> Please try again.</p> "
+msgstr ""
+
 #: ckanext/benap/templates/user/dashboard.html:9
-#: ckanext/benap/templates/user/dashboard.html:29
+#: ckanext/benap/templates/user/dashboard.html:32
 msgid "News feed"
 msgstr "News feed"
 
@@ -307,7 +354,11 @@ msgstr "If yes, you will find more information on what to do in our "
 msgid "about section."
 msgstr "about section."
 
-#: ckanext/benap/templates/user/dashboard.html:31
+#: ckanext/benap/templates/user/dashboard.html:26
+msgid "Make sure to check your spam folder for the subscription e-mail."
+msgstr "Make sure to check your spam folder for the subscription e-mail."
+
+#: ckanext/benap/templates/user/dashboard.html:34
 msgid "Activity from items that I'm following"
 msgstr "Activity from items that I'm following"
 
@@ -389,9 +440,4 @@ msgstr ""
 "the other fields and press \"Create account\""
 
 #~ msgid ""
-#~ "BELGIUM&#39;S NATIONAL ACCESS POINT FOR "
-#~ "MULTIMODAL TRAVEL INFORMATION SERVICES"
 #~ msgstr ""
-#~ "BELGIUM'S NATIONAL ACCESS POINT FOR "
-#~ "MULTIMODAL TRAVEL INFORMATION SERVICES"
-

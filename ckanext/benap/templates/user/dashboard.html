@@ -22,6 +22,9 @@
                 {{ _('If yes, you will find more information on what to do in our ') }}
                 <a href="{{ h.get_site_protocol_and_host()[0] }}://{{ h.get_site_protocol_and_host()[1] }}/{{ h.lang() }}/pages/information-data-providers">{{ _('about section.') }}</a>
             </p>
+            <p>
+                {{ _('Make sure to check your spam folder for the subscription e-mail.') }}
+            </p>
         </div>
         {% snippet 'user/snippets/followee_dropdown.html', context=dashboard_activity_stream_context, followees=followee_list %}
         <h2 class="page-heading">

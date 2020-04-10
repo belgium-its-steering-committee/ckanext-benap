@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-18 15:49+0200\n"
+"POT-Creation-Date: 2020-04-09 17:17+0200\n"
 "PO-Revision-Date: 2019-10-14 16:52+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -31,7 +31,7 @@ msgstr "La Belgique est un pays requis"
 msgid "Start date must be before end date"
 msgstr "La date de début doit être antérieure à la date de fin"
 
-#: ckanext/benap/templates/base.html:37
+#: ckanext/benap/templates/base.html:18
 msgid ""
 "Belgium&#39;s national access point for multimodal travel information "
 "services."
@@ -51,11 +51,11 @@ msgstr "Github"
 msgid "CKAN API"
 msgstr "CKAN API"
 
-#: ckanext/benap/templates/footer.html:33
+#: ckanext/benap/templates/footer.html:36
 msgid "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 msgstr "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 
-#: ckanext/benap/templates/footer.html:52
+#: ckanext/benap/templates/footer.html:55
 msgid ""
 "2019 - By the National Geographic Institute on behalf of the ITS steering"
 " commitee."
@@ -101,7 +101,7 @@ msgid "Log out"
 msgstr "Déconnexion"
 
 #: ckanext/benap/templates/header.html:62
-#: ckanext/benap/templates/home/snippets/search.html:30
+#: ckanext/benap/templates/home/snippets/search.html:33
 msgid "Log in"
 msgstr "Connexion"
 
@@ -143,7 +143,7 @@ msgstr ""
 "notre communauté en ligne et profitez du partage d'expérience avec vos "
 "collègues!"
 
-#: ckanext/benap/templates/home/snippets/community.html:16
+#: ckanext/benap/templates/home/snippets/community.html:15
 msgid "Join"
 msgstr "Inscrivez-vous"
 
@@ -198,39 +198,39 @@ msgstr "UN LIEN ROMPU?"
 msgid "REPORT IT HERE"
 msgstr "SIGNALEZ-LE ICI"
 
-#: ckanext/benap/templates/home/snippets/search.html:2
+#: ckanext/benap/templates/home/snippets/search.html:3
 msgid "E.g. environment"
 msgstr "Par ex. environnement"
 
-#: ckanext/benap/templates/home/snippets/search.html:5
+#: ckanext/benap/templates/home/snippets/search.html:6
 msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
 msgstr ""
 "Point d&#39;accès national belge pour les services d'information sur les "
 "déplacements multimodaux"
 
-#: ckanext/benap/templates/home/snippets/search.html:9
+#: ckanext/benap/templates/home/snippets/search.html:10
 msgid "SEARCH FOR DATA SETS"
 msgstr "RECHERCHER JEUX DE DONNEES"
 
-#: ckanext/benap/templates/home/snippets/search.html:11
+#: ckanext/benap/templates/home/snippets/search.html:12
 msgid "ex. transport, cars, trains, ..."
 msgstr "ex. autopartage, train, location de vélos, etc."
 
-#: ckanext/benap/templates/home/snippets/search.html:17
+#: ckanext/benap/templates/home/snippets/search.html:18
 msgid "Popular Tags"
 msgstr "Tags fréquents"
 
-#: ckanext/benap/templates/home/snippets/search.html:24
+#: ckanext/benap/templates/home/snippets/search.html:27
 msgid "ADD NEW DATA"
 msgstr "AJOUTER NOUVELLES DONNEES"
 
-#: ckanext/benap/templates/home/snippets/search.html:26
+#: ckanext/benap/templates/home/snippets/search.html:29
 msgid "Data providers can easily add data to the catalogue."
 msgstr ""
 "Les fournisseurs de données peuvent facilement ajouter des données au "
 "catalogue."
 
-#: ckanext/benap/templates/home/snippets/search.html:28
+#: ckanext/benap/templates/home/snippets/search.html:31
 msgid "Add Data"
 msgstr "Ajouter données"
 
@@ -261,11 +261,24 @@ msgstr ""
 "L'ajout d'un lien (ou le téléchargement d'un fichier) est obligatoire "
 "conformément au règlement délégué (UE) 2017/1926 de la Commission."
 
+#: ckanext/benap/templates/snippets/facet_list.html:82
+msgid "Show More {facet_type}"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/facet_list.html:85
+msgid "Show Only Popular {facet_type}"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/facet_list.html:89
+msgid "There are no {facet_type} that match this search"
+msgstr ""
+
 #: ckanext/benap/templates/snippets/language_selector.html:3
 msgid "Language"
 msgstr "Langue"
 
 #: ckanext/benap/templates/snippets/language_selector.html:11
+#: ckanext/benap/templates/snippets/search_form.html:42
 msgid "Go"
 msgstr "Aller"
 
@@ -285,8 +298,42 @@ msgstr "Supprimé"
 msgid "This dataset has no description"
 msgstr "Ce jeu de données n'a pas de description."
 
+#: ckanext/benap/templates/snippets/search_form.html:3
+msgid "Search datasets..."
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:4
+msgid "Name Ascending"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:4
+msgid "Name Descending"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:33
+msgid "Order by"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:65
+msgid "Remove"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:70
+msgid "Filter Results"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:77
+msgid " <p class=\"extra\">Please try another search.</p> "
+msgstr ""
+
+#: ckanext/benap/templates/snippets/search_form.html:83
+msgid ""
+" <p id=\"search-error\"><strong>There was an error while "
+"searching.</strong> Please try again.</p> "
+msgstr ""
+
 #: ckanext/benap/templates/user/dashboard.html:9
-#: ckanext/benap/templates/user/dashboard.html:29
+#: ckanext/benap/templates/user/dashboard.html:32
 msgid "News feed"
 msgstr "Fil d'actualité"
 
@@ -312,7 +359,11 @@ msgstr ""
 msgid "about section."
 msgstr "section A propos."
 
-#: ckanext/benap/templates/user/dashboard.html:31
+#: ckanext/benap/templates/user/dashboard.html:26
+msgid "Make sure to check your spam folder for the subscription e-mail."
+msgstr "Assurez-vous de vérifier votre dossier de spam pour l'e-mail d'abonnement."
+
+#: ckanext/benap/templates/user/dashboard.html:34
 msgid "Activity from items that I'm following"
 msgstr "Activité à partir d'éléments que je suis"
 
@@ -396,10 +447,5 @@ msgstr ""
 "un compte\""
 
 #~ msgid ""
-#~ "BELGIUM&#39;S NATIONAL ACCESS POINT FOR "
-#~ "MULTIMODAL TRAVEL INFORMATION SERVICES"
 #~ msgstr ""
-#~ "POINT D'ACCÈS NATIONAL BELGE POUR LES"
-#~ " SERVICES D'INFORMATION SUR LES "
-#~ "DÉPLACEMENTS MULTIMODAUX"
 
