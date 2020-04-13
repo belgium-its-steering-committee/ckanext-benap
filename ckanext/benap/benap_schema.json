@@ -472,7 +472,7 @@
         "nl": "Deze dataset is in overeenstemming met: ",
         "de": "Auf Deutsh... "
       },
-      "multi_help": "Y",
+      "multi_help": "true",
       "preset": "multiple_checkbox",
       "choices": [
          {
