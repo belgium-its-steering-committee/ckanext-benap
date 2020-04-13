@@ -473,7 +473,7 @@
         "de": "Auf Deutsh... "
       },
       "multi_help": "true",
-      "preset": "multiple_checkbox",
+      "preset": "multiple_radio",
       "choices": [
          {
           "value": "Y",
