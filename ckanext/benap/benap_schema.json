@@ -515,6 +515,22 @@
       ],
       "required": "true",
       "validators": "not_empty"
+    },
+    {
+      "field_name": "text box for optional comment",
+      "label": {
+        "en": "text box for optional comment",
+        "fr": "Nom [éditeur]",
+        "nl": "Naam [uitgever]",
+        "de": "Name [Herausgeber]"
+      },
+      "required": "false",
+      "form_attrs": {
+        "class": "soft-label"
+      },
+      "label_attrs": {
+        "class": "soft-label"
+      }
     }
   ],
   "resource_fields": [
