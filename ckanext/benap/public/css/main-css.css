@@ -759,3 +759,6 @@ span.item-count {
     }
 }
 
+.soft-label {
+    font-weight: normal;
+}

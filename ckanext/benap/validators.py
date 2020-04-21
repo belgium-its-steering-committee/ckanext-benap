@@ -51,3 +51,4 @@ def is_after_start(key, flattened_data, errors, context):
             if start_date > end_date:
                 raise Invalid(_('Start date must be before end date'))
     return True
+
