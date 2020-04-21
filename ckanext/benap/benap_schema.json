@@ -461,75 +461,57 @@
     {
       "field_name": "agreement_declaration",
       "label": {
-        "en": "Agreement",
-        "fr": "Accord",
-        "nl": "Overeenkomst",
-        "de": "Auf Deutsh"
-      },
-      "help_text": {
-        "en": "Agreement... ",
-        "fr": "Accord... ",
-        "nl": "Deze dataset is in overeenstemming met: ",
-        "de": "Auf Deutsh... "
+        "en": "Declaration of compliance",
+        "fr": "déclaration de conformité",
+        "nl": "Verklaring van overeenstemming",
+        "de": "Einhaltungserklärung"
       },
       "multi_help": "true",
-      "preset": "multiple_radio",
+      "preset": "multiple_radio_compliance",
       "choices": [
          {
           "value": "Y",
           "label": {
               "en": "I hereby declare to be compliant to articles 3 to 8 of the European regulation (EU) 2017/1926 for this dataset.",
-              "fr": "Oui",
-              "nl": "Ja",
-              "de": "Ja"
+              "fr": "Je déclare être en conformité avec les articles 3 à 8 du règlement délégué européen (UE) 2017/1926 pour ce jeu de données.",
+              "nl": "Ik verklaar voor deze dataset in overeenstemming te zijn met artikels 3 tot 8 van de Europese verordening (EU) 2017/1926.",
+              "de": "Hiermit erkläre ich, in Übereinstimmung mit den Artikeln 3 bis 8 der Europäischen Verordnung (EU) 2017/1926 für diesen Datensatz zu sein."
             },
           "help_text": {
-              "en": "For more inforation see \"Declaration of compliance\" in the About-section (link!)",
-              "fr": "Accord... ",
-              "nl": "Deze dataset is in overeenstemming met: ",
-              "de": "Auf Deutsh... "
+              "en": "For more information click here",
+              "fr": "Pour de plus amples informations, cliquez ici",
+              "nl": "Voor meer info klik hier",
+              "de": "Für weitere Informationen, bitte hier klicken"
            },
-          "help_link": "https://www.ngi.be",
-          "help_link_text": {
-              "en": "Agreement declaration",
-              "fr": "Accord... ",
-              "nl": "Verklaring van overeenstemming",
-              "de": "Auf Deutsh... "
-          }
+          "help_link": "http://ec2-63-33-90-161.eu-west-1.compute.amazonaws.com/pages/compliance"
          },
         {
           "value": "N",
           "label": {
               "en": "I do not yet submit a declaration of compliance.",
-              "fr": "Non",
-              "nl": "Nee",
-              "de": "Nein"
+              "fr": "Je ne fournis pas encore une déclaration de conformité.",
+              "nl": "Ik leg momenteel nog geen verklaring van overeenstemming af.",
+              "de": "Ich lege jetzt noch keine  Einhaltungserklärung vor."
             },
            "help_text": {
               "en": "It is possible to submit this declaration at a later moment. However, do not forget to do this as the declaration of compliance is necessary for the assessment of compliance.",
-              "fr": "Accord... ",
-              "nl": "Deze dataset is in overeenstemming met: ",
-              "de": "Auf Deutsh... "
-            }
-         }
+              "fr": "Vous pouvez encore présenter cette déclaration plus tard, mais ne l’oubliez pas car elle est nécessaire pour l’évaluation de la conformité.",
+              "nl": "Het is mogelijk om deze verklaring van overeenstemming nog op een later moment in te dienen. Vergeet dit echter niet, deze verklaring is noodzakelijk voor de beoordeling van de naleving. ",
+              "de": "Sie können noch später eine Erklärung vorlegen. Vergessen Sie diese Erklärung aber nicht, weil die Einhaltungserklärung für die Einhaltungsprüfung notwendig ist."
+            },
+          "help_link": ""
+        }
       ],
       "required": "true",
       "validators": "not_empty"
     },
     {
-      "field_name": "text box for optional comment",
+      "field_name": "optional_comment",
       "label": {
         "en": "text box for optional comment",
-        "fr": "Nom [éditeur]",
-        "nl": "Naam [uitgever]",
-        "de": "Name [Herausgeber]"
-      },
-      "required": "false",
-      "form_attrs": {
-        "class": "soft-label"
-      },
-      "label_attrs": {
-        "class": "soft-label"
+        "fr": "zone de texte pour commentaire facultatif",
+        "nl": "tekstveld voor optionele opmerking",
+        "de": "Textfeld für optionalen Kommentar"
       }
     }
   ],
