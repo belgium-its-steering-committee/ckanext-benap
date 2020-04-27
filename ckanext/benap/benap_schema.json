@@ -483,7 +483,7 @@
               "nl": "Voor meer info klik hier",
               "de": "Für weitere Informationen, bitte hier klicken"
            },
-          "help_link": "http://ec2-63-33-90-161.eu-west-1.compute.amazonaws.com/pages/compliance"
+          "help_link": "/pages/compliance"
          },
         {
           "value": "N",
@@ -512,7 +512,8 @@
         "fr": "zone de texte pour commentaire facultatif",
         "nl": "tekstveld voor optionele opmerking",
         "de": "Textfeld für optionalen Kommentar"
-      }
+      },
+      "classes": "x"
     }
   ],
   "resource_fields": [
