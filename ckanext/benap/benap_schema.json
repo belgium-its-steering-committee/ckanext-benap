@@ -531,7 +531,7 @@
         "nl": "tekstveld voor optionele opmerking",
         "de": "Textfeld für optionalen Kommentar"
       },
-      "classes": "x"
+      "classes": ["margin-left-24"]
     }
   ],
   "resource_fields": [
