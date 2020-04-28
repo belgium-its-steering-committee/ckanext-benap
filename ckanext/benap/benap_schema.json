@@ -92,7 +92,7 @@
       "label": {
         "en": "Resource type",
         "fr": "Type de ressource",
-        "nl": "Ressourcetype",
+        "nl": "Brontype",
         "de": "Ressourcentyp"
       },
       "preset": "select",
@@ -131,6 +131,12 @@
         "fr": "Nom de l'organisation [point de contact] ",
         "nl": "Naam van de organisatie  [contactpunt]",
         "de": "Name der Organisation  [Kontaktpunkt]"
+      },
+      "label_dataset_organization": {
+        "en": "Visibility",
+        "fr": "Accessibilité",
+        "nl": "Toegankelijkheid",
+        "de": "Zugang"
       },
       "preset": "dataset_organization",
       "help_text": {
@@ -255,6 +261,12 @@
         "nl": "Begindatum publicatie",
         "de": "Anfangsdatum"
       },
+      "label_time": {
+        "en": "Time",
+        "fr": "Temps",
+        "nl": "Tijd",
+        "de": "Zeit"
+      },
       "preset": "datetime_tz",
       "help_text": {
         "en": "Describes from which date and time on the data delivery is applicable. If left empty, the publication is considered as available immediately.",
@@ -271,6 +283,12 @@
         "fr": "Date de fin de publication",
         "nl": "Einddatum publicatie",
         "de": "Enddatum"
+      },
+      "label_time": {
+        "en": "Time",
+        "fr": "Temps",
+        "nl": "Tijd",
+        "de": "Zeit"
       },
       "preset": "datetime_tz",
       "help_text": {
@@ -483,7 +501,7 @@
               "nl": "Voor meer info klik hier",
               "de": "Für weitere Informationen, bitte hier klicken"
            },
-          "help_link": "http://ec2-63-33-90-161.eu-west-1.compute.amazonaws.com/pages/compliance"
+          "help_link": "/pages/compliance"
          },
         {
           "value": "N",
@@ -512,7 +530,8 @@
         "fr": "zone de texte pour commentaire facultatif",
         "nl": "tekstveld voor optionele opmerking",
         "de": "Textfeld für optionalen Kommentar"
-      }
+      },
+      "classes": ["margin-left-24"]
     }
   ],
   "resource_fields": [
