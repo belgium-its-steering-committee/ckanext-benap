@@ -520,8 +520,7 @@
           "help_link": ""
         }
       ],
-      "required": "true",
-      "validators": "not_empty"
+      "required": "true"
     },
     {
       "field_name": "optional_comment",
