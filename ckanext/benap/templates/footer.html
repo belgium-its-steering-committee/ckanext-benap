@@ -38,7 +38,7 @@
           {% block footer_lang %}
             {% snippet "snippets/language_selector.html" %}
           {% endblock %}
-          <p style="margin-top: 8px;"><a id="delete-cookies">{{ _('Delete Cookies') }}</a></p>
+          <p style="margin-top: 8px; cursor: pointer;"><a id="delete-cookies">{{ _('Delete Cookies') }}</a></p>
           <script>
             function setCookie(name,value,days) {
               var expires = "";

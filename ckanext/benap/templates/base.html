@@ -17,8 +17,8 @@
 
         var cookie = JSON.parse(getCookie('transportdata_cookies'));
         console.log(cookie);
-        if (cookie.analytical) {
-            console.log(' in if');
+        if (cookie && cookie.analytical) {
+            console.log('in if');
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
