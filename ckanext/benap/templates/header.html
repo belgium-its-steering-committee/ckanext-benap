@@ -34,20 +34,20 @@
     </style>
     <div id="overlay-cookies">
         <div id="overlay-cookies-content">
-            <div id="wrapper-cookies-1">
-                <h2>{{ _('Welcome') }}!</h2>
+            <div id="wrapper-cookies-1" style="width: 100%">
+                <h2 style="margin: 16px 0;">{{ _('Welcome') }}!</h2>
                 <p>
                     {{
                         _('Transportdata.be uses cookies to improve your experience. These cookies are used to gather and analyse information about your visit. For the best experience of the website, choose “Allow all cookies”. If you prefer to specify which information you want to share with Transportdata.be, choose “Set preferences”. Transportdata.be saves your cookie preferences. You can change your cookie preferences by clicking “Manage cookies”.')
                     }}
                 </p>
-                <div style="display: flex;">
+                <div style="display: flex; align-items: center;">
                     <p id="accept" class="clickable accept-all" style="font-weight: bolder;">{{ _('Accept all cookies') }}</p>
-                    <p><pre style="font-size: 16px;"> / </pre></p>
+                    <p><pre style="font-size: 16px; margin: 0; padding: 0;"> / </pre></p>
                     <p id="preferences" class="clickable" style="text-decoration: underline;">{{ _('Set preferences') }}</p>
                 </div>
             </div>
-            <div id="wrapper-cookies-2">
+            <div id="wrapper-cookies-2" style="width: 100%;">
                 <div style="display: flex; justify-content: space-between;">
                     <h2>{{ _('Types of Cookies') }}</h2>
                     <p class="clickable accept-all" style="display: flex; align-items: center;">{{ _('Accept all cookies') }}</p>
