@@ -14,6 +14,15 @@
             }
             return null;
         }
+        function setCookie(name,value,days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + JSON.stringify(value)  + expires + "; path=/";
+        }
 
         var cookie = JSON.parse(getCookie('transportdata_cookies'));
         console.log(cookie);
@@ -24,6 +33,10 @@
             gtag('js', new Date());
 
             gtag('config', 'UA-153119613-1');
+        } else {
+            setCookie('_ga', '', -1);
+            setCookie('_gid', '', -1);
+            setCookie('_gat_gtag_UA-153119613-1', '', -1);
         }
     </script>
     {{ super() }}
