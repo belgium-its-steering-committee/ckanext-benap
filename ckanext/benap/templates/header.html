@@ -1,4 +1,127 @@
 {% block header_wrapper %} {% block header_account %}
+
+<style>
+        #overlay-cookies {
+            position: fixed; /* Sit on top of the page content */
+            width: 100%; /* Full width (cover the whole page) */
+            height: 100%; /* Full height (cover the whole page) */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+            z-index: 100; /* Specify a stack order in case you're using a different order for other elements */
+            display: none; /* initially hidden only visible when no cookies are found in js */
+            justify-content: center;
+            align-items: center;
+        }
+        #overlay-cookies-content {
+            display: flex;
+            width: 50%;
+            background: #DDD;
+            border: 2px solid #666;
+            padding: 16px;
+        }
+        .clickable {
+            cursor: pointer;
+        }
+        .clickable:hover {
+            text-decoration: underline;
+        }
+        .w50 {
+            width: 50%;
+        }
+    </style>
+    <div id="overlay-cookies">
+        <div id="overlay-cookies-content">
+            <div id="wrapper-cookies-1">
+                <h2>{{ _('Welcome') }}!</h2>
+                <p>
+                    {{
+                        _('Transportdata.be uses cookies to improve your experience. These cookies are used to gather and analyse information about your visit. For the best experience of the website, choose “Allow all cookies”. If you prefer to specify which information you want to share with Transportdata.be, choose “Set preferences”. Transportdata.be saves your cookie preferences. You can change your cookie preferences by clicking “Manage cookies”.')
+                    }}
+                </p>
+                <div style="display: flex;">
+                    <p id="accept" class="clickable accept-all" style="font-weight: bolder;">{{ _('Accept all cookies') }}</p>
+                    <p><pre style="font-size: 16px;"> / </pre></p>
+                    <p id="preferences" class="clickable" style="text-decoration: underline;">{{ _('Set preferences') }}</p>
+                </div>
+            </div>
+            <div id="wrapper-cookies-2">
+                <div style="display: flex; justify-content: space-between;">
+                    <h2>{{ _('Types of Cookies') }}</h2>
+                    <p class="clickable accept-all" style="display: flex; align-items: center;">{{ _('Accept all cookies') }}</p>
+                </div>
+                <div style="display: flex;">
+                    <div class="w50">{{ _('Necessary') }}</div>
+                    <input id="necessary" type="checkbox" checked disabled>
+                </div>
+                <div style="display: flex;">
+                    <div class="w50">{{ _('Functional') }}</div>
+                    <input id="functional" type="checkbox" checked>
+                </div>
+                <div style="display: flex;">
+                    <div class="w50">{{ _('Analytical') }}</div>
+                    <input id="analytical" type="checkbox" checked>
+                </div>
+                <div style="padding-top: 16px;">
+                    <button id="accept-preferences">{{ _('Save preferences') }}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var cookie = JSON.parse(getCookie('transportdata_cookies'));
+        if (!cookie || !cookie.necessary) {
+            $('#overlay-cookies').css('display', 'flex');
+        }
+
+        function setCookie(name,value,days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + JSON.stringify(value)  + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+
+        $('#wrapper-cookies-2').hide();
+        $('#preferences').on('click', (event) => {
+            $('#wrapper-cookies-1').hide();
+        $('#wrapper-cookies-2').show();
+        });
+
+        $('.accept-all').on('click', (event) => {
+            var x = {'necessary': true, 'functional': true, 'analytical': true};
+        setCookie('transportdata_cookies', x, 10000);
+        $('#overlay-cookies').css('display', 'none');
+        });
+
+        $('#accept-preferences').on('click', (event) => {
+            var x = {
+                'necessary': $('#necessary').is(":checked"),
+                'functional': $('#functional').is(":checked"),
+                'analytical': $('#analytical').is(":checked")
+            };
+        setCookie('transportdata_cookies', x, 10000);
+        $('#overlay-cookies').css('display', 'none');
+
+        });
+    </script>
+
 <header class="account-masthead">
   <div class="container">
     {% block header_account_container_content %} {% if c.userobj %}

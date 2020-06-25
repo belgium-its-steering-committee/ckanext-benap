@@ -38,6 +38,25 @@
           {% block footer_lang %}
             {% snippet "snippets/language_selector.html" %}
           {% endblock %}
+          <p><a id="delete-cookies" href="#">{{ _('Delete Cookies') }}</a></p>
+          <script>
+            function setCookie(name,value,days) {
+              var expires = "";
+              if (days) {
+                  var date = new Date();
+                  date.setTime(date.getTime() + (days*24*60*60*1000));
+                  expires = "; expires=" + date.toUTCString();
+              }
+              document.cookie = name + "=" + JSON.stringify(value)  + expires + "; path=/";
+            }
+
+            $('#delete-cookies').on('click', (event) => {
+              var cookies = document.cookie.split(";");
+              for (var i = 0; i < cookies.length; i++) {
+                setCookie(cookies[i].split("=")[0],"",-1);
+              }
+             });
+          </script>
         </div>
       </div>
     </div>
