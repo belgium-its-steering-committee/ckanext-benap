@@ -51,6 +51,12 @@
             }
 
             $('#delete-cookies').on('click', (event) => {
+              const debug_cookie = document.cookie;
+              console.log(debug_cookie);
+              debug_cookie.split("; ").forEach((part) => {
+                const split_part = part.split("=");
+                console.log(`${split_part[0]} --> ${split_part[1]}`);
+              });
               var cookies = document.cookie.split(";");
               for (var i = 0; i < cookies.length; i++) {
                 setCookie(cookies[i].split("=")[0],"",-1);
