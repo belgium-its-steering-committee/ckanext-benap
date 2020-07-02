@@ -37,6 +37,19 @@
         }
         .w50 {
             width: 50%;
+            float: left;
+            margin-bottom:px;
+        }
+        cookie-table tr {
+            background-color: #11406e;
+            color: white;
+        }
+        cookie-table th {
+            padding: 5px;
+        }
+
+        cookie-table td {
+            padding: 5px;
         }
     </style>
     <div id="overlay-cookies">
@@ -59,7 +72,7 @@
                     <h2 style="margin: 0 0 16px 0;">{{ _('Types of Cookies') }}</h2>
                     <p class="clickable accept-all" style="display: flex; align-items: center;">{{ _('Accept all cookies') }}</p>
                 </div>
-                <div style="display: flex;">
+                <div style="display: flex; flex-direction: column;">
                     <div class="category-item category-item-nav">
                         <div class="w50">{{ _('Necessary') }}</div>
                         <input id="necessary" type="checkbox" checked disabled>
@@ -80,7 +93,7 @@
                         </cookie-table>
                     </div>
                 </div>
-                <div style="display: flex;">
+                <div style="display: flex; flex-direction: column;">
                     <div class="category-item category-item-nav">
                         <div class="w50">{{ _('Functional') }}</div>
                         <input id="functional" type="checkbox" checked>
@@ -99,7 +112,7 @@
                         </cookie-table>
                     </div>
                 </div>
-                <div style="display: flex;">
+                <div style="display: flex; flex-direction: column;">
                     <div class="category-item category-item-nav">
                         <div class="w50">{{ _('Analytical') }}</div>
                         <input id="analytical" type="checkbox" checked>
@@ -177,7 +190,7 @@
     </script>
 
     <script>
-        const acc = document.getElementsByClassName("category-item-nav');
+        const acc = document.getElementsByClassName("category-item-nav");
         for(let i = 0; i < acc.length; i++) {
             acc[i].addEventListener("click", function(){
                 this.classList.toggle("active");
