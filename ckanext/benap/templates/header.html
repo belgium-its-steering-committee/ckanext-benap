@@ -28,6 +28,13 @@
         .clickable:hover {
             text-decoration: underline;
         }
+        .class, .category-item-nav:hover {
+            background-color: #ccc;
+        }
+        .category-item-description {
+            display: none;
+            overflow: hidden;
+        }
         .w50 {
             width: 50%;
         }
@@ -53,16 +60,63 @@
                     <p class="clickable accept-all" style="display: flex; align-items: center;">{{ _('Accept all cookies') }}</p>
                 </div>
                 <div style="display: flex;">
-                    <div class="w50">{{ _('Necessary') }}</div>
-                    <input id="necessary" type="checkbox" checked disabled>
+                    <div class="category-item category-item-nav">
+                        <div class="w50">{{ _('Necessary') }}</div>
+                        <input id="necessary" type="checkbox" checked disabled>
+                    </div>
+                    <div class="category-item category-item-description">
+
+                        <p class="u-margin-bottom-xs">{{ _('Noodzakelijke cookies zijn cookies die ervoor zorgen dat alle onderdelen van de website goed werken.') }}</p>
+                        <cookie-table class="hydrated">
+                            <table class="a-table a-table--primary u-margin-bottom-xs">
+                                <thead>
+                                  <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Duur') }}</th><th>{{ _('Omschrijving') }}</th></tr>
+                                </thead>
+                                <tbody>
+                                  <tr><td>{{ _('AOS') }}</td><td>{{ _('Eerste partij') }}</td><td>{{ _('sessie') }}</td><td>{{ _('AOS of het Antwerp Operating System plaatst sessiegebaseerde cookies op uw computer waarmee gebruikers die terugkeren naar antwerpen.be kunnen geïdentificeerd worden. Dit verhoogt het gebruiksgemak: de gebruiker blijft aangemeld en moet per app niet opnieuw aanmelden (Single Sign On).') }}</td></tr>
+
+                                </tbody>
+                            </table>
+                        </cookie-table>
+                    </div>
                 </div>
                 <div style="display: flex;">
-                    <div class="w50">{{ _('Functional') }}</div>
-                    <input id="functional" type="checkbox" checked>
+                    <div class="category-item category-item-nav">
+                        <div class="w50">{{ _('Functional') }}</div>
+                        <input id="functional" type="checkbox" checked>
+                    </div>
+                    <div class="category-item-description">
+                        <p class="u-margin-bottom-xs">{{ _('Cookies used for the basic functionalities of the website.') }}</p>
+                        <cookie-table class="hydrated">
+                            <table class="a-table a-table--primary u-margin-bottom-xs">
+                                <thead>
+                                    <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Duur') }}</th><th>{{ _('Omschrijving') }}</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>{{ _('ckan') }}</td><td>{{ _('Eerste partij') }}</td><td>{{ _('session') }}</td><td>{{ _('This cookie is used for the basic functionalities of the website.') }}</td></tr>
+                                </tbody>
+                            </table>
+                        </cookie-table>
+                    </div>
                 </div>
                 <div style="display: flex;">
-                    <div class="w50">{{ _('Analytical') }}</div>
-                    <input id="analytical" type="checkbox" checked>
+                    <div class="category-item category-item-nav">
+                        <div class="w50">{{ _('Analytical') }}</div>
+                        <input id="analytical" type="checkbox" checked>
+                    </div>
+                    <div class="category-item-description">
+                        <p class="u-margin-bottom-xs">{{ _('Analytische cookies meten het websitebezoek. Deze gegevens laten ons toe om de structuur, navigatie en inhoud van onze website te verbeteren.') }}</p>
+                        <cookie-table class="hydrated">
+                            <table class="a-table a-table--primary u-margin-bottom-xs">
+                                <thead>
+                                    <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Duur') }}</th><th>{{ _('Omschrijving') }}</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>{{ _('Google analytics') }}</td><td>{{ _('Derde partij') }}</td><td>{{ _('1 minuut tot 2 jaar') }}</td><td>{{ _('Analytische cookies meten het websitebezoek. Deze gegevens laten ons toe om de structuur, navigatie en inhoud van onze website te verbeteren.') }}<table class="sub-cookies u-margin-top-xs"><tr><td>{{ _('_ga') }}</td><td>{{ _('2 jaar') }}</td></tr><tr><td>{{ _('_gid') }}</td><td>{{ _('1 dag') }}</td></tr><tr><td>{{ _('_gat') }}</td><td>{{ _('1 min') }}</td></tr></table></td></tr
+                                </tbody>
+                            </table>
+                        </cookie-table>
+                    </div>
                 </div>
                 <div style="padding-top: 16px;">
                     <button id="accept-preferences">{{ _('Save preferences') }}</button>
@@ -120,6 +174,22 @@
         $('#overlay-cookies').css('display', 'none');
 
         });
+    </script>
+
+    <script>
+        const acc = document.getElementsByClassName("category-item-nav');
+        for(let i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function(){
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                if(panel.style.display === "block") {
+                    panel.style.display = "none";
+                }
+                else {
+                    panel.style.display = "block";
+                }
+            });
+        }
     </script>
 
 <header class="account-masthead">
