@@ -35,21 +35,30 @@
             display: none;
             overflow: hidden;
         }
+        .accept-all {
+            font-size: 18px;
+        }
         .w50 {
+            font-size: 18px;
             width: 50%;
             float: left;
-            margin-bottom:px;
+            margin-bottom:10px;
         }
         cookie-table tr {
+            border: 1px gray solid;
+        }
+        cookie-table thead tr {
             background-color: #11406e;
             color: white;
         }
         cookie-table th {
             padding: 5px;
         }
-
         cookie-table td {
             padding: 5px;
+        }
+        cookie-table tbody td {
+            vertical-align: top;
         }
     </style>
     <div id="overlay-cookies">
@@ -74,7 +83,7 @@
                 </div>
                 <div style="display: flex; flex-direction: column;">
                     <div class="category-item category-item-nav">
-                        <div class="w50">{{ _('Necessary') }}</div>
+                        <div class="w50">{{ _('Essential') }}</div>
                         <input id="necessary" type="checkbox" checked disabled>
                     </div>
                     <div class="category-item category-item-description">
@@ -83,11 +92,10 @@
                         <cookie-table class="hydrated">
                             <table class="a-table a-table--primary u-margin-bottom-xs">
                                 <thead>
-                                  <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Duur') }}</th><th>{{ _('Omschrijving') }}</th></tr>
+                                  <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Expery') }}</th><th>{{ _('Purpose') }}</th></tr>
                                 </thead>
                                 <tbody>
-                                  <tr><td>{{ _('AOS') }}</td><td>{{ _('Eerste partij') }}</td><td>{{ _('sessie') }}</td><td>{{ _('AOS of het Antwerp Operating System plaatst sessiegebaseerde cookies op uw computer waarmee gebruikers die terugkeren naar antwerpen.be kunnen geïdentificeerd worden. Dit verhoogt het gebruiksgemak: de gebruiker blijft aangemeld en moet per app niet opnieuw aanmelden (Single Sign On).') }}</td></tr>
-
+                                  <tr><td>{{ _('ckan') }}</td><td>{{ _('Basic functionality') }}</td><td>{{ _('session') }}</td><td>{{ _('This cookie is used for the basic functionalities of the website.') }}</td></tr>
                                 </tbody>
                             </table>
                         </cookie-table>
@@ -103,10 +111,10 @@
                         <cookie-table class="hydrated">
                             <table class="a-table a-table--primary u-margin-bottom-xs">
                                 <thead>
-                                    <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Duur') }}</th><th>{{ _('Omschrijving') }}</th></tr>
+                                    <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Expery') }}</th><th>{{ _('Purpose') }}</th></tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td>{{ _('ckan') }}</td><td>{{ _('Eerste partij') }}</td><td>{{ _('session') }}</td><td>{{ _('This cookie is used for the basic functionalities of the website.') }}</td></tr>
+                                    <tr><td>{{ _('ckan') }}</td><td>{{ _('Basic functionality') }}</td><td>{{ _('session') }}</td><td>{{ _('This cookie is used for the basic functionalities of the website.') }}</td></tr>
                                 </tbody>
                             </table>
                         </cookie-table>
@@ -122,10 +130,13 @@
                         <cookie-table class="hydrated">
                             <table class="a-table a-table--primary u-margin-bottom-xs">
                                 <thead>
-                                    <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Duur') }}</th><th>{{ _('Omschrijving') }}</th></tr>
+                                    <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Expery') }}</th><th>{{ _('Purpose') }}</th></tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td>{{ _('Google analytics') }}</td><td>{{ _('Derde partij') }}</td><td>{{ _('1 minuut tot 2 jaar') }}</td><td>{{ _('Analytische cookies meten het websitebezoek. Deze gegevens laten ons toe om de structuur, navigatie en inhoud van onze website te verbeteren.') }}<table class="sub-cookies u-margin-top-xs"><tr><td>{{ _('_ga') }}</td><td>{{ _('2 jaar') }}</td></tr><tr><td>{{ _('_gid') }}</td><td>{{ _('1 dag') }}</td></tr><tr><td>{{ _('_gat') }}</td><td>{{ _('1 min') }}</td></tr></table></td></tr
+                                    <tr><td>{{ _('_ga') }}</td><td>{{ _('Statistics, HTTP') }}</td><td>{{ _('2 years') }}</td><td>{{ _('Registers a unique ID that is used to generate statistical data on how the visitor uses the website.') }}</td></tr>
+                                    <tr><td>{{ _('_gat') }}</td><td>{{ _('Statistics, HTTP') }}</td><td>{{ _('1 day') }}</td><td>{{ _('Used By Google Analytics to throttle request rate.') }}</td></tr>
+                                    <tr><td>{{ _('_gid') }}</td><td>{{ _('Statistics, HTTP') }}</td><td>{{ _('1 day') }}</td><td>{{ _('Registers a unique ID that is used to generate statistical data on how the visitor uses the website.') }}</td></tr>
+                                    <tr><td>{{ _('r/collect') }}</td><td>{{ _('Marketing, Pixel') }}</td><td>{{ _('session') }}</td><td>{{ _('This cookie is used to send data to Google Analytics about the visitors device and behavior. It tracks the visitor across devices and marketing channels.') }}</td></tr>
                                 </tbody>
                             </table>
                         </cookie-table>
