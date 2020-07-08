@@ -22,6 +22,9 @@
             border: 2px solid #666;
             padding: 16px;
         }
+        div#wrapper-cookies-2>div:nth-child(n+1) {  // select all children, except the first one
+            margin-top: 10px;
+        }
         .clickable {
             cursor: pointer;
         }
@@ -37,12 +40,15 @@
         }
         .accept-all {
             font-size: 18px;
+            background-color: #11406e;
+            color: white;
+            padding: 0 5px;
         }
         .w50 {
             font-size: 18px;
             width: 50%;
             float: left;
-            margin-bottom:10px;
+            margin-bottom:5px;
         }
         cookie-table tr {
             border: 1px gray solid;
@@ -154,7 +160,7 @@
                                     <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Expiry') }}</th><th>{{ _('Purpose') }}</th></tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td>{{ _('r/collect') }}</td><td>{{ _('Marketing, Pixel') }}</td><td>{{ _('session') }}</td><td>{{ _('This cookie is used to send data to Google Analytics about the visitors device and behavior. It tracks the visitor across devices and marketing channels.') }}</td></tr>
+                                    <tr><td>{{ _('r/collect') }}</td><td>{{ _('Marketing, Pixel') }}</td><td>{{ _('session') }}</td><td>{{ _("This cookie is used to send data to Google Analytics about the visitor's device and behavior. It tracks the visitor across devices and marketing channels.") }}</td></tr>
                                 </tbody>
                             </table>
                         </cookie-table>
@@ -168,6 +174,7 @@
     </div>
 
     <script>
+        debugger;
         var cookie = JSON.parse(getCookie('transportdata_cookies'));
         if (!cookie || !cookie.necessary) {
             $('#overlay-cookies').css('display', 'flex');

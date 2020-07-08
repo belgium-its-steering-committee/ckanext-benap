@@ -38,8 +38,9 @@
           {% block footer_lang %}
             {% snippet "snippets/language_selector.html" %}
           {% endblock %}
-          <p id="delete-cookies" style="margin-top: 8px; cursor: pointer;">{{ _('Delete Cookies') }}</p>
+          <p id="manage-cookies" style="margin-top: 8px; cursor: pointer;">{{ _('Manage Cookies') }}</p>
           <script>
+            debugger;
             function setCookie(name,value,days) {
               var expires = "";
               if (days) {
@@ -50,8 +51,9 @@
               document.cookie = name + "=" + JSON.stringify(value)  + expires + "; path=/";
             }
 
-            $('#delete-cookies').on('click', (event) => {
-              const debug_cookie = document.cookie;
+            $('#manage-cookies').on('click', (event) => {
+              $('#overlay-cookies').css('display', 'flex');
+              /*const debug_cookie = document.cookie;
               console.log(debug_cookie);
               debug_cookie.split("; ").forEach((part) => {
                 const split_part = part.split("=");
@@ -60,7 +62,7 @@
               var cookies = document.cookie.split(";");
               for (var i = 0; i < cookies.length; i++) {
                 setCookie(cookies[i].split("=")[0],"",-1);
-              }
+              }*/
              });
           </script>
         </div>
