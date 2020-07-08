@@ -113,7 +113,7 @@
                         <input id="functional" type="checkbox" checked>
                     </div>
                     <div class="category-item-description">
-                        <p class="u-margin-bottom-xs">{{ _('Functional cookies record information about the users choices and preferences and may store language settings, for instance.') }}</p>
+                        <p class="u-margin-bottom-xs">{{ _("Functional cookies record information about the user's choices and preferences and may store language settings, for instance.") }}</p>
                         <cookie-table class="hydrated">
                             <table class="a-table a-table--primary u-margin-bottom-xs">
                                 <thead>
@@ -132,7 +132,7 @@
                         <input id="analytical" type="checkbox" checked>
                     </div>
                     <div class="category-item-description">
-                        <p class="u-margin-bottom-xs">{{ _('These cookies collect information about the users behaviour to measure the performance of the website and improve the user experience.') }}</p>
+                        <p class="u-margin-bottom-xs">{{ _("These cookies collect information about the user's behaviour to measure the performance of the website and improve the user experience.") }}</p>
                         <cookie-table class="hydrated">
                             <table class="a-table a-table--primary u-margin-bottom-xs">
                                 <thead>
@@ -153,7 +153,7 @@
                         <input id="marketing" type="checkbox" checked>
                     </div>
                     <div class="category-item-description">
-                        <p class="u-margin-bottom-xs">{{ _('Marketing cookies follow the users browsing behaviour in order to compose customer profiles or user profiles. These profiles are commonly used to show relevant and personalised ads that match the users interests. They are also used to measure the effectiveness of promotions and to conduct market analyses.') }}</p>
+                        <p class="u-margin-bottom-xs">{{ _("Marketing cookies follow the user's browsing behaviour in order to compose customer profiles or user profiles. These profiles are commonly used to show relevant and personalised ads that match the user's interests. They are also used to measure the effectiveness of promotions and to conduct market analyses.") }}</p>
                         <cookie-table class="hydrated">
                             <table class="a-table a-table--primary u-margin-bottom-xs">
                                 <thead>
@@ -178,6 +178,36 @@
         var cookie = JSON.parse(getCookie('transportdata_cookies'));
         if (!cookie || !cookie.necessary) {
             $('#overlay-cookies').css('display', 'flex');
+        }
+
+        function setAllCookies(x) {
+        if($('#functional').is(":checked")) {
+                setCookie('transportdata_cookies', x, 10000);
+            }
+            else {
+                setCookie('transportdata_cookies', , -1);
+            }
+            if($('#analytical').is(":checked")) {
+                // set the google cookies
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-153119613-1');
+            }
+            else {
+                // unset the google cookies
+                setCookie('_ga', '', -1);
+                setCookie('_gid', '', -1);
+                setCookie('_gat_gtag_UA-153119613-1', '', -1);
+            }
+            if($('#marketing').is(":checked")) {
+                // set the r/collect
+                // ToDo
+            }
+            else {
+                // unset the r/collect
+                setCookie('r/collect', '', -1);
+            }
         }
 
         function setCookie(name,value,days) {
@@ -209,8 +239,8 @@
 
         $('.accept-all').on('click', (event) => {
             var x = {'necessary': true, 'functional': true, 'analytical': true, 'marketing': true};
-        setCookie('transportdata_cookies', x, 10000);
-        $('#overlay-cookies').css('display', 'none');
+            setAllCookies(x);
+            $('#overlay-cookies').css('display', 'none');
         });
 
         $('#accept-preferences').on('click', (event) => {
@@ -220,8 +250,8 @@
                 'analytical': $('#analytical').is(":checked"),
                 'marketing': $('#marketing').is(":checked")
             };
-        setCookie('transportdata_cookies', x, 10000);
-        $('#overlay-cookies').css('display', 'none');
+            setAllCookies(x);
+            $('#overlay-cookies').css('display', 'none');
 
         });
     </script>
