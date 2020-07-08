@@ -88,11 +88,11 @@
                     </div>
                     <div class="category-item category-item-description">
 
-                        <p class="u-margin-bottom-xs">{{ _('Noodzakelijke cookies zijn cookies die ervoor zorgen dat alle onderdelen van de website goed werken.') }}</p>
+                        <p class="u-margin-bottom-xs">{{ _('Essential cookies are cookies that are required for the correct functioning of the website.') }}</p>
                         <cookie-table class="hydrated">
                             <table class="a-table a-table--primary u-margin-bottom-xs">
                                 <thead>
-                                  <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Expery') }}</th><th>{{ _('Purpose') }}</th></tr>
+                                  <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Expiry') }}</th><th>{{ _('Purpose') }}</th></tr>
                                 </thead>
                                 <tbody>
                                   <tr><td>{{ _('ckan') }}</td><td>{{ _('Basic functionality') }}</td><td>{{ _('session') }}</td><td>{{ _('This cookie is used for the basic functionalities of the website.') }}</td></tr>
@@ -107,11 +107,11 @@
                         <input id="functional" type="checkbox" checked>
                     </div>
                     <div class="category-item-description">
-                        <p class="u-margin-bottom-xs">{{ _('Cookies used for the basic functionalities of the website.') }}</p>
+                        <p class="u-margin-bottom-xs">{{ _('Functional cookies record information about the users choices and preferences and may store language settings, for instance.') }}</p>
                         <cookie-table class="hydrated">
                             <table class="a-table a-table--primary u-margin-bottom-xs">
                                 <thead>
-                                    <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Expery') }}</th><th>{{ _('Purpose') }}</th></tr>
+                                    <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Expiry') }}</th><th>{{ _('Purpose') }}</th></tr>
                                 </thead>
                                 <tbody>
                                     <tr><td>{{ _('transportdata_cookies') }}</td><td>{{ _('Proper functionality') }}</td><td>{{ _('10.000 days') }}</td><td>{{ _('This cookie is used to store user preferences.') }}</td></tr>
@@ -126,16 +126,34 @@
                         <input id="analytical" type="checkbox" checked>
                     </div>
                     <div class="category-item-description">
-                        <p class="u-margin-bottom-xs">{{ _('Analytische cookies meten het websitebezoek. Deze gegevens laten ons toe om de structuur, navigatie en inhoud van onze website te verbeteren.') }}</p>
+                        <p class="u-margin-bottom-xs">{{ _('These cookies collect information about the users behaviour to measure the performance of the website and improve the user experience.') }}</p>
                         <cookie-table class="hydrated">
                             <table class="a-table a-table--primary u-margin-bottom-xs">
                                 <thead>
-                                    <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Expery') }}</th><th>{{ _('Purpose') }}</th></tr>
+                                    <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Expiry') }}</th><th>{{ _('Purpose') }}</th></tr>
                                 </thead>
                                 <tbody>
                                     <tr><td>{{ _('_ga') }}</td><td>{{ _('Statistics, HTTP') }}</td><td>{{ _('2 years') }}</td><td>{{ _('Registers a unique ID that is used to generate statistical data on how the visitor uses the website.') }}</td></tr>
                                     <tr><td>{{ _('_gat') }}</td><td>{{ _('Statistics, HTTP') }}</td><td>{{ _('1 day') }}</td><td>{{ _('Used By Google Analytics to throttle request rate.') }}</td></tr>
                                     <tr><td>{{ _('_gid') }}</td><td>{{ _('Statistics, HTTP') }}</td><td>{{ _('1 day') }}</td><td>{{ _('Registers a unique ID that is used to generate statistical data on how the visitor uses the website.') }}</td></tr>
+                                </tbody>
+                            </table>
+                        </cookie-table>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <div class="category-item category-item-nav">
+                        <div class="w50">{{ _('Marketing') }}</div>
+                        <input id="marketing" type="checkbox" checked>
+                    </div>
+                    <div class="category-item-description">
+                        <p class="u-margin-bottom-xs">{{ _('Marketing cookies follow the users browsing behaviour in order to compose customer profiles or user profiles. These profiles are commonly used to show relevant and personalised ads that match the users interests. They are also used to measure the effectiveness of promotions and to conduct market analyses.') }}</p>
+                        <cookie-table class="hydrated">
+                            <table class="a-table a-table--primary u-margin-bottom-xs">
+                                <thead>
+                                    <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Expiry') }}</th><th>{{ _('Purpose') }}</th></tr>
+                                </thead>
+                                <tbody>
                                     <tr><td>{{ _('r/collect') }}</td><td>{{ _('Marketing, Pixel') }}</td><td>{{ _('session') }}</td><td>{{ _('This cookie is used to send data to Google Analytics about the visitors device and behavior. It tracks the visitor across devices and marketing channels.') }}</td></tr>
                                 </tbody>
                             </table>
@@ -183,7 +201,7 @@
         });
 
         $('.accept-all').on('click', (event) => {
-            var x = {'necessary': true, 'functional': true, 'analytical': true};
+            var x = {'necessary': true, 'functional': true, 'analytical': true, 'marketing': true};
         setCookie('transportdata_cookies', x, 10000);
         $('#overlay-cookies').css('display', 'none');
         });
@@ -192,7 +210,8 @@
             var x = {
                 'necessary': $('#necessary').is(":checked"),
                 'functional': $('#functional').is(":checked"),
-                'analytical': $('#analytical').is(":checked")
+                'analytical': $('#analytical').is(":checked"),
+                'marketing': $('#marketing').is(":checked")
             };
         setCookie('transportdata_cookies', x, 10000);
         $('#overlay-cookies').css('display', 'none');
