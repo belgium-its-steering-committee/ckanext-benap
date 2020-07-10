@@ -174,13 +174,7 @@
     </div>
 
     <script>
-    //header
-        debugger;
 
-        const _gaq = [];
-
-        _gaq.push(['_setAccount', 'UA-153119613-1']);
-        _gaq.push(['_trackPageview']);
 
         var cookie = JSON.parse(getCookie('transportdata_cookies'));
         if (!cookie || !cookie.necessary) {
@@ -203,8 +197,6 @@
 
                 window['ga-disable-UA-153119613-1'] = false;
 
-                _gaq.push(['_setAccount', 'UA-153119613-1']);
-                _gaq.push(['_trackPageview']);
             }
             else {
                 // unset the google cookies
@@ -223,8 +215,6 @@
 
                 window['ga-disable-UA-153119613-1'] = true;
 
-                _gaq.push(['_setAccount', 'UA-153119613-1']);
-                _gaq.push(['_trackPageview']);
             }
             if($('#marketing').is(":checked")) {
                 // set the r/collect
