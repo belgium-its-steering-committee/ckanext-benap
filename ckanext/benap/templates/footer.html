@@ -64,7 +64,23 @@
               for (var i = 0; i < cookies.length; i++) {
                 setCookie(cookies[i].split("=")[0],"",-1);
               }*/
-             });
+            });
+            $('.accept-all').on('click', (event) => {
+              var x = {'necessary': true, 'functional': true, 'analytical': true, 'marketing': true};
+              setAllCookies(x);
+              $('#overlay-cookies').css('display', 'none');
+            });
+
+            $('#accept-preferences').on('click', (event) => {
+              var x = {
+                'necessary': $('#necessary').is(":checked"),
+                'functional': $('#functional').is(":checked"),
+                'analytical': $('#analytical').is(":checked"),
+                'marketing': $('#marketing').is(":checked")
+              };
+              setAllCookies(x);
+              $('#overlay-cookies').css('display', 'none');
+            });
           </script>
         </div>
       </div>
