@@ -176,6 +176,11 @@
     <script>
     //header
         debugger;
+
+        const _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-153119613-1']);
+        _gaq.push(['_trackPageview']);
+
         var cookie = JSON.parse(getCookie('transportdata_cookies'));
         if (!cookie || !cookie.necessary) {
             $('#overlay-cookies').css('display', 'flex');
@@ -194,12 +199,31 @@
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', 'UA-153119613-1');
+
+                window['ga-disable-UA-153119613-1'] = false;
+
+                _gaq.push(['_setAccount', 'UA-153119613-1']);
+                _gaq.push(['_trackPageview']);
             }
             else {
                 // unset the google cookies
-                setCookie('_ga', '', -1);
+                /*setCookie('_ga', '', -1);
                 setCookie('_gid', '', -1);
                 setCookie('_gat_gtag_UA-153119613-1', '', -1);
+                */
+                let expires = "";
+                let date = new Date();
+                date.setTime(date.getTime() + (-1*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
+
+                document.cookie = "_ga" + "=" + ""  + expires + "; path=/; domain=.ec2-63-33-90-161.eu-west-1.compute.amazonaws.com";
+                document.cookie = "_gid" + "=" + ""  + expires + "; path=/; domain=.ec2-63-33-90-161.eu-west-1.compute.amazonaws.com";
+                document.cookie = "_gat_gtag_UA-153119613-1" + "=" + ""  + expires + "; path=/; domain=.ec2-63-33-90-161.eu-west-1.compute.amazonaws.com";
+
+                window['ga-disable-UA-153119613-1'] = true;
+
+                _gaq.push(['_setAccount', 'UA-153119613-1']);
+                _gaq.push(['_trackPageview']);
             }
             if($('#marketing').is(":checked")) {
                 // set the r/collect
