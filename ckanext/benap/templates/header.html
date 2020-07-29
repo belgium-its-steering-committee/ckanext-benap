@@ -25,6 +25,16 @@
         div#wrapper-cookies-2>div:nth-child(n+2) {
             margin-top: 10px;
         }
+
+        #wrapper-cookies-2 .category-item-nav label {
+            margin-right: 10px;
+            font-weight: normal;
+        }
+
+        #wrapper-cookies-2 .category-item-nav label:after {
+            display: none;
+        }
+
         .clickable {
             cursor: pointer;
         }
@@ -73,8 +83,11 @@
                 <h2 style="margin: 0 0 16px 0;">{{ _('Welcome') }}!</h2>
                 <p>
                     {{
-                        _('Transportdata.be uses cookies to improve your experience. These cookies are used to gather and analyse information about your visit. For the best experience of the website, choose “Allow all cookies”. If you prefer to specify which information you want to share with Transportdata.be, choose “Set preferences”. Transportdata.be saves your cookie preferences. You can change your cookie preferences by clicking “Manage cookies”.')
+                        _('Transportdata.be uses cookies to improve your experience. These cookies are used to gather and analyse information about your visit. For the best experience of the website, choose “Accept all cookies”. If you prefer to specify which information you want to share with Transportdata.be, choose “Set preferences”. Transportdata.be saves your cookie preferences. You can change your cookie preferences by clicking “Manage cookies”. Want to know more? ')
                     }}
+                    <a href="{{ h.url_for(pages/privacy-declaration) }}">{{
+                        _('Consult our Privacy declaration.')
+                    }}</a>
                 </p>
                 <div style="display: flex; align-items: center;">
                     <p id="accept" class="clickable accept-all" style="font-weight: bolder; margin: 0;">{{ _('Accept all cookies') }}</p>
@@ -90,6 +103,7 @@
                 <div style="display: flex; flex-direction: column;">
                     <div class="category-item category-item-nav">
                         <div class="w50">{{ _('Essential') }}</div>
+                        <label for="necessary">{{ _('Always enabled') }}</label>
                         <input id="necessary" type="checkbox" checked disabled>
                     </div>
                     <div class="category-item category-item-description">
@@ -110,7 +124,8 @@
                 <div style="display: flex; flex-direction: column;">
                     <div class="category-item category-item-nav">
                         <div class="w50">{{ _('Functional') }}</div>
-                        <input id="functional" type="checkbox" checked>
+                        <label for="functional">{{ _('Disabled') }}</label>
+                        <input id="functional" type="checkbox">
                     </div>
                     <div class="category-item-description">
                         <p class="u-margin-bottom-xs">{{ _("Functional cookies record information about the user's choices and preferences and may store language settings, for instance.") }}</p>
@@ -129,7 +144,8 @@
                 <div style="display: flex; flex-direction: column;">
                     <div class="category-item category-item-nav">
                         <div class="w50">{{ _('Analytical') }}</div>
-                        <input id="analytical" type="checkbox" checked>
+                        <label for="analytical">{{ _('Disabled') }}</label>
+                        <input id="analytical" type="checkbox">
                     </div>
                     <div class="category-item-description">
                         <p class="u-margin-bottom-xs">{{ _("These cookies collect information about the user's behaviour to measure the performance of the website and improve the user experience.") }}</p>
@@ -150,7 +166,8 @@
                 <div style="display: flex; flex-direction: column;">
                     <div class="category-item category-item-nav">
                         <div class="w50">{{ _('Marketing') }}</div>
-                        <input id="marketing" type="checkbox" checked>
+                        <label for="marketing">{{ _('Disabled') }}</label>
+                        <input id="marketing" type="checkbox">
                     </div>
                     <div class="category-item-description">
                         <p class="u-margin-bottom-xs">{{ _("Marketing cookies follow the user's browsing behaviour in order to compose customer profiles or user profiles. These profiles are commonly used to show relevant and personalised ads that match the user's interests. They are also used to measure the effectiveness of promotions and to conduct market analyses.") }}</p>
@@ -174,7 +191,36 @@
     </div>
 
     <script>
+        // change the label of the inboxes onclick
+        const checkboxF = document.getElementById('functional');
+        checkboxF.onclick = () => {
+            if (checkBoxF.checked == true){
+                checkBoxF.previousSibling.innerText = "Enabled";
+            }
+            else {
+                checkBoxF.previousSibling.innerText = "Disabled";
+            }
+        };
+        const checkboxA = document.getElementById('analytical');
+        checkboxA.onclick = () => {
+            if (checkBoxA.checked == true){
+                checkBoxA.previousSibling.innerText = "Enabled";
+            }
+            else {
+                checkBoxA.previousSibling.innerText = "Disabled";
+            }
+        };
+        const checkboxM = document.getElementById('marketing');
+        checkboxM.onclick = () => {
+            if (checkBoxM.checked == true){
+                checkBoxM.previousSibling.innerText = "Enabled";
+            }
+            else {
+                checkBoxM.previousSibling.innerText = "Disabled";
+            }
+        };
 
+        // cookie stuff
 
         var cookie = JSON.parse(getCookie('transportdata_cookies'));
         if (!cookie || !cookie.necessary) {
@@ -183,7 +229,7 @@
 
         function setAllCookies(x) {
         if($('#functional').is(":checked")) {
-                setCookie('transportdata_cookies', x, 10000);
+                setCookie('transportdata_cookies', x, 365);
             }
             else {
                 setCookie('transportdata_cookies', '', -1);
