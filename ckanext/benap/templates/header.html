@@ -191,33 +191,26 @@
     </div>
 
     <script>
+        function labelText(event) {
+        if (event.target.checked == true){
+                event.target.previousSibling.innerText = "Enabled";
+            }
+            else {
+                event.target.previousSibling.innerText = "Disabled";
+            }
+        }
         // change the label of the inboxes onclick
         const checkboxF = document.getElementById('functional');
-        checkboxF.onclick = () => {
-            if (checkBoxF.checked == true){
-                checkBoxF.previousSibling.innerText = "Enabled";
-            }
-            else {
-                checkBoxF.previousSibling.innerText = "Disabled";
-            }
+        checkboxF.onclick = (event) => {
+            labelText(event);
         };
         const checkboxA = document.getElementById('analytical');
-        checkboxA.onclick = () => {
-            if (checkBoxA.checked == true){
-                checkBoxA.previousSibling.innerText = "Enabled";
-            }
-            else {
-                checkBoxA.previousSibling.innerText = "Disabled";
-            }
+        checkboxA.onclick = (event) => {
+            labelText(event);
         };
         const checkboxM = document.getElementById('marketing');
-        checkboxM.onclick = () => {
-            if (checkBoxM.checked == true){
-                checkBoxM.previousSibling.innerText = "Enabled";
-            }
-            else {
-                checkBoxM.previousSibling.innerText = "Disabled";
-            }
+        checkboxM.onclick = (event) => {
+            labelText(event);
         };
 
         // cookie stuff
