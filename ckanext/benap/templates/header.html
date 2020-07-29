@@ -193,10 +193,10 @@
     <script>
         function labelText(event) {
         if (event.target.checked == true){
-                event.target.previousSibling.innerText = "Enabled";
+                event.target.previousElementSibling.innerText = "Enabled";
             }
             else {
-                event.target.previousSibling.innerText = "Disabled";
+                event.target.previousElementSibling.innerText = "Disabled";
             }
         }
         // change the label of the inboxes onclick
