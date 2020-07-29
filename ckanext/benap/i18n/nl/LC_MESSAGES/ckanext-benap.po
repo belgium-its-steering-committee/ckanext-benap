@@ -57,7 +57,7 @@ msgstr "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 
 #: ckanext/benap/templates/footer.html:41
 msgid "Manage Cookies"
-msgstr "Manage Cookies"
+msgstr "Cookies beheren"
 
 #: ckanext/benap/templates/footer.html:98
 msgid ""
@@ -81,7 +81,7 @@ msgid ""
 "change your cookie preferences by clicking “Manage cookies”. Want to know "
 "more? "
 msgstr ""
-"Transportdata.be maakt gebruik van cookies om uw gebruikservaring te verbeteren. Aan de hand van deze cookies verzamelt en analyseert Transportdata.be  informatie over uw bezoek. Voor een optimale werking kiest u alle cookies toestaan. Indien u zelf wil kiezen welke informatie u met Transportdata.be deelt kiest u Stel voorkeuren in. Transportdata.be bewaart uw cookievoorkeuren. U kan deze aanpassen via cookies beheren."
+"Transportdata.be maakt gebruik van cookies om uw gebruikservaring te verbeteren. Aan de hand van deze cookies verzamelt en analyseert Transportdata.be  informatie over uw bezoek. Voor een optimale werking kiest u “alle cookies toestaan”. Indien u zelf wil kiezen welke informatie u met Transportdata.be deelt kiest u “Stel voorkeuren in”. Transportdata.be bewaart uw cookievoorkeuren. U kan deze aanpassen via “cookies beheren”."
 
 #: ckanext/benap/templates/header.html:89
 msgid "Consult our Privacy declaration."
@@ -175,8 +175,8 @@ msgid "Proper functionality"
 msgstr "Proper functionality"
 
 #: ckanext/benap/templates/header.html:138
-msgid "10.000 days"
-msgstr "10.000 dagen"
+msgid "1 year"
+msgstr "1 jaar"
 
 #: ckanext/benap/templates/header.html:138
 msgid "This cookie is used to store user preferences."

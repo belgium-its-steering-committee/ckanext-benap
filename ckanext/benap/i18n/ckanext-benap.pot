@@ -166,7 +166,7 @@ msgid "Proper functionality"
 msgstr ""
 
 #: ckanext/benap/templates/header.html:138
-msgid "10.000 days"
+msgid "1 year"
 msgstr ""
 
 #: ckanext/benap/templates/header.html:138

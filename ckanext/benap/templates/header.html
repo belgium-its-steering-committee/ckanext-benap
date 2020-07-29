@@ -135,7 +135,7 @@
                                     <tr><th>{{ _('Cookie') }}</th><th>{{ _('Type') }}</th><th>{{ _('Expiry') }}</th><th>{{ _('Purpose') }}</th></tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td>{{ _('transportdata_cookies') }}</td><td>{{ _('Proper functionality') }}</td><td>{{ _('10.000 days') }}</td><td>{{ _('This cookie is used to store user preferences.') }}</td></tr>
+                                    <tr><td>{{ _('transportdata_cookies') }}</td><td>{{ _('Proper functionality') }}</td><td>{{ _('1 year') }}</td><td>{{ _('This cookie is used to store user preferences.') }}</td></tr>
                                 </tbody>
                             </table>
                         </cookie-table>
@@ -192,13 +192,24 @@
 
     <script>
         function labelText(event) {
-        if (event.target.checked == true){
-                event.target.previousElementSibling.innerText = "Enabled";
+            let enabledText = "Enabled";
+            let disabledText = "Disabled";
+            let regexp = /^.*\/nl/;
+            if (regexp.test(event.target.baseURI)) {
+                enabledText = "Ingeschakeld";
+                disabledText = "Uitgeschakeld";
+            }
+
+            if (event.target.checked == true){
+                event.target.previousElementSibling.innerText = enabledText;
+
             }
             else {
-                event.target.previousElementSibling.innerText = "Disabled";
+                event.target.previousElementSibling.innerText = disabledText;
+
             }
         }
+
         // change the label of the inboxes onclick
         const checkboxF = document.getElementById('functional');
         checkboxF.onclick = (event) => {
