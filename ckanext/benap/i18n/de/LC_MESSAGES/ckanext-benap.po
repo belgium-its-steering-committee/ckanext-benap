@@ -58,7 +58,7 @@ msgstr "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 
 #: ckanext/benap/templates/footer.html:41
 msgid "Manage Cookies"
-msgstr "Manage Cookies"
+msgstr "Cookies verwalten"
 
 #: ckanext/benap/templates/footer.html:98
 msgid ""
@@ -82,45 +82,42 @@ msgid ""
 "change your cookie preferences by clicking “Manage cookies”. Want to know "
 "more? "
 msgstr ""
-"Transportdata.be uses cookies to improve your experience. These cookies are "
-"used to gather and analyse information about your visit. For the best "
-"experience of the website, choose “Accept all cookies”. If you prefer to "
-"specify which information you want to share with Transportdata.be, choose "
-"“Set preferences”. Transportdata.be saves your cookie preferences. You can "
-"change your cookie preferences by clicking “Manage cookies”. Want to know "
-"more? "
+"Transportdata.be verwendet Cookies, um Ihre Erfahrung zu verbessern."
+"Diese Cookies werden verwendet, um Informationen über Ihren Besuch zu sammeln und zu analysieren."
+"Für die beste Erfahrung der Website, wählen Sie "Alle Cookies akzeptieren"."
+"Wenn Sie es vorziehen Geben Sie an, welche Informationen Sie mit Transportdata.be teilen möchten "Einstellungen festlegen"."
+"Transportdata.be speichert Ihre Cookie-Einstellungen. Sie können Ihre Cookie-Einstellungen ändern, indem Sie auf "Cookies verwalten" klicken. Möchten Sie mehr wissen?"
 
 #: ckanext/benap/templates/header.html:89
 msgid "Consult our Privacy declaration."
-msgstr "Consult our Privacy declaration."
+msgstr "Konsultieren Sie unsere Datenschutzerklärung."
 
 #: ckanext/benap/templates/header.html:93 ckanext/benap/templates/header.html:101
 msgid "Accept all cookies"
-msgstr "Accept all cookies"
+msgstr "Alle Cookies akzeptieren"
 
 #: ckanext/benap/templates/header.html:95
 msgid "Set preferences"
-msgstr "Set preferences"
+msgstr "Einstellungen festlegen"
 
 #: ckanext/benap/templates/header.html:100
 msgid "Types of Cookies"
-msgstr "Types of Cookies"
+msgstr "Arten von Cookies"
 
 #: ckanext/benap/templates/header.html:105
 msgid "Essential"
-msgstr "Essential"
+msgstr "Essenziell"
 
 #: ckanext/benap/templates/header.html:106
 msgid "Always enabled"
-msgstr "Always enabled"
+msgstr "Immer aktiviert"
 
 #: ckanext/benap/templates/header.html:111
 msgid ""
 "Essential cookies are cookies that are required for the correct functioning "
 "of the website."
 msgstr ""
-"Essential cookies are cookies that are required for the correct functioning "
-"of the website."
+"Essenzielle Cookies sind solche, die notwendig für das (bessere) Funktionieren einer Website sind, wie z. B. Cookies zur Verwaltung der Ladezeit von Webseiten."
 
 #: ckanext/benap/templates/header.html:115 ckanext/benap/templates/header.html:135
 #: ckanext/benap/templates/header.html:155 ckanext/benap/templates/header.html:177
@@ -130,17 +127,17 @@ msgstr "Cookie"
 #: ckanext/benap/templates/header.html:115 ckanext/benap/templates/header.html:135
 #: ckanext/benap/templates/header.html:155 ckanext/benap/templates/header.html:177
 msgid "Type"
-msgstr "Type"
+msgstr "Art"
 
 #: ckanext/benap/templates/header.html:115 ckanext/benap/templates/header.html:135
 #: ckanext/benap/templates/header.html:155 ckanext/benap/templates/header.html:177
 msgid "Expiry"
-msgstr "Expiry"
+msgstr "Aufbewahrungsfrist"
 
 #: ckanext/benap/templates/header.html:115 ckanext/benap/templates/header.html:135
 #: ckanext/benap/templates/header.html:155 ckanext/benap/templates/header.html:177
 msgid "Purpose"
-msgstr "Purpose"
+msgstr "Ziel"
 
 #: ckanext/benap/templates/header.html:118
 msgid "ckan"
@@ -148,32 +145,31 @@ msgstr "ckan"
 
 #: ckanext/benap/templates/header.html:118
 msgid "Basic functionality"
-msgstr "Basic functionality"
+msgstr "Basisfunktionalitäten"
 
 #: ckanext/benap/templates/header.html:118 ckanext/benap/templates/header.html:180
 msgid "session"
-msgstr "session"
+msgstr "Sitzung"
 
 #: ckanext/benap/templates/header.html:118
 msgid "This cookie is used for the basic functionalities of the website."
-msgstr "This cookie is used for the basic functionalities of the website."
+msgstr "Wird für die Basisfunktionalitäten der Website verwendet."
 
 #: ckanext/benap/templates/header.html:126
 msgid "Functional"
-msgstr "Functional"
+msgstr "Funktional"
 
 #: ckanext/benap/templates/header.html:127 ckanext/benap/templates/header.html:147
 #: ckanext/benap/templates/header.html:169
 msgid "Disabled"
-msgstr "Disabled"
+msgstr "Behindert"
 
 #: ckanext/benap/templates/header.html:131
 msgid ""
 "Functional cookies record information about the user's choices and "
 "preferences and may store language settings, for instance."
 msgstr ""
-"Functional cookies record information about the user's choices and "
-"preferences and may store language settings, for instance."
+"Funktionelle Cookies erheben Informationen über die Wahl und die Präferenzen des Nutzers und bieten beispielsweise die Möglichkeit, Spracheinstellungen zu speichern."
 
 #: ckanext/benap/templates/header.html:138
 msgid "transportdata_cookies"
@@ -189,19 +185,18 @@ msgstr "1 Jahr"
 
 #: ckanext/benap/templates/header.html:138
 msgid "This cookie is used to store user preferences."
-msgstr "This cookie is used to store user preferences."
+msgstr "Dieses Cookie wird zum Speichern von Benutzereinstellungen verwendet."
 
 #: ckanext/benap/templates/header.html:146
 msgid "Analytical"
-msgstr "Analytical"
+msgstr "Analytisch"
 
 #: ckanext/benap/templates/header.html:151
 msgid ""
 "These cookies collect information about the user's behaviour to measure the "
 "performance of the website and improve the user experience."
 msgstr ""
-"These cookies collect information about the user's behaviour to measure the "
-"performance of the website and improve the user experience."
+"Analytische oder Performance-Cookies erheben Informationen über das Nutzungsverhalten, um die Leistungen der betreffenden Website zu messen und die Nutzungserfahrung zu verbessern."
 
 #: ckanext/benap/templates/header.html:158
 msgid "_ga"
@@ -210,19 +205,18 @@ msgstr "_ga"
 #: ckanext/benap/templates/header.html:158 ckanext/benap/templates/header.html:159
 #: ckanext/benap/templates/header.html:160
 msgid "Statistics, HTTP"
-msgstr "Statistics, HTTP"
+msgstr "Statistik, HTTP"
 
 #: ckanext/benap/templates/header.html:158
 msgid "2 years"
-msgstr "2 years"
+msgstr "2 Jahre"
 
 #: ckanext/benap/templates/header.html:158 ckanext/benap/templates/header.html:160
 msgid ""
 "Registers a unique ID that is used to generate statistical data on how the "
 "visitor uses the website."
 msgstr ""
-"Registers a unique ID that is used to generate statistical data on how the "
-"visitor uses the website."
+"Registriert eine einzigartige ID, die verwendet wird, um statistische Daten über die Nutzung der Website durch die Nutzer zu erheben."
 
 #: ckanext/benap/templates/header.html:159
 msgid "_gat"
@@ -230,11 +224,11 @@ msgstr "_gat"
 
 #: ckanext/benap/templates/header.html:159 ckanext/benap/templates/header.html:160
 msgid "1 day"
-msgstr "1 day"
+msgstr "1 Tag"
 
 #: ckanext/benap/templates/header.html:159
 msgid "Used By Google Analytics to throttle request rate."
-msgstr "Used By Google Analytics to throttle request rate."
+msgstr "Wird von Google Analytics verwendet, um die Anfragegeschwindigkeit zu verlangsamen."
 
 #: ckanext/benap/templates/header.html:160
 msgid "_gid"
@@ -252,11 +246,7 @@ msgid ""
 "used to measure the effectiveness of promotions and to conduct market "
 "analyses."
 msgstr ""
-"Marketing cookies follow the user's browsing behaviour in order to compose "
-"customer profiles or user profiles. These profiles are commonly used to show "
-"relevant and personalised ads that match the user's interests. They are also "
-"used to measure the effectiveness of promotions and to conduct market "
-"analyses."
+"Marketing Cookies verfolgen das Surfverhalten des Nutzers, um Kunden- oder Benutzerprofile zu erstellen.Diese Profile werden meist verwendet, um relevante und personalisierte Anzeigen anzuzeigen, die den Interessen der jeweiligen Nutzer entsprechen. Außerdem werden Sie genutzt, um die Effizienz von Werbekampagnen zu messen und Marktanalysen durchzuführen."
 
 #: ckanext/benap/templates/header.html:180
 msgid "r/collect"
@@ -272,13 +262,11 @@ msgid ""
 "device and behavior. It tracks the visitor across devices and marketing "
 "channels."
 msgstr ""
-"This cookie is used to send data to Google Analytics about the visitor's "
-"device and behavior. It tracks the visitor across devices and marketing "
-"channels."
+"Wird verwendet, um Daten über Besuche und Geräte an Google Analytics weiterzuleiten. Das Cookie verfolgt den Benutzer über verschiedene Geräte und Marketingkanäle."
 
 #: ckanext/benap/templates/header.html:187
 msgid "Save preferences"
-msgstr "Save preferences"
+msgstr "Einstellungen speichern"
 
 #: ckanext/benap/templates/header.html:337
 msgid "Sysadmin settings"

@@ -85,7 +85,7 @@ msgstr ""
 
 #: ckanext/benap/templates/header.html:89
 msgid "Consult our Privacy declaration."
-msgstr "Lees onze Privacy declaration."
+msgstr "Lees onze Privacy verklaring."
 
 #: ckanext/benap/templates/header.html:93 ckanext/benap/templates/header.html:101
 msgid "Accept all cookies"
@@ -140,15 +140,15 @@ msgstr "ckan"
 
 #: ckanext/benap/templates/header.html:118
 msgid "Basic functionality"
-msgstr "Basic functionality"
+msgstr "Basisfunctionaliteit"
 
 #: ckanext/benap/templates/header.html:118 ckanext/benap/templates/header.html:180
 msgid "session"
-msgstr "session"
+msgstr "sessie"
 
 #: ckanext/benap/templates/header.html:118
 msgid "This cookie is used for the basic functionalities of the website."
-msgstr "This cookie is used for the basic functionalities of the website."
+msgstr "This cookie wordt gebruikt voor de basisfunctionaliteiten van de website"
 
 #: ckanext/benap/templates/header.html:126
 msgid "Functional"
@@ -180,7 +180,7 @@ msgstr "1 jaar"
 
 #: ckanext/benap/templates/header.html:138
 msgid "This cookie is used to store user preferences."
-msgstr "Dit cookie slaat gebruikersinstellingen op."
+msgstr "Deze cookie slaat de gebruikersinstellingen op."
 
 #: ckanext/benap/templates/header.html:146
 msgid "Analytical"
@@ -200,7 +200,7 @@ msgstr "_ga"
 #: ckanext/benap/templates/header.html:158 ckanext/benap/templates/header.html:159
 #: ckanext/benap/templates/header.html:160
 msgid "Statistics, HTTP"
-msgstr "Statistics, HTTP"
+msgstr "Statistieken, HTTP"
 
 #: ckanext/benap/templates/header.html:158
 msgid "2 years"
@@ -211,8 +211,7 @@ msgid ""
 "Registers a unique ID that is used to generate statistical data on how the "
 "visitor uses the website."
 msgstr ""
-"Registers a unique ID that is used to generate statistical data on how the "
-"visitor uses the website."
+"Registreert een unieke ID die gebruikt wordt om statistische data te genereren over het gebruik van de website door de gebruikers."
 
 #: ckanext/benap/templates/header.html:159
 msgid "_gat"
@@ -224,7 +223,7 @@ msgstr "1 dag"
 
 #: ckanext/benap/templates/header.html:159
 msgid "Used By Google Analytics to throttle request rate."
-msgstr "Used By Google Analytics to throttle request rate."
+msgstr "Gebruikt door Google Analytics om verzoeksnelheid te vertragen."
 
 #: ckanext/benap/templates/header.html:160
 msgid "_gid"
@@ -258,9 +257,7 @@ msgid ""
 "device and behavior. It tracks the visitor across devices and marketing "
 "channels."
 msgstr ""
-"This cookie is used to send data to Google Analytics about the visitor's "
-"device and behavior. It tracks the visitor across devices and marketing "
-"channels."
+"Wordt gebruikt om data over bezoeken en devices door te sturen naar Google Analytics. De cookie trackt de gebruiker over verschillende devices en marketing kanalen."
 
 #: ckanext/benap/templates/header.html:187
 msgid "Save preferences"
@@ -292,7 +289,7 @@ msgstr "Dashboard"
 #: ckanext/benap/templates/header.html:366
 #: ckanext/benap/templates/user/dashboard.html:6
 msgid "Edit settings"
-msgstr "Instellingen editen "
+msgstr "Instellingen aanpassen"
 
 #: ckanext/benap/templates/header.html:368
 msgid "Settings"
