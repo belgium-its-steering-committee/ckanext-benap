@@ -48,16 +48,22 @@
             return null;
         }
 
-        function readCookie(name) {
+        function transportDataObjectLiteral(necessary,functional,analytical,marketing) {
+            return ({necessary: necessary,functional: functional,analytical: analytical,marketing: marketing});
+        }
+
+        function readTransportDataCookie(name) {
             var result = document.cookie.match(new RegExp(name + '=([^;]+)'));
-            result && (result = JSON.parse(result[1]));
+            //result && (result = JSON.parse(result[1]));
+            const resultArray = result.split('|');
+            result = transportDataObjectLiteral(...resultArray);
             return result;
         }
 
         function setAllCookies(x) {
             //if($('#functional').is(":checked")) {
             //const x_write = {'necessary': x.necessary, 'functional': x.functional, 'analytical': x.analytical, 'marketing': x.marketing};
-            const x_write = JSON.stringify(x);
+            const x_write = x.necessary + "|" + x.functional + "|" + x.analytical + "|" + x.marketing;
             if(x.functional) {
                 setCookie('transportdata_cookies', x_write, 365);
             }
@@ -104,7 +110,7 @@
 
         }
 
-        let cookie = readCookie('transportdata_cookies');
+        let cookie = readTransportDataCookie('transportdata_cookies');
         //console.log(cookie);
         if (cookie && cookie.analytical) {
         //if (cookie && cookie === 'toto') {
