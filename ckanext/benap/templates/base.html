@@ -48,7 +48,8 @@
 
         function setAllCookies(x) {
             //if($('#functional').is(":checked")) {
-            const x_write = {'necessary': x.necessary, 'functional': x.functional, 'analytical': x.analytical, 'marketing': x.marketing};
+            //const x_write = {'necessary': x.necessary, 'functional': x.functional, 'analytical': x.analytical, 'marketing': x.marketing};
+            const x_write = 'toto';
             if(x.functional) {
                 setCookie('transportdata_cookies', x_write, 365);
             }
@@ -97,7 +98,8 @@
 
         var cookie = JSON.parse(getCookie('transportdata_cookies'));
         console.log(cookie);
-        if (cookie && cookie.analytical) {
+        //if (cookie && cookie.analytical) {
+        if (cookie && cookie === 'toto') {
             console.log('in if');
             /*window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -128,10 +130,10 @@
 
             window['ga-disable-UA-153119613-1'] = true;*/
         }
-        if (cookie && !cookie.marketing) {
+        /*if (cookie && !cookie.marketing) {
             console.log('marketing');
             //setCookie('r/collect', '', -1);
-        }
+        }*/
 
 
     </script>
