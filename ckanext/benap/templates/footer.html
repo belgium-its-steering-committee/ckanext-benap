@@ -65,17 +65,17 @@
               }*/
             });
             $('.accept-all').on('click', (event) => {
-              var x = {'necessary': true, 'functional': true, 'analytical': true, 'marketing': true};
+              var x = {necessary: true, functional: true, analytical: true, marketing: true};
               setAllCookies(x);
               $('#overlay-cookies').css('display', 'none');
             });
 
             $('#accept-preferences').on('click', (event) => {
               var x = {
-                'necessary': $('#necessary').is(":checked"),
-                'functional': $('#functional').is(":checked"),
-                'analytical': $('#analytical').is(":checked"),
-                'marketing': $('#marketing').is(":checked")
+                necessary: $('#necessary').is(":checked"),
+                functional: $('#functional').is(":checked"),
+                analytical: $('#analytical').is(":checked"),
+                marketing: $('#marketing').is(":checked")
               };
               setAllCookies(x);
               $('#overlay-cookies').css('display', 'none');

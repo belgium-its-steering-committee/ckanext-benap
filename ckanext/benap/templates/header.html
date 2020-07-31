@@ -232,13 +232,16 @@
         }
 
         function setAllCookies(x) {
-        if($('#functional').is(":checked")) {
-                setCookie('transportdata_cookies', x, 365);
+            //if($('#functional').is(":checked")) {
+            const x_write = {'necessary': x.necessary, 'functional': x.functional, 'analytical': x.analytical, 'marketing': x.marketing};
+            if(x.functional) {
+                setCookie('transportdata_cookies', x_write, 365);
             }
             else {
                 setCookie('transportdata_cookies', '', -1);
             }
-            if($('#analytical').is(":checked")) {
+            //if($('#analytical').is(":checked")) {
+            if(x.analytical) {
                 // set the google cookies
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
@@ -266,7 +269,8 @@
                 window['ga-disable-UA-153119613-1'] = true;
 
             }
-            if($('#marketing').is(":checked")) {
+            //if($('#marketing').is(":checked")) {
+            if(x.marketing) {
                 // set the r/collect
                 // ToDo
             }
@@ -304,17 +308,17 @@
         });
 
         $('.accept-all').on('click', (event) => {
-            var x = {'necessary': true, 'functional': true, 'analytical': true, 'marketing': true};
+            var x = {necessary: true, functional: true, analytical: true, marketing: true};
             setAllCookies(x);
             $('#overlay-cookies').css('display', 'none');
         });
 
         $('#accept-preferences').on('click', (event) => {
             var x = {
-                'necessary': $('#necessary').is(":checked"),
-                'functional': $('#functional').is(":checked"),
-                'analytical': $('#analytical').is(":checked"),
-                'marketing': $('#marketing').is(":checked")
+                necessary: $('#necessary').is(":checked"),
+                functional: $('#functional').is(":checked"),
+                analytical: $('#analytical').is(":checked"),
+                marketing: $('#marketing').is(":checked")
             };
             setAllCookies(x);
             $('#overlay-cookies').css('display', 'none');
