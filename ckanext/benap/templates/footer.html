@@ -50,23 +50,24 @@
               }
               document.cookie = name + "=" + JSON.stringify(value)  + expires + "; path=/";
             }
-
+*/
             $('#manage-cookies').on('click', (event) => {
               $('#overlay-cookies').css('display', 'flex');
 
-              */
+
               /*const debug_cookie = document.cookie;
-              console.log(debug_cookie);
+              //console.log(debug_cookie);
               debug_cookie.split("; ").forEach((part) => {
                 const split_part = part.split("=");
-                console.log(`${split_part[0]} --> ${split_part[1]}`);
+                //console.log(`${split_part[0]} --> ${split_part[1]}`);
               });
               var cookies = document.cookie.split(";");
               for (var i = 0; i < cookies.length; i++) {
                 setCookie(cookies[i].split("=")[0],"",-1);
               }
-            });*/
-            /*
+              */
+            });
+
             $('.accept-all').on('click', (event) => {
               var x = {necessary: true, functional: true, analytical: true, marketing: true};
               setAllCookies(x);
@@ -83,7 +84,7 @@
               setAllCookies(x);
               $('#overlay-cookies').css('display', 'none');
             });
-            */
+
           </script>
         </div>
       </div>

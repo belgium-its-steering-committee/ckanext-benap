@@ -57,7 +57,7 @@
                 setCookie('transportdata_cookies', '', -1);
             }
             //if($('#analytical').is(":checked")) {
-            /*if(x.analytical) {
+            if(x.analytical) {
                 // set the google cookies
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
@@ -69,14 +69,14 @@
             }
             else {
 
-            */
+
                 // unset the google cookies
                 /*setCookie('_ga', '', -1);
                 setCookie('_gid', '', -1);
                 setCookie('_gat_gtag_UA-153119613-1', '', -1);
                 */
 
-            /*
+
                 let expires = "";
                 let date = new Date();
                 date.setTime(date.getTime() + (-1*24*60*60*1000));
@@ -93,21 +93,21 @@
             if(!x.marketing) {
                 setCookie('r/collect', '', -1);
             }
-            */
+
         }
 
         var cookie = JSON.parse(getCookie('transportdata_cookies'));
-        console.log(cookie);
+        //console.log(cookie);
         if (cookie && cookie.analytical) {
         //if (cookie && cookie === 'toto') {
-            console.log('in if');
-            /*window.dataLayer = window.dataLayer || [];
+            //console.log('in if');
+            window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
             gtag('config', 'UA-153119613-1');
 
-            window['ga-disable-UA-153119613-1'] = false;*/
+            window['ga-disable-UA-153119613-1'] = false;
 
 
         } else {
@@ -118,8 +118,7 @@
             setCookie('_gat_gtag_UA-153119613-1', '', -1);
             */
 
-            console.log('in else');
-            /*let expires = "";
+            let expires = "";
             let date = new Date();
             date.setTime(date.getTime() + (-1*24*60*60*1000));
             expires = "; expires=" + date.toUTCString();
@@ -128,12 +127,12 @@
             document.cookie = "_gid" + "=" + ""  + expires + "; path=/; domain=.ec2-63-33-90-161.eu-west-1.compute.amazonaws.com";
             document.cookie = "_gat_gtag_UA-153119613-1" + "=" + ""  + expires + "; path=/; domain=.ec2-63-33-90-161.eu-west-1.compute.amazonaws.com";
 
-            window['ga-disable-UA-153119613-1'] = true;*/
+            window['ga-disable-UA-153119613-1'] = true;
         }
-        /*if (cookie && !cookie.marketing) {
+        if (cookie && !cookie.marketing) {
             console.log('marketing');
             //setCookie('r/collect', '', -1);
-        }*/
+        }
 
 
     </script>
