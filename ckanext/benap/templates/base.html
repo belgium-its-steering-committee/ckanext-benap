@@ -25,7 +25,7 @@
             document.cookie = name + "=" + JSON.stringify(value)  + expires + "; path=/";
         }*/
 
-        /*function setAllCookies(x) {
+        function setAllCookies(x) {
             //if($('#functional').is(":checked")) {
             const x_write = {'necessary': x.necessary, 'functional': x.functional, 'analytical': x.analytical, 'marketing': x.marketing};
             if(x.functional) {
@@ -47,14 +47,14 @@
             }
             else {
 
-            */
+
                 // unset the google cookies
                 /*setCookie('_ga', '', -1);
                 setCookie('_gid', '', -1);
                 setCookie('_gat_gtag_UA-153119613-1', '', -1);
                 */
 
-            /*
+
                 let expires = "";
                 let date = new Date();
                 date.setTime(date.getTime() + (-1*24*60*60*1000));
@@ -114,13 +114,13 @@
 
         } else {
 
-        */
+
             /*setCookie('_ga', '', -1);
             setCookie('_gid', '', -1);
             setCookie('_gat_gtag_UA-153119613-1', '', -1);
             */
 
-        /*
+
             let expires = "";
             let date = new Date();
             date.setTime(date.getTime() + (-1*24*60*60*1000));
@@ -135,12 +135,8 @@
         if (cookie && !("marketing" in cookie)) {
             setCookie('r/collect', '', -1);
         }
-        */
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'UA-153119613-1');
+
     </script>
     {{ super() }}
     <!--  META TAGS FOR SHARING  -->
