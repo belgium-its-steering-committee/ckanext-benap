@@ -83,10 +83,10 @@ msgid ""
 msgstr ""
 "Transportdata.be utilise des cookies pour améliorer votre expérience."
 "Ces cookies sont utilisé pour recueillir et analyser des informations sur votre visite."
-"Pour le meilleur expérience du site Web, choisissez" Accepter tous les cookies ""
-"Si vous préférez de spécifiez les informations que vous souhaitez partager avec Transportdata.be, choisissez" " Définir les préférences "."
-"Transportdata.be enregistre vos préférences de cookies. Vous pouvez modifiez vos préférences de cookies en cliquant sur" Gérer les cookies ". Voulez savoir
-plus? "
+"Pour le meilleur expérience du site Web, choisissez “Accepter tous les cookies”."
+"Si vous préférez de spécifiez les informations que vous souhaitez partager avec Transportdata.be, choisissez “Définir les préférences”."
+"Transportdata.be enregistre vos préférences de cookies. Vous pouvez modifiez vos préférences de cookies en cliquant sur “Gérer les cookies”. Voulez savoir"
+"plus? "
 
 #: ckanext/benap/templates/header.html:89
 msgid "Consult our Privacy declaration."
