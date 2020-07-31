@@ -225,8 +225,8 @@
         };
 
         // cookie stuff
-
-        var cookie = JSON.parse(getCookie('transportdata_cookies'));
+        // cookie is already declared in base.html
+        cookie = readCookie('transportdata_cookies');
         if (!cookie || !cookie.necessary) {
             $('#overlay-cookies').css('display', 'flex');
         }
@@ -238,13 +238,13 @@
         });
 
         $('.accept-all').on('click', (event) => {
-            var x = {necessary: true, functional: true, analytical: true, marketing: true};
+            const x = {necessary: true, functional: true, analytical: true, marketing: true};
             setAllCookies(x);
             $('#overlay-cookies').css('display', 'none');
         });
 
         $('#accept-preferences').on('click', (event) => {
-            var x = {
+            const x = {
                 necessary: $('#necessary').is(":checked"),
                 functional: $('#functional').is(":checked"),
                 analytical: $('#analytical').is(":checked"),

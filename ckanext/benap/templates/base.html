@@ -46,6 +46,12 @@
             return null;
         }
 
+        function readCookie(name) {
+            var result = document.cookie.match(new RegExp(name + '=([^;]+)'));
+            result && (result = JSON.parse(result[1]));
+            return result;
+        }
+
         function setAllCookies(x) {
             //if($('#functional').is(":checked")) {
             //const x_write = {'necessary': x.necessary, 'functional': x.functional, 'analytical': x.analytical, 'marketing': x.marketing};
@@ -96,7 +102,7 @@
 
         }
 
-        var cookie = JSON.parse(getCookie('transportdata_cookies'));
+        let cookie = readCookie('transportdata_cookies');
         //console.log(cookie);
         if (cookie && cookie.analytical) {
         //if (cookie && cookie === 'toto') {
