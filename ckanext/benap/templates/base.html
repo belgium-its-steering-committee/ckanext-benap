@@ -55,8 +55,10 @@
         function readTransportDataCookie(name) {
             var result = document.cookie.match(new RegExp(name + '=([^;]+)'));
             //result && (result = JSON.parse(result[1]));
-            const resultArray = result.split('|');
-            result = transportDataObjectLiteral(...resultArray);
+            if(result) {
+                const resultArray = result.split('|');
+                result = transportDataObjectLiteral(...resultArray);
+            }
             return result;
         }
 
