@@ -49,7 +49,7 @@
         function setAllCookies(x) {
             //if($('#functional').is(":checked")) {
             //const x_write = {'necessary': x.necessary, 'functional': x.functional, 'analytical': x.analytical, 'marketing': x.marketing};
-            const x_write = 'toto';
+            const x_write = JSON.stringify(x);
             if(x.functional) {
                 setCookie('transportdata_cookies', x_write, 365);
             }
@@ -98,8 +98,8 @@
 
         var cookie = JSON.parse(getCookie('transportdata_cookies'));
         console.log(cookie);
-        //if (cookie && cookie.analytical) {
-        if (cookie && cookie === 'toto') {
+        if (cookie && cookie.analytical) {
+        //if (cookie && cookie === 'toto') {
             console.log('in if');
             /*window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
