@@ -177,7 +177,7 @@ msgstr "transportdata_cookies"
 
 #: ckanext/benap/templates/header.html:138
 msgid "Proper functionality"
-msgstr "Proper functionality"
+msgstr "Functionnalité de base"
 
 #: ckanext/benap/templates/header.html:138
 msgid "1 year"
