@@ -128,7 +128,7 @@
 
             window['ga-disable-UA-153119613-1'] = true;*/
         }
-        if (cookie && !("marketing" in cookie)) {
+        if (cookie && !cookie.marketing) {
             console.log('marketing');
             //setCookie('r/collect', '', -1);
         }
