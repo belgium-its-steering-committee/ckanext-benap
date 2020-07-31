@@ -68,14 +68,10 @@
 
             }
             //if($('#marketing').is(":checked")) {
-            if(x.marketing) {
-                // set the r/collect
-                // ToDo
-            }
-            else {
-                // unset the r/collect
+            if(!x.marketing) {
                 setCookie('r/collect', '', -1);
             }
+
         }
 
         function setCookie(name,value,days) {

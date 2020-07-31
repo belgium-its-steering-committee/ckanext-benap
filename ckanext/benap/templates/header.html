@@ -239,7 +239,7 @@
 
         $('.accept-all').on('click', (event) => {
             var x = {necessary: true, functional: true, analytical: true, marketing: true};
-            //setAllCookies(x);
+            setAllCookies(x);
             $('#overlay-cookies').css('display', 'none');
         });
 
@@ -250,7 +250,7 @@
                 analytical: $('#analytical').is(":checked"),
                 marketing: $('#marketing').is(":checked")
             };
-            //setAllCookies(x);
+            setAllCookies(x);
             $('#overlay-cookies').css('display', 'none');
 
         });
