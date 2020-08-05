@@ -38,6 +38,32 @@
           {% block footer_lang %}
             {% snippet "snippets/language_selector.html" %}
           {% endblock %}
+          <p id="manage-cookies" style="margin-top: 8px; cursor: pointer;">{{ _('Manage Cookies') }}</p>
+          <script>
+
+            $('#manage-cookies').on('click', (event) => {
+              $('#overlay-cookies').css('display', 'flex');
+
+            });
+
+            /*$('.accept-all').on('click', (event) => {
+              var x = {necessary: true, functional: true, analytical: true, marketing: true};
+              setAllCookies(x);
+              $('#overlay-cookies').css('display', 'none');
+            });
+
+            $('#accept-preferences').on('click', (event) => {
+              var x = {
+                necessary: $('#necessary').is(":checked"),
+                functional: $('#functional').is(":checked"),
+                analytical: $('#analytical').is(":checked"),
+                marketing: $('#marketing').is(":checked")
+              };
+              setAllCookies(x);
+              $('#overlay-cookies').css('display', 'none');
+            });*/
+
+          </script>
         </div>
       </div>
     </div>
