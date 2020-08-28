@@ -5,8 +5,8 @@
 <script language="JavaScript">
     var mymap = L.map('extent_map').setView([50.859933, 4.351969], 7);
 
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+         attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
      }).addTo(mymap);
 
     var geojsonFeature = {{ data[field.field_name]|safe }} ;
