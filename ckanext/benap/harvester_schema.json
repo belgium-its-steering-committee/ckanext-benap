@@ -211,7 +211,7 @@
         "nl": "Gelieve bij voorkeer een algemeen e-mailadres te gebruiken (geen persoonlijk). Het e-mailadres moet  @ en een punt inhouden.",
         "de": "Bitte verwenden Sie eine allgemeine E-Mail-Adresse (keine persönliche). Die E-Mail muss  @ und einen Punkt beinhalten."
       },
-      "validators": "email_validator not_empty"
+      "validators": "email_validator"
     },
     {
       "field_name": "publisher_url",
@@ -245,7 +245,7 @@
         "nl": "Het telefoonnummer moet met het netnummer van het land beginnen (bv. \"+32\" voor België) en kan naast de teken \"+\" alleen maar cijfers van 0 tot 9 inhouden.",
         "de": "Die Telefonnummer muss mit der Vorwahl des Landes (zum B. \"+32\" für Belgien) und kann nur neben dem Zeichen \"+\" Zahlen von 0 bis 9 beinhalten."
       },
-      "validators": "phone_number_validator not_empty"
+      "validators": "phone_number_validator"
     },
     {
       "field_name": "temporal_start",
