@@ -1,6 +1,6 @@
 {
   "scheming_version": 1,
-  "dataset_type": "dataset",
+  "dataset_type": "harvested-dataset",
   "about": "A CKAN harvester schema for the Belgian NAP",
   "about_url": "https://github.com/belgium-its-steering-committee/ckanext-benap",
   "dataset_fields": [
