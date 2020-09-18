@@ -53,11 +53,11 @@ def is_after_start(key, flattened_data, errors, context):
     return True
 
 https_pattern = re.compile(
-    r"\^https://"
+    r"^https:\/\/"
 )
 
 http_pattern = re.compile(
-    r"\^http://"
+    r"^http:\/\/"
 )
 
 def remove_prefix(text, prefix):
