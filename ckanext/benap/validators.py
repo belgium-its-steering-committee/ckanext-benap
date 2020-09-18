@@ -52,3 +52,23 @@ def is_after_start(key, flattened_data, errors, context):
                 raise Invalid(_('Start date must be before end date'))
     return True
 
+https_pattern = re.compile(
+    r"\^https://"
+)
+
+http_pattern = re.compile(
+    r"\^http://"
+)
+
+def remove_prefix(text, prefix):
+    if text.startswith(prefix):
+        return text[len(prefix):]
+    return text
+
+def https_validator(value, context):
+    if value:
+        if not https_pattern.match(value):
+            if http_pattern.match(value):
+                value = remove_prefix(value, "http://")
+            raise Invalid(_('URL {url} has to start with https://').format(url=value))
+    return value
