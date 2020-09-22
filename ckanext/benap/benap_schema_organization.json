@@ -86,7 +86,7 @@
         "nl": "URL van het beeld",
         "de": "URL des Bildes"
       },
-      "validators": "unicode remove_whitespace",
+      "validators": "unicode remove_whitespace benap_https_validator",
       "help_text": {
         "en": "The logo of your organisation",
         "fr": "Le logo de votre organisation",
