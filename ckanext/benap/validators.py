@@ -11,6 +11,14 @@ phone_number_pattern = re.compile(
     r"\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\d{1,14}$"
 )
 
+https_pattern = re.compile(
+    r"^https:\/\/"
+)
+
+http_pattern = re.compile(
+    r"^http:\/\/"
+)
+
 
 def phone_number_validator(value, context):
     if value:
@@ -51,14 +59,6 @@ def is_after_start(key, flattened_data, errors, context):
             if start_date > end_date:
                 raise Invalid(_('Start date must be before end date'))
     return True
-
-https_pattern = re.compile(
-    r"^https:\/\/"
-)
-
-http_pattern = re.compile(
-    r"^http:\/\/"
-)
 
 def remove_prefix(text, prefix):
     if text.startswith(prefix):
