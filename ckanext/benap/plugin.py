@@ -8,7 +8,7 @@ from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallba
     get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, get_translated_tag_with_name, \
     forum_url
 from ckanext.benap.util.forms import map_for_form_select
-from ckanext.benap.validators import phone_number_validator, countries_covered_belgium, is_after_start
+from ckanext.benap.validators import phone_number_validator, countries_covered_belgium, is_after_start, https_validator
 
 
 class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTranslation):
@@ -56,5 +56,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         return {
             'phone_number_validator': phone_number_validator,
             'benap_countries_covered_belgium': countries_covered_belgium,
-            'benap_is_after_start': is_after_start
+            'benap_is_after_start': is_after_start,
+            'benap_https_validator': https_validator
         }
