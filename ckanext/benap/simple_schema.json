@@ -1,0 +1,72 @@
+{
+  "scheming_version": 1,
+  "dataset_type": "harvest-simple-dataset",
+  "about": "A CKAN harvester schema for the Belgian NAP",
+  "about_url": "https://github.com/belgium-its-steering-committee/ckanext-benap",
+  "dataset_fields": [
+    {
+      "field_name": "title",
+      "label": {
+        "en": "Name of dataset",
+        "fr": "Nom du jeu de données",
+        "nl": "Naam van de dataset",
+        "de": "Name des Datensatzes"
+      },
+      "preset": "title",
+      "form_placeholder": {
+        "en": "e.g. Highway Network",
+        "fr": "par ex. réseau d'autoroutes",
+        "nl": "bv. snelwegennet",
+        "de": "zum B. Autobahnennetz"
+      },
+      "help_text": {
+        "en": "Describes the dataset in generic terms or gives a short description. The author is encouraged to write a meaningful description in one of the selected metadata language.",
+        "fr": "Décrit le jeu de données en termes génériques ou donne une brève description. L'auteur est invité à écrire une description significative dans l'une des langues des métadonnées sélectionnées.",
+        "nl": "Beschrijft de dataset in generieke termen of geeft een beknopte beschrijving. De auteur wordt verzocht een zinvolle beschrijving in één van de talen van de geselecteerde metadata te schrijven.",
+        "de": "Beschreibt den Datensatz in grossen Zügen oder gibt eine kurze Beschreibung. Der Verfasser wird ersucht eine sinnvolle Beschreibung in einer der Sprachen  der ausgewählten Metadaten zu schreiben."
+      },
+      "required": "true"
+    },
+    {
+      "field_name": "name",
+      "label": "URL",
+      "preset": "dataset_slug",
+      "form_placeholder": {
+        "en": "e.g. Highway Network",
+        "fr": "par ex. réseau d'autoroutes",
+        "nl": "bv. snelwegennet",
+        "de": "zum B. Autobahnennetz"
+      }
+    },
+    {
+      "field_name": "notes_translated",
+      "preset": "fluent_markdown",
+      "label": {
+        "en": "Description of dataset",
+        "fr": "Description du jeux de données",
+        "nl": "Datasetomschrijving",
+        "de": "Beschreibung des datensatzes"
+      },
+      "form_placeholder": {
+        "en": "e.g. “Contains a static high priority network of Belgium: Road name, Lane Number, Direction”",
+        "fr": "par ex. “Contient un réseau statique de haute priorité de la Belgique: Nom de route, Numéro d'avenue, Direction”",
+        "nl": "bv. “Bevat een statisch netwerk met hoge prioriteit voor België: Wegennaam, Straatnummer, Richting”",
+        "de": "zum B. “Beinhaltet ein statisches Netz mit höher Prirotät für Belgien: Wegenname, Strassennummer, Richtung”"
+      },
+      "help_text": {
+        "en": "Gives the user more information about the content of the dataset or service. This MUST be filled in all selected metadata languages.",
+        "fr": "Donne à l'utilisateur de plus amples informations sur le contenu du jeu de données ou du service. Ce champ DOIT être rempli dans toutes les langues des métadonnées sélectionnées.",
+        "nl": "Geeft aan de gebruiker meer gedetailleerde informatie over de inhoud van de dataset of van de dienst. Dit veld MOET in elke taal van de geselecteerde metadata gevuld worden.",
+        "de": "Gibt dem Benutzer weitere Informationen zum Inhalt des Datensatzes oder des Dienstes. Dieses Feld MUSS in allen Sprachen der ausgewählmten Metadaten ausgefüllt werden."
+      },
+      "form_languages": [
+        "en",
+        "nl",
+        "fr",
+        "de"
+      ],
+      "display_snippet": "fluent_markdown_fallback.html"
+    }
+  ]
+}
+
