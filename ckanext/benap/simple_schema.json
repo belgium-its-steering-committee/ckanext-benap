@@ -39,6 +39,28 @@
       }
     },
     {
+      "field_name": "ID",
+      "label": {
+        "en": "Identifier of dataset",
+        "fr": "Indentifiquant du jeu de données",
+        "nl": "Indetifier van de dataset",
+        "de": "Identifier des Datensatzes"
+      },
+      "form_placeholder": {
+        "en": "e.g. d2ab9657-0299-4e3c-9af0-650aa5572e21",
+        "fr": "par ex. d2ab9657-0299-4e3c-9af0-650aa5572e21",
+        "nl": "bv. d2ab9657-0299-4e3c-9af0-650aa5572e21",
+        "de": "zum B. d2ab9657-0299-4e3c-9af0-650aa5572e21"
+      },
+      "help_text": {
+        "en": "Identifies the dataset.",
+        "fr": "Identifies le jeu de données.",
+        "nl": "Identifies de dataset.",
+        "de": "Identifies den Datensatz."
+      },
+      "required": "true"
+    },
+    {
       "field_name": "notes_translated",
       "preset": "fluent_markdown",
       "label": {
@@ -66,6 +88,107 @@
         "de"
       ],
       "display_snippet": "fluent_markdown_fallback.html"
+    },
+    {
+      "field_name": "maintainer_email",
+      "label": {
+        "en": "E-mail [maintainer]",
+        "fr": "E-mail [maintainer]",
+        "nl": "E-mail [maintainer]",
+        "de": "E-Mail [maintainer]"
+      },
+      "form_placeholder": "example@example.com",
+      "display_snippet": "email.html",
+      "display_email_name_field": "maintainer_name",
+      "help_text": {
+        "en": "Please use a general e-mail address (not a personal one). The email adress must contain @ and a dot.",
+        "fr": "Veuillez utiliser une adresse e-mail générale (et non personnelle). L'adresse e-mail doit contenir @ et un point.",
+        "nl": "Gelieve bij voorkeer een algemeen e-mailadres te gebruiken (geen persoonlijk). Het e-mailadres moet  @ en een punt inhouden.",
+        "de": "Bitte verwenden Sie eine allgemeine E-Mail-Adresse (keine persönliche). Die E-Mail muss  @ und einen Punkt beinhalten."
+      },
+      "validators": "email_validator"
+    },
+    {
+      "field_name": "publisher_email",
+      "label": {
+        "en": "E-mail [publisher]",
+        "fr": "E-mail [éditeur]",
+        "nl": "E-mail [uitgever]",
+        "de": "E-Mail [Herausgeber]"
+      },
+      "form_placeholder": "example@example.com",
+      "display_snippet": "email.html",
+      "display_email_name_field": "publisher_name",
+      "help_text": {
+        "en": "Please use a general e-mail address (not a personal one). The email adress must contain @ and a dot.",
+        "fr": "Veuillez utiliser une adresse e-mail générale (et non personnelle). L'adresse e-mail doit contenir @ et un point.",
+        "nl": "Gelieve bij voorkeer een algemeen e-mailadres te gebruiken (geen persoonlijk). Het e-mailadres moet  @ en een punt inhouden.",
+        "de": "Bitte verwenden Sie eine allgemeine E-Mail-Adresse (keine persönliche). Die E-Mail muss  @ und einen Punkt beinhalten."
+      },
+      "validators": "email_validator"
+    },
+    {
+      "field_name": "license_id",
+      "label": {
+        "en": "License type",
+        "fr": "Type de licence",
+        "nl": "Type licentie",
+        "de": "Lizenz-Typ"
+      },
+      "form_snippet": "license.html",
+      "help_text": {
+        "en": "Describes the conditions of use of the data set.",
+        "fr": "Décrit les conditions d'utilisation du jeu de données.",
+        "nl": "Beschrijft de gebruiksvoorwaarden van de dataset.",
+        "de": "Beschreibt die Nutzungsbedingungen des Datensatzes."
+      },
+      "required": "true"
+    },
+    {
+      "field_name": "date_modified",
+      "label": {
+        "en": "Modification date",
+        "fr": "Modification date",
+        "nl": "Modification date",
+        "de": "Modification date"
+      },
+      "label_time": {
+        "en": "Time",
+        "fr": "Temps",
+        "nl": "Tijd",
+        "de": "Zeit"
+      },
+      "preset": "datetime_tz",
+      "help_text": {
+        "en": "Describes from which date and time on the data delivery is modified.",
+        "fr": "Describes from which date and time on the data delivery is modified.",
+        "nl": "Describes from which date and time on the data delivery is modified.",
+        "de": "Describes from which date and time on the data delivery is modified. "
+      },
+      "required": "true"
+    }
+  ],
+  "resource_fields": [
+    {
+      "field_name": "url",
+      "label": {
+        "en": "Access URL",
+        "fr": "URL d'accès",
+        "nl": "Toegangs-URL",
+        "de": "Zugangs-URL"
+      },
+      "help_text": {
+        "en": "See explanation on the left side. Links must start with \"http://\", or \"https://\". Max. filesize is 25Mb)",
+        "fr": "Voir l'explication à gauche. Les liens doivent commencer par \"http: //\", ou \"https: //\". La taille maximale du fichier est de 25 Mo",
+        "nl": "Zie uitleg aan de linkerkant. Links moeten beginnen met \"http: //\", of \"https: //\". Maximale bestandsgrootte is 25Mb",
+        "de": "Siehe Erklärung auf der linken Seite. Links müssen mit \"http: //\" oder \"https: //\" beginnen. Die maximale Dateigröße beträgt 25 MB"
+      },
+      "form_snippet": "upload.html",
+      "form_placeholder": "http://example.com/my-data.csv",
+      "upload_field": "upload",
+      "upload_clear": "clear_upload",
+      "upload_label": "File",
+      "required": "true"
     }
   ]
 }
