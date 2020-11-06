@@ -166,6 +166,29 @@
         "de": "Describes from which date and time on the data delivery is modified. "
       },
       "required": "true"
+    },
+    {
+      "field_name": "owner_org",
+      "label": {
+        "en": "Organisation name [contact point]",
+        "fr": "Nom de l'organisation [point de contact] ",
+        "nl": "Naam van de organisatie  [contactpunt]",
+        "de": "Name der Organisation  [Kontaktpunkt]"
+      },
+      "label_dataset_organization": {
+        "en": "Visibility",
+        "fr": "Accessibilité",
+        "nl": "Toegankelijkheid",
+        "de": "Zugang"
+      },
+      "preset": "dataset_organization",
+      "help_text": {
+        "en": "The \"contact point\", describes an organisation, if applicable a person, which is responsible for the creation and maintenance of the metadata. This person or organization is the single point of contact for the present metadata set. The next field may be used to keep the dataset \"private\" within the organisation for internal review before effective publication.",
+        "fr": "Le \"point de contact\" décrit une organisation, ou une personne si d'application, qui est responsable de la création et de la mise à jour des métadonnées. Cette personne ou organisation est le point de contact unique pour le présent jeu de métadonnées.  Le champ suivant peut être utilisé pour garder le jeu de données \"privé\" au sein de l'organisation pour révision interne avant publication effective.",
+        "nl": "Het \"contactpunt\" beschrijft een organisatie, of een persoon indien van toepassing, die verantwoordelijk is voor de aanmaak en bijwerking van de metadata. Deze persoon of organisatie is het één contactpunt voor deze set van metadata. Het volgende veld kan gebruikt worden om ter interne herziening voor effectieve publicatie de dataset \"privé\" te houden binnen de organisatie. ",
+        "de": "Der \"Kontaktpunkt\" beschreibt eine Organisation, oder gegebenenfalls eine Person, die für die Herstellung und Aktualisierung von Metadaten verantwortlich ist. Diese Person oder Organisation ist der einzige Kontaktpunkt für diesen Metadatensatz. Das folgende Feld kann benutzt werden, um für interne Prüfung vor der effektiven Publikation den Datensatz \"privat\" zu halten innerhalb von der Organisation.  "
+      },
+      "required": "true"
     }
   ],
   "resource_fields": [
