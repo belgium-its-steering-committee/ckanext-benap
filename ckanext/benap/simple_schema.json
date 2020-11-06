@@ -134,7 +134,6 @@
         "nl": "Type licentie",
         "de": "Lizenz-Typ"
       },
-      "form_snippet": "license.html",
       "help_text": {
         "en": "Describes the conditions of use of the data set.",
         "fr": "Décrit les conditions d'utilisation du jeu de données.",
