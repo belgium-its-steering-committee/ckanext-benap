@@ -121,7 +121,7 @@
       }
     },
     {
-      "field_name": "license",
+      "field_name": "license_id",
       "label": {
         "en": "License",
         "fr": "Licence",
