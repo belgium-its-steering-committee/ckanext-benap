@@ -39,7 +39,7 @@
       }
     },
     {
-      "field_name": "ID",
+      "field_name": "id",
       "label": {
         "en": "Identifier of dataset",
         "fr": "Indentifiquant du jeu de données",
@@ -121,12 +121,12 @@
       }
     },
     {
-      "field_name": "license_id",
+      "field_name": "license",
       "label": {
-        "en": "License type",
-        "fr": "Type de licence",
-        "nl": "Type licentie",
-        "de": "Lizenz-Typ"
+        "en": "License",
+        "fr": "Licence",
+        "nl": "Licentie",
+        "de": "Lizenz"
       },
       "help_text": {
         "en": "Describes the conditions of use of the data set.",
