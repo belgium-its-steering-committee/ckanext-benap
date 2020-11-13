@@ -89,42 +89,36 @@
       "display_snippet": "fluent_markdown_fallback.html"
     },
     {
-      "field_name": "maintainer_email",
+      "field_name": "maintainer_contact",
       "label": {
-        "en": "E-mail [maintainer]",
-        "fr": "E-mail [maintainer]",
-        "nl": "E-mail [maintainer]",
-        "de": "E-Mail [maintainer]"
+        "en": "Contact [maintainer]",
+        "fr": "Contact [maintainer]",
+        "nl": "Contact [maintainer]",
+        "de": "Contact [maintainer]"
       },
       "form_placeholder": "example@example.com",
-      "display_snippet": "email.html",
-      "display_email_name_field": "maintainer_name",
       "help_text": {
-        "en": "Please use a general e-mail address (not a personal one). The email adress must contain @ and a dot.",
-        "fr": "Veuillez utiliser une adresse e-mail générale (et non personnelle). L'adresse e-mail doit contenir @ et un point.",
-        "nl": "Gelieve bij voorkeer een algemeen e-mailadres te gebruiken (geen persoonlijk). Het e-mailadres moet  @ en een punt inhouden.",
-        "de": "Bitte verwenden Sie eine allgemeine E-Mail-Adresse (keine persönliche). Die E-Mail muss  @ und einen Punkt beinhalten."
-      },
-      "validators": "email_validator"
+        "en": "Please use a general contact address (not a personal one).",
+        "fr": "Veuillez utiliser un contact général (et non personnel).",
+        "nl": "Gelieve bij voorkeer een algemeen contact te gebruiken (geen persoonlijk).",
+        "de": "Bitte verwenden Sie eine allgemeine Contact (keine persönliche)."
+      }
     },
     {
-      "field_name": "publisher_email",
+      "field_name": "publisher_contact",
       "label": {
-        "en": "E-mail [publisher]",
-        "fr": "E-mail [éditeur]",
-        "nl": "E-mail [uitgever]",
-        "de": "E-Mail [Herausgeber]"
+        "en": "Contact [publisher]",
+        "fr": "Contact [éditeur]",
+        "nl": "Contact [uitgever]",
+        "de": "Contact [Herausgeber]"
       },
       "form_placeholder": "example@example.com",
-      "display_snippet": "email.html",
-      "display_email_name_field": "publisher_name",
       "help_text": {
-        "en": "Please use a general e-mail address (not a personal one). The email adress must contain @ and a dot.",
-        "fr": "Veuillez utiliser une adresse e-mail générale (et non personnelle). L'adresse e-mail doit contenir @ et un point.",
-        "nl": "Gelieve bij voorkeer een algemeen e-mailadres te gebruiken (geen persoonlijk). Het e-mailadres moet  @ en een punt inhouden.",
-        "de": "Bitte verwenden Sie eine allgemeine E-Mail-Adresse (keine persönliche). Die E-Mail muss  @ und einen Punkt beinhalten."
-      },
-      "validators": "email_validator"
+        "en": "Please use a general contact address (not a personal one).",
+        "fr": "Veuillez utiliser un contact général (et non personnel).",
+        "nl": "Gelieve bij voorkeer een algemeen contact te gebruiken (geen persoonlijk).",
+        "de": "Bitte verwenden Sie eine allgemeine Contact (keine persönliche)."
+      }
     },
     {
       "field_name": "license_id",
