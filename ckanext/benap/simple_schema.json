@@ -39,27 +39,6 @@
       }
     },
     {
-      "field_name": "id",
-      "label": {
-        "en": "Identifier of dataset",
-        "fr": "Indentifiquant du jeu de données",
-        "nl": "Indetifier van de dataset",
-        "de": "Identifier des Datensatzes"
-      },
-      "form_placeholder": {
-        "en": "e.g. d2ab9657-0299-4e3c-9af0-650aa5572e21",
-        "fr": "par ex. d2ab9657-0299-4e3c-9af0-650aa5572e21",
-        "nl": "bv. d2ab9657-0299-4e3c-9af0-650aa5572e21",
-        "de": "zum B. d2ab9657-0299-4e3c-9af0-650aa5572e21"
-      },
-      "help_text": {
-        "en": "Identifies the dataset.",
-        "fr": "Identifies le jeu de données.",
-        "nl": "Identifies de dataset.",
-        "de": "Identifies den Datensatz."
-      }
-    },
-    {
       "field_name": "notes_translated",
       "preset": "fluent_markdown",
       "label": {
