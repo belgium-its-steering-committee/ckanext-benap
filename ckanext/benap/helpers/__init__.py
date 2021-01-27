@@ -1079,6 +1079,7 @@ def get_translated_tag(tag, lang):
                                                       translated_taglist])[0][1][lang]
     except:
         try:
+            print(tag)
             return tag['display_name']
         except KeyError:
             print('tag not found: ' + tag)
