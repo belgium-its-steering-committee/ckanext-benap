@@ -8,6 +8,33 @@
 </div>
 <div id="content-box" role="main">
   <div class="container">
+
+    <div class="row">
+      <div class="col col-md-6 col2">
+        <div class="row special-row">
+          <div class="special-col col col-12" style="padding-bottom: 0; padding-top: 0;">
+            {% block feedback %}
+              {% snippet 'home/snippets/feedback.html' %}
+            {% endblock %}
+          </div>
+          <div class="special-col col col-12" style="padding-bottom: 0;">
+            {% block report %}
+              {% snippet 'home/snippets/report.html' %}
+            {% endblock %}
+          </div>
+          <div class="special-col col col-12" style="padding-bottom: 0;">
+            {% block newsletter %}
+              {% snippet 'home/snippets/newsletter.html' %}
+            {% endblock %}
+          </div>
+        </div>
+      </div>
+
+      <div class="special-col col col-md-6 col2" style="padding-bottom: 0; padding-top: 0; position: absolute; left: 50%; height: 100%;">
+        <div class="fs-20" style="background-color: lightblue; min-height: 100%;">video</div>
+      </div>
+    </div>
+
     <div class="row special-row">
       <div class="special-col col col-md-6 col2">
         {% block promoted %}
@@ -21,6 +48,7 @@
       </div>
     </div>
 
+    {#
     <div class="row my-10px">
       <div class="col col-md-4">
         {% block report %}
@@ -38,5 +66,6 @@
         {% endblock %}
       </div>
     </div>
+    #}
   </div>
 </div>
