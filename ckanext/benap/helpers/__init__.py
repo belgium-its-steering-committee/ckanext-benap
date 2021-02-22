@@ -1081,8 +1081,10 @@ def get_translated_tag(tag, lang):
         try:
             return tag['display_name']
         except KeyError:
-            print('tag not found:')
-            print(tag)
+            try:
+                print('tag not found: ' + json.dumps(tag))
+            except:
+                print('tag not found')
 
 
 def get_translated_tags():
