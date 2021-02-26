@@ -1270,3 +1270,16 @@ def get_translated_tags():
              "fr": u"Modes personnels",
              "de": u"Individualverkehr"
          })]
+
+def filter_default_tags_only(items):
+    filtered_items = []
+    tags = []
+    for categorized_tags in get_translated_tags():
+        for translated_tag in categorized_tags[0]:
+            tags.append(translated_tag[0])
+    for item in items:
+        for tag in tags:
+            if item['name'] == tag:
+                filtered_items.append(item)
+    return filtered_items
+

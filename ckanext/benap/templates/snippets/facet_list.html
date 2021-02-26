@@ -57,6 +57,9 @@ within_tertiary
           {% endblock %}
           {% block facet_list_items %}
             {% with items = items or h.get_facet_items_dict(name) %}
+            {% if 'Tags' == title %}
+              {% set items = h.filter_default_tags_only(items) %}
+            {% endif %}
             {% if items %}
               <nav>
                 <ul class="{{ nav_class or 'list-unstyled nav nav-simple nav-facet' }}">
