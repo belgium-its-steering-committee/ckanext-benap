@@ -49,15 +49,24 @@ within_tertiary
       {% block facet_list_item %}
         <section class="{{ wrapper_class or 'module module-narrow module-shallow' }}">
           {% block facet_list_heading %}
-            <h2 class="module-heading">
-              <i class="fa fa-filter"></i>
-              {% set title = title or h.get_facet_title(name) %}
-              {{ title }}
-            </h2>
+            <div id="collapse-{{ title }}-toggle" style="cursor: pointer; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+              <h2 class="module-heading">
+                <i class="fa fa-filter"></i>
+                {% set title = title or h.get_facet_title(name) %}
+                {{ title }}
+              </h2>
+              <div id="collapse-{{ title }}-open" style="padding-right: 15px; font-size: 10px;">
+                <span class="caret"></span>
+              </div>
+              <div id="collapse-{{ title }}-close" style="padding-right: 15px; font-size: 10px;">
+                <span class="dropup">
+                  <span class="caret"></span>
+                </span>
+              </div>
+            </div>
           {% endblock %}
           {% block facet_list_items %}
-
-
+            <div id="collapse-{{ title }}">
               {% with items = items or h.get_facet_items_dict(name) %}
               {% if items %}
                 <nav>
@@ -91,9 +100,18 @@ within_tertiary
                 <p class="module-content empty">{{ _('There are no {facet_type} that match this search').format(facet_type=title) }}</p>
               {% endif %}
               {% endwith %}
-
-
+            </div>
           {% endblock %}
+          <script>
+            $('#collapse-{{ title }}').toggle();
+            $('#collapse-{{ title }}-close').toggle();
+
+            $('#collapse-{{ title }}-toggle').click(() => {
+              $('#collapse-{{ title }}').toggle();
+              $('#collapse-{{ title }}-open').toggle();
+              $('#collapse-{{ title }}-close').toggle();
+            });
+          </script>
         </section>
       {% endblock %}
     {% endif %}

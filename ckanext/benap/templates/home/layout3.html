@@ -30,8 +30,28 @@
         </div>
       </div>
 
-      <div class="special-col col col-md-6 col2" style="padding-bottom: 0; padding-top: 0; position: absolute; left: 50%; height: 100%;">
-        <div class="fs-20" style="background-color: lightblue; min-height: 100%;">video</div>
+      <style>
+        .video-row-col {
+            padding-top: 50px;
+            height: 420px;
+         }
+
+        @media only screen and (min-width: 982px) {
+          .video-row-col {
+            position: absolute;
+            left: 50%;
+            padding-bottom: 0;
+            padding-top: 0;
+            height: 100%;
+            min-height: 100%;
+          }
+        }
+      </style>
+
+      <div class="special-col col col-md-6 col2 video-row-col" style="">
+           <iframe style="min-width: 100%; min-height: 100%;"
+            src="https://www.youtube.com/embed/2YKmzGSh4OU">
+           </iframe>
       </div>
     </div>
 
