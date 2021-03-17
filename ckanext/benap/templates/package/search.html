@@ -1,0 +1,14 @@
+{% ckan_extends %}
+
+{% block secondary_content %}
+<div class="filters">
+  <div>
+    {% for facet in c.facet_titles %}
+      <script>console.log('{{c.facet_titles}}');</script>
+      {{ h.snippet('snippets/facet_list.html', title=c.facet_titles[facet], name=facet) }}
+    {% endfor %}
+    {{ h.snippet('snippets/facet_list.html', title='regions_covered', name='regions_covered') }}
+  </div>
+  <a class="close no-text hide-filters"><i class="fa fa-times-circle"></i><span class="text">close</span></a>
+</div>
+{% endblock %}
