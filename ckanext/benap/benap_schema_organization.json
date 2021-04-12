@@ -31,6 +31,26 @@
       }
     },
     {
+      "field_name": "display_title_en",
+      "label": "Organisation name",
+      "form_placeholder": "Organisation name"
+    },
+    {
+      "field_name": "display_title_nl",
+      "label": "Naam van de organisatie",
+      "form_placeholder": "Naam van de organisatie"
+    },
+    {
+      "field_name": "display_title_fr",
+      "label": "Nom de l'organisation",
+      "form_placeholder": "Nom de l'organisation"
+    },
+    {
+      "field_name": "display_title_de",
+      "label": "Name der Organisation",
+      "form_placeholder": "Name der Organisation"
+    },
+    {
       "field_name": "name",
       "label": {
         "en": "URL",

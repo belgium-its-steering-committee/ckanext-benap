@@ -15,13 +15,40 @@ Example:
 {% block item %}
 <li class="media-item" style="float: none; width: 100%; display: flex; align-items: center; margin-left: 0;">
 
-  <img src="{{ organization.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ organization.name }}" class="img-responsive media-image" style="margin: 0;">
+  <img src="{{ organization.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ organization.name }}" class="img-responsive media-image"
+       style="margin: 0; min-width: 210px; max-width: 210px;">
 
   <div style="height: 100%; width: 100%; display: flex; flex-direction: column; flex-wrap: wrap; padding-left: 15px;">
-    <h3 class="media-heading">{{ organization.display_name }}</h3>
-
+    <h3 class="media-heading">
+      {% if h.lang() == 'en' %}
+        {% if organization.display_title_en %}
+          {{ organization.display_title_en }}
+        {% else %}
+          {{ organization.display_name }}
+        {% endif %}
+      {% elif h.lang() == 'nl' %}
+        {% if organization.display_title_nl %}
+          {{ organization.display_title_nl }}
+        {% else %}
+          {{ organization.display_name }}
+        {% endif %}
+      {% elif h.lang() == 'fr' %}
+        {% if organization.display_title_fr %}
+          {{ organization.display_title_fr }}
+        {% else %}
+          {{ organization.display_name }}
+        {% endif %}
+      {% elif h.lang() == 'de' %}
+        {% if organization.display_title_de %}
+          {{ organization.display_title_de }}
+        {% else %}
+          {{ organization.display_name }}
+        {% endif %}
+      {% endif %}
+    </h3>
     {% block description %}
       {% if organization.description %}
+
         <p>{{ h.markdown_extract(organization.description, extract_length=80) }}</p>
       {% endif %}
     {% endblock %}
