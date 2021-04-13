@@ -4,7 +4,7 @@
 <div class="filters">
   <div>
     {% for facet in c.facet_titles %}
-      <script>console.log('{{c.facet_titles}}');</script>
+      <!--script>console.log('{{c.facet_titles}}');</script-->
       {{ h.snippet('snippets/facet_list.html', title=c.facet_titles[facet], name=facet) }}
     {% endfor %}
     {{ h.snippet('snippets/facet_list.html', title='regions_covered', name='regions_covered') }}
