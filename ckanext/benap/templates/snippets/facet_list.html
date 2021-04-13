@@ -106,8 +106,10 @@ within_tertiary
             </div>
           {% endblock %}
           <script>
-            $('#collapse-{{ title }}').toggle();
-            $('#collapse-{{ title }}-close').toggle();
+            if ('Tags' !== {{ title }}) {
+              $('#collapse-{{ title }}').toggle();
+              $('#collapse-{{ title }}-close').toggle();
+            }
 
             $('#collapse-{{ title }}-toggle').click(() => {
               $('#collapse-{{ title }}').toggle();

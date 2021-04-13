@@ -1285,6 +1285,16 @@ def filter_default_tags_only(items):
     return filtered_items
 
 
+def getTranslatedVideoUrl(lang):
+    switcher = {
+        'en': 'https://www.youtube.com/embed/2YKmzGSh4OU',
+        'nl': 'https://www.youtube.com/embed/hpA_0ya7A-E',
+        'fr': 'https://www.youtube.com/embed/q4oU7DcipWg',
+        'de': 'https://www.youtube.com/embed/y-qi2YIrqXk'
+    }
+    return switcher.get(lang, switcher.get('en'))
+
+
 def show_element(x):
     print('\n\n show element \n\n')
     print(x)
