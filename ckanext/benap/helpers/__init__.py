@@ -1285,6 +1285,15 @@ def filter_default_tags_only(items):
     return filtered_items
 
 
+def is_default_tag(item):
+    for categorized_tags in get_translated_tags():
+        for translated_tag in categorized_tags[0]:
+            if item['name'] == translated_tag[0]:
+                return True
+    show_element(item)
+    return False
+
+
 def getTranslatedVideoUrl(lang):
     switcher = {
         'en': 'https://www.youtube.com/embed/2YKmzGSh4OU',
