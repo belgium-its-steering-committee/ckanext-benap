@@ -105,7 +105,8 @@ within_tertiary
               {% endwith %}
             </div>
           {% endblock %}
-          <script>
+        </section>
+        <script>
           console.log('{{title}}');
             if ('Tags' !== '{{ title }}') {
               $('#collapse-{{ title }}').toggle();
@@ -120,7 +121,6 @@ within_tertiary
               $('#collapse-{{ title }}-close').toggle();
             });
           </script>
-        </section>
       {% endblock %}
     {% endif %}
   {% endwith %}

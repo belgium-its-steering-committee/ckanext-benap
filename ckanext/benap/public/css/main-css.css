@@ -686,6 +686,7 @@ span.item-count {
 }
 
 /* todo fix correct pixels? */
+
 @media only screen and (min-width: 982px) {
     .flex-start-982px {
         justify-content: flex-start;
