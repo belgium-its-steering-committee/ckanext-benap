@@ -390,7 +390,7 @@ msgstr "Contact"
 
 #: ckanext/benap/templates/home/snippets/feedback.html:7
 msgid " our helpdesk."
-msgstr " our helpdesk."
+msgstr " our helpdesk"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:6
 msgid "Subscribe to our newsletter and stay informed"
@@ -440,7 +440,7 @@ msgstr " and in our "
 
 #: ckanext/benap/templates/home/snippets/report.html:8
 msgid "instruction video"
-msgstr "instruction video"
+msgstr "instruction video."
 
 #: ckanext/benap/templates/home/snippets/search.html:3
 msgid "E.g. environment"
@@ -564,15 +564,15 @@ msgstr ""
 
 #: ckanext/benap/templates/snippets/search_form.html:4
 msgid "Name Ascending"
-msgstr ""
+msgstr "Name Ascending"
 
 #: ckanext/benap/templates/snippets/search_form.html:4
 msgid "Name Descending"
-msgstr ""
+msgstr "Name Descending"
 
 #: ckanext/benap/templates/snippets/search_form.html:33
 msgid "Order by"
-msgstr ""
+msgstr "Order by"
 
 #: ckanext/benap/templates/snippets/search_form.html:65
 msgid "Remove"

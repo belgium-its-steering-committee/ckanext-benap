@@ -398,7 +398,7 @@ msgstr "Kontaktieren"
 
 #: ckanext/benap/templates/home/snippets/feedback.html:7
 msgid " our helpdesk."
-msgstr " Sie unseren Helpdesk."
+msgstr " Sie unseren Helpdesk"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:6
 msgid "Subscribe to our newsletter and stay informed"
@@ -434,7 +434,7 @@ msgstr ""
 msgid ""
 "More detailed instructions on how to register your dataset(s) and or "
 "services can be found in the "
-msgstr "Ausführliche Answeisungen zum Registrieren ihrer Datensätze und Dienste finden Sie im "
+msgstr "Ausführliche Answeisungen zum Registrieren Ihrer Datensätze und Dienste finden Sie im "
 
 #: ckanext/benap/templates/home/snippets/report.html:6
 #: ckanext/benap/templates/user/new.html:29
@@ -573,15 +573,15 @@ msgstr ""
 
 #: ckanext/benap/templates/snippets/search_form.html:4
 msgid "Name Ascending"
-msgstr ""
+msgstr "Name Aufsteigend"
 
 #: ckanext/benap/templates/snippets/search_form.html:4
 msgid "Name Descending"
-msgstr ""
+msgstr "Name Absteigend"
 
 #: ckanext/benap/templates/snippets/search_form.html:33
 msgid "Order by"
-msgstr ""
+msgstr "Sortieren nach"
 
 #: ckanext/benap/templates/snippets/search_form.html:65
 msgid "Remove"
