@@ -386,11 +386,11 @@ msgstr "Contacteer"
 
 #: ckanext/benap/templates/home/snippets/feedback.html:7
 msgid " our helpdesk."
-msgstr " onze helpdesk."
+msgstr " onze helpdesk"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:6
 msgid "Subscribe to our newsletter and stay informed"
-msgstr "Schrijf in op onze nieuwsbrief"
+msgstr "Schrijf u in op onze nieuwsbrief"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:11
 msgid "Enter your email address"
@@ -422,12 +422,12 @@ msgstr ""
 msgid ""
 "More detailed instructions on how to register your dataset(s) and or "
 "services can be found in the "
-msgstr "Voor meer informatie over het registreren van dataset(s) en onze services, kan je terrecht bij de "
+msgstr "Meer informatie met betrekking tot het registreren van datasets en/of diensten vind u in de sectie "
 
 #: ckanext/benap/templates/home/snippets/report.html:6
 #: ckanext/benap/templates/user/new.html:29
 msgid "about section"
-msgstr "over-sectie"
+msgstr "&quot;over&quot;"
 
 #: ckanext/benap/templates/home/snippets/report.html:7
 msgid " and in our "
@@ -562,15 +562,15 @@ msgstr ""
 
 #: ckanext/benap/templates/snippets/search_form.html:4
 msgid "Name Ascending"
-msgstr ""
+msgstr "Naam Aflopend"
 
 #: ckanext/benap/templates/snippets/search_form.html:4
 msgid "Name Descending"
-msgstr ""
+msgstr "Naam Oplopend"
 
 #: ckanext/benap/templates/snippets/search_form.html:33
 msgid "Order by"
-msgstr ""
+msgstr "Sorteren op"
 
 #: ckanext/benap/templates/snippets/search_form.html:65
 msgid "Remove"
