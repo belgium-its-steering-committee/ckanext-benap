@@ -7,48 +7,88 @@
     {
       "field_name": "title",
       "label": {
-        "en": "Organisation name",
-        "fr": "Nom de l'organisation",
-        "nl": "Naam van de organisatie",
-        "de": "Name der Organisation"
+        "en": "Organisation name (default)",
+        "fr": "Nom de l'organisation (défaut)",
+        "nl": "Naam van de organisatie (standaard)",
+        "de": "Name der Organisation (Standard)"
       },
       "required": true,
       "help_text": {
-        "en": "Describes the name of your organisation. If necessary, please fill it in in multiple languages, each separated by \"/\". Your organisation is responsible for the creation and maintenance of its own metadata sets.",
-        "fr": "Décrit le nom de votre organisation. Si nécessaire, merci de le compléter dans plusieurs langues, chacune séparée par une \"/\". Votre organisation est responsible de la création et de la mise à jour de ses propres jeux de métadonnées.",
-        "nl": "Beschrijft de naam van je organisatie. Indien nodig, gelieve de naam in verschillende talen in te vullen, elke gescheid door een \"/\". Je organisatie is verantwoordelijk voor de aanmaak en de bijwerking van haar eigen metadatasets.",
-        "de": "Beschreibt den Namen Ihrer Organisation. Wenn nötig, bitte den Namen in verschiedenen Sprachen ausfüllen, jede getrennt durch ein \"/\". Ihre Organisation ist verantwortlich für die Herstellung und das Updaten ihrer eigenen Metadatensätze."
+        "en": "Describe the name of your organisation in your prefered language. Do not provide the name in multiple languages here. By default, this organisation name will be shown in all languages. If you want to specify the organisation name in multiple languages, you can do so by filling in the fields below.",
+        "fr": "Describe the name of your organisation in your prefered language. Do not provide the name in multiple languages here. By default, this organisation name will be shown in all languages. If you want to specify the organisation name in multiple languages, you can do so by filling in the fields below.",
+        "nl": "Describe the name of your organisation in your prefered language. Do not provide the name in multiple languages here. By default, this organisation name will be shown in all languages. If you want to specify the organisation name in multiple languages, you can do so by filling in the fields below.",
+        "de": "Describe the name of your organisation in your prefered language. Do not provide the name in multiple languages here. By default, this organisation name will be shown in all languages. If you want to specify the organisation name in multiple languages, you can do so by filling in the fields below."
       },
       "form_snippet": "large_text.html",
       "form_attrs": {
         "data-module": "slug-preview-target"
       },
       "form_placeholder": {
-        "en": "My Organization full name",
-        "fr": "Nom complet de mon organisation",
-        "nl": "Volledige naam van je organisatie",
-        "de": "Vollständiger Name meiner Organisation"
+        "en": "My Organization name",
+        "fr": "Nom de mon organisation",
+        "nl": "Naam van je organisatie",
+        "de": "Name meiner Organisation"
       }
     },
     {
       "field_name": "display_title_en",
-      "label": "Organisation name",
-      "form_placeholder": "Organisation name"
+      "label": {
+        "en": "EN Organization name",
+        "fr": "EN Nom de l'organisation",
+        "nl": "EN Naam van de organisatie",
+        "de": "EN Name der Organisation"
+      },
+      "form_placeholder": {
+        "en": "My Organization name",
+        "fr": "Nom de mon organisation",
+        "nl": "Naam van je organisatie",
+        "de": "Name meiner Organisation"
+      }
     },
     {
       "field_name": "display_title_nl",
-      "label": "Naam van de organisatie",
-      "form_placeholder": "Naam van de organisatie"
+      "label": {
+        "en": "NL Organization name",
+        "fr": "NL Nom de l'organisation",
+        "nl": "NL Naam van de organisatie",
+        "de": "NL Name der Organisation"
+      },
+      "form_placeholder": {
+        "en": "My Organization name",
+        "fr": "Nom de mon organisation",
+        "nl": "Naam van je organisatie",
+        "de": "Name meiner Organisation"
+      }
     },
     {
       "field_name": "display_title_fr",
-      "label": "Nom de l'organisation",
-      "form_placeholder": "Nom de l'organisation"
+      "label": {
+        "en": "FR Organization name",
+        "fr": "FR Nom de l'organisation",
+        "nl": "FR Naam van de organisatie",
+        "de": "FR Name der Organisation"
+      },
+      "form_placeholder": {
+        "en": "My Organization name",
+        "fr": "Nom de mon organisation",
+        "nl": "Naam van je organisatie",
+        "de": "Name meiner Organisation"
+      }
     },
     {
       "field_name": "display_title_de",
-      "label": "Name der Organisation",
-      "form_placeholder": "Name der Organisation"
+      "label": {
+        "en": "DE Organization name",
+        "fr": "DE Nom de l'organisation",
+        "nl": "DE Naam van de organisatie",
+        "de": "DE Name der Organisation"
+      },
+      "form_placeholder": {
+        "en": "My Organization name",
+        "fr": "Nom de mon organisation",
+        "nl": "Naam van je organisatie",
+        "de": "Name meiner Organisation"
+      }
     },
     {
       "field_name": "name",

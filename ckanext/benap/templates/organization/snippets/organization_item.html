@@ -14,9 +14,10 @@ Example:
 {% set url = h.url_for(organization.type ~ '_read', action='read', id=organization.name) %}
 {% block item %}
 <li class="media-item" style="float: none; width: 100%; display: flex; align-items: center; margin-left: 0;">
-
-  <img src="{{ organization.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ organization.name }}" class="img-responsive media-image"
-       style="margin: 0; min-width: 210px; max-width: 210px;">
+  <div style="width: 210px; min-width: 210px; max-width: 210px; height: 125px; min-height: 125px; max-height: 125px;">
+      <img src="{{ organization.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ organization.name }}" class="img-responsive media-image"
+       style="margin: 0; width: 100%; height: 100%; object-fit: contain;">
+  </div>
 
   <div style="height: 100%; width: 100%; display: flex; flex-direction: column; flex-wrap: wrap; padding-left: 15px;">
     <h3 class="media-heading">

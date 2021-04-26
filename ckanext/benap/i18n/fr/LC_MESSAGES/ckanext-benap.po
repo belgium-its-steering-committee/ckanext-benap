@@ -486,14 +486,14 @@ msgstr "Ajouter données"
 #: ckanext/benap/templates/organization/snippets/organization_item.html:57
 msgid "{num} Dataset"
 msgid_plural "{num} Datasets"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{num} Jeu de données"
+msgstr[1] "{num} Jeux de données"
 
 #: ckanext/benap/templates/organization/snippets/organization_item.html:59
 #, fuzzy
 #| msgid "Datasets"
 msgid "0 Datasets"
-msgstr "Jeux de données"
+msgstr "0 Jeux de données"
 
 #: ckanext/benap/templates/organization/snippets/organization_item.html:68
 #: ckanext/benap/templates/organization/snippets/organization_item.html:69
