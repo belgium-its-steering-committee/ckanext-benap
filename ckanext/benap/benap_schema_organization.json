@@ -14,10 +14,10 @@
       },
       "required": true,
       "help_text": {
-        "en": "Describe the name of your organisation in your prefered language. Do not provide the name in multiple languages here. By default, this organisation name will be shown in all languages. If you want to specify the organisation name in multiple languages, you can do so by filling in the fields below.",
-        "fr": "Describe the name of your organisation in your prefered language. Do not provide the name in multiple languages here. By default, this organisation name will be shown in all languages. If you want to specify the organisation name in multiple languages, you can do so by filling in the fields below.",
-        "nl": "Describe the name of your organisation in your prefered language. Do not provide the name in multiple languages here. By default, this organisation name will be shown in all languages. If you want to specify the organisation name in multiple languages, you can do so by filling in the fields below.",
-        "de": "Describe the name of your organisation in your prefered language. Do not provide the name in multiple languages here. By default, this organisation name will be shown in all languages. If you want to specify the organisation name in multiple languages, you can do so by filling in the fields below."
+        "en": "Indicate the name of your organisation in your preferred language. Do not provide the name in multiple languages here. By defaullt, this organisation name will be shown in all languages. If you wan to specify the organisation name in multiple languages, you can do so by filling in the fields below.",
+        "fr": "Indiquez le nom de votre organisation dans votre langue de préférence. Ne donnez pas ici le nom dans différentes langues. Par défaut, ce nom d'organisation sera affiché dans toutes les langues. Si vous souhaitez préciser le nom de l'organisation dan différentes langues, vous pouvez le faire en remplissant les champs ci-dessous.",
+        "nl": "Geef de naam van de organisatie in de taal bij voorkeur. Vul hier geen meerdere talen in. Standaard zal deze organisatienaam getoond worden in alle talen. Wenst u de organisatienaam in meerdere talen te specifiëren, dan kan dit door de velden hieronder in te vullen.",
+        "de": "Geben Sie den Namen Ihrer Organisation in Ihrer bevorzugten Sprache an. Schreiben Sie bitte nicht hier den Namen in verschiedenen Sprachen. Standardmäβig wird dieser Name der Organisation in allen Sprachen angezeigt werden. Wenn Sie den Namen der Organisation in verschiedenen Sprachen angeben wollen, sollten Sie die Felder hier unten benutzen."
       },
       "form_snippet": "large_text.html",
       "form_attrs": {

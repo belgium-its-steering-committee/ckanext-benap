@@ -399,7 +399,7 @@ msgstr " notre service d'assistance"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:6
 msgid "Subscribe to our newsletter and stay informed"
-msgstr "Inscrivez-vous à la lettre de diffusion et restez informé"
+msgstr "Pour rester informé, inscrivez-vous à la lettre de diffusion"
 
 #: ckanext/benap/templates/home/snippets/newsletter.html:11
 msgid "Enter your email address"

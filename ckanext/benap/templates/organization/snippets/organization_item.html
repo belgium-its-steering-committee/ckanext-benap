@@ -49,7 +49,6 @@ Example:
     </h3>
     {% block description %}
       {% if organization.description %}
-
         <p>{{ h.markdown_extract(organization.description, extract_length=80) }}</p>
       {% endif %}
     {% endblock %}

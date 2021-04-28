@@ -427,7 +427,7 @@ msgstr "Meer informatie met betrekking tot het registreren van datasets en/of di
 #: ckanext/benap/templates/home/snippets/report.html:6
 #: ckanext/benap/templates/user/new.html:29
 msgid "about section"
-msgstr "&quot;over&quot;"
+msgstr "&#8220;over&#8221;"
 
 #: ckanext/benap/templates/home/snippets/report.html:7
 msgid " and in our "
