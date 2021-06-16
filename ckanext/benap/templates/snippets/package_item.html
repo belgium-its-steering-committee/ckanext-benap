@@ -22,7 +22,9 @@
             {{ h.popular('recent views', package.tracking_summary.recent, min=10) if package.tracking_summary }}
         {% endblock %}
     </h3>
-    <a href="{{ h.url_for(package.organization.type ~ '_read', action='read', id=package.organization.name) }}" style="display: inline; padding-left: 8px;"><i>{{ package.organization.title }}</i></a>
+    <a href="{{ h.url_for(package.organization.type ~ '_read', action='read', id=package.organization.name) }}" style="display: inline; padding-left: 8px;"><i>
+        {{ h.get_organization_by_id(package.organization.id) }}
+    </i></a>
 {% endblock %}
 
 {% block notes %}

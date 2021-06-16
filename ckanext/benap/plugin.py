@@ -6,7 +6,7 @@ from ckan.lib.plugins import DefaultTranslation
 from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallback, json_loads, \
     package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete,\
     get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, get_translated_tag_with_name, \
-    forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element
+    forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element, get_organization_by_id
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.validators import phone_number_validator, countries_covered_belgium, is_after_start, https_validator
 
@@ -50,6 +50,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'format_datetime': format_datetime,
             'benap_forum_url': forum_url,
             'getTranslatedVideoUrl': getTranslatedVideoUrl,
+            'get_organization_by_id': get_organization_by_id,
             'show_element': show_element
         }
 

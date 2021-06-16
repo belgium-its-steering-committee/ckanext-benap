@@ -1,5 +1,6 @@
 # coding=utf-8
 import json
+import ckan.plugins.toolkit as toolkit
 from ckan.common import config
 from ckanext.benap.util.forms import map_for_form_select
 
@@ -1302,6 +1303,26 @@ def getTranslatedVideoUrl(lang):
         'de': 'https://www.youtube.com/embed/y-qi2YIrqXk?rel=0&enablejsapi=1'
     }
     return switcher.get(lang, switcher.get('en'))
+
+
+def get_organization_by_id(id):
+    user = toolkit.get_action(u'get_site_user')({
+        u'ignore_auth': True
+    }, {})
+    context = {
+        u'user': user[u'name']
+    }
+    organization = toolkit.get_action(u'organization_show')(context, {
+        u'id': id
+    })
+    field = 'display_title_' + user_language()
+    to_show_name = organization.get(field)
+    if (to_show_name):
+        return to_show_name
+    else:
+        return organization.get('display_name')
+
+
 
 
 def show_element(x):
