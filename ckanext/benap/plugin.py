@@ -9,7 +9,7 @@ from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallba
     forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element, get_organization_by_id
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.validators import phone_number_validator, countries_covered_belgium, is_after_start, https_validator
-from ckanext.benap.logic.auth.get import user_list
+from ckanext.benap.logic.auth.get import user_list, organization_show
 
 
 class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTranslation):
@@ -68,9 +68,10 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
 
 
     # IAuthFunctions
+
     def get_auth_functions(self):
         return {
-            'user_list':
-                user_list,
+            'user_list': user_list,
+            'organization_show': organization_show,
         }
 
