@@ -1015,6 +1015,46 @@ def ontology_helper(context):
             }),
 
         ])
+    elif ontology == "georeferencing_method":
+        return map_for_form_select([
+            ('ALERT-C (LCL)', {
+                "en": u"ALERT-C (LCL)",
+                "fr": u"ALERT-C (LCL)",
+                "nl": u"ALERT-C (LCL)",
+                "de": u"ALERT-C (LCL)"
+            }),
+            ('Geocoordinates WGS84', {
+                "en": u"Geocoordinates WGS84",
+                "fr": u"Geocoordinates WGS84",
+                "nl": u"Geocoordinates WGS84",
+                "de": u"Geocoordinates WGS84"
+            }),
+            ('Geocoordinates ETRS89', {
+                "en": u"Geocoordinates ETRS89",
+                "fr": u"Geocoordinates ETRS89",
+                "nl": u"Geocoordinates ETRS89",
+                "de": u"Geocoordinates ETRS89"
+            }),
+            ('ISO 19148', {
+                "en": u"ISO 19148",
+                "fr": u"ISO 19148",
+                "nl": u"ISO 19148",
+                "de": u"ISO 19148"
+            }),
+            ('OpenLR', {
+                "en": u"OpenLR",
+                "fr": u"OpenLR",
+                "nl": u"OpenLR",
+                "de": u"OpenLR"
+            }),
+            ('Other', {
+                "en": u"Other",
+                "fr": u"Autre",
+                "nl": u"Andere",
+                "de": u"Andere"
+            })
+        ])
+
     return None
 
 
