@@ -588,9 +588,9 @@ def ontology_helper(context):
             }),
             ('Other', {
                 "en": u"Other",
-                "fr": u"Other",
-                "nl": u"Other",
-                "de": u"Other"
+                "fr": u"Autre",
+                "nl": u"Andere",
+                "de": u"Andere"
             }),
         ])
 
