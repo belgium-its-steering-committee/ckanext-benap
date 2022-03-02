@@ -28,6 +28,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
                                   ('municipality', 'municipality'),
                                   ('other', 'other')]
 
+    _validators = {}
+
     # IConfigurer
 
     def update_config(self, config_):
