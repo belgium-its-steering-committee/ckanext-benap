@@ -18,7 +18,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     plugins.implements(plugins.ITemplateHelpers, inherit=False)
     plugins.implements(plugins.IValidators, inherit=True)
     plugins.implements(plugins.IAuthFunctions, inherit=False)
-    plugins.implements(plugins.IPackageController, inherit=True)
+    plugins.implements(plugins.IFacets, inherit=True)
 
     geographic_granularity_map = [('', ''),
                                   ('national', 'National'),
@@ -74,10 +74,12 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'user_list': user_list,
         }
 
-    # IPackageController
-    def update_facet_titles(self, facet_titles):
+    # IFacets
+    def dataset_facets(self, facets_dict, package_type):
         print("#"*25)
-        print(facet_titles)
+        print(facets_dict)
         print("#"*25)
-        return facet_titles
+        print(package_type)
+        print("#"*25)
+        return facets_dict
 
