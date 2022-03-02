@@ -19,7 +19,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     plugins.implements(plugins.IValidators, inherit=True)
     plugins.implements(plugins.IAuthFunctions, inherit=False)
     plugins.implements(plugins.IFacets, inherit=True)
-    plugins.implements(plugins.IPluginObserver, inherit=True)
 
     geographic_granularity_map = [('', ''),
                                   ('national', 'National'),
@@ -84,9 +83,4 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         print(facets_dict)
         print("#"*25)
         return facets_dict
-
-    # IPluginObserver
-    def before_load(self, plugin):
-        if plugin._validators is self._validators:  # both plugins share the same _validators object
-            plugin._validators = {}
 
