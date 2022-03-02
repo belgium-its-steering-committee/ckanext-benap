@@ -18,6 +18,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     plugins.implements(plugins.ITemplateHelpers, inherit=False)
     plugins.implements(plugins.IValidators, inherit=True)
     plugins.implements(plugins.IAuthFunctions, inherit=False)
+    p.implements(p.IPackageController)
 
     geographic_granularity_map = [('', ''),
                                   ('national', 'National'),
@@ -66,11 +67,17 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_https_validator': https_validator
         }
 
-
     # IAuthFunctions
 
     def get_auth_functions(self):
         return {
             'user_list': user_list,
         }
+
+    # IPackageController
+    def update_facet_titles(self, facet_titles):
+        print("#"*25)
+        print(facet_titles)
+        print("#"*25)
+        return facet_titles
 
