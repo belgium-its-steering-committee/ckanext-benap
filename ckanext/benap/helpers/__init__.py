@@ -1312,25 +1312,33 @@ def get_translated_tags():
              "de": u"Individualverkehr"
          }),
         ([
-            ('http://data.europa.eu/nuts/code/BE1', {
+            ('http://data.europa.eu/nuts/code/BE1',
+             {
                 "en": u"RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
                 "fr": u"RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
                 "nl": u"RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
                 "de": u"RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST"
             }),
-            ('http://data.europa.eu/nuts/code/BE2', {
+            ('http://data.europa.eu/nuts/code/BE2',
+             {
                 "en": u"VLAAMS GEWEST",
                 "fr": u"VLAAMS GEWEST",
                 "nl": u"VLAAMS GEWEST",
                 "de": u"VLAAMS GEWEST"
             }),
-            ('http://data.europa.eu/nuts/code/BE3', {
+            ('http://data.europa.eu/nuts/code/BE3',
+             {
                 "en": u"RÉGION WALLONNE",
                 "fr": u"RÉGION WALLONNE",
                 "nl": u"RÉGION WALLONNE",
                 "de": u"RÉGION WALLONNE"
             }),
-        ])
+        ],{
+            "en": u"Area covered by publication",
+            "fr": u"Zone couverte par la publication",
+            "nl": u"Gebied gedekt door publicatie",
+            "de": u"Deckungsgebiet der Publikation"
+         })
     ]
 
 
