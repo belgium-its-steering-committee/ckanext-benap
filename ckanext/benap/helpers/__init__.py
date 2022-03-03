@@ -1122,11 +1122,11 @@ def ontology_helper(context):
                 "nl": u"Real-time traffic data​",
                 "de": u"Real-time traffic data​"
             }),
-            ('General  information for trip-planning', {
-                "en": u"General  information for trip-planning",
-                "fr": u"General  information for trip-planning",
-                "nl": u"General  information for trip-planning",
-                "de": u"General  information for trip-planning"
+            ('General information for trip-planning', {
+                "en": u"General information for trip-planning",
+                "fr": u"General information for trip-planning",
+                "nl": u"General information for trip-planning",
+                "de": u"General information for trip-planning"
             }),
             ('Public transport: location information', {
                 "en": u"Public transport: location information",
@@ -1169,12 +1169,6 @@ def ontology_helper(context):
                 "fr": u"Autre",
                 "nl": u"Andere",
                 "de": u"Andere"
-            }),
-            ('', {
-                "en": u"",
-                "fr": u"",
-                "nl": u"",
-                "de": u""
             })
         ])
 
