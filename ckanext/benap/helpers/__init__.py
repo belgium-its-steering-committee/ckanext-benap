@@ -1310,7 +1310,28 @@ def get_translated_tags():
              "nl": u"Persoonlijk vervoer",
              "fr": u"Modes personnels",
              "de": u"Individualverkehr"
-         })]
+         }),
+        ([
+            ('http://data.europa.eu/nuts/code/BE1', {
+                "en": u"RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
+                "fr": u"RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
+                "nl": u"RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
+                "de": u"RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST"
+            }),
+            ('http://data.europa.eu/nuts/code/BE2', {
+                "en": u"VLAAMS GEWEST",
+                "fr": u"VLAAMS GEWEST",
+                "nl": u"VLAAMS GEWEST",
+                "de": u"VLAAMS GEWEST"
+            }),
+            ('http://data.europa.eu/nuts/code/BE3', {
+                "en": u"RÉGION WALLONNE",
+                "fr": u"RÉGION WALLONNE",
+                "nl": u"RÉGION WALLONNE",
+                "de": u"RÉGION WALLONNE"
+            }),
+        ])
+    ]
 
 
 def filter_default_tags_only(items):
