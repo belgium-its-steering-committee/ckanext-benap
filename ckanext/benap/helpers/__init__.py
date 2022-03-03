@@ -1054,6 +1054,123 @@ def ontology_helper(context):
                 "de": u"Andere"
             })
         ])
+    elif ontology == "dataset_type":
+        return map_for_form_select([
+            ('Static road network data​', {
+                "en": u"Static road network data​",
+                "fr": u"Static road network data​",
+                "nl": u"Static road network data​",
+                "de": u"Static road network data​"
+            }),
+            ('Static traffic signs and regulations ​', {
+                "en": u"Static traffic signs and regulations ​",
+                "fr": u"Static traffic signs and regulations ​",
+                "nl": u"Static traffic signs and regulations ​",
+                "de": u"Static traffic signs and regulations ​"
+            }),
+            ('Toll information', {
+                "en": u"Toll information",
+                "fr": u"Toll information",
+                "nl": u"Toll information",
+                "de": u"Toll information"
+            }),
+            ('Parking and rest area information​', {
+                "en": u"Parking and rest area information​",
+                "fr": u"Parking and rest area information​",
+                "nl": u"Parking and rest area information​",
+                "de": u"Parking and rest area information​"
+            }),
+            ('Filling and charging stations​', {
+                "en": u"Filling and charging stations​",
+                "fr": u"Filling and charging stations​",
+                "nl": u"Filling and charging stations​",
+                "de": u"Filling and charging stations​"
+            }),
+            ('Freight and logistics​', {
+                "en": u"Freight and logistics​",
+                "fr": u"Freight and logistics​",
+                "nl": u"Freight and logistics​",
+                "de": u"Freight and logistics​"
+            }),
+            ('Dynamic traffic signs and regulations', {
+                "en": u"Dynamic traffic signs and regulations​",
+                "fr": u"Dynamic traffic signs and regulations​",
+                "nl": u"Dynamic traffic signs and regulations​",
+                "de": u"Dynamic traffic signs and regulations​"
+            }),
+            ('Road work information​', {
+                "en": u"Road work information​",
+                "fr": u"Road work information​",
+                "nl": u"Road work information​",
+                "de": u"Road work information​"
+            }),
+            ('Unexpected road events and conditions​', {
+                "en": u"Unexpected road events and conditions​",
+                "fr": u"Unexpected road events and conditions​",
+                "nl": u"Unexpected road events and conditions​",
+                "de": u"Unexpected road events and conditions​"
+            }),
+            ('Road weather conditions', {
+                "en": u"Road weather conditions",
+                "fr": u"Road weather conditions",
+                "nl": u"Road weather conditions",
+                "de": u"Road weather conditions"
+            }),
+            ('Real-time traffic data​', {
+                "en": u"Real-time traffic data​",
+                "fr": u"Real-time traffic data​",
+                "nl": u"Real-time traffic data​",
+                "de": u"Real-time traffic data​"
+            }),
+            ('General  information for trip-planning', {
+                "en": u"General  information for trip-planning",
+                "fr": u"General  information for trip-planning",
+                "nl": u"General  information for trip-planning",
+                "de": u"General  information for trip-planning"
+            }),
+            ('Public transport: location information', {
+                "en": u"Public transport: location information",
+                "fr": u"Public transport: location information",
+                "nl": u"Public transport: location information",
+                "de": u"Public transport: location information"
+            }),
+            ('Public transport: operational information', {
+                "en": u"Public transport: operational information",
+                "fr": u"Public transport: operational information",
+                "nl": u"Public transport: operational information",
+                "de": u"Public transport: operational information"
+            }),
+            ('Public transport: fare and purchase information', {
+                "en": u"Public transport: fare and purchase information",
+                "fr": u"Public transport: fare and purchase information",
+                "nl": u"Public transport: fare and purchase information",
+                "de": u"Public transport: fare and purchase information"
+            }),
+            ('Cycle network data​', {
+                "en": u"Cycle network data​",
+                "fr": u"Cycle network data​",
+                "nl": u"Cycle network data​",
+                "de": u"Cycle network data​"
+            }),
+            ('Pedestrian network data​', {
+                "en": u"Pedestrian network data​",
+                "fr": u"Pedestrian network data​",
+                "nl": u"Pedestrian network data​",
+                "de": u"Pedestrian network data​"
+            }),
+            ('Demand-responsive modes​', {
+                "en": u"Demand-responsive modes​",
+                "fr": u"Demand-responsive modes​",
+                "nl": u"Demand-responsive modes​",
+                "de": u"Demand-responsive modes​"
+            }),
+            ('Other', {
+                "en": u"Other",
+                "fr": u"Autre",
+                "nl": u"Andere",
+                "de": u"Andere"
+            })
+        ])
 
     return None
 

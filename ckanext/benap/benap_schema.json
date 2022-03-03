@@ -48,6 +48,24 @@
       "required": "true"
     },
     {
+      "field_name": "dataset_type",
+      "label": {
+        "en": "Dataset Type",
+        "fr": "Type du jeu de données",
+        "nl": "Type van de dataset",
+        "de": "Datensatztyp"
+      },
+      "preset": "select",
+      "help_text": {
+        "en": "",
+        "fr": "",
+        "nl": "",
+        "de": ""
+      },
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "dataset_type"
+    },
+    {
       "field_name": "name",
       "label": "URL",
       "preset": "dataset_slug",
