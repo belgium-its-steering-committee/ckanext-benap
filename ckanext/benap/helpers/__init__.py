@@ -1240,6 +1240,8 @@ def get_translated_tag(tag, lang):
             return tag['display_name']
         except KeyError:
             try:
+                if isinstance(tag, str):
+                    return tag
                 print('tag not found: ' + json.dumps(tag))
             except:
                 print('tag not found')
