@@ -2,6 +2,7 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckan.lib.plugins import DefaultTranslation
+import json
 
 from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallback, json_loads, \
     package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete,\
@@ -88,7 +89,9 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     # IPackageController
     def before_index(self, pkg_dict):
         print("#"*25)
-        print(pkg_dict)
+        print(pkg_dict["extras_regions_covered"])
+        print(pkg_dict["regions_covered"])
+        print(json.loads(pkg_dict["regions_covered"]))
         print("#"*25)
         return pkg_dict
 
