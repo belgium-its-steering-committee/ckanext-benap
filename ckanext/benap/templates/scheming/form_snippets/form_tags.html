@@ -34,14 +34,14 @@ fieldset.checkboxes label input {
   {%- endif -%}
     <fieldset class="checkboxes">
         {%- for tags, category in choices -%}
-            <div id="collapse-{{ category }}" class="flex-between border-1" style="padding: 6px 12px">
+            <div id="collapse-{{ h.benap_scheming_language_text(category, english) }}" class="flex-between border-1" style="padding: 6px 12px">
                 <h3 class="m-0" style="font-size: 14px; font-weight: bold;">
                     {{ h.benap_scheming_language_text(category, lang) }}
                 </h3>
-                <div id="collapse-{{ category }}-open" style="padding-right: 4px; font-size: 10px;">
+                <div id="collapse-{{ h.benap_scheming_language_text(category, english) }}-open" style="padding-right: 4px; font-size: 10px;">
                     <span class="caret"></span>
                 </div>
-                <div id="collapse-{{ category }}-close" style="padding-right: 4px; font-size: 10px;">
+                <div id="collapse-{{ h.benap_scheming_language_text(category, english) }}-close" style="padding-right: 4px; font-size: 10px;">
                     <span class="dropup">
                         <span class="caret"></span>
                     </span>
