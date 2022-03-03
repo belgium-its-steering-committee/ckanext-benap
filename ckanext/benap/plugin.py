@@ -81,6 +81,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     # IFacets
     def dataset_facets(self, facets_dict, package_type):
         facets_dict['regions_covered'] = plugins.toolkit._('Area covered by publication')
+        facets_dict['dataset_type'] = plugins.toolkit._('Dataset Type')
         print("#"*25)
         print(facets_dict)
         print("#"*25)
