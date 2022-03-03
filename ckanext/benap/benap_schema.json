@@ -48,7 +48,7 @@
       "required": "true"
     },
     {
-      "field_name": "dataset_type",
+      "field_name": "its_dataset_type",
       "label": {
         "en": "Dataset Type",
         "fr": "Type du jeu de données",
