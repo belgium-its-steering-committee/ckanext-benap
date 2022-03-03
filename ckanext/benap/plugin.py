@@ -2,6 +2,7 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckan.lib.plugins import DefaultTranslation
+import json
 
 from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallback, json_loads, \
     package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete,\
@@ -18,6 +19,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     plugins.implements(plugins.ITemplateHelpers, inherit=False)
     plugins.implements(plugins.IValidators, inherit=True)
     plugins.implements(plugins.IAuthFunctions, inherit=False)
+    plugins.implements(plugins.IFacets, inherit=True)
+    plugins.implements(plugins.IPackageController, inherit=True)
 
     geographic_granularity_map = [('', ''),
                                   ('national', 'National'),
@@ -25,6 +28,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
                                   ('province', 'province-'),
                                   ('municipality', 'municipality'),
                                   ('other', 'other')]
+
+    _validators = {}
 
     # IConfigurer
 
@@ -66,11 +71,24 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_https_validator': https_validator
         }
 
-
     # IAuthFunctions
 
     def get_auth_functions(self):
         return {
             'user_list': user_list,
         }
+
+    # IFacets
+    def dataset_facets(self, facets_dict, package_type):
+        facets_dict['regions_covered'] = plugins.toolkit._('Area covered by publication')
+        print("#"*25)
+        print(facets_dict)
+        print("#"*25)
+        return facets_dict
+
+    # IPackageController
+    def before_index(self, pkg_dict):
+        if "regions_covered" in pkg_dict:
+            pkg_dict["regions_covered"] = json.loads(pkg_dict["regions_covered"])
+        return pkg_dict
 
