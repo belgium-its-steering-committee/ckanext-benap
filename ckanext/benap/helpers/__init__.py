@@ -1169,6 +1169,12 @@ def ontology_helper(context):
                 "fr": u"Autre",
                 "nl": u"Andere",
                 "de": u"Andere"
+            }),
+            ('', {
+                "en": u"",
+                "fr": u"",
+                "nl": u"",
+                "de": u""
             })
         ])
 
