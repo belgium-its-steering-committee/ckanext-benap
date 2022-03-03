@@ -89,9 +89,11 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     # IPackageController
     def before_index(self, pkg_dict):
         print("#"*25)
-        print(pkg_dict["extras_regions_covered"])
-        print(pkg_dict["regions_covered"])
-        print(json.loads(pkg_dict["regions_covered"]))
+        if "extras_regions_covered" in pkg_dict:
+            print(pkg_dict["extras_regions_covered"])
+        if "regions_covered" in pkg_dict:
+            print(pkg_dict["regions_covered"])
+            print(json.loads(pkg_dict["regions_covered"]))
         print("#"*25)
         return pkg_dict
 
