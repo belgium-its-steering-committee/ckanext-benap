@@ -1062,11 +1062,11 @@ def ontology_helper(context):
                 "nl": u"Static road network data​",
                 "de": u"Static road network data​"
             }),
-            ('Static traffic signs and regulations ​', {
-                "en": u"Static traffic signs and regulations ​",
-                "fr": u"Static traffic signs and regulations ​",
-                "nl": u"Static traffic signs and regulations ​",
-                "de": u"Static traffic signs and regulations ​"
+            ('Static traffic signs and regulations', {
+                "en": u"Static traffic signs and regulations​",
+                "fr": u"Static traffic signs and regulations​",
+                "nl": u"Static traffic signs and regulations",
+                "de": u"Static traffic signs and regulations"
             }),
             ('Toll information', {
                 "en": u"Toll information",
