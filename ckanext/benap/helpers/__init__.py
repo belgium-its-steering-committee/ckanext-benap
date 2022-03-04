@@ -1058,111 +1058,111 @@ def ontology_helper(context):
         return map_for_form_select([
             ('Static road network data', {
                 "en": u"Static road network data",
-                "fr": u"Static road network data",
-                "nl": u"Static road network data",
-                "de": u"Static road network data"
+                "fr": u"Données routières statiques",
+                "nl": u"Statische weggegevens",
+                "de": u"Statische Straβendaten"
             }),
             ('Static traffic signs and regulations', {
                 "en": u"Static traffic signs and regulations",
-                "fr": u"Static traffic signs and regulations",
-                "nl": u"Static traffic signs and regulations",
-                "de": u"Static traffic signs and regulations"
+                "fr": u"Panneaux routiers et réglementations statiques",
+                "nl": u"Statische verkeerssignalisatie en verkeersregels",
+                "de": u"Statische Verkehrszeichen und -regelungen"
             }),
             ('Toll information', {
                 "en": u"Toll information",
-                "fr": u"Toll information",
-                "nl": u"Toll information",
-                "de": u"Toll information"
+                "fr": u"Informations sur les péages",
+                "nl": u"Tol informatie",
+                "de": u"Mautangaben"
             }),
             ('Parking and rest area information', {
                 "en": u"Parking and rest area information",
-                "fr": u"Parking and rest area information",
-                "nl": u"Parking and rest area information",
-                "de": u"Parking and rest area information"
+                "fr": u"Informations sur les aires de stationnement et de repos",
+                "nl": u"Parking en stopplaatsen informatie",
+                "de": u"Informationen zu Park- und Rastplätzen"
             }),
             ('Filling and charging stations', {
                 "en": u"Filling and charging stations",
-                "fr": u"Filling and charging stations",
-                "nl": u"Filling and charging stations",
-                "de": u"Filling and charging stations"
+                "fr": u"Stations-services et de recharge",
+                "nl": u"Tankstations en laadpunten",
+                "de": u"Tankstellen und Ladestationen"
             }),
             ('Freight and logistics', {
                 "en": u"Freight and logistics",
-                "fr": u"Freight and logistics",
-                "nl": u"Freight and logistics",
-                "de": u"Freight and logistics"
+                "fr": u"Marchandises et logistique",
+                "nl": u"Goederen en logistiek",
+                "de": u"Waren und Logistik"
             }),
             ('Dynamic traffic signs and regulations', {
                 "en": u"Dynamic traffic signs and regulations",
-                "fr": u"Dynamic traffic signs and regulations",
-                "nl": u"Dynamic traffic signs and regulations",
-                "de": u"Dynamic traffic signs and regulations"
+                "fr": u"Panneaux routiers et réglementations dynamiques",
+                "nl": u"Dynamische verkeerssignalisatie en verkeersregels",
+                "de": u"Dynamische Verkehrszeichen und -regelungen"
             }),
             ('Road work information', {
                 "en": u"Road work information",
-                "fr": u"Road work information",
-                "nl": u"Road work information",
-                "de": u"Road work information"
+                "fr": u"Informations sur les travaux de voirie",
+                "nl": u"Wegenwerken informatie",
+                "de": u"Informationen zu Straβenbauarbeiten"
             }),
             ('Unexpected road events and conditions', {
                 "en": u"Unexpected road events and conditions",
-                "fr": u"Unexpected road events and conditions",
-                "nl": u"Unexpected road events and conditions",
-                "de": u"Unexpected road events and conditions"
+                "fr": u"Evénements et conditions de route imprévus",
+                "nl": u"Wegenincidenten en condities",
+                "de": u"Zufällige Straβenereignisse und –zustände"
             }),
             ('Road weather conditions', {
                 "en": u"Road weather conditions",
-                "fr": u"Road weather conditions",
-                "nl": u"Road weather conditions",
-                "de": u"Road weather conditions"
+                "fr": u"Conditions météorologiques routières",
+                "nl": u"Weercondities wegen",
+                "de": u"Straβenwetterszustände"
             }),
             ('Real-time traffic data', {
                 "en": u"Real-time traffic data",
-                "fr": u"Real-time traffic data",
-                "nl": u"Real-time traffic data",
-                "de": u"Real-time traffic data"
+                "fr": u"Données en temps réel sur la circulation",
+                "nl": u"Real-time verkeersinformatie",
+                "de": u"Echtzeit-Verkehrsinformation"
             }),
             ('General information for trip-planning', {
                 "en": u"General information for trip-planning",
-                "fr": u"General information for trip-planning",
-                "nl": u"General information for trip-planning",
-                "de": u"General information for trip-planning"
+                "fr": u"Informations générales pour la planification des déplacements",
+                "nl": u"Algemene informatie voor routeplanning",
+                "de": u"Allgemeine Informationen zu Routenplanung"
             }),
             ('Public transport: location information', {
                 "en": u"Public transport: location information",
-                "fr": u"Public transport: location information",
-                "nl": u"Public transport: location information",
-                "de": u"Public transport: location information"
+                "fr": u"Transports publics : information de localisation",
+                "nl": u"Geregeld vervoer: locatie informatie",
+                "de": u"Öffentlicher Verkehr: Standortinformation"
             }),
             ('Public transport: operational information', {
                 "en": u"Public transport: operational information",
-                "fr": u"Public transport: operational information",
-                "nl": u"Public transport: operational information",
-                "de": u"Public transport: operational information"
+                "fr": u"Transports publics : informations opérationnelles",
+                "nl": u"Geregeld vervoer: operationele informatie",
+                "de": u"Öffentlicher Verkehr: operative Informationen"
             }),
             ('Public transport: fare and purchase information', {
                 "en": u"Public transport: fare and purchase information",
-                "fr": u"Public transport: fare and purchase information",
-                "nl": u"Public transport: fare and purchase information",
-                "de": u"Public transport: fare and purchase information"
+                "fr": u"Transports publics : informations tarifaires et commerciales",
+                "nl": u"Geregeld vervoer: tarieven en ticket informatie",
+                "de": u"Öffentlicher Verkehr: Preis- und Kaufinformationen"
             }),
             ('Cycle network data', {
                 "en": u"Cycle network data",
-                "fr": u"Cycle network data",
-                "nl": u"Cycle network data",
-                "de": u"Cycle network data"
+                "fr": u"Données sur le réseau cyclable",
+                "nl": u"Fietsnetwerk informatie",
+                "de": u"Daten zum Fahrradnetzwerk"
             }),
             ('Pedestrian network data', {
                 "en": u"Pedestrian network data",
-                "fr": u"Pedestrian network data",
-                "nl": u"Pedestrian network data",
-                "de": u"Pedestrian network data"
+                "fr": u"Données sur le réseau piétonnier",
+                "nl": u"Voetgangersnetwerk informatie",
+                "de": u"Fuβwegenetz"
             }),
             ('Demand-responsive modes', {
                 "en": u"Demand-responsive modes",
-                "fr": u"Demand-responsive modes",
-                "nl": u"Demand-responsive modes",
-                "de": u"Demand-responsive modes"
+                "fr": u"Modes de transport à la demande",
+                "nl": u"Vraagafhankelijk vervoer",
+                "de": u"Bedarfsgesteuerte Verkehrsträger"
             }),
             ('Other', {
                 "en": u"Other",
@@ -1461,111 +1461,111 @@ def get_translated_tags():
         ([
             ('Static road network data', {
                 "en": u"Static road network data",
-                "fr": u"Static road network data",
-                "nl": u"Static road network data",
-                "de": u"Static road network data"
+                "fr": u"Données routières statiques",
+                "nl": u"Statische weggegevens",
+                "de": u"Statische Straβendaten"
             }),
             ('Static traffic signs and regulations', {
                 "en": u"Static traffic signs and regulations",
-                "fr": u"Static traffic signs and regulations",
-                "nl": u"Static traffic signs and regulations",
-                "de": u"Static traffic signs and regulations"
+                "fr": u"Panneaux routiers et réglementations statiques",
+                "nl": u"Statische verkeerssignalisatie en verkeersregels",
+                "de": u"Statische Verkehrszeichen und -regelungen"
             }),
             ('Toll information', {
                 "en": u"Toll information",
-                "fr": u"Toll information",
-                "nl": u"Toll information",
-                "de": u"Toll information"
+                "fr": u"Informations sur les péages",
+                "nl": u"Tol informatie",
+                "de": u"Mautangaben"
             }),
             ('Parking and rest area information', {
                 "en": u"Parking and rest area information",
-                "fr": u"Parking and rest area information",
-                "nl": u"Parking and rest area information",
-                "de": u"Parking and rest area information"
+                "fr": u"Informations sur les aires de stationnement et de repos",
+                "nl": u"Parking en stopplaatsen informatie",
+                "de": u"Informationen zu Park- und Rastplätzen"
             }),
             ('Filling and charging stations', {
                 "en": u"Filling and charging stations",
-                "fr": u"Filling and charging stations",
-                "nl": u"Filling and charging stations",
-                "de": u"Filling and charging stations"
+                "fr": u"Stations-services et de recharge",
+                "nl": u"Tankstations en laadpunten",
+                "de": u"Tankstellen und Ladestationen"
             }),
             ('Freight and logistics', {
                 "en": u"Freight and logistics",
-                "fr": u"Freight and logistics",
-                "nl": u"Freight and logistics",
-                "de": u"Freight and logistics"
+                "fr": u"Marchandises et logistique",
+                "nl": u"Goederen en logistiek",
+                "de": u"Waren und Logistik"
             }),
             ('Dynamic traffic signs and regulations', {
                 "en": u"Dynamic traffic signs and regulations",
-                "fr": u"Dynamic traffic signs and regulations",
-                "nl": u"Dynamic traffic signs and regulations",
-                "de": u"Dynamic traffic signs and regulations"
+                "fr": u"Panneaux routiers et réglementations dynamiques",
+                "nl": u"Dynamische verkeerssignalisatie en verkeersregels",
+                "de": u"Dynamische Verkehrszeichen und -regelungen"
             }),
             ('Road work information', {
                 "en": u"Road work information",
-                "fr": u"Road work information",
-                "nl": u"Road work information",
-                "de": u"Road work information"
+                "fr": u"Informations sur les travaux de voirie",
+                "nl": u"Wegenwerken informatie",
+                "de": u"Informationen zu Straβenbauarbeiten"
             }),
             ('Unexpected road events and conditions', {
                 "en": u"Unexpected road events and conditions",
-                "fr": u"Unexpected road events and conditions",
-                "nl": u"Unexpected road events and conditions",
-                "de": u"Unexpected road events and conditions"
+                "fr": u"Evénements et conditions de route imprévus",
+                "nl": u"Wegenincidenten en condities",
+                "de": u"Zufällige Straβenereignisse und –zustände"
             }),
             ('Road weather conditions', {
                 "en": u"Road weather conditions",
-                "fr": u"Road weather conditions",
-                "nl": u"Road weather conditions",
-                "de": u"Road weather conditions"
+                "fr": u"Conditions météorologiques routières",
+                "nl": u"Weercondities wegen",
+                "de": u"Straβenwetterszustände"
             }),
             ('Real-time traffic data', {
                 "en": u"Real-time traffic data",
-                "fr": u"Real-time traffic data",
-                "nl": u"Real-time traffic data",
-                "de": u"Real-time traffic data"
+                "fr": u"Données en temps réel sur la circulation",
+                "nl": u"Real-time verkeersinformatie",
+                "de": u"Echtzeit-Verkehrsinformation"
             }),
             ('General information for trip-planning', {
                 "en": u"General information for trip-planning",
-                "fr": u"General information for trip-planning",
-                "nl": u"General information for trip-planning",
-                "de": u"General information for trip-planning"
+                "fr": u"Informations générales pour la planification des déplacements",
+                "nl": u"Algemene informatie voor routeplanning",
+                "de": u"Allgemeine Informationen zu Routenplanung"
             }),
             ('Public transport: location information', {
                 "en": u"Public transport: location information",
-                "fr": u"Public transport: location information",
-                "nl": u"Public transport: location information",
-                "de": u"Public transport: location information"
+                "fr": u"Transports publics : information de localisation",
+                "nl": u"Geregeld vervoer: locatie informatie",
+                "de": u"Öffentlicher Verkehr: Standortinformation"
             }),
             ('Public transport: operational information', {
                 "en": u"Public transport: operational information",
-                "fr": u"Public transport: operational information",
-                "nl": u"Public transport: operational information",
-                "de": u"Public transport: operational information"
+                "fr": u"Transports publics : informations opérationnelles",
+                "nl": u"Geregeld vervoer: operationele informatie",
+                "de": u"Öffentlicher Verkehr: operative Informationen"
             }),
             ('Public transport: fare and purchase information', {
                 "en": u"Public transport: fare and purchase information",
-                "fr": u"Public transport: fare and purchase information",
-                "nl": u"Public transport: fare and purchase information",
-                "de": u"Public transport: fare and purchase information"
+                "fr": u"Transports publics : informations tarifaires et commerciales",
+                "nl": u"Geregeld vervoer: tarieven en ticket informatie",
+                "de": u"Öffentlicher Verkehr: Preis- und Kaufinformationen"
             }),
             ('Cycle network data', {
                 "en": u"Cycle network data",
-                "fr": u"Cycle network data",
-                "nl": u"Cycle network data",
-                "de": u"Cycle network data"
+                "fr": u"Données sur le réseau cyclable",
+                "nl": u"Fietsnetwerk informatie",
+                "de": u"Daten zum Fahrradnetzwerk"
             }),
             ('Pedestrian network data', {
                 "en": u"Pedestrian network data",
-                "fr": u"Pedestrian network data",
-                "nl": u"Pedestrian network data",
-                "de": u"Pedestrian network data"
+                "fr": u"Données sur le réseau piétonnier",
+                "nl": u"Voetgangersnetwerk informatie",
+                "de": u"Fuβwegenetz"
             }),
             ('Demand-responsive modes', {
                 "en": u"Demand-responsive modes",
-                "fr": u"Demand-responsive modes",
-                "nl": u"Demand-responsive modes",
-                "de": u"Demand-responsive modes"
+                "fr": u"Modes de transport à la demande",
+                "nl": u"Vraagafhankelijk vervoer",
+                "de": u"Bedarfsgesteuerte Verkehrsträger"
             }),
             ('Other', {
                 "en": u"Other",
