@@ -1064,20 +1064,9 @@ def get_translated_tag_with_name(tagName, lang):
 
 def get_translated_tag(tag, lang):
     tags = get_translated_tags()
-    tags.extend(tuple(NUTS1_BE))
-    # tags.extend(DATASET_TYPE)
-    if tag['name'] == u'http://data.europa.eu/nuts/code/BE2':
-        print("&#"*25)
-        print(tag)
-        print(tag['name'] == u'http://data.europa.eu/nuts/code/BE2')
-        print(tag['name'] == 'http://data.europa.eu/nuts/code/BE2')
-        print([translated_tag for translated_taglist in
-                                                    [categorized_tags[0] for categorized_tags in
-                                                    tags] for translated_tag in
-                                                    translated_taglist])
-        print("&#"*25)
-        print(tags)
-        print("&#"*25)
+    tags.append(tuple([NUTS1_BE]))
+    tags.append(tuple([DATASET_TYPE]))
+    tags.append(tuple([NAP_TYPE]))
     try:
         return filter(lambda x: x[0] == tag['name'], [translated_tag for translated_taglist in
                                                       [categorized_tags[0] for categorized_tags in
