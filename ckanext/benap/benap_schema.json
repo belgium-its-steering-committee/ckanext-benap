@@ -48,6 +48,61 @@
       "required": "true"
     },
     {
+      "field_name": "naps_type",
+      "label": {
+        "en": "NAP type",
+        "fr": "Type de NAP",
+        "nl": "NAP type",
+        "de": "NAP type"
+      },
+      "help_text": {
+        "en": "Select for which NAP(s) you are registering dataset or service. It is possible to select multiple NAPs. Providing the correct NAP(s) is essential to comply with the applicable Delegated Regulations. For more information about this and the different NAPs, please see our About section.",
+        "nl": "Selecteer voor welk(e) NAP(s) u de dataset of dienst registreert. Het is mogelijk om meerdere NAPs te selecteren. Het is essentieel om de correcte NAP(s) te vermelden om in overeenstemming te zijn met de Gedelegeerde verordeningen. Voor meer information hierover en de verschillende NAPs, raadpleeg onze About sectie.",
+        "fr": "Sélectionnez pour quel(s) NAP vous enregistrez le jeu de données ou le service. Il est possible de sélectionner plusieurs NAP. Il est essentiel de mentionner le(s) ben(s) NAP pour être en conformité avec les Règlements délégués. Pour de plus amples informations à ce sujet et sure le différents NAP, consultez notre section A propos.",
+        "de": "Wählen Sie aus, für welchen NAP Sie den Datensatz oder Dienst registrieren. Es ist möglich, mehrere NAPs auszuwählen. Es ist sehr wichting, den/die richtigen NAP(s) anzugeben, um mit den Delegierten Verordnungen zu übereinstimmen. Weitere Informationen dazu un über die verschiedenen NAPs finden Sie in unserer Seite Über."
+      },
+      "preset": "select",
+      "choices": [
+        {
+          "value": "MMTIS",
+          "label": {
+            "en": "MMTIS - Multimodal travel information services",
+            "nl": "MMTIS - Multimodale reisinformatiediensten",
+            "fr": "MMTIS - Services d'informations sur les déplacements multimodaux",
+            "de": "MMTIS - Multimodaler Reiseinformationsdienste"
+          }
+        },
+        {
+          "value": "SSTP",
+          "label": {
+            "en": "SSTP - Information services for safe and secure truck parkings",
+            "nl": "SSTP - Informatiediensten voor veilige en beveiligde parkeerplaatsen voor vrachtwagens en bedrijfsvoertuigen",
+            "fr": "SSTP - Services d'informations concernant les aires de stationnement sûres et sécurisées pour les camions et les véhicules commerciaux",
+            "de": "SSTP - Informationdiensten für sichere Parkplätze für lastkrafwagen und andere gewerbliche Fahrzeuge"
+          }
+        },
+        {
+          "value": "SRTI",
+          "label": {
+            "en": "SRTI - Safety related traffic information",
+            "nl": "SRTI - Verkeersveiligheidsinformatie",
+            "fr": "SRTI - Information liées à la sécurité routière",
+            "de": "SRTI - Straßenverkehrssicherheit relevanter Verkehrsinformationen"
+          }
+        },
+        {
+          "value": "RTTI",
+          "label": {
+            "en": "RTTI - Real time traffic information services",
+            "nl": "RTTI - Realtimeverkeersinformatiediensten",
+            "fr": "RTTI - Services d'informations en temps réel sur la circulation",
+            "de": "RTTI - Echtzeit Verkehrsinformationdienste"
+          }
+        }
+      ],
+      "required": "true"
+    },
+    {
       "field_name": "its_dataset_type",
       "label": {
         "en": "Dataset Type",
@@ -390,61 +445,6 @@
       "form_snippet": "form_tags.html",
       "required": "true",
       "validators": "scheming_required tag_string_convert"
-    },
-    {
-      "field_name": "naps_type",
-      "label": {
-        "en": "NAP type",
-        "fr": "Type de NAP",
-        "nl": "NAP type",
-        "de": "NAP type"
-      },
-      "help_text": {
-        "en": "Choose one or multiple relevant dataset types",
-        "fr": "Kies een of meerdere relevante dataset types",
-        "nl": "Choisissez un ou plusieurs types de données pertinents",
-        "de": "Wählen Sien einen oder mehrere relevante Datensatztypen aus"
-      },
-      "preset": "select",
-      "choices": [
-        {
-          "value": "MMTIS",
-          "label": {
-            "en": "Multimodale reisinformatiediensten",
-            "nl": "Multimodale reisinformatiediensten",
-            "fr": "Multimodale reisinformatiediensten",
-            "de": "Multimodale reisinformatiediensten"
-          }
-        },
-        {
-          "value": "SSTP",
-          "label": {
-            "en": "Informatiediensten voor veilige en beveiligde parkeerplaatsen voor vrachtwagens en voertuigen",
-            "nl": "Informatiediensten voor veilige en beveiligde parkeerplaatsen voor vrachtwagens en voertuigen",
-            "fr": "Informatiediensten voor veilige en beveiligde parkeerplaatsen voor vrachtwagens en voertuigen",
-            "de": "Informatiediensten voor veilige en beveiligde parkeerplaatsen voor vrachtwagens en voertuigen"
-          }
-        },
-        {
-          "value": "SRTI",
-          "label": {
-            "en": "Minimale universele verkeersveiligheids informatie",
-            "nl": "Minimale universele verkeersveiligheids informatie",
-            "fr": "Minimale universele verkeersveiligheids informatie",
-            "de": "Minimale universele verkeersveiligheids informatie"
-          }
-        },
-        {
-          "value": "RTTI",
-          "label": {
-            "en": "Realtimeverkeersinformatiediensten",
-            "nl": "Realtimeverkeersinformatiediensten",
-            "fr": "Realtimeverkeersinformatiediensten",
-            "de": "Realtimeverkeersinformatiediensten"
-          }
-        }
-      ],
-      "required": "true"
     },
     {
       "field_name": "contract_license",
