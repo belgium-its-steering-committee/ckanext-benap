@@ -48,6 +48,24 @@
       "required": "true"
     },
     {
+      "field_name": "its_dataset_type",
+      "label": {
+        "en": "Dataset Type",
+        "fr": "Type du jeu de données",
+        "nl": "Type van de dataset",
+        "de": "Datensatztyp"
+      },
+      "preset": "select",
+      "help_text": {
+        "en": "",
+        "fr": "",
+        "nl": "",
+        "de": ""
+      },
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "dataset_type"
+    },
+    {
       "field_name": "name",
       "label": "URL",
       "preset": "dataset_slug",
@@ -795,6 +813,25 @@
         "de": "Beschreibt die Sprache der Dateninhälte (Textfelde, Adressen, usw.)."
       },
       "required": "true"
+    },
+    {
+       "field_name": "cont_georef",
+      "label": {
+        "en": "Georeferencing method",
+        "fr": "Georeferencing method",
+        "nl": "Georeferencing method",
+        "de": "Georeferencing method"
+      },
+      "preset": "multiple_select",
+      "help_text": {
+        "en": "Describes the georeferencing method which is applied within the payload.",
+        "fr": "Describes the georeferencing method which is applied within the payload.",
+        "nl": "Describes the georeferencing method which is applied within the payload.",
+        "de": "Describes the georeferencing method which is applied within the payload."
+      },
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "georeferencing_method",
+      "required": "false"
     }
   ]
 }
