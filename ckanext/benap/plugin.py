@@ -1,4 +1,6 @@
 # coding=utf-8
+from collections import OrderedDict
+
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckan.lib.plugins import DefaultTranslation
@@ -80,11 +82,15 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
 
     # IFacets
     def dataset_facets(self, facets_dict, package_type):
-        facets_dict['regions_covered'] = plugins.toolkit._('Area covered by publication')
-        facets_dict['its_dataset_type'] = plugins.toolkit._('Dataset Type')
-        print("#"*25)
-        print(facets_dict)
-        print("#"*25)
+        facets_dict = OrderedDict([
+            (u'naps_type', u'NAP Type'),
+            (u'its_dataset_type', u'Dataset Type'),
+            (u'tags', u'Tags'),
+            (u'regions_covered', u'Area covered by publication'),
+            (u'organization', u'Organizations'),
+            (u'res_format', u'Formats'),
+            (u'license_id', u'Licenses'),
+        ])
         return facets_dict
 
     # IPackageController
