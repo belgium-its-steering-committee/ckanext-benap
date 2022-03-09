@@ -794,8 +794,7 @@
         "de": "Describes the georeferencing method which is applied within the payload."
       },
       "choices_helper": "benap_ontology_helper",
-      "benap_helper_ontology": "georeferencing_method",
-      "required": "false"
+      "benap_helper_ontology": "georeferencing_method"
     }
   ]
 }
