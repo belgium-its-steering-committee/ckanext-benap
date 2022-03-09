@@ -48,7 +48,7 @@
       "required": "true"
     },
     {
-      "field_name": "naps_type",
+      "field_name": "nap_type",
       "label": {
         "en": "NAP type",
         "fr": "Type de NAP",
@@ -61,45 +61,9 @@
         "fr": "Sélectionnez pour quel(s) NAP vous enregistrez le jeu de données ou le service. Il est possible de sélectionner plusieurs NAP. Il est essentiel de mentionner le(s) ben(s) NAP pour être en conformité avec les Règlements délégués. Pour de plus amples informations à ce sujet et sure le différents NAP, consultez notre section A propos.",
         "de": "Wählen Sie aus, für welchen NAP Sie den Datensatz oder Dienst registrieren. Es ist möglich, mehrere NAPs auszuwählen. Es ist sehr wichting, den/die richtigen NAP(s) anzugeben, um mit den Delegierten Verordnungen zu übereinstimmen. Weitere Informationen dazu un über die verschiedenen NAPs finden Sie in unserer Seite Über."
       },
-      "preset": "select",
-      "choices": [
-        {
-          "value": "MMTIS",
-          "label": {
-            "en": "MMTIS - Multimodal travel information services",
-            "nl": "MMTIS - Multimodale reisinformatiediensten",
-            "fr": "MMTIS - Services d'informations sur les déplacements multimodaux",
-            "de": "MMTIS - Multimodaler Reiseinformationsdienste"
-          }
-        },
-        {
-          "value": "SSTP",
-          "label": {
-            "en": "SSTP - Information services for safe and secure truck parkings",
-            "nl": "SSTP - Informatiediensten voor veilige en beveiligde parkeerplaatsen voor vrachtwagens en bedrijfsvoertuigen",
-            "fr": "SSTP - Services d'informations concernant les aires de stationnement sûres et sécurisées pour les camions et les véhicules commerciaux",
-            "de": "SSTP - Informationdiensten für sichere Parkplätze für lastkrafwagen und andere gewerbliche Fahrzeuge"
-          }
-        },
-        {
-          "value": "SRTI",
-          "label": {
-            "en": "SRTI - Safety related traffic information",
-            "nl": "SRTI - Verkeersveiligheidsinformatie",
-            "fr": "SRTI - Information liées à la sécurité routière",
-            "de": "SRTI - Straßenverkehrssicherheit relevanter Verkehrsinformationen"
-          }
-        },
-        {
-          "value": "RTTI",
-          "label": {
-            "en": "RTTI - Real time traffic information services",
-            "nl": "RTTI - Realtimeverkeersinformatiediensten",
-            "fr": "RTTI - Services d'informations en temps réel sur la circulation",
-            "de": "RTTI - Echtzeit Verkehrsinformationdienste"
-          }
-        }
-      ],
+      "preset": "multiple_select",
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "nap_type",
       "required": "true"
     },
     {
@@ -110,12 +74,12 @@
         "nl": "Type van de dataset",
         "de": "Datensatztyp"
       },
-      "preset": "select",
+      "preset": "multiple_select",
       "help_text": {
-        "en": "",
-        "fr": "",
-        "nl": "",
-        "de": ""
+        "en": "Choose one or multiple relevant dataset types",
+        "fr": "Choisissez un ou plusieurs types de données pertinents",
+        "nl": "Kies een of meerdere relevante dataset types",
+        "de": "Wählen Sie einen oder mehrere relevante Datensatztypen aus "
       },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "dataset_type"

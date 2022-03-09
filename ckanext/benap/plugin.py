@@ -83,7 +83,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     # IFacets
     def dataset_facets(self, facets_dict, package_type):
         facets_dict = OrderedDict([
-            (u'naps_type', u'NAP Type'),
+            (u'nap_type', u'NAP Type'),
             (u'its_dataset_type', u'Dataset Type'),
             (u'tags', u'Tags'),
             (u'regions_covered', u'Area covered by publication'),

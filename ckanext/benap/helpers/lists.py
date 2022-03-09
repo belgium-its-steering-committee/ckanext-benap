@@ -178,3 +178,29 @@ DATASET_TYPE = [
                 "de": u"Andere"
             })
         ]
+
+NAP_TYPE = [('MMTIS', {
+                "en": u"MMTIS - Multimodal travel information services",
+                "nl": u"MMTIS - Multimodale reisinformatiediensten",
+                "fr": u"MMTIS - Services d'informations sur les déplacements multimodaux",
+                "de": u"MMTIS - Multimodaler Reiseinformationsdienste"
+            }),
+            ('SSTP', {
+                "en": u"SSTP - Information services for safe and secure truck parkings",
+                "nl": u"SSTP - Informatiediensten voor veilige en beveiligde parkeerplaatsen voor vrachtwagens en bedrijfsvoertuigen",
+                "fr": u"SSTP - Services d'informations concernant les aires de stationnement sûres et sécurisées pour les camions et les véhicules commerciaux",
+                "de": u"SSTP - Informationdiensten für sichere Parkplätze für lastkrafwagen und andere gewerbliche Fahrzeuge"
+            }),
+            ('SRTI', {
+                "en": u"SRTI - Safety related traffic information",
+                "nl": u"SRTI - Verkeersveiligheidsinformatie",
+                "fr": u"SRTI - Information liées à la sécurité routière",
+                "de": u"SRTI - Straßenverkehrssicherheit relevanter Verkehrsinformationen"
+            }),
+            ('RTTI', {
+                "en": u"RTTI - Real time traffic information services",
+                "nl": u"RTTI - Realtimeverkeersinformatiediensten",
+                "fr": u"RTTI - Services d'informations en temps réel sur la circulation",
+                "de": u"RTTI - Echtzeit Verkehrsinformationdienste"
+            })
+        ]

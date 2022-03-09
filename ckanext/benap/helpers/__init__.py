@@ -3,7 +3,7 @@ import json
 import ckan.plugins.toolkit as toolkit
 from ckan.common import config
 
-from ckanext.benap.helpers.lists import NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE
+from ckanext.benap.helpers.lists import NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE
 from ckanext.benap.util.forms import map_for_form_select
 
 
@@ -1002,6 +1002,8 @@ def ontology_helper(context):
         return map_for_form_select(GEOREFERENCING_METHOD)
     elif ontology == "dataset_type":
         return map_for_form_select(DATASET_TYPE)
+    elif ontology == "nap_type":
+        return map_for_form_select(NAP_TYPE)
 
     return None
 
@@ -1062,8 +1064,8 @@ def get_translated_tag_with_name(tagName, lang):
 
 def get_translated_tag(tag, lang):
     tags = get_translated_tags()
-    tags.extend(DATASET_TYPE)
     tags.extend(NUTS1_BE)
+    # tags.extend(DATASET_TYPE)
     try:
         return filter(lambda x: x[0] == tag['name'], [translated_tag for translated_taglist in
                                                       [categorized_tags[0] for categorized_tags in
