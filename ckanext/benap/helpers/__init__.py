@@ -1071,6 +1071,10 @@ def get_translated_tag(tag, lang):
         print(tag)
         print(tag['name'] == u'http://data.europa.eu/nuts/code/BE2')
         print(tag['name'] == 'http://data.europa.eu/nuts/code/BE2')
+        print(filter(lambda x: x[0] == tag['name'], [translated_tag for translated_taglist in
+                                                    [categorized_tags[0] for categorized_tags in
+                                                    tags] for translated_tag in
+                                                    translated_taglist])[0][1][lang])
         print("&#"*25)
         print(tags)
         print("&#"*25)
