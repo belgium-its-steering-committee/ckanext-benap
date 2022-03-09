@@ -1064,7 +1064,7 @@ def get_translated_tag_with_name(tagName, lang):
 
 def get_translated_tag(tag, lang):
     tags = get_translated_tags()
-    tags.append(NUTS1_BE)
+    tags.append(tuple(NUTS1_BE))
     # tags.extend(DATASET_TYPE)
     if tag['name'] == u'http://data.europa.eu/nuts/code/BE2':
         print("&#"*25)
