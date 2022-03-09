@@ -97,5 +97,9 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     def before_index(self, pkg_dict):
         if "regions_covered" in pkg_dict:
             pkg_dict["regions_covered"] = json.loads(pkg_dict["regions_covered"])
+        if "nap_type" in pkg_dict:
+            pkg_dict["nap_type"] = json.loads(pkg_dict["nap_type"])
+        if "its_dataset_type" in pkg_dict:
+            pkg_dict["its_dataset_type"] = json.loads(pkg_dict["its_dataset_type"])
         return pkg_dict
 
