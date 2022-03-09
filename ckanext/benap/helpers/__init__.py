@@ -1230,10 +1230,16 @@ def get_translated_tag_with_name(tagName, lang):
 
 
 def get_translated_tag(tag, lang):
+    tags = get_translated_tags()
+    tags.extend(ontology_helper({'benap_helper_ontology': 'dataset_type'}))
+    tags.extend(ontology_helper({'benap_helper_ontology': 'NUTS1_BE'}))
+    print("&"*25)
+    print(tags)
+    print("&"*25)
     try:
         return filter(lambda x: x[0] == tag['name'], [translated_tag for translated_taglist in
                                                       [categorized_tags[0] for categorized_tags in
-                                                       get_translated_tags()] for translated_tag in
+                                                       tags] for translated_tag in
                                                       translated_taglist])[0][1][lang]
     except:
         try:
