@@ -53,7 +53,21 @@ within_tertiary
               <h2 class="module-heading">
                 <i class="fa fa-filter"></i>
                 {% set title = title or h.get_facet_title(name) %}
-                {{ title }}
+                {% if 'Tags' == title %}
+                  {% if h.lang() == 'en' %}
+                    Transportation modes
+                  {% elif h.lang() == 'nl' %}
+                    Vervoersmodi
+                  {% elif h.lang() == 'fr' %}
+                    Modes de transport
+                  {% elif h.lang() == 'de' %}
+                    Transportmittel
+                  {% else %}
+                    Transportation modes
+                  {% endif %}
+                {% else %}
+                  {{ title }}
+                {% endif %}
               </h2>
               <div id="collapse-{{ name }}-open" style="padding-right: 15px; font-size: 10px;">
                 <span class="caret"></span>
