@@ -374,6 +374,61 @@
       "validators": "scheming_required tag_string_convert"
     },
     {
+      "field_name": "naps_type",
+      "label": {
+        "en": "NAP type",
+        "fr": "Type de NAP",
+        "nl": "NAP type",
+        "de": "NAP type"
+      },
+      "help_text": {
+        "en": "Choose one or multiple relevant dataset types",
+        "fr": "Kies een of meerdere relevante dataset types",
+        "nl": "Choisissez un ou plusieurs types de données pertinents",
+        "de": "Wählen Sien einen oder mehrere relevante Datensatztypen aus"
+      },
+      "preset": "select",
+      "choices": [
+        {
+          "value": "MMTIS",
+          "label": {
+            "en": "Multimodale reisinformatiediensten",
+            "nl": "Multimodale reisinformatiediensten",
+            "fr": "Multimodale reisinformatiediensten",
+            "de": "Multimodale reisinformatiediensten"
+          }
+        },
+        {
+          "value": "SSTP",
+          "label": {
+            "en": "Informatiediensten voor veilige en beveiligde parkeerplaatsen voor vrachtwagens en voertuigen",
+            "nl": "Informatiediensten voor veilige en beveiligde parkeerplaatsen voor vrachtwagens en voertuigen",
+            "fr": "Informatiediensten voor veilige en beveiligde parkeerplaatsen voor vrachtwagens en voertuigen",
+            "de": "Informatiediensten voor veilige en beveiligde parkeerplaatsen voor vrachtwagens en voertuigen"
+          }
+        },
+        {
+          "value": "SRTI",
+          "label": {
+            "en": "Minimale universele verkeersveiligheids informatie",
+            "nl": "Minimale universele verkeersveiligheids informatie",
+            "fr": "Minimale universele verkeersveiligheids informatie",
+            "de": "Minimale universele verkeersveiligheids informatie"
+          }
+        },
+        {
+          "value": "RTTI",
+          "label": {
+            "en": "Realtimeverkeersinformatiediensten",
+            "nl": "Realtimeverkeersinformatiediensten",
+            "fr": "Realtimeverkeersinformatiediensten",
+            "de": "Realtimeverkeersinformatiediensten"
+          }
+        }
+      ],
+      "required": "true"
+    },
+    {
       "field_name": "contract_license",
       "label": {
         "en": "Contract or licence",
