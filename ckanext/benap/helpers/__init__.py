@@ -5,6 +5,7 @@ from ckan.common import config
 
 from ckanext.benap.helpers.lists import NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE
 from ckanext.benap.util.forms import map_for_form_select
+from ckanext.scheming.helpers import scheming_get_dataset_schema
 
 
 def user_language():
@@ -1320,12 +1321,20 @@ def get_organization_by_id(id):
         return organization.get('display_name')
 
 
-
-
 def show_element(x):
     print('\n\n show element \n\n')
     print(x)
     print('\n')
     return x
+
+
+def benap_fluent_label(field_label, lang):
+    """
+    Return a label for the input label for the given language
+    """
+
+    print(scheming_get_dataset_schema('dataset'))
+
+    return lang.upper() + ' ' + scheming_language_text(field_label)
 
 
