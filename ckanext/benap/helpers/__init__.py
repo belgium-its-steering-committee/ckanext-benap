@@ -1332,6 +1332,9 @@ def benap_fluent_label(field_label, lang):
     """
     Return a label for the input label for the given language
     """
+    print("#@"*25)
+    print(field_label)
+    print(lang)
 
     print(scheming_get_dataset_schema('dataset'))
 
