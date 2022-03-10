@@ -1341,7 +1341,8 @@ def benap_fluent_label(field_name, field_label, lang):
     if schema:
         field_metadata = filter(lambda x: x['field_name'] == field_name, schema['dataset_fields'])
         print(field_metadata)
-        return field_metadata['label'][lang]
+        if len(field_metadata) > 0:
+            return field_metadata[0]['label'][lang]
 
     return field_label
 
