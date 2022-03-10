@@ -1337,8 +1337,12 @@ def benap_fluent_label(field_name, field_label, lang):
     print(field_label)
     print(lang)
 
-    print(scheming_get_dataset_schema('dataset'))
+    schema = scheming_get_dataset_schema('dataset')
+    if schema:
+        field_metadata = filter(lambda x: x['field_name'] == field_name, schema['dataset_fields'])
+        print(field_metadata)
+        return field_metadata['label'][lang]
 
-    return lang.upper() + ' ' + field_label
+    return field_label
 
 
