@@ -1332,15 +1332,9 @@ def benap_fluent_label(field_name, field_label, lang):
     """
     Return a label for the input label for the given language
     """
-    print("#@"*25)
-    print(field_name)
-    print(field_label)
-    print(lang)
-
     schema = scheming_get_dataset_schema('dataset')
     if schema:
         field_metadata = filter(lambda x: x['field_name'] == field_name, schema['dataset_fields'])
-        print(field_metadata)
         if len(field_metadata) > 0:
             return field_metadata[0]['label'][lang]
 
