@@ -53,6 +53,7 @@ within_tertiary
               <h2 class="module-heading">
                 <i class="fa fa-filter"></i>
                 {% set title = title or h.get_facet_title(name) %}
+                {% set title = h.fluent_form_label(title, h.lang()) %}
                 {% if 'Tags' == title %}
                   {% if h.lang() == 'en' %}
                     Transportation modes
