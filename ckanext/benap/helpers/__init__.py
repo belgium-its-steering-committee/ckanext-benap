@@ -1328,16 +1328,17 @@ def show_element(x):
     return x
 
 
-def benap_fluent_label(field_label, lang):
+def benap_fluent_label(field_name, field_label, lang):
     """
     Return a label for the input label for the given language
     """
     print("#@"*25)
+    print(field_name)
     print(field_label)
     print(lang)
 
     print(scheming_get_dataset_schema('dataset'))
 
-    return lang.upper() + ' ' + scheming_language_text(field_label)
+    return lang.upper() + ' ' + field_label
 
 
