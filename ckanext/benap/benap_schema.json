@@ -58,7 +58,7 @@
       "help_text": {
         "en": "Select for which NAP(s) you are registering dataset or service. It is possible to select multiple NAPs. Providing the correct NAP(s) is essential to comply with the applicable Delegated Regulations. For more information about this and the different NAPs, please see our About section.",
         "nl": "Selecteer voor welk(e) NAP(s) u de dataset of dienst registreert. Het is mogelijk om meerdere NAPs te selecteren. Het is essentieel om de correcte NAP(s) te vermelden om in overeenstemming te zijn met de Gedelegeerde verordeningen. Voor meer information hierover en de verschillende NAPs, raadpleeg onze About sectie.",
-        "fr": "Sélectionnez pour quel(s) NAP vous enregistrez le jeu de données ou le service. Il est possible de sélectionner plusieurs NAP. Il est essentiel de mentionner le(s) ben(s) NAP pour être en conformité avec les Règlements délégués. Pour de plus amples informations à ce sujet et sure le différents NAP, consultez notre section A propos.",
+        "fr": "Sélectionnez pour quel(s) NAP vous enregistrez le jeu de données ou le service. Il est possible de sélectionner plusieurs NAP. Il est essentiel de mentionner le(s) bon(s) NAP pour être en conformité avec les Règlements délégués. Pour de plus amples informations à ce sujet et sure le différents NAP, consultez notre section A propos.",
         "de": "Wählen Sie aus, für welchen NAP Sie den Datensatz oder Dienst registrieren. Es ist möglich, mehrere NAPs auszuwählen. Es ist sehr wichting, den/die richtigen NAP(s) anzugeben, um mit den Delegierten Verordnungen zu übereinstimmen. Weitere Informationen dazu un über die verschiedenen NAPs finden Sie in unserer Seite Über."
       },
       "preset": "multiple_select",
