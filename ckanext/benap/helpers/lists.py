@@ -31,15 +31,15 @@ GEOREFERENCING_METHOD = [
             }),
             ('Geocoordinates WGS84', {
                 "en": u"Geocoordinates WGS84",
-                "fr": u"Geocoordinates WGS84",
-                "nl": u"Geocoordinates WGS84",
-                "de": u"Geocoordinates WGS84"
+                "fr": u"Coordonnées géographiques WGS84",
+                "nl": u"Geocoördinaten WGS84",
+                "de": u"Geocoördinaten WGS84"
             }),
             ('Geocoordinates ETRS89', {
                 "en": u"Geocoordinates ETRS89",
-                "fr": u"Geocoordinates ETRS89",
-                "nl": u"Geocoordinates ETRS89",
-                "de": u"Geocoordinates ETRS89"
+                "fr": u"Coordonnées géographiques ETRS89",
+                "nl": u"Geocoördinaten ETRS89",
+                "de": u"Geocoördinaten ETRS89"
             }),
             ('ISO 19148', {
                 "en": u"ISO 19148",
