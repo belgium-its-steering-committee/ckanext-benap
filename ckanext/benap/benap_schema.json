@@ -521,6 +521,12 @@
         "nl": "Verklaring van overeenstemming",
         "de": "Einhaltungserklärung"
       },
+      "help_text": {
+        "en": "For every NAP you register datasets or services (MMTIS, RTTI, SRTI, SSTP), your organization must submit a form in which it declares to be compliant to the respective European regulations regarding the NAP. For more information click here.\n\nRegistering this dataset or service might therefore require submitting an additional declaration of compliance or an update of the existing declaration(s) of your organization.",
+        "fr": "Pour chaque NAP sur lequel vous enregistrez des jeux de données ou des services (MMTIS, RTTI, SRTI, SSTP), votre organisation doit introduire un formulaire où elle déclare être en conformité avec les Règlements européens respectifs. Pour de plus amples informations, cliquez ici.\n\nLors de l’enregistrement de ce jeu de données ou service, il se peut dès lors que votre organisation doive introduire une déclaration de conformité supplémentaire ou actualiser une déclaration existante.",
+        "nl": "Voor elk NAP waarvoor u datasets of diensten  registreert (MMTIS, RTTI, SRTI, SSTP) moet uw organisatie een formulier indienen voor elk type NAP waarbij uw organisatie aangeeft in overeenstemming te zijn met de respectievelijke Europese Verordeningen betreffende het NAP. Voor meer informatie klik hier.\n\nDoor de registratie van deze dataset of dienst kan het daarom noodzakelijk zijn voor uw organisatie om een bijkomende verklaring van overeenstemming in te dienen of een bestaande verklaringen te updaten.",
+        "de": "Für jeden NAP, worauf Sie Datensätze oder Dienste registrieren (MMTIS, RTTI, SRTI, SSTP), muss Ihre Organisation ein Formular eintragen, wo sie ihre Beachtung der jeweiligen europäischen Verordnungen bestätigt. Klicken Sie hier für weitere Informationen.\n\nWenn Sie diesen Datensatz oder Dienst registrieren, kann es dadurch notwendig sein, daβ Ihre Organisation eine zusätzliche  Übereinstimmungserklärung einträgt oder eine bestehende Erklärung aktualisiert."
+      },
       "multi_help": "true",
       "preset": "multiple_radio_compliance",
       "choices": [
