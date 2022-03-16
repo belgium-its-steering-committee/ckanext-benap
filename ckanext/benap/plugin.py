@@ -111,4 +111,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         print("agreement_declaration" in pkg_dict)
         print(pkg_dict.get("agreement_declaration", ""))
         print("#"*25)
+        return pkg_dict
+
 
