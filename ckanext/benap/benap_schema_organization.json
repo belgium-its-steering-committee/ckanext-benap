@@ -261,7 +261,7 @@
       "display_snippet": null
     },
     {
-      "field_name": "doc_test_u",
+      "field_name": "doc_document_upload",
       "label": {
         "en": "DOC test",
         "fr": "DOC test",
