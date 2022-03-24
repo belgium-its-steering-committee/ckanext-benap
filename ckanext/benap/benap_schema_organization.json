@@ -274,9 +274,7 @@
         "nl": "This is a test",
         "de": "This is a test"
       },
-      "form_snippet": "upload.html",
-      "is_url": false,
-      "is_upload": true,
+      "form_snippet": "doc_upload.html",
       "form_placeholder": "",
       "upload_field": "upload_doc",
       "upload_clear": "clear_upload_doc",
