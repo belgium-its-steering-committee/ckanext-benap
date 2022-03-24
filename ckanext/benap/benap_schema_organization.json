@@ -275,10 +275,11 @@
         "de": "This is a test"
       },
       "form_snippet": "upload.html",
-      "form_placeholder": "http://example.com/my-data.csv",
-      "upload_field": "upload",
-      "upload_clear": "clear_upload",
-      "upload_label": "File"
+      "form_placeholder": null,
+      "upload_field": "upload_doc",
+      "upload_clear": "clear_upload_doc",
+      "upload_label": "File",
+      "display_snippet": "link.html"
     }
   ]
 }
