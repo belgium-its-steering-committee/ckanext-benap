@@ -257,7 +257,8 @@
           "help_link": "/pages/compliance"
          }
       ],
-      "required": "true"
+      "required": "true",
+      "display_snippet": null
     },
     {
       "field_name": "doc_test_u",
