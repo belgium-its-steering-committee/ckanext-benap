@@ -275,11 +275,12 @@
         "de": "This is a test"
       },
       "form_snippet": "upload.html",
-      "form_placeholder": null,
+      "is_url": false,
+      "is_upload": true,
+      "form_placeholder": "",
       "upload_field": "upload_doc",
       "upload_clear": "clear_upload_doc",
-      "upload_label": "File",
-      "display_snippet": "link.html"
+      "upload_label": "DOC"
     }
   ]
 }
