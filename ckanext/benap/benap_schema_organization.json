@@ -274,7 +274,11 @@
         "nl": "This is a test",
         "de": "This is a test"
       },
-      "preset": "organization_url_upload"
+      "form_snippet": "upload.html",
+      "form_placeholder": "http://example.com/my-data.csv",
+      "upload_field": "upload",
+      "upload_clear": "clear_upload",
+      "upload_label": "File"
     }
   ]
 }
