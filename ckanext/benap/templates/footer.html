@@ -6,6 +6,7 @@
         {% block footer_nav %}
           <ul class="footer-link list-unstyled">
             {% block footer_links %}
+              <li><a href="https://www.linkedin.com/company/nationaal-geografisch-instituut/" target="_blank">{{ _('Follow us on LinkedIn') }}</a></li>
               <li><a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='pages_show', page='/about') }}">{{ _('About Transportdata.be') }}</a></li>
             {% endblock %}
           </ul>
@@ -24,10 +25,13 @@
               {% else %}
               <a href="https://mobilit.belgium.be/nl/mobiliteit/intelligente_vervoersystemen/its_stuurgroep" target="_blank">
             {% endif %}
-            <img class="footer-img" src="{{ h.url_for_static('/images/logo-its.png') }}" alt="logo its">
+            <img class="footer-img" src="{{ h.url_for_static('/images/logo-its.png') }}" alt="logo its" style="width: auto; height: 60px;">
           </a>
           <a href="http://www.ngi.be/" target="_blank">
-            <img class="footer-img" src="{{ h.url_for_static('/images/LOGO_NGI_BASIS_RGB.jpg') }}" alt="logo ngi">
+            <img class="footer-img" src="{{ h.url_for_static('/images/LOGO_NGI_BASIS_RGB.jpg') }}" alt="logo ngi" style="width: auto; height: 60px;">
+          </a>
+          <a href="#" target="">
+            <img class="footer-img" src="{{ h.url_for_static('/images/CEF-logo.png') }}" alt="logo CEF" style="width: auto; height: 76px; margin-top: 8px;">
           </a>
         </div>
       <div id="lang" class="flex-col attribution w-33">

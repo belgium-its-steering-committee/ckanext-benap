@@ -1,14 +1,14 @@
 # Translations template for ckanext-benap.
-# Copyright (C) 2021 ORGANIZATION
+# Copyright (C) 2022 ORGANIZATION
 # This file is distributed under the same license as the ckanext-benap project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: ckanext-benap 1.6.3\n"
+"Project-Id-Version: ckanext-benap 1.9.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-04-15 18:06+0200\n"
+"POT-Creation-Date: 2022-03-25 17:28+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,14 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+
+#: ckanext/benap/plugin.py:83
+msgid "Area covered by publication"
+msgstr ""
+
+#: ckanext/benap/plugin.py:84
+msgid "Dataset Type"
+msgstr ""
 
 #: ckanext/benap/validators.py:26
 msgid "Phone number {number} is not a valid format"
@@ -40,26 +48,30 @@ msgid ""
 msgstr ""
 
 #: ckanext/benap/templates/footer.html:9
+msgid "Follow us on LinkedIn"
+msgstr ""
+
+#: ckanext/benap/templates/footer.html:10
 msgid "About Transportdata.be"
 msgstr ""
 
-#: ckanext/benap/templates/footer.html:14
+#: ckanext/benap/templates/footer.html:15
 msgid "Github"
 msgstr ""
 
-#: ckanext/benap/templates/footer.html:16
+#: ckanext/benap/templates/footer.html:17
 msgid "CKAN API"
 msgstr ""
 
-#: ckanext/benap/templates/footer.html:36
+#: ckanext/benap/templates/footer.html:40
 msgid "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 msgstr ""
 
-#: ckanext/benap/templates/footer.html:41
+#: ckanext/benap/templates/footer.html:45
 msgid "Manage Cookies"
 msgstr ""
 
-#: ckanext/benap/templates/footer.html:81
+#: ckanext/benap/templates/footer.html:85
 msgid ""
 "2019 - By the National Geographic Institute on behalf of the ITS steering "
 "commitee."
@@ -319,42 +331,55 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
+#: ckanext/benap/templates/home/layout3.html:32
+#: ckanext/benap/templates/home/snippets/newsletter.html:7
+msgid "Subscribe to our newsletter and stay informed"
+msgstr ""
+
+#: ckanext/benap/templates/home/layout3.html:36
+#: ckanext/benap/templates/home/snippets/newsletter.html:13
+msgid "Enter your email address"
+msgstr ""
+
+#: ckanext/benap/templates/home/layout3.html:37
+#: ckanext/benap/templates/home/snippets/newsletter.html:14
+msgid "Subscribe"
+msgstr ""
+
 #: ckanext/benap/templates/home/snippets/community.html:7
 msgid "JOIN OUR COMMUNITY FORUM"
 msgstr ""
 
-#: ckanext/benap/templates/home/snippets/community.html:12
+#: ckanext/benap/templates/home/snippets/community.html:13
 msgid ""
 "As transport data producer or user, join our online community and benefit "
 "from experience-sharing with your fellows!"
 msgstr ""
 
-#: ckanext/benap/templates/home/snippets/community.html:15
+#: ckanext/benap/templates/home/snippets/community.html:16
+msgid "Discover the Belgian transport landscape."
+msgstr ""
+
+#: ckanext/benap/templates/home/snippets/community.html:19
+msgid ""
+"Obtain practical information on how to (re)use datasets and services from the"
+" NAP ITS."
+msgstr ""
+
+#: ckanext/benap/templates/home/snippets/community.html:23
 msgid "Join"
 msgstr ""
 
-#: ckanext/benap/templates/home/snippets/feedback.html:5
+#: ckanext/benap/templates/home/snippets/feedback.html:6
 msgid "Need help? "
 msgstr ""
 
-#: ckanext/benap/templates/home/snippets/feedback.html:6
+#: ckanext/benap/templates/home/snippets/feedback.html:7
 msgid "Contact"
 msgstr ""
 
-#: ckanext/benap/templates/home/snippets/feedback.html:7
+#: ckanext/benap/templates/home/snippets/feedback.html:8
 msgid " our helpdesk."
-msgstr ""
-
-#: ckanext/benap/templates/home/snippets/newsletter.html:6
-msgid "Subscribe to our newsletter and stay informed"
-msgstr ""
-
-#: ckanext/benap/templates/home/snippets/newsletter.html:11
-msgid "Enter your email address"
-msgstr ""
-
-#: ckanext/benap/templates/home/snippets/newsletter.html:12
-msgid "Subscribe"
 msgstr ""
 
 #: ckanext/benap/templates/home/snippets/promoted.html:8
@@ -372,22 +397,28 @@ msgid ""
 " ITS datasets and web services."
 msgstr ""
 
-#: ckanext/benap/templates/home/snippets/report.html:5
+#: ckanext/benap/templates/home/snippets/promoted.html:16
+msgid ""
+"Obtain practical information on how to register your organization, datasets "
+"and services."
+msgstr ""
+
+#: ckanext/benap/templates/home/snippets/report.html:6
 msgid ""
 "More detailed instructions on how to register your dataset(s) and or services"
 " can be found in the "
 msgstr ""
 
-#: ckanext/benap/templates/home/snippets/report.html:6
+#: ckanext/benap/templates/home/snippets/report.html:7
 #: ckanext/benap/templates/user/new.html:29
 msgid "about section"
 msgstr ""
 
-#: ckanext/benap/templates/home/snippets/report.html:7
+#: ckanext/benap/templates/home/snippets/report.html:8
 msgid " and in our "
 msgstr ""
 
-#: ckanext/benap/templates/home/snippets/report.html:8
+#: ckanext/benap/templates/home/snippets/report.html:9
 msgid "instruction video"
 msgstr ""
 
@@ -438,6 +469,10 @@ msgstr ""
 msgid "View {organization_name}"
 msgstr ""
 
+#: ckanext/benap/templates/package/search.html:5
+msgid "Filters"
+msgstr ""
+
 #: ckanext/benap/templates/package/snippets/resource_help.html:2
 msgid "What's a resource?"
 msgstr ""
@@ -457,15 +492,15 @@ msgid ""
 " Regulation (EU) 2017/1926."
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:96
+#: ckanext/benap/templates/snippets/facet_list.html:110
 msgid "Show More {facet_type}"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:99
+#: ckanext/benap/templates/snippets/facet_list.html:113
 msgid "Show Only Popular {facet_type}"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:103
+#: ckanext/benap/templates/snippets/facet_list.html:117
 msgid "There are no {facet_type} that match this search"
 msgstr ""
 
@@ -490,7 +525,7 @@ msgstr ""
 msgid "Deleted"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/package_item.html:32
+#: ckanext/benap/templates/snippets/package_item.html:34
 msgid "This dataset has no description"
 msgstr ""
 

@@ -1,6 +1,6 @@
-<a href="/{{ h.lang() }}/forum" class="no-dec">
+<a href="/{{ h.lang() }}/pages/information-to-data-users" class="no-dec">
     <div class="highlight-box highlight-left">
-        <img src="/images/img-community.jpg">
+        <img src="/images/Ring.jpg" style="max-height: 225px; object-fill: cover;">
         <div id="highlight-box-text">
             <div class="highlight-box-header">
                 <h3 class="uppercase">
@@ -8,9 +8,17 @@
                 </h3>
             </div>
             <div class="community-flex">
-                <p class="lh-1-2 mw-75">
-                    {{ _('As transport data producer or user, join our online community and benefit from experience-sharing with your fellows!') }}
-                </p>
+                <div>
+                    <p class="lh-1-2">
+                        {{ _('As transport data producer or user, join our online community and benefit from experience-sharing with your fellows!') }}
+                    </p>
+                    <p class="lh-1-2">
+                        {{ _('Discover the Belgian transport landscape.') }}
+                    </p>
+                    <p class="lh-1-2">
+                        {{ _('Obtain practical information on how to (re)use datasets and services from the NAP ITS.') }}
+                    </p>
+                </div>
                 <button class="bt-large button-width" onclick="location.href='/{{ h.lang() }}/forum'">
                     {{ _('Join') }}
                 </button>
