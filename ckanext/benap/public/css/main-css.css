@@ -763,3 +763,21 @@ span.item-count {
 .soft-label {
     font-weight: normal;
 }
+
+
+.scalable-ring {
+    object-fit: cover;
+    max-height: 292px;
+}
+
+@media only screen and (min-width: 992px) {
+    .scalable-ring {
+        max-height: 185px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .scalable-ring {
+        max-height: 225px;
+    }
+}

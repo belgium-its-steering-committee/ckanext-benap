@@ -1,5 +1,4 @@
 <div role="main" class="hero">
-  <div>&nbsp;</div>
   <div class="container">
     {% block search %}
       {% snippet 'home/snippets/search.html' %}
@@ -49,7 +48,7 @@
          }
 
 
-        @media only screen and (min-width: 982px) {
+        @media only screen and (min-width: 992px) {
           .video-row-col {
             position: absolute;
             left: 50%;
@@ -68,13 +67,13 @@
       </div>
     </div>
 
-    <div class="row special-row">
-      <div class="special-col col col-md-6 col2">
+    <div class="row" style="display: flex; flex-wrap: wrap;">
+      <div class="col col-md-6 col2" style="flex-grow: 1; padding: 25px 15px;">
         {% block promoted %}
           {% snippet 'home/snippets/promoted.html' %}
         {% endblock %}
       </div>
-      <div class="special-col col col-md-6 col2">
+      <div class="col col-md-6 col2" style="flex-grow: 1; padding: 25px 15px;">
         {% block community %}
           {% snippet 'home/snippets/community.html' %}
         {% endblock %}

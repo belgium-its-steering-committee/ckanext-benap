@@ -389,31 +389,24 @@ msgstr "Abonneren"
 
 #: ckanext/benap/templates/home/snippets/community.html:7
 msgid "JOIN OUR COMMUNITY FORUM"
-msgstr "TOEGANG TOT EN (HER)GEBRUIK VAN INHOUD VAN HET NAP-ITS"
+msgstr "TOEGANG TOT EN (HER)GEBRUIK VAN INHOUD VAN HET NAP ITS"
 
 #: ckanext/benap/templates/home/snippets/community.html:13
 msgid ""
 "As transport data producer or user, join our online community and benefit"
 " from experience-sharing with your fellows!"
 msgstr ""
-"Leer hoe u datasets en diensten kan raadplegen.Ontdek het Belgische "
-"transportlandschap.Verkrijg praktische informatie over hoe u datasets en "
-"diensten van het NAP ITS kan (her)gebruiken."
+"Leer hoe u datasets en diensten kan raadplegen."
 
 #: ckanext/benap/templates/home/snippets/community.html:16
 msgid "Discover the Belgian transport landscape."
-msgstr ""
+msgstr "Ontdek het Belgische transportlandschap."
 
 #: ckanext/benap/templates/home/snippets/community.html:19
-#, fuzzy
-#| msgid "" "Obtain practical information on how to register your organization,
-#| " "datasets and services."
 msgid ""
-"Obtain practical information on how to (re)use datasets and services from"
-" the NAP ITS."
+"Obtain practical information on how to (re)use datasets and services from the NAP ITS."
 msgstr ""
-"Raadpleeg praktische informatie over hoe u uw organisatie, datasets en "
-"diensten kan registreren."
+"Verkrijg praktische informatie over hoe u datasets en diensten van het NAP ITS kan (her)gebruiken."
 
 #: ckanext/benap/templates/home/snippets/community.html:23
 msgid "Join"
@@ -504,7 +497,7 @@ msgstr "Populaire tags"
 
 #: ckanext/benap/templates/home/snippets/search.html:27
 msgid "ADD NEW DATA"
-msgstr "NIEUWE GEGEVENS TOEVOEGEN"
+msgstr "Datasets en diensten toevoegen"
 
 #: ckanext/benap/templates/home/snippets/search.html:29
 msgid "Data providers can easily add data to the catalogue."

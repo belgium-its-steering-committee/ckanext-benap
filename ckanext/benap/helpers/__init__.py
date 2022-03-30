@@ -1160,7 +1160,7 @@ def get_translated_tags():
               })
          ], {
              "en": u"Scheduled",
-             "nl": u"Geregeld vervoer",
+             "nl": u"Openbaar vervoer",
              "fr": u"Services réguliers",
              "de": u"Linienverkehrsdienste"
          }),

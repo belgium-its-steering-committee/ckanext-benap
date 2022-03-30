@@ -1,18 +1,24 @@
 <a class="no-dec"
    href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='pages_show', page='/information-data-providers') }}">
-    <div class="highlight-box highlight-left">
+    <div class="highlight-box highlight-left" style="height: 100%;">
         <img src="/images/Information-for-data-suppliers.jpg">
         <div id="highlight-box-text">
-            <div class="highlight-box-header">
+            <div class="highlight-box-header" style="min-height: 48px;">
                 <h3 class="uppercase">{{ _('DISCOVER TRANSPORTDATA.BE') }}</h3>
                 <!--h4 class="uppercase">{{ _('AND HOW YOU ARE INVOLVED') }}</h4-->
             </div>
-            <p class="lh-1-2">
-                {{ _('Transportdata.be is the preferred access point for information on Intelligent Transport Systems (ITS). This national platform aims to centralize access to ITS datasets and web services.') }}
-            </p>
-            <p class="lh-1-2">
-                {{ _('Obtain practical information on how to register your organization, datasets and services.') }}
-            </p>
+            <ul>
+                <li style="color: #000;">
+                    <p class="lh-1-2">
+                         {{ _('Transportdata.be is the preferred access point for information on Intelligent Transport Systems (ITS). This national platform aims to centralize access to ITS datasets and web services.') }}
+                    </p>
+                </li>
+                <li style="color: #000;">
+                    <p class="lh-1-2">
+                        {{ _('Obtain practical information on how to register your organization, datasets and services.') }}
+                    </p>
+                </li>
+            </ul>
         </div>
     </div>
 </a>
