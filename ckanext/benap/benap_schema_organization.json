@@ -324,7 +324,7 @@
         "nl": "Verklaring van overeenstemming SSTP",
         "de": "Konformitätserklärung SSTP"
       },
-      "validators": "unicode remove_whitespace benap_https_validator",
+      "validators": "unicode remove_whitespace benap_https_validator benap_pdf_validator",
       "help_text": {
         "en": "",
         "fr": "",

@@ -11,7 +11,8 @@ from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallba
     get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, get_translated_tag_with_name, \
     forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element, get_organization_by_id, benap_fluent_label
 from ckanext.benap.util.forms import map_for_form_select
-from ckanext.benap.validators import phone_number_validator, countries_covered_belgium, is_after_start, https_validator
+from ckanext.benap.validators import phone_number_validator, countries_covered_belgium, is_after_start, https_validator, \
+    pdf_validator
 from ckanext.benap.logic.auth.get import user_list
 
 
@@ -71,7 +72,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'phone_number_validator': phone_number_validator,
             'benap_countries_covered_belgium': countries_covered_belgium,
             'benap_is_after_start': is_after_start,
-            'benap_https_validator': https_validator
+            'benap_https_validator': https_validator,
+            'benap_pdf_validator': pdf_validator
         }
 
     # IAuthFunctions
