@@ -290,7 +290,7 @@
         "de": ""
       },
       "form_snippet": "doc_upload.html",
-      "form_placeholder": "",
+      "form_placeholder": "declaration_of_compliance.pdf",
       "upload_field": "rtti_upload_doc",
       "upload_clear": "rtti_clear_upload_doc",
       "upload_label": "RTTI DOC"
@@ -311,7 +311,7 @@
         "de": ""
       },
       "form_snippet": "doc_upload.html",
-      "form_placeholder": "",
+      "form_placeholder": "declaration_of_compliance.pdf",
       "upload_field": "upload_doc",
       "upload_clear": "clear_upload_doc",
       "upload_label": "SRTI DOC"
@@ -332,7 +332,7 @@
         "de": ""
       },
       "form_snippet": "doc_upload.html",
-      "form_placeholder": "",
+      "form_placeholder": "declaration_of_compliance.pdf",
       "upload_field": "sstp_upload_doc",
       "upload_clear": "sstp_clear_upload_doc",
       "upload_label": "SSTP DOC"
