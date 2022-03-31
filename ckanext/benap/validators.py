@@ -78,6 +78,6 @@ def https_validator(value, context):
 
 def pdf_validator(value, context):
     if value and len(value) > 0:
-        if not value.enswith(('pdf', 'PDF')):
+        if not value.endswith(('pdf', 'PDF')):
             raise Invalid(_('Only PDF is allowed').format(url=value))
     return value
