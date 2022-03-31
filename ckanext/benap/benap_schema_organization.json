@@ -249,10 +249,10 @@
               "de": "Hiermit erkläre ich, in Übereinstimmung mit den Artikeln 3 bis 8 der Europäischen Verordnung (EU) 2017/1926 für diesen Datensatz zu sein."
             },
           "help_text": {
-              "en": "For more information click here",
-              "fr": "Pour de plus amples informations, cliquez ici",
-              "nl": "Voor meer info klik hier",
-              "de": "Für weitere Informationen, bitte hier klicken"
+              "en": "For more information <a>click here</a>",
+              "fr": "Pour de plus amples informations, <a>cliquez ici</a>",
+              "nl": "Voor meer info <a>klik hier</a>",
+              "de": "Für weitere Informationen, bitte <a>hier klicken</a>"
            },
           "help_link": "/pages/compliance"
          },
