@@ -229,11 +229,119 @@
       "required": true,
       "validators": "phone_number_validator not_empty"
     },
+ {
+      "field_name": "agreement_declaration_mmtis",
+      "label": {
+        "en": "Declaration of compliance MMTIS",
+        "fr": "déclaration de conformité MMTIS",
+        "nl": "Verklaring van overeenstemming MMTIS",
+        "de": "Einhaltungserklärung MMTIS"
+      },
+      "multi_help": "true",
+      "preset": "multiple_radio_compliance",
+      "choices": [
+         {
+          "value": "Y",
+          "label": {
+              "en": "I hereby declare to be compliant to articles 3 to 8 of the European regulation (EU) 2017/1926 for this dataset.",
+              "fr": "Je déclare être en conformité avec les articles 3 à 8 du règlement délégué européen (UE) 2017/1926 pour ce jeu de données.",
+              "nl": "Ik verklaar voor deze dataset in overeenstemming te zijn met artikels 3 tot 8 van de Europese verordening (EU) 2017/1926.",
+              "de": "Hiermit erkläre ich, in Übereinstimmung mit den Artikeln 3 bis 8 der Europäischen Verordnung (EU) 2017/1926 für diesen Datensatz zu sein."
+            },
+          "help_text": {
+              "en": "For more information click here",
+              "fr": "Pour de plus amples informations, cliquez ici",
+              "nl": "Voor meer info klik hier",
+              "de": "Für weitere Informationen, bitte hier klicken"
+           },
+          "help_link": "/pages/compliance"
+         },
+        {
+          "value": "N",
+          "label": {
+              "en": "I do not yet submit a declaration of compliance.",
+              "fr": "Je ne fournis pas encore une déclaration de conformité.",
+              "nl": "Ik leg momenteel nog geen verklaring van overeenstemming af.",
+              "de": "Ich lege jetzt noch keine  Einhaltungserklärung vor."
+            },
+           "help_text": {
+              "en": "It is possible to submit this declaration at a later moment. However, do not forget to do this as the declaration of compliance is necessary for the assessment of compliance.",
+              "fr": "Vous pouvez encore présenter cette déclaration plus tard, mais ne l’oubliez pas car elle est nécessaire pour l’évaluation de la conformité.",
+              "nl": "Het is mogelijk om deze verklaring van overeenstemming nog op een later moment in te dienen. Vergeet dit echter niet, deze verklaring is noodzakelijk voor de beoordeling van de naleving. ",
+              "de": "Sie können noch später eine Erklärung vorlegen. Vergessen Sie diese Erklärung aber nicht, weil die Einhaltungserklärung für die Einhaltungsprüfung notwendig ist."
+            },
+          "help_link": ""
+        }
+      ]
+    },
+    {
+      "field_name": "rtti_doc_document_upload",
+      "label": {
+        "en": "Declaration of compliance RTTI",
+        "fr": "Déclaration de conformité RTTI",
+        "nl": "Verklaring van overeenstemming RTTI",
+        "de": "Konformitätserklärung RTTI"
+      },
+      "validators": "unicode remove_whitespace benap_https_validator",
+      "help_text": {
+        "en": "",
+        "fr": "",
+        "nl": "",
+        "de": ""
+      },
+      "form_snippet": "doc_upload.html",
+      "form_placeholder": "",
+      "upload_field": "rtti_upload_doc",
+      "upload_clear": "rtti_clear_upload_doc",
+      "upload_label": "RTTI DOC"
+    },
+    {
+      "field_name": "srti_doc_document_upload",
+      "label": {
+        "en": "Declaration of compliance SRTI",
+        "fr": "Déclaration de conformité SRTI",
+        "nl": "Verklaring van overeenstemming SRTI",
+        "de": "Konformitätserklärung SRTI"
+      },
+      "validators": "unicode remove_whitespace benap_https_validator",
+      "help_text": {
+        "en": "",
+        "fr": "",
+        "nl": "",
+        "de": ""
+      },
+      "form_snippet": "doc_upload.html",
+      "form_placeholder": "",
+      "upload_field": "upload_doc",
+      "upload_clear": "clear_upload_doc",
+      "upload_label": "SRTI DOC"
+    },
+    {
+      "field_name": "sstp_doc_document_upload",
+      "label": {
+        "en": "Declaration of compliance SSTP",
+        "fr": "Déclaration de conformité SSTP",
+        "nl": "Verklaring van overeenstemming SSTP",
+        "de": "Konformitätserklärung SSTP"
+      },
+      "validators": "unicode remove_whitespace benap_https_validator",
+      "help_text": {
+        "en": "",
+        "fr": "",
+        "nl": "",
+        "de": ""
+      },
+      "form_snippet": "doc_upload.html",
+      "form_placeholder": "",
+      "upload_field": "sstp_upload_doc",
+      "upload_clear": "sstp_clear_upload_doc",
+      "upload_label": "SSTP DOC"
+    },
     {
       "field_name": "organization_agreement_declaration",
       "label": {
         "en": "Declaration of compliance",
-        "fr": "déclaration de conformité",
+        "fr": "Déclaration de conformité",
         "nl": "Verklaring van overeenstemming",
         "de": "Einhaltungserklärung"
       },
@@ -259,69 +367,6 @@
       ],
       "required": "true",
       "display_snippet": null
-    },
-    {
-      "field_name": "sstp_doc_document_upload",
-      "label": {
-        "en": "SSTP DOC",
-        "fr": "SSTP DOC",
-        "nl": "SSTP DOC",
-        "de": "SSTP DOC"
-      },
-      "validators": "unicode remove_whitespace benap_https_validator",
-      "help_text": {
-        "en": "This is a test",
-        "fr": "This is a test",
-        "nl": "This is a test",
-        "de": "This is a test"
-      },
-      "form_snippet": "doc_upload.html",
-      "form_placeholder": "",
-      "upload_field": "sstp_upload_doc",
-      "upload_clear": "sstp_clear_upload_doc",
-      "upload_label": "SSTP DOC"
-    },
-    {
-      "field_name": "srti_doc_document_upload",
-      "label": {
-        "en": "SRTI DOC",
-        "fr": "SRTI DOC",
-        "nl": "SRTI DOC",
-        "de": "SRTI DOC"
-      },
-      "validators": "unicode remove_whitespace benap_https_validator",
-      "help_text": {
-        "en": "This is a test",
-        "fr": "This is a test",
-        "nl": "This is a test",
-        "de": "This is a test"
-      },
-      "form_snippet": "doc_upload.html",
-      "form_placeholder": "",
-      "upload_field": "upload_doc",
-      "upload_clear": "clear_upload_doc",
-      "upload_label": "SRTI DOC"
-    },
-    {
-      "field_name": "rtti_doc_document_upload",
-      "label": {
-        "en": "RTTI DOC",
-        "fr": "RTTI DOC",
-        "nl": "RTTI DOC",
-        "de": "RTTI DOC"
-      },
-      "validators": "unicode remove_whitespace benap_https_validator",
-      "help_text": {
-        "en": "This is a test",
-        "fr": "This is a test",
-        "nl": "This is a test",
-        "de": "This is a test"
-      },
-      "form_snippet": "doc_upload.html",
-      "form_placeholder": "",
-      "upload_field": "rtti_upload_doc",
-      "upload_clear": "rtti_clear_upload_doc",
-      "upload_label": "RTTI DOC"
     }
   ]
 }
