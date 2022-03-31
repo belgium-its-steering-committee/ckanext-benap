@@ -446,7 +446,7 @@ msgid ""
 msgstr ""
 "Transportdata.be is the National Access Point for data regarding "
 "Multimodal Transport Information Services (MMTIS), Real Time Traffic "
-"Information (RTTI), Safety Related Traffic Information (SRTI and Sage and"
+"Information (RTTI), Safety Related Traffic Information (SRTI and Safe and"
 " Secure Tuck Parkings (SSTP)."
 
 #: ckanext/benap/templates/home/snippets/promoted.html:16
@@ -454,7 +454,7 @@ msgid ""
 "Obtain practical information on how to register your organization, "
 "datasets and services."
 msgstr ""
-"Obtain practival information on how to register your organization, "
+"Obtain practical information on how to register your organization, "
 "datasets and services."
 
 #: ckanext/benap/templates/home/snippets/report.html:6
@@ -502,7 +502,7 @@ msgstr "Popular Tags"
 
 #: ckanext/benap/templates/home/snippets/search.html:27
 msgid "ADD NEW DATA"
-msgstr "ADD NEW DATA"
+msgstr "Add datasets and services"
 
 #: ckanext/benap/templates/home/snippets/search.html:29
 msgid "Data providers can easily add data to the catalogue."

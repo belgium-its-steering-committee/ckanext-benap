@@ -405,24 +405,20 @@ msgid ""
 "As transport data producer or user, join our online community and benefit"
 " from experience-sharing with your fellows!"
 msgstr ""
-"Apprenez comment consulter les jeux de données et services.Découvrez le "
-"secteur belge des transports.Obtenez des informations pratiques sur la "
-"manière de (ré)utiliser les jeux de données et les services du NAP ITS."
+"Apprenez comment consulter les jeux de données et services."
 
 #: ckanext/benap/templates/home/snippets/community.html:16
 msgid "Discover the Belgian transport landscape."
-msgstr ""
+msgstr "Découvrez le secteur belge des transports."
 
 #: ckanext/benap/templates/home/snippets/community.html:19
 #, fuzzy
 #| msgid "" "Obtain practical information on how to register your organization,
 #| " "datasets and services."
 msgid ""
-"Obtain practical information on how to (re)use datasets and services from"
-" the NAP ITS."
+"Obtain practical information on how to (re)use datasets and services from the NAP ITS."
 msgstr ""
-"Obtenez des informations pratiques sur la manière d'enregistrer votre "
-"organisation, vos ensembles de données et vos services. "
+"Obtenez des informations pratiques sur la manière de (ré)utiliser les jeux de données et les services du NAP ITS."
 
 #: ckanext/benap/templates/home/snippets/community.html:23
 msgid "Join"
@@ -442,7 +438,7 @@ msgstr " notre service d'assistance"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:8
 msgid "DISCOVER TRANSPORTDATA.BE"
-msgstr "DECOUVREZ LE NAP ITS & ENRIGISTRER DU CONTENU"
+msgstr "DECOUVREZ LE NAP ITS & ENREGISTRER DU CONTENU"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:9
 msgid "AND HOW YOU ARE INVOLVED"
@@ -456,7 +452,7 @@ msgid ""
 msgstr ""
 "Transportdata.be est le point d’accès national pour les données "
 "concernent services d’informations sur les déplacements multimodaux "
-"(MMTIS), Services d’informations en temps reel sur la circulation (RTTI),"
+"(MMTIS), Services d’informations en temps réel sur la circulation (RTTI),"
 " Informations liées à la sécurité routière (SRTI) et des services "
 "d’informations concernant les aires de stationnement sûres et sécurisées "
 "pour les comions et les véhicules commerciaux (SSTP)."
@@ -514,7 +510,7 @@ msgstr "Tags fréquents"
 
 #: ckanext/benap/templates/home/snippets/search.html:27
 msgid "ADD NEW DATA"
-msgstr "AJOUTER NOUVELLES DONNEES"
+msgstr "Ajouter des jeux de données et services"
 
 #: ckanext/benap/templates/home/snippets/search.html:29
 msgid "Data providers can easily add data to the catalogue."
@@ -754,6 +750,10 @@ msgstr ""
 "l'oublier) contenant uniquement des lettres minuscules et aucun caractère"
 " spécial sauf - et _ Remplissez les autres champs et appuyez sur \"Créer "
 "un compte\""
+
+
+msgid "Upload"
+msgstr "Télécharger"
 
 #~ msgid ""
 #~ msgstr ""

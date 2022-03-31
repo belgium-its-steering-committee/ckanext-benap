@@ -55,13 +55,15 @@
         "nl": "NAP type",
         "de": "NAP type"
       },
+      "help_allow_html": true,
       "help_text": {
         "en": "Select for which NAP(s) you are registering dataset or service. It is possible to select multiple NAPs. Providing the correct NAP(s) is essential to comply with the applicable Delegated Regulations. For more information about this and the different NAPs, please see our About section.",
         "nl": "Selecteer voor welk(e) NAP(s) u de dataset of dienst registreert. Het is mogelijk om meerdere NAPs te selecteren. Het is essentieel om de correcte NAP(s) te vermelden om in overeenstemming te zijn met de Gedelegeerde verordeningen. Voor meer information hierover en de verschillende NAPs, raadpleeg onze About sectie.",
-        "fr": "Sélectionnez pour quel(s) NAP vous enregistrez le jeu de données ou le service. Il est possible de sélectionner plusieurs NAP. Il est essentiel de mentionner le(s) bon(s) NAP pour être en conformité avec les Règlements délégués. Pour de plus amples informations à ce sujet et sure le différents NAP, consultez notre section A propos.",
-        "de": "Wählen Sie aus, für welchen NAP Sie den Datensatz oder Dienst registrieren. Es ist möglich, mehrere NAPs auszuwählen. Es ist sehr wichting, den/die richtigen NAP(s) anzugeben, um mit den Delegierten Verordnungen zu übereinstimmen. Weitere Informationen dazu un über die verschiedenen NAPs finden Sie in unserer Seite Über."
+        "fr": "Sélectionnez pour quel(s) NAP(s) vous enregistrez le jeu de données ou le service. Il est possible de sélectionner plusieurs NAP. Il est essentiel de mentionner le(s) bon(s) NAP(s) pour être en conformité avec les Règlements délégués. Pour de plus amples informations à ce sujet et sure les différents NAP, consultez notre section A propos.",
+        "de": "Wählen Sie aus, für welchen NAP Sie den Datensatz oder Dienst registrieren. Es ist möglich, mehrere NAPs auszuwählen. Es ist sehr wichting, den/die richtigen NAP(s) anzugeben, um mit den Delegierten Verordnungen zu übereinstimmen. Weitere Informationen dazu und über die verschiedenen NAPs finden Sie in unserer Seite Über."
       },
-      "preset": "multiple_select",
+
+      "preset": "multiple_checkbox",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "nap_type",
       "required": "true"
@@ -74,12 +76,12 @@
         "nl": "Type van de dataset",
         "de": "Datensatztyp"
       },
-      "preset": "multiple_select",
+      "preset": "multiple_checkbox",
       "help_text": {
-        "en": "Choose one or multiple relevant dataset types",
-        "fr": "Choisissez un ou plusieurs types de données pertinents",
-        "nl": "Kies een of meerdere relevante dataset types",
-        "de": "Wählen Sie einen oder mehrere relevante Datensatztypen aus "
+        "en": "Choose one or multiple relevant dataset types.",
+        "fr": "Choisissez un ou plusieurs types de données pertinents.",
+        "nl": "Kies een of meerdere relevante dataset types.",
+        "de": "Wählen Sie einen oder mehrere relevante Datensatztypen aus."
       },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "dataset_type"
@@ -156,7 +158,7 @@
       "help_text": {
         "en": "\"Travel information service\" means an ITS service, including digital maps, that provides users and end-users, with travel and traffic information of at least one transport mode.",
         "fr": "On entend par \"Service d'information sur les déplacements\" un service STI incluant des cartes numériques  et fournissant aux utilisateurs et utilisateurs finaux  des informations de trafic et de déplacement d'au moins un mode de transport.",
-        "nl": "Door \"Reisinformatiedienst\" wordt een ITS dienst verstaan, die digitale kaarten inhoudt en aan gebruikers en eindgebruikers verkeers- en reisinformatie voor minstens één vervoersmiddel bezorgt.  ",
+        "nl": "Door \"Reisinformatiedienst\" wordt een ITS dienst verstaan, die digitale kaarten inhoudt en aan gebruikers en eindgebruikers verkeers- en reisinformatie voor minstens één vervoersmiddel bezorgt. ",
         "de": "Mit \"Reiseinformationsdienst\" wird ein IVS-Dienst verstanden, der digitale Karten beinhaltet und Benutzern und End-Benutzern Verkehrs- und Reiseinformationen für zumindest ein Beförderungsmittel erteilt."
       },
       "required": "true"
@@ -179,8 +181,8 @@
       "help_text": {
         "en": "The \"contact point\", describes an organisation, if applicable a person, which is responsible for the creation and maintenance of the metadata. This person or organization is the single point of contact for the present metadata set. The next field may be used to keep the dataset \"private\" within the organisation for internal review before effective publication.",
         "fr": "Le \"point de contact\" décrit une organisation, ou une personne si d'application, qui est responsable de la création et de la mise à jour des métadonnées. Cette personne ou organisation est le point de contact unique pour le présent jeu de métadonnées.  Le champ suivant peut être utilisé pour garder le jeu de données \"privé\" au sein de l'organisation pour révision interne avant publication effective.",
-        "nl": "Het \"contactpunt\" beschrijft een organisatie, of een persoon indien van toepassing, die verantwoordelijk is voor de aanmaak en bijwerking van de metadata. Deze persoon of organisatie is het één contactpunt voor deze set van metadata. Het volgende veld kan gebruikt worden om ter interne herziening voor effectieve publicatie de dataset \"privé\" te houden binnen de organisatie. ",
-        "de": "Der \"Kontaktpunkt\" beschreibt eine Organisation, oder gegebenenfalls eine Person, die für die Herstellung und Aktualisierung von Metadaten verantwortlich ist. Diese Person oder Organisation ist der einzige Kontaktpunkt für diesen Metadatensatz. Das folgende Feld kann benutzt werden, um für interne Prüfung vor der effektiven Publikation den Datensatz \"privat\" zu halten innerhalb von der Organisation.  "
+        "nl": "Het \"contactpunt\" beschrijft een organisatie, of een persoon indien van toepassing, die verantwoordelijk is voor de aanmaak en bijwerking van de metadata. Deze persoon of organisatie is het één contactpunt voor deze set van metadata. Het volgende veld kan gebruikt worden om ter interne herziening voor effectieve publicatie de dataset \"privé\" te houden binnen de organisatie.",
+        "de": "Der \"Kontaktpunkt\" beschreibt eine Organisation, oder gegebenenfalls eine Person, die für die Herstellung und Aktualisierung von Metadaten verantwortlich ist. Diese Person oder Organisation ist der einzige Kontaktpunkt für diesen Metadatensatz. Das folgende Feld kann benutzt werden, um für interne Prüfung vor der effektiven Publikation den Datensatz \"privat\" zu halten innerhalb von der Organisation. "
       },
       "required": "true"
     },
@@ -208,7 +210,7 @@
         "en": "The \"publisher\" describes an entity (company and person) that publishes the datasets (we are not refering to the metadata here, but rather to the data themselves). He or she is responsible for the given information and must be contacted by data consumers if a contract needs to be concluded.",
         "fr": "L'\"éditeur\" décrit une entité (entreprise et personne) qui publie les jeux de données (nous ne nous référons pas ici aux métadonnées mais plutôt aux données elles-mêmes). Il ou elle est responsable des informations données et doit être contacté(e) par les consommateurs de données si un contrat doit être conclu.",
         "nl": "De \"uitgever\" beschrijft een entiteit (bedrijf of persoon) die de datasets publiceert (we verwijzen hier niet naar de metadata maar eerder naar de gegevens zelfs). Hij of zij is verantwoordelijk voor de gegeven informatie en moet door gegevensverbruikers gecontacteerd worden indien een overeenkomst moet worden gesloten. ",
-        "de": "Der \"Herausgeber\" beschreibt eine Entität (Unternehmen oder Person), die die Datensätze publiziert (wir beziehen uns hier nicht auf die Metadaten sondern eher auf die Daten selbst). Er oder sie ist verantwortlich für die gegebene Information und muss von Datenverbrauchern kontaktiert werden, wenn ein Vertrag geschlossen werden muss. "
+        "de": "Der \"Herausgeber\" beschreibt eine Entität (Unternehmen oder Person), die die Datensätze publiziert (wir beziehen uns hier nicht auf die Metadaten sondern eher auf die Daten selbst). Er oder sie ist verantwortlich für die gegebene Information und muss von Datenverbrauchern kontaktiert werden, wenn ein Vertrag geschlossen werden muss."
       },
       "form_snippet": "text_autocomplete.html",
       "required": "true"
@@ -309,7 +311,7 @@
         "en": "Describes from which date and time on the data delivery is applicable. If left empty, the publication is considered as available immediately.",
         "fr": "Décrit à partir de quelle date et heure s'applique la livraison des  données. Si laissé vide, la publication est considérée comme disponible immédiatement.",
         "nl": "Beschrijft vanaf welke datum en uur de gegevenslevering van toepassing is. Indien leeg gelaten, wordt de publicatie als rechtstreeks beschikbaar beschouwd.",
-        "de": "Beschreibt ab welchem Datum und welcher Uhr die Datenlieferung gilt. Wenn es leer gelassen wird, wird die Publikation als sofort verfügbar betrachtet. "
+        "de": "Beschreibt ab welchem Datum und welcher Uhr die Datenlieferung gilt. Wenn es leer gelassen wird, wird die Publikation als sofort verfügbar betrachtet."
       },
       "required": "true"
     },
@@ -346,10 +348,10 @@
       },
       "preset": "multiple_select",
       "help_text": {
-        "en": "Describes the countries covered by the data set (Belgium is mandatory)",
-        "fr": "Beschrijft de EU-lidstaten gedekt door de dataset ",
-        "nl": "Décrit les Etats membres de l'UE couverts par le jeu de données",
-        "de": "Beschreibt die EU-Mitgliedstaaten, die vom Datensatz gedeckt werden "
+        "en": "Describes the countries covered by the data set (Belgium is mandatory).",
+        "fr": "Beschrijft de EU-lidstaten gedekt door de dataset.",
+        "nl": "Décrit les Etats membres de l'UE couverts par le jeu de données.",
+        "de": "Beschreibt die EU-Mitgliedstaaten, die vom Datensatz gedeckt werden."
       },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "EU_COUNTRY",
@@ -534,11 +536,11 @@
             },
           "help_text": {
               "en": "For every NAP you register datasets or services (MMTIS, RTTI, SRTI, SSTP), your organization must submit a form in which it declares to be compliant to the respective European regulations regarding the NAP. <a>For more information click here.</a>\n\nRegistering this dataset or service might therefore require submitting an additional declaration of compliance or an update of the existing declaration(s) of your organization.",
-              "fr": "Pour chaque NAP sur lequel vous enregistrez des jeux de données ou des services (MMTIS, RTTI, SRTI, SSTP), votre organisation doit introduire un formulaire où elle déclare être en conformité avec les Règlements européens respectifs. <a>Pour de plus amples informations, cliquez ici.</a>\n\nLors de l’enregistrement de ce jeu de données ou service, il se peut dès lors que votre organisation doive introduire une déclaration de conformité supplémentaire ou actualiser une déclaration existante.",
+              "fr": "Pour chaque NAP sur lequel vous enregistrez des jeux de données ou des services (MMTIS, RTTI, SRTI, SSTP), votre organisation doit déclarer d’être en conformité avec les Règlements européens respectifs. <a>Pour de plus amples informations, cliquez ici.</a>\n\nLors de l’enregistrement de ce jeu de données ou service, il se peut dès lors que votre organisation doive introduire une déclaration de conformité supplémentaire ou actualiser une déclaration existante.",
               "nl": "Voor elk NAP waarvoor u datasets of diensten  registreert (MMTIS, RTTI, SRTI, SSTP) moet uw organisatie een formulier indienen voor elk type NAP waarbij uw organisatie aangeeft in overeenstemming te zijn met de respectievelijke Europese Verordeningen betreffende het NAP. <a>Voor meer informatie klik hier.</a>\n\nDoor de registratie van deze dataset of dienst kan het daarom noodzakelijk zijn voor uw organisatie om een bijkomende verklaring van overeenstemming in te dienen of een bestaande verklaringen te updaten.",
               "de": "Für jeden NAP, worauf Sie Datensätze oder Dienste registrieren (MMTIS, RTTI, SRTI, SSTP), muss Ihre Organisation ein Formular eintragen, wo sie ihre Beachtung der jeweiligen europäischen Verordnungen bestätigt. <a>Klicken Sie hier für weitere Informationen.</a>\n\nWenn Sie diesen Datensatz oder Dienst registrieren, kann es dadurch notwendig sein, daβ Ihre Organisation eine zusätzliche  Übereinstimmungserklärung einträgt oder eine bestehende Erklärung aktualisiert."
            },
-          "help_link": "/pages/compliance"
+           "help_link": "/pages/compliance"
          }
       ],
       "required": "true"
@@ -554,10 +556,10 @@
         "de": "Zugangs-URL"
       },
       "help_text": {
-        "en": "See explanation on the left side. Links must start with \"http://\", or \"https://\". Max. filesize is 25Mb)",
-        "fr": "Voir l'explication à gauche. Les liens doivent commencer par \"http: //\", ou \"https: //\". La taille maximale du fichier est de 25 Mo",
-        "nl": "Zie uitleg aan de linkerkant. Links moeten beginnen met \"http: //\", of \"https: //\". Maximale bestandsgrootte is 25Mb",
-        "de": "Siehe Erklärung auf der linken Seite. Links müssen mit \"http: //\" oder \"https: //\" beginnen. Die maximale Dateigröße beträgt 25 MB"
+        "en": "See explanation on the left side. Links must start with \"http://\", or \"https://\". Max. filesize is 25Mb).",
+        "fr": "Voir l'explication à gauche. Les liens doivent commencer par \"http: //\", ou \"https: //\". La taille maximale du fichier est de 25 Mo.",
+        "nl": "Zie uitleg aan de linkerkant. Links moeten beginnen met \"http: //\", of \"https: //\". Maximale bestandsgrootte is 25Mb.",
+        "de": "Siehe Erklärung auf der linken Seite. Links müssen mit \"http: //\" oder \"https: //\" beginnen. Die maximale Dateigröße beträgt 25 MB."
       },
       "form_snippet": "upload.html",
       "form_placeholder": "http://example.com/my-data.csv",
@@ -745,8 +747,8 @@
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "EU-language",
       "help_text": {
-        "en": "Describes the language of the data contents (text fields, addresses etc.)",
-        "fr": "Décrit la langue des contenus de données (champs textuels, adresses, etc.) ",
+        "en": "Describes the language of the data contents (text fields, addresses etc.).",
+        "fr": "Décrit la langue des contenus de données (champs textuels, adresses, etc.). ",
         "nl": "Beschrijft de taal van de gegevensinhouden (tekstvelden, adressen, enz.).",
         "de": "Beschreibt die Sprache der Dateninhälte (Textfelde, Adressen, usw.)."
       },
@@ -762,10 +764,10 @@
       },
       "preset": "multiple_select",
       "help_text": {
-        "en": "Define the georeferencing method if the dataset consists of geographically referenced data",
-        "fr": "Spécifiez la méthode de géoréférencement si le jeu de données est constitué de données géographiquement référencées",
-        "nl": "Beschrijf de georefentiemethode indien de dataset gegeorefereerde data bevat",
-        "de": "Bestimmen Sie die Georeferenzierungsmethode, wenn der Datensatz aus räumlich referenzierten Daten besteht"
+        "en": "Define the georeferencing method if the dataset consists of geographically referenced data.",
+        "fr": "Spécifiez la méthode de géoréférencement si le jeu de données est constitué de données géographiquement référencées.",
+        "nl": "Beschrijf de georefentiemethode indien de dataset gegeorefereerde data bevat.",
+        "de": "Bestimmen Sie die Georeferenzierungsmethode, wenn der Datensatz aus räumlich referenzierten Daten besteht."
       },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "georeferencing_method"
