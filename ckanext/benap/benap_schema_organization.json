@@ -282,7 +282,7 @@
         "nl": "Verklaring van overeenstemming RTTI",
         "de": "Konformitätserklärung RTTI"
       },
-      "validators": "unicode remove_whitespace benap_https_validator",
+      "validators": "unicode remove_whitespace benap_https_validator benap_pdf_validator",
       "help_text": {
         "en": "",
         "fr": "",
@@ -303,7 +303,7 @@
         "nl": "Verklaring van overeenstemming SRTI",
         "de": "Konformitätserklärung SRTI"
       },
-      "validators": "unicode remove_whitespace benap_https_validator",
+      "validators": "unicode remove_whitespace benap_https_validator benap_pdf_validator",
       "help_text": {
         "en": "",
         "fr": "",
