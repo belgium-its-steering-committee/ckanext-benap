@@ -108,9 +108,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
 
     def before_view(self, pkg_dict):
         pkg_dict.pop('agreement_declaration', None)
-        print("#"*25)
-        print(json.dumps(pkg_dict))
-        print("#"*25)
         return pkg_dict
 
 
