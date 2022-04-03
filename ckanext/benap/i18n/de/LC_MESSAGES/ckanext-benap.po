@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-03-25 17:28+0100\n"
+"POT-Creation-Date: 2022-04-03 21:08+0200\n"
 "PO-Revision-Date: 2019-09-20 17:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -18,15 +18,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
-
-#: ckanext/benap/plugin.py:83
-msgid "Area covered by publication"
-msgstr ""
-
-#: ckanext/benap/plugin.py:84
-#, fuzzy
-msgid "Dataset Type"
-msgstr "Datensätze"
 
 #: ckanext/benap/validators.py:26
 msgid "Phone number {number} is not a valid format"
@@ -79,10 +70,10 @@ msgstr "Cookies verwalten"
 
 #: ckanext/benap/templates/footer.html:85
 msgid ""
-"2019 - By the National Geographic Institute on behalf of the ITS steering"
+"2022 - By the National Geographic Institute on behalf of the ITS steering"
 " commitee."
 msgstr ""
-"2019 - By the National Geographic Institute on behalf of the ITS steering"
+"2022 - By the National Geographic Institute on behalf of the ITS steering"
 " commitee."
 
 #: ckanext/benap/templates/header.html:83
@@ -384,17 +375,17 @@ msgstr "Über"
 msgid "Search"
 msgstr "Suche"
 
-#: ckanext/benap/templates/home/layout3.html:32
+#: ckanext/benap/templates/home/layout3.html:31
 #: ckanext/benap/templates/home/snippets/newsletter.html:7
 msgid "Subscribe to our newsletter and stay informed"
 msgstr "Abonnieren Sie unseren Newsletter und bleiben Sie informiert"
 
-#: ckanext/benap/templates/home/layout3.html:36
+#: ckanext/benap/templates/home/layout3.html:35
 #: ckanext/benap/templates/home/snippets/newsletter.html:13
 msgid "Enter your email address"
 msgstr "Geben sie ihre E-Mailadresse ein"
 
-#: ckanext/benap/templates/home/layout3.html:37
+#: ckanext/benap/templates/home/layout3.html:36
 #: ckanext/benap/templates/home/snippets/newsletter.html:14
 msgid "Subscribe"
 msgstr "Abonnieren"
@@ -403,25 +394,25 @@ msgstr "Abonnieren"
 msgid "JOIN OUR COMMUNITY FORUM"
 msgstr "ZUGANG UND (WIEDER-)VERWENDUNG VON INHALTEN AUS DEN NAP ITS"
 
-#: ckanext/benap/templates/home/snippets/community.html:13
+#: ckanext/benap/templates/home/snippets/community.html:14
 msgid ""
 "As transport data producer or user, join our online community and benefit"
 " from experience-sharing with your fellows!"
-msgstr ""
-"Erfahren Sie, wie Sie Datensätze und Dienste abfragen können."
+msgstr "Erfahren Sie, wie Sie Datensätze und Dienste abfragen können."
 
-#: ckanext/benap/templates/home/snippets/community.html:16
+#: ckanext/benap/templates/home/snippets/community.html:19
 msgid "Discover the Belgian transport landscape."
 msgstr "Entdecken Sie die belgische Verkehrslandschaft."
 
-#: ckanext/benap/templates/home/snippets/community.html:19
+#: ckanext/benap/templates/home/snippets/community.html:24
 msgid ""
 "Obtain practical information on how to (re)use datasets and services from"
 " the NAP ITS."
 msgstr ""
-"Praktische Informationen über die (Wieder-)Verwendung von Datensätzen und Diensten des NAP ITS erhalten."
+"Praktische Informationen über die (Wieder-)Verwendung von Datensätzen und"
+" Diensten des NAP ITS erhalten."
 
-#: ckanext/benap/templates/home/snippets/community.html:23
+#: ckanext/benap/templates/home/snippets/community.html:29
 msgid "Join"
 msgstr "Melden Sie sich an"
 
@@ -437,27 +428,42 @@ msgstr "Kontaktieren"
 msgid " our helpdesk."
 msgstr " Sie unseren Helpdesk"
 
-#: ckanext/benap/templates/home/snippets/promoted.html:8
+#: ckanext/benap/templates/home/snippets/promoted.html:7
 msgid "DISCOVER TRANSPORTDATA.BE"
 msgstr "ENTDECKEN SIE NAP ITS & REGISTER CONTENT"
 
-#: ckanext/benap/templates/home/snippets/promoted.html:9
+#: ckanext/benap/templates/home/snippets/promoted.html:8
 msgid "AND HOW YOU ARE INVOLVED"
 msgstr "UND WIE SIE DARAN BETEILIGT SIND"
 
-#: ckanext/benap/templates/home/snippets/promoted.html:13
+#: ckanext/benap/templates/home/snippets/promoted.html:12
+#: ckanext/benap/templates/home/snippets/promoted.html:27
 msgid ""
 "Transportdata.be is the preferred access point for information on "
 "Intelligent Transport Systems (ITS). This national platform aims to "
 "centralize access to ITS datasets and web services."
 msgstr ""
-"Transportdata.be ist der nationale Zugangspunkt für Daten zum "
-"multimodaler Reiseinformationsdienste (MMTIS), Echtzeit "
-"Verkehrsinformationsdienste (RTTI), Straßenverkehrssicherheit relevanter "
-"Verkehrsinformationen (SRTI), Informationsdiensten für sichere Parkplätze"
-" für Lastkraftwagen und andere gewerbliche Fahrzeuge (SSTP)."
+"Transportdata.be ist der Belgische nationale Zugangspunkt für "
+"intelligente Transportsysteme und besteht aus Daten über:"
+
+#: ckanext/benap/templates/home/snippets/promoted.html:15
+msgid "MMTIS"
+msgstr "Daten zum multimodaler Reiseinformationsdienste (MMTIS)"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:16
+msgid "RRTI"
+msgstr "Echtzeit Verkehrsinformationsdienste (RTTI)"
+
+#: ckanext/benap/templates/home/snippets/promoted.html:17
+msgid "SRTI"
+msgstr "Straßenverkehrssicherheit relevanter Verkehrsinformationen (SRTI)"
+
+#: ckanext/benap/templates/home/snippets/promoted.html:18
+msgid "SSTP"
+msgstr "Informationsdiensten für sichere Parkplätze für Lastkraftwagen und andere gewerbliche Fahrzeuge (SSTP)"
+
+#: ckanext/benap/templates/home/snippets/promoted.html:21
+#: ckanext/benap/templates/home/snippets/promoted.html:32
 msgid ""
 "Obtain practical information on how to register your organization, "
 "datasets and services."
@@ -571,15 +577,15 @@ msgstr ""
 "Das Hinzufügen eines Links (oder das Hochladen einer Datei) ist gemäß der"
 " delegierten Verordnung (EU) 2017/1926 der Kommission obligatorisch."
 
-#: ckanext/benap/templates/snippets/facet_list.html:110
+#: ckanext/benap/templates/snippets/facet_list.html:111
 msgid "Show More {facet_type}"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:113
+#: ckanext/benap/templates/snippets/facet_list.html:114
 msgid "Show Only Popular {facet_type}"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:117
+#: ckanext/benap/templates/snippets/facet_list.html:118
 msgid "There are no {facet_type} that match this search"
 msgstr ""
 
@@ -770,4 +776,10 @@ msgstr ""
 
 #~ msgid "REPORT IT HERE"
 #~ msgstr "MELDEN SIE ES HIER"
+
+#~ msgid "Area covered by publication"
+#~ msgstr ""
+
+#~ msgid "Dataset Type"
+#~ msgstr "Datensätze"
 
