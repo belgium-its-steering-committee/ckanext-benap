@@ -340,10 +340,10 @@
     {
       "field_name": "organization_agreement_declaration",
       "label": {
-        "en": "",
-        "fr": "",
-        "nl": "",
-        "de": ""
+        "en": "Disclaimer Declarations of compliance",
+        "fr": "Avis de non-responsabilité Déclarations de conformité",
+        "nl": "Disclaimer Verklaringen van overeenstemming",
+        "de": "Haftungsausschluss Entsprechenserklärungen"
       },
       "multi_help": "true",
       "preset": "multiple_radio_compliance",
