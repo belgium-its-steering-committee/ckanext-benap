@@ -340,10 +340,10 @@
     {
       "field_name": "organization_agreement_declaration",
       "label": {
-        "en": "Declaration of compliance",
-        "fr": "Déclaration de conformité",
-        "nl": "Verklaring van overeenstemming",
-        "de": "Einhaltungserklärung"
+        "en": "",
+        "fr": "",
+        "nl": "",
+        "de": ""
       },
       "multi_help": "true",
       "preset": "multiple_radio_compliance",
