@@ -207,7 +207,7 @@ h1.logo span {
 .add-databox {
     background:#fff;
     color:#11406E;
-    flex:1;
+    flex:2;
     padding:1rem 2rem 3rem 2rem;
     margin:0
 }
@@ -762,4 +762,22 @@ span.item-count {
 
 .soft-label {
     font-weight: normal;
+}
+
+
+.scalable-ring {
+    object-fit: cover;
+    max-height: 292px;
+}
+
+@media only screen and (min-width: 992px) {
+    .scalable-ring {
+        max-height: 185px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .scalable-ring {
+        max-height: 225px;
+    }
 }

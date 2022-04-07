@@ -1,14 +1,18 @@
 # coding=utf-8
+from collections import OrderedDict
+
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckan.lib.plugins import DefaultTranslation
+import json
 
 from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallback, json_loads, \
-    package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete,\
+    package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete, \
     get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, get_translated_tag_with_name, \
-    forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element, get_organization_by_id
+    forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element, get_organization_by_id, benap_fluent_label
 from ckanext.benap.util.forms import map_for_form_select
-from ckanext.benap.validators import phone_number_validator, countries_covered_belgium, is_after_start, https_validator
+from ckanext.benap.validators import phone_number_validator, countries_covered_belgium, is_after_start, https_validator, \
+    pdf_validator
 from ckanext.benap.logic.auth.get import user_list
 
 
@@ -18,6 +22,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     plugins.implements(plugins.ITemplateHelpers, inherit=False)
     plugins.implements(plugins.IValidators, inherit=True)
     plugins.implements(plugins.IAuthFunctions, inherit=False)
+    plugins.implements(plugins.IFacets, inherit=True)
+    plugins.implements(plugins.IPackageController, inherit=True)
 
     geographic_granularity_map = [('', ''),
                                   ('national', 'National'),
@@ -25,6 +31,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
                                   ('province', 'province-'),
                                   ('municipality', 'municipality'),
                                   ('other', 'other')]
+
+    _validators = {}
 
     # IConfigurer
 
@@ -53,7 +61,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_forum_url': forum_url,
             'getTranslatedVideoUrl': getTranslatedVideoUrl,
             'get_organization_by_id': get_organization_by_id,
-            'show_element': show_element
+            'show_element': show_element,
+            'benap_fluent_label': benap_fluent_label
         }
 
     # IValidators
@@ -63,9 +72,9 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'phone_number_validator': phone_number_validator,
             'benap_countries_covered_belgium': countries_covered_belgium,
             'benap_is_after_start': is_after_start,
-            'benap_https_validator': https_validator
+            'benap_https_validator': https_validator,
+            'benap_pdf_validator': pdf_validator
         }
-
 
     # IAuthFunctions
 
@@ -73,4 +82,32 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         return {
             'user_list': user_list,
         }
+
+    # IFacets
+    def dataset_facets(self, facets_dict, package_type):
+        facets_dict = OrderedDict([
+            (u'nap_type', u'NAP Type'),
+            (u'its_dataset_type', u'Dataset Type'),
+            (u'tags', u'Tags'),
+            (u'regions_covered', u'Area covered by publication'),
+            (u'organization', u'Organizations'),
+            (u'res_format', u'Formats'),
+            (u'license_id', u'Licenses'),
+        ])
+        return facets_dict
+
+    # IPackageController
+    def before_index(self, pkg_dict):
+        if "regions_covered" in pkg_dict:
+            pkg_dict["regions_covered"] = json.loads(pkg_dict["regions_covered"])
+        if "nap_type" in pkg_dict:
+            pkg_dict["nap_type"] = json.loads(pkg_dict["nap_type"])
+        if "its_dataset_type" in pkg_dict:
+            pkg_dict["its_dataset_type"] = json.loads(pkg_dict["its_dataset_type"])
+        return pkg_dict
+
+    def before_view(self, pkg_dict):
+        pkg_dict.pop('agreement_declaration', None)
+        return pkg_dict
+
 

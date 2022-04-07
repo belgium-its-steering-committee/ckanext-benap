@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-04-15 18:06+0200\n"
+"POT-Creation-Date: 2022-04-03 21:08+0200\n"
 "PO-Revision-Date: 2019-10-14 16:52+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -44,31 +44,35 @@ msgstr ""
 "déplacements multimodaux"
 
 #: ckanext/benap/templates/footer.html:9
+msgid "Follow us on LinkedIn"
+msgstr "Suivez-nous sur LinkedIn"
+
+#: ckanext/benap/templates/footer.html:10
 msgid "About Transportdata.be"
 msgstr "A propos de Transportdata.be"
 
-#: ckanext/benap/templates/footer.html:14
+#: ckanext/benap/templates/footer.html:15
 msgid "Github"
 msgstr "Github"
 
-#: ckanext/benap/templates/footer.html:16
+#: ckanext/benap/templates/footer.html:17
 msgid "CKAN API"
 msgstr "CKAN API"
 
-#: ckanext/benap/templates/footer.html:36
+#: ckanext/benap/templates/footer.html:40
 msgid "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 msgstr "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 
-#: ckanext/benap/templates/footer.html:41
+#: ckanext/benap/templates/footer.html:45
 msgid "Manage Cookies"
 msgstr "Gérer les Cookies"
 
-#: ckanext/benap/templates/footer.html:81
+#: ckanext/benap/templates/footer.html:85
 msgid ""
-"2019 - By the National Geographic Institute on behalf of the ITS steering"
+"2022 - By the National Geographic Institute on behalf of the ITS steering"
 " commitee."
 msgstr ""
-"2019 - By the National Geographic Institute on behalf of the ITS steering"
+"2022 - By the National Geographic Institute on behalf of the ITS steering"
 " commitee."
 
 #: ckanext/benap/templates/header.html:83
@@ -368,82 +372,122 @@ msgstr "A propos"
 msgid "Search"
 msgstr "Recherche"
 
-#: ckanext/benap/templates/home/snippets/community.html:7
-msgid "JOIN OUR COMMUNITY FORUM"
-msgstr "REJOIGNEZ NOTRE FORUM COMMUNAUTAIRE"
-
-#: ckanext/benap/templates/home/snippets/community.html:12
-msgid ""
-"As transport data producer or user, join our online community and benefit"
-" from experience-sharing with your fellows!"
-msgstr ""
-"En tant que producteur ou utilisateur de données de transport, rejoignez "
-"notre communauté en ligne et profitez du partage d'expérience avec vos "
-"collègues!"
-
-#: ckanext/benap/templates/home/snippets/community.html:15
-msgid "Join"
-msgstr "Inscrivez-vous"
-
-#: ckanext/benap/templates/home/snippets/feedback.html:5
-msgid "Need help? "
-msgstr "Besoin d'aide? "
-
-#: ckanext/benap/templates/home/snippets/feedback.html:6
-msgid "Contact"
-msgstr "Contactez"
-
-#: ckanext/benap/templates/home/snippets/feedback.html:7
-msgid " our helpdesk."
-msgstr " notre service d'assistance"
-
-#: ckanext/benap/templates/home/snippets/newsletter.html:6
+#: ckanext/benap/templates/home/layout3.html:31
+#: ckanext/benap/templates/home/snippets/newsletter.html:7
 msgid "Subscribe to our newsletter and stay informed"
 msgstr "Pour rester informé, inscrivez-vous à la lettre de diffusion"
 
-#: ckanext/benap/templates/home/snippets/newsletter.html:11
+#: ckanext/benap/templates/home/layout3.html:35
+#: ckanext/benap/templates/home/snippets/newsletter.html:13
 msgid "Enter your email address"
 msgstr "Entrez votre adresse email"
 
-#: ckanext/benap/templates/home/snippets/newsletter.html:12
+#: ckanext/benap/templates/home/layout3.html:36
+#: ckanext/benap/templates/home/snippets/newsletter.html:14
 msgid "Subscribe"
 msgstr "Inscrivez-vous"
 
-#: ckanext/benap/templates/home/snippets/promoted.html:8
-msgid "DISCOVER TRANSPORTDATA.BE"
-msgstr "DECOUVREZ TRANSPORTDATA.BE"
+#: ckanext/benap/templates/home/snippets/community.html:7
+msgid "JOIN OUR COMMUNITY FORUM"
+msgstr "ACCÉDER ET (RÉ)UTILISER LE CONTENU DU NAP ITS"
 
-#: ckanext/benap/templates/home/snippets/promoted.html:9
+#: ckanext/benap/templates/home/snippets/community.html:14
+msgid ""
+"As transport data producer or user, join our online community and benefit"
+" from experience-sharing with your fellows!"
+msgstr "Apprenez comment consulter les jeux de données et services."
+
+#: ckanext/benap/templates/home/snippets/community.html:19
+msgid "Discover the Belgian transport landscape."
+msgstr "Découvrez le secteur belge des transports."
+
+#: ckanext/benap/templates/home/snippets/community.html:24
+#, fuzzy
+msgid ""
+"Obtain practical information on how to (re)use datasets and services from"
+" the NAP ITS."
+msgstr ""
+"Obtenez des informations pratiques sur la manière de (ré)utiliser les "
+"jeux de données et les services du NAP ITS."
+
+#: ckanext/benap/templates/home/snippets/community.html:29
+msgid "Join"
+msgstr "Inscrivez-vous"
+
+#: ckanext/benap/templates/home/snippets/feedback.html:6
+msgid "Need help? "
+msgstr "Besoin d'aide? "
+
+#: ckanext/benap/templates/home/snippets/feedback.html:7
+msgid "Contact"
+msgstr "Contactez"
+
+#: ckanext/benap/templates/home/snippets/feedback.html:8
+msgid " our helpdesk."
+msgstr " notre service d'assistance"
+
+#: ckanext/benap/templates/home/snippets/promoted.html:7
+msgid "DISCOVER TRANSPORTDATA.BE"
+msgstr "DECOUVREZ LE NAP ITS & ENREGISTRER DU CONTENU"
+
+#: ckanext/benap/templates/home/snippets/promoted.html:8
 msgid "AND HOW YOU ARE INVOLVED"
 msgstr "ET COMMENT VOUS ÊTES IMPLIQUÉ"
 
-#: ckanext/benap/templates/home/snippets/promoted.html:13
+#: ckanext/benap/templates/home/snippets/promoted.html:12
+#: ckanext/benap/templates/home/snippets/promoted.html:27
 msgid ""
 "Transportdata.be is the preferred access point for information on "
 "Intelligent Transport Systems (ITS). This national platform aims to "
 "centralize access to ITS datasets and web services."
 msgstr ""
-"Transportdata.be est le point d’accès national pour les données du "
-"transport de personnes. Par fournir des données et des services web, nous"
-" voulons faciliter le développement des planificateurs du voyage "
-"multimodaux."
+"Transportdata.be est le point d'accès national Belge pour les systèmes "
+"de transport intelligents et comprend des données concernant:"
 
-#: ckanext/benap/templates/home/snippets/report.html:5
+#: ckanext/benap/templates/home/snippets/promoted.html:15
+msgid "MMTIS"
+msgstr "Services d’informations sur les déplacements multimodaux (MMTIS)"
+
+#: ckanext/benap/templates/home/snippets/promoted.html:16
+msgid "RRTI"
+msgstr "Services d’informations en temps réel sur la circulation (RTTI)"
+
+#: ckanext/benap/templates/home/snippets/promoted.html:17
+msgid "SRTI"
+msgstr "Informations liées à la sécurité routière (SRTI)"
+
+#: ckanext/benap/templates/home/snippets/promoted.html:18
+msgid "SSTP"
+msgstr "Services d’informations concernant les aires de stationnement sûres et "
+"sécurisées pour les comions et les véhicules commerciaux (SSTP)"
+
+#: ckanext/benap/templates/home/snippets/promoted.html:21
+#: ckanext/benap/templates/home/snippets/promoted.html:32
+msgid ""
+"Obtain practical information on how to register your organization, "
+"datasets and services."
+msgstr ""
+"Obtenez des informations pratiques sur la manière d'enregistrer votre "
+"organisation, vos ensembles de données et vos services. "
+
+#: ckanext/benap/templates/home/snippets/report.html:6
 msgid ""
 "More detailed instructions on how to register your dataset(s) and or "
 "services can be found in the "
-msgstr "Des instructions plus détaillées sur la façon d'enregistrer vos données et services peuvent être consultées dans "
+msgstr ""
+"Des instructions plus détaillées sur la façon d'enregistrer vos données "
+"et services peuvent être consultées dans "
 
-#: ckanext/benap/templates/home/snippets/report.html:6
+#: ckanext/benap/templates/home/snippets/report.html:7
 #: ckanext/benap/templates/user/new.html:29
 msgid "about section"
 msgstr "la section à propos"
 
-#: ckanext/benap/templates/home/snippets/report.html:7
+#: ckanext/benap/templates/home/snippets/report.html:8
 msgid " and in our "
 msgstr " ou par l'intermédiaire notre "
 
-#: ckanext/benap/templates/home/snippets/report.html:8
+#: ckanext/benap/templates/home/snippets/report.html:9
 msgid "instruction video"
 msgstr "vidéo d'instructions"
 
@@ -454,12 +498,12 @@ msgstr "Par ex. environnement"
 #: ckanext/benap/templates/home/snippets/search.html:6
 msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
 msgstr ""
-"Point d&#39;accès national belge pour les services d'information sur les "
-"déplacements multimodaux"
+"Point d&#39;accès national belge pour les systemes de transport "
+"intelligents (NAP ITS)"
 
 #: ckanext/benap/templates/home/snippets/search.html:10
 msgid "SEARCH FOR DATA SETS"
-msgstr "RECHERCHER JEUX DE DONNEES"
+msgstr "RECHERCHER JEUX DE DONNEES & SERVICES"
 
 #: ckanext/benap/templates/home/snippets/search.html:12
 msgid "ex. transport, cars, trains, ..."
@@ -471,13 +515,13 @@ msgstr "Tags fréquents"
 
 #: ckanext/benap/templates/home/snippets/search.html:27
 msgid "ADD NEW DATA"
-msgstr "AJOUTER NOUVELLES DONNEES"
+msgstr "Ajouter des jeux de données et services"
 
 #: ckanext/benap/templates/home/snippets/search.html:29
 msgid "Data providers can easily add data to the catalogue."
 msgstr ""
-"Les fournisseurs de données peuvent facilement ajouter des données au "
-"catalogue."
+"Les fournisseurs de données peuvent facilement enregistrer des données et"
+" des services sur le NAP ITS."
 
 #: ckanext/benap/templates/home/snippets/search.html:31
 msgid "Add Data"
@@ -491,16 +535,18 @@ msgstr[1] "{num} Jeux de données"
 
 #: ckanext/benap/templates/organization/snippets/organization_item.html:59
 #, fuzzy
-#| msgid "Datasets"
 msgid "0 Datasets"
 msgstr "0 Jeux de données"
 
 #: ckanext/benap/templates/organization/snippets/organization_item.html:68
 #: ckanext/benap/templates/organization/snippets/organization_item.html:69
 #, fuzzy
-#| msgid "My Organizations"
 msgid "View {organization_name}"
 msgstr "Mes organisations"
+
+#: ckanext/benap/templates/package/search.html:5
+msgid "Filters"
+msgstr ""
 
 #: ckanext/benap/templates/package/snippets/resource_help.html:2
 msgid "What's a resource?"
@@ -529,15 +575,15 @@ msgstr ""
 "L'ajout d'un lien (ou le téléchargement d'un fichier) est obligatoire "
 "conformément au règlement délégué (UE) 2017/1926 de la Commission."
 
-#: ckanext/benap/templates/snippets/facet_list.html:96
+#: ckanext/benap/templates/snippets/facet_list.html:111
 msgid "Show More {facet_type}"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:99
+#: ckanext/benap/templates/snippets/facet_list.html:114
 msgid "Show Only Popular {facet_type}"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:103
+#: ckanext/benap/templates/snippets/facet_list.html:118
 msgid "There are no {facet_type} that match this search"
 msgstr ""
 
@@ -562,7 +608,7 @@ msgstr "Brouillon"
 msgid "Deleted"
 msgstr "Supprimé"
 
-#: ckanext/benap/templates/snippets/package_item.html:32
+#: ckanext/benap/templates/snippets/package_item.html:34
 msgid "This dataset has no description"
 msgstr "Ce jeu de données n'a pas de description."
 
@@ -730,4 +776,13 @@ msgstr ""
 
 #~ msgid "REPORT IT HERE"
 #~ msgstr "SIGNALEZ-LE ICI"
+
+#~ msgid "Area covered by publication"
+#~ msgstr ""
+
+#~ msgid "Dataset Type"
+#~ msgstr "Jeux de données"
+
+#~ msgid "Upload"
+#~ msgstr "Télécharger"
 

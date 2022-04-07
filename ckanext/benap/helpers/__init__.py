@@ -2,7 +2,10 @@
 import json
 import ckan.plugins.toolkit as toolkit
 from ckan.common import config
+
+from ckanext.benap.helpers.lists import NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE
 from ckanext.benap.util.forms import map_for_form_select
+from ckanext.scheming.helpers import scheming_get_dataset_schema
 
 
 def user_language():
@@ -362,26 +365,7 @@ def ontology_helper(context):
             }),
         ])
     elif ontology == "NUTS1_BE":
-        return map_for_form_select([
-            ('http://data.europa.eu/nuts/code/BE1', {
-                "en": u"RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
-                "fr": u"RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
-                "nl": u"RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
-                "de": u"RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST"
-            }),
-            ('http://data.europa.eu/nuts/code/BE2', {
-                "en": u"VLAAMS GEWEST",
-                "fr": u"VLAAMS GEWEST",
-                "nl": u"VLAAMS GEWEST",
-                "de": u"VLAAMS GEWEST"
-            }),
-            ('http://data.europa.eu/nuts/code/BE3', {
-                "en": u"RÉGION WALLONNE",
-                "fr": u"RÉGION WALLONNE",
-                "nl": u"RÉGION WALLONNE",
-                "de": u"RÉGION WALLONNE"
-            }),
-        ])
+        return map_for_form_select(NUTS1_BE)
     elif ontology == "NUTS3_BE":
         return map_for_form_select([
             ('http://data.europa.eu/nuts/code/BE100', {
@@ -588,9 +572,9 @@ def ontology_helper(context):
             }),
             ('Other', {
                 "en": u"Other",
-                "fr": u"Other",
-                "nl": u"Other",
-                "de": u"Other"
+                "fr": u"Autre",
+                "nl": u"Andere",
+                "de": u"Andere"
             }),
         ])
 
@@ -1015,6 +999,13 @@ def ontology_helper(context):
             }),
 
         ])
+    elif ontology == "georeferencing_method":
+        return map_for_form_select(GEOREFERENCING_METHOD)
+    elif ontology == "dataset_type":
+        return map_for_form_select(DATASET_TYPE)
+    elif ontology == "nap_type":
+        return map_for_form_select(NAP_TYPE)
+
     return None
 
 
@@ -1073,16 +1064,22 @@ def get_translated_tag_with_name(tagName, lang):
 
 
 def get_translated_tag(tag, lang):
+    tags = get_translated_tags()
+    tags.append(tuple([NUTS1_BE]))
+    tags.append(tuple([DATASET_TYPE]))
+    tags.append(tuple([NAP_TYPE]))
     try:
         return filter(lambda x: x[0] == tag['name'], [translated_tag for translated_taglist in
                                                       [categorized_tags[0] for categorized_tags in
-                                                       get_translated_tags()] for translated_tag in
+                                                       tags] for translated_tag in
                                                       translated_taglist])[0][1][lang]
     except:
         try:
             return tag['display_name']
         except KeyError:
             try:
+                if isinstance(tag, str):
+                    return tag
                 print('tag not found: ' + json.dumps(tag))
             except:
                 print('tag not found')
@@ -1163,7 +1160,7 @@ def get_translated_tags():
               })
          ], {
              "en": u"Scheduled",
-             "nl": u"Geregeld vervoer",
+             "nl": u"Openbaar vervoer",
              "fr": u"Services réguliers",
              "de": u"Linienverkehrsdienste"
          }),
@@ -1270,7 +1267,8 @@ def get_translated_tags():
              "nl": u"Persoonlijk vervoer",
              "fr": u"Modes personnels",
              "de": u"Individualverkehr"
-         })]
+         })
+    ]
 
 
 def filter_default_tags_only(items):
@@ -1323,12 +1321,23 @@ def get_organization_by_id(id):
         return organization.get('display_name')
 
 
-
-
 def show_element(x):
     print('\n\n show element \n\n')
     print(x)
     print('\n')
     return x
+
+
+def benap_fluent_label(field_name, field_label, lang):
+    """
+    Return a label for the input label for the given language
+    """
+    schema = scheming_get_dataset_schema('dataset')
+    if schema:
+        field_metadata = filter(lambda x: x['field_name'] == field_name, schema['dataset_fields'])
+        if len(field_metadata) > 0:
+            return field_metadata[0]['label'][lang]
+
+    return field_label
 
 
