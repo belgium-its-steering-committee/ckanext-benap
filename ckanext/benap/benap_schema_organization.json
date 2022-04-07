@@ -275,6 +275,16 @@
       ]
     },
     {
+      "field_name": "optional_comment",
+      "label": {
+        "en": "text box for optional comment",
+        "fr": "zone de texte pour commentaire facultatif",
+        "nl": "tekstveld voor optionele opmerking",
+        "de": "Textfeld für optionalen Kommentar"
+      },
+      "classes": ["margin-left-24"]
+    },
+    {
       "field_name": "rtti_doc_document_upload",
       "label": {
         "en": "Declaration of compliance RTTI",
@@ -292,8 +302,7 @@
       "form_snippet": "doc_upload.html",
       "form_placeholder": "declaration_of_compliance.pdf",
       "upload_field": "rtti_upload_doc",
-      "upload_clear": "rtti_clear_upload_doc",
-      "upload_label": "RTTI DOC"
+      "upload_clear": "rtti_clear_upload_doc"
     },
     {
       "field_name": "srti_doc_document_upload",
@@ -313,8 +322,7 @@
       "form_snippet": "doc_upload.html",
       "form_placeholder": "declaration_of_compliance.pdf",
       "upload_field": "upload_doc",
-      "upload_clear": "clear_upload_doc",
-      "upload_label": "SRTI DOC"
+      "upload_clear": "clear_upload_doc"
     },
     {
       "field_name": "sstp_doc_document_upload",
@@ -334,8 +342,7 @@
       "form_snippet": "doc_upload.html",
       "form_placeholder": "declaration_of_compliance.pdf",
       "upload_field": "sstp_upload_doc",
-      "upload_clear": "sstp_clear_upload_doc",
-      "upload_label": "SSTP DOC"
+      "upload_clear": "sstp_clear_upload_doc"
     },
     {
       "field_name": "organization_agreement_declaration",
