@@ -302,7 +302,13 @@
       "form_snippet": "doc_upload.html",
       "form_placeholder": "declaration_of_compliance.pdf",
       "upload_field": "rtti_upload_doc",
-      "upload_clear": "rtti_clear_upload_doc"
+      "upload_clear": "rtti_clear_upload_doc",
+      "upload_label": {
+        "en": "Declaration of compliance RTTI",
+        "fr": "Déclaration de conformité RTTI",
+        "nl": "Verklaring van overeenstemming RTTI",
+        "de": "Konformitätserklärung RTTI"
+      }
     },
     {
       "field_name": "srti_doc_document_upload",
@@ -322,7 +328,13 @@
       "form_snippet": "doc_upload.html",
       "form_placeholder": "declaration_of_compliance.pdf",
       "upload_field": "upload_doc",
-      "upload_clear": "clear_upload_doc"
+      "upload_clear": "clear_upload_doc",
+      "upload_label": {
+        "en": "Declaration of compliance SRTI",
+        "fr": "Déclaration de conformité SRTI",
+        "nl": "Verklaring van overeenstemming SRTI",
+        "de": "Konformitätserklärung SRTI"
+      }
     },
     {
       "field_name": "sstp_doc_document_upload",
@@ -342,7 +354,13 @@
       "form_snippet": "doc_upload.html",
       "form_placeholder": "declaration_of_compliance.pdf",
       "upload_field": "sstp_upload_doc",
-      "upload_clear": "sstp_clear_upload_doc"
+      "upload_clear": "sstp_clear_upload_doc",
+      "upload_label": {
+        "en": "Declaration of compliance SSTP",
+        "fr": "Déclaration de conformité SSTP",
+        "nl": "Verklaring van overeenstemming SSTP",
+        "de": "Konformitätserklärung SSTP"
+      }
     },
     {
       "field_name": "organization_agreement_declaration",
