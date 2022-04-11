@@ -398,7 +398,7 @@ msgstr "ZUGANG UND (WIEDER-)VERWENDUNG VON INHALTEN AUS DEN NAP ITS"
 msgid ""
 "As transport data producer or user, join our online community and benefit"
 " from experience-sharing with your fellows!"
-msgstr "Erfahren Sie, wie Sie Datensätze und Dienste abfragen können."
+msgstr "Lernen Sie, wie Sie Datensätze und Dienste abfragen können."
 
 #: ckanext/benap/templates/home/snippets/community.html:19
 msgid "Discover the Belgian transport landscape."
@@ -476,7 +476,7 @@ msgid ""
 "More detailed instructions on how to register your dataset(s) and or "
 "services can be found in the "
 msgstr ""
-"Ausführliche Answeisungen zum Registrieren Ihrer Datensätze und Dienste "
+"Ausführliche Answeisungen zur Registrierung Ihrer Datensätze und Dienste "
 "finden Sie im "
 
 #: ckanext/benap/templates/home/snippets/report.html:7
@@ -508,7 +508,7 @@ msgstr "SUCHEN NACH DATENSÄTZEN UND DIENSTEN"
 
 #: ckanext/benap/templates/home/snippets/search.html:12
 msgid "ex. transport, cars, trains, ..."
-msgstr "Zum B. Carsharing, Zug, Fahrradvermietung, usw."
+msgstr "z.B. Carsharing, Zug, Fahrradvermietung, usw."
 
 #: ckanext/benap/templates/home/snippets/search.html:18
 msgid "Popular Tags"
@@ -521,8 +521,7 @@ msgstr "Datensätze und Dienste hinzufügen"
 #: ckanext/benap/templates/home/snippets/search.html:29
 msgid "Data providers can easily add data to the catalogue."
 msgstr ""
-"Datenanbieter können auf einfache Wiese Datenstäze und Dienste im NAP ITS"
-" registrieren."
+"Datenanbieter können auf einfache Wiese Datenstäze und Dienste auf dem NAP ITS registrieren."
 
 #: ckanext/benap/templates/home/snippets/search.html:31
 msgid "Add Data"
@@ -740,7 +739,7 @@ msgstr "In unserem "
 
 #: ckanext/benap/templates/user/new.html:29
 msgid " to know more!"
-msgstr " erfahren Sie mehr!"
+msgstr " lernen Sie mehr!"
 
 #: ckanext/benap/templates/user/new.html:31
 msgid "How to sign up?"

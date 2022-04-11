@@ -436,15 +436,15 @@ msgid ""
 "Intelligent Transport Systems (ITS). This national platform aims to "
 "centralize access to ITS datasets and web services."
 msgstr ""
-"Transportdata.be is Belgiums National Access Point for Intelligent Transport Systems and includes data regarding:"
+"Transportdata.be is Belgium's National Access Point for Intelligent Transport Systems and includes data regarding:"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:15
 msgid "MMTIS"
-msgstr "Multimodal Transport Information Services (MMTIS)"
+msgstr "Multimodal Travel Information Services (MMTIS)"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:16
 msgid "RRTI"
-msgstr "Real Time Traffic Information (RTTI)"
+msgstr "Real Time Traffic Information services (RTTI)"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:17
 msgid "SRTI"
@@ -452,7 +452,7 @@ msgstr "Safety Related Traffic Information (SRTI)"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:18
 msgid "SSTP"
-msgstr "Safe and Secure Tuck Parkings (SSTP)"
+msgstr "Safe and Secure Truck Parkings (SSTP)"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:21
 #: ckanext/benap/templates/home/snippets/promoted.html:32
@@ -496,11 +496,11 @@ msgstr ""
 
 #: ckanext/benap/templates/home/snippets/search.html:10
 msgid "SEARCH FOR DATA SETS"
-msgstr ""
+msgstr "SEARCH FOR DATASETS & SERVICES"
 
 #: ckanext/benap/templates/home/snippets/search.html:12
 msgid "ex. transport, cars, trains, ..."
-msgstr "ex. car-sharing, train, bike-hire,…"
+msgstr "eg. car sharing, train, bike hire,…"
 
 #: ckanext/benap/templates/home/snippets/search.html:18
 msgid "Popular Tags"
@@ -512,7 +512,7 @@ msgstr "Add datasets and services"
 
 #: ckanext/benap/templates/home/snippets/search.html:29
 msgid "Data providers can easily add data to the catalogue."
-msgstr "Data providers can easily add datasets and services to the NAP ITS."
+msgstr "Data providers can easily register datasets and services on the NAP ITS."
 
 #: ckanext/benap/templates/home/snippets/search.html:31
 msgid "Add Data"

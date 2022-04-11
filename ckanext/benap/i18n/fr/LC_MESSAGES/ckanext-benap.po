@@ -45,7 +45,7 @@ msgstr ""
 
 #: ckanext/benap/templates/footer.html:9
 msgid "Follow us on LinkedIn"
-msgstr "Suivez-nous sur LinkedIn"
+msgstr "Suivez nous sur LinkedIn"
 
 #: ckanext/benap/templates/footer.html:10
 msgid "About Transportdata.be"
@@ -399,7 +399,7 @@ msgstr "Apprenez comment consulter les jeux de données et services."
 
 #: ckanext/benap/templates/home/snippets/community.html:19
 msgid "Discover the Belgian transport landscape."
-msgstr "Découvrez le secteur belge des transports."
+msgstr "Découvrez le secteur belge de transports."
 
 #: ckanext/benap/templates/home/snippets/community.html:24
 msgid ""
@@ -440,7 +440,7 @@ msgid ""
 "centralize access to ITS datasets and web services."
 msgstr ""
 "Transportdata.be est le point d'accès national Belge pour les systèmes "
-"de transport intelligents et comprend des données concernant:"
+"de transport intelligents et contient des données concernant:"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:15
 msgid "MMTIS"
@@ -457,7 +457,7 @@ msgstr "Informations liées à la sécurité routière (SRTI)"
 #: ckanext/benap/templates/home/snippets/promoted.html:18
 msgid "SSTP"
 msgstr "Services d’informations concernant les aires de stationnement sûres et "
-"sécurisées pour les comions et les véhicules commerciaux (SSTP)"
+"sécurisées pour les camions et les véhicules commerciaux (SSTP)"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:21
 #: ckanext/benap/templates/home/snippets/promoted.html:32
@@ -483,7 +483,7 @@ msgstr "la section à propos"
 
 #: ckanext/benap/templates/home/snippets/report.html:8
 msgid " and in our "
-msgstr " ou par l'intermédiaire notre "
+msgstr " ou par l'intermédiaire de notre "
 
 #: ckanext/benap/templates/home/snippets/report.html:9
 msgid "instruction video"
@@ -501,7 +501,7 @@ msgstr ""
 
 #: ckanext/benap/templates/home/snippets/search.html:10
 msgid "SEARCH FOR DATA SETS"
-msgstr "RECHERCHER JEUX DE DONNEES & SERVICES"
+msgstr "RECHERCHER JEUX DES DONNEES & SERVICES"
 
 #: ckanext/benap/templates/home/snippets/search.html:12
 msgid "ex. transport, cars, trains, ..."
