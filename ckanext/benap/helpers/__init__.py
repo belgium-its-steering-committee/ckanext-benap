@@ -1009,6 +1009,13 @@ def ontology_helper(context):
     return None
 
 
+def translate_organization_filter(facet_title, lang):
+    translated_titles = {"en": "Organizations", "nl": "Organisaties", "fr": "Organisations", "de": "Organisationen"}
+    if facet_title == "Organizations":
+        return translated_titles[lang]
+    return facet_title
+
+
 def scheming_language_text_fallback(field_data, language_data):
     return field_data['en'] or field_data['nl'] or field_data['fr'] or field_data['de']
 

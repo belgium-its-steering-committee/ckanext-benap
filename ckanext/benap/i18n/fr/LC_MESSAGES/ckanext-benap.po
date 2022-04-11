@@ -402,10 +402,8 @@ msgid "Discover the Belgian transport landscape."
 msgstr "Découvrez le secteur belge des transports."
 
 #: ckanext/benap/templates/home/snippets/community.html:24
-#, fuzzy
 msgid ""
-"Obtain practical information on how to (re)use datasets and services from"
-" the NAP ITS."
+"Obtain practical information on how to (re)use datasets and services from the NAP ITS."
 msgstr ""
 "Obtenez des informations pratiques sur la manière de (ré)utiliser les "
 "jeux de données et les services du NAP ITS."
