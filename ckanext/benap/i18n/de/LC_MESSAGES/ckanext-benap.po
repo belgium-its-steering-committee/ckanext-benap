@@ -443,12 +443,12 @@ msgid ""
 "Intelligent Transport Systems (ITS). This national platform aims to "
 "centralize access to ITS datasets and web services."
 msgstr ""
-"Transportdata.be ist der Belgische nationale Zugangspunkt für "
+"Transportdata.be ist die Belgische nationale Zugangspunkt für "
 "intelligente Transportsysteme und besteht aus Daten über:"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:15
 msgid "MMTIS"
-msgstr "Daten zum multimodaler Reiseinformationsdienste (MMTIS)"
+msgstr "Multimodale Reiseinformationsdienste (MMTIS)"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:16
 msgid "RRTI"
@@ -468,21 +468,20 @@ msgid ""
 "Obtain practical information on how to register your organization, "
 "datasets and services."
 msgstr ""
-"Sie erhalten praktische Informationen darüber, wie Sie Ihre Organisation,"
-" Ihre Datensätze und Ihre Dienste registrieren können."
+"Praktische Informationen erhalten über wie Sie Ihre Organisation, "
+"Ihre Datensätze und Ihre Dienste registrieren können."
 
 #: ckanext/benap/templates/home/snippets/report.html:6
 msgid ""
 "More detailed instructions on how to register your dataset(s) and or "
 "services can be found in the "
 msgstr ""
-"Ausführliche Answeisungen zur Registrierung Ihrer Datensätze und Dienste "
-"finden Sie im "
+"Ausführlichere Anweisungen zur Registrierung Ihrer Datensätze und Dienste finden Sie im "
 
 #: ckanext/benap/templates/home/snippets/report.html:7
 #: ckanext/benap/templates/user/new.html:29
 msgid "about section"
-msgstr "Abschnitt über"
+msgstr "Abschnitt &quot;Über&quot;"
 
 #: ckanext/benap/templates/home/snippets/report.html:8
 msgid " and in our "

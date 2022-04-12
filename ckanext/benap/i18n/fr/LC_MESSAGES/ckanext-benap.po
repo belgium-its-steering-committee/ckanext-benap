@@ -399,7 +399,7 @@ msgstr "Apprenez comment consulter les jeux de données et services."
 
 #: ckanext/benap/templates/home/snippets/community.html:19
 msgid "Discover the Belgian transport landscape."
-msgstr "Découvrez le secteur belge de transports."
+msgstr "Découvrez le secteur belge de transport."
 
 #: ckanext/benap/templates/home/snippets/community.html:24
 msgid ""
@@ -501,7 +501,7 @@ msgstr ""
 
 #: ckanext/benap/templates/home/snippets/search.html:10
 msgid "SEARCH FOR DATA SETS"
-msgstr "RECHERCHER JEUX DES DONNEES & SERVICES"
+msgstr "RECHERCHER DES JEUX DE DONNEES & SERVICES"
 
 #: ckanext/benap/templates/home/snippets/search.html:12
 msgid "ex. transport, cars, trains, ..."
