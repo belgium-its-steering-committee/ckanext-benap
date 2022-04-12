@@ -500,7 +500,7 @@ msgstr "SEARCH FOR DATASETS & SERVICES"
 
 #: ckanext/benap/templates/home/snippets/search.html:12
 msgid "ex. transport, cars, trains, ..."
-msgstr "eg. car sharing, train, bike hire,…"
+msgstr "e.g. car sharing, train, bike hire,…"
 
 #: ckanext/benap/templates/home/snippets/search.html:18
 msgid "Popular Tags"

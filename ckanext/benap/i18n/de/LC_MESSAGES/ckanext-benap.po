@@ -443,7 +443,7 @@ msgid ""
 "Intelligent Transport Systems (ITS). This national platform aims to "
 "centralize access to ITS datasets and web services."
 msgstr ""
-"Transportdata.be ist die Belgische nationale Zugangspunkt für "
+"Transportdata.be ist die belgische nationale Zugangspunkt für "
 "intelligente Transportsysteme und besteht aus Daten über:"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:15
