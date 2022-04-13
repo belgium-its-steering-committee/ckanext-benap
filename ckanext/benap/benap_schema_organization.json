@@ -325,8 +325,8 @@
         "de": ""
       },
       "form_snippet": "doc_upload.html",
-      "upload_field": "upload_doc",
-      "upload_clear": "clear_upload_doc",
+      "upload_field": "srti_upload_doc",
+      "upload_clear": "srti_clear_upload_doc",
       "upload_label": {
         "en": "Declaration of compliance SRTI",
         "fr": "Déclaration de conformité SRTI",
