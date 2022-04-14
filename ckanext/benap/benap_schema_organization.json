@@ -360,7 +360,7 @@
       }
     },
     {
-      "field_name": "organization_agreement_declaration",
+      "field_name": "organization_agreement_declaration_nap",
       "label": {
         "en": "Disclaimer Declarations of compliance",
         "fr": "Avis de non-responsabilité Déclarations de conformité",

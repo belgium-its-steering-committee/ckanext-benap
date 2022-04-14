@@ -516,7 +516,7 @@
       "required": "true"
     },
     {
-      "field_name": "agreement_declaration",
+      "field_name": "agreement_declaration_nap",
       "label": {
         "en": "Declaration of compliance",
         "fr": "déclaration de conformité",

@@ -109,7 +109,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         return pkg_dict
 
     def before_view(self, pkg_dict):
-        pkg_dict.pop('agreement_declaration', None)
+        pkg_dict.pop('agreement_declaration_nap', None)
         return pkg_dict
 
 
