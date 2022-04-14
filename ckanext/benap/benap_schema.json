@@ -524,7 +524,7 @@
         "de": "Einhaltungserklärung"
       },
       "multi_help": "true",
-      "preset": "multiple_radio_compliance",
+      "preset": "multiple_select_compliance",
       "choices": [
          {
           "value": "Y",
