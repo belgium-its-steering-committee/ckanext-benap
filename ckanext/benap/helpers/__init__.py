@@ -1302,9 +1302,9 @@ def is_default_tag(item):
 
 def getTranslatedVideoUrl(lang):
     switcher = {
-        'en': 'https://www.youtube.com/embed/2YKmzGSh4OU?rel=0&enablejsapi=1',
-        'nl': 'https://www.youtube.com/embed/hpA_0ya7A-E?rel=0&enablejsapi=1',
-        'fr': 'https://www.youtube.com/embed/q4oU7DcipWg?rel=0&enablejsapi=1',
+        'en': 'https://www.youtube.com/embed/0-M48xzlWzI?rel=0&enablejsapi=1',
+        'nl': 'https://www.youtube.com/embed/jle8RPRW1Do?rel=0&enablejsapi=1',
+        'fr': 'https://www.youtube.com/embed/p8b9hIYM9hE?rel=0&enablejsapi=1',
         'de': 'https://www.youtube.com/embed/y-qi2YIrqXk?rel=0&enablejsapi=1'
     }
     return switcher.get(lang, switcher.get('en'))

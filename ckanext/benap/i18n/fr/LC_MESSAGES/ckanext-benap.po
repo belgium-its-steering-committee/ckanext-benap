@@ -496,7 +496,7 @@ msgstr "Par ex. environnement"
 #: ckanext/benap/templates/home/snippets/search.html:6
 msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
 msgstr ""
-"Point d&#39;accès national belge pour les systemes de transport "
+"Point d&#39;accès national belge pour les systèmes de transport "
 "intelligents (NAP ITS)"
 
 #: ckanext/benap/templates/home/snippets/search.html:10
