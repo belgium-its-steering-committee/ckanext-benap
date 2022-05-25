@@ -798,6 +798,9 @@ msgstr "Visibilité"
 msgid "The form contains invalid entries:"
 msgstr "Le formulaire contient des entrées non valides"
 
+#: ckanext/scheming/validation.py:110
+msgid "Select at least one"
+msgstr "Sélectionnez-en moins une"
 #~ msgid ""
 #~ msgstr ""
 

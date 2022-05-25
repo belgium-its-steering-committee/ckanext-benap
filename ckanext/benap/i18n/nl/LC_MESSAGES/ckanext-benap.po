@@ -788,6 +788,9 @@ msgstr "Zichtbaarheid"
 msgid "The form contains invalid entries:"
 msgstr "Het formulier bevat ongeldige gegevens"
 
+#: ckanext/scheming/validation.py:110
+msgid "Select at least one"
+msgstr "Selecteer minstens één"
 #~ msgid ""
 #~ msgstr ""
 

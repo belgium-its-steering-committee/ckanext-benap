@@ -715,3 +715,7 @@ msgstr ""
 #: ckanext/scheming/templates/scheming/snippets/errors.html:6
 msgid "The form contains invalid entries:"
 msgstr ""
+
+#: ckanext/scheming/validation.py:110
+msgid "Select at least one"
+msgstr ""
