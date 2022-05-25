@@ -672,3 +672,46 @@ msgid ""
 "fields and press \"Create account\""
 msgstr ""
 
+# scheming
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:76
+msgid "Please select the file to upload again"
+msgstr ""
+
+#: ckanext/scheming/templates/scheming/organization/about.html:27
+msgid "Signed"
+msgstr ""
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:64
+msgid "Link to a URL on the internet (you can also link to an API)"
+msgstr ""
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:71
+msgid "Upload"
+msgstr ""
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:80
+msgid "Remove"
+msgstr ""
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:88
+#: ckanext/scheming/templates/scheming/form_snippets/upload.html:21
+msgid "Image"
+msgstr ""
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:95
+msgid "Upload a file on your computer"
+msgstr ""
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:127
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:227
+msgid "File"
+msgstr ""
+
+#: ckanext/scheming/templates/scheming/form_snippets/organization.html:25
+msgid "Visibility"
+msgstr ""
+
+#: ckanext/scheming/templates/scheming/snippets/errors.html:6
+msgid "The form contains invalid entries:"
+msgstr ""

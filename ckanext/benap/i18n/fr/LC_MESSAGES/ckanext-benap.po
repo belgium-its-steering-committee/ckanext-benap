@@ -754,6 +754,50 @@ msgstr ""
 " spécial sauf - et _ Remplissez les autres champs et appuyez sur \"Créer "
 "un compte\""
 
+# scheming
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:76
+msgid "Please select the file to upload again"
+msgstr "Veuillez sélectionner à nouveau le fichier à télécharger"
+
+#: ckanext/scheming/templates/scheming/organization/about.html:27
+msgid "Signed"
+msgstr "Signé"
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:64
+msgid "Link to a URL on the internet (you can also link to an API)"
+msgstr "Lien vers une URL sur l'internet (vous pouvez également établir un lien vers une API)"
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:71
+msgid "Upload"
+msgstr "Télécharger"
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:80
+msgid "Remove"
+msgstr "Supprimer"
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:88
+#: ckanext/scheming/templates/scheming/form_snippets/upload.html:21
+msgid "Image"
+msgstr "Image"
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:95
+msgid "Upload a file on your computer"
+msgstr "Télécharger un fichier sur votre ordinateur"
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:127
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:227
+msgid "File"
+msgstr "Fichier"
+
+#: ckanext/scheming/templates/scheming/form_snippets/organization.html:25
+msgid "Visibility"
+msgstr "Visibilité"
+
+#: ckanext/scheming/templates/scheming/snippets/errors.html:6
+msgid "The form contains invalid entries:"
+msgstr "Le formulaire contient des entrées non valides"
+
 #~ msgid ""
 #~ msgstr ""
 

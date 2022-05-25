@@ -744,6 +744,50 @@ msgstr ""
 "alleen kleine letters en geen speciaal teken behalve - en _ Vul de andere"
 " velden in en druk op \"Account maken\""
 
+# scheming
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:76
+msgid "Please select the file to upload again"
+msgstr "Selecteer het bestand om opnieuw te uploaden"
+
+#: ckanext/scheming/templates/scheming/organization/about.html:27
+msgid "Signed"
+msgstr "Ondertekend"
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:64
+msgid "Link to a URL on the internet (you can also link to an API)"
+msgstr "Link naar een URL op het internet (u kunt ook linken naar een API)"
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:71
+msgid "Upload"
+msgstr "Uploaden"
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:80
+msgid "Remove"
+msgstr "Verwijderen"
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:88
+#: ckanext/scheming/templates/scheming/form_snippets/upload.html:21
+msgid "Image"
+msgstr "Afbeelding"
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:95
+msgid "Upload a file on your computer"
+msgstr "Upload een bestand op uw computer"
+
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:127
+#: ckanext/scheming/fanstatic/scheming-doc_upload.js:227
+msgid "File"
+msgstr "Bestand"
+
+#: ckanext/scheming/templates/scheming/form_snippets/organization.html:25
+msgid "Visibility"
+msgstr "Zichtbaarheid"
+
+#: ckanext/scheming/templates/scheming/snippets/errors.html:6
+msgid "The form contains invalid entries:"
+msgstr "Het formulier bevat ongeldige gegevens"
+
 #~ msgid ""
 #~ msgstr ""
 
