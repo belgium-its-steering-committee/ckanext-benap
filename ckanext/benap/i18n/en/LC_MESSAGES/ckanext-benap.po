@@ -744,6 +744,10 @@ msgstr ""
 "only lowercase letters and no special character except - and _ Fill in "
 "the other fields and press \"Create account\""
 
+#: ckan/model/license.py:334
+msgid "UK Open Government Licence (OGL)"
+msgstr "UK Open Government License (OGL)"
+
 #~ msgid ""
 #~ msgstr ""
 
