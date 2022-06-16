@@ -10,6 +10,7 @@
             if (days) {
                 var date = new Date();
                 date.setTime(date.getTime() + (days*24*60*60*1000));
+                console.log=("Aantal seconden:" + expires)
                 expires = "; expires=" + date.toUTCString();
             }
             document.cookie = name + "=" + value  + expires + "; path=/";
@@ -38,14 +39,13 @@
             }
             return result;
         }
-
         function setAllCookies(x) {
             const x_write = x.necessary + "|" + x.functional + "|" + x.analytical + "|" + x.marketing;
             if(x.functional) {
                 setCookie('transportdata_cookies', x_write, 365);
             }
             else {
-                setCookie('transportdata_cookies', '', -1);
+                setCookie('transportdata_cookies', x.necessary, false);
             }
             if(x.analytical) {
                 // set the google cookies

@@ -719,3 +719,7 @@ msgstr ""
 #: ckanext/scheming/validation.py:110
 msgid "Select at least one"
 msgstr ""
+
+#: ckan/templates/package/snippets/resource_item.html:56
+msgid "Edit"
+msgstr ""

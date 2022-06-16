@@ -173,7 +173,7 @@ msgstr "sessie"
 
 #: ckanext/benap/templates/header.html:118
 msgid "This cookie is used for the basic functionalities of the website."
-msgstr "This cookie wordt gebruikt voor de basisfunctionaliteiten van de website"
+msgstr "Deze cookie wordt gebruikt voor de basisfunctionaliteiten van de website"
 
 #: ckanext/benap/templates/header.html:126
 msgid "Functional"
@@ -189,7 +189,7 @@ msgstr "Uitgeschakeld"
 msgid ""
 "Functional cookies record information about the user's choices and "
 "preferences and may store language settings, for instance."
-msgstr "Functionele cookies onthouden je voorkeursinstellingen."
+msgstr "Functionele cookies onthouden uw voorkeursinstellingen."
 
 #: ckanext/benap/templates/header.html:138
 msgid "transportdata_cookies"
@@ -288,7 +288,7 @@ msgid ""
 "device and behavior. It tracks the visitor across devices and marketing "
 "channels."
 msgstr ""
-"Wordt gebruikt om data over bezoeken en devices door te sturen naar "
+"Deze cookie Wordt gebruikt om data over bezoeken en devices door te sturen naar "
 "Google Analytics. De cookie trackt de gebruiker over verschillende "
 "devices en marketing kanalen."
 
@@ -331,12 +331,12 @@ msgstr "Instellingen"
 #: ckanext/benap/templates/header.html:321
 #: ckanext/benap/templates/header.html:323
 msgid "Log out"
-msgstr "Log-out"
+msgstr "Uitloggen"
 
 #: ckanext/benap/templates/header.html:338
 #: ckanext/benap/templates/home/snippets/search.html:33
 msgid "Log in"
-msgstr "Log-in"
+msgstr "Inloggen"
 
 #: ckanext/benap/templates/header.html:340
 #: ckanext/benap/templates/user/new.html:3
@@ -371,7 +371,7 @@ msgstr "Schrijf u in op onze nieuwsbrief"
 #: ckanext/benap/templates/home/layout3.html:35
 #: ckanext/benap/templates/home/snippets/newsletter.html:13
 msgid "Enter your email address"
-msgstr "Vul je e-mailadres in"
+msgstr "Vul uw e-mailadres in"
 
 #: ckanext/benap/templates/home/layout3.html:36
 #: ckanext/benap/templates/home/snippets/newsletter.html:14
@@ -402,7 +402,7 @@ msgstr ""
 
 #: ckanext/benap/templates/home/snippets/community.html:29
 msgid "Join"
-msgstr "Sluit je aan"
+msgstr "Sluit u aan"
 
 #: ckanext/benap/templates/home/snippets/feedback.html:6
 msgid "Need help? "
@@ -422,7 +422,7 @@ msgstr "ONTDEK HET NAP ITS & REGISTREER CONTENT"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:8
 msgid "AND HOW YOU ARE INVOLVED"
-msgstr "EN HOE JE DAARIN BETROKKEN BENT"
+msgstr "EN HOE U DAARIN BETROKKEN BENT"
 
 #: ckanext/benap/templates/home/snippets/promoted.html:12
 #: ckanext/benap/templates/home/snippets/promoted.html:27
@@ -582,7 +582,7 @@ msgstr "Taal"
 #: ckanext/benap/templates/snippets/language_selector.html:11
 #: ckanext/benap/templates/snippets/search_form.html:42
 msgid "Go"
-msgstr "Gaan"
+msgstr "Ga"
 
 #: ckanext/benap/templates/snippets/package_item.html:9
 msgid "Private"
@@ -594,15 +594,15 @@ msgstr "Concept"
 
 #: ckanext/benap/templates/snippets/package_item.html:20
 msgid "Deleted"
-msgstr "Verwijderde"
+msgstr "Verwijderd"
 
 #: ckanext/benap/templates/snippets/package_item.html:34
 msgid "This dataset has no description"
-msgstr "Er is geen beschrijving voor deze dataset."
+msgstr "Er is geen beschrijving voor deze dataset"
 
 #: ckanext/benap/templates/snippets/search_form.html:3
 msgid "Search datasets..."
-msgstr ""
+msgstr "Zoek datasets..."
 
 #: ckanext/benap/templates/snippets/search_form.html:4
 msgid "Name Ascending"
@@ -618,11 +618,11 @@ msgstr "Sorteren op"
 
 #: ckanext/benap/templates/snippets/search_form.html:65
 msgid "Remove"
-msgstr ""
+msgstr "Verwijder"
 
 #: ckanext/benap/templates/snippets/search_form.html:70
 msgid "Filter Results"
-msgstr ""
+msgstr "Resulaten filteren"
 
 #: ckanext/benap/templates/snippets/search_form.html:77
 msgid " <p class=\"extra\">Please try another search.</p> "
@@ -642,24 +642,24 @@ msgstr "Nieuwsfeed"
 #: ckanext/benap/templates/user/dashboard.html:10
 #, fuzzy
 msgid "My Datasets"
-msgstr "Datasets"
+msgstr "Mijn Datasets"
 
 #: ckanext/benap/templates/user/dashboard.html:11
 #, fuzzy
 msgid "My Organizations"
-msgstr "Organisaties"
+msgstr "Mijn organisaties"
 
 #: ckanext/benap/templates/user/dashboard.html:20
 msgid "Have you just just created an account?"
-msgstr "Heb je zojuist een account aangemaakt?"
+msgstr "Heeft u zojuist een account aangemaakt?"
 
 #: ckanext/benap/templates/user/dashboard.html:22
 msgid "If yes, you will find more information on what to do in our "
-msgstr "Indien wel, dan vind je meer informatie over wat je kan doen op onze "
+msgstr "Indien wel, dan vind u meer informatie over wat u kan doen op onze "
 
 #: ckanext/benap/templates/user/dashboard.html:23
 msgid "about section."
-msgstr "pagina Over."
+msgstr "pagina 'Over'."
 
 #: ckanext/benap/templates/user/dashboard.html:26
 msgid "Make sure to check your spam folder for the subscription e-mail."
@@ -671,11 +671,11 @@ msgstr "Activiteit van items die ik volg"
 
 #: ckanext/benap/templates/user/login.html:8
 msgid "Need an Account?"
-msgstr "Heb je een Account nodig?"
+msgstr "Heeft uw een Account nodig?"
 
 #: ckanext/benap/templates/user/login.html:10
 msgid "Then sign right up, it only takes a minute."
-msgstr "Schrijf je nu in, het kost je alleen een minuut."
+msgstr "Schrijf u nu in, het neemt slechts een minuut."
 
 #: ckanext/benap/templates/user/login.html:13
 msgid "Create an Account"
@@ -688,16 +688,16 @@ msgstr "Wachtwoord vergeten?"
 #: ckanext/benap/templates/user/login.html:27
 msgid "No problem, use our password recovery form to reset it."
 msgstr ""
-"Geen probleem, gebruik ons wachtwoordherstelformulier om je wachtwoord "
+"Geen probleem, gebruik ons wachtwoord herstelformulier om uw wachtwoord "
 "opnieuw in te stellen."
 
 #: ckanext/benap/templates/user/login.html:30
 msgid "Forgot your password?"
-msgstr "Wachtwoord vergeten?"
+msgstr "Uw wachtwoord vergeten?"
 
 #: ckanext/benap/templates/user/login.html:39
 msgid "Forgotten your username?"
-msgstr "Gebruikersnaam vergeten?"
+msgstr "Uw gebruikersnaam vergeten?"
 
 #: ckanext/benap/templates/user/login.html:42
 msgid ""
@@ -741,14 +741,14 @@ msgid ""
 "the other fields and press \"Create account\""
 msgstr ""
 "Kies een gebruikersnaam (en zorg ervoor dat u deze nooit vergeet) met "
-"alleen kleine letters en geen speciaal teken behalve - en _ Vul de andere"
-" velden in en druk op \"Account maken\""
+"alleen kleine letters en geen speciale tekens behalve - of _ Vul de andere"
+" velden in en klik op \"Account maken\""
 
 # scheming
 
 #: ckanext/scheming/fanstatic/scheming-doc_upload.js:76
 msgid "Please select the file to upload again"
-msgstr "Selecteer het bestand om opnieuw te uploaden"
+msgstr "Gelieve het bestand te selecteren om opnieuw te uploaden"
 
 #: ckanext/scheming/templates/scheming/organization/about.html:27
 msgid "Signed"
@@ -773,7 +773,7 @@ msgstr "Afbeelding"
 
 #: ckanext/scheming/fanstatic/scheming-doc_upload.js:95
 msgid "Upload a file on your computer"
-msgstr "Upload een bestand op uw computer"
+msgstr "Upload een bestand vanop uw computer"
 
 #: ckanext/scheming/fanstatic/scheming-doc_upload.js:127
 #: ckanext/scheming/fanstatic/scheming-doc_upload.js:227
@@ -791,6 +791,11 @@ msgstr "Het formulier bevat ongeldige gegevens"
 #: ckanext/scheming/validation.py:110
 msgid "Select at least one"
 msgstr "Selecteer minstens één"
+
+#: ckan/templates/package/snippets/resource_item.html:56
+msgid "Edit"
+msgstr "Bewerk"
+
 #~ msgid ""
 #~ msgstr ""
 
