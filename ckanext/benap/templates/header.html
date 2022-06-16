@@ -228,7 +228,6 @@
         // cookie stuff
         // cookie is already declared in base.html
         cookie = readTransportDataCookie('transportdata_cookies');
-        console.log("cookie: " + cookie + " - ")
         if (!cookie || !cookie.necessary) {
             $('#overlay-cookies').css('display', 'flex');
         }
