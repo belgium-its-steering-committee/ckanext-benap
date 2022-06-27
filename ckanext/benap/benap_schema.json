@@ -171,7 +171,7 @@
         "nl": "Naam van de organisatie  [contactpunt]",
         "de": "Name der Organisation  [Kontaktpunkt]"
       },
-      "label_dataset_organization": {
+      "label_dataset_organization":{
         "en": "Visibility",
         "fr": "Accessibilité",
         "nl": "Toegankelijkheid",
@@ -723,16 +723,23 @@
         "nl": "Communicatiemethode",
         "de": "Kommunikationsmethode"
       },
+      "multi-help": "true",
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "communication",
       "help_text": {
         "en": "Describes the transmitting procedure from data provider to data receiver.",
         "fr": "Décrit la procédure de transmission du fournisseur de données au destinataire des données.",
-        "nl": "Beschrijft de overbrengingsprocedure van de gegevensleverancier naar de gegevensontvanger.   ",
+        "nl": "Beschrijft de overbrengingsprocedure van de gegevensleverancier naar de gegevensontvanger.",
         "de": "Beschreibt das Übertragungsverfahren des Datenanbieters nach dem Datenempfänger."
       },
-      "required": "true"
+      "help_link":"/pages/what-is-the-difference-between-the-push-and-pull-communication-methods-for-a-dataset",
+      "help_link_text":{
+        "en": "For more information, click here",
+        "fr": "Pour de plus amples informations, cliquez ici",
+        "nl": "Voor meer informatie, klik hier ",
+        "de": "Für weitere Informationen, klicken Sie hier"
+      }
     },
     {
       "field_name": "resource_language",
