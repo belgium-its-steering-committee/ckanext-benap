@@ -184,7 +184,20 @@
         "nl": "Het \"contactpunt\" beschrijft een organisatie, of een persoon indien van toepassing, die verantwoordelijk is voor de aanmaak en bijwerking van de metadata. Deze persoon of organisatie is het één contactpunt voor deze set van metadata. Het volgende veld kan gebruikt worden om ter interne herziening voor effectieve publicatie de dataset \"privé\" te houden binnen de organisatie.",
         "de": "Der \"Kontaktpunkt\" beschreibt eine Organisation, oder gegebenenfalls eine Person, die für die Herstellung und Aktualisierung von Metadaten verantwortlich ist. Diese Person oder Organisation ist der einzige Kontaktpunkt für diesen Metadatensatz. Das folgende Feld kann benutzt werden, um für interne Prüfung vor der effektiven Publikation den Datensatz \"privat\" zu halten innerhalb von der Organisation. "
       },
-      "required": "true"
+      "required": "true",
+      "help_text_visibility":{
+        "en": "Why do I need to register my dataset/service on the NAP ITS as 'visible'?",
+        "fr": "Pourquoi dois-je enregistrer mon jeu de données/service sur le NAP ITS de façon publiquement accessible?",
+        "nl": "Waarom moet ik mijn dataset/dienst op het NAP ITS publiek toegankelijk registreren?",
+        "de": "Warum muss ich meinen Datensatz/Dienst auf dem NAP ITS öffentlich zugänglich registrieren?"
+      },
+      "help_link_visibility":"/pages/why-do-i-need-to-register-my-dataset-service-on-the-nap-its-as-visible",
+      "help_link_text_visibility":{
+        "en": "For more information, click here",
+        "fr": "Pour de plus amples informations, cliquez ici",
+        "nl": "Voor meer informatie, klik hier ",
+        "de": "Für weitere Informationen, klicken Sie hier"
+      }
     },
     {
       "field_name": "contact_name",
