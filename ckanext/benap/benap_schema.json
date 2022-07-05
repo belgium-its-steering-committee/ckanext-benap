@@ -193,10 +193,10 @@
       },
       "help_link_visibility":"/pages/why-do-i-need-to-register-my-dataset-service-on-the-nap-its-as-visible",
       "help_link_text_visibility":{
-        "en": "here",
-        "fr": "ici",
-        "nl": "hier ",
-        "de": "hier"
+        "en": "here.",
+        "fr": "ici.",
+        "nl": "hier.",
+        "de": "hier."
       }
     },
     {
@@ -748,10 +748,10 @@
       },
       "help_link":"/pages/what-is-the-difference-between-the-push-and-pull-communication-methods-for-a-dataset",
       "help_link_text":{
-        "en": "here",
-        "fr": "ici",
-        "nl": "hier ",
-        "de": "hier"
+        "en": "here.",
+        "fr": "ici.",
+        "nl": "hier.",
+        "de": "hier."
       }
     },
     {
