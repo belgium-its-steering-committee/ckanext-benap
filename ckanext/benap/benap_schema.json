@@ -742,7 +742,7 @@
       "benap_helper_ontology": "communication",
       "help_text": {
         "en": "Describes the transmitting procedure from data provider to data receiver. For more information, click ",
-        "fr": "Décrit la procédure de transmission du fournisseur de données au destinataire des données. Pour de plus d'informations, cliquez ",
+        "fr": "Décrit la procédure de transmission du fournisseur de données au destinataire des données. Pour plus d'informations, cliquez ",
         "nl": "Beschrijft de overbrengingsprocedure van de gegevensleverancier naar de gegevensontvanger. Voor meer informatie, klik ",
         "de": "Beschreibt das Übertragungsverfahren des Datenanbieters nach dem Datenempfänger. Für weitere Informationen, klicken Sie bitte "
       },
