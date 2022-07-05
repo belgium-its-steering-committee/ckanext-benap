@@ -186,17 +186,17 @@
       },
       "required": "true",
       "help_text_visibility":{
-        "en": "Why do I need to register my dataset/service on the NAP ITS as 'visible'?",
-        "fr": "Pourquoi dois-je enregistrer mon jeu de données/service sur le NAP ITS de façon publiquement accessible?",
-        "nl": "Waarom moet ik mijn dataset/dienst op het NAP ITS publiek toegankelijk registreren?",
-        "de": "Warum muss ich meinen Datensatz/Dienst auf dem NAP ITS öffentlich zugänglich registrieren?"
+        "en": "Why do I need to register my dataset/service on the NAP ITS as 'publicly visible'? For more information, click ",
+        "fr": "Pourquoi dois-je enregistrer mon jeu de données/service sur le NAP ITS de façon publiquement accessible? Pour plus d'informations, cliquez ",
+        "nl": "Waarom moet ik mijn dataset/dienst op het NAP ITS publiek toegankelijk registreren? Voor meer informatie, klik ",
+        "de": "Warum muss ich meinen Datensatz/Dienst auf dem NAP ITS öffentlich zugänglich registrieren? Für weitere Informationen, klicken Sie bitte "
       },
       "help_link_visibility":"/pages/why-do-i-need-to-register-my-dataset-service-on-the-nap-its-as-visible",
       "help_link_text_visibility":{
-        "en": "For more information, click here",
-        "fr": "Pour de plus amples informations, cliquez ici",
-        "nl": "Voor meer informatie, klik hier ",
-        "de": "Für weitere Informationen, klicken Sie hier"
+        "en": "here",
+        "fr": "ici",
+        "nl": "hier ",
+        "de": "hier"
       }
     },
     {
@@ -741,17 +741,17 @@
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "communication",
       "help_text": {
-        "en": "Describes the transmitting procedure from data provider to data receiver.",
-        "fr": "Décrit la procédure de transmission du fournisseur de données au destinataire des données.",
-        "nl": "Beschrijft de overbrengingsprocedure van de gegevensleverancier naar de gegevensontvanger.",
-        "de": "Beschreibt das Übertragungsverfahren des Datenanbieters nach dem Datenempfänger."
+        "en": "Describes the transmitting procedure from data provider to data receiver. For more information, click ",
+        "fr": "Décrit la procédure de transmission du fournisseur de données au destinataire des données. Pour de plus d'informations, cliquez ",
+        "nl": "Beschrijft de overbrengingsprocedure van de gegevensleverancier naar de gegevensontvanger. Voor meer informatie, klik ",
+        "de": "Beschreibt das Übertragungsverfahren des Datenanbieters nach dem Datenempfänger. Für weitere Informationen, klicken Sie bitte "
       },
       "help_link":"/pages/what-is-the-difference-between-the-push-and-pull-communication-methods-for-a-dataset",
       "help_link_text":{
-        "en": "For more information, click here",
-        "fr": "Pour de plus amples informations, cliquez ici",
-        "nl": "Voor meer informatie, klik hier ",
-        "de": "Für weitere Informationen, klicken Sie hier"
+        "en": "here",
+        "fr": "ici",
+        "nl": "hier ",
+        "de": "hier"
       }
     },
     {
