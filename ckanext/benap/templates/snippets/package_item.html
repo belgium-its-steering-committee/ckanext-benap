@@ -22,9 +22,17 @@
             {{ h.popular('recent views', package.tracking_summary.recent, min=10) if package.tracking_summary }}
         {% endblock %}
     </h3>
-    <a href="{{ h.url_for(package.organization.type ~ '_read', action='read', id=package.organization.name) }}" style="display: inline; padding-left: 8px;"><i>
-        {{ package.organization.name }}
-    </i></a>
+    <a  href="{{ h.url_for(package.organization.type ~ '_read', action='read', id=package.organization.name) }}" style="display: inline; padding-left: 8px;">
+        <i>
+        {% block organisationNameTranslated%}
+            {% if c.group_dict %}
+                {{ h.benap_package_organization_name_translated(c.group_dict)}}
+            {% else%}
+                {{package.organization.name}}
+            {% endif %}
+        {% endblock%}
+    </i>
+</a>
 {% endblock %}
 
 {% block notes %}
