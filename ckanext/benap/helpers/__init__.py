@@ -1032,14 +1032,6 @@ def package_notes_translated_fallback(package):
                           or notes_translated['de'] or None
     return notes_value
 
-def package_organization_name_translated(groupDict):
-    organization_userLang_name = None
-    user_lang = user_language()
-    if groupDict:
-        if user_lang:
-            display_title = 'display_title_' + user_lang
-            organization_userLang_name = groupDict[display_title]
-    return organization_userLang_name
 
 def field_translated_fallback(translated_field):
     field_value = None
@@ -1333,7 +1325,7 @@ def get_organization_by_id(id):
     if (to_show_name):
         return to_show_name
     else:
-        return organization.get('display_name')
+        return False
 
 
 def show_element(x):

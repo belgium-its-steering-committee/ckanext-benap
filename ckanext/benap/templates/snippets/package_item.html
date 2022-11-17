@@ -25,9 +25,8 @@
     <a  href="{{ h.url_for(package.organization.type ~ '_read', action='read', id=package.organization.name) }}" style="display: inline; padding-left: 8px;">
         <i id="tellMeMore">
         {% block organisationNameTranslated%}
-            <i id="helper">{{h.get_organization_by_id(package.organization.name)}}</i>
-            {% if c.group_dict %}
-                <i id="groupDict">{{ h.benap_package_organization_name_translated(c.group_dict)}}</i>
+            {% if h.benap_get_organization_by_id(package.organization.name)%}
+                <i id="helper_fctie">{{h.benap_get_organization_by_id(package.organization.name)}}</i>
             {% else%}
                 <i id="default">{{package.organization.name}}</i>
             {% endif %}
