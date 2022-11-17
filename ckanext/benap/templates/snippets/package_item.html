@@ -23,12 +23,12 @@
         {% endblock %}
     </h3>
     <a  href="{{ h.url_for(package.organization.type ~ '_read', action='read', id=package.organization.name) }}" style="display: inline; padding-left: 8px;">
-        <i>
+        <i id="tellMeMore">
         {% block organisationNameTranslated%}
             {% if c.group_dict %}
-                {{ h.benap_package_organization_name_translated(c.group_dict)}}
+                <i id="translated">{{ h.benap_package_organization_name_translated(c.group_dict)}}</i>
             {% else%}
-                {{package.organization.name}}
+                <i id="default">{{package.organization.name}}</i>
             {% endif %}
         {% endblock%}
     </i>
