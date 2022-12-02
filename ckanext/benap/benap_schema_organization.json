@@ -243,10 +243,10 @@
          {
           "value": "Y",
           "label": {
-              "en": "I hereby declare to be compliant to articles 3 to 8 of the European regulation (EU) 2017/1926 for this dataset.",
-              "fr": "Je déclare être en conformité avec les articles 3 à 8 du règlement délégué européen (UE) 2017/1926 pour ce jeu de données.",
+              "en": "I hereby declare to be compliant to articles 3 to 8 of the European regulation (EU) 2017/1926.",
+              "fr": "Je déclare être en conformité avec les articles 3 à 8 du règlement délégué européen (UE) 2017/1926.",
               "nl": "Ik verklaar voor deze dataset in overeenstemming te zijn met artikels 3 tot 8 van de Europese verordening (EU) 2017/1926.",
-              "de": "Hiermit erkläre ich, in Übereinstimmung mit den Artikeln 3 bis 8 der Europäischen Verordnung (EU) 2017/1926 für diesen Datensatz zu sein."
+              "de": "Hiermit erkläre ich, in Übereinstimmung mit den Artikeln 3 bis 8 der Europäischen Verordnung (EU) 2017/1926."
             },
           "help_text": {
               "en": "For more information <a>click here</a>",
