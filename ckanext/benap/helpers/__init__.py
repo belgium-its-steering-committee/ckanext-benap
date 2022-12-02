@@ -2,6 +2,7 @@
 import json
 import ckan.plugins.toolkit as toolkit
 from ckan.common import config
+import sys
 
 from ckanext.benap.helpers.lists import NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE
 from ckanext.benap.util.forms import map_for_form_select
@@ -1311,22 +1312,28 @@ def getTranslatedVideoUrl(lang):
 
 
 def get_organization_by_id(id):
-    print("in de helper functie")
+    sys.stdout.write("in de helper functie")
+    #print("in de helper functie")
     user = toolkit.get_action(u'get_site_user')({
         u'ignore_auth': True
     }, {})
-    print('user__', user)
+    sys.stdout.write('user__//' + str(user))
+    #print('user__', user)
     context = {
         u'user': user[u'name']
     }
-    print('contecxt__', context)
+    sys.stdout.write('context__//' + str(user))
+    #print('context__', context)
     organization = toolkit.get_action(u'organization_show')(context, {
         u'id': id
     })
-    print('organisation__', organization)
+    sys.stdout.write('organization__//' + str(organization))
+    #print('organisation__', organization)
     field = 'display_title_' + user_language()
     to_show_name = organization.get(field)
-    print('field__', field)
+    #sys.stdout.write('user__' + str(field))
+    sys.stdout.flush()
+    #print('field__', field)
     if (to_show_name):
         return to_show_name
     else:
