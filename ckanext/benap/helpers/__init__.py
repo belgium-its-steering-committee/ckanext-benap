@@ -2,11 +2,13 @@
 import json
 import ckan.plugins.toolkit as toolkit
 from ckan.common import config
+import logging
 
 from ckanext.benap.helpers.lists import NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
 
+log = logging.getLogger(__name__)
 
 def user_language():
     try:
