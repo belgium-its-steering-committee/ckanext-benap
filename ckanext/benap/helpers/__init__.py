@@ -8,7 +8,7 @@ from ckanext.benap.helpers.lists import NUTS1_BE, GEOREFERENCING_METHOD, DATASET
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
 
-logger = logging.getLogger(__name__)
+log = logging.getLogger(__name__)
 
 def user_language():
     try:
@@ -1313,22 +1313,22 @@ def getTranslatedVideoUrl(lang):
 
 
 def get_organization_by_id(id):
-    logger.warning("in de helper functie")
+    log.info("in de helper functie")
     user = toolkit.get_action(u'get_site_user')({
         u'ignore_auth': True
     }, {})
-    logger.warning('user__//' + str(user))
+    log.info('user__//' + str(user))
     context = {
         u'user': user[u'name']
     }
-    logger.warning('context__//' + str(user))
+    log.info('context__//' + str(user))
     organization = toolkit.get_action(u'organization_show')(context, {
         u'id': id
     })
-    logger.warning('organization__//' + str(organization))
+    log.info('organization__//' + str(organization))
     field = 'display_title_' + user_language()
     to_show_name = organization.get(field)
-    logger.warning('user__' + str(field))
+    log.info('user__//' + str(field))
     if (to_show_name):
         return to_show_name
     else:
