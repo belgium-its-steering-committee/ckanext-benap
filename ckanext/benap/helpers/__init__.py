@@ -1313,22 +1313,17 @@ def getTranslatedVideoUrl(lang):
 
 
 def get_organization_by_id(id):
-    log.info("in de helper functie")
     user = toolkit.get_action(u'get_site_user')({
         u'ignore_auth': True
     }, {})
-    log.info('user__//' + str(user))
     context = {
         u'user': user[u'name']
     }
-    log.info('context__//' + str(user))
     organization = toolkit.get_action(u'organization_show')(context, {
         u'id': id
     })
-    log.info('organization__//' + str(organization))
     field = 'display_title_' + user_language()
     to_show_name = organization.get(field)
-    log.info('user__//' + str(field))
     if (to_show_name):
         return to_show_name
     else:
