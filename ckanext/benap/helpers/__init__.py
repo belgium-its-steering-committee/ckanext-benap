@@ -2,12 +2,13 @@
 import json
 import ckan.plugins.toolkit as toolkit
 from ckan.common import config
-import sys
+import logging
 
 from ckanext.benap.helpers.lists import NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
 
+logger = logging.getLogger(__name__)
 
 def user_language():
     try:
@@ -1312,28 +1313,22 @@ def getTranslatedVideoUrl(lang):
 
 
 def get_organization_by_id(id):
-    sys.stdout.write("in de helper functie")
-    #print("in de helper functie")
+    logger.warning("in de helper functie")
     user = toolkit.get_action(u'get_site_user')({
         u'ignore_auth': True
     }, {})
-    sys.stdout.write('user__//' + str(user))
-    #print('user__', user)
+    logger.warning('user__//' + str(user))
     context = {
         u'user': user[u'name']
     }
-    sys.stdout.write('context__//' + str(user))
-    #print('context__', context)
+    logger.warning('context__//' + str(user))
     organization = toolkit.get_action(u'organization_show')(context, {
         u'id': id
     })
-    sys.stdout.write('organization__//' + str(organization))
-    #print('organisation__', organization)
+    logger.warning('organization__//' + str(organization))
     field = 'display_title_' + user_language()
     to_show_name = organization.get(field)
-    #sys.stdout.write('user__' + str(field))
-    sys.stdout.flush()
-    #print('field__', field)
+    logger.warning('user__' + str(field))
     if (to_show_name):
         return to_show_name
     else:
