@@ -10,6 +10,21 @@ from ckanext.scheming.helpers import scheming_get_dataset_schema
 
 log = logging.getLogger(__name__)
 
+####timer decorator
+import functools
+import time
+
+def timer(func):
+    @functools.wraps(func)
+    def wrapper_timer(*args, **kwargs):
+        tic = time.perf_counter()
+        value = func(*args, **kwargs)
+        toc = time.perf_counter()
+        elapsed_time = toc - tic
+        print(f"Elapsed time: {elapsed_time:0.4f} seconds")
+        return value
+    return wrapper_timer
+
 def user_language():
     try:
         from ckantoolkit import h
@@ -1311,7 +1326,7 @@ def getTranslatedVideoUrl(lang):
     }
     return switcher.get(lang, switcher.get('en'))
 
-
+@timer
 def get_organization_by_id(id):
     user = toolkit.get_action(u'get_site_user')({
         u'ignore_auth': True
