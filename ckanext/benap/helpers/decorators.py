@@ -9,6 +9,6 @@ def decorator_timer(func):
         value = func(*args, **kwargs)
         toc = time.time()
         elapsed_time =toc - tic
-        logging.error('Finished {func.__name__!r} in elapsed time: {elapsed_time:0.4f} seconds')
+        logging.error(f'Finished {func.__name__!r} in elapsed time: {elapsed_time:0.4f} seconds')
         return value
     return wrapper_timer
