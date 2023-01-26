@@ -1326,9 +1326,10 @@ def get_organization_by_id(id):
     field = 'display_title_' + user_language()
     to_show_name = organization.get(field)
     if (to_show_name):
-        logging.error('TimeWillTell2 - Detail:: to show name: %s ', to_show_name)
+        logging.error('TimeWillTell3 - Detail:: to show name: %s ', to_show_name)
         return to_show_name
     else:
+        logging.error('TimeWillTell3 - Detail:: to show name: %s ', "default name")
         return False
 
 
