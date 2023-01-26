@@ -1314,9 +1314,6 @@ def getTranslatedVideoUrl(lang):
 
 @decorator_timer
 def get_organization_by_id(id):
-    if (to_show_name is False):
-        to_show_name = "initialisation"
-    logging.error('TimeWillTell6 - Detail:: old_to show name: %s ', to_show_name)
     user = toolkit.get_action(u'get_site_user')({
         u'ignore_auth': True
     }, {})
