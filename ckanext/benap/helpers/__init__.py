@@ -3,8 +3,7 @@ import json
 import ckan.plugins.toolkit as toolkit
 from ckan.common import config
 import logging
-from timer import timer
-
+from decorators import decorator_timer
 
 from ckanext.benap.helpers.lists import NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE
 from ckanext.benap.util.forms import map_for_form_select
@@ -1313,7 +1312,7 @@ def getTranslatedVideoUrl(lang):
     }
     return switcher.get(lang, switcher.get('en'))
 
-@timer
+@decorator_timer
 def get_organization_by_id(id):
     user = toolkit.get_action(u'get_site_user')({
         u'ignore_auth': True
