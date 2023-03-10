@@ -1327,9 +1327,9 @@ def get_organization_by_id(id):
         u'include_tags': False,
         u'include_followers': False,
     })
-    pretty_json = json_loads(organization)
+    
     logging.error('Organization_start')
-    logging.error('Organization' + (json.dumps(pretty_json, indent=2)))
+    logging.error('Organization' + str(type(organization)))
     logging.error('Organization_stop')
 
     field = 'display_title_' + user_language()
