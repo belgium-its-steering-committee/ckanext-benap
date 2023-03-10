@@ -1330,7 +1330,10 @@ def get_organization_by_id(id):
     
     logging.error('Organization_start')
     for k,v in organization.items():
-        logging.error(str(type(k)) + " ->", str(type(v)))
+        logging.error(k + v)
+        logging.error(type(k) + type(v))
+        logging.error(k , v)
+        logging.error(type(k) , type(v))
     logging.error('Organization_stop')
 
     field = 'display_title_' + user_language()
@@ -1338,10 +1341,10 @@ def get_organization_by_id(id):
     to_show_name = organization.get(field)
     
     if (to_show_name):
-        logging.error('TimeWillTell6 - Detail:: new to show name: %s ', to_show_name)
+        """logging.error('TimeWillTell6 - Detail:: new to show name: %s ', to_show_name)"""
         return to_show_name
     else:
-        logging.error('TimeWillTell6 - Detail:: to show name: %s ', "default name")
+        """logging.error('TimeWillTell6 - Detail:: to show name: %s ', "default name")"""
         return False
 
 
