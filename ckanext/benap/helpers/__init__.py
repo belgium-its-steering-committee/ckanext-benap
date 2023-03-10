@@ -1328,7 +1328,7 @@ def get_organization_by_id(id):
         u'include_followers': False,
     })
     
-    logging.error("Dictionary-> {O}".format(organization))
+    logging.error('Dictionary-> %s', organization)
 
     field = 'display_title_' + user_language()
     
