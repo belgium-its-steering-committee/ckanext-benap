@@ -1314,19 +1314,28 @@ def getTranslatedVideoUrl(lang):
 
 @decorator_timer
 def get_organization_by_id(id):
-    user = toolkit.get_action(u'get_site_user')({
-        u'ignore_auth': True
-    }, {})
-    context = {
-        u'user': user[u'name']
-    }
-    organization = toolkit.get_action(u'organization_show')(context, {
-        u'id': id
+    user = toolkit.get_action(u'get_site_user')({u'ignore_auth': True}, {})
+
+    context = {u'user': user[u'name']}
+
+    organization = toolkit.get_action(u'organization_show')(context, 
+    {
+        u'id': id,
+        u'include_dataset_coynt':False,
+        u'include_users': False,
+        u'include_groups': False,
+        u'include_tags': False,
+        u'include_followers': False,
     })
+
+    logging.error('Organization filterd - attribute display_title?', organization)
+
     field = 'display_title_' + user_language()
+    
     to_show_name = organization.get(field)
+    
     if (to_show_name):
-        logging.error('TimeWillTell6 - Detail:: new_to show name: %s ', to_show_name)
+        logging.error('TimeWillTell6 - Detail:: new to show name: %s ', to_show_name)
         return to_show_name
     else:
         logging.error('TimeWillTell6 - Detail:: to show name: %s ', "default name")
