@@ -1328,7 +1328,7 @@ def get_organization_by_id(id):
         u'include_followers': False,
     })
 
-    logging.error('Organization filterd - attribute display_title?', organization)
+    logging.error('Organization_filterd', str(organization))
 
     field = 'display_title_' + user_language()
     
