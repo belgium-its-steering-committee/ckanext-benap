@@ -1335,7 +1335,7 @@ def get_organization_by_id(id):
         logging.error(type(k) + type(v))
         """
         logging.error(k , v)
-        logging.error(type(k) , type(v))
+        logging.error(str(type(k)) , str(type(v)))
     logging.error('Organization_stop')
 
     field = 'display_title_' + user_language()
