@@ -1312,7 +1312,7 @@ def getTranslatedVideoUrl(lang):
     }
     return switcher.get(lang, switcher.get('en'))
 
-@decorator_timer
+
 def get_organization_by_id(id):
     user = toolkit.get_action(u'get_site_user')(
         {
@@ -1333,7 +1333,7 @@ def get_organization_by_id(id):
     })
     field = 'display_title_' + user_language()
     to_show_name = organization.get(field)
-    
+
     if (to_show_name):
         return to_show_name
     else:
