@@ -1330,8 +1330,10 @@ def get_organization_by_id(id):
     
     logging.error('Organization_start')
     for k,v in organization.items():
+        """
         logging.error(k + v)
         logging.error(type(k) + type(v))
+        """
         logging.error(k , v)
         logging.error(type(k) , type(v))
     logging.error('Organization_stop')
