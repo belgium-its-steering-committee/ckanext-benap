@@ -1329,7 +1329,8 @@ def get_organization_by_id(id):
     })
     
     logging.error('Organization_start')
-    logging.error('Organization' + str(type(organization)))
+    for k,v in organization.items():
+        logging.error(str(k), str(v))
     logging.error('Organization_stop')
 
     field = 'display_title_' + user_language()
