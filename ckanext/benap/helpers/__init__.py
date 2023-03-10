@@ -1327,11 +1327,10 @@ def get_organization_by_id(id):
         u'include_tags': False,
         u'include_followers': False,
     })
-
-    logging.error('Organization_filterd_start')
-    logging.error('Organization_filterd' + organization)
-    logging.error('Organization_filterd' + str(organization))
-    logging.error('Organization_filterd_stop')
+    pretty_json = json_loads(organization)
+    logging.error('Organization_start')
+    logging.error('Organization' + (json.dumps(pretty_json, indent=2)))
+    logging.error('Organization_stop')
 
     field = 'display_title_' + user_language()
     
