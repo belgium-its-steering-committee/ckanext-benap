@@ -89,8 +89,10 @@ within_tertiary
             {% if items %}
               <nav>
                 <ul class="{{ nav_class or 'list-unstyled nav nav-simple nav-facet' }}">
+                  
                   {% for item in items %}
-                  <!--script>console.log('{{item}}');</script-->
+                    <!--<script>console.log("items::", '{{items|selectattr('active', 'defined')|map(attribute='active')}}')</script>-->
+                    <!--<script>console.log("item::", '{{item.display_name}}','{{item.active}}')</script>-->
                     {% set href = h.remove_url_param(name, item.name, extras=extras, alternative_url=alternative_url) if item.active else h.add_url_param(new_params={name: item.name}, extras=extras, alternative_url=alternative_url) %}
                     {% set label = label_function(item) if label_function else item.display_name %}
                     {% set label_truncated = h.truncate(label, 22) if not label_function else label %}
@@ -103,6 +105,28 @@ within_tertiary
                         </a>
                       </li>
                   {% endfor %}
+
+                  {% for item in items|selectattr('active', 'defined')|map(attribute='active') %}
+                    {% if item %}
+                      <script>
+                          <!--console.log("name::", 'tags', '{{name}}',)-->
+                          console.log("itemCHECKIfstatementOnlyTrue::", '{{item}}')
+                          if ('tags' !== '{{ name }}') {
+                            $('#collapse-{{ name }}').toggle();
+                            $('#collapse-{{ name }}-close').toggle();
+                          } else {
+                            $('#collapse-{{ name }}-open').toggle();
+                          }
+
+                          $('#collapse-{{ name }}-toggle').click(() => {
+                            $('#collapse-{{ name }}').toggle();
+                            $('#collapse-{{ name }}-open').toggle();
+                            $('#collapse-{{ name }}-close').toggle();
+                          });
+                        </script>
+                    {% endif %}
+                  {% endfor %}
+                  
                 </ul>
               </nav>
 
@@ -119,11 +143,15 @@ within_tertiary
                 <p class="module-content empty">{{ _('There are no {facet_type} that match this search').format(facet_type=title) }}</p>
               {% endif %}
               {% endwith %}
-            </div>
+          </div>
           {% endblock %}
         </section>
+
+
+        
+
         <script>
-          console.log('{{name}}');
+            console.log("Eerste layout script");
             if ('tags' !== '{{ name }}') {
               $('#collapse-{{ name }}').toggle();
               $('#collapse-{{ name }}-close').toggle();

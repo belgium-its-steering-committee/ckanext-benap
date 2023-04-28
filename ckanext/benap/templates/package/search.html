@@ -5,7 +5,7 @@
   <h2 class="module-heading">{{ _('Filters') }}</h2>
   <div>
     {% for facet in c.facet_titles %}
-    <!--script>console.log('{{c.facet_titles}}');</script-->
+    <!--script>console.log('koekoek: {{c.facet}}');</script-->
       {{ h.snippet('snippets/facet_list.html', title=h.translate_organization_filter(c.facet_titles[facet], h.lang()), name=facet) }}
     {% endfor %}
     {# {{ h.snippet('snippets/facet_list.html', title='regions_covered', name='regions_covered') }} #}
