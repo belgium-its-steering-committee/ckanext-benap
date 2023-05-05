@@ -91,8 +91,6 @@ within_tertiary
                 <ul class="{{ nav_class or 'list-unstyled nav nav-simple nav-facet' }}">
                   
                   {% for item in items %}
-                    <!--<script>console.log("items::", '{{items|selectattr('active', 'defined')|map(attribute='active')}}')</script>-->
-                    <!--<script>console.log("item::", '{{item.display_name}}','{{item.active}}')</script>-->
                     {% set href = h.remove_url_param(name, item.name, extras=extras, alternative_url=alternative_url) if item.active else h.add_url_param(new_params={name: item.name}, extras=extras, alternative_url=alternative_url) %}
                     {% set label = label_function(item) if label_function else item.display_name %}
                     {% set label_truncated = h.truncate(label, 22) if not label_function else label %}
@@ -104,29 +102,19 @@ within_tertiary
                           <span class="item-count badge">{{ count }}</span>
                         </a>
                       </li>
-                  {% endfor %}
-
-                  {% for item in items|selectattr('active', 'defined')|map(attribute='active') %}
-                    {% if item %}
+                    {%if item.active%}
                       <script>
-                          <!--console.log("name::", 'tags', '{{name}}',)-->
-                          console.log("itemCHECKIfstatementOnlyTrue::", '{{item}}')
-                          if ('tags' !== '{{ name }}') {
+                          //open envelop when is selected
+                          $('#collapse-{{ name }}').toggle();
+                          $('#collapse-{{ name }}-close').toggle();
+                          //exception for 'tags' envelop (always open)
+                          if ('tags' == '{{ name }}') {
                             $('#collapse-{{ name }}').toggle();
                             $('#collapse-{{ name }}-close').toggle();
-                          } else {
-                            $('#collapse-{{ name }}-open').toggle();
-                          }
-
-                          $('#collapse-{{ name }}-toggle').click(() => {
-                            $('#collapse-{{ name }}').toggle();
-                            $('#collapse-{{ name }}-open').toggle();
-                            $('#collapse-{{ name }}-close').toggle();
-                          });
-                        </script>
+                          } 
+                      </script>
                     {% endif %}
                   {% endfor %}
-                  
                 </ul>
               </nav>
 
@@ -147,24 +135,21 @@ within_tertiary
           {% endblock %}
         </section>
 
-
-        
-
         <script>
-            console.log("Eerste layout script");
+            //open 'tags' envelope on every page load
             if ('tags' !== '{{ name }}') {
               $('#collapse-{{ name }}').toggle();
               $('#collapse-{{ name }}-close').toggle();
             } else {
               $('#collapse-{{ name }}-open').toggle();
             }
-
+            //toggle envelopes
             $('#collapse-{{ name }}-toggle').click(() => {
               $('#collapse-{{ name }}').toggle();
               $('#collapse-{{ name }}-open').toggle();
               $('#collapse-{{ name }}-close').toggle();
             });
-          </script>
+        </script>
       {% endblock %}
     {% endif %}
   {% endwith %}
