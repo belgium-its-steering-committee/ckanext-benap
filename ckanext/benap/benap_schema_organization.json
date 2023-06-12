@@ -5,6 +5,27 @@
   "about_url": "https://github.com/belgium-its-steering-committee/ckanext-benap",
   "fields": [
     {
+      "field_name": "organisation_Logo",
+      "label": {
+        "en": "Organisation Logo",
+        "fr": "Logo d'orginisation",
+        "nl": "Organisatie Logo",
+        "de": "Organisations Logo"
+      },
+      "validators": "unicode not_empty",
+      "help_text": {
+        "en": "The logo of your organisation",
+        "fr": "Le logo de votre organisation",
+        "nl": "Het logo van je organisatie",
+        "de": "Das Logo Ihrer Organisation"
+      },
+      "form_snippet": "upload_organisation_logo.html",
+      "form_placeholder": "https://www.my-organization.com/my-logo",
+      "upload_field": "logo_upload",
+      "upload_clear": "clear_upload",
+      "upload_label": "organisationLogo"
+    },
+    {
       "field_name": "title",
       "label": {
         "en": "Organisation name (default)",
