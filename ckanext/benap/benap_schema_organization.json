@@ -5,27 +5,6 @@
   "about_url": "https://github.com/belgium-its-steering-committee/ckanext-benap",
   "fields": [
     {
-      "field_name": "organisation_Logo",
-      "label": {
-        "en": "Organisation Logo",
-        "fr": "Logo d'orginisation",
-        "nl": "Organisatie Logo",
-        "de": "Organisations Logo"
-      },
-      "validators": "unicode not_empty",
-      "help_text": {
-        "en": "The logo of your organisation",
-        "fr": "Le logo de votre organisation",
-        "nl": "Het logo van je organisatie",
-        "de": "Das Logo Ihrer Organisation"
-      },
-      "form_snippet": "upload_organisation_logo.html",
-      "form_placeholder": "https://www.my-organization.com/my-logo",
-      "upload_field": "logo_upload",
-      "upload_clear": "clear_upload",
-      "upload_label": "organisationLogo"
-    },
-    {
       "field_name": "title",
       "label": {
         "en": "Organisation name (default)",
@@ -160,25 +139,26 @@
       ]
     },
     {
-      "field_name": "image_url",
+      "field_name": "Organisation_logo",
       "label": {
-        "en": "Image URL",
-        "fr": "URL de l'image",
-        "nl": "URL van het beeld",
-        "de": "URL des Bildes"
+        "en": "Organisation Logo",
+        "fr": "Logo d'orginisation",
+        "nl": "Organisatie Logo",
+        "de": "Organisations Logo"
       },
-      "validators": "unicode remove_whitespace benap_https_validator",
       "help_text": {
         "en": "The logo of your organisation",
         "fr": "Le logo de votre organisation",
         "nl": "Het logo van je organisatie",
         "de": "Das Logo Ihrer Organisation"
       },
-      "form_snippet": "upload.html",
+      "form_snippet": "upload_organisation_logo.html",
       "form_placeholder": "https://www.my-organization.com/my-logo",
       "upload_field": "image_upload",
       "upload_clear": "clear_upload",
-      "upload_label": "Image"
+      "upload_label": "organisationLogo",
+      "validators": "not_empty unicode",
+      "required":true
     },
     {
       "field_name": "do_address",
