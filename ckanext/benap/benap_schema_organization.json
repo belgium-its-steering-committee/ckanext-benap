@@ -139,7 +139,7 @@
       ]
     },
     {
-      "field_name": "Organisation_logo",
+      "field_name": "image_url",
       "label": {
         "en": "Organisation Logo",
         "fr": "Logo d'orginisation",
@@ -156,7 +156,7 @@
       "form_placeholder": "https://www.my-organization.com/my-logo",
       "upload_field": "image_upload",
       "upload_clear": "clear_upload",
-      "upload_label": "organisationLogo",
+      "upload_label": "organisation_Logo",
       "validators": "not_empty unicode",
       "required":true
     },
