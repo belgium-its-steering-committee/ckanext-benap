@@ -98,7 +98,12 @@ within_tertiary
                         console.log("open sesamie")
                         console.log('{{title}}')
                          //open envelop when is selected
-                          $('#collapse-{{ name }}').toggle();
+                          if('tags' != '{{title}}'){
+                             $('#collapse-{{ name }}').toggle(); 
+                          }
+                          else{
+                            $('#collapse-{{ name }}-close').toggle();
+                          }
                       }
                   </script>
                   {% for item in items %}
