@@ -87,7 +87,6 @@ within_tertiary
               {% set items = h.filter_default_tags_only(items) %}
             {% endif %}
             {% if items %}
-               <p>"{{items | length }}"</p>
               <nav>
                 <ul class="{{ nav_class or 'list-unstyled nav nav-simple nav-facet' }}">
                   {% for item in items %}
