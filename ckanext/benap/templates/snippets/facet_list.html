@@ -89,6 +89,17 @@ within_tertiary
             {% if items %}
               <nav>
                 <ul class="{{ nav_class or 'list-unstyled nav nav-simple nav-facet' }}">
+                  {#items list needs to show all tags when "show more is selected" #}
+                  <script>
+                    var itemsNr = '{{items | length}}'
+                    console.log('K::', itemsNr)
+                    itemsNr= parseInt(itemsNr)
+                    if(itemsNr> 10){
+                        console.log("open sesamie")
+                         //open envelop when is selected
+                          $('#collapse-{{ name }}-close').toggle();
+                      }
+                  </script>
                   {% for item in items %}
                     {% set href = h.remove_url_param(name, item.name, extras=extras, alternative_url=alternative_url) if item.active else h.add_url_param(new_params={name: item.name}, extras=extras, alternative_url=alternative_url) %}
                     {% set label = label_function(item) if label_function else item.display_name %}
@@ -101,7 +112,7 @@ within_tertiary
                           <span class="item-count badge">{{ count }}</span>
                         </a>
                       </li>
-                    {%if item.active or items | length >10 %}
+                    {%if item.active%}
                     {#A tag is active or items list needs to show all tags#}
                       <script>
                           //open envelop when is selected
