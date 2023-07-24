@@ -96,8 +96,9 @@ within_tertiary
                     itemsNr= parseInt(itemsNr)
                     if(itemsNr> 10){
                         console.log("open sesamie")
+                        console.log('{{title}}')
                          //open envelop when is selected
-                          $('#collapse-{{ name }}-close').toggle();
+                          $('#collapse-{{ name }}').toggle();
                       }
                   </script>
                   {% for item in items %}
