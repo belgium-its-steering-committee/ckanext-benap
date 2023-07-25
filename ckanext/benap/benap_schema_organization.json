@@ -318,7 +318,7 @@
         "nl": "Verklaring van overeenstemming SRTI",
         "de": "Konformitätserklärung SRTI"
       },
-      "validators": "unicode remove_whitespace benap_https_validator benap_pdf_validator",
+      "validators": "unicode remove_whitespace benap_https_validator benap_pdf_validator pdf_validator ",
       "help_text": {
         "en": "",
         "fr": "",
