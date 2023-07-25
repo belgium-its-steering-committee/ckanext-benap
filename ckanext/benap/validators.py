@@ -74,10 +74,3 @@ def https_validator(value, context):
                 value = remove_prefix(value, "http://")
             raise Invalid(_('URL {url} has to start with https://').format(url=value))
     return value
-
-
-def pdf_validator(value):
-    if value and len(value) > 0:
-        if not value.endswith(('pdf', 'PDF')):
-            raise Invalid(_('Only PDF is allowed').format(url=value))
-    return value
