@@ -1,0 +1,4 @@
+{% block additional_user_agents %}
+User-agent: SemrushBot
+Disallow:/
+{% endblock %}
