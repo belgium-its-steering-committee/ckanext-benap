@@ -147,10 +147,10 @@
         "de": "Organisations Logo"
       },
       "help_text": {
-        "en": "The logo of your organisation",
-        "fr": "Le logo de votre organisation",
-        "nl": "Het logo van je organisatie",
-        "de": "Das Logo Ihrer Organisation"
+        "en": "The logo of your organisation, only .jpeg, .jpg, .bmp and .png extensions allowed",
+        "fr": "Le logo de votre organisation, que .jpeg, .jpg, .bmp et .png extensions accepté",
+        "nl": "Het logo van je organisatie, enkel .jpeg, .jpg, .bmp en .png extensies toeglaten",
+        "de": "Das Logo Ihrer Organisation, nûr .jpeg, .jpgn .bmp und .png erweiterungen erlaubt"
       },
       "form_snippet": "upload_organisation_logo.html",
       "form_placeholder": "https://www.my-organization.com/my-logo",
