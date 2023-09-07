@@ -99,13 +99,8 @@ within_tertiary
                         console.log('K::', itemsNr)
                         console.log("open sesamie")
                         console.log('{{title}}')
-                         //open envelop when is selected
-                          //if('Tags' != '{{title}}'){
-                             //$('#collapse-{{ name }}').toggle(); 
-                          //}
-                          //else{
-                            //$('#collapse-{{ name }}-open').toggle();
-                          //}
+                        var ulElement = $('#collapse-{{ name }}')
+                        ulElement.setAttribute('data-module', 'openEnveloppeDueToShowMore')
                       }
                     console.log("3 SCRIPT END")
                   </script>
@@ -121,23 +116,6 @@ within_tertiary
                           <span class="item-count badge">{{ count }}</span>
                         </a>
                       </li>
-                    {%if item.active%}
-                    {#A tag is active or items list needs to show all tags#}    
-                      <script>
-                          console.log("2 SCRIPT")
-                          console.log('{{name}}')
-                          console.log('is_ItemActive',item.active)
-                          //open envelop when is selected
-                          $('#collapse-{{ name }}').toggle();
-                          $('#collapse-{{ name }}-close').toggle();
-                          //exception for 'tags' envelop (always open)
-                          if ('tags' == '{{ name }}') {
-                            $('#collapse-{{ name }}').toggle();
-                            $('#collapse-{{ name }}-close').toggle();
-                          }
-                          console.log("2 SCRIPT END")
-                      </script>
-                    {% endif %}
                   {% endfor %}
                 </ul>
               </nav>
@@ -163,14 +141,14 @@ within_tertiary
             console.log("1 SCRIPT")
             console.log('{{name}}')
             //open 'tags' envelope on every page load
-            if ('tags' !== '{{ name }}') {
+            if ('tags' == '{{name}}' or $('#collapse-{{ name }}[data-module="openEnveloppeDueToShowMore"]')){
+              //'open' caret not visible, 'close' caret visible
+              $('#collapse-{{ name }}-open').toggle()
+            } else {
               //'open' caret visible, 'close' cared not visible'
               $('#collapse-{{ name }}-close').toggle();
               //content not visible
               $('#collapse-{{ name }}').toggle();
-            } else {
-              //'open' caret not visible, 'close' caret visible
-              $('#collapse-{{ name }}-open').toggle()
             }
             //toggle envelopes within on page load session
             $('#collapse-{{ name }}-toggle').click(() => {
