@@ -376,8 +376,8 @@
         "de": ""
       },
       "form_snippet": "proxy_upload.html",
-      "upload_field": "proxy_upload_doc",
-      "upload_clear": "proxy_clear_upload_doc",
+      "upload_field": "proxy_upload",
+      "upload_clear": "proxy_clear_upload",
       "upload_label": {
         "en": "Proxy agreement",
         "fr": "Convention proxy",
