@@ -361,6 +361,31 @@
       }
     },
     {
+      "field_name": "proxy_pdf_url",
+      "label": {
+        "en": "Proxy agreement",
+        "fr": "Convention proxy",
+        "nl": "Proxy overeenkomst",
+        "de": "Vollmachtsvereinbarung"
+      },
+      "validators": "doc_validator",
+      "help_text": {
+        "en": "Upload the PDF 'Proxy agreement'",
+        "fr": "Télécharger la 'Convention proxy' au format PDF",
+        "nl": "Upload de PDF 'Proxy overeenkomst'",
+        "de": "Upload der PDF 'Vollmachtsvereinbarung'"
+      },
+      "form_snippet": "proxy_upload.html",
+      "upload_field": "proxy_upload",
+      "upload_clear": "proxy_clear_upload",
+      "upload_label": {
+        "en": "Proxy agreement",
+        "fr": "Convention proxy",
+        "nl": "Proxy overeenkomst",
+        "de": "Vollmachtsvereinbarung"
+      }
+    },
+    {
       "field_name": "organization_agreement_declaration_nap",
       "label": {
         "en": "Disclaimer Declarations of compliance",
