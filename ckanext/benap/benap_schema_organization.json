@@ -361,7 +361,7 @@
       }
     },
     {
-      "field_name": "proxy_pdf_upload",
+      "field_name": "proxy_pdf_url",
       "label": {
         "en": "Proxy agreement",
         "fr": "Convention proxy",
