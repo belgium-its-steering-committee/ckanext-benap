@@ -370,10 +370,10 @@
       },
       "validators": "doc_validator",
       "help_text": {
-        "en": "",
-        "fr": "",
-        "nl": "",
-        "de": ""
+        "en": "Upload the PDF 'Proxy agreement'",
+        "fr": "Télécharger la 'Convention proxy' au format PDF",
+        "nl": "Upload de PDF 'Proxy overeenkomst'",
+        "de": "Upload der PDF 'Vollmachtsvereinbarung'"
       },
       "form_snippet": "proxy_upload.html",
       "upload_field": "proxy_upload",
