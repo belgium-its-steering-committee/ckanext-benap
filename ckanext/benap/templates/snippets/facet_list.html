@@ -141,7 +141,7 @@ within_tertiary
             console.log("1 SCRIPT")
             console.log('{{name}}')
             //open 'tags' envelope on every page load
-            if ('tags' == '{{name}}' or $('#collapse-{{ name }}[data-module="openEnveloppeDueToShowMore"]')){
+            if ('tags' === '{{name}}' || $('#collapse-{{ name }}[data-module="openEnveloppeDueToShowMore"]').length > 0){
               //'open' caret not visible, 'close' caret visible
               $('#collapse-{{ name }}-open').toggle()
             } else {
