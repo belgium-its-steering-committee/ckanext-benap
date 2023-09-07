@@ -92,6 +92,7 @@ within_tertiary
                   {#items list needs to show all tags when "show more is selected" #}
                   <script>
                     console.log("3 SCRIPT")
+                    console.log('{{name}}')
                     var itemsNr = '{{items | length}}' 
                     itemsNr= parseInt(itemsNr)
                     if(itemsNr> 10){
@@ -124,6 +125,8 @@ within_tertiary
                     {#A tag is active or items list needs to show all tags#}    
                       <script>
                           console.log("2 SCRIPT")
+                          console.log('{{name}}')
+                          console.log('is_ItemActive',item.active)
                           //open envelop when is selected
                           $('#collapse-{{ name }}').toggle();
                           $('#collapse-{{ name }}-close').toggle();
@@ -158,6 +161,7 @@ within_tertiary
 
         <script>
             console.log("1 SCRIPT")
+            console.log('{{name}}')
             //open 'tags' envelope on every page load
             if ('Tags' !== '{{ name }}') {
               //'open' caret visible, 'close' cared not visible'
