@@ -98,12 +98,12 @@ within_tertiary
                         console.log("open sesamie")
                         console.log('{{title}}')
                          //open envelop when is selected
-                          if('Tags' != '{{title}}'){
-                             $('#collapse-{{ name }}').toggle(); 
-                          }
-                          else{
-                            $('#collapse-{{ name }}-open').toggle();
-                          }
+                          //if('Tags' != '{{title}}'){
+                             //$('#collapse-{{ name }}').toggle(); 
+                          //}
+                          //else{
+                            //$('#collapse-{{ name }}-open').toggle();
+                          //}
                       }
                   </script>
                   {% for item in items %}
@@ -154,16 +154,22 @@ within_tertiary
 
         <script>
             //open 'tags' envelope on every page load
-            if ('tags' !== '{{ name }}') {
-              $('#collapse-{{ name }}').toggle();
+            if ('Tags' !== '{{ name }}') {
+              //'open' caret visible, 'close' cared not visible'
               $('#collapse-{{ name }}-close').toggle();
-            } else {
-              $('#collapse-{{ name }}-open').toggle();
-            }
-            //toggle envelopes
-            $('#collapse-{{ name }}-toggle').click(() => {
+              //content not visible
               $('#collapse-{{ name }}').toggle();
+            } else {
+              //'open' caret not visible, 'close' caret visible
+              $('#collapse-{{ name }}-open').toggle()
+            }
+            //toggle envelopes within on page load session
+            $('#collapse-{{ name }}-toggle').click(() => {
+              //content
+              $('#collapse-{{ name }}').toggle();
+              //'open' caret
               $('#collapse-{{ name }}-open').toggle();
+              //'close' caret
               $('#collapse-{{ name }}-close').toggle();
             });
         </script>
