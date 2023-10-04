@@ -74,7 +74,7 @@ msgid ""
 " commitee."
 msgstr ""
 "2022 - By the National Geographic Institute on behalf of the ITS steering"
-" commitee."
+" committee."
 
 #: ckanext/benap/templates/header.html:83
 msgid "Welcome"

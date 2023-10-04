@@ -255,7 +255,7 @@
               "nl": "Voor meer info <a>klik hier</a>",
               "de": "Für weitere Informationen, bitte <a>hier klicken</a>"
            },
-          "help_link": "/pages/compliance"
+          "help_link": "/pages/declaration-of-compliance"
          },
         {
           "value": "N",
@@ -385,7 +385,7 @@
               "nl": "Voor elk NAP waarvoor u datasets of diensten  registreert (MMTIS, RTTI, SRTI, SSTP) moet uw organisatie een formulier indienen voor elk type NAP waarbij uw organisatie aangeeft in overeenstemming te zijn met de respectievelijke Europese Verordeningen. <a>Voor meer informatie klik hier.</a>\n\nIndien uw organisatie opereert in het domein van verkeersveiligheidsinformatie (NAP SRTI) dient uw organisatie mogelijks een verklaring van overeenstemming in te dienen zelfs indien u geen datasets of diensten registreert. ",
               "de": "Für jeden NAP, worauf Sie Datensätze oder Dienste registrieren (MMTIS, RTTI, SRTI, SSTP), muss Ihre Organisation ein Formular eintragen, wo sie ihre Beachtung der jeweiligen europäischen Verordnungen bestätigt. <a>Klicken Sie hier für weitere Informationen.</a>\n\nWenn Ihre Organisation im Sektor der für die Straßenverkehrssicherheit relevanter Verkehrsmeldungen (NAP SRTI) tätig ist, muss Ihre Organisation möglicherweise eine Übereinstimmungserklärung eintragen, selbst wenn Sie keine Datensätze oder Dienste registrieren. "
            },
-          "help_link": "/pages/compliance"
+          "help_link": "/pages/declaration-of-compliance"
          }
       ],
       "required": "true",
