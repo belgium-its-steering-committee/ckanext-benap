@@ -4,6 +4,29 @@
   "about": "A CKAN schema for the Belgian NAP",
   "about_url": "https://github.com/belgium-its-steering-committee/ckanext-benap",
   "dataset_fields": [
+    { "field_name": "NAP checked",
+      "label":"NAP check",
+      "form_snippet": "NAP_checked.html",
+      "form_placeholder":"Checked",
+      "present":"select",
+      "choices": [
+        {
+          "label": "Not checked",
+          "value": false
+        },
+        {
+          "label": "Checked",
+          "value": true
+        }
+      ],
+      "display_property": null,
+      "help_text": {
+        "en":"Only for system administrators",
+        "fr":"Réservé aux administrateurs de système",
+        "de":"Nur für Systemadministratoren",
+        "nl":"Enkel voor systeem beheerders"
+      }
+    },
     {
       "field_name": "language",
       "label": {
