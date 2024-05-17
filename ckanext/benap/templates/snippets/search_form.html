@@ -74,13 +74,11 @@
 </form>
 
 {% if show_empty and count == 0 and not error %}
-  {% trans %}
-    <p class="extra">Please try another search.</p>
-  {% endtrans %}
+    <p class="extra">{% trans %}Please try another search.{% endtrans %}</p>
 {% endif %}
 
 {% if error %}
-  {% trans %}
-    <p id="search-error"><strong>There was an error while searching.</strong> Please try again.</p>
-  {% endtrans %}
+  
+    <p id="search-error">{% trans %}<strong>There was an error while searching.</strong> Please try again.{% endtrans %}</p>
+ 
 {% endif %}

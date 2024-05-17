@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 2.0.4\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-17 14:50+0200\n"
+"POT-Creation-Date: 2024-05-17 15:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -499,6 +499,10 @@ msgstr ""
 msgid "Filters"
 msgstr ""
 
+#: ckanext/benap/templates/package/search.html:12
+msgid "close"
+msgstr ""
+
 #: ckanext/benap/templates/package/snippets/nap_checked_pill.html:3
 msgid "metadata checked & verified"
 msgstr ""
@@ -572,13 +576,11 @@ msgid "Filter Results"
 msgstr ""
 
 #: ckanext/benap/templates/snippets/search_form.html:77
-msgid " <p class=\"extra\">Please try another search.</p> "
+msgid "Please try another search."
 msgstr ""
 
-#: ckanext/benap/templates/snippets/search_form.html:83
-msgid ""
-" <p id=\"search-error\"><strong>There was an error while searching.</strong> "
-"Please try again.</p> "
+#: ckanext/benap/templates/snippets/search_form.html:82
+msgid "<strong>There was an error while searching.</strong> Please try again."
 msgstr ""
 
 #: ckanext/benap/templates/user/dashboard.html:9
