@@ -4,21 +4,23 @@
   "about": "A CKAN schema for the Belgian NAP",
   "about_url": "https://github.com/belgium-its-steering-committee/ckanext-benap",
   "dataset_fields": [
-    { "field_name": "NAP checked",
+    { "field_name": "nap_checked",
       "label":"NAP check",
-      "form_snippet": "NAP_checked.html",
-      "form_placeholder":"Checked",
-      "present":"select",
+      "form_include_blank_choice":"false",
+      "required": "true",
+      "display_snippet" : null,
+      "output_validators": "boolean_validator",
+      "form_snippet":"nap_checked.html",
       "choices": [
-        {
-          "label": "Not checked",
-          "value": false
-        },
-        {
-          "label": "Checked",
-          "value": true
-        }
-      ],
+          {
+            "label": "Not checked",
+            "value": "false"
+          },
+          {
+            "label": "Checked",
+            "value": "true"
+          }
+        ],
       "display_property": null,
       "help_text": {
         "en":"Only for system administrators",
