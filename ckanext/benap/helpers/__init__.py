@@ -1361,8 +1361,6 @@ def benap_fluent_label(field_name, field_label, lang):
 
 def is_user_sysAdmin(user):
     userFetched = toolkit.get_action('user_show')(data_dict={'id':user})
-    print("/n/t user:: ", userFetched)
-    print("/n/t sysAdmin::", userFetched['sysadmin'])
     if userFetched['sysadmin']:
         return True
     return False

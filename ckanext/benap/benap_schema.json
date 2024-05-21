@@ -9,6 +9,7 @@
       "form_include_blank_choice":"false",
       "required": "true",
       "display_snippet" : null,
+      "validators": "benap_modified_by_sysadmin",
       "output_validators": "boolean_validator",
       "form_snippet":"nap_checked.html",
       "choices": [
