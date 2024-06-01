@@ -2,11 +2,11 @@
 
 {%- set options=[] -%}
 {%- set form_restrict_choices_to=field.get('form_restrict_choices_to') -%}
-<!--IF statement buggy-->
-{#%- if not h.scheming_field_required(field) or
-    field.get('form_include_blank_choice', false) -%}
-  {%- do options.append({'value': '', 'text': ''}) -%}
+<!--IF statement buggy - boolean types correct?-->
+{#%- if not h.scheming_field_required(field) or field.get('form_include_blank_choice', false) -%}
+  {%- do options.append({'value': 'dont', 'text': 'dont'}) -%}
 {%- endif -%#}
+
 {%- for c in h.scheming_field_choices(field) -%}
   {%- if not form_restrict_choices_to or c.value in form_restrict_choices_to -%}
     {%- do options.append({
@@ -24,7 +24,7 @@
     id='field-' + field.field_name,
     label=h.scheming_language_text(field.label),
     options=options,
-    selected=data[field.field_name],
+    selected=data[field.field_name] if data[field.field_name] else false,
     error=errors[field.field_name],
     classes=['control-medium'],
     attrs=dict({"class": "form-control"}, **(field.get('form_attrs', {}))),
