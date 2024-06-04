@@ -19,6 +19,7 @@
 {%- endif -%}
 
 {%- if h.benap_is_user_sysAdmin(c.user) -%}
+  <h1>{{h.benap_is_user_sysAdmin(c.user)}}</h1>
   {% call form.select(
     field.field_name,
     id='field-' + field.field_name,
