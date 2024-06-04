@@ -89,7 +89,7 @@ def modified_by_sysadmin(schema_value, package):
              flag == True
     
      if user is not None:
-        if not user.sysadmin and  flag:
+        if not user.sysadmin and flag:
             raise Invalid(_('Modification must done by a system administrator'))
         else:
             return schema_value
