@@ -78,9 +78,20 @@ def https_validator(value, context):
 
 def modified_by_sysadmin(schema_value, package):
      user  = package.get("auth_user_obj")
+     
+     #parse schema_value
+     trueValues = {"true"}
+     flag = False
+
+     if isinstance(schema_value, str):
+         lowerValue = schema_value.strip().lower()
+         if lowerValue in trueValues:
+             flag == True
+    
      if user is not None:
-        if not user.sysadmin:
+        if not user.sysadmin and flag:
             raise Invalid(_('Modification must done by a system administrator'))
-        return schema_value
+        else:
+            return schema_value
      else:
          raise Invalid(_('Logged in one must be'))

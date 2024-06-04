@@ -14,3 +14,7 @@
 .label[data-format]{
     background-color: #aaa;
 }
+
+.form-hidden {
+    display: none;
+}

@@ -2,11 +2,11 @@
 
 {%- set options=[] -%}
 {%- set form_restrict_choices_to=field.get('form_restrict_choices_to') -%}
-<!--IF statement buggy-->
-{#%- if not h.scheming_field_required(field) or
-    field.get('form_include_blank_choice', false) -%}
-  {%- do options.append({'value': '', 'text': ''}) -%}
+<!--IF statement buggy - boolean types correct?-->
+{#%- if not h.scheming_field_required(field) or field.get('form_include_blank_choice', false) -%}
+  {%- do options.append({'value': 'dont', 'text': 'dont'}) -%}
 {%- endif -%#}
+
 {%- for c in h.scheming_field_choices(field) -%}
   {%- if not form_restrict_choices_to or c.value in form_restrict_choices_to -%}
     {%- do options.append({
@@ -18,13 +18,15 @@
   {%- set options = options|sort(case_sensitive=false, attribute='text') -%}
 {%- endif -%}
 
+
+{# different form-call whenever a user is a sysadmin #}
 {%- if h.benap_is_user_sysAdmin(c.user) -%}
   {% call form.select(
     field.field_name,
     id='field-' + field.field_name,
     label=h.scheming_language_text(field.label),
     options=options,
-    selected=data[field.field_name],
+    selected=data.get(field.field_name, default_value),
     error=errors[field.field_name],
     classes=['control-medium'],
     attrs=dict({"class": "form-control"}, **(field.get('form_attrs', {}))),
@@ -33,4 +35,21 @@
   %}
     {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
   {% endcall %}
-{%- endif -%}
+
+{%- else -%}
+  {# minimum form-call for non-sysadmins #}
+  {# selected value false ('not checked') and class form-hidden #}
+  {% set default_value = "false" %}
+    
+    {% call form.select(
+      field.field_name,
+      id='field-' + field.field_name,
+      options=options,
+      selected= default_value,
+      classes=['control-medium', 'form-hidden'],
+      attrs=dict({"class": "form-control"}, **(field.get('form_attrs', {})))
+      )%}
+    {% endcall %}
+
+{%endif%}
+
