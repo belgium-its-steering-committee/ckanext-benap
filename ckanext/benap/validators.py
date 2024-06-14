@@ -78,7 +78,6 @@ def https_validator(value, context):
 
 def modified_by_sysadmin(schema_value, package):
      user  = package.get("auth_user_obj")
-     
      #parse schema_value
      trueValues = {"true"}
      flag = False
