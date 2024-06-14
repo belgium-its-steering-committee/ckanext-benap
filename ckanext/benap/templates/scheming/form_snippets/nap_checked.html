@@ -18,15 +18,14 @@
   {%- set options = options|sort(case_sensitive=false, attribute='text') -%}
 {%- endif -%}
 
-
 {# different form-call whenever a user is a sysadmin #}
-{%- if h.benap_is_user_sysAdmin(c.user) -%}
+{%- if h.benap_is_user_sysAdmin(c.user)-%}
   {% call form.select(
     field.field_name,
     id='field-' + field.field_name,
     label=h.scheming_language_text(field.label),
     options=options,
-    selected=data.get(field.field_name, default_value),
+    selected=data.get(field.field_name, default_sysValue),
     error=errors[field.field_name],
     classes=['control-medium'],
     attrs=dict({"class": "form-control"}, **(field.get('form_attrs', {}))),
@@ -39,8 +38,7 @@
 {%- else -%}
   {# minimum form-call for non-sysadmins #}
   {# selected value false ('not checked') and class form-hidden #}
-  {% set default_value = "false" %}
-    
+  {% set default_value = h.benap_is_nap_checked(c.id) | default("False")%}
     {% call form.select(
       field.field_name,
       id='field-' + field.field_name,
@@ -50,6 +48,5 @@
       attrs=dict({"class": "form-control"}, **(field.get('form_attrs', {})))
       )%}
     {% endcall %}
-
 {%endif%}
 

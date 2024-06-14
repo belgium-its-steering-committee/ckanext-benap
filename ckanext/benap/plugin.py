@@ -10,7 +10,7 @@ from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallba
     package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete, \
     get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, get_translated_tag_with_name, \
     forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element, get_organization_by_id, benap_fluent_label, \
-    translate_organization_filter, is_user_sysAdmin
+    translate_organization_filter, is_user_sysAdmin, is_nap_checked
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.validators import phone_number_validator, countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin
 from ckanext.benap.logic.auth.get import user_list
@@ -66,6 +66,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'show_element': show_element,
             'benap_fluent_label': benap_fluent_label,
             'benap_is_user_sysAdmin': is_user_sysAdmin,
+            'benap_is_nap_checked':is_nap_checked,
         }
 
     # IValidators
