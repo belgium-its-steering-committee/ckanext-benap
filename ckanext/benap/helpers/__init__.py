@@ -1366,11 +1366,9 @@ def is_user_sysAdmin(user):
     return False
 
 def is_nap_checked(datasetID):
-    if datasetID:
-        datasetFetched = toolkit.get_action('package_show')(data_dict={'id':datasetID})
-        if datasetFetched.get("nap_checked") is not None and datasetFetched['nap_checked']:
-            return "True"
+    if not datasetID:
         return "False"
-    else:
-        return "False"
-
+    datasetFetched = toolkit.get_action('package_show')(data_dict={'id':datasetID})
+    if datasetFetched.get("nap_checked") is not None and datasetFetched['nap_checked']:
+        return "True"
+    return "False"
