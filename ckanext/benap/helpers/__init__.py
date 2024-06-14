@@ -1369,6 +1369,4 @@ def is_nap_checked(datasetID):
     if not datasetID:
         return "False"
     datasetFetched = toolkit.get_action('package_show')(data_dict={'id':datasetID})
-    if datasetFetched.get("nap_checked") is not None and datasetFetched['nap_checked']:
-        return "True"
-    return "False"
+    return "True" if datasetFetched.get("nap_checked") is not None and datasetFetched['nap_checked'] else "False"
