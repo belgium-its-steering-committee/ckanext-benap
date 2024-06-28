@@ -15,11 +15,13 @@
       "choices": [
           {
             "label": "Not checked",
-            "value": "False"
+            "value": "False",
+            "selected":"true"
           },
           {
             "label": "Checked",
-            "value": "True"
+            "value": "True",
+            "selected" : "false"
           }
         ],
       "display_property": null,
