@@ -1,10 +1,10 @@
 # coding=utf-8
 import re
 from ckan.common import _
-
 from ckan.logic.validators import Invalid
-
 from ckanext.scheming.validation import scheming_validator
+import ckan.plugins.toolkit as toolkit
+
 
 # pattern from http://phoneregex.com/
 phone_number_pattern = re.compile(
@@ -74,3 +74,23 @@ def https_validator(value, context):
                 value = remove_prefix(value, "http://")
             raise Invalid(_('URL {url} has to start with https://').format(url=value))
     return value
+
+
+def modified_by_sysadmin(schema_value, package):
+     user  = package.get("auth_user_obj")
+     #parse schema_value
+     trueValues = {"true"}
+     flag = False
+
+     if isinstance(schema_value, str):
+         lowerValue = schema_value.strip().lower()
+         if lowerValue in trueValues:
+             flag == True
+    
+     if user is not None:
+        if not user.sysadmin and flag:
+            raise Invalid(_('Modification must done by a system administrator'))
+        else:
+            return schema_value
+     else:
+         raise Invalid(_('Logged in one must be'))

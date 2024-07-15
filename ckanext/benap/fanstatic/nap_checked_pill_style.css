@@ -1,0 +1,24 @@
+.label-checked-inverse {
+    background-color: #449d44;
+}
+
+.dataset-checked  {
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+.dataset-checked.pull-right {
+    margin-right: 0;
+}
+
+.label[data-format],
+.label[data-format]{
+    background-color: #aaa;
+}
+
+.form-hidden {
+    display: none;
+}
+
+#nap_checked{
+    color: #fff;;
+}
