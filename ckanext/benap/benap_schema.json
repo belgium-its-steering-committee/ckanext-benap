@@ -112,7 +112,8 @@
         "de": "Wählen Sie einen oder mehrere relevante Datensatztypen aus."
       },
       "choices_helper": "benap_ontology_helper",
-      "benap_helper_ontology": "dataset_type"
+      "benap_helper_ontology": "dataset_type",
+      "validators":"benap_is_choice_null"
     },
     {
       "field_name": "name",

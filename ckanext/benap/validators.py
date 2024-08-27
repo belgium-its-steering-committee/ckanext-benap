@@ -4,6 +4,7 @@ from ckan.common import _
 from ckan.logic.validators import Invalid
 from ckanext.scheming.validation import scheming_validator
 import ckan.plugins.toolkit as toolkit
+from ckan.lib.navl.dictization_functions import Missing
 
 
 # pattern from http://phoneregex.com/
@@ -77,6 +78,7 @@ def https_validator(value, context):
 
 
 def modified_by_sysadmin(schema_value, package):
+     
      user  = package.get("auth_user_obj")
      #parse schema_value
      trueValues = {"true"}
@@ -94,3 +96,12 @@ def modified_by_sysadmin(schema_value, package):
             return schema_value
      else:
          raise Invalid(_('Logged in one must be'))
+     
+def is_choice_null(value):
+    print('/n')
+    print("FCT:_is_choice_null")
+    print("value::", value)
+    if isinstance(value, Missing) or value =='':
+        print("Is missing")
+        return None
+    return value
