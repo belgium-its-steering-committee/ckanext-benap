@@ -314,7 +314,7 @@
         "nl": "Het adres van de website moet met  \"http://\" of \"https://\" beginnen.",
         "de": "Die Adresse der Website muss mit \"http://\" of \"https://\" anfangen. "
       },
-      "validators": "url_validator"
+      "validators": "url_validator benap_is_choice_null"
     },
     {
       "field_name": "p_tel",
