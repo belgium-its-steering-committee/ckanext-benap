@@ -378,7 +378,7 @@
         "nl": "Beschrijft de datum waarop de gegevenslevering voor deze publicatie eindigt. Indien leeg gelaten, heeft de publicatie geen einddatum.",
         "de": "Beschreibt das Datum, worauf die Datenlieferung zu dieser Publikation endet. Wenn es leer gelassen wird, hat die Publikation kein Enddatum."
       },
-      "validators": "benap_is_after_start"
+      "validators": "benap_is_after_start benap_is_choice_null"
     },
     {
       "field_name": "countries_covered",
