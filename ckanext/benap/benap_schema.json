@@ -434,7 +434,8 @@
         "de": "Wählt den Bereich des Datensatzes auf der Karte aus."
       },
       "display_snippet": "map.html",
-      "form_snippet": "form_map.html"
+      "form_snippet": "form_map.html",
+      "validators": "benap_is_choice_null"
     },
     {
       "field_name": "fluent_tags",
