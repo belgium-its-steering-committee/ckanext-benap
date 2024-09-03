@@ -128,7 +128,6 @@
     },
     {
       "field_name": "notes_translated",
-      "preset": "fluent_markdown",
       "label": {
         "en": "Description of dataset",
         "fr": "Description du jeux de données",
@@ -153,7 +152,11 @@
         "fr",
         "de"
       ],
-      "display_snippet": "fluent_markdown_fallback.html"
+      "form_snippet": "fluent_markdown.html",
+      "display_snippet": "fluent_markdown.html",
+      "error_snippet": "fluent_text.html",
+      "output_validators": "fluent_core_translated_output",
+      "validators": "fluent_text"
     },
     {
       "field_name": "cont_res",
