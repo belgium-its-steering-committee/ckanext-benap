@@ -113,7 +113,7 @@
       },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "dataset_type",
-      "validators":"benap_is_choice_null"
+      "validators": "benap_is_choice_null"
     },
     {
       "field_name": "name",
@@ -515,15 +515,13 @@
       "required": "true"
     },
     {
-      "field_name": "qual_ass",
-      "preset": "fluent_markdown",
+      "field_name": "qual_ass_translated",
       "label": {
         "en": "Quality assessment",
         "fr": "Evaluation de la qualité",
         "nl": "Kwaliteitsbeoordeling",
         "de": "Qualitätsbewertung"
       },
-      "display_snippet": "fluent_markdown_fallback.html",
       "form_placeholder": {
         "en": "eg. \"Quality Criteria \"Correctness\", and \"Completeness\" fulfilled to 99%, assessed by ground-truth testing.\"",
         "fr": "Par ex. \"Critères de qualité \"Exactitude\" et \"Exhaustivité\" complétés à 99%, évalués par des tests dans la réalité du terrain.\"",
@@ -542,9 +540,11 @@
         "fr",
         "de"
       ],
-      "form_attrs": {
-        "class": "form-control"
-      }
+      "form_snippet": "fluent_markdown.html",
+      "display_snippet": "fluent_markdown.html",
+      "error_snippet": "fluent_text.html",
+      "output_validators": "fluent_core_translated_output",
+      "validators": "fluent_text"
     },
     {
       "field_name": "theme",
