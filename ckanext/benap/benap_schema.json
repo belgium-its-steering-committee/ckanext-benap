@@ -511,7 +511,7 @@
       "required": "true"
     },
     {
-      "field_name": "qual_ass",
+      "field_name": "qual_ass_translated",
       "label": {
         "en": "Quality assessment",
         "fr": "Evaluation de la qualité",
