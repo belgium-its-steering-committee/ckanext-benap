@@ -98,10 +98,6 @@ def modified_by_sysadmin(schema_value, package):
          raise Invalid(_('Logged in one must be'))
      
 def is_choice_null(value):
-    print('/n')
-    print("FCT:_is_choice_null")
-    print("value::", value)
     if isinstance(value, Missing) or value =='':
-        print("Is missing")
         return None
     return value

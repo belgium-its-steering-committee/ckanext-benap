@@ -10,7 +10,7 @@ from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallba
     package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete, \
     get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, get_translated_tag_with_name, \
     forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element, get_organization_by_id, benap_fluent_label, \
-    translate_organization_filter, is_user_sysAdmin, is_nap_checked
+    translate_organization_filter, is_user_sysAdmin, is_nap_checked, convert_validation_list_to_JSON
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.validators import phone_number_validator, \
     countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin, \
@@ -105,22 +105,10 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
 
     # IPackageController
     def before_index(self, pkg_dict):
-        #print("BEFORE INDEX PKG")
-        #print('==========')
-        #print("pkg-regions-coverd::", pkg_dict["regions_covered"])
-        #print("type::", type(pkg_dict["regions_covered"]))
-        #print('')
-        #print("nap_type::", pkg_dict["nap_type"])
-        #print("type::", type(pkg_dict["nap_type"]))
-        #print('')
-        #print("pkg-dataset-type::", pkg_dict["its_dataset_type"])
-        #print("type::", type(pkg_dict["its_dataset_type"]))
-        #print('')
         if "regions_covered" in pkg_dict:
             pkg_dict["regions_covered"] = json.loads(pkg_dict["regions_covered"])
         if "nap_type" in pkg_dict:
             pkg_dict["nap_type"] = json.loads(pkg_dict["nap_type"])
-        
         if "its_dataset_type" in pkg_dict:
             try:
                 ## only when validation is used in json schema is next fct needed
@@ -128,21 +116,9 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
                 pkg_dict["its_dataset_type"] = json.loads(converted_list)
             except Exception:
                 pkg_dict["its_dataset_type"] = json.loads(pkg_dict["its_dataset_type"])
-                print("No validation conversion needed")
-            
+
         return pkg_dict
 
     def before_view(self, pkg_dict):
         pkg_dict.pop('agreement_declaration_nap', None)
         return pkg_dict
-
-
-def convert_validation_list_to_JSON(data):  
-    #aint sure aint pretty - scheming converts a jsonstring to list when the validation option is used
-    if '{' in data:
-        data_string = data.replace('{', '[').replace('}', ']')
-    else:
-        data_string = '["{}"]'.format(data)
-    return data_string
-
-

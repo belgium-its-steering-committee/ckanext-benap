@@ -1371,3 +1371,19 @@ def is_nap_checked(datasetID):
     datasetFetched = toolkit.get_action('package_show')(data_dict={'id':datasetID})
     return "True" if datasetFetched.get("nap_checked") is not None and datasetFetched['nap_checked'] else "False"
 
+def convert_validation_list_to_JSON(data):
+    """
+    Converts a string containing a JSON-like structure into a proper JSON list format.
+
+    If the input string contains curly braces ('{', '}'), it is assumed to be a
+    JSON-like structure and is converted by replacing the curly braces with square
+    brackets ('[', ']'). If not, the string is wrapped in a JSON array format.
+
+    This function is particularly useful for handling cases where a validation
+    process converts a JSON string into a list format unexpectedly.
+    """
+    if '{' in data:
+        data_string = data.replace('{', '[').replace('}', ']')
+    else:
+        data_string = '["{}"]'.format(data)
+    return data_string
