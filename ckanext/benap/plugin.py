@@ -12,7 +12,9 @@ from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallba
     forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element, get_organization_by_id, benap_fluent_label, \
     translate_organization_filter, is_user_sysAdmin, is_nap_checked
 from ckanext.benap.util.forms import map_for_form_select
-from ckanext.benap.validators import phone_number_validator, countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin
+from ckanext.benap.validators import phone_number_validator, \
+    countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin, \
+    is_choice_null
 from ckanext.benap.logic.auth.get import user_list
 
 
@@ -78,6 +80,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_is_after_start': is_after_start,
             'benap_https_validator': https_validator,
             'benap_modified_by_sysadmin': modified_by_sysadmin,
+            'benap_is_choice_null': is_choice_null
         }
 
     # IAuthFunctions
@@ -107,11 +110,32 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         if "nap_type" in pkg_dict:
             pkg_dict["nap_type"] = json.loads(pkg_dict["nap_type"])
         if "its_dataset_type" in pkg_dict:
-            pkg_dict["its_dataset_type"] = json.loads(pkg_dict["its_dataset_type"])
+            try:
+                ## only when validation is used in json schema is next fct needed
+                converted_list = convert_validation_list_to_JSON(pkg_dict["its_dataset_type"])
+                pkg_dict["its_dataset_type"] = json.loads(converted_list)
+            except Exception:
+                pkg_dict["its_dataset_type"] = json.loads(pkg_dict["its_dataset_type"])
+
         return pkg_dict
 
     def before_view(self, pkg_dict):
         pkg_dict.pop('agreement_declaration_nap', None)
         return pkg_dict
 
+def convert_validation_list_to_JSON(data):
+    """
+    Converts a string containing a JSON-like structure into a proper JSON list format.
 
+    If the input string contains curly braces ('{', '}'), it is assumed to be a
+    JSON-like structure and is converted by replacing the curly braces with square
+    brackets ('[', ']'). If not, the string is wrapped in a JSON array format.
+
+    This function is particularly useful for handling cases where a validation
+    process converts a JSON string into a list format unexpectedly.
+    """
+    if '{' in data:
+        data_string = data.replace('{', '[').replace('}', ']')
+    else:
+        data_string = '["{}"]'.format(data)
+    return data_string
