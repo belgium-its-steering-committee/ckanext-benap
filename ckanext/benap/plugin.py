@@ -69,7 +69,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_fluent_label': benap_fluent_label,
             'benap_is_user_sysAdmin': is_user_sysAdmin,
             'benap_is_nap_checked':is_nap_checked,
-            'convert_validation_list_to_JSON': convert_validation_list_to_JSON
+            'benap_convert_validation_list_to_JSON': convert_validation_list_to_JSON
         }
 
     # IValidators
