@@ -4,6 +4,27 @@
   "about": "A CKAN schema for the Belgian NAP",
   "about_url": "https://github.com/belgium-its-steering-committee/ckanext-benap",
   "dataset_fields": [
+    {
+      "field_name": "network_coverage",
+      "label": "Network Coverage",
+      "form_include_blank_choice": "false",
+      "required": "true",
+      "display_snippet": null,
+      "preset": "select",
+      "choices":[
+        {
+          "label": "Pick Air",
+          "value":"https://w3id.org/mobilitydcat-ap/network-coverage/air-network",
+          "selected": "true"
+        },
+        {
+          "label": "Pick Tram",
+          "value":"https://w3id.org/mobilitydcat-ap/network-coverage/metro-subway-tram-or-light-rail-network"
+        }
+      ],
+      "display_property": null,
+      "help_text":{"en":"Whatevveeeerrrrr"}
+    },
     { "field_name": "nap_checked",
       "label":"NAP check",
       "form_include_blank_choice":"false",
