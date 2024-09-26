@@ -157,7 +157,7 @@
       "display_snippet": "fluent_markdown.html",
       "error_snippet": "fluent_text.html",
       "output_validators": "fluent_core_translated_output",
-      "validators": "fluent_text"
+      "validators": "fluent_text fluent_conditional_language_requirement"
     },
     {
       "field_name": "cont_res",
