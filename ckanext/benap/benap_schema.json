@@ -112,7 +112,8 @@
         "de": "Wählen Sie einen oder mehrere relevante Datensatztypen aus."
       },
       "choices_helper": "benap_ontology_helper",
-      "benap_helper_ontology": "dataset_type"
+      "benap_helper_ontology": "dataset_type",
+      "validators": "benap_is_choice_null"
     },
     {
       "field_name": "name",
@@ -127,7 +128,6 @@
     },
     {
       "field_name": "notes_translated",
-      "preset": "fluent_markdown",
       "label": {
         "en": "Description of dataset",
         "fr": "Description du jeux de données",
@@ -152,7 +152,11 @@
         "fr",
         "de"
       ],
-      "display_snippet": "fluent_markdown_fallback.html"
+      "form_snippet": "fluent_markdown.html",
+      "display_snippet": "fluent_markdown.html",
+      "error_snippet": "fluent_text.html",
+      "output_validators": "fluent_core_translated_output",
+      "validators": "fluent_text"
     },
     {
       "field_name": "cont_res",
@@ -313,7 +317,7 @@
         "nl": "Het adres van de website moet met  \"http://\" of \"https://\" beginnen.",
         "de": "Die Adresse der Website muss mit \"http://\" of \"https://\" anfangen. "
       },
-      "validators": "url_validator"
+      "validators": "url_validator benap_is_choice_null"
     },
     {
       "field_name": "p_tel",
@@ -377,7 +381,7 @@
         "nl": "Beschrijft de datum waarop de gegevenslevering voor deze publicatie eindigt. Indien leeg gelaten, heeft de publicatie geen einddatum.",
         "de": "Beschreibt das Datum, worauf die Datenlieferung zu dieser Publikation endet. Wenn es leer gelassen wird, hat die Publikation kein Enddatum."
       },
-      "validators": "benap_is_after_start"
+      "validators": "benap_is_after_start benap_is_choice_null"
     },
     {
       "field_name": "countries_covered",
@@ -433,7 +437,8 @@
         "de": "Wählt den Bereich des Datensatzes auf der Karte aus."
       },
       "display_snippet": "map.html",
-      "form_snippet": "form_map.html"
+      "form_snippet": "form_map.html",
+      "validators": "benap_is_choice_null"
     },
     {
       "field_name": "fluent_tags",
@@ -510,15 +515,13 @@
       "required": "true"
     },
     {
-      "field_name": "qual_ass",
-      "preset": "fluent_markdown",
+      "field_name": "qual_ass_translated",
       "label": {
         "en": "Quality assessment",
         "fr": "Evaluation de la qualité",
         "nl": "Kwaliteitsbeoordeling",
         "de": "Qualitätsbewertung"
       },
-      "display_snippet": "fluent_markdown_fallback.html",
       "form_placeholder": {
         "en": "eg. \"Quality Criteria \"Correctness\", and \"Completeness\" fulfilled to 99%, assessed by ground-truth testing.\"",
         "fr": "Par ex. \"Critères de qualité \"Exactitude\" et \"Exhaustivité\" complétés à 99%, évalués par des tests dans la réalité du terrain.\"",
@@ -537,9 +540,11 @@
         "fr",
         "de"
       ],
-      "form_attrs": {
-        "class": "form-control"
-      }
+      "form_snippet": "fluent_markdown.html",
+      "display_snippet": "fluent_markdown.html",
+      "error_snippet": "fluent_text.html",
+      "output_validators": "fluent_core_translated_output",
+      "validators": "fluent_text"
     },
     {
       "field_name": "theme",
