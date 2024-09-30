@@ -548,15 +548,15 @@
     },
     {
       "field_name": "theme",
+      "preset": "hidden",
       "label": {
         "en": "Dataset theme",
         "fr": "Thème du jeu de données",
         "nl": "Thema dataset",
         "de": "Thema des Datensatzes"
       },
-
+      "default": "http://publications.europa.eu/resource/authority/data-theme/TRAN",
       "display_property": "dcat:theme",
-      "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "data-theme",
       "required": "true"
