@@ -423,6 +423,25 @@
       "required": "true"
     },
     {
+       "field_name": "georeferencing_method",
+      "label": {
+        "en": "Georeferencing method",
+        "fr": "Méthode de géoréférencement",
+        "nl": "Georeferentie methode",
+        "de": "Georeferenzierungsmethode"
+      },
+      "preset": "multiple_select",
+      "help_text": {
+        "en": "Define the georeferencing method if the dataset consists of geographically referenced data.",
+        "fr": "Spécifiez la méthode de géoréférencement si le jeu de données est constitué de données géographiquement référencées.",
+        "nl": "Beschrijf de georefentiemethode indien de dataset gegeorefereerde data bevat.",
+        "de": "Bestimmen Sie die Georeferenzierungsmethode, wenn der Datensatz aus räumlich referenzierten Daten besteht."
+      },
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "georeferencing_method",
+      "validators": "benap_is_choice_null"
+    },
+    {
       "field_name": "spatial",
       "label": {
         "en": "Dataset extent",
@@ -806,24 +825,6 @@
         "de": "Beschreibt die Sprache der Dateninhälte (Textfelde, Adressen, usw.)."
       },
       "required": "true"
-    },
-    {
-       "field_name": "cont_georef",
-      "label": {
-        "en": "Georeferencing method",
-        "fr": "Méthode de géoréférencement",
-        "nl": "Georeferentie methode",
-        "de": "Georeferenzierungsmethode"
-      },
-      "preset": "multiple_select",
-      "help_text": {
-        "en": "Define the georeferencing method if the dataset consists of geographically referenced data.",
-        "fr": "Spécifiez la méthode de géoréférencement si le jeu de données est constitué de données géographiquement référencées.",
-        "nl": "Beschrijf de georefentiemethode indien de dataset gegeorefereerde data bevat.",
-        "de": "Bestimmen Sie die Georeferenzierungsmethode, wenn der Datensatz aus räumlich referenzierten Daten besteht."
-      },
-      "choices_helper": "benap_ontology_helper",
-      "benap_helper_ontology": "georeferencing_method"
     }
   ]
 }
