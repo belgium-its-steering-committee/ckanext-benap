@@ -849,41 +849,41 @@ def ontology_helper(context):
         ])
     elif ontology == "contract_license":
         return map_for_form_select([
-            ('nolinoco', {
-                "en": u"No license – No contract",
-                "fr": u"Pas de licence - Pas de contrat",
-                "nl": u"Geen licentie - Geen contract",
-                "de": u"Keine Lizenz - Kein Vertrag"
+            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/contractual-arrangement', {
+                "en": u"Contractual arrangement",
+                "fr": u"Arrangement contractuel",
+                "nl": u"Contractuele regeling",
+                "de": u"Vertragliche vereinbarung"
             }),
-            ('lifree', {
-                "en": u"Licence and Free of charge",
-                "fr": u"Licence et gratuit",
-                "nl": u"Licentie en gratis",
-                "de": u"Lizenz und kostenlos"
+            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/fee-required', {
+                "en": u"Fee required",
+                "fr": u"Frais requis",
+                "nl": u"Vergoeding vereist",
+                "de": u"Gebühr erforderlich"
             }),
-            ('linotfree', {
-                "en": u"Licence and Fee",
-                "fr": u"Licence et frais",
-                "nl": u"Licentie en vergoeding",
-                "de": u"Lizenz und Gebühr"
+            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/free-of-charge', {
+                "en": u"Free of charge",
+                "fr": u"Gratuit",
+                "nl": u"Gratis",
+                "de": u"Kostenlos"
             }),
-            ('cofree', {
-                "en": u"Contract and Free of charge",
-                "fr": u"Contrat et gratuit",
-                "nl": u"Contract en gratis",
-                "de": u"Vertrag und kostenlos"
+            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided', {
+                "en": u"Licence provided",
+                "fr": u"Licence fournie",
+                "nl": u"Licentie verstrekt",
+                "de": u"Lizenz bereitgestellt"
             }),
-            ('conotfree', {
-                "en": u"Contract and Fee",
-                "fr": u"Contrat et frais",
-                "nl": u"Contract en vergoeding",
-                "de": u"Vertrag und Gebühr"
+            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/royalty-free', {
+                "en": u"Royalty-free",
+                "fr": u"Libre de droits",
+                "nl": u"Royaltyvrij",
+                "de": u"Lizenzfrei"
             }),
-            ('notrelevant', {
-                "en": u"Not relevant",
-                "fr": u"Non pertinent",
-                "nl": u"Niet relevant",
-                "de": u"Nicht relevant"
+            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/other', {
+                "en": u"Other",
+                "fr": u"Autre",
+                "nl": u"Andere",
+                "de": u"Andere"
             }),
         ])
 
