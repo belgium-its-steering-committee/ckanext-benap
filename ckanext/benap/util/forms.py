@@ -1,4 +1,3 @@
-
 def map_for_form_select(tuple_list):
     """
     :param tuple_list: array of tuples (key, value)
