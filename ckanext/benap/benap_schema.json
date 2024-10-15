@@ -459,25 +459,6 @@
       "validators": "scheming_required tag_string_convert"
     },
     {
-      "field_name": "contract_license",
-      "label": {
-        "en": "Contract or license",
-        "fr": "Contrat ou licence",
-        "nl": "Contract of licentie",
-        "de": "Vertrag oder Lizenz"
-      },
-      "preset": "select",
-      "choices_helper": "benap_ontology_helper",
-      "help_text": {
-        "en": "Describes the conditions of use of the data set.",
-        "fr": "Décrit les conditions d'utilisation du jeu de données.",
-        "nl": "Beschrijft de gebruiksvoorwaarden van de dataset.",
-        "de": "Beschreibt die Nutzungsbedingungen des Datensatzes."
-      },
-      "benap_helper_ontology": "contract_license",
-      "required": "true"
-    },
-    {
       "field_name": "license_id",
       "label": {
         "en": "License type",
@@ -824,6 +805,25 @@
       },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "georeferencing_method"
+    },
+    {
+      "field_name": "contract_license",
+      "label": {
+        "en": "Contract or license",
+        "fr": "Contrat ou licence",
+        "nl": "Contract of licentie",
+        "de": "Vertrag oder Lizenz"
+      },
+      "preset": "multiple_checkbox",
+      "choices_helper": "benap_ontology_helper",
+      "help_text": {
+        "en": "Describes the conditions of use of the data set. It is possible to select multiple categories.",
+        "fr": "Décrit les conditions d'utilisation du jeu de données. Il est possible de sélectionner plusieurs catégories.",
+        "nl": "Beschrijft de gebruiksvoorwaarden van de dataset. Het is mogelijk om meerdere categorieën te selecteren.",
+        "de": "Beschreibt die Nutzungsbedingungen des Datensatzes. Es ist möglich, mehrere Kategorien auszuwählen."
+      },
+      "benap_helper_ontology": "contract_license",
+      "required": "true"
     }
   ]
 }
