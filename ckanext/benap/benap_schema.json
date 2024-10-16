@@ -240,8 +240,7 @@
         "nl": "Naam [contactpunt]",
         "de": "Name [Kontaktpunkt]"
       },
-      "form_placeholder": "John Doe",
-      "display_property": "dc:",
+      "form_placeholder": "Aristarchus of Samothrace",
       "required": "true"
     },
     {
@@ -252,6 +251,7 @@
         "nl": "Naam van de organisatie [uitgever]",
         "de": "Name der Organisation  [Herausgeber]"
       },
+      "form_placeholder":"Great Library of Alexandria",
       "help_text": {
         "en": "The \"publisher\" describes an entity (company and person) that publishes the datasets (we are not refering to the metadata here, but rather to the data themselves). He or she is responsible for the given information and must be contacted by data consumers if a contract needs to be concluded.",
         "fr": "L'\"éditeur\" décrit une entité (entreprise et personne) qui publie les jeux de données (nous ne nous référons pas ici aux métadonnées mais plutôt aux données elles-mêmes). Il ou elle est responsable des informations données et doit être contacté(e) par les consommateurs de données si un contrat doit être conclu.",
@@ -262,16 +262,30 @@
       "required": "true"
     },
     {
-      "field_name": "publisher_name",
+      "field_name": "publisher_firstName",
       "label": {
-        "en": "Name [publisher]",
-        "fr": "Nom [éditeur]",
-        "nl": "Naam [uitgever]",
-        "de": "Name [Herausgeber]"
+        "en": "First name [publisher]",
+        "fr": "Prénom [éditeur]",
+        "nl": "Voornaam [uitgever]",
+        "de": "Vorname [Herausgeber]"
       },
-      "form_placeholder": "John Doe",
-      "required": "true"
+      "form_placeholder": "Zenodotus",
+      "required": "true",
+      "validators": "benap_is_choice_null"
     },
+    {
+      "field_name": "publisher_surname",
+      "label": {
+        "en": "Surname [publisher]",
+        "fr": "Nom [éditeur]",
+        "nl": "Familienaam [uitgever]",
+        "de": "Familienname [Herausgeber]"
+      },
+      "form_placeholder": "Of Ephesus",
+      "required": "true",
+      "validators": "benap_is_choice_null"
+    },
+
     {
       "field_name": "p_address",
       "label": {
@@ -280,7 +294,7 @@
         "nl": "Adres [uitgever]",
         "de": "Adresse [Herausgeber]"
       },
-      "form_placeholder": "Boulevard Anspach, 1 - 1000 Bruxelles (Belgique)",
+      "form_placeholder": "Great Library, 1 - 21526 Alexandria (Egypt)",
       "required": "true"
     },
     {
@@ -291,7 +305,7 @@
         "nl": "E-mail [uitgever]",
         "de": "E-Mail [Herausgeber]"
       },
-      "form_placeholder": "example@example.com",
+      "form_placeholder": "tags@scroll.eg",
       "display_snippet": "email.html",
       "display_email_name_field": "publisher_name",
       "help_text": {
@@ -311,6 +325,7 @@
         "nl": "Website [uitgever] ",
         "de": "Website [Herausgeber]"
       },
+      "form_placeholder":"https://en.wikipedia.org/wiki/Zenodotus",
       "display_snippet": "link.html",
       "help_text": {
         "en": "The website address must start with \"http://\", or \"https://\".",
