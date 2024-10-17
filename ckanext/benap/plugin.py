@@ -10,7 +10,7 @@ from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallba
     package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete, \
     get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, get_translated_tag_with_name, \
     forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element, get_organization_by_id, benap_fluent_label, \
-    translate_organization_filter, is_user_sysAdmin, is_nap_checked, convert_validation_list_to_JSON
+    translate_organization_filter, is_user_sysAdmin, is_nap_checked, convert_validation_list_to_JSON, benap_get_organization_field
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.validators import phone_number_validator, \
     countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin, \
@@ -69,7 +69,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_fluent_label': benap_fluent_label,
             'benap_is_user_sysAdmin': is_user_sysAdmin,
             'benap_is_nap_checked':is_nap_checked,
-            'benap_convert_validation_list_to_JSON': convert_validation_list_to_JSON
+            'benap_convert_validation_list_to_JSON': convert_validation_list_to_JSON,
+            'benap_get_organization_field': benap_get_organization_field
         }
 
     # IValidators
@@ -122,4 +123,9 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
 
     def before_view(self, pkg_dict):
         pkg_dict.pop('agreement_declaration_nap', None)
+
+        # Retrieve organization id of the dataset
+        org_id = pkg_dict.get('organization').get('id')
+        pkg_dict['publisher_email'] = benap_get_organization_field(org_id, 'do_email')
+
         return pkg_dict
