@@ -1318,12 +1318,12 @@ def get_organization_by_id(id):
     user = toolkit.get_action(u'get_site_user')(
         {
             u'ignore_auth': True
-        }, 
+        },
         {})
 
     context = {u'user': user[u'name']}
 
-    organization = toolkit.get_action(u'organization_show')(context, 
+    organization = toolkit.get_action(u'organization_show')(context,
     {
         u'id': id,
         u'include_dataset_count':False,
@@ -1385,3 +1385,26 @@ def convert_validation_list_to_JSON(data):
     else:
         data_string = '["{}"]'.format(data)
     return data_string
+
+def benap_get_organization_field(org_id, field_name):
+    """
+    Retrieve the specified field value from an organization's data.
+    """
+    user = toolkit.get_action(u'get_site_user')(
+        {
+            u'ignore_auth': True
+        },
+        {})
+    context = {u'user': user[u'name']}
+    org_data = toolkit.get_action(u'organization_show')(context,
+                                                        {
+                                                            u'id': org_id,
+                                                            u'include_dataset_count': False,
+                                                            u'include_users': False,
+                                                            u'include_groups': False,
+                                                            u'include_tags': False,
+                                                            u'include_followers': False,
+                                                        })
+
+    field_value = org_data.get(field_name)
+    return field_value
