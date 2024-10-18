@@ -292,7 +292,6 @@
         "de": "E-Mail [Herausgeber]"
       },
       "display_snippet": "email.html",
-      "display_email_name_field": "publisher_org",
       "form_snippet": null
     },
     {
