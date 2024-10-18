@@ -278,3 +278,18 @@ NETWORK_COVERAGE =[
     }),
 
 ]
+
+REFERENCE_SYSTEM =[
+    ('https://www.opengis.net/def/crs/EPSG/31370',{
+        "en": u"EPSG: 31370",
+        "nl": u"EPSG: 31370",
+        "fr": u"EPSG: 31370",
+        "de": u"EPSG: 31370",
+    }),
+    ('https://www.opengis.net/def/crs/EPSG/4326',{
+        "en": u"EPSG: 4326",
+        "nl": u"EPSG: 4326",
+        "fr": u"EPSG: 4326",
+        "de": u"EPSG: 4326",
+    }),
+]
