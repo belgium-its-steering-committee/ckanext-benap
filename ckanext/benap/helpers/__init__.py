@@ -5,7 +5,8 @@ from ckan.common import config
 import logging
 from decorators import decorator_timer
 
-from ckanext.benap.helpers.lists import NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE
+from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
+                                         REFERENCE_SYSTEM)
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
 
@@ -1010,6 +1011,8 @@ def ontology_helper(context):
         return map_for_form_select(NAP_TYPE)
     elif ontology =="network_coverage":
         return map_for_form_select(NETWORK_COVERAGE)
+    elif ontology =="reference_system":
+        return map_for_form_select(REFERENCE_SYSTEM)
     return None
 
 
