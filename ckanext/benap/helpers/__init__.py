@@ -1342,6 +1342,9 @@ def get_organization_by_id(id):
 
 
 def show_element(x):
+    print('\n\n show element \n\n')
+    print(x)
+    print('\n')
     return x
 
 
