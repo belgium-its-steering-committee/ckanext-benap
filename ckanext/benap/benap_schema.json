@@ -298,18 +298,12 @@
       "field_name": "publisher_url",
       "label": {
         "en": "Website [publisher]",
-        "fr": "Site web  [éditeur]",
-        "nl": "Website [uitgever] ",
+        "fr": "Site web [éditeur]",
+        "nl": "Website [uitgever]",
         "de": "Website [Herausgeber]"
       },
       "display_snippet": "link.html",
-      "help_text": {
-        "en": "The website address must start with \"http://\", or \"https://\".",
-        "fr": "L'adresse du site web doit commencer par \"http://\" ou \"https://\".",
-        "nl": "Het adres van de website moet met  \"http://\" of \"https://\" beginnen.",
-        "de": "Die Adresse der Website muss mit \"http://\" of \"https://\" anfangen. "
-      },
-      "validators": "url_validator benap_is_choice_null"
+      "form_snippet": null
     },
     {
       "field_name": "publisher_telephone_number",

@@ -126,6 +126,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
 
         # Retrieve organization id of the dataset
         org_id = pkg_dict.get('organization').get('id')
+        pkg_dict['publisher_url'] = benap_get_organization_field(org_id, 'do_website')
         pkg_dict['publisher_email'] = benap_get_organization_field(org_id, 'do_email')
         pkg_dict['publisher_telephone_number'] = benap_get_organization_field(org_id, 'do_tel')
 
