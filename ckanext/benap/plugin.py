@@ -10,11 +10,12 @@ from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallba
     package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete, \
     get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, get_translated_tag_with_name, \
     forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element, get_organization_by_id, benap_fluent_label, \
-    translate_organization_filter, is_user_sysAdmin, is_nap_checked, convert_validation_list_to_JSON, benap_get_organization_field
+    translate_organization_filter, is_user_sysAdmin, is_nap_checked, convert_validation_list_to_JSON, benap_get_organization_field_by_id, \
+    benap_get_organization_field_by_specified_field
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.validators import phone_number_validator, \
     countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin, \
-    is_choice_null
+    is_choice_null, contact_point_org_fields_consistency_check
 from ckanext.benap.logic.auth.get import user_list
 
 
@@ -70,7 +71,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_is_user_sysAdmin': is_user_sysAdmin,
             'benap_is_nap_checked':is_nap_checked,
             'benap_convert_validation_list_to_JSON': convert_validation_list_to_JSON,
-            'benap_get_organization_field': benap_get_organization_field
+            'benap_get_organization_field_by_id': benap_get_organization_field_by_id,
+            'benap_get_organization_field_by_specified_field': benap_get_organization_field_by_specified_field
         }
 
     # IValidators
@@ -82,7 +84,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_is_after_start': is_after_start,
             'benap_https_validator': https_validator,
             'benap_modified_by_sysadmin': modified_by_sysadmin,
-            'benap_is_choice_null': is_choice_null
+            'benap_is_choice_null': is_choice_null,
+            'benap_contact_point_org_fields_consistency_check': contact_point_org_fields_consistency_check
         }
 
     # IAuthFunctions
@@ -122,12 +125,38 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         return pkg_dict
 
     def before_view(self, pkg_dict):
+        # Remove 'agreement_declaration_nap' from the dictionary if it exists
         pkg_dict.pop('agreement_declaration_nap', None)
 
-        # Retrieve organization id of the dataset
-        org_id = pkg_dict.get('organization').get('id')
-        pkg_dict['publisher_url'] = benap_get_organization_field(org_id, 'do_website')
-        pkg_dict['publisher_email'] = benap_get_organization_field(org_id, 'do_email')
-        pkg_dict['publisher_telephone_number'] = benap_get_organization_field(org_id, 'do_tel')
+        # Get the organization ID associated with the dataset
+        org_id = pkg_dict.get('organization', {}).get('id')
+
+        # Define required organization fields to retrieve
+        fields = ['do_website', 'do_email', 'do_tel', 'country', 'administrative_area', 'postal_code', 'city',
+                  'street_address']
+
+        # Retrieve organization field values by ID and store them in a dictionary
+        values = {field: benap_get_organization_field_by_id(org_id, field) for field in fields}
+
+        # Update package dictionary with organization details
+        pkg_dict.update({
+            'publisher_url': values['do_website'],
+            'publisher_email': values['do_email'],
+            'publisher_telephone_number': values['do_tel'],
+            'publisher_country': values['country'],
+            'publisher_administrative_area': values['administrative_area'],
+            'publisher_postal_code': values['postal_code'],
+            'publisher_city': values['city'],
+            'publisher_street_address': values['street_address'],
+
+            # Combine address components into a nested dictionary for complete address details
+            'publisher_address': {
+                'street_address': values['street_address'],
+                'postal_code': values['postal_code'],
+                'city': values['city'],
+                'administrative_area': values['administrative_area'],
+                'country': values['country']
+            }
+        })
 
         return pkg_dict
