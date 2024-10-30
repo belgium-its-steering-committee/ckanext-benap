@@ -199,10 +199,10 @@
     {
       "field_name": "owner_org",
       "label": {
-        "en": "Organisation name [contact point]",
-        "fr": "Nom de l'organisation [point de contact] ",
-        "nl": "Naam van de organisatie  [contactpunt]",
-        "de": "Name der Organisation  [Kontaktpunkt]"
+        "en": "Organisation name [publisher]",
+        "fr": "Nom de l'organisation [éditeur] ",
+        "nl": "Naam van de organisatie [uitgever]",
+        "de": "Name der Organisation  [Herausgeber]"
       },
       "label_dataset_organization":{
         "en": "Visibility",
@@ -212,10 +212,10 @@
       },
       "preset": "dataset_organization",
       "help_text": {
-        "en": "The \"contact point\", describes an organisation, if applicable a person, which is responsible for the creation and maintenance of the metadata. This person or organization is the single point of contact for the present metadata set. The next field may be used to keep the dataset \"private\" within the organisation for internal review before effective publication.",
-        "fr": "Le \"point de contact\" décrit une organisation, ou une personne si d'application, qui est responsable de la création et de la mise à jour des métadonnées. Cette personne ou organisation est le point de contact unique pour le présent jeu de métadonnées.  Le champ suivant peut être utilisé pour garder le jeu de données \"privé\" au sein de l'organisation pour révision interne avant publication effective.",
-        "nl": "Het \"contactpunt\" beschrijft een organisatie, of een persoon indien van toepassing, die verantwoordelijk is voor de aanmaak en bijwerking van de metadata. Deze persoon of organisatie is het één contactpunt voor deze set van metadata. Het volgende veld kan gebruikt worden om ter interne herziening voor effectieve publicatie de dataset \"privé\" te houden binnen de organisatie.",
-        "de": "Der \"Kontaktpunkt\" beschreibt eine Organisation, oder gegebenenfalls eine Person, die für die Herstellung und Aktualisierung von Metadaten verantwortlich ist. Diese Person oder Organisation ist der einzige Kontaktpunkt für diesen Metadatensatz. Das folgende Feld kann benutzt werden, um für interne Prüfung vor der effektiven Publikation den Datensatz \"privat\" zu halten innerhalb von der Organisation. "
+        "en": "The \"publisher\" describes an organization that publishes the datasets (we are not refering to the metadata here, but rather to the data themselves). The publisher is responsible for the given information and must be contacted by data consumers if a contract needs to be concluded. The next field may be used to keep the dataset \"private\" within the organisation for internal review before effective publication.",
+        "fr": "L'\"éditeur\" décrit une organisation qui publie les jeux de données (nous ne nous référons pas ici aux métadonnées mais plutôt aux données elles-mêmes). L'éditeur est responsable des informations données et doit être contacté(e) par les consommateurs de données si un contrat doit être conclu. Le champ suivant peut être utilisé pour garder le jeu de données \"privé\" au sein de l'organisation pour révision interne avant publication effective.",
+        "nl": "De \"uitgever\" beschrijft een organisatie die de datasets publiceert (we verwijzen hier niet naar de metadata maar eerder naar de gegevens zelfs). De uitgever is verantwoordelijk voor de gegeven informatie en moet door gegevensverbruikers gecontacteerd worden indien een overeenkomst moet worden gesloten. Het volgende veld kan gebruikt worden om ter interne herziening voor effectieve publicatie de dataset \"privé\" te houden binnen de organisatie.",
+        "de": "Der \"Herausgeber\" beschreibt eine organisation, die die Datensätze publiziert (wir beziehen uns hier nicht auf die Metadaten sondern eher auf die Daten selbst). Der Herausgeber ist verantwortlich für die gegebene Information und muss von Datenverbrauchern kontaktiert werden, wenn ein Vertrag geschlossen werden muss. Das folgende Feld kann benutzt werden, um für interne Prüfung vor der effektiven Publikation den Datensatz \"privat\" zu halten innerhalb von der Organisation."
       },
       "required": "true",
       "help_text_visibility":{
@@ -230,36 +230,94 @@
         "fr": "ici.",
         "nl": "hier.",
         "de": "hier."
-      }
+      },
+      "display_snippet": "organization.html"
     },
     {
-      "field_name": "contact_name",
+      "field_name": "contact_point",
+      "label": {
+        "en": "Contact point",
+        "fr": "Point de contact",
+        "nl": "contactpunt",
+        "de": "Kontaktpunkt"
+      },
+      "help_text": {
+        "en": "The contact point of the metadata, divided into three fields: name (mandatory), email (mandatory), and phone number (optional).",
+        "fr": "Le point de contact des métadonnées, divisé en trois champs : nom (obligatoire), email (obligatoire) et numéro de téléphone (optionnel).",
+        "nl": "Het contactpunt van de metadata, verdeeld in drie velden: naam (verplicht), e-mail (verplicht) en telefoonnummer (optioneel).",
+        "de": "Der Ansprechpartner der Metadaten, unterteilt in drei Felder: Name (verpflichtend), E-Mail (verpflichtend) und Telefonnummer (optional)."
+      },
+      "form_snippet": "nested_field.html",
+      "display_snippet": null,
+      "nested_fields": [
+        {
+            "field_name": "contact_point_name",
+            "form_snippet": "text_autocomplete.html"
+        },
+        {
+            "field_name": "contact_point_email",
+            "form_snippet": "text.html"
+        },
+        {
+            "field_name": "contact_point_phone",
+            "form_snippet": "text.html"
+        }
+      ]
+    },
+    {
+      "field_name": "contact_point_name",
       "label": {
         "en": "Name [contact point]",
         "fr": "Nom [point de contact]",
         "nl": "Naam [contactpunt]",
         "de": "Name [Kontaktpunkt]"
       },
-      "form_placeholder": "John Doe",
-      "display_property": "dc:",
-      "required": "true"
+      "help_text": {
+        "en": "The \"contact point\", describes an organisation, if applicable a person, which is responsible for the creation and maintenance of the metadata. This person or organization is the single point of contact for the present metadata set.",
+        "fr": "Le \\\"point de contact\\\" décrit une organisation, ou une personne si d'application, qui est responsable de la création et de la mise à jour des métadonnées. Cette personne ou organisation est le point de contact unique pour le présent jeu de métadonnées.",
+        "nl": "Het \\\"contactpunt\\\" beschrijft een organisatie, of een persoon indien van toepassing, die verantwoordelijk is voor de aanmaak en bijwerking van de metadata. Deze persoon of organisatie is het één contactpunt voor deze set van metadata.",
+        "de": "Der \"Kontaktpunkt\" beschreibt eine Organisation, oder gegebenenfalls eine Person, die für die Herstellung und Aktualisierung von Metadaten verantwortlich ist. Diese Person oder Organisation ist der einzige Kontaktpunkt für diesen Metadatensatz."
+      },
+      "required": "true",
+      "form_snippet": null
     },
     {
-      "field_name": "publisher_org",
+      "field_name": "contact_point_email",
       "label": {
-        "en": "Organisation name [publisher]",
-        "fr": "Nom de l'organisation [éditeur] ",
-        "nl": "Naam van de organisatie [uitgever]",
-        "de": "Name der Organisation  [Herausgeber]"
+        "en": "E-mail [contact point]",
+        "fr": "E-mail [point de contact]",
+        "nl": "E-mail [contactpunt]",
+        "de": "E-mail [Kontaktpunkt]"
       },
       "help_text": {
-        "en": "The \"publisher\" describes an entity (company and person) that publishes the datasets (we are not refering to the metadata here, but rather to the data themselves). He or she is responsible for the given information and must be contacted by data consumers if a contract needs to be concluded.",
-        "fr": "L'\"éditeur\" décrit une entité (entreprise et personne) qui publie les jeux de données (nous ne nous référons pas ici aux métadonnées mais plutôt aux données elles-mêmes). Il ou elle est responsable des informations données et doit être contacté(e) par les consommateurs de données si un contrat doit être conclu.",
-        "nl": "De \"uitgever\" beschrijft een entiteit (bedrijf of persoon) die de datasets publiceert (we verwijzen hier niet naar de metadata maar eerder naar de gegevens zelfs). Hij of zij is verantwoordelijk voor de gegeven informatie en moet door gegevensverbruikers gecontacteerd worden indien een overeenkomst moet worden gesloten. ",
-        "de": "Der \"Herausgeber\" beschreibt eine Entität (Unternehmen oder Person), die die Datensätze publiziert (wir beziehen uns hier nicht auf die Metadaten sondern eher auf die Daten selbst). Er oder sie ist verantwortlich für die gegebene Information und muss von Datenverbrauchern kontaktiert werden, wenn ein Vertrag geschlossen werden muss."
+        "en": "The email adress must contain @ and a dot.",
+        "fr": "L'adresse e-mail doit contenir @ et un point.",
+        "nl": "Het e-mailadres moet  @ en een punt inhouden.",
+        "de": "Die E-Mail muss  @ und einen Punkt beinhalten."
       },
-      "form_snippet": "text_autocomplete.html",
-      "required": "true"
+      "required": "true",
+      "form_snippet": null,
+      "display_snippet": "email.html",
+      "form_placeholder": "example@example.com",
+      "validators": "email_validator not_empty benap_contact_point_org_fields_consistency_check"
+    },
+    {
+      "field_name": "contact_point_phone",
+      "label": {
+        "en": "Telephone number [contact point]",
+        "fr": "Numéro de téléphone [point de contact]",
+        "nl": "Telefoonnummer [contactpunt]",
+        "de": "Telefonnummer [Kontaktpunkt]"
+      },
+      "help_text": {
+        "en": "The telephone number must start with the country prefix (e.g. \",+32\" for Belgium) and may only contain numbers from 0 to 9 besides the \"+\" sign.",
+        "fr": "Le numéro de téléphone doit commencer par le préfixe du pays (par ex. \"+32\" pour la Belgique) et ne peut contenir que des chiffres de 0 à 9 en plus du signe \"+\".",
+        "nl": "Het telefoonnummer moet met het netnummer van het land beginnen (bv. \"+32\" voor België) en kan naast de teken \"+\" alleen maar cijfers van 0 tot 9 inhouden.",
+        "de": "Die Telefonnummer muss mit der Vorwahl des Landes anfangen (zum B. \"+32\" für Belgien) und kann neben dem Zeichen \"+\" nur Zahlen von 0 bis 9 beinhalten."
+      },
+      "form_placeholder": "+32XXXXXXXX",
+      "form_snippet": null,
+      "validators": "phone_number_validator benap_contact_point_org_fields_consistency_check"
     },
     {
       "field_name": "publisher_name",
@@ -273,15 +331,15 @@
       "required": "true"
     },
     {
-      "field_name": "p_address",
+      "field_name": "publisher_address",
       "label": {
         "en": "Address [publisher]",
-        "fr": "Adresse  [éditeur]",
+        "fr": "Adresse [éditeur]",
         "nl": "Adres [uitgever]",
         "de": "Adresse [Herausgeber]"
       },
-      "form_placeholder": "Boulevard Anspach, 1 - 1000 Bruxelles (Belgique)",
-      "required": "true"
+      "form_snippet": null,
+      "display_snippet": "address.html"
     },
     {
       "field_name": "publisher_email",

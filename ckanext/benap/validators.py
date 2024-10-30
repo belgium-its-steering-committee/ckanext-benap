@@ -5,7 +5,8 @@ from ckan.logic.validators import Invalid
 from ckanext.scheming.validation import scheming_validator
 import ckan.plugins.toolkit as toolkit
 from ckan.lib.navl.dictization_functions import Missing
-
+from ckanext.benap.helpers import (organisation_names_for_autocomplete, benap_get_organization_field_by_id,
+                                   benap_get_organization_field_by_specified_field)
 
 # pattern from http://phoneregex.com/
 phone_number_pattern = re.compile(
@@ -101,3 +102,29 @@ def is_choice_null(value):
     if isinstance(value, Missing) or value =='':
         return None
     return value
+
+def contact_point_org_fields_consistency_check(key, flattened_data, errors, context):
+    contact_point_name = flattened_data.get(('contact_point_name',))
+
+    if contact_point_name in organisation_names_for_autocomplete():
+
+        owner_org_id = flattened_data.get(('owner_org',))
+        owner_org_title = benap_get_organization_field_by_id(owner_org_id, 'title')
+
+        if owner_org_title == contact_point_name:
+            owner_org = owner_org_id
+        else:
+            owner_org = benap_get_organization_field_by_specified_field(contact_point_name, 'id','title')
+
+        if key == (u'contact_point_email',):
+            contact_point_email = flattened_data.get(('contact_point_email',))
+            publisher_email = benap_get_organization_field_by_id(owner_org, 'do_email')
+            if contact_point_email != publisher_email:
+                raise Invalid(
+                    _('The contact point email must match the contact point organization\'s email: {}').format(
+                        publisher_email))
+        else:
+            contact_point_phone = flattened_data.get(('contact_point_phone',))
+            publisher_telephone_number = benap_get_organization_field_by_id(owner_org, 'do_tel')
+            if contact_point_phone != publisher_telephone_number:
+                raise Invalid(_('The contact point telephone number must match the contact point organization\'s telephone number: {}').format(publisher_telephone_number))

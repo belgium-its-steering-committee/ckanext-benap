@@ -1386,9 +1386,9 @@ def convert_validation_list_to_JSON(data):
         data_string = '["{}"]'.format(data)
     return data_string
 
-def benap_get_organization_field(org_id, field_name):
+def benap_get_organization_field_by_id(org_id, field_name):
     """
-    Retrieve the specified field value from an organization's data.
+    Retrieve the specified field value from an organization's data based on the organization id.
     """
     user = toolkit.get_action(u'get_site_user')(
         {
@@ -1405,6 +1405,21 @@ def benap_get_organization_field(org_id, field_name):
                                                             u'include_tags': False,
                                                             u'include_followers': False,
                                                         })
+
+    field_value = org_data.get(field_name)
+    return field_value
+
+def benap_get_organization_field_by_specified_field(org_value, field_name, search_field):
+    """
+    Retrieve the specified field value from an organization's data based on a specified search field.
+    """
+    from ckantoolkit import h
+    org_list = h.organizations_available('create_dataset')
+
+    org_data = next((org for org in org_list if org.get(search_field) == org_value), None)
+
+    if org_data is None:
+        return None
 
     field_value = org_data.get(field_name)
     return field_value

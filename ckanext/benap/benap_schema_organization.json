@@ -161,21 +161,137 @@
       "required":true
     },
     {
-      "field_name": "do_address",
+      "field_name": "address",
       "label": {
         "en": "Address",
-        "fr": "Adresse",
+        "fr": "Addresse",
         "nl": "Adres",
-        "de": "Adresse"
+        "de": "Addresse"
       },
       "help_text": {
-        "en": "Official address of your organisation in Belgium. If necessary, please fill it in in multiple languages, each separated by \"/\".",
-        "fr": "Adresse officielle de votre organisation en Belgique. Si nécessaire, merci de compléter dans plusieurs langues, chacune séparée par une \"/\".",
-        "nl": "Officiëel adres van je organisatie in België. Indien nodig, gelieve  in verschillende talen in te vullen, elke gescheid door een \"/\".",
-        "de": "Offizielle Adresse Ihrer Organisation in Belgien. Wenn nötig, bitte in verschiedenen Sprachen ausfüllen, jede getrennt durch ein \"/\"."
+        "en": "The complete address of an organization, divided into four fields: country, administrative area, postal code, city, and street address.",
+        "fr": "L'adresse complète d'une organisation, divisée en quatre champs : pays, zone administrative, code postal, ville et adresse de rue",
+        "nl": "Het volledige adres van een organisatie, opgesplitst in vier velden: land, administratief gebied, postcode, stad en straatadres",
+        "de": "Die vollständige Adresse einer Organisation, aufgeteilt in vier Felder: land, verwaltungsgebiet, postleitzahl, stadt und straßenadresse."
       },
-      "form_placeholder": "Boulevard Anspach, 1 - 1000 Bruxelles (Belgium)",
-      "required": true
+      "form_snippet": "nested_field.html",
+      "nested_fields": [
+        {
+            "field_name": "country",
+            "form_snippet": "text.html"
+        },
+        {
+            "field_name": "administrative_area",
+            "form_snippet": "text.html"
+        },
+        {
+            "field_name": "postal_code",
+            "form_snippet": "text.html"
+        },
+        {
+            "field_name": "city",
+            "form_snippet": "text.html"
+        },
+        {
+            "field_name": "street_address",
+            "form_snippet": "text.html"
+        }
+      ]
+    },
+    {
+      "field_name": "country",
+      "label": {
+        "en": "Country",
+        "fr": "Pays",
+        "nl": "Land",
+        "de": "Land"
+      },
+      "help_text": {
+        "en": "The country of an address of your organisation.",
+        "fr": "Le pays de l'adresse de votre organisation.",
+        "nl": "Het land van het adres van uw organisatie.",
+        "de": "Das Land der Adresse Ihrer Organisation."
+      },
+      "form_placeholder": "Belgium",
+      "required": true,
+      "form_snippet": null,
+      "display_snippet": null
+    },
+    {
+      "field_name": "administrative_area",
+      "label": {
+        "en": "Administrative area",
+        "fr": "Zone administrative",
+        "nl": "Administratief gebied",
+        "de": "Verwaltungsgebiet"
+      },
+      "help_text": {
+        "en": "The administrative area of an address of your organisation.  Depending on the country, this corresponds to a province, a county, a region, or a state.",
+        "fr": "La zone administrative de l'adresse de votre organisation. Selon le pays, cela correspond à une province, un comté, une région ou un état.",
+        "nl": "Het administratieve gebied van het adres van uw organisatie. Afhankelijk van het land komt dit overeen met een provincie, een district, een regio of een staat.",
+        "de": "Das Verwaltungsgebiet der Adresse Ihrer Organisation. Je nach Land entspricht dies einer Provinz, einem Bezirk, einer Region oder einem Staat."
+      },
+      "form_placeholder": "Brussels",
+      "required": true,
+      "form_snippet": null,
+      "display_snippet": null
+    },
+    {
+      "field_name": "postal_code",
+      "label": {
+        "en": "Postal code",
+        "fr": "Code postal",
+        "nl": "Postcode",
+        "de": "Postleitzahl"
+      },
+      "help_text": {
+        "en": "The postal code of an address of your organisation.",
+        "fr": "Le code postal de l'adresse de votre organisation.",
+        "nl": "De postcode van het adres van uw organisatie.",
+        "de": "Die Postleitzahl der Adresse Ihrer Organisation."
+      },
+      "form_placeholder": "1000",
+      "required": true,
+      "form_snippet": null,
+      "display_snippet": null
+    },
+    {
+      "field_name": "city",
+      "label": {
+        "en": "City",
+        "fr": "Ville",
+        "nl": "Stad",
+        "de": "Stadt"
+      },
+      "help_text": {
+        "en": "The city of an address of your organisation.",
+        "fr": "La ville de l'adresse de votre organisation.",
+        "nl": "De stad van het adres van uw organisatie.",
+        "de": "Die Stadt der Adresse Ihrer Organisation."
+      },
+      "form_placeholder": "Brussels",
+      "required": true,
+      "form_snippet": null,
+      "display_snippet": null
+    },
+    {
+      "field_name": "street_address",
+      "label": {
+        "en": "Street address",
+        "fr": "Adresse de rue",
+        "nl": "Straatadres",
+        "de": "Straßenadresse"
+      },
+      "help_text": {
+        "en": "The street address of your organisation.",
+        "fr": "L'adresse de rue de votre organisation.",
+        "nl": "Het straatadres van uw organisatie.",
+        "de": "Die Straßenadresse Ihrer Organisation."
+      },
+      "form_placeholder": "Boulevard Anspach 1",
+      "required": true,
+      "form_snippet": null,
+      "display_snippet": null
     },
     {
       "field_name": "do_email",
@@ -418,4 +534,3 @@
     }
   ]
 }
-
