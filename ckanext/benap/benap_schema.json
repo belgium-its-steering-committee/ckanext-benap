@@ -262,7 +262,7 @@
       "required": "true"
     },
     {
-      "field_name": "publisher_firstName",
+      "field_name": "publisher_firstname",
       "label": {
         "en": "First name [publisher]",
         "fr": "Prénom [éditeur]",
@@ -270,8 +270,7 @@
         "de": "Vorname [Herausgeber]"
       },
       "form_placeholder": "Zenodotus",
-      "required": "true",
-      "validators": "benap_is_choice_null"
+      "required": "true"
     },
     {
       "field_name": "publisher_surname",
@@ -282,8 +281,7 @@
         "de": "Familienname [Herausgeber]"
       },
       "form_placeholder": "Of Ephesus",
-      "required": "true",
-      "validators": "benap_is_choice_null"
+      "required": "true"
     },
 
     {
@@ -305,7 +303,7 @@
         "nl": "E-mail [uitgever]",
         "de": "E-Mail [Herausgeber]"
       },
-      "form_placeholder": "tags@scroll.eg",
+      "form_placeholder": "example@example.com",
       "display_snippet": "email.html",
       "display_email_name_field": "publisher_name",
       "help_text": {
