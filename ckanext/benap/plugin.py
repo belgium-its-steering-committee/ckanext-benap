@@ -11,7 +11,7 @@ from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallba
     get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, get_translated_tag_with_name, \
     forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element, get_organization_by_id, benap_fluent_label, \
     translate_organization_filter, is_user_sysAdmin, is_nap_checked, convert_validation_list_to_JSON, benap_get_organization_field_by_id, \
-    benap_get_organization_field_by_specified_field
+    benap_get_organization_field_by_specified_field, benap_retrieve_dict_items_or_keys_or_values, get_translated_category_and_sub_category
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.validators import phone_number_validator, \
     countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin, \
@@ -72,7 +72,9 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_is_nap_checked':is_nap_checked,
             'benap_convert_validation_list_to_JSON': convert_validation_list_to_JSON,
             'benap_get_organization_field_by_id': benap_get_organization_field_by_id,
-            'benap_get_organization_field_by_specified_field': benap_get_organization_field_by_specified_field
+            'benap_get_organization_field_by_specified_field': benap_get_organization_field_by_specified_field,
+            'benap_retrieve_dict_items_or_keys_or_values': benap_retrieve_dict_items_or_keys_or_values,
+            'benap_get_translated_category_and_sub_category': get_translated_category_and_sub_category
         }
 
     # IValidators
