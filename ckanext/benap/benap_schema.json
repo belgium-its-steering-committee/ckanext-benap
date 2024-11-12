@@ -98,23 +98,25 @@
       "required": "true"
     },
     {
-      "field_name": "its_dataset_type",
+      "field_name": "mobility_theme",
       "label": {
-        "en": "Dataset Type",
-        "fr": "Type du jeu de données",
-        "nl": "Type van de dataset",
-        "de": "Datensatztyp"
+        "en": "Mobility Theme",
+        "fr": "Thème de la mobilité",
+        "nl": "Mobiliteitsthema",
+        "de": "Mobilitätsthema"
       },
-      "preset": "multiple_checkbox",
       "help_text": {
-        "en": "Choose one or multiple relevant dataset types.",
-        "fr": "Choisissez un ou plusieurs types de données pertinents.",
-        "nl": "Kies een of meerdere relevante dataset types.",
-        "de": "Wählen Sie einen oder mehrere relevante Datensatztypen aus."
+        "en": "Choose one or multiple relevant mobility-related themes. At least one main category is required. The subcategories are optional.",
+        "fr": "Choisissez un ou plusieurs thèmes de mobilité pertinents. Il est obligatoire de sélectionner au moins une catégorie principale. Les sous-catégories sont optionnelles.",
+        "nl": "Kies één of meerdere relevante mobiliteitsthema's. Ten minste één hoofdcategorie is verplicht. De subcategorieën zijn optioneel.",
+        "de": "Wählen Sie ein oder mehrere relevante Mobilitätsthemen aus. Es muss mindestens eine Hauptkategorie ausgewählt werden. Die Unterkategorien sind optional."
       },
+      "form_snippet": "category_sub_category.html",
+      "display_snippet": "category_sub_category.html",
       "choices_helper": "benap_ontology_helper",
-      "benap_helper_ontology": "dataset_type",
-      "validators": "benap_is_choice_null"
+      "benap_helper_ontology": "mobility_theme",
+      "required": "true",
+      "validators": "scheming_required"
     },
     {
       "field_name": "name",
