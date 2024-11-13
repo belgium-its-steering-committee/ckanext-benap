@@ -79,29 +79,30 @@ def https_validator(value, context):
 
 
 def modified_by_sysadmin(schema_value, package):
-     
-     user  = package.get("auth_user_obj")
-     #parse schema_value
-     trueValues = {"true"}
-     flag = False
+    user = package.get("auth_user_obj")
+    # parse schema_value
+    trueValues = {"true"}
+    flag = False
 
-     if isinstance(schema_value, str):
-         lowerValue = schema_value.strip().lower()
-         if lowerValue in trueValues:
-             flag == True
-    
-     if user is not None:
+    if isinstance(schema_value, str):
+        lowerValue = schema_value.strip().lower()
+        if lowerValue in trueValues:
+            flag == True
+
+    if user is not None:
         if not user.sysadmin and flag:
             raise Invalid(_('Modification must done by a system administrator'))
         else:
             return schema_value
-     else:
-         raise Invalid(_('Logged in one must be'))
-     
+    else:
+        raise Invalid(_('Logged in one must be'))
+
+
 def is_choice_null(value):
-    if isinstance(value, Missing) or value =='':
+    if isinstance(value, Missing) or value == '':
         return None
     return value
+
 
 def contact_point_org_fields_consistency_check(key, flattened_data, errors, context):
     contact_point_name = flattened_data.get(('contact_point_name',))
@@ -114,7 +115,7 @@ def contact_point_org_fields_consistency_check(key, flattened_data, errors, cont
         if owner_org_title == contact_point_name:
             owner_org = owner_org_id
         else:
-            owner_org = benap_get_organization_field_by_specified_field(contact_point_name, 'id','title')
+            owner_org = benap_get_organization_field_by_specified_field(contact_point_name, 'id', 'title')
 
         if key == (u'contact_point_email',):
             contact_point_email = flattened_data.get(('contact_point_email',))
@@ -124,7 +125,9 @@ def contact_point_org_fields_consistency_check(key, flattened_data, errors, cont
                     _('The contact point email must match the contact point organization\'s email: {}').format(
                         publisher_email))
         else:
-            contact_point_phone = flattened_data.get(('contact_point_phone',))
+            contact_point_tel = flattened_data.get(('contact_point_tel',))
             publisher_telephone_number = benap_get_organization_field_by_id(owner_org, 'do_tel')
-            if contact_point_phone != publisher_telephone_number:
-                raise Invalid(_('The contact point telephone number must match the contact point organization\'s telephone number: {}').format(publisher_telephone_number))
+            if contact_point_tel != publisher_telephone_number:
+                raise Invalid(
+                    _('The contact point telephone number must match the contact point organization\'s telephone number: {}').format(
+                        publisher_telephone_number))
