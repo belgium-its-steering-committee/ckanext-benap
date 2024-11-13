@@ -240,7 +240,7 @@
       "label": {
         "en": "Contact point",
         "fr": "Point de contact",
-        "nl": "contactpunt",
+        "nl": "Contactpunt",
         "de": "Kontaktpunkt"
       },
       "help_text": {
@@ -249,20 +249,17 @@
         "nl": "Het contactpunt van de metadata, verdeeld in drie velden: naam (verplicht), e-mail (verplicht) en telefoonnummer (optioneel).",
         "de": "Der Ansprechpartner der Metadaten, unterteilt in drei Felder: Name (verpflichtend), E-Mail (verpflichtend) und Telefonnummer (optional)."
       },
-      "form_snippet": "nested_field.html",
+      "form_snippet": "nested_field_with_autocomplete.html",
       "display_snippet": null,
       "nested_fields": [
         {
-            "field_name": "contact_point_name",
-            "form_snippet": "text_autocomplete.html"
+            "field_name": "contact_point_name"
         },
         {
-            "field_name": "contact_point_email",
-            "form_snippet": "text.html"
+            "field_name": "contact_point_email"
         },
         {
-            "field_name": "contact_point_phone",
-            "form_snippet": "text.html"
+            "field_name": "contact_point_tel"
         }
       ]
     },
@@ -292,10 +289,10 @@
         "de": "E-mail [Kontaktpunkt]"
       },
       "help_text": {
-        "en": "The email adress must contain @ and a dot.",
-        "fr": "L'adresse e-mail doit contenir @ et un point.",
-        "nl": "Het e-mailadres moet  @ en een punt inhouden.",
-        "de": "Die E-Mail muss  @ und einen Punkt beinhalten."
+          "en": "The email address must contain @ and a dot. The field will be automatically filled when the contact point is an organization.",
+          "fr": "L'adresse e-mail doit contenir @ et un point. Le champ sera automatiquement rempli lorsque le point de contact est une organisation.",
+          "nl": "Het e-mailadres moet @ en een punt inhouden. Het veld wordt automatisch ingevuld wanneer het contactpunt een organisatie is.",
+          "de": "Die E-Mail muss @ und einen Punkt beinhalten. Das Feld wird automatisch ausgefüllt, wenn der Kontaktpunkt eine Organisation ist."
       },
       "required": "true",
       "form_snippet": null,
@@ -304,7 +301,7 @@
       "validators": "email_validator not_empty benap_contact_point_org_fields_consistency_check"
     },
     {
-      "field_name": "contact_point_phone",
+      "field_name": "contact_point_tel",
       "label": {
         "en": "Telephone number [contact point]",
         "fr": "Numéro de téléphone [point de contact]",
@@ -312,11 +309,11 @@
         "de": "Telefonnummer [Kontaktpunkt]"
       },
       "help_text": {
-        "en": "The telephone number must start with the country prefix (e.g. \",+32\" for Belgium) and may only contain numbers from 0 to 9 besides the \"+\" sign.",
-        "fr": "Le numéro de téléphone doit commencer par le préfixe du pays (par ex. \"+32\" pour la Belgique) et ne peut contenir que des chiffres de 0 à 9 en plus du signe \"+\".",
-        "nl": "Het telefoonnummer moet met het netnummer van het land beginnen (bv. \"+32\" voor België) en kan naast de teken \"+\" alleen maar cijfers van 0 tot 9 inhouden.",
-        "de": "Die Telefonnummer muss mit der Vorwahl des Landes anfangen (zum B. \"+32\" für Belgien) und kann neben dem Zeichen \"+\" nur Zahlen von 0 bis 9 beinhalten."
-      },
+        "en": "The telephone number must start with the country prefix (e.g. \",+32\" for Belgium) and may only contain numbers from 0 to 9 besides the \"+\" sign. The field will be automatically filled when the contact point is an organization.",
+        "fr": "Le numéro de téléphone doit commencer par le préfixe du pays (par ex. \"+32\" pour la Belgique) et ne peut contenir que des chiffres de 0 à 9 en plus du signe \"+\". Le champ sera automatiquement rempli lorsque le point de contact est une organisation.",
+        "nl": "Het telefoonnummer moet met het netnummer van het land beginnen (bv. \"+32\" voor België) en kan naast de teken \"+\" alleen maar cijfers van 0 tot 9 inhouden. Het veld wordt automatisch ingevuld wanneer het contactpunt een organisatie is.",
+        "de": "Die Telefonnummer muss mit der Vorwahl des Landes anfangen (zum B. \"+32\" für Belgien) und kann neben dem Zeichen \"+\" nur Zahlen von 0 bis 9 beinhalten. Das Feld wird automatisch ausgefüllt, wenn der Kontaktpunkt eine Organisation ist."
+    },
       "form_placeholder": "+32XXXXXXXX",
       "form_snippet": null,
       "validators": "phone_number_validator benap_contact_point_org_fields_consistency_check"
