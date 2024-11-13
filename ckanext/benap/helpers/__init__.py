@@ -1415,3 +1415,36 @@ def benap_retrieve_dict_items_or_keys_or_values(data, return_type):
             return data.items()
     else:
         return []
+
+
+def benap_retrieve_org_title_tel_email():
+    """
+    Retrieves a list of organizations where the current user can create datasets,
+    including only the organization's title, telephone number, and email.
+    """
+    from ckantoolkit import h
+    user = toolkit.get_action(u'get_site_user')(
+        {
+            u'ignore_auth': True
+        },
+        {})
+    context = {u'user': user[u'name']}
+    available_orgs_for_user = [org['name'].encode("utf-8") for org in h.organizations_available('create_dataset')]
+    data = toolkit.get_action(u'organization_list')(context,
+                                                    {
+                                                        u'include_dataset_count': False,
+                                                        u'all_fields': True,
+                                                        u'include_users': False,
+                                                        u'include_groups': False,
+                                                        u'include_tags': False,
+                                                        u'include_followers': False,
+                                                        u'include_extras': True,
+                                                        u'organizations': available_orgs_for_user
+                                                    })
+    keys_to_keep = ["title", "do_tel", "do_email"]
+    filtered_data = [
+        {key: item.get(key) for key in keys_to_keep}
+        for item in data
+    ]
+    json_data = json.dumps(filtered_data, ensure_ascii=False)
+    return json_data
