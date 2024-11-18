@@ -1190,8 +1190,7 @@ MOBILITY_THEME = [
              "de": u"Wasserstraßen und Wasserkörper"
          })
      ],
-     [])
-    }),
+     []),
     ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided', {
         "en": u"License",
         "fr": u"Licence",
