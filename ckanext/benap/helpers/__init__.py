@@ -4,9 +4,9 @@ import ckan.plugins.toolkit as toolkit
 from ckan.common import config
 import logging
 from decorators import decorator_timer
+from itertools import chain
 
-from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
-                                         CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE)
+from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE, MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE)
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
 
@@ -972,6 +972,9 @@ def ontology_helper(context):
         return map_for_form_select(NAP_TYPE)
     elif ontology == "network_coverage":
         return map_for_form_select(NETWORK_COVERAGE)
+    elif ontology =="mobility_theme":
+        values_labels_list = [item for sublist in get_translated_category_and_sub_category() for tuples in sublist for item in tuples]
+        return map_for_form_select(values_labels_list)
     elif ontology == "conditions_access":
         return map_for_form_select(CONDITIONS_ACCESS)
     elif ontology == "conditions_usage":
@@ -1250,6 +1253,10 @@ def get_translated_tags():
     ]
 
 
+def get_translated_category_and_sub_category():
+    return MOBILITY_THEME
+
+
 def filter_default_tags_only(items):
     filtered_items = []
     tags = []
@@ -1392,6 +1399,21 @@ def benap_get_organization_field_by_specified_field(org_value, field_name, searc
     field_value = org_data.get(field_name)
     return field_value
 
+def benap_retrieve_dict_items_or_keys_or_values(data, return_type):
+    """
+    Retrieve keys, values, or both from a JSON-encoded dictionary.
+    """
+    if data:
+        data = json.loads(data)
+
+        if return_type == "keys":
+            return list(data.keys())
+        elif return_type == "values":
+            return list(chain.from_iterable(data.values()))
+        elif return_type == "items":
+            return data.items()
+    else:
+        return []
 
 def benap_retrieve_org_title_tel_email():
     """
