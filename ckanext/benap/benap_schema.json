@@ -240,7 +240,7 @@
       "label": {
         "en": "Contact point",
         "fr": "Point de contact",
-        "nl": "contactpunt",
+        "nl": "Contactpunt",
         "de": "Kontaktpunkt"
       },
       "help_text": {
@@ -249,20 +249,17 @@
         "nl": "Het contactpunt van de metadata, verdeeld in drie velden: naam (verplicht), e-mail (verplicht) en telefoonnummer (optioneel).",
         "de": "Der Ansprechpartner der Metadaten, unterteilt in drei Felder: Name (verpflichtend), E-Mail (verpflichtend) und Telefonnummer (optional)."
       },
-      "form_snippet": "nested_field.html",
+      "form_snippet": "nested_field_with_autocomplete.html",
       "display_snippet": null,
       "nested_fields": [
         {
-            "field_name": "contact_point_name",
-            "form_snippet": "text_autocomplete.html"
+            "field_name": "contact_point_name"
         },
         {
-            "field_name": "contact_point_email",
-            "form_snippet": "text.html"
+            "field_name": "contact_point_email"
         },
         {
-            "field_name": "contact_point_phone",
-            "form_snippet": "text.html"
+            "field_name": "contact_point_tel"
         }
       ]
     },
@@ -292,10 +289,10 @@
         "de": "E-mail [Kontaktpunkt]"
       },
       "help_text": {
-        "en": "The email adress must contain @ and a dot.",
-        "fr": "L'adresse e-mail doit contenir @ et un point.",
-        "nl": "Het e-mailadres moet  @ en een punt inhouden.",
-        "de": "Die E-Mail muss  @ und einen Punkt beinhalten."
+          "en": "The email address must contain @ and a dot. The field will be automatically filled when the contact point is an organization.",
+          "fr": "L'adresse e-mail doit contenir @ et un point. Le champ sera automatiquement rempli lorsque le point de contact est une organisation.",
+          "nl": "Het e-mailadres moet @ en een punt inhouden. Het veld wordt automatisch ingevuld wanneer het contactpunt een organisatie is.",
+          "de": "Die E-Mail muss @ und einen Punkt beinhalten. Das Feld wird automatisch ausgefüllt, wenn der Kontaktpunkt eine Organisation ist."
       },
       "required": "true",
       "form_snippet": null,
@@ -304,7 +301,7 @@
       "validators": "email_validator not_empty benap_contact_point_org_fields_consistency_check"
     },
     {
-      "field_name": "contact_point_phone",
+      "field_name": "contact_point_tel",
       "label": {
         "en": "Telephone number [contact point]",
         "fr": "Numéro de téléphone [point de contact]",
@@ -312,11 +309,11 @@
         "de": "Telefonnummer [Kontaktpunkt]"
       },
       "help_text": {
-        "en": "The telephone number must start with the country prefix (e.g. \",+32\" for Belgium) and may only contain numbers from 0 to 9 besides the \"+\" sign.",
-        "fr": "Le numéro de téléphone doit commencer par le préfixe du pays (par ex. \"+32\" pour la Belgique) et ne peut contenir que des chiffres de 0 à 9 en plus du signe \"+\".",
-        "nl": "Het telefoonnummer moet met het netnummer van het land beginnen (bv. \"+32\" voor België) en kan naast de teken \"+\" alleen maar cijfers van 0 tot 9 inhouden.",
-        "de": "Die Telefonnummer muss mit der Vorwahl des Landes anfangen (zum B. \"+32\" für Belgien) und kann neben dem Zeichen \"+\" nur Zahlen von 0 bis 9 beinhalten."
-      },
+        "en": "The telephone number must start with the country prefix (e.g. \",+32\" for Belgium) and may only contain numbers from 0 to 9 besides the \"+\" sign. The field will be automatically filled when the contact point is an organization.",
+        "fr": "Le numéro de téléphone doit commencer par le préfixe du pays (par ex. \"+32\" pour la Belgique) et ne peut contenir que des chiffres de 0 à 9 en plus du signe \"+\". Le champ sera automatiquement rempli lorsque le point de contact est une organisation.",
+        "nl": "Het telefoonnummer moet met het netnummer van het land beginnen (bv. \"+32\" voor België) en kan naast de teken \"+\" alleen maar cijfers van 0 tot 9 inhouden. Het veld wordt automatisch ingevuld wanneer het contactpunt een organisatie is.",
+        "de": "Die Telefonnummer muss mit der Vorwahl des Landes anfangen (zum B. \"+32\" für Belgien) und kann neben dem Zeichen \"+\" nur Zahlen von 0 bis 9 beinhalten. Das Feld wird automatisch ausgefüllt, wenn der Kontaktpunkt eine Organisation ist."
+    },
       "form_placeholder": "+32XXXXXXXX",
       "form_snippet": null,
       "validators": "phone_number_validator benap_contact_point_org_fields_consistency_check"
@@ -885,23 +882,185 @@
       "benap_helper_ontology": "georeferencing_method"
     },
     {
-      "field_name": "contract_license",
+      "field_name": "rights",
       "label": {
-        "en": "Contract or license",
-        "fr": "Contrat ou licence",
-        "nl": "Contract of licentie",
-        "de": "Vertrag oder Lizenz"
+        "en": "Rights",
+        "fr": "Droits",
+        "nl": "Rechten",
+        "de": "Rechte"
       },
-      "preset": "multiple_checkbox",
-      "choices_helper": "benap_ontology_helper",
       "help_text": {
-        "en": "Describes the conditions of use of the data set. It is possible to select multiple categories.",
-        "fr": "Décrit les conditions d'utilisation du jeu de données. Il est possible de sélectionner plusieurs catégories.",
-        "nl": "Beschrijft de gebruiksvoorwaarden van de dataset. Het is mogelijk om meerdere categorieën te selecteren.",
-        "de": "Beschreibt die Nutzungsbedingungen des Datensatzes. Es ist möglich, mehrere Kategorien auszuwählen."
+        "en": "Describes the conditions for access and usage of the data set (rights).",
+        "fr": "Décrit les conditions d'accès et d'utilisation du jeu de données (droits).",
+        "nl": "Beschrijft de toegangs- en gebruiksvoorwaarden van de dataset (rechten).",
+        "de": "Beschreibt die Zugangs- und Nutzungsbedingungen des Datensatzes (Rechte)."
       },
-      "benap_helper_ontology": "contract_license",
-      "required": "true"
+      "form_snippet": "nested_field_license.html",
+      "display_snippet": null,
+      "nested_fields": [
+        {
+          "field_name": "conditions_access",
+          "form_snippet": "select.html"
+        },
+        {
+          "field_name": "conditions_usage",
+          "form_snippet": "select.html"
+        },
+        {
+          "field_name": "additional_info_access_usage_translated",
+          "form_snippet": "fluent_markdown.html"
+        }
+      ]
+    },
+    {
+      "field_name": "conditions_access",
+      "label": {
+        "en": "Conditions for access",
+        "fr": "Conditions d'accès",
+        "nl": "Toegangsvoorwaarden",
+        "de": "Zugangsbedingungen"
+      },
+      "help_text": {
+        "en": "Specify the conditions under which the data can be accessed.",
+        "fr": "Spécifiez les conditions d'accès aux données.",
+        "nl": "Geef de voorwaarden op waaronder de gegevens toegankelijk zijn.",
+        "de": "Geben Sie die Bedingungen an, unter denen auf die Daten zugegriffen werden kann."
+    },
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "conditions_access",
+      "required": true,
+      "form_snippet": null,
+      "validators": "scheming_required scheming_choices"
+    },
+    {
+      "field_name": "conditions_usage",
+      "label": {
+        "en": "Conditions for usage",
+        "fr": "Conditions d'utilisation",
+        "nl": "Gebruiksvoorwaarden",
+        "de": "Nutzungsbedingungen"
+      },
+      "help_text": {
+        "en": "Specify the conditions under which the data can be used.",
+        "fr": "Spécifiez les conditions d'utilisation des données.",
+        "nl": "Geef de voorwaarden op waaronder de gegevens gebruikt mogen worden.",
+        "de": "Geben Sie die Bedingungen an, unter denen die Daten genutzt werden dürfen."
+      },
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "conditions_usage",
+      "required": true,
+      "form_snippet": null,
+      "validators": "scheming_required scheming_choices"
+    },
+    {
+      "field_name": "additional_info_access_usage_translated",
+      "label": {
+        "en": "Additional information for access and usage",
+        "fr": "Informations supplémentaires pour l'accès et l'utilisation",
+        "nl": "Aanvullende informatie voor toegang en gebruik",
+        "de": "Zusätzliche Informationen für den Zugriff und die Nutzung"
+      },
+      "help_text": {
+        "en": "Provide any additional information for access and usage (optional).",
+        "fr": "Fournissez toute information supplémentaire pour l'accès et l'utilisation (facultatif).",
+        "nl": "Geef aanvullende informatie voor toegang en gebruik (optioneel).",
+        "de": "Geben Sie zusätzliche Informationen für den Zugriff und die Nutzung an (optional)."
+      },
+      "form_placeholder": {
+        "en": "e.g., Additional details on access rights, usage restrictions, or licensing terms",
+        "fr": "ex. Informations supplémentaires sur les droits d'accès, les restrictions d'utilisation ou les conditions de licence",
+        "nl": "bv. Aanvullende details over toegangsrechten, gebruiksbeperkingen of licentievoorwaarden",
+        "de": "z. B. Zusätzliche Angaben zu Zugriffsrechten, Nutzungsbeschränkungen oder Lizenzbedingungen"
+      },
+      "form_languages": [
+        "en",
+        "nl",
+        "fr",
+        "de"
+      ],
+      "error_snippet": "fluent_text.html",
+      "output_validators": "fluent_core_translated_output",
+      "validators": "fluent_text",
+      "form_snippet": null,
+      "display_snippet": "fluent_markdown.html"
+    },
+    {
+      "field_name": "license",
+      "label": {
+        "en": "License",
+        "fr": "Licence",
+        "nl": "Licentie",
+        "de": "Lizenz"
+      },
+      "help_text": {
+        "en": "Describes the license under which the data set is made available.",
+        "fr": "Décrit la licence sous laquelle le jeu de données est mis à disposition.",
+        "nl": "Beschrijft de licentie waaronder de dataset beschikbaar wordt gesteld.",
+        "de": "Beschreibt die Lizenz, unter der der Datensatz verfügbar gemacht wird."
+      },
+      "form_snippet": null,
+      "display_snippet": null,
+      "nested_fields": [
+        {
+          "field_name": "license_type",
+          "form_snippet": "select.html"
+        },
+        {
+          "field_name": "license_text_translated",
+          "form_snippet": "fluent_markdown.html"
+        }
+      ]
+    },
+    {
+      "field_name": "license_type",
+      "label": {
+        "en": "License type",
+        "fr": "Type de licence",
+        "nl": "Licentietype",
+        "de": "Lizenztyp"
+      },
+      "help_text": {
+        "en": "Specify the license type (standard license) under which the data set is made available.",
+        "fr": "Spécifiez le type de licence (licence standard) sous laquelle le jeu de données est mis à disposition.",
+        "nl": "Geef het licentietype op (standaardlicentie) waaronder de dataset beschikbaar wordt gesteld.",
+        "de": "Geben Sie den Lizenztyp (Standardlizenz) an, unter dem der Datensatz verfügbar gemacht wird."
+      },
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "license_type",
+      "form_snippet": null,
+      "validators": "scheming_required scheming_choices benap_is_choice_null"
+    },
+    {
+      "field_name": "license_text_translated",
+      "label": {
+        "en": "License text",
+        "fr": "Texte de la licence",
+        "nl": "Licentietekst",
+        "de": "Lizenztext"
+      },
+      "help_text": {
+        "en": "Provide the full text of a License Document. This field is mandatory when the license type is not specified in the field above.",
+        "fr": "Fournissez le texte complet d'un document de licence. Ce champ est obligatoire si le type de licence n'est pas spécifié dans le champ ci-dessus.",
+        "nl": "Geef de volledige tekst van een licentiedocument. Dit veld is verplicht wanneer het licentietype niet is gespecificeerd in het bovenstaande veld.",
+        "de": "Geben Sie den vollständigen Text eines Lizenzdokuments an. Dieses Feld ist obligatorisch, wenn der Lizenztyp im obigen Feld nicht angegeben ist."
+      },
+      "form_placeholder": {
+        "en": "e.g., Full license text or terms and conditions",
+        "fr": "ex. Texte complet de la licence ou termes et conditions",
+        "nl": "bv. Volledige licentietekst of voorwaarden",
+        "de": "z. B. Vollständiger Lizenztext oder Bedingungen"
+      },
+      "form_languages": [
+        "en",
+        "nl",
+        "fr",
+        "de"
+      ],
+      "form_snippet": null,
+      "display_snippet": "fluent_markdown_large_text.html",
+      "error_snippet": "fluent_text.html",
+      "output_validators": "fluent_core_translated_output",
+      "validators": "fluent_text benap_is_choice_null"
     }
   ]
 }
