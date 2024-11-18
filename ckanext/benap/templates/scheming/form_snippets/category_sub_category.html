@@ -47,6 +47,7 @@
     {%- if field.get('sorted_choices') -%}
         {%- set choices = choices|sort(case_sensitive=false, attribute=1) -%}
     {%- endif -%}
+    {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
     <fieldset class="checkboxes">
         {%- for category, tags in choices -%}
             <!-- Category container with accordion and main checkbox -->
@@ -199,5 +200,5 @@
             });
         });
     </script>
-    {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
+    
 {%- endcall -%}
