@@ -6,8 +6,7 @@ import logging
 from decorators import decorator_timer
 from itertools import chain
 
-from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
-                                         MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE)
+from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE, MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE)
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
 
@@ -1415,7 +1414,6 @@ def benap_retrieve_dict_items_or_keys_or_values(data, return_type):
             return data.items()
     else:
         return []
-
 
 def benap_retrieve_org_title_tel_email():
     """

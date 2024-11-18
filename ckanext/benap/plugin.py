@@ -13,6 +13,7 @@ from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallba
     translate_organization_filter, is_user_sysAdmin, is_nap_checked, convert_validation_list_to_JSON, benap_get_organization_field_by_id, \
     benap_get_organization_field_by_specified_field, benap_retrieve_dict_items_or_keys_or_values, get_translated_category_and_sub_category, \
     benap_retrieve_org_title_tel_email
+
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.validators import phone_number_validator, \
     countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin, \
