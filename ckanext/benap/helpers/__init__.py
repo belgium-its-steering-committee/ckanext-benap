@@ -5,7 +5,8 @@ from ckan.common import config
 import logging
 from decorators import decorator_timer
 
-from ckanext.benap.helpers.lists import NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE
+from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
+                                         CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE)
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
 
@@ -847,45 +848,6 @@ def ontology_helper(context):
                 "de": u"Pull"
             }),
         ])
-    elif ontology == "contract_license":
-        return map_for_form_select([
-            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/contractual-arrangement', {
-                "en": u"Contractual arrangement",
-                "fr": u"Arrangement contractuel",
-                "nl": u"Contractuele regeling",
-                "de": u"Vertragliche vereinbarung"
-            }),
-            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/fee-required', {
-                "en": u"Fee required",
-                "fr": u"Frais requis",
-                "nl": u"Vergoeding vereist",
-                "de": u"Gebühr erforderlich"
-            }),
-            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/free-of-charge', {
-                "en": u"Free of charge",
-                "fr": u"Gratuit",
-                "nl": u"Gratis",
-                "de": u"Kostenlos"
-            }),
-            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided', {
-                "en": u"Licence provided",
-                "fr": u"Licence fournie",
-                "nl": u"Licentie verstrekt",
-                "de": u"Lizenz bereitgestellt"
-            }),
-            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/royalty-free', {
-                "en": u"Royalty-free",
-                "fr": u"Libre de droits",
-                "nl": u"Royaltyvrij",
-                "de": u"Lizenzfrei"
-            }),
-            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/other', {
-                "en": u"Other",
-                "fr": u"Autre",
-                "nl": u"Andere",
-                "de": u"Andere"
-            }),
-        ])
 
     elif ontology == "data-theme":
         return map_for_form_select([
@@ -1008,8 +970,14 @@ def ontology_helper(context):
         return map_for_form_select(DATASET_TYPE)
     elif ontology == "nap_type":
         return map_for_form_select(NAP_TYPE)
-    elif ontology =="network_coverage":
+    elif ontology == "network_coverage":
         return map_for_form_select(NETWORK_COVERAGE)
+    elif ontology == "conditions_access":
+        return map_for_form_select(CONDITIONS_ACCESS)
+    elif ontology == "conditions_usage":
+        return map_for_form_select(CONDITIONS_USAGE)
+    elif ontology == "license_type":
+        return map_for_form_select(LICENSE_TYPE)
     return None
 
 

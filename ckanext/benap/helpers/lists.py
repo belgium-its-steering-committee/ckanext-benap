@@ -275,6 +275,122 @@ NETWORK_COVERAGE =[
         "nl": u"Waterwegen",
         "fr": u"Voies navigables",
         "de": u"Wasserstraßen"
-    }),
+    })
+]
 
+CONDITIONS_USAGE = [
+    ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/fee-required', {
+        "en": u"Fee",
+        "fr": u"Frais",
+        "nl": u"Vergoeding",
+        "de": u"Gebühr"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/free-of-charge', {
+        "en": u"Free of charge",
+        "fr": u"Gratuit",
+        "nl": u"Gratis",
+        "de": u"Kostenlos"
+    })
+]
+
+CONDITIONS_ACCESS = [
+    ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/contractual-arrangement', {
+        "en": u"Contract",
+        "fr": u"Contrat",
+        "nl": u"Contract",
+        "de": u"Vertrag"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided', {
+        "en": u"License",
+        "fr": u"Licence",
+        "nl": u"Licentie",
+        "de": u"Lizenz"
+    })
+]
+
+LICENSE_TYPE = [
+    ('http://publications.europa.eu/resource/authority/licence/CC_BY_4_0', {
+        "en": u"Creative Commons Attribution 4.0 International",
+        "fr": u"Creative Commons Attribution 4.0 International",
+        "nl": u"Creative Commons Naamsvermelding 4.0 Internationaal",
+        "de": u"Creative Commons Namensnennung 4.0 International"
+    }),
+    ('http://publications.europa.eu/resource/authority/licence/CC_BYSA_4_0', {
+        "en": u"Creative Commons Attribution–ShareAlike 4.0 International",
+        "fr": u"Creative Commons Attribution – Partage dans les Mêmes Conditions 4.0 International",
+        "nl": u"Creative Commons Naamsvermelding–GelijkDelen 4.0 Internationaal",
+        "de": u"Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 4.0 International"
+    }),
+    ('http://publications.europa.eu/resource/authority/licence/CC_BYNC_4_0', {
+        "en": u"Creative Commons Attribution–NonCommercial 4.0 International",
+        "fr": u"Creative Commons Attribution – Pas d’Utilisation Commerciale 4.0 International",
+        "nl": u"Creative Commons Naamsvermelding–NietCommercieel 4.0 Internationaal",
+        "de": u"Creative Commons Namensnennung – Nicht kommerziell 4.0 International"
+    }),
+    ('http://publications.europa.eu/resource/authority/licence/CC0', {
+        "en": u"Creative Commons CC0 1.0 Universal",
+        "fr": u"Creative Commons CC0 1.0 Universel",
+        "nl": u"Creative Commons CC0 1.0 Universeel",
+        "de": u"Creative Commons CC0 1.0 Universel"
+    }),
+    ('http://publications.europa.eu/resource/authority/licence/ODC_BY', {
+        "en": u"Open Data Commons Attribution License 1.0 (ODC_BY)",
+        "fr": u"Open Data Commons Attribution License 1.0 (ODC_BY)",
+        "nl": u"Open Data Commons Attribution License 1.0 (ODC_BY)",
+        "de": u"Open Data Commons Attribution License 1.0 (ODC_BY)"
+    }),
+    ('http://publications.europa.eu/resource/authority/licence/OGL_3_0', {
+        "en": u"Open Government Licence 3.0 (OGL)",
+        "fr": u"Open Government Licence 3.0 (OGL)",
+        "nl": u"Open Government Licence 3.0 (OGL)",
+        "de": u"Open Government Licence 3.0 (OGL)"
+    }),
+    ('http://publications.europa.eu/resource/authority/licence/CC_PDM_1_0', {
+        "en": u"Creative Commons Public Domain Mark 1.0 Universal (CC_PDM)",
+        "fr": u"Creative Commons Marque du Domaine Public 1.0 Universel (CC_PDM)",
+        "nl": u"Creative Commons Public Domain Mark 1.0 Universeel (CC_PDM)",
+        "de": u"Creative Commons Public Domain Mark 1.0 Universell (CC_PDM)"
+    }),
+    ('http://publications.europa.eu/resource/authority/licence/ODC_PDDL', {
+        "en": u"Open Data Commons Public Domain Dedication and License 1.0 (PDDL)",
+        "fr": u"Open Data Commons Public Domain Dedication and License 1.0 (PDDL)",
+        "nl": u"Open Data Commons Public Domain Dedication and License 1.0 (PDDL)",
+        "de": u"Open Data Commons Public Domain Dedication and License 1.0 (PDDL)"
+    }),
+    ('http://publications.europa.eu/resource/authority/licence/GNU_FDL_1_3', {
+        "en": u"GNU Free Documentation License 1.3",
+        "fr": u"GNU Free Documentation License 1.3",
+        "nl": u"GNU Free Documentation License 1.3",
+        "de": u"GNU Free Documentation License 1.3"
+    }),
+    ('http://publications.europa.eu/resource/authority/licence/ODC_BL', {
+        "en": u"Open Data Commons Database License 1.0 (ODbL)",
+        "fr": u"Open Data Commons Database License 1.0 (ODbL)",
+        "nl": u"Open Data Commons Database License 1.0 (ODbL)",
+        "de": u"Open Data Commons Database License 1.0 (ODbL)"
+    }),
+    ('http://publications.europa.eu/resource/authority/licence/CC_BYNCND_4_0', {
+        "en": u"Creative Commons Attribution–NonCommercial–NoDerivs 4.0 International",
+        "fr": u"Creative Commons Attribution – Pas d'Utilisation Commerciale – Pas de Modification 4.0 International",
+        "nl": u"Creative Commons Naamsvermelding–NietCommercieel–GeenAfgeleideWerken 4.0 Internationaal",
+        "de": u"Creative Commons Namensnennung – Nicht kommerziell – Keine Bearbeitungen 4.0 International"
+    }),
+    ('http://publications.europa.eu/resource/authority/licence/CC_BYNCSA_4_0', {
+        "en": u"Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International",
+        "fr": u"Creative Commons Attribution – Pas d’Utilisation Commerciale – Partage dans les Mêmes Conditions 4.0 International",
+        "nl": u"Creative Commons Naamsvermelding–NietCommercieel–GelijkDelen 4.0 Internationaal",
+        "de": u"Creative Commons Namensnennung – Nicht-kommerziell – Weitergabe unter gleichen Bedingungen 4.0 International"
+    }),
+    ('http://publications.europa.eu/resource/authority/licence/CC_BYND_4_0', {
+        "en": u"Creative Commons Attribution–NoDerivs 4.0 International",
+        "fr": u"Creative Commons Attribution – Pas de Modification 4.0 International",
+        "nl": u"Creative Commons Naamsvermelding–GeenAfgeleideWerken 4.0 Internationaal",
+        "de": u"Creative Commons Namensnennung – Keine Bearbeitungen 4.0 International"
+    }),
+    ('Other', {
+        "en": u"Other",
+        "fr": u"Autre",
+        "nl": u"Andere",
+        "de": u"Andere"
+    })
 ]
