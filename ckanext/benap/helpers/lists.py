@@ -1076,7 +1076,7 @@ MOBILITY_THEME = [
      [])
 ]
 
-CONDITIONS_USAGE = [
+CONDITIONS_ACCESS = [
     ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/fee-required', {
         "en": u"Fee",
         "fr": u"Frais",
@@ -1091,7 +1091,7 @@ CONDITIONS_USAGE = [
     })
 ]
 
-CONDITIONS_ACCESS = [
+CONDITIONS_USAGE = [
     ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/contractual-arrangement', {
         "en": u"Contract",
         "fr": u"Contrat",
