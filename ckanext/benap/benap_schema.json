@@ -465,8 +465,8 @@
         "nl": "Netwerkdekking",
         "de": "Netzabdeckung"
       },
-      "display_snippet": "select.html",
-      "preset": "select",
+      "display_snippet": "multiple_choice.html",
+      "preset": "multiple_checkbox",
       "sorted_choices": "true",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "network_coverage",

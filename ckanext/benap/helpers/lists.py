@@ -206,15 +206,15 @@ NAP_TYPE = [('MMTIS', {
 NETWORK_COVERAGE =[
     ('https://w3id.org/mobilitydcat-ap/network-coverage/air-network',{
         "en": u"Air network",
-        "nl": u"Luchtvaartnetwerk",
+        "nl": u"Luchtnetwerk",
         "fr": u"Réseau aérien",
-        "de": u"Luftverkehrsnetz"
+        "de": u"Luftnetz"
     }),
      ('https://w3id.org/mobilitydcat-ap/network-coverage/metro-subway-tram-or-light-rail-network',{
-        "en": u"Metro, subway, tram or light-rail network",
-        "nl": u"Metro-, metro of tram netwerk",
-        "fr": u"Réseau de métro, de métro léger, de tramway ou de train léger",
-        "de": u"U-Bahn-, U-Bahn-, Straßenbahn- oder Stadtbahnnetz"
+        "en": u"Metro, tram or light-rail network",
+        "nl": u"Metro, tram of light-rail netwerk",
+        "fr": u"Réseau de métro, tram ou ferroviaire léger",
+        "de": u"U-Bahn-, Straßenbahn- oder Stadtbahnnetz"
     }),
      ('https://w3id.org/mobilitydcat-ap/network-coverage/motorways',{
         "en": u"Motorways",
@@ -230,13 +230,13 @@ NETWORK_COVERAGE =[
     }),
      ('https://w3id.org/mobilitydcat-ap/network-coverage/other-public-transport-network',{
         "en": u"Other public transport network",
-        "nl": u"Overig openbaar vervoersnetwerk",
+        "nl": u"Andere openbaar vervoersnetwerk",
         "fr": u"Autre réseau de transport public",
-        "de": u"Anderes öffentliches Verkehrsnetz"
+        "de": u"Andere öffentliche Verkehrsnetz"
     }),
      ('https://w3id.org/mobilitydcat-ap/network-coverage/rail-network',{
         "en": u"Rail network",
-        "nl": u"Spoornetwerk",
+        "nl": u"Spoorwegnet",
         "fr": u"Réseau ferroviaire",
         "de": u"Schienennetz"
     }),
@@ -244,7 +244,7 @@ NETWORK_COVERAGE =[
         "en": u"Regional roads",
         "nl": u"Regionale wegen",
         "fr": u"Routes régionales",
-        "de": u"Regionale Straßen"
+        "de": u"Regionalstraßen"
     }),
      ('https://w3id.org/mobilitydcat-ap/network-coverage/state-roads-or-federal-roads',{
         "en": u"State roads or federal roads",
@@ -253,22 +253,22 @@ NETWORK_COVERAGE =[
         "de": u"Staatsstraßen oder Bundesstraßen"
     }),
       ('https://w3id.org/mobilitydcat-ap/network-coverage/ten-network',{
-        "en": u"TEN Network",
-        "nl": u"TEN -netwerk",
-        "fr": u"Réseau TEN",
-        "de": u"TEN-Netz"
+        "en": u"Trans-European Transport Network (TEN-T)",
+        "nl": u"Trans-Europese transport Netwerk (TEN-T)",
+        "fr": u"Réseau transeuropéen de transport (TEN-T)",
+        "de": u"Transeuropäische Verkehrsnetz (TEN-T)"
     }),
      ('https://w3id.org/mobilitydcat-ap/network-coverage/tern-network',{
-        "en": u"TERN Network",
-        "nl": u"TERN Netwerk",
-        "fr": u"Réseau TERN",
-        "de": u"TERN-Netz"
+        "en": u"Trans-European Road Network (TERN)",
+        "nl": u"Trans-Europese wegennet (TERN)",
+        "fr": u"Réseau routier transeuropéen (TERN)",
+        "de": u"Transeuropäischen Straßennetz (TERN)"
     }),
      ('https://w3id.org/mobilitydcat-ap/network-coverage/urban-and-local-roads',{
         "en": u"Urban and local roads",
         "nl": u"Stedelijke en lokale wegen",
         "fr": u"Routes urbaines et locales",
-        "de": u"Stadt- und Gemeindestraßen"
+        "de": u"Städtische und lokale Straßen"
     }),
      ('https://w3id.org/mobilitydcat-ap/network-coverage/waterways',{
         "en": u"Waterways",
