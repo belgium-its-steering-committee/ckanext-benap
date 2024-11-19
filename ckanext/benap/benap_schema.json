@@ -461,7 +461,7 @@
       "field_name": "network_coverage",
       "label": {
         "en": "Network coverage",
-        "fr": "Couveerture réseau",
+        "fr": "Couverture du réseau",
         "nl": "Netwerkdekking",
         "de": "Netzabdeckung"
       },
@@ -472,8 +472,8 @@
       "benap_helper_ontology": "network_coverage",
       "help_text":{
         "en":"Network coverage describes the part of the transport network that is covered by the delivered content.",
-        "fr":"La couverture réseau décrit la partie du réseau de transport couverte par le contenu fourni",
-        "nl":"Netwerkdekking beschrijft het deel van het transportnetwerk dat door de geleverde inhoud wordt gedekt",
+        "fr":"La couverture du réseau décrit la partie du réseau de transport couverte par le contenu fourni.",
+        "nl":"Netwerkdekking beschrijft het deel van het transportnetwerk dat door de geleverde inhoud wordt gedekt.",
         "de":"Netzabdeckung beschreibt den Teil des Verkehrsnetzes, der durch den gelieferten Inhalt abgedeckt wird."
       },
       "validators":"benap_is_choice_null"
