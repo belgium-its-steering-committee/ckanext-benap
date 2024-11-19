@@ -1076,7 +1076,7 @@ MOBILITY_THEME = [
      [])
 ]
 
-CONDITIONS_ACCES = [
+CONDITIONS_ACCESS = [
     ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/fee-required', {
         "en": u"Fee",
         "fr": u"Frais",
