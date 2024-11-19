@@ -4,8 +4,9 @@ import ckan.plugins.toolkit as toolkit
 from ckan.common import config
 import logging
 from decorators import decorator_timer
+from itertools import chain
 
-from ckanext.benap.helpers.lists import NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE
+from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE, MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE)
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
 
@@ -847,45 +848,6 @@ def ontology_helper(context):
                 "de": u"Pull"
             }),
         ])
-    elif ontology == "contract_license":
-        return map_for_form_select([
-            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/contractual-arrangement', {
-                "en": u"Contractual arrangement",
-                "fr": u"Arrangement contractuel",
-                "nl": u"Contractuele regeling",
-                "de": u"Vertragliche vereinbarung"
-            }),
-            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/fee-required', {
-                "en": u"Fee required",
-                "fr": u"Frais requis",
-                "nl": u"Vergoeding vereist",
-                "de": u"Gebühr erforderlich"
-            }),
-            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/free-of-charge', {
-                "en": u"Free of charge",
-                "fr": u"Gratuit",
-                "nl": u"Gratis",
-                "de": u"Kostenlos"
-            }),
-            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided', {
-                "en": u"Licence provided",
-                "fr": u"Licence fournie",
-                "nl": u"Licentie verstrekt",
-                "de": u"Lizenz bereitgestellt"
-            }),
-            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/royalty-free', {
-                "en": u"Royalty-free",
-                "fr": u"Libre de droits",
-                "nl": u"Royaltyvrij",
-                "de": u"Lizenzfrei"
-            }),
-            ('https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/other', {
-                "en": u"Other",
-                "fr": u"Autre",
-                "nl": u"Andere",
-                "de": u"Andere"
-            }),
-        ])
 
     elif ontology == "data-theme":
         return map_for_form_select([
@@ -1008,8 +970,17 @@ def ontology_helper(context):
         return map_for_form_select(DATASET_TYPE)
     elif ontology == "nap_type":
         return map_for_form_select(NAP_TYPE)
-    elif ontology =="network_coverage":
+    elif ontology == "network_coverage":
         return map_for_form_select(NETWORK_COVERAGE)
+    elif ontology =="mobility_theme":
+        values_labels_list = [item for sublist in get_translated_category_and_sub_category() for tuples in sublist for item in tuples]
+        return map_for_form_select(values_labels_list)
+    elif ontology == "conditions_access":
+        return map_for_form_select(CONDITIONS_ACCESS)
+    elif ontology == "conditions_usage":
+        return map_for_form_select(CONDITIONS_USAGE)
+    elif ontology == "license_type":
+        return map_for_form_select(LICENSE_TYPE)
     return None
 
 
@@ -1282,6 +1253,10 @@ def get_translated_tags():
     ]
 
 
+def get_translated_category_and_sub_category():
+    return MOBILITY_THEME
+
+
 def filter_default_tags_only(items):
     filtered_items = []
     tags = []
@@ -1318,12 +1293,12 @@ def get_organization_by_id(id):
     user = toolkit.get_action(u'get_site_user')(
         {
             u'ignore_auth': True
-        }, 
+        },
         {})
 
     context = {u'user': user[u'name']}
 
-    organization = toolkit.get_action(u'organization_show')(context, 
+    organization = toolkit.get_action(u'organization_show')(context,
     {
         u'id': id,
         u'include_dataset_count':False,
@@ -1385,3 +1360,89 @@ def convert_validation_list_to_JSON(data):
     else:
         data_string = '["{}"]'.format(data)
     return data_string
+
+def benap_get_organization_field_by_id(org_id, field_name):
+    """
+    Retrieve the specified field value from an organization's data based on the organization id.
+    """
+    user = toolkit.get_action(u'get_site_user')(
+        {
+            u'ignore_auth': True
+        },
+        {})
+    context = {u'user': user[u'name']}
+    org_data = toolkit.get_action(u'organization_show')(context,
+                                                        {
+                                                            u'id': org_id,
+                                                            u'include_dataset_count': False,
+                                                            u'include_users': False,
+                                                            u'include_groups': False,
+                                                            u'include_tags': False,
+                                                            u'include_followers': False,
+                                                        })
+
+    field_value = org_data.get(field_name)
+    return field_value
+
+def benap_get_organization_field_by_specified_field(org_value, field_name, search_field):
+    """
+    Retrieve the specified field value from an organization's data based on a specified search field.
+    """
+    from ckantoolkit import h
+    org_list = h.organizations_available('create_dataset')
+
+    org_data = next((org for org in org_list if org.get(search_field) == org_value), None)
+
+    if org_data is None:
+        return None
+
+    field_value = org_data.get(field_name)
+    return field_value
+
+def benap_retrieve_dict_items_or_keys_or_values(data, return_type):
+    """
+    Retrieve keys, values, or both from a JSON-encoded dictionary.
+    """
+    if data:
+        data = json.loads(data)
+
+        if return_type == "keys":
+            return list(data.keys())
+        elif return_type == "values":
+            return list(chain.from_iterable(data.values()))
+        elif return_type == "items":
+            return data.items()
+    else:
+        return []
+
+def benap_retrieve_org_title_tel_email():
+    """
+    Retrieves a list of organizations where the current user can create datasets,
+    including only the organization's title, telephone number, and email.
+    """
+    from ckantoolkit import h
+    user = toolkit.get_action(u'get_site_user')(
+        {
+            u'ignore_auth': True
+        },
+        {})
+    context = {u'user': user[u'name']}
+    available_orgs_for_user = [org['name'].encode("utf-8") for org in h.organizations_available('create_dataset')]
+    data = toolkit.get_action(u'organization_list')(context,
+                                                    {
+                                                        u'include_dataset_count': False,
+                                                        u'all_fields': True,
+                                                        u'include_users': False,
+                                                        u'include_groups': False,
+                                                        u'include_tags': False,
+                                                        u'include_followers': False,
+                                                        u'include_extras': True,
+                                                        u'organizations': available_orgs_for_user
+                                                    })
+    keys_to_keep = ["title", "do_tel", "do_email"]
+    filtered_data = [
+        {key: item.get(key) for key in keys_to_keep}
+        for item in data
+    ]
+    json_data = json.dumps(filtered_data, ensure_ascii=False)
+    return json_data
