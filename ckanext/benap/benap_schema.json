@@ -278,7 +278,7 @@
         "de": "Der \"Kontaktpunkt\" beschreibt eine Organisation, oder gegebenenfalls eine Person, die für die Herstellung und Aktualisierung von Metadaten verantwortlich ist. Diese Person oder Organisation ist der einzige Kontaktpunkt für diesen Metadatensatz."
       },
       "required": "true",
-      "form_snippet": null
+      "form_snippet": null,
       "form_placeholder": "Aristarchus of Samothrace",
       "required": "true"
     },
@@ -290,7 +290,6 @@
         "nl": "E-mail [contactpunt]",
         "de": "E-mail [Kontaktpunkt]"
       },
-      "form_placeholder":"Great Library of Alexandria",
       "help_text": {
           "en": "The email address must contain @ and a dot. The field will be automatically filled when the contact point is an organization.",
           "fr": "L'adresse e-mail doit contenir @ et un point. Le champ sera automatiquement rempli lorsque le point de contact est une organisation.",
@@ -300,6 +299,7 @@
       "required": "true",
       "form_snippet": null,
       "display_snippet": "email.html",
+      "display_email_name_field": "contact_point_name",
       "form_placeholder": "example@example.com",
       "validators": "email_validator not_empty benap_contact_point_org_fields_consistency_check"
     },
@@ -322,6 +322,48 @@
       "validators": "phone_number_validator benap_contact_point_org_fields_consistency_check"
     },
     {
+      "field_name": "publisher",
+      "label":{
+        "en": "Publisher",
+        "nl":"Uitgever",
+        "de": "Verleger",
+        "fr":"Editeur"
+      },
+     "help_text": {
+        "en": "The \"publisher\" describes an entity (company and person) that publishes the datasets (we are not refering to the metadata here, but rather to the data themselves). He or she is responsible for the given information and must be contacted by data consumers if a contract needs to be concluded.",
+        "fr": "L'\"éditeur\" décrit une entité (entreprise et personne) qui publie les jeux de données (nous ne nous référons pas ici aux métadonnées mais plutôt aux données elles-mêmes). Il ou elle est responsable des informations données et doit être contacté(e) par les consommateurs de données si un contrat doit être conclu.",
+        "nl": "De \"uitgever\" beschrijft een entiteit (bedrijf of persoon) die de datasets publiceert (we verwijzen hier niet naar de metadata maar eerder naar de gegevens zelfs). Hij of zij is verantwoordelijk voor de gegeven informatie en moet door gegevensverbruikers gecontacteerd worden indien een overeenkomst moet worden gesloten.",
+        "de": "Der \"Herausgeber\" beschreibt eine Entität (Unternehmen oder Person), die die Datensätze publiziert (wir beziehen uns hier nicht auf die Metadaten sondern eher auf die Daten selbst). Er oder sie ist verantwortlich für die gegebene Information und muss von Datenverbrauchern kontaktiert werden, wenn ein Vertrag geschlossen werden muss."
+      },
+      "form_snippet": "nested_field.html",
+      "nested_fields": [
+        {
+            "field_name": "publisher_firstname",
+            "form_snippet": "text.html"
+        },
+        {
+            "field_name": "publisher_surname",
+            "form_snippet": "text.html"
+        },
+        {
+            "field_name": "publisher_address",
+            "form_snippet": "text.html"
+        },
+        {
+            "field_name": "publisher_email",
+            "form_snippet": "text.html"
+        },
+        {
+            "field_name": "publisher_url",
+            "form_snippet": "text.html"
+        },
+        {
+            "field_name": "publisher_telephone_number",
+            "form_snippet": "text.html"
+        }
+      ]
+    },
+    {
       "field_name": "publisher_firstname",
       "label": {
         "en": "First name [publisher]",
@@ -329,6 +371,7 @@
         "nl": "Voornaam [uitgever]",
         "de": "Vorname [Herausgeber]"
       },
+      "form_snippet": null,
       "form_placeholder": "Zenodotus",
       "required": "true"
     },
@@ -340,10 +383,10 @@
         "nl": "Familienaam [uitgever]",
         "de": "Familienname [Herausgeber]"
       },
+      "form_snippet": null,
       "form_placeholder": "Of Ephesus",
       "required": "true"
     },
-
     {
       "field_name": "publisher_address",
       "label": {
@@ -353,7 +396,7 @@
         "de": "Adresse [Herausgeber]"
       },
       "form_snippet": null,
-      "display_snippet": "address.html"
+      "display_snippet": "address.html",
       "form_placeholder": "Great Library, 1 - 21526 Alexandria (Egypt)",
       "required": "true"
     },
@@ -365,8 +408,18 @@
         "nl": "E-mail [uitgever]",
         "de": "E-Mail [Herausgeber]"
       },
+      "help_text": {
+        "en": "Please use a general e-mail address (not a personal one). The email adress must contain @ and a dot.",
+        "fr": "Veuillez utiliser une adresse e-mail générale (et non personnelle). L'adresse e-mail doit contenir @ et un point.",
+        "nl": "Gelieve bij voorkeer een algemeen e-mailadres te gebruiken (geen persoonlijk). Het e-mailadres moet  @ en een punt inhouden.",
+        "de": "Bitte verwenden Sie eine allgemeine E-Mail-Adresse (keine persönliche). Die E-Mail muss  @ und einen Punkt beinhalten."
+      },
+      "form_snippet": null,
+      "form_placeholder": "example@example.com",
       "display_snippet": "email.html",
-      "form_snippet": null
+      "display_email_name_field": "publisher_surname",
+      "validators": "email_validator not_empty",
+      "required": "true"
     },
     {
       "field_name": "publisher_url",
@@ -376,9 +429,16 @@
         "nl": "Website [uitgever]",
         "de": "Website [Herausgeber]"
       },
+      "help_text": {
+        "en": "The website address must start with \"http://\", or \"https://\".",
+        "fr": "L'adresse du site web doit commencer par \"http://\" ou \"https://\".",
+        "nl": "Het adres van de website moet met  \"http://\" of \"https://\" beginnen.",
+        "de": "Die Adresse der Website muss mit \"http://\" of \"https://\" anfangen. "
+      },
+      "form_snippet": null,
       "form_placeholder":"https://en.wikipedia.org/wiki/Zenodotus",
       "display_snippet": "link.html",
-      "form_snippet": null
+      "validators": "url_validator benap_is_choice_null"
     },
     {
       "field_name": "publisher_telephone_number",
@@ -388,7 +448,16 @@
         "nl": "Telefoonnummer [uitgever]",
         "de": "Telefonnummer  [Herausgeber]"
       },
-      "form_snippet": null
+      "form_snippet": null,
+      "form_placeholder": "+322XXXXXXX",
+      "help_text": {
+        "en": "The telephone number must start with the country prefix (e.g. \",+32\" for Belgium) and may only contain numbers from 0 to 9 besides the \"+\" sign.",
+        "fr": "Le numéro de téléphone doit commencer par le préfixe du pays (ex. \"+32\" pour la Belgique) et ne peut contenir que des chiffres de 0 à 9 en plus du signe \"+\".",
+        "nl": "Het telefoonnummer moet met het netnummer van het land beginnen (bv. \"+32\" voor België) en kan naast de teken \"+\" alleen maar cijfers van 0 tot 9 inhouden.",
+        "de": "Die Telefonnummer muss mit der Vorwahl des Landes (zum B. \"+32\" für Belgien) und kann nur neben dem Zeichen \"+\" Zahlen von 0 bis 9 beinhalten."
+      },
+      "required": "true",
+      "validators": "phone_number_validator not_empty"
     },
     {
       "field_name": "temporal_start",
