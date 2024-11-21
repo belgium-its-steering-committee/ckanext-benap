@@ -591,23 +591,6 @@
       "validators": "scheming_required tag_string_convert"
     },
     {
-      "field_name": "license_id",
-      "label": {
-        "en": "License type",
-        "fr": "Type de licence",
-        "nl": "Type licentie",
-        "de": "Lizenz-Typ"
-      },
-      "form_snippet": "license.html",
-      "help_text": {
-        "en": "Describes the conditions of use of the data set.",
-        "fr": "Décrit les conditions d'utilisation du jeu de données.",
-        "nl": "Beschrijft de gebruiksvoorwaarden van de dataset.",
-        "de": "Beschreibt die Nutzungsbedingungen des Datensatzes."
-      },
-      "required": "true"
-    },
-    {
       "field_name": "frequency",
       "label": {
         "en": "Update frequency",
@@ -1085,7 +1068,7 @@
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "license_type",
       "form_snippet": null,
-      "validators": "scheming_required scheming_choices benap_is_choice_null"
+      "validators": "scheming_choices benap_is_choice_null benap_license_fields_conditional_validation"
     },
     {
       "field_name": "license_text_translated",
@@ -1117,7 +1100,7 @@
       "display_snippet": "fluent_markdown_large_text.html",
       "error_snippet": "fluent_text.html",
       "output_validators": "fluent_core_translated_output",
-      "validators": "fluent_text benap_is_choice_null"
+      "validators": "fluent_text benap_is_choice_null benap_license_fields_conditional_validation"
     }
   ]
 }
