@@ -130,6 +130,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         return pkg_dict
 
     def before_view(self, pkg_dict):
+        from ckantoolkit import h
         # Remove 'agreement_declaration_nap' from the dictionary if it exists
         pkg_dict.pop('agreement_declaration_nap', None)
 
@@ -143,7 +144,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         # Retrieve organization field values by ID and store them in a dictionary
         values = {field: benap_get_organization_field_by_id(org_id, field) for field in fields}
 
-        # Update package dictionary with organization details
+        # Update package dictionary with organization details and publisher name
         pkg_dict.update({
             'publisher_url': values['do_website'],
             'publisher_email': values['do_email'],
@@ -161,7 +162,12 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
                 'city': values['city'],
                 'administrative_area': values['administrative_area'],
                 'country': values['country']
+            },
+
+            # Combine publisher name components into a nested dictionary for complete publisher name details
+            'publisher_name': {
+                'publisher_firstname': h.get_pkg_dict_extra(pkg_dict, 'publisher_firstname'),
+                'publisher_surname': h.get_pkg_dict_extra(pkg_dict, 'publisher_surname')
             }
         })
-
         return pkg_dict
