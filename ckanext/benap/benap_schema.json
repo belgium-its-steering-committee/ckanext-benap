@@ -412,8 +412,8 @@
       "field_name": "publisher_url",
       "label": {
         "en": "Website [publisher]",
-        "fr": "Site web  [éditeur]",
-        "nl": "Website [uitgever] ",
+        "fr": "Site web [éditeur]",
+        "nl": "Website [uitgever]",
         "de": "Website [Herausgeber]"
       },
       "display_snippet": "link.html",
@@ -425,7 +425,7 @@
         "en": "Telephone number [publisher]",
         "fr": "Numéro de téléphone [éditeur]",
         "nl": "Telefoonnummer [uitgever]",
-        "de": "Telefonnummer  [Herausgeber]"
+        "de": "Telefonnummer [Herausgeber]"
       },
       "form_snippet": null
     },
