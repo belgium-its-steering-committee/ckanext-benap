@@ -116,7 +116,7 @@
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "mobility_theme",
       "required": "true",
-      "validators": "scheming_required"
+      "validators": "scheming_required scheming_valid_json_object benap_category_sub_category_validator"
     },
     {
       "field_name": "name",
