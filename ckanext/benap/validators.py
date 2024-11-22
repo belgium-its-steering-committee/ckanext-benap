@@ -138,7 +138,7 @@ def fluent_tags_validator(key, flattened_data, errors, context):
     raw_choices = h.get_translated_tags()
     choices_list = [choice[0] for group in raw_choices for choice in group[0]]
 
-    pattern = r"^[a-zA-Z]+(,[a-zA-Z]+)*$"
+    pattern = r"^[a-zA-Z ]+(,[a-zA-Z ]+)*$"
     if not field_value or not re.match(pattern, field_value):
         raise Invalid(_('Invalid format. Ensure the value is a comma-separated list of non-empty words.'))
 
