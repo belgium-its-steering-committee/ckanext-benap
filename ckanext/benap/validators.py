@@ -131,3 +131,19 @@ def contact_point_org_fields_consistency_check(key, flattened_data, errors, cont
                 raise Invalid(
                     _('The contact point telephone number must match the contact point organization\'s telephone number: {}').format(
                         publisher_telephone_number))
+
+def fluent_tags_validator(key, flattened_data, errors, context):
+    field_value = flattened_data.get(key)
+    from ckantoolkit import h
+    raw_choices = h.get_translated_tags()
+    choices_list = [choice[0] for group in raw_choices for choice in group[0]]
+
+    pattern = r"^[a-zA-Z]+(,[a-zA-Z]+)*$"
+    if not field_value or not re.match(pattern, field_value):
+        raise Invalid(_('Invalid format. Ensure the value is a comma-separated list of non-empty words.'))
+
+    values = field_value.split(",")
+
+    for value in values:
+        if value not in choices_list:
+            raise Invalid(_('Unexpected choice "%s".') % value)
