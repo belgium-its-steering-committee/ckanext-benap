@@ -1070,7 +1070,206 @@ def get_translated_tag(tag, lang):
 
 
 def get_translated_tags():
-    return TRANSPORT_MODE
+    return [
+        ([
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/air",
+             {
+                 "en": u"Air",
+                 "fr": u"Aérien",
+                 "nl": u"Vliegtuig",
+                 "de": u"Luftverkehr"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/long-distance-rail",
+             {
+                 "en": u"Rail (including high speed rail)",
+                 "fr": u"Ferroviaire (y compris ferroviaire à grande vitesse)",
+                 "nl": u"Trein (m.i.v. hogesnelheidstrein)",
+                 "de": u"Eisenbahn (einschl. Hochgeschwindigkeit)"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/regional-and-local-rail",
+             {
+                 "en": u"Conventional rail",
+                 "fr": u"Ferroviaire conventionnel",
+                 "nl": u"Klassieke trein",
+                 "de": u"Konventioneller Bahnverkehr"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/long-distance-coach",
+             {
+                 "en": u"Long-distance coach",
+                 "fr": u"Autocar longue distance",
+                 "nl": u"Langeafstandsbus",
+                 "de": u"Fernbus"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/maritime",
+             {
+                 "en": u"Maritime (including ferry)",
+                 "fr": u"Maritime (y compris les ferries)",
+                 "nl": u"Schip (m.i.v. veerboten)",
+                 "de": u"Schifffahrt (einschließlich Fähre)"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/metro-subway-train",
+             {
+                 "en": u"Metro",
+                 "fr": u"Métro",
+                 "nl": u"Metro",
+                 "de": u"Untergrundbahn"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/tram-light-rail",
+             {
+                 "en": u"Tram, Light rail",
+                 "fr": u"Tram, Ferroviaire léger",
+                 "nl": u"Tram, Light rail",
+                 "de": u"Straßenbahn, Stadtbahn"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/bus",
+             {
+                 "en": u"Bus",
+                 "fr": u"Bus",
+                 "nl": u"Bus",
+                 "de": u"Bus"
+             })
+        ], {
+             "en": u"Scheduled",
+             "nl": u"Openbaar vervoer",
+             "fr": u"Services réguliers",
+             "de": u"Linienverkehrsdienste"
+         }),
+        ([
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/shuttle-bus",
+             {
+                 "en": u"Shuttle bus",
+                 "fr": u"Bus",
+                 "nl": u"Shuttlebus",
+                 "de": u"Pendelbus"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/shuttle-ferry",
+             {
+                 "en": u"Shuttle ferry",
+                 "fr": u"Ferry",
+                 "nl": u"Shuttleveerboot",
+                 "de": u"Pendelfähre"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/taxi",
+             {
+                 "en": u"Taxi",
+                 "fr": u"Taxi",
+                 "nl": u"Taxi",
+                 "de": u"Taxi"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/car-sharing",
+             {
+                 "en": u"Car-sharing",
+                 "fr": u"Voitures partagées",
+                 "nl": u"Deelauto",
+                 "de": u"Gemeinsame Pkw-Nutzung (Car-Sharing)"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/car-pooling",
+             {
+                 "en": u"Car-pooling",
+                 "fr": u"Covoiturage",
+                 "nl": u"Carpooling",
+                 "de": u"Fahrgemeinschaften (Car-Pooling)"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/car-hire",
+             {
+                 "en": u"Car-hire",
+                 "fr": u"Location de voitures",
+                 "nl": u"Huurauto",
+                 "de": u"Mietwagen"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/bike-sharing",
+             {
+                 "en": u"Bike-sharing",
+                 "fr": u"Vélos partagés",
+                 "nl": u"Deelfiets",
+                 "de": u"Gemeinsame Nutzung von Fahrrädern (Bike-Sharing)"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/bike-hire",
+             {
+                 "en": u"Bike-hire",
+                 "fr": u"Vélos en libre service",
+                 "nl": u"Huurfiets",
+                 "de": u"Leihfahrrad"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/ride-pooling",
+             {
+                 "en": u"Ride-pooling",
+                 "fr": u"Trajets partagés",
+                 "nl": u"Gedeelde ritten",
+                 "de": u"Mitfahrdienst"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/e-scooter",
+             {
+                 "en": u"E-scooter",
+                 "fr": u"Trottinettes électriques",
+                 "nl": u"E-scooter",
+                 "de": u"E-rollern"
+             })
+        ], {
+             "en": u"Demand-responsive",
+             "nl": u"Aanbod afhankelijke inzet",
+             "fr": u"Services à la demande",
+             "de": u"Abruf-Verkehrsdienste"
+         }),
+        ([
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/car",
+             {
+                 "en": u"Car",
+                 "fr": u"Voiture",
+                 "nl": u"Auto",
+                 "de": u"Pkw"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/truck",
+             {
+                 "en": u"Truck",
+                 "fr": u"Camion",
+                 "nl": u"Vrachtwagen",
+                 "de": u"Lastwagen"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/motorcycle",
+             {
+                 "en": u"Motorcycle",
+                 "fr": u"Moto",
+                 "nl": u"Motorfiets",
+                 "de": u"Motorrad"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/bicycle",
+             {
+                 "en": u"Cycle",
+                 "fr": u"Vélo",
+                 "nl": u"Fiets",
+                 "de": u"Fahrrad"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/pedestrian",
+             {
+                 "en": u"Pedestrian",
+                 "fr": u"Piéton",
+                 "nl": u"Voetganger",
+                 "de": u"Fußgänger"
+             })
+        ], {
+             "en": u"Personal",
+             "nl": u"Persoonlijk vervoer",
+             "fr": u"Modes personnels",
+             "de": u"Individualverkehr"
+         }),
+        ([
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/other",
+             {
+                 "en": u"Other",
+                 "fr": u"Autre",
+                 "nl": u"Andere",
+                 "de": u"Andere"
+             })
+        ], {
+             "en": u"Not applicable",
+             "nl": u"Niet toepasbaar",
+             "fr": u"Non applicable",
+             "de": u"Nicht anwendbar"
+         }
+        )
+]
+
 
 
 def get_translated_category_and_sub_category():
