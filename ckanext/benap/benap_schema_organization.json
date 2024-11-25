@@ -164,9 +164,9 @@
       "field_name": "address",
       "label": {
         "en": "Address",
-        "fr": "Addresse",
+        "fr": "Adresse",
         "nl": "Adres",
-        "de": "Addresse"
+        "de": "Adresse"
       },
       "help_text": {
         "en": "The complete address of an organization, divided into five fields: country, administrative area, postal code, city, and street address.",
@@ -227,7 +227,7 @@
       },
       "help_text": {
         "en": "The administrative area of an address of your organisation.  Depending on the country, this corresponds to a province, a county, a region, or a state.",
-        "fr": "La zone administrative de l'adresse de votre organisation. Selon le pays, cela correspond à une province, un comté, une région ou un état.",
+        "fr": "La zone administrative de l'adresse de votre organisation. Selon le pays, cela correspond à une province, un arrondissement, une région ou un état.",
         "nl": "Het administratieve gebied van het adres van uw organisatie. Afhankelijk van het land komt dit overeen met een provincie, een district, een regio of een staat.",
         "de": "Das Verwaltungsgebiet der Adresse Ihrer Organisation. Je nach Land entspricht dies einer Provinz, einem Bezirk, einer Region oder einem Staat."
       },
@@ -278,13 +278,13 @@
       "field_name": "street_address",
       "label": {
         "en": "Street address",
-        "fr": "Adresse de rue",
+        "fr": "Nom et numéro de rue",
         "nl": "Straatadres",
         "de": "Straßenadresse"
       },
       "help_text": {
         "en": "The street address of your organisation.",
-        "fr": "L'adresse de rue de votre organisation.",
+        "fr": "Le nom et le numéro de rue de votre organisation.",
         "nl": "Het straatadres van uw organisatie.",
         "de": "Die Straßenadresse Ihrer Organisation."
       },
