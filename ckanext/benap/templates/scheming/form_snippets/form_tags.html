@@ -34,7 +34,7 @@ fieldset.checkboxes label input {
   {%- endif -%}
     <fieldset class="checkboxes">
         {%- for tags, category in choices -%}
-            <div id="collapse-{{ h.benap_scheming_language_text(category, english).replace(' ', '-')}}" class="flex-between border-1" style="padding: 6px 12px">
+            <div id="collapse-{{ h.benap_scheming_language_text(category, english).replace(' ', '-') }}" class="flex-between border-1" style="padding: 6px 12px">
                 <h3 class="m-0" style="font-size: 14px; font-weight: bold;">
                     {{ h.benap_scheming_language_text(category, lang) }}
                 </h3>
