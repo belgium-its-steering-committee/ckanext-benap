@@ -170,7 +170,7 @@
       },
       "help_text": {
         "en": "The complete address of an organization, divided into five fields: country, administrative area, postal code, city, and street address.",
-        "fr": "L'adresse complète d'une organisation, divisée en cinq champs : pays, zone administrative, code postal, ville et adresse de rue",
+        "fr": "L'adresse complète d'une organisation, divisée en cinq champs : pays, zone administrative, code postal, ville et nom et numéro de rue",
         "nl": "Het volledige adres van een organisatie, opgesplitst in vijf velden: land, administratief gebied, postcode, stad en straatadres",
         "de": "Die vollständige Adresse einer Organisation, aufgeteilt in fünf Felder: land, verwaltungsgebiet, postleitzahl, stadt und straßenadresse."
       },
