@@ -56,7 +56,7 @@ fieldset.checkboxes label input {
                             {{ "checked " if val in data[field.field_name] }} />
                         {{ h.benap_scheming_language_text(label, lang) }}
                         <script>
-                            $('#field-{{ field.field_name }}').toggle();
+                            $('#field-{{ field.field_name }}').hide();
 
                             $('input[value="{{ val }}"]').change(function() {
                                 if (this.checked) {

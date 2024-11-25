@@ -588,7 +588,7 @@
       },
       "form_snippet": "form_tags.html",
       "required": "true",
-      "validators": "scheming_required tag_string_convert"
+      "validators": "scheming_required"
     },
     {
       "field_name": "frequency",
