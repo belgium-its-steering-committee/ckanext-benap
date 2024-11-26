@@ -330,7 +330,7 @@
         "de": "Name [Herausgeber]"
       },
       "help_text": {
-          "en": "Describes a person within an organization who is responsible for the dataset. This field is divided into two parts: first name and last name.",
+          "en": "Describes a person within an organization who is responsible for the dataset. This field is divided into two parts: first name and surname.",
           "fr": "Décrit une personne au sein d'une organisation qui est responsable du jeu de données. Ce champ est divisé en deux parties : prénom et nom.",
           "nl": "Beschrijft een persoon binnen een organisatie die verantwoordelijk is voor de dataset. Dit veld is opgedeeld in twee delen: voornaam en achternaam.",
           "de": "Beschreibt eine Person innerhalb einer Organisation, die für den Datensatz verantwortlich ist. Dieses Feld ist in zwei Teile unterteilt: Vorname und Nachname."

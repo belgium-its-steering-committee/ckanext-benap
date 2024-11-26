@@ -167,8 +167,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
 
             # Combine publisher name components into a nested dictionary for complete publisher name details
             'publisher_name': {
-                'publisher_firstname': h.get_pkg_dict_extra(pkg_dict, 'publisher_firstname'),
-                'publisher_surname': h.get_pkg_dict_extra(pkg_dict, 'publisher_surname')
+                'publisher_firstname': pkg_dict.get(u'publisher_firstname'),
+                'publisher_surname': pkg_dict.get(u'publisher_surname')
             }
         })
         return pkg_dict
