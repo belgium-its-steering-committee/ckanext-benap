@@ -1,5 +1,6 @@
 # coding=utf-8
 import re
+import json
 from ckan.common import _
 from ckan.logic.validators import Invalid
 from ckanext.scheming.validation import scheming_validator
@@ -131,3 +132,27 @@ def contact_point_org_fields_consistency_check(key, flattened_data, errors, cont
                 raise Invalid(
                     _('The contact point telephone number must match the contact point organization\'s telephone number: {}').format(
                         publisher_telephone_number))
+
+def license_fields_conditional_validation(key, flattened_data, errors, context):
+    conditions_usage = flattened_data.get((u'resources', 0, 'conditions_usage'))
+    field_value = flattened_data.get(key)
+    license_type = flattened_data.get((u'resources', 0, 'license_type'))
+
+    if conditions_usage == 'https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided':
+        if key == (u'resources', 0, 'license_type'):
+            if not field_value:
+                raise Invalid(_('The license type is missing. This is required because "License" was chosen as the condition for usage.'))
+        else:
+            if license_type == 'Other':
+                field_value = json.loads(field_value)
+                if not field_value.get('en'):
+                    raise Invalid(_('The license text is missing. This is required because "Other" was chosen as the license type.'))
+
+    else:
+        if field_value:
+            if key == (u'resources', 0, 'license_type'):
+                raise Invalid(_('No license type should be given. "Contract" is chosen as the condition for usage.'))
+            else:
+                field_value = json.loads(field_value)
+                if any(field_value.values()):
+                    raise Invalid(_('No license text should be given. "Contract" is chosen as the condition for usage.'))
