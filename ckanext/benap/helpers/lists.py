@@ -1192,3 +1192,42 @@ LICENSE_TYPE = [
         "de": u"Andere"
     })
 ]
+
+ENCODING = [
+    ('US-ASCII', {
+        "en": u"ASCII",
+        "fr": u"ASCII",
+        "nl": u"ASCII",
+        "de": u"ASCII"
+    }),
+    ('UTF-8', {
+        "en": u"UTF-8",
+        "fr": u"UTF-8",
+        "nl": u"UTF-8",
+        "de": u"UTF-8"
+    }),
+    ('UTF-16', {
+        "en": u"UTF-16",
+        "fr": u"UTF-16",
+        "nl": u"UTF-16",
+        "de": u"UTF-16"
+    }),
+    ('ISO-8859-1', {
+        "en": u"ISO-8859-1",
+        "fr": u"ISO-8859-1",
+        "nl": u"ISO-8859-1",
+        "de": u"ISO-8859-1"
+    }),
+    ('ISO-8859-15', {
+        "en": u"ISO-8859-15",
+        "fr": u"ISO-8859-15",
+        "nl": u"ISO-8859-15",
+        "de": u"ISO-8859-15"
+    }),
+    ('Other', {
+        "en": u"Other",
+        "fr": u"Autre",
+        "nl": u"Andere",
+        "de": u"Andere"
+    })
+]
