@@ -902,26 +902,6 @@
       }
     },
     {
-      "field_name": "resource_language",
-      "label": {
-        "en": "Dataset language",
-        "fr": "Langue du jeu de données",
-        "nl": "Taal van de dataset",
-        "de": "Sprache des Datensatzes"
-      },
-      "display_property": "dct:language",
-      "preset": "select",
-      "choices_helper": "benap_ontology_helper",
-      "benap_helper_ontology": "EU-language",
-      "help_text": {
-        "en": "Describes the language of the data contents (text fields, addresses etc.).",
-        "fr": "Décrit la langue des contenus de données (champs textuels, adresses, etc.). ",
-        "nl": "Beschrijft de taal van de gegevensinhouden (tekstvelden, adressen, enz.).",
-        "de": "Beschreibt die Sprache der Dateninhälte (Textfelde, Adressen, usw.)."
-      },
-      "required": "true"
-    },
-    {
       "field_name": "rights",
       "label": {
         "en": "Rights",
