@@ -1192,3 +1192,90 @@ LICENSE_TYPE = [
         "de": u"Andere"
     })
 ]
+
+DATA_MODEL = [
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II', {
+        "en": u"DATEX II (CEN/TS 16157)",
+        "fr": u"DATEX II (CEN/TS 16157)",
+        "nl": u"DATEX II (CEN/TS 16157)",
+        "de": u"DATEX II (CEN/TS 16157)"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/ocit-c', {
+        "en": u"OCIT-C",
+        "fr": u"OCIT-C",
+        "nl": u"OCIT-C",
+        "de": u"OCIT-C"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/netex', {
+        "en": u"NeTEX (CEN/TS 16614)",
+        "fr": u"NeTEX (CEN/TS 16614)",
+        "nl": u"NeTEX (CEN/TS 16614)",
+        "de": u"NeTEX (CEN/TS 16614)"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/siri', {
+        "en": u"SIRI (CEN/TS 15531)",
+        "fr": u"SIRI (CEN/TS 15531)",
+        "nl": u"SIRI (CEN/TS 15531)",
+        "de": u"SIRI (CEN/TS 15531)"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/gtfs', {
+        "en": u"GTFS",
+        "fr": u"GTFS",
+        "nl": u"GTFS",
+        "de": u"GTFS"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/gbfs', {
+        "en": u"GBFS",
+        "fr": u"GBFS",
+        "nl": u"GBFS",
+        "de": u"GBFS"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/c-its', {
+        "en": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,...)",
+        "fr": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,...)",
+        "nl": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,...)",
+        "de": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,...)"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/tpegml', {
+        "en": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,...)",
+        "fr": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,...)",
+        "nl": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,...)",
+        "de": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,...)"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/dino', {
+        "en": u"DINO",
+        "fr": u"DINO",
+        "nl": u"DINO",
+        "de": u"DINO"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/other', {
+        "en": u"Other",
+        "fr": u"Autre",
+        "nl": u"Andere",
+        "de": u"Andere"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/tn-its', {
+        "en": u"TN-ITS (CEN/TS 17268)",
+        "fr": u"TN-ITS (CEN/TS 17268)",
+        "nl": u"TN-ITS (CEN/TS 17268)",
+        "de": u"TN-ITS (CEN/TS 17268)"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/gtfs-rt', {
+        "en": u"GTFS-RT",
+        "fr": u"GTFS-RT",
+        "nl": u"GTFS-RT",
+        "de": u"GTFS-RT"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/gml', {
+        "en": u"GML",
+        "fr": u"GML",
+        "nl": u"GML",
+        "de": u"GML"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/inspire', {
+        "en": u"INSPIRE",
+        "fr": u"INSPIRE",
+        "nl": u"INSPIRE",
+        "de": u"INSPIRE"
+    })
+]
