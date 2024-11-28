@@ -7,7 +7,9 @@ from decorators import decorator_timer
 from itertools import chain
 
 from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
-                                         MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE, GRAMMAR)
+                                         MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE, FREQUENCY,
+                                         REFERENCE_SYSTEM, DATA_MODEL, SYNTAX, APPLICATION_LAYER_PROTOCOL, COMMUNICATION_METHOD, GRAMMAR)
+
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
 
@@ -584,240 +586,19 @@ def ontology_helper(context):
         ])
 
     elif ontology == "syntax":
-        return map_for_form_select([
-            ('XML', {
-                "en": u"XML",
-                "fr": u"XML",
-                "nl": u"XML",
-                "de": u"XML"
-            }),
-            ('JSON', {
-                "en": u"JSON",
-                "fr": u"JSON",
-                "nl": u"JSON",
-                "de": u"JSON"
-            }),
-            ('CSV', {
-                "en": u"CSV",
-                "fr": u"CSV",
-                "nl": u"CSV",
-                "de": u"CSV"
-            }),
-            ('ASN.1 encoding rules', {
-                "en": u"ASN.1 encoding rules",
-                "fr": u"Règles d'encodage d'ASN.1",
-                "nl": u"ASN.1 coderingsregels",
-                "de": u"ASN.1 Kodierunsregel"
-            }),
-            ('Protocol buffers', {
-                "en": u"Protocol buffers",
-                "fr": u"Tampons de protocole",
-                "nl": u"Protocolbuffers",
-                "de": u"Protokoll-Buffer"
-            }),
-            ('Other', {
-                "en": u"Other",
-                "fr": u"Autre",
-                "nl": u"Andere",
-                "de": u"Andere"
-            }),
-        ])
+        return map_for_form_select(SYNTAX)
 
     elif ontology == "grammar":
         return map_for_form_select(GRAMMAR)
 
     elif ontology == "datamodel":
-        return map_for_form_select([
-            ('DATEX II profile', {
-                "en": u"DATEX II profile",
-                "fr": u"Profil DATEX II",
-                "nl": u"DATEX II profiel",
-                "de": u"DATEX II-Profil"
-            }),
-            ('OCIT-C', {
-                "en": u"OCIT-C",
-                "fr": u"OCIT-C",
-                "nl": u"OCIT-C",
-                "de": u"OCIT-C"
-            }),
-            ('DATEX II Light', {
-                "en": u"DATEX II Light",
-                "fr": u"DATEX II Light",
-                "nl": u"DATEX II Light",
-                "de": u"DATEX II Light"
-            }),
-            ('NeTEX', {
-                "en": u"NeTEX (CEN/TS 16614)",
-                "fr": u"NeTEX (CEN/TS 16614)",
-                "nl": u"NeTEX (CEN/TS 16614)",
-                "de": u"NeTEX (CEN/TS 16614)"
-            }),
-            ('SIRI', {
-                "en": u"SIRI (CEN/TS 15531)",
-                "fr": u"SIRI (CEN/TS 15531)",
-                "nl": u"SIRI (CEN/TS 15531)",
-                "de": u"SIRI (CEN/TS 15531)"
-            }),
-            ('GTFS', {
-                "en": u"GTFS",
-                "fr": u"GTFS",
-                "nl": u"GTFS",
-                "de": u"GTFS"
-            }),
-            ('GBFS', {
-                "en": u"GBFS",
-                "fr": u"GBFS",
-                "nl": u"GBFS",
-                "de": u"GBFS"
-            }),
-            ('MDS', {
-                "en": u"MDS",
-                "fr": u"MDS",
-                "nl": u"MDS",
-                "de": u"MDS"
-            }),
-            ('VDV Standard', {
-                "en": u"VDV Standard (VDV 452, 455, 462,…)",
-                "fr": u"VDV Standard (VDV 452, 455, 462,…)",
-                "nl": u"VDV Standard (VDV 452, 455, 462,…)",
-                "de": u"VDV Standard (VDV 452, 455, 462,…)"
-            }),
-            ('IFOPT', {
-                "en": u"IFOPT",
-                "fr": u"IFOPT",
-                "nl": u"IFOPT",
-                "de": u"IFOPT"
-            }),
-            ('ETSI / ISO Model', {
-                "en": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,…)",
-                "fr": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,…)",
-                "nl": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,…)",
-                "de": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,…)"
-            }),
-            ('tpegML Model', {
-                "en": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,…)",
-                "fr": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,…)",
-                "nl": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,…)",
-                "de": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,…)"
-            }),
-            ('http://publications.europa.eu/resource/authority/file-type/KML', {
-                "en": u"KML",
-                "fr": u"KML",
-                "nl": u"KML",
-                "de": u"KML"
-            }),
-
-            ('http://publications.europa.eu/resource/authority/file-type/MPEG4', {
-                "en": u"MPEG-4",
-                "fr": u"MPEG-4",
-                "nl": u"MPEG-4",
-                "de": u"MPEG-4"
-            }),
-            ('MDM-Container', {
-                "en": u"MDM-Container",
-                "fr": u"MDM-Container",
-                "nl": u"MDM-Container",
-                "de": u"MDM-Container"
-            }),
-            ('DINO', {
-                "en": u"DINO",
-                "fr": u"DINO",
-                "nl": u"DINO",
-                "de": u"DINO"
-            }),
-            ('OpenAPI', {
-                "en": u"OpenAPI",
-                "fr": u"OpenAPI",
-                "nl": u"OpenAPI",
-                "de": u"OpenAPI"
-            }),
-            ('Other', {
-                "en": u"Other",
-                "fr": u"Autre",
-                "nl": u"Andere",
-                "de": u"Andere"
-            }),
-        ])
+        return map_for_form_select(DATA_MODEL)
 
     elif ontology == "protocol":
-        return map_for_form_select([
-            ('SOAP', {
-                "en": u"SOAP",
-                "fr": u"SOAP",
-                "nl": u"SOAP",
-                "de": u"SOAP"
-            }),
-            ('OTS2', {
-                "en": u"OTS2",
-                "fr": u"OTS2",
-                "nl": u"OTS2",
-                "de": u"OTS2"
-            }),
-            ('http://publications.europa.eu/resource/authority/file-type/MSG_HTTP', {
-                "en": u"HTTP/HTTPS",
-                "fr": u"HTTP/HTTPS",
-                "nl": u"HTTP/HTTPS",
-                "de": u"HTTP/HTTPS"
-            }),
-            ('FTP', {
-                "en": u"FTP",
-                "fr": u"FTP",
-                "nl": u"FTP",
-                "de": u"FTP"
-            }),
-            ('http://publications.europa.eu/resource/authority/file-type/RSS', {
-                "en": u"RSS",
-                "fr": u"RSS",
-                "nl": u"RSS",
-                "de": u"RSS"
-            }),
-            ('AMQP', {
-                "en": u"AMQP",
-                "fr": u"AMQP",
-                "nl": u"AMQP",
-                "de": u"AMQP"
-            }),
-            ('MQTT', {
-                "en": u"MQTT",
-                "fr": u"MQTT",
-                "nl": u"MQTT",
-                "de": u"MQTT"
-            }),
-            ('gRPC', {
-                "en": u"gRPC",
-                "fr": u"gRPC",
-                "nl": u"gRPC",
-                "de": u"gRPC"
-            }),
-            ('Other', {
-                "en": u"Other",
-                "fr": u"Autre",
-                "nl": u"Andere",
-                "de": u"Andere"
-            }),
-        ])
+        return map_for_form_select(APPLICATION_LAYER_PROTOCOL)
 
     elif ontology == "communication":
-        return map_for_form_select([
-            ('Push', {
-                "en": u"Push",
-                "fr": u"Push",
-                "nl": u"Push",
-                "de": u"Push"
-            }),
-            ('Push on occurence', {
-                "en": u"Push on occurrence",
-                "fr": u"Push on occurrence",
-                "nl": u"Push on occurrence",
-                "de": u"Push on occurrence"
-            }),
-            ('Pull', {
-                "en": u"Pull",
-                "fr": u"Pull",
-                "nl": u"Pull",
-                "de": u"Pull"
-            }),
-        ])
+        return map_for_form_select(COMMUNICATION_METHOD)
 
     elif ontology == "data-theme":
         return map_for_form_select([
@@ -829,111 +610,7 @@ def ontology_helper(context):
             })
         ])
     elif ontology == "frequency":
-        return map_for_form_select([
-            ('On occurence', {
-                "en": u"On occurence",
-                "fr": u"Dès que disponible",
-                "nl": u"Zodra beschikbaar",
-                "de": u"sofort"
-            }),
-            ('Up to 1min', {
-                "en": u"Up to 1min",
-                "fr": u"Jusqu'à une fois par minute",
-                "nl": u"Tot één keer per minuut",
-                "de": u"Bis einmal pro Minute"
-            }),
-            ('Up to 5min', {
-                "en": u"Up to 5min",
-                "fr": u"Jusqu'à une fois toutes les 5 minutes",
-                "nl": u"Tot één keer per 5 minuten",
-                "de": u"Bis einmal pro 5 Minuten"
-            }),
-            ('Up to 10min', {
-                "en": u"Up to 10min",
-                "fr": u"Jusqu'à une fois toutes les 10 minutes",
-                "nl": u"Tot één keer per 10 minuten",
-                "de": u"Bis einmal pro 10 Minuten"
-            }),
-            ('Up to 15min', {
-                "en": u"Up to 15min",
-                "fr": u"Jusqu'à une fois toutes les 15 minutes",
-                "nl": u"Tot één keer per 15 minuten",
-                "de": u"Bis einmal pro 15 Minuten"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/BIHOURLY', {
-                "en": u"Up to 30min",
-                "fr": u"Jusqu'à une fois toutes les 30 minutes",
-                "nl": u"Tot één keer per 30 minuten",
-                "de": u"Bis einmal pro 30 Minuten"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/HOURLY', {
-                "en": u"Up to 1h",
-                "fr": u"Jusqu'à une fois toutes les heures",
-                "nl": u"Tot één keer per uur",
-                "de": u"Bis einmal pro Stunde"
-            }),
-            ('Up to 2h', {
-                "en": u"Up to 2h",
-                "fr": u"Jusqu'à une fois toutes les 2 heures",
-                "nl": u"Tot één keer per 2 uren",
-                "de": u"Bis einmal pro 2 Stunden"
-            }),
-            ('Up to 3h', {
-                "en": u"Up to 3h",
-                "fr": u"Jusqu'à une fois toutes les 3 heures",
-                "nl": u"Tot één keer per 3 uren",
-                "de": u"Bis einmal pro 3 Stunden"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/DAILY_2', {
-                "en": u"Up to 12h",
-                "fr": u"Jusqu'à une fois toutes les 12 heures",
-                "nl": u"Tot één keer per 12 uren",
-                "de": u"Bis einmal pro 12 Stunden"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/DAILY', {
-                "en": u"Up to 24h",
-                "fr": u"Jusqu'à une fois toutes les 24 heures",
-                "nl": u"Tot één keer per 24 uren",
-                "de": u"Bis einmal pro 24 Stunden"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/WEEKLY', {
-                "en": u"Up to Weekly",
-                "fr": u"Jusqu'à une fois par semaine",
-                "nl": u"Tot één keer per week",
-                "de": u"Bis einmal pro Woche"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/MONTHLY', {
-                "en": u"Up to Monthly",
-                "fr": u"Jusqu'à une fois par mois",
-                "nl": u"Tot één keer per maand",
-                "de": u"Bis einmal pro Monat"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/QUARTERLY', {
-                "en": u"Up to every 3month",
-                "fr": u"Jusqu'à une fois tous les trois mois",
-                "nl": u"Tot één keer per drie maanden",
-                "de": u"Bis einmal pro drei Monaten"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/ANNUAL_2', {
-                "en": u"Up to every 6month",
-                "fr": u"Jusqu'à une fois tous les six mois",
-                "nl": u"Tot één keer per zes maanden",
-                "de": u"Bis einmal pro sechs Monaten"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/ANNUAL', {
-                "en": u"Up to yearly",
-                "fr": u"Jusqu'à une fois par an",
-                "nl": u"Tot één keer per jaar",
-                "de": u"Bis einmal pro Jahr"
-            }),
-            ('Less frequent than yearly', {
-                "en": u"Less frequent than yearly",
-                "fr": u"Moins qu'une fois par an",
-                "nl": u"Minder vaak dan één keer per jaar ",
-                "de": u"Weniger häufig als einmal pro Jahr"
-            }),
-
-        ])
+        return map_for_form_select(FREQUENCY)
     elif ontology == "georeferencing_method":
         return map_for_form_select(GEOREFERENCING_METHOD)
     elif ontology == "dataset_type":
@@ -951,6 +628,8 @@ def ontology_helper(context):
         return map_for_form_select(CONDITIONS_USAGE)
     elif ontology == "license_type":
         return map_for_form_select(LICENSE_TYPE)
+    elif ontology == "reference_system":
+        return map_for_form_select(REFERENCE_SYSTEM)
     return None
 
 
@@ -1040,187 +719,204 @@ def get_translated_tag(tag, lang):
 def get_translated_tags():
     return [
         ([
-             ("Air",
-              {
-                  "en": u"Air",
-                  "nl": u"Vliegtuig",
-                  "fr": u"Aérien",
-                  "de": u"Luftverkehr"
-              }),
-             ("Rail",
-              {
-                  "en": u"Rail (including high speed rail)",
-                  "nl": u"Trein (m.i.v. hogesnelheidstrein)",
-                  "fr": u"Ferroviaire (y compris ferroviaire à grande vitesse)",
-                  "de": u"Eisenbahn (einschl. Hochgeschwindigkeit)"
-              }),
-             ("Conventional rail",
-              {
-                  "en": u"Conventional rail",
-                  "nl": u"Klassieke trein",
-                  "fr": u"Ferroviaire conventionnel",
-                  "de": u"Konventioneller Bahnverkehr"
-              }),
-             ("Light rail",
-              {
-                  "en": u"Light rail",
-                  "nl": u"Light rail",
-                  "fr": u"Ferroviaire léger",
-                  "de": u"Stadtbahn"
-              }),
-             ("Long-distance coach",
-              {
-                  "en": u"Long-distance coach",
-                  "nl": u"Langeafstandsbus",
-                  "fr": u"Autocar longue distance",
-                  "de": u"Fernbus"
-              }),
-             ("Maritime",
-              {
-                  "en": u"Maritime (including ferry)",
-                  "nl": u"schip (m.i.v. veerboten)",
-                  "fr": u"Maritime (y compris les ferries)",
-                  "de": u"Schifffahrt (einschließlich Fähre)"
-              }),
-             ("Metro",
-              {
-                  "en": u"Metro",
-                  "nl": u"Metro",
-                  "fr": u"Métro",
-                  "de": u"Untergrundbahn"
-              }),
-             ("Tram",
-              {
-                  "en": u"Tram",
-                  "nl": u"Tram",
-                  "fr": u"Tram",
-                  "de": u"Straßenbahn"
-              }),
-             ("Bus",
-              {
-                  "en": u"Bus",
-                  "nl": u"Bus",
-                  "fr": u"Bus",
-                  "de": u"Bus"
-              }),
-             ("Trolley-bus",
-              {
-                  "en": u"Trolleybus",
-                  "nl": u"Trolleybus",
-                  "fr": u"Trolleybus",
-                  "de": u"Oberleitungsbus"
-              })
-         ], {
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/air",
+             {
+                 "en": u"Air",
+                 "fr": u"Aérien",
+                 "nl": u"Vliegtuig",
+                 "de": u"Luftverkehr"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/long-distance-rail",
+             {
+                 "en": u"Rail (including high speed rail)",
+                 "fr": u"Ferroviaire (y compris ferroviaire à grande vitesse)",
+                 "nl": u"Trein (m.i.v. hogesnelheidstrein)",
+                 "de": u"Eisenbahn (einschl. Hochgeschwindigkeit)"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/regional-and-local-rail",
+             {
+                 "en": u"Conventional rail",
+                 "fr": u"Ferroviaire conventionnel",
+                 "nl": u"Klassieke trein",
+                 "de": u"Konventioneller Bahnverkehr"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/long-distance-coach",
+             {
+                 "en": u"Long-distance coach",
+                 "fr": u"Autocar longue distance",
+                 "nl": u"Langeafstandsbus",
+                 "de": u"Fernbus"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/maritime",
+             {
+                 "en": u"Maritime (including ferry)",
+                 "fr": u"Maritime (y compris les ferries)",
+                 "nl": u"Schip (m.i.v. veerboten)",
+                 "de": u"Schifffahrt (einschließlich Fähre)"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/metro-subway-train",
+             {
+                 "en": u"Metro",
+                 "fr": u"Métro",
+                 "nl": u"Metro",
+                 "de": u"Untergrundbahn"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/tram-light-rail",
+             {
+                 "en": u"Tram, Light rail",
+                 "fr": u"Tram, Ferroviaire léger",
+                 "nl": u"Tram, Light rail",
+                 "de": u"Straßenbahn, Stadtbahn"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/bus",
+             {
+                 "en": u"Bus",
+                 "fr": u"Bus",
+                 "nl": u"Bus",
+                 "de": u"Bus"
+             })
+        ], {
              "en": u"Scheduled",
              "nl": u"Openbaar vervoer",
              "fr": u"Services réguliers",
              "de": u"Linienverkehrsdienste"
          }),
         ([
-             ("Shuttle bus",
-              {
-                  "en": u"Shuttle bus",
-                  "nl": u"Shuttlebus",
-                  "fr": u"Bus",
-                  "de": u"Pendelbus"
-              }),
-             ("Shuttle ferry",
-              {
-                  "en": u"Shuttle ferry",
-                  "nl": u"Shuttleveerboot",
-                  "fr": u"Ferry",
-                  "de": u"Pendelfähre"}),
-             ("Taxi",
-              {
-                  "en": u"Taxi",
-                  "nl": u"Taxi",
-                  "fr": u"Taxi",
-                  "de": u"Taxi"
-              }),
-             ("Car-sharing",
-              {
-                  "en": u"Car-sharing",
-                  "nl": u"Deelauto",
-                  "fr": u"Autopartage",
-                  "de": u"Gemeinsame Pkw-Nutzung (Car-Sharing)"
-              }),
-             ("Car-pooling",
-              {
-                  "en": u"Car-pooling",
-                  "nl": u"Carpooling",
-                  "fr": u"Covoiturage",
-                  "de": u"Fahrgemeinschaften (Car-Pooling)"
-              }),
-             ("Car-hire",
-              {
-                  "en": u"Car-hire",
-                  "nl": u"Huurauto",
-                  "fr": u"Location de voitures",
-                  "de": u"Mietwagen"
-              }),
-             ("Bike-sharing",
-              {
-                  "en": u"Bike-sharing",
-                  "nl": u"Deelfiets",
-                  "fr": u"Vélopartage",
-                  "de": u"Gemeinsame Nutzung von Fahrrädern (Bike-Sharing)"
-              }),
-             ("Bike-hire",
-              {
-                  "en": u"Bike-hire",
-                  "nl": u"Huurfiets",
-                  "fr": u"Location de vélos",
-                  "de": u"Leihfahrrad"
-              })
-         ], {
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/shuttle-bus",
+             {
+                 "en": u"Shuttle bus",
+                 "fr": u"Bus",
+                 "nl": u"Shuttlebus",
+                 "de": u"Pendelbus"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/shuttle-ferry",
+             {
+                 "en": u"Shuttle ferry",
+                 "fr": u"Ferry",
+                 "nl": u"Shuttleveerboot",
+                 "de": u"Pendelfähre"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/taxi",
+             {
+                 "en": u"Taxi",
+                 "fr": u"Taxi",
+                 "nl": u"Taxi",
+                 "de": u"Taxi"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/car-sharing",
+             {
+                 "en": u"Car-sharing",
+                 "fr": u"Voitures partagées",
+                 "nl": u"Deelauto",
+                 "de": u"Gemeinsame Pkw-Nutzung (Car-Sharing)"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/car-pooling",
+             {
+                 "en": u"Car-pooling",
+                 "fr": u"Covoiturage",
+                 "nl": u"Carpooling",
+                 "de": u"Fahrgemeinschaften (Car-Pooling)"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/car-hire",
+             {
+                 "en": u"Car-hire",
+                 "fr": u"Location de voitures",
+                 "nl": u"Huurauto",
+                 "de": u"Mietwagen"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/bike-sharing",
+             {
+                 "en": u"Bike-sharing",
+                 "fr": u"Vélos partagés",
+                 "nl": u"Deelfiets",
+                 "de": u"Gemeinsame Nutzung von Fahrrädern (Bike-Sharing)"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/bike-hire",
+             {
+                 "en": u"Bike-hire",
+                 "fr": u"Vélos en libre service",
+                 "nl": u"Huurfiets",
+                 "de": u"Leihfahrrad"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/ride-pooling",
+             {
+                 "en": u"Ride-pooling",
+                 "fr": u"Trajets partagés",
+                 "nl": u"Gedeelde ritten",
+                 "de": u"Mitfahrdienst"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/e-scooter",
+             {
+                 "en": u"E-scooter",
+                 "fr": u"Trottinettes électriques",
+                 "nl": u"E-scooter",
+                 "de": u"E-rollern"
+             })
+        ], {
              "en": u"Demand-responsive",
              "nl": u"Aanbod afhankelijke inzet",
              "fr": u"Services à la demande",
              "de": u"Abruf-Verkehrsdienste"
          }),
         ([
-             ("Car",
-              {
-                  "en": u"Car",
-                  "nl": u"Auto",
-                  "fr": u"Voiture",
-                  "de": u"Pkw"
-              }),
-             ("Truck",
-              {
-                  "en": u"Truck",
-                  "nl": u"Vrachtwagen",
-                  "fr": u"Camion",
-                  "de": u"Lastwagen"
-              }),
-             ("Motorcycle",
-              {
-                  "en": u"Motorcycle",
-                  "nl": u"Motorfiets",
-                  "fr": u"Moto",
-                  "de": u"Motorrad"
-              }),
-             ("Cycle",
-              {
-                  "en": u"Cycle",
-                  "nl": u"Fiets",
-                  "fr": u"Vélo",
-                  "de": u"Fahrrad"
-              }),
-             ("Pedestrian",
-              {
-                  "en": u"Pedestrian",
-                  "nl": u"Voetganger",
-                  "fr": u"Piéton",
-                  "de": u"Fußgänger"
-              })
-         ], {
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/car",
+             {
+                 "en": u"Car",
+                 "fr": u"Voiture",
+                 "nl": u"Auto",
+                 "de": u"Pkw"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/truck",
+             {
+                 "en": u"Truck",
+                 "fr": u"Camion",
+                 "nl": u"Vrachtwagen",
+                 "de": u"Lastwagen"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/motorcycle",
+             {
+                 "en": u"Motorcycle",
+                 "fr": u"Moto",
+                 "nl": u"Motorfiets",
+                 "de": u"Motorrad"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/bicycle",
+             {
+                 "en": u"Cycle",
+                 "fr": u"Vélo",
+                 "nl": u"Fiets",
+                 "de": u"Fahrrad"
+             }),
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/pedestrian",
+             {
+                 "en": u"Pedestrian",
+                 "fr": u"Piéton",
+                 "nl": u"Voetganger",
+                 "de": u"Fußgänger"
+             })
+        ], {
              "en": u"Personal",
              "nl": u"Persoonlijk vervoer",
              "fr": u"Modes personnels",
              "de": u"Individualverkehr"
-         })
-    ]
+         }),
+        ([
+            ("https://w3id.org/mobilitydcat-ap/transport-mode/other",
+             {
+                 "en": u"Other",
+                 "fr": u"Autre",
+                 "nl": u"Andere",
+                 "de": u"Andere"
+             })
+        ], {
+             "en": u"Not applicable",
+             "nl": u"Niet toepasbaar",
+             "fr": u"Non applicable",
+             "de": u"Nicht anwendbar"
+         }
+        )
+]
+
 
 
 def get_translated_category_and_sub_category():
@@ -1416,3 +1112,10 @@ def benap_retrieve_org_title_tel_email():
     ]
     json_data = json.dumps(filtered_data, ensure_ascii=False)
     return json_data
+
+def benap_retrieve_raw_choices_list(field_name):
+    """
+    Retrieve the raw choices list of a specified field
+    """
+    from ckanext.benap.helpers import lists
+    return getattr(lists, field_name.upper())

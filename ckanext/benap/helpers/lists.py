@@ -204,73 +204,73 @@ NAP_TYPE = [('MMTIS', {
         ]
 
 NETWORK_COVERAGE =[
-    ('https://w3id.org/mobilitydcat-ap/network-coverage/air-network',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/air-network', {
         "en": u"Air network",
         "nl": u"Luchtnetwerk",
         "fr": u"Réseau aérien",
         "de": u"Luftnetz"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/metro-subway-tram-or-light-rail-network',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/metro-subway-tram-or-light-rail-network', {
         "en": u"Metro, tram or light-rail network",
         "nl": u"Metro, tram of light-rail netwerk",
         "fr": u"Réseau de métro, tram ou ferroviaire léger",
         "de": u"U-Bahn-, Straßenbahn- oder Stadtbahnnetz"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/motorways',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/motorways', {
         "en": u"Motorways",
         "nl": u"Autosnelwegen",
         "fr": u"Autoroutes",
         "de": u"Autobahnen"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/other',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/other', {
         "en": u"Other",
-        "nl": u"Overige",
+        "nl": u"Andere",
         "fr": u"Autre",
         "de": u"Andere"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/other-public-transport-network',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/other-public-transport-network', {
         "en": u"Other public transport network",
         "nl": u"Andere openbaar vervoersnetwerk",
         "fr": u"Autre réseau de transport public",
         "de": u"Andere öffentliche Verkehrsnetz"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/rail-network',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/rail-network', {
         "en": u"Rail network",
         "nl": u"Spoorwegnet",
         "fr": u"Réseau ferroviaire",
         "de": u"Schienennetz"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/regional-roads',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/regional-roads', {
         "en": u"Regional roads",
         "nl": u"Regionale wegen",
         "fr": u"Routes régionales",
         "de": u"Regionalstraßen"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/state-roads-or-federal-roads',{
-        "en": u"State roads or federal roads",
-        "nl": u"Staats - of federale wegen",
-        "fr": u"Routes d'État ou routes fédérales",
-        "de": u"Staatsstraßen oder Bundesstraßen"
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/state-roads-or-federal-roads', {
+        "en": u"National roads",
+        "nl": u"Nationale wegen",
+        "fr": u"Routes nationales",
+        "de": u"Nationalstraßen"
     }),
-      ('https://w3id.org/mobilitydcat-ap/network-coverage/ten-network',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/ten-network', {
         "en": u"Trans-European Transport Network (TEN-T)",
         "nl": u"Trans-Europese transport Netwerk (TEN-T)",
         "fr": u"Réseau transeuropéen de transport (TEN-T)",
         "de": u"Transeuropäische Verkehrsnetz (TEN-T)"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/tern-network',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/tern-network', {
         "en": u"Trans-European Road Network (TERN)",
         "nl": u"Trans-Europese wegennet (TERN)",
         "fr": u"Réseau routier transeuropéen (TERN)",
         "de": u"Transeuropäischen Straßennetz (TERN)"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/urban-and-local-roads',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/urban-and-local-roads', {
         "en": u"Urban and local roads",
         "nl": u"Stedelijke en lokale wegen",
         "fr": u"Routes urbaines et locales",
         "de": u"Städtische und lokale Straßen"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/waterways',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/waterways', {
         "en": u"Waterways",
         "nl": u"Waterwegen",
         "fr": u"Voies navigables",
@@ -1223,5 +1223,437 @@ GRAMMAR = [
         "fr": u"Autre",
         "nl": u"Andere",
         "de": u"Andere"
+    })
+]
+
+COMMUNICATION_METHOD = [
+    ('https://w3id.org/mobilitydcat-ap/communication-method/push', {
+        "en": u"Push",
+        "fr": u"Push",
+        "nl": u"Push",
+        "de": u"Push"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/communication-method/pull', {
+        "en": u"Pull",
+        "fr": u"Pull",
+        "nl": u"Pull",
+        "de": u"Pull"
+    })
+]
+       
+APPLICATION_LAYER_PROTOCOL = [
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/soap', {
+        "en": u"SOAP",
+        "fr": u"SOAP",
+        "nl": u"SOAP",
+        "de": u"SOAP"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/ots2', {
+        "en": u"OTS2",
+        "fr": u"OTS2",
+        "nl": u"OTS2",
+        "de": u"OTS2"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/http-https', {
+        "en": u"HTTP/HTTPS",
+        "fr": u"HTTP/HTTPS",
+        "nl": u"HTTP/HTTPS",
+        "de": u"HTTP/HTTPS"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/ftp', {
+        "en": u"FTP",
+        "fr": u"FTP",
+        "nl": u"FTP",
+        "de": u"FTP"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/rss', {
+        "en": u"RSS",
+        "fr": u"RSS",
+        "nl": u"RSS",
+        "de": u"RSS"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/amqp', {
+        "en": u"AMQP",
+        "fr": u"AMQP",
+        "nl": u"AMQP",
+        "de": u"AMQP"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/mqtt', {
+        "en": u"MQTT",
+        "fr": u"MQTT",
+        "nl": u"MQTT",
+        "de": u"MQTT"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/grpc', {
+        "en": u"gRPC",
+        "fr": u"gRPC",
+        "nl": u"gRPC",
+        "de": u"gRPC"
+    }),
+     ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/other', {
+        "en": u"Other",
+        "fr": u"Autre",
+        "nl": u"Andere",
+        "de": u"Andere"
+    })
+  ]
+
+FREQUENCY = [
+    ('http://publications.europa.eu/resource/authority/frequency/IRREG', {
+        "en": u"Irregular",
+        "fr": u"Irrégulier",
+        "nl": u"Onregelmatig",
+        "de": u"Unregelmäßig"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/1MIN', {
+        "en": u"Every minute",
+        "fr": u"Toutes les minutes",
+        "nl": u"Elke minuut",
+        "de": u"Minütlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/5MIN', {
+        "en": u"Every five minutes",
+        "fr": u"Toutes les 5 minutes",
+        "nl": u"Om de vijf minuten",
+        "de": u"Alle fünf Minuten"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/10MIN', {
+        "en": u"Every ten minutes",
+        "fr": u"Toutes les 10 minutes",
+        "nl": u"Om de tien minuten",
+        "de": u"Alle zehn Minuten"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/15MIN', {
+        "en": u"Every fifteen minutes",
+        "fr": u"Toutes les 15 minutes",
+        "nl": u"Om de vijftien minuten",
+        "de": u"Viertelstündlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/30MIN', {
+        "en": u"Every thirty minutes",
+        "fr": u"Toutes les 30 minutes",
+        "nl": u"Om de dertig minuten",
+        "de": u"Halbstündlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/HOURLY', {
+        "en": u"Hourly",
+        "fr": u"Toutes les heures",
+        "nl": u"Om het uur",
+        "de": u"Stündlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/BIHOURLY', {
+        "en": u"Bihourly",
+        "fr": u"Toutes les deux heures",
+        "nl": u"Om de twee uur",
+        "de": u"Alle zwei Stunden"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/TRIHOURLY', {
+        "en": u"Trihourly",
+        "fr": u"Toutes les trois heures",
+        "nl": u"Om de drie uur",
+        "de": u"Alle drei Stunden"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/12HRS', {
+        "en": u"Every twelve hours",
+        "fr": u"Toutes les 12 heures",
+        "nl": u"Om de twaalf uur",
+        "de": u"Alle zwölf Stunden"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/DAILY', {
+        "en": u"Daily",
+        "fr": u"Quotidien",
+        "nl": u"Dagelijks",
+        "de": u"Täglich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/WEEKLY', {
+        "en": u"Weekly",
+        "fr": u"Hebdomadaire",
+        "nl": u"Wekelijks",
+        "de": u"Wöchentlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/MONTHLY', {
+        "en": u"Monthly",
+        "fr": u"Mensuel",
+        "nl": u"Maandelijks",
+        "de": u"Monatlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/QUARTERLY', {
+        "en": u"Quarterly",
+        "fr": u"Trimestriel",
+        "nl": u"Driemaandelijks",
+        "de": u"Vierteljährlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/ANNUAL_2', {
+        "en": u"Semiannual",
+        "fr": u"Semestriel",
+      "nl": u"Halfjaarlijks",
+        "de": u"Halbjährlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/ANNUAL', {
+        "en": u"Annual",
+        "fr": u"Annuel",
+        "nl": u"Jaarlijks",
+        "de": u"Jährlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/IRREG', {
+        "en": u"Less frequent than yearly",
+        "fr": u"Moins qu'une fois par an",
+        "nl": u"Minder vaak dan één keer per jaar",
+        "de": u"Weniger häufig als einmal pro Jahr"
+    })
+]
+
+DATA_MODEL = [
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II', {
+        "en": u"DATEX II (CEN/TS 16157)",
+        "fr": u"DATEX II (CEN/TS 16157)",
+        "nl": u"DATEX II (CEN/TS 16157)",
+        "de": u"DATEX II (CEN/TS 16157)"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/ocit-c', {
+        "en": u"OCIT-C",
+        "fr": u"OCIT-C",
+        "nl": u"OCIT-C",
+        "de": u"OCIT-C"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/netex', {
+        "en": u"NeTEX (CEN/TS 16614)",
+        "fr": u"NeTEX (CEN/TS 16614)",
+        "nl": u"NeTEX (CEN/TS 16614)",
+        "de": u"NeTEX (CEN/TS 16614)"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/siri', {
+        "en": u"SIRI (CEN/TS 15531)",
+        "fr": u"SIRI (CEN/TS 15531)",
+        "nl": u"SIRI (CEN/TS 15531)",
+        "de": u"SIRI (CEN/TS 15531)"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/gtfs', {
+        "en": u"GTFS",
+        "fr": u"GTFS",
+        "nl": u"GTFS",
+        "de": u"GTFS"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/gbfs', {
+        "en": u"GBFS",
+        "fr": u"GBFS",
+        "nl": u"GBFS",
+        "de": u"GBFS"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/c-its', {
+        "en": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,...)",
+        "fr": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,...)",
+        "nl": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,...)",
+        "de": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,...)"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/tpegml', {
+        "en": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,...)",
+        "fr": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,...)",
+        "nl": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,...)",
+        "de": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,...)"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/dino', {
+        "en": u"DINO",
+        "fr": u"DINO",
+        "nl": u"DINO",
+        "de": u"DINO"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/other', {
+        "en": u"Other",
+        "fr": u"Autre",
+        "nl": u"Andere",
+        "de": u"Andere"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/ocit', {
+        "en": u"OCIT",
+        "fr": u"OCIT",
+        "nl": u"OCIT",
+        "de": u"OCIT"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/tn-its', {
+        "en": u"TN-ITS (CEN/TS 17268)",
+        "fr": u"TN-ITS (CEN/TS 17268)",
+        "nl": u"TN-ITS (CEN/TS 17268)",
+        "de": u"TN-ITS (CEN/TS 17268)"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/gtfs-rt', {
+        "en": u"GTFS-RT",
+        "fr": u"GTFS-RT",
+        "nl": u"GTFS-RT",
+        "de": u"GTFS-RT"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/gml', {
+        "en": u"GML",
+        "fr": u"GML",
+        "nl": u"GML",
+        "de": u"GML"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/inspire', {
+        "en": u"INSPIRE",
+        "fr": u"INSPIRE",
+        "nl": u"INSPIRE",
+        "de": u"INSPIRE"
+    })
+]
+
+SYNTAX = [
+    ('http://publications.europa.eu/resource/authority/file-type/XML', {
+        "en": u"XML",
+        "fr": u"XML",
+        "nl": u"XML",
+        "de": u"XML"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/JSON', {
+        "en": u"JSON",
+        "fr": u"JSON",
+        "nl": u"JSON",
+        "de": u"JSON"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/CSV', {
+        "en": u"CSV",
+        "fr": u"CSV",
+        "nl": u"CSV",
+        "de": u"CSV"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/MSG_HTTP', {
+        "en": u"HTTP/HTTPS",
+        "fr": u"HTTP/HTTPS",
+        "nl": u"HTTP/HTTPS",
+        "de": u"HTTP/HTTPS"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/PDF', {
+        "en": u"PDF",
+        "fr": u"PDF",
+        "nl": u"PDF",
+        "de": u"PDF"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/XLS', {
+        "en": u"Excel XLS",
+        "fr": u"Excel XLS",
+        "nl": u"Excel XLS",
+        "de": u"Excel XLS"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/XLSX', {
+        "en": u"Excel XLSX",
+        "fr": u"Excel XLSX",
+        "nl": u"Excel XLSX",
+        "de": u"Excel XLSX"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/HTML', {
+        "en": u"HTML",
+        "fr": u"HTML",
+        "nl": u"HTML",
+        "de": u"HTML"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/ZIP', {
+        "en": u"ZIP",
+        "fr": u"ZIP",
+        "nl": u"ZIP",
+        "de": u"ZIP"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/WMS_SRVC', {
+        "en": u"WMS",
+        "fr": u"WMS",
+        "nl": u"WMS",
+        "de": u"WMS"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/WFS_SRVC', {
+        "en": u"WFS",
+        "fr": u"WFS",
+        "nl": u"WFS",
+        "de": u"WFS"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/GTFS', {
+        "en": u"GTFS",
+        "fr": u"GTFS",
+        "nl": u"GTFS",
+        "de": u"GTFS"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/ATOM', {
+        "en": u"ATOM Feed",
+        "fr": u"ATOM Feed",
+        "nl": u"ATOM Feed",
+        "de": u"ATOM Feed"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/GEOJSON', {
+        "en": u"GeoJSON",
+        "fr": u"GeoJSON",
+        "nl": u"GeoJSON",
+        "de": u"GeoJSON"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/GEOTIFF', {
+        "en": u"GeoTIFF",
+        "fr": u"GeoTIFF",
+        "nl": u"GeoTIFF",
+        "de": u"GeoTIFF"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/GML', {
+        "en": u"GML",
+        "fr": u"GML",
+        "nl": u"GML",
+        "de": u"GML"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/GPKG', {
+        "en": u"GeoPackage",
+        "fr": u"GeoPackage",
+        "nl": u"GeoPackage",
+        "de": u"GeoPackage"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/JSON_LD', {
+        "en": u"JSON-LD",
+        "fr": u"JSON-LD",
+        "nl": u"JSON-LD",
+        "de": u"JSON-LD"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/PARQUET', {
+        "en": u"Parquet",
+        "fr": u"Parquet",
+        "nl": u"Parquet",
+        "de": u"Parquet"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/REST', {
+        "en": u"Esri REST",
+        "fr": u"Esri REST",
+        "nl": u"Esri REST",
+        "de": u"Esri REST"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/RSS', {
+        "en": u"RSS Feed",
+        "fr": u"RSS Feed",
+        "nl": u"RSS Feed",
+        "de": u"RSS Feed"
+    })
+]
+      
+REFERENCE_SYSTEM =[
+    ('https://www.opengis.net/def/crs/EPSG/0/4258', {
+        "en": u"EPSG:4258",
+        "nl": u"EPSG:4258",
+        "fr": u"EPSG:4258",
+        "de": u"EPSG:4258",
+    }),
+    ('https://www.opengis.net/def/crs/EPSG/0/31370', {
+        "en": u"EPSG:31370",
+        "nl": u"EPSG:31370",
+        "fr": u"EPSG:31370",
+        "de": u"EPSG:31370",
+    }),
+    ('https://www.opengis.net/def/crs/EPSG/0/3812', {
+        "en": u"EPSG:3812",
+        "nl": u"EPSG:3812",
+        "fr": u"EPSG:3812",
+        "de": u"EPSG:3812",
+    }),
+    ('https://www.opengis.net/def/crs/EPSG/0/3857', {
+        "en": u"EPSG:3857",
+        "nl": u"EPSG:3857",
+        "fr": u"EPSG:3857",
+        "de": u"EPSG:3857",
+    }),
+    ('https://www.opengis.net/def/crs/EPSG/0/4326', {
+        "en": u"EPSG:4326",
+        "nl": u"EPSG:4326",
+        "fr": u"EPSG:4326",
+        "de": u"EPSG:4326",
     })
 ]
