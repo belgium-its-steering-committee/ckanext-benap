@@ -6,8 +6,10 @@ import logging
 from decorators import decorator_timer
 from itertools import chain
 
-from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE, \
-                                         MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE, FREQUENCY)
+
+from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
+                                         MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE, FREQUENCY, \
+                                         REFERENCE_SYSTEM)
 
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
@@ -879,6 +881,8 @@ def ontology_helper(context):
         return map_for_form_select(CONDITIONS_USAGE)
     elif ontology == "license_type":
         return map_for_form_select(LICENSE_TYPE)
+    elif ontology == "reference_system":
+        return map_for_form_select(REFERENCE_SYSTEM)
     return None
 
 
