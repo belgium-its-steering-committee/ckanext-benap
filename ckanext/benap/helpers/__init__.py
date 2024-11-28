@@ -7,7 +7,7 @@ from decorators import decorator_timer
 from itertools import chain
 
 from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
-                                         MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE, FREQUENCY, REFERENCE_SYSTEM, DATA_MODEL)
+                                         MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE, FREQUENCY, REFERENCE_SYSTEM, DATA_MODEL, SYNTAX)
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
 
@@ -584,44 +584,7 @@ def ontology_helper(context):
         ])
 
     elif ontology == "syntax":
-        return map_for_form_select([
-            ('XML', {
-                "en": u"XML",
-                "fr": u"XML",
-                "nl": u"XML",
-                "de": u"XML"
-            }),
-            ('JSON', {
-                "en": u"JSON",
-                "fr": u"JSON",
-                "nl": u"JSON",
-                "de": u"JSON"
-            }),
-            ('CSV', {
-                "en": u"CSV",
-                "fr": u"CSV",
-                "nl": u"CSV",
-                "de": u"CSV"
-            }),
-            ('ASN.1 encoding rules', {
-                "en": u"ASN.1 encoding rules",
-                "fr": u"Règles d'encodage d'ASN.1",
-                "nl": u"ASN.1 coderingsregels",
-                "de": u"ASN.1 Kodierunsregel"
-            }),
-            ('Protocol buffers', {
-                "en": u"Protocol buffers",
-                "fr": u"Tampons de protocole",
-                "nl": u"Protocolbuffers",
-                "de": u"Protokoll-Buffer"
-            }),
-            ('Other', {
-                "en": u"Other",
-                "fr": u"Autre",
-                "nl": u"Andere",
-                "de": u"Andere"
-            }),
-        ])
+        return map_for_form_select(SYNTAX)
 
     elif ontology == "grammar":
         return map_for_form_select([
