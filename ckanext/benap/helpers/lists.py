@@ -22,43 +22,49 @@ NUTS1_BE = [
         ]
 
 GEOREFERENCING_METHOD = [
-            ('ALERT-C (LCL)', {
-                "en": u"ALERT-C (LCL)",
-                "fr": u"ALERT-C (LCL)",
-                "nl": u"ALERT-C (LCL)",
-                "de": u"ALERT-C (LCL)"
-            }),
-            ('Geocoordinates WGS84', {
-                "en": u"Geocoordinates WGS84",
-                "fr": u"Coordonnées géographiques WGS84",
-                "nl": u"Geocoördinaten WGS84",
-                "de": u"Geokoördinaten WGS84"
-            }),
-            ('Geocoordinates ETRS89', {
-                "en": u"Geocoordinates ETRS89",
-                "fr": u"Coordonnées géographiques ETRS89",
-                "nl": u"Geocoördinaten ETRS89",
-                "de": u"Geokoördinaten ETRS89"
-            }),
-            ('ISO 19148', {
-                "en": u"ISO 19148",
-                "fr": u"ISO 19148",
-                "nl": u"ISO 19148",
-                "de": u"ISO 19148"
-            }),
-            ('OpenLR', {
-                "en": u"OpenLR",
-                "fr": u"OpenLR",
-                "nl": u"OpenLR",
-                "de": u"OpenLR"
-            }),
-            ('Other', {
-                "en": u"Other",
-                "fr": u"Autre",
-                "nl": u"Andere",
-                "de": u"Anderen"
-            })
-        ]
+    ('https://w3id.org/mobilitydcat-ap/georeferencing-method/alert-c', {
+        "en": u"ALERT-C (LCL)",
+        "fr": u"ALERT-C (LCL)",
+        "nl": u"ALERT-C (LCL)",
+        "de": u"ALERT-C (LCL)"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/georeferencing-method/geocoordinates', {
+        "en": u"Geocoordinates",
+        "fr": u"Coordonnées géographiques",
+        "nl": u"Geocoördinaten",
+        "de": u"Geokoördinaten"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/georeferencing-method/iso-19148', {
+        "en": u"ISO 19148",
+        "fr": u"ISO 19148",
+        "nl": u"ISO 19148",
+        "de": u"ISO 19148"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/georeferencing-method/openlr', {
+        "en": u"OpenLR",
+        "fr": u"OpenLR",
+        "nl": u"OpenLR",
+        "de": u"OpenLR"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/georeferencing-method/other', {
+        "en": u"Other",
+        "fr": u"Autre",
+        "nl": u"Andere",
+        "de": u"Anderen"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/georeferencing-method/gml', {
+        "en": u"GML",
+        "fr": u"GML",
+        "nl": u"GML",
+        "de": u"GML"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/georeferencing-method/tpeg-loc', {
+        "en": u"TPEG-LOC",
+        "fr": u"TPEG-LOC",
+        "nl": u"TPEG-LOC",
+        "de": u"TPEG-LOC"
+    })
+]
 
 DATASET_TYPE = [
             ('Static road network data', {
