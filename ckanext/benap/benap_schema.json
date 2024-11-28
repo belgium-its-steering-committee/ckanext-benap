@@ -732,6 +732,38 @@
       "required": "true"
     },
     {
+      "field_name": "description_resource_translated",
+      "label": {
+        "en": "Description of the resource",
+        "fr": "Description de la ressource",
+        "nl": "Beschrijving van de bron",
+        "de": "Beschreibung der Ressource"
+      },
+      "form_placeholder": {
+        "en": "“Description of the resource, including its purpose and key attributes”",
+        "fr": "“Description de la ressource, y compris son objectif et ses principales caractéristiques”",
+        "nl": "“Beschrijving van de bron, inclusief het doel en de belangrijkste kenmerken”",
+        "de": "“Beschreibung der Ressource, einschließlich ihres Zwecks und der wichtigsten Merkmale”"
+      },
+      "help_text": {
+        "en": "Gives the user more information about the content of the resource.",
+        "fr": "Donne à l'utilisateur plus d'informations sur le contenu de la ressource.",
+        "nl": "Geeft de gebruiker meer informatie over de inhoud van de bron.",
+        "de": "Gibt dem Benutzer mehr Informationen über den Inhalt der Ressource."
+      },
+      "form_languages": [
+        "en",
+        "nl",
+        "fr",
+        "de"
+      ],
+      "form_snippet": "fluent_markdown.html",
+      "display_snippet": "fluent_markdown.html",
+      "error_snippet": "fluent_text.html",
+      "output_validators": "fluent_core_translated_output",
+      "validators": "fluent_text"
+    },
+    {
       "field_name": "acc_enc",
       "label": {
         "en": "Data format - Encoding",
