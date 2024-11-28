@@ -6,11 +6,8 @@ import logging
 from decorators import decorator_timer
 from itertools import chain
 
-
 from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
-                                         MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE, FREQUENCY, \
-                                         REFERENCE_SYSTEM)
-
+                                         MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE, FREQUENCY, REFERENCE_SYSTEM, DATA_MODEL)
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
 
@@ -661,117 +658,7 @@ def ontology_helper(context):
         ])
 
     elif ontology == "datamodel":
-        return map_for_form_select([
-            ('DATEX II profile', {
-                "en": u"DATEX II profile",
-                "fr": u"Profil DATEX II",
-                "nl": u"DATEX II profiel",
-                "de": u"DATEX II-Profil"
-            }),
-            ('OCIT-C', {
-                "en": u"OCIT-C",
-                "fr": u"OCIT-C",
-                "nl": u"OCIT-C",
-                "de": u"OCIT-C"
-            }),
-            ('DATEX II Light', {
-                "en": u"DATEX II Light",
-                "fr": u"DATEX II Light",
-                "nl": u"DATEX II Light",
-                "de": u"DATEX II Light"
-            }),
-            ('NeTEX', {
-                "en": u"NeTEX (CEN/TS 16614)",
-                "fr": u"NeTEX (CEN/TS 16614)",
-                "nl": u"NeTEX (CEN/TS 16614)",
-                "de": u"NeTEX (CEN/TS 16614)"
-            }),
-            ('SIRI', {
-                "en": u"SIRI (CEN/TS 15531)",
-                "fr": u"SIRI (CEN/TS 15531)",
-                "nl": u"SIRI (CEN/TS 15531)",
-                "de": u"SIRI (CEN/TS 15531)"
-            }),
-            ('GTFS', {
-                "en": u"GTFS",
-                "fr": u"GTFS",
-                "nl": u"GTFS",
-                "de": u"GTFS"
-            }),
-            ('GBFS', {
-                "en": u"GBFS",
-                "fr": u"GBFS",
-                "nl": u"GBFS",
-                "de": u"GBFS"
-            }),
-            ('MDS', {
-                "en": u"MDS",
-                "fr": u"MDS",
-                "nl": u"MDS",
-                "de": u"MDS"
-            }),
-            ('VDV Standard', {
-                "en": u"VDV Standard (VDV 452, 455, 462,…)",
-                "fr": u"VDV Standard (VDV 452, 455, 462,…)",
-                "nl": u"VDV Standard (VDV 452, 455, 462,…)",
-                "de": u"VDV Standard (VDV 452, 455, 462,…)"
-            }),
-            ('IFOPT', {
-                "en": u"IFOPT",
-                "fr": u"IFOPT",
-                "nl": u"IFOPT",
-                "de": u"IFOPT"
-            }),
-            ('ETSI / ISO Model', {
-                "en": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,…)",
-                "fr": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,…)",
-                "nl": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,…)",
-                "de": u"ETSI / ISO Model (DENM, CAM, SPAT/MAP, IVI,…)"
-            }),
-            ('tpegML Model', {
-                "en": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,…)",
-                "fr": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,…)",
-                "nl": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,…)",
-                "de": u"tpegML Model (TPEG2-TEC, TPEG2-PKI,…)"
-            }),
-            ('http://publications.europa.eu/resource/authority/file-type/KML', {
-                "en": u"KML",
-                "fr": u"KML",
-                "nl": u"KML",
-                "de": u"KML"
-            }),
-
-            ('http://publications.europa.eu/resource/authority/file-type/MPEG4', {
-                "en": u"MPEG-4",
-                "fr": u"MPEG-4",
-                "nl": u"MPEG-4",
-                "de": u"MPEG-4"
-            }),
-            ('MDM-Container', {
-                "en": u"MDM-Container",
-                "fr": u"MDM-Container",
-                "nl": u"MDM-Container",
-                "de": u"MDM-Container"
-            }),
-            ('DINO', {
-                "en": u"DINO",
-                "fr": u"DINO",
-                "nl": u"DINO",
-                "de": u"DINO"
-            }),
-            ('OpenAPI', {
-                "en": u"OpenAPI",
-                "fr": u"OpenAPI",
-                "nl": u"OpenAPI",
-                "de": u"OpenAPI"
-            }),
-            ('Other', {
-                "en": u"Other",
-                "fr": u"Autre",
-                "nl": u"Andere",
-                "de": u"Andere"
-            }),
-        ])
+        return map_for_form_select(DATA_MODEL)
 
     elif ontology == "protocol":
         return map_for_form_select([
