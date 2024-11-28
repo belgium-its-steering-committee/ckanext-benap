@@ -1192,39 +1192,63 @@ LICENSE_TYPE = [
         "de": u"Andere"
     })
 ]
-
-REFERENCE_SYSTEM =[
-    ('https://www.opengis.net/def/crs/EPSG/0/4258', {
-        "en": u"EPSG:4258",
-        "nl": u"EPSG:4258",
-        "fr": u"EPSG:4258",
-        "de": u"EPSG:4258",
+       
+APPLICATION_LAYER_PROTOCOL = [
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/soap', {
+        "en": u"SOAP",
+        "fr": u"SOAP",
+        "nl": u"SOAP",
+        "de": u"SOAP"
     }),
-    ('https://www.opengis.net/def/crs/EPSG/0/31370', {
-        "en": u"EPSG:31370",
-        "nl": u"EPSG:31370",
-        "fr": u"EPSG:31370",
-        "de": u"EPSG:31370",
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/ots2', {
+        "en": u"OTS2",
+        "fr": u"OTS2",
+        "nl": u"OTS2",
+        "de": u"OTS2"
     }),
-    ('https://www.opengis.net/def/crs/EPSG/0/3812', {
-        "en": u"EPSG:3812",
-        "nl": u"EPSG:3812",
-        "fr": u"EPSG:3812",
-        "de": u"EPSG:3812",
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/http-https', {
+        "en": u"HTTP/HTTPS",
+        "fr": u"HTTP/HTTPS",
+        "nl": u"HTTP/HTTPS",
+        "de": u"HTTP/HTTPS"
     }),
-    ('https://www.opengis.net/def/crs/EPSG/0/3857', {
-        "en": u"EPSG:3857",
-        "nl": u"EPSG:3857",
-        "fr": u"EPSG:3857",
-        "de": u"EPSG:3857",
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/ftp', {
+        "en": u"FTP",
+        "fr": u"FTP",
+        "nl": u"FTP",
+        "de": u"FTP"
     }),
-    ('https://www.opengis.net/def/crs/EPSG/0/4326', {
-        "en": u"EPSG:4326",
-        "nl": u"EPSG:4326",
-        "fr": u"EPSG:4326",
-        "de": u"EPSG:4326",
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/rss', {
+        "en": u"RSS",
+        "fr": u"RSS",
+        "nl": u"RSS",
+        "de": u"RSS"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/amqp', {
+        "en": u"AMQP",
+        "fr": u"AMQP",
+        "nl": u"AMQP",
+        "de": u"AMQP"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/mqtt', {
+        "en": u"MQTT",
+        "fr": u"MQTT",
+        "nl": u"MQTT",
+        "de": u"MQTT"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/grpc', {
+        "en": u"gRPC",
+        "fr": u"gRPC",
+        "nl": u"gRPC",
+        "de": u"gRPC"
+    }),
+     ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/other', {
+        "en": u"Other",
+        "fr": u"Autre",
+        "nl": u"Andere",
+        "de": u"Andere"
     })
-]
+  ]
 
 FREQUENCY = [
     ('http://publications.europa.eu/resource/authority/frequency/IRREG', {
@@ -1392,6 +1416,12 @@ DATA_MODEL = [
         "nl": u"Andere",
         "de": u"Andere"
     }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/ocit', {
+        "en": u"OCIT",
+        "fr": u"OCIT",
+        "nl": u"OCIT",
+        "de": u"OCIT"
+    }),
     ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/tn-its', {
         "en": u"TN-ITS (CEN/TS 17268)",
         "fr": u"TN-ITS (CEN/TS 17268)",
@@ -1546,5 +1576,36 @@ SYNTAX = [
         "de": u"RSS Feed"
     })
 ]
-
-
+      
+REFERENCE_SYSTEM =[
+    ('https://www.opengis.net/def/crs/EPSG/0/4258', {
+        "en": u"EPSG:4258",
+        "nl": u"EPSG:4258",
+        "fr": u"EPSG:4258",
+        "de": u"EPSG:4258",
+    }),
+    ('https://www.opengis.net/def/crs/EPSG/0/31370', {
+        "en": u"EPSG:31370",
+        "nl": u"EPSG:31370",
+        "fr": u"EPSG:31370",
+        "de": u"EPSG:31370",
+    }),
+    ('https://www.opengis.net/def/crs/EPSG/0/3812', {
+        "en": u"EPSG:3812",
+        "nl": u"EPSG:3812",
+        "fr": u"EPSG:3812",
+        "de": u"EPSG:3812",
+    }),
+    ('https://www.opengis.net/def/crs/EPSG/0/3857', {
+        "en": u"EPSG:3857",
+        "nl": u"EPSG:3857",
+        "fr": u"EPSG:3857",
+        "de": u"EPSG:3857",
+    }),
+    ('https://www.opengis.net/def/crs/EPSG/0/4326', {
+        "en": u"EPSG:4326",
+        "nl": u"EPSG:4326",
+        "fr": u"EPSG:4326",
+        "de": u"EPSG:4326",
+    })
+]
