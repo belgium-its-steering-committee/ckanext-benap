@@ -1,5 +1,6 @@
 # coding=utf-8
 import re
+import json
 from itertools import count
 from six import string_types
 from ckan.common import _
