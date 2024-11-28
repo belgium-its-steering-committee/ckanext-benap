@@ -12,14 +12,15 @@ from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallba
     forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element, get_organization_by_id, benap_fluent_label, \
     translate_organization_filter, is_user_sysAdmin, is_nap_checked, convert_validation_list_to_JSON, benap_get_organization_field_by_id, \
     benap_get_organization_field_by_specified_field, benap_retrieve_dict_items_or_keys_or_values, get_translated_category_and_sub_category, \
-    benap_retrieve_org_title_tel_email
+    benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list
 
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.validators import phone_number_validator, \
     countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin, \
-    is_choice_null, contact_point_org_fields_consistency_check, license_fields_conditional_validation, benap_tag_string_convert
-from ckanext.benap.logic.auth.get import user_list
+    is_choice_null, contact_point_org_fields_consistency_check, \
+    license_fields_conditional_validation, benap_tag_string_convert, fluent_tags_validator, category_sub_category_validator
 
+from ckanext.benap.logic.auth.get import user_list
 
 class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTranslation):
     plugins.implements(plugins.ITranslation)
@@ -77,7 +78,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_get_organization_field_by_specified_field': benap_get_organization_field_by_specified_field,
             'benap_retrieve_dict_items_or_keys_or_values': benap_retrieve_dict_items_or_keys_or_values,
             'benap_get_translated_category_and_sub_category': get_translated_category_and_sub_category,
-            'benap_retrieve_org_title_tel_email': benap_retrieve_org_title_tel_email
+            'benap_retrieve_org_title_tel_email': benap_retrieve_org_title_tel_email,
+            'benap_retrieve_raw_choices_list': benap_retrieve_raw_choices_list
         }
 
     # IValidators
@@ -92,7 +94,9 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_is_choice_null': is_choice_null,
             'benap_contact_point_org_fields_consistency_check': contact_point_org_fields_consistency_check,
             'benap_license_fields_conditional_validation': license_fields_conditional_validation,
-            'benap_tag_string_convert': benap_tag_string_convert
+            'benap_tag_string_convert': benap_tag_string_convert,
+            'benap_fluent_tags_validator': fluent_tags_validator,
+            'benap_category_sub_category_validator': category_sub_category_validator,
         }
 
     # IAuthFunctions

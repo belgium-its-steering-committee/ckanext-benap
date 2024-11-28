@@ -1464,3 +1464,10 @@ def benap_retrieve_org_title_tel_email():
     ]
     json_data = json.dumps(filtered_data, ensure_ascii=False)
     return json_data
+
+def benap_retrieve_raw_choices_list(field_name):
+    """
+    Retrieve the raw choices list of a specified field
+    """
+    from ckanext.benap.helpers import lists
+    return getattr(lists, field_name.upper())
