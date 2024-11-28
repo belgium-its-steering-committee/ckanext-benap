@@ -1192,3 +1192,36 @@ LICENSE_TYPE = [
         "de": u"Andere"
     })
 ]
+
+GRAMMAR = [
+    ('https://w3id.org/mobilitydcat-ap/grammar/xsd', {
+        "en": u"XSD",
+        "fr": u"XSD",
+        "nl": u"XSD",
+        "de": u"XSD"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/grammar/json-schema', {
+        "en": u"JSON Schema",
+        "fr": u"Schéma JSON",
+        "nl": u"JSON-schema",
+        "de": u"JSON-Schema"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/grammar/asn.1', {
+        "en": u"ASN.1",
+        "fr": u"ASN.1",
+        "nl": u"ASN.1",
+        "de": u"ASN.1"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/grammar/protocol-buffers', {
+        "en": u"Protocol buffers",
+        "fr": u"Tampons de protocole",
+        "nl": u"Protocolbuffers",
+        "de": u"Protokoll-Buffer"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/grammar/other', {
+        "en": u"Other",
+        "fr": u"Autre",
+        "nl": u"Andere",
+        "de": u"Andere"
+    })
+]

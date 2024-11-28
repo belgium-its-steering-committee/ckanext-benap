@@ -6,7 +6,8 @@ import logging
 from decorators import decorator_timer
 from itertools import chain
 
-from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE, MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE)
+from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
+                                         MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE, GRAMMAR)
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
 
@@ -623,38 +624,7 @@ def ontology_helper(context):
         ])
 
     elif ontology == "grammar":
-        return map_for_form_select([
-            ('http://publications.europa.eu/resource/authority/file-type/SCHEMA_XML', {
-                "en": u"XSD",
-                "fr": u"XSD",
-                "nl": u"XSD",
-                "de": u"XSD"
-            }),
-            ('JSON Schema', {
-                "en": u"JSON Schema",
-                "fr": u"Schéma JSON",
-                "nl": u"JSON-schema",
-                "de": u"JSON-Schema"
-            }),
-            ('http://purl.org/ASN/schema/core/StandardDocument', {
-                "en": u"ASN.1",
-                "fr": u"ASN.1",
-                "nl": u"ASN.1",
-                "de": u"ASN.1"
-            }),
-            ('Protocol buffers', {
-                "en": u"Protocol buffers",
-                "fr": u"Tampons de protocole",
-                "nl": u"Protocolbuffers",
-                "de": u"Protokoll-Buffer"
-            }),
-            ('Other', {
-                "en": u"Other",
-                "fr": u"Autre",
-                "nl": u"Andere",
-                "de": u"Andere"
-            }),
-        ])
+        return map_for_form_select(GRAMMAR)
 
     elif ontology == "datamodel":
         return map_for_form_select([
