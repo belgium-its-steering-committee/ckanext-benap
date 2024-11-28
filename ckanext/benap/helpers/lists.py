@@ -204,73 +204,73 @@ NAP_TYPE = [('MMTIS', {
         ]
 
 NETWORK_COVERAGE =[
-    ('https://w3id.org/mobilitydcat-ap/network-coverage/air-network',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/air-network', {
         "en": u"Air network",
         "nl": u"Luchtnetwerk",
         "fr": u"Réseau aérien",
         "de": u"Luftnetz"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/metro-subway-tram-or-light-rail-network',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/metro-subway-tram-or-light-rail-network', {
         "en": u"Metro, tram or light-rail network",
         "nl": u"Metro, tram of light-rail netwerk",
         "fr": u"Réseau de métro, tram ou ferroviaire léger",
         "de": u"U-Bahn-, Straßenbahn- oder Stadtbahnnetz"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/motorways',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/motorways', {
         "en": u"Motorways",
         "nl": u"Autosnelwegen",
         "fr": u"Autoroutes",
         "de": u"Autobahnen"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/other',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/other', {
         "en": u"Other",
-        "nl": u"Overige",
+        "nl": u"Andere",
         "fr": u"Autre",
         "de": u"Andere"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/other-public-transport-network',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/other-public-transport-network', {
         "en": u"Other public transport network",
         "nl": u"Andere openbaar vervoersnetwerk",
         "fr": u"Autre réseau de transport public",
         "de": u"Andere öffentliche Verkehrsnetz"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/rail-network',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/rail-network', {
         "en": u"Rail network",
         "nl": u"Spoorwegnet",
         "fr": u"Réseau ferroviaire",
         "de": u"Schienennetz"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/regional-roads',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/regional-roads', {
         "en": u"Regional roads",
         "nl": u"Regionale wegen",
         "fr": u"Routes régionales",
         "de": u"Regionalstraßen"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/state-roads-or-federal-roads',{
-        "en": u"State roads or federal roads",
-        "nl": u"Staats - of federale wegen",
-        "fr": u"Routes d'État ou routes fédérales",
-        "de": u"Staatsstraßen oder Bundesstraßen"
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/state-roads-or-federal-roads', {
+        "en": u"National roads",
+        "nl": u"Nationale wegen",
+        "fr": u"Routes nationales",
+        "de": u"Nationalstraßen"
     }),
-      ('https://w3id.org/mobilitydcat-ap/network-coverage/ten-network',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/ten-network', {
         "en": u"Trans-European Transport Network (TEN-T)",
         "nl": u"Trans-Europese transport Netwerk (TEN-T)",
         "fr": u"Réseau transeuropéen de transport (TEN-T)",
         "de": u"Transeuropäische Verkehrsnetz (TEN-T)"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/tern-network',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/tern-network', {
         "en": u"Trans-European Road Network (TERN)",
         "nl": u"Trans-Europese wegennet (TERN)",
         "fr": u"Réseau routier transeuropéen (TERN)",
         "de": u"Transeuropäischen Straßennetz (TERN)"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/urban-and-local-roads',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/urban-and-local-roads', {
         "en": u"Urban and local roads",
         "nl": u"Stedelijke en lokale wegen",
         "fr": u"Routes urbaines et locales",
         "de": u"Städtische und lokale Straßen"
     }),
-     ('https://w3id.org/mobilitydcat-ap/network-coverage/waterways',{
+    ('https://w3id.org/mobilitydcat-ap/network-coverage/waterways', {
         "en": u"Waterways",
         "nl": u"Waterwegen",
         "fr": u"Voies navigables",
@@ -1193,6 +1193,7 @@ LICENSE_TYPE = [
     })
 ]
 
+
 REFERENCE_SYSTEM =[
     ('https://www.opengis.net/def/crs/EPSG/0/4258', {
         "en": u"EPSG:4258",
@@ -1223,5 +1224,110 @@ REFERENCE_SYSTEM =[
         "nl": u"EPSG:4326",
         "fr": u"EPSG:4326",
         "de": u"EPSG:4326",
+    })
+]
+
+FREQUENCY = [
+    ('http://publications.europa.eu/resource/authority/frequency/IRREG', {
+        "en": u"Irregular",
+        "fr": u"Irrégulier",
+        "nl": u"Onregelmatig",
+        "de": u"Unregelmäßig"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/1MIN', {
+        "en": u"Every minute",
+        "fr": u"Toutes les minutes",
+        "nl": u"Elke minuut",
+        "de": u"Minütlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/5MIN', {
+        "en": u"Every five minutes",
+        "fr": u"Toutes les 5 minutes",
+        "nl": u"Om de vijf minuten",
+        "de": u"Alle fünf Minuten"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/10MIN', {
+        "en": u"Every ten minutes",
+        "fr": u"Toutes les 10 minutes",
+        "nl": u"Om de tien minuten",
+        "de": u"Alle zehn Minuten"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/15MIN', {
+        "en": u"Every fifteen minutes",
+        "fr": u"Toutes les 15 minutes",
+        "nl": u"Om de vijftien minuten",
+        "de": u"Viertelstündlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/30MIN', {
+        "en": u"Every thirty minutes",
+        "fr": u"Toutes les 30 minutes",
+        "nl": u"Om de dertig minuten",
+        "de": u"Halbstündlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/HOURLY', {
+        "en": u"Hourly",
+        "fr": u"Toutes les heures",
+        "nl": u"Om het uur",
+        "de": u"Stündlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/BIHOURLY', {
+        "en": u"Bihourly",
+        "fr": u"Toutes les deux heures",
+        "nl": u"Om de twee uur",
+        "de": u"Alle zwei Stunden"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/TRIHOURLY', {
+        "en": u"Trihourly",
+        "fr": u"Toutes les trois heures",
+        "nl": u"Om de drie uur",
+        "de": u"Alle drei Stunden"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/12HRS', {
+        "en": u"Every twelve hours",
+        "fr": u"Toutes les 12 heures",
+        "nl": u"Om de twaalf uur",
+        "de": u"Alle zwölf Stunden"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/DAILY', {
+        "en": u"Daily",
+        "fr": u"Quotidien",
+        "nl": u"Dagelijks",
+        "de": u"Täglich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/WEEKLY', {
+        "en": u"Weekly",
+        "fr": u"Hebdomadaire",
+        "nl": u"Wekelijks",
+        "de": u"Wöchentlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/MONTHLY', {
+        "en": u"Monthly",
+        "fr": u"Mensuel",
+        "nl": u"Maandelijks",
+        "de": u"Monatlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/QUARTERLY', {
+        "en": u"Quarterly",
+        "fr": u"Trimestriel",
+        "nl": u"Driemaandelijks",
+        "de": u"Vierteljährlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/ANNUAL_2', {
+        "en": u"Semiannual",
+        "fr": u"Semestriel",
+        "nl": u"Halfjaarlijks",
+        "de": u"Halbjährlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/ANNUAL', {
+        "en": u"Annual",
+        "fr": u"Annuel",
+        "nl": u"Jaarlijks",
+        "de": u"Jährlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/IRREG', {
+        "en": u"Less frequent than yearly",
+        "fr": u"Moins qu'une fois par an",
+        "nl": u"Minder vaak dan één keer per jaar",
+        "de": u"Weniger häufig als einmal pro Jahr"
     })
 ]
