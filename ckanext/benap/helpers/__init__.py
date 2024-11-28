@@ -8,7 +8,8 @@ from itertools import chain
 
 from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
                                          MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE, FREQUENCY,
-                                         REFERENCE_SYSTEM, DATA_MODEL, SYNTAX, APPLICATION_LAYER_PROTOCOL, COMMUNICATION_METHOD, GRAMMAR)
+                                         REFERENCE_SYSTEM, DATA_MODEL, SYNTAX, APPLICATION_LAYER_PROTOCOL, COMMUNICATION_METHOD, 
+                                         GRAMMAR, ENCODING)
 
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
@@ -546,44 +547,7 @@ def ontology_helper(context):
         ])
 
     elif ontology == "encoding":
-        return map_for_form_select([
-            ('ASCII', {
-                "en": u"ASCII",
-                "fr": u"ASCII",
-                "nl": u"ASCII",
-                "de": u"ASCII"
-            }),
-            ('UTF-8', {
-                "en": u"UTF-8",
-                "fr": u"UTF-8",
-                "nl": u"UTF-8",
-                "de": u"UTF-8"
-            }),
-            ('UTF-16', {
-                "en": u"UTF-16",
-                "fr": u"UTF-16",
-                "nl": u"UTF-16",
-                "de": u"UTF-16"
-            }),
-            ('ISO-8859-1', {
-                "en": u"ISO-8859-1",
-                "fr": u"ISO-8859-1",
-                "nl": u"ISO-8859-1",
-                "de": u"ISO-8859-1"
-            }),
-            ('ISO-8859-15', {
-                "en": u"ISO-8859-15",
-                "fr": u"ISO-8859-15",
-                "nl": u"ISO-8859-15",
-                "de": u"ISO-8859-15"
-            }),
-            ('Other', {
-                "en": u"Other",
-                "fr": u"Autre",
-                "nl": u"Andere",
-                "de": u"Andere"
-            }),
-        ])
+        return map_for_form_select(ENCODING)
 
     elif ontology == "syntax":
         return map_for_form_select(SYNTAX)
