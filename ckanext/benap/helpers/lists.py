@@ -1192,3 +1192,18 @@ LICENSE_TYPE = [
         "de": u"Andere"
     })
 ]
+
+COMMUNICATION_METHOD = [
+    ('https://w3id.org/mobilitydcat-ap/communication-method/push', {
+        "en": u"Push",
+        "fr": u"Push",
+        "nl": u"Push",
+        "de": u"Push"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/communication-method/pull', {
+        "en": u"Pull",
+        "fr": u"Pull",
+        "nl": u"Pull",
+        "de": u"Pull"
+    })
+]

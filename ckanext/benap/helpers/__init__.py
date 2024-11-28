@@ -6,7 +6,9 @@ import logging
 from decorators import decorator_timer
 from itertools import chain
 
-from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE, MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE)
+from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
+                                         MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE,
+                                         COMMUNICATION_METHOD)
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
 
@@ -828,26 +830,7 @@ def ontology_helper(context):
         ])
 
     elif ontology == "communication":
-        return map_for_form_select([
-            ('Push', {
-                "en": u"Push",
-                "fr": u"Push",
-                "nl": u"Push",
-                "de": u"Push"
-            }),
-            ('Push on occurence', {
-                "en": u"Push on occurrence",
-                "fr": u"Push on occurrence",
-                "nl": u"Push on occurrence",
-                "de": u"Push on occurrence"
-            }),
-            ('Pull', {
-                "en": u"Pull",
-                "fr": u"Pull",
-                "nl": u"Pull",
-                "de": u"Pull"
-            }),
-        ])
+        return map_for_form_select(COMMUNICATION_METHOD)
 
     elif ontology == "data-theme":
         return map_for_form_select([
