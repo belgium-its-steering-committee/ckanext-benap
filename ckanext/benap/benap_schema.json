@@ -116,7 +116,7 @@
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "mobility_theme",
       "required": "true",
-      "validators": "scheming_required"
+      "validators": "scheming_required scheming_valid_json_object benap_category_sub_category_validator"
     },
     {
       "field_name": "name",
@@ -330,7 +330,7 @@
         "de": "Name [Herausgeber]"
       },
       "help_text": {
-          "en": "Describes a person within an organization who is responsible for the dataset. This field is divided into two parts: first name and last name.",
+          "en": "Describes a person within an organization who is responsible for the dataset. This field is divided into two parts: first name and surname.",
           "fr": "Décrit une personne au sein d'une organisation qui est responsable du jeu de données. Ce champ est divisé en deux parties : prénom et nom.",
           "nl": "Beschrijft een persoon binnen een organisatie die verantwoordelijk is voor de dataset. Dit veld is opgedeeld in twee delen: voornaam en achternaam.",
           "de": "Beschreibt eine Person innerhalb einer Organisation, die für den Datensatz verantwortlich ist. Dieses Feld ist in zwei Teile unterteilt: Vorname und Nachname."
@@ -589,23 +589,6 @@
       "form_snippet": "form_tags.html",
       "required": "true",
       "validators": "scheming_required tag_string_convert benap_fluent_tags_validator"
-    },
-    {
-      "field_name": "license_id",
-      "label": {
-        "en": "License type",
-        "fr": "Type de licence",
-        "nl": "Type licentie",
-        "de": "Lizenz-Typ"
-      },
-      "form_snippet": "license.html",
-      "help_text": {
-        "en": "Describes the conditions of use of the data set.",
-        "fr": "Décrit les conditions d'utilisation du jeu de données.",
-        "nl": "Beschrijft de gebruiksvoorwaarden van de dataset.",
-        "de": "Beschreibt die Nutzungsbedingungen des Datensatzes."
-      },
-      "required": "true"
     },
     {
       "field_name": "frequency",
@@ -920,24 +903,6 @@
       "required": "true"
     },
     {
-       "field_name": "cont_georef",
-      "label": {
-        "en": "Georeferencing method",
-        "fr": "Méthode de géoréférencement",
-        "nl": "Georeferentie methode",
-        "de": "Georeferenzierungsmethode"
-      },
-      "preset": "multiple_select",
-      "help_text": {
-        "en": "Define the georeferencing method if the dataset consists of geographically referenced data.",
-        "fr": "Spécifiez la méthode de géoréférencement si le jeu de données est constitué de données géographiquement référencées.",
-        "nl": "Beschrijf de georefentiemethode indien de dataset gegeorefereerde data bevat.",
-        "de": "Bestimmen Sie die Georeferenzierungsmethode, wenn der Datensatz aus räumlich referenzierten Daten besteht."
-      },
-      "choices_helper": "benap_ontology_helper",
-      "benap_helper_ontology": "georeferencing_method"
-    },
-    {
       "field_name": "rights",
       "label": {
         "en": "Rights",
@@ -1084,7 +1049,7 @@
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "license_type",
       "form_snippet": null,
-      "validators": "scheming_required scheming_choices benap_is_choice_null"
+      "validators": "scheming_choices benap_is_choice_null benap_license_fields_conditional_validation"
     },
     {
       "field_name": "license_text_translated",
@@ -1116,7 +1081,7 @@
       "display_snippet": "fluent_markdown_large_text.html",
       "error_snippet": "fluent_text.html",
       "output_validators": "fluent_core_translated_output",
-      "validators": "fluent_text benap_is_choice_null"
+      "validators": "fluent_text benap_is_choice_null benap_license_fields_conditional_validation"
     }
   ]
 }
