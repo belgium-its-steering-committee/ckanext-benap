@@ -6,7 +6,8 @@ import logging
 from decorators import decorator_timer
 from itertools import chain
 
-from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE, MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE)
+from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
+                                         MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE, FREQUENCY)
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
 
@@ -859,111 +860,7 @@ def ontology_helper(context):
             })
         ])
     elif ontology == "frequency":
-        return map_for_form_select([
-            ('On occurence', {
-                "en": u"On occurence",
-                "fr": u"Dès que disponible",
-                "nl": u"Zodra beschikbaar",
-                "de": u"sofort"
-            }),
-            ('Up to 1min', {
-                "en": u"Up to 1min",
-                "fr": u"Jusqu'à une fois par minute",
-                "nl": u"Tot één keer per minuut",
-                "de": u"Bis einmal pro Minute"
-            }),
-            ('Up to 5min', {
-                "en": u"Up to 5min",
-                "fr": u"Jusqu'à une fois toutes les 5 minutes",
-                "nl": u"Tot één keer per 5 minuten",
-                "de": u"Bis einmal pro 5 Minuten"
-            }),
-            ('Up to 10min', {
-                "en": u"Up to 10min",
-                "fr": u"Jusqu'à une fois toutes les 10 minutes",
-                "nl": u"Tot één keer per 10 minuten",
-                "de": u"Bis einmal pro 10 Minuten"
-            }),
-            ('Up to 15min', {
-                "en": u"Up to 15min",
-                "fr": u"Jusqu'à une fois toutes les 15 minutes",
-                "nl": u"Tot één keer per 15 minuten",
-                "de": u"Bis einmal pro 15 Minuten"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/BIHOURLY', {
-                "en": u"Up to 30min",
-                "fr": u"Jusqu'à une fois toutes les 30 minutes",
-                "nl": u"Tot één keer per 30 minuten",
-                "de": u"Bis einmal pro 30 Minuten"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/HOURLY', {
-                "en": u"Up to 1h",
-                "fr": u"Jusqu'à une fois toutes les heures",
-                "nl": u"Tot één keer per uur",
-                "de": u"Bis einmal pro Stunde"
-            }),
-            ('Up to 2h', {
-                "en": u"Up to 2h",
-                "fr": u"Jusqu'à une fois toutes les 2 heures",
-                "nl": u"Tot één keer per 2 uren",
-                "de": u"Bis einmal pro 2 Stunden"
-            }),
-            ('Up to 3h', {
-                "en": u"Up to 3h",
-                "fr": u"Jusqu'à une fois toutes les 3 heures",
-                "nl": u"Tot één keer per 3 uren",
-                "de": u"Bis einmal pro 3 Stunden"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/DAILY_2', {
-                "en": u"Up to 12h",
-                "fr": u"Jusqu'à une fois toutes les 12 heures",
-                "nl": u"Tot één keer per 12 uren",
-                "de": u"Bis einmal pro 12 Stunden"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/DAILY', {
-                "en": u"Up to 24h",
-                "fr": u"Jusqu'à une fois toutes les 24 heures",
-                "nl": u"Tot één keer per 24 uren",
-                "de": u"Bis einmal pro 24 Stunden"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/WEEKLY', {
-                "en": u"Up to Weekly",
-                "fr": u"Jusqu'à une fois par semaine",
-                "nl": u"Tot één keer per week",
-                "de": u"Bis einmal pro Woche"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/MONTHLY', {
-                "en": u"Up to Monthly",
-                "fr": u"Jusqu'à une fois par mois",
-                "nl": u"Tot één keer per maand",
-                "de": u"Bis einmal pro Monat"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/QUARTERLY', {
-                "en": u"Up to every 3month",
-                "fr": u"Jusqu'à une fois tous les trois mois",
-                "nl": u"Tot één keer per drie maanden",
-                "de": u"Bis einmal pro drei Monaten"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/ANNUAL_2', {
-                "en": u"Up to every 6month",
-                "fr": u"Jusqu'à une fois tous les six mois",
-                "nl": u"Tot één keer per zes maanden",
-                "de": u"Bis einmal pro sechs Monaten"
-            }),
-            ('http://publications.europa.eu/resource/authority/frequency/ANNUAL', {
-                "en": u"Up to yearly",
-                "fr": u"Jusqu'à une fois par an",
-                "nl": u"Tot één keer per jaar",
-                "de": u"Bis einmal pro Jahr"
-            }),
-            ('Less frequent than yearly', {
-                "en": u"Less frequent than yearly",
-                "fr": u"Moins qu'une fois par an",
-                "nl": u"Minder vaak dan één keer per jaar ",
-                "de": u"Weniger häufig als einmal pro Jahr"
-            }),
-
-        ])
+        return map_for_form_select(FREQUENCY)
     elif ontology == "georeferencing_method":
         return map_for_form_select(GEOREFERENCING_METHOD)
     elif ontology == "dataset_type":
