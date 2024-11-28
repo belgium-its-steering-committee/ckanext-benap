@@ -1192,3 +1192,36 @@ LICENSE_TYPE = [
         "de": u"Andere"
     })
 ]
+
+REFERENCE_SYSTEM =[
+    ('https://www.opengis.net/def/crs/EPSG/0/4258', {
+        "en": u"EPSG:4258",
+        "nl": u"EPSG:4258",
+        "fr": u"EPSG:4258",
+        "de": u"EPSG:4258",
+    }),
+    ('https://www.opengis.net/def/crs/EPSG/0/31370', {
+        "en": u"EPSG:31370",
+        "nl": u"EPSG:31370",
+        "fr": u"EPSG:31370",
+        "de": u"EPSG:31370",
+    }),
+    ('https://www.opengis.net/def/crs/EPSG/0/3812', {
+        "en": u"EPSG:3812",
+        "nl": u"EPSG:3812",
+        "fr": u"EPSG:3812",
+        "de": u"EPSG:3812",
+    }),
+    ('https://www.opengis.net/def/crs/EPSG/0/3857', {
+        "en": u"EPSG:3857",
+        "nl": u"EPSG:3857",
+        "fr": u"EPSG:3857",
+        "de": u"EPSG:3857",
+    }),
+    ('https://www.opengis.net/def/crs/EPSG/0/4326', {
+        "en": u"EPSG:4326",
+        "nl": u"EPSG:4326",
+        "fr": u"EPSG:4326",
+        "de": u"EPSG:4326",
+    })
+]
