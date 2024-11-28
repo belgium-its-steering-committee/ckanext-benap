@@ -1192,3 +1192,108 @@ LICENSE_TYPE = [
         "de": u"Andere"
     })
 ]
+
+FREQUENCY = [
+    ('http://publications.europa.eu/resource/authority/frequency/IRREG', {
+        "en": u"Irregular",
+        "fr": u"Irrégulier",
+        "nl": u"Onregelmatig",
+        "de": u"Unregelmäßig"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/1MIN', {
+        "en": u"Every minute",
+        "fr": u"Toutes les minutes",
+        "nl": u"Elke minuut",
+        "de": u"Minütlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/5MIN', {
+        "en": u"Every five minutes",
+        "fr": u"Toutes les 5 minutes",
+        "nl": u"Om de vijf minuten",
+        "de": u"Alle fünf Minuten"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/10MIN', {
+        "en": u"Every ten minutes",
+        "fr": u"Toutes les 10 minutes",
+        "nl": u"Om de tien minuten",
+        "de": u"Alle zehn Minuten"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/15MIN', {
+        "en": u"Every fifteen minutes",
+        "fr": u"Toutes les 15 minutes",
+        "nl": u"Om de vijftien minuten",
+        "de": u"Viertelstündlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/30MIN', {
+        "en": u"Every thirty minutes",
+        "fr": u"Toutes les 30 minutes",
+        "nl": u"Om de dertig minuten",
+        "de": u"Halbstündlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/HOURLY', {
+        "en": u"Hourly",
+        "fr": u"Toutes les heures",
+        "nl": u"Om het uur",
+        "de": u"Stündlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/BIHOURLY', {
+        "en": u"Bihourly",
+        "fr": u"Toutes les deux heures",
+        "nl": u"Om de twee uur",
+        "de": u"Alle zwei Stunden"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/TRIHOURLY', {
+        "en": u"Trihourly",
+        "fr": u"Toutes les trois heures",
+        "nl": u"Om de drie uur",
+        "de": u"Alle drei Stunden"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/12HRS', {
+        "en": u"Every twelve hours",
+        "fr": u"Toutes les 12 heures",
+        "nl": u"Om de twaalf uur",
+        "de": u"Alle zwölf Stunden"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/DAILY', {
+        "en": u"Daily",
+        "fr": u"Quotidien",
+        "nl": u"Dagelijks",
+        "de": u"Täglich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/WEEKLY', {
+        "en": u"Weekly",
+        "fr": u"Hebdomadaire",
+        "nl": u"Wekelijks",
+        "de": u"Wöchentlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/MONTHLY', {
+        "en": u"Monthly",
+        "fr": u"Mensuel",
+        "nl": u"Maandelijks",
+        "de": u"Monatlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/QUARTERLY', {
+        "en": u"Quarterly",
+        "fr": u"Trimestriel",
+        "nl": u"Driemaandelijks",
+        "de": u"Vierteljährlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/ANNUAL_2', {
+        "en": u"Semiannual",
+        "fr": u"Semestriel",
+        "nl": u"Halfjaarlijks",
+        "de": u"Halbjährlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/ANNUAL', {
+        "en": u"Annual",
+        "fr": u"Annuel",
+        "nl": u"Jaarlijks",
+        "de": u"Jährlich"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/IRREG', {
+        "en": u"Less frequent than yearly",
+        "fr": u"Moins qu'une fois par an",
+        "nl": u"Minder vaak dan één keer per jaar",
+        "de": u"Weniger häufig als einmal pro Jahr"
+    })
+]
