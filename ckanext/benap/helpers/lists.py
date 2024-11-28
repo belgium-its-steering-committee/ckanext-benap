@@ -1192,3 +1192,66 @@ LICENSE_TYPE = [
         "de": u"Andere"
     })
 ]
+
+APPLICATION_LAYER_PROTOCOL = [
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/soap', {
+        "en": u"SOAP",
+        "fr": u"SOAP",
+        "nl": u"SOAP",
+        "de": u"SOAP"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/ots2', {
+        "en": u"OTS2",
+        "fr": u"OTS2",
+        "nl": u"OTS2",
+        "de": u"OTS2"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/http-https', {
+        "en": u"HTTP/HTTPS",
+        "fr": u"HTTP/HTTPS",
+        "nl": u"HTTP/HTTPS",
+        "de": u"HTTP/HTTPS"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/ftp', {
+        "en": u"FTP",
+        "fr": u"FTP",
+        "nl": u"FTP",
+        "de": u"FTP"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/rss', {
+        "en": u"RSS",
+        "fr": u"RSS",
+        "nl": u"RSS",
+        "de": u"RSS"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/amqp', {
+        "en": u"AMQP",
+        "fr": u"AMQP",
+        "nl": u"AMQP",
+        "de": u"AMQP"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/mqtt', {
+        "en": u"MQTT",
+        "fr": u"MQTT",
+        "nl": u"MQTT",
+        "de": u"MQTT"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/grpc', {
+        "en": u"gRPC",
+        "fr": u"gRPC",
+        "nl": u"gRPC",
+        "de": u"gRPC"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/other', {
+        "en": u"Other",
+        "fr": u"Autre",
+        "nl": u"Andere",
+        "de": u"Andere"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/ocit', {
+        "en": u"OCIT",
+        "fr": u"OCIT",
+        "nl": u"OCIT",
+        "de": u"OCIT"
+    })
+]

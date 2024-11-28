@@ -6,7 +6,9 @@ import logging
 from decorators import decorator_timer
 from itertools import chain
 
-from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE, MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE)
+from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
+                                         MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE,
+                                         APPLICATION_LAYER_PROTOCOL)
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
 
@@ -770,62 +772,7 @@ def ontology_helper(context):
         ])
 
     elif ontology == "protocol":
-        return map_for_form_select([
-            ('SOAP', {
-                "en": u"SOAP",
-                "fr": u"SOAP",
-                "nl": u"SOAP",
-                "de": u"SOAP"
-            }),
-            ('OTS2', {
-                "en": u"OTS2",
-                "fr": u"OTS2",
-                "nl": u"OTS2",
-                "de": u"OTS2"
-            }),
-            ('http://publications.europa.eu/resource/authority/file-type/MSG_HTTP', {
-                "en": u"HTTP/HTTPS",
-                "fr": u"HTTP/HTTPS",
-                "nl": u"HTTP/HTTPS",
-                "de": u"HTTP/HTTPS"
-            }),
-            ('FTP', {
-                "en": u"FTP",
-                "fr": u"FTP",
-                "nl": u"FTP",
-                "de": u"FTP"
-            }),
-            ('http://publications.europa.eu/resource/authority/file-type/RSS', {
-                "en": u"RSS",
-                "fr": u"RSS",
-                "nl": u"RSS",
-                "de": u"RSS"
-            }),
-            ('AMQP', {
-                "en": u"AMQP",
-                "fr": u"AMQP",
-                "nl": u"AMQP",
-                "de": u"AMQP"
-            }),
-            ('MQTT', {
-                "en": u"MQTT",
-                "fr": u"MQTT",
-                "nl": u"MQTT",
-                "de": u"MQTT"
-            }),
-            ('gRPC', {
-                "en": u"gRPC",
-                "fr": u"gRPC",
-                "nl": u"gRPC",
-                "de": u"gRPC"
-            }),
-            ('Other', {
-                "en": u"Other",
-                "fr": u"Autre",
-                "nl": u"Andere",
-                "de": u"Andere"
-            }),
-        ])
+        return map_for_form_select(APPLICATION_LAYER_PROTOCOL)
 
     elif ontology == "communication":
         return map_for_form_select([
