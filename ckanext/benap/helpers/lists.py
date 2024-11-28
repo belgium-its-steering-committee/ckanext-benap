@@ -1192,3 +1192,132 @@ LICENSE_TYPE = [
         "de": u"Andere"
     })
 ]
+
+SYNTAX = [
+    ('http://publications.europa.eu/resource/authority/file-type/XML', {
+        "en": u"XML",
+        "fr": u"XML",
+        "nl": u"XML",
+        "de": u"XML"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/JSON', {
+        "en": u"JSON",
+        "fr": u"JSON",
+        "nl": u"JSON",
+        "de": u"JSON"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/CSV', {
+        "en": u"CSV",
+        "fr": u"CSV",
+        "nl": u"CSV",
+        "de": u"CSV"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/MSG_HTTP', {
+        "en": u"HTTP/HTTPS",
+        "fr": u"HTTP/HTTPS",
+        "nl": u"HTTP/HTTPS",
+        "de": u"HTTP/HTTPS"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/PDF', {
+        "en": u"PDF",
+        "fr": u"PDF",
+        "nl": u"PDF",
+        "de": u"PDF"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/XLS', {
+        "en": u"Excel XLS",
+        "fr": u"Excel XLS",
+        "nl": u"Excel XLS",
+        "de": u"Excel XLS"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/XLSX', {
+        "en": u"Excel XLSX",
+        "fr": u"Excel XLSX",
+        "nl": u"Excel XLSX",
+        "de": u"Excel XLSX"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/HTML', {
+        "en": u"HTML",
+        "fr": u"HTML",
+        "nl": u"HTML",
+        "de": u"HTML"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/ZIP', {
+        "en": u"ZIP",
+        "fr": u"ZIP",
+        "nl": u"ZIP",
+        "de": u"ZIP"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/WMS_SRVC', {
+        "en": u"WMS",
+        "fr": u"WMS",
+        "nl": u"WMS",
+        "de": u"WMS"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/WFS_SRVC', {
+        "en": u"WFS",
+        "fr": u"WFS",
+        "nl": u"WFS",
+        "de": u"WFS"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/GTFS', {
+        "en": u"GTFS",
+        "fr": u"GTFS",
+        "nl": u"GTFS",
+        "de": u"GTFS"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/ATOM', {
+        "en": u"ATOM Feed",
+        "fr": u"ATOM Feed",
+        "nl": u"ATOM Feed",
+        "de": u"ATOM Feed"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/GEOJSON', {
+        "en": u"GeoJSON",
+        "fr": u"GeoJSON",
+        "nl": u"GeoJSON",
+        "de": u"GeoJSON"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/GEOTIFF', {
+        "en": u"GeoTIFF",
+        "fr": u"GeoTIFF",
+        "nl": u"GeoTIFF",
+        "de": u"GeoTIFF"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/GML', {
+        "en": u"GML",
+        "fr": u"GML",
+        "nl": u"GML",
+        "de": u"GML"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/GPKG', {
+        "en": u"GeoPackage",
+        "fr": u"GeoPackage",
+        "nl": u"GeoPackage",
+        "de": u"GeoPackage"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/JSON_LD', {
+        "en": u"JSON-LD",
+        "fr": u"JSON-LD",
+        "nl": u"JSON-LD",
+        "de": u"JSON-LD"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/PARQUET', {
+        "en": u"Parquet",
+        "fr": u"Parquet",
+        "nl": u"Parquet",
+        "de": u"Parquet"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/REST', {
+        "en": u"Esri REST",
+        "fr": u"Esri REST",
+        "nl": u"Esri REST",
+        "de": u"Esri REST"
+    }),
+    ('http://publications.europa.eu/resource/authority/file-type/RSS', {
+        "en": u"RSS Feed",
+        "fr": u"RSS Feed",
+        "nl": u"RSS Feed",
+        "de": u"RSS Feed"
+    })
+]
