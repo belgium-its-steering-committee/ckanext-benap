@@ -17,7 +17,8 @@ from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallba
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.validators import phone_number_validator, \
     countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin, \
-    is_choice_null, contact_point_org_fields_consistency_check, category_sub_category_validator, license_fields_conditional_validation
+    is_choice_null, contact_point_org_fields_consistency_check, fluent_tags_validator, category_sub_category_validator, license_fields_conditional_validation
+
 from ckanext.benap.logic.auth.get import user_list
 
 class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTranslation):
@@ -91,6 +92,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_modified_by_sysadmin': modified_by_sysadmin,
             'benap_is_choice_null': is_choice_null,
             'benap_contact_point_org_fields_consistency_check': contact_point_org_fields_consistency_check,
+            'benap_fluent_tags_validator': fluent_tags_validator,
             'benap_category_sub_category_validator': category_sub_category_validator,
             'benap_license_fields_conditional_validation': license_fields_conditional_validation
         }
