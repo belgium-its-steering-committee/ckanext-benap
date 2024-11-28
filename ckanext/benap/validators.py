@@ -1,6 +1,7 @@
 # coding=utf-8
 import re
-import json
+from itertools import count
+from six import string_types
 from ckan.common import _
 from ckan.logic.validators import Invalid
 from ckanext.scheming.validation import scheming_validator
@@ -156,3 +157,33 @@ def license_fields_conditional_validation(key, flattened_data, errors, context):
                 field_value = json.loads(field_value)
                 if any(field_value.values()):
                     raise Invalid(_('No license text should be given. "Contract" is chosen as the condition for usage.'))
+
+
+def benap_tag_string_convert(key, flattened_data, errors, context):
+    '''
+    Takes a list of tags that is a comma-separated string (in data[key])
+    and parses tag names. These are added to the data dict, enumerated. They
+    are also validated on the length.
+    '''
+    if isinstance(flattened_data[key], string_types):
+        tags = [tag.strip() \
+                for tag in flattened_data[key].split(',') \
+                if tag.strip()]
+    else:
+        tags = flattened_data[key]
+    current_index = max( [int(k[1]) for k in flattened_data.keys() if len(k) == 3 and k[0] == 'tags'] + [-1] )
+
+    for num, tag in zip(count(current_index+1), tags):
+        flattened_data[('tags', num, 'name')] = tag
+
+    for tag in tags:
+        MIN_TAG_LENGTH = 1
+        if len(tag) < MIN_TAG_LENGTH:
+            raise Invalid(
+                _('Tag "%s" length is less than minimum %s') % (tag, MIN_TAG_LENGTH)
+            )
+        MAX_TAG_LENGTH = 1000
+        if len(tag) > MAX_TAG_LENGTH:
+            raise Invalid(
+                _('Tag "%s" length is more than maximum %i') % (tag, MAX_TAG_LENGTH)
+            )
