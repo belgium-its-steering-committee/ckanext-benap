@@ -116,7 +116,7 @@
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "mobility_theme",
       "required": "true",
-      "validators": "scheming_required"
+      "validators": "scheming_required scheming_valid_json_object benap_category_sub_category_validator"
     },
     {
       "field_name": "name",
@@ -536,6 +536,25 @@
       "validators":"benap_is_choice_null"
     },
     {
+      "field_name": "reference_system",
+      "label": {
+        "en": "Coordinate reference system",
+        "fr": "Système de référence de coordonnées",
+        "nl": "Coördinatenreferentiesysteem",
+        "de": "Koordinatenreferenzsystem"
+      },
+      "preset": "multiple_select",
+      "help_text": {
+          "en": "Describes the coordinate reference system used in the data set. It is possible to select multiple options.",
+          "fr": "Décrit le système de référence de coordonnées utilisé dans le jeu de données. Il est possible de sélectionner plusieurs options.",
+          "nl": "Beschrijft het coördinatenreferentiesysteem dat in de dataset wordt gebruikt. Het is mogelijk om meerdere opties te selecteren.",
+          "de": "Beschreibt das verwendete Koordinatenreferenzsystem im Datensatz. Es ist möglich, mehrere Optionen auszuwählen."
+      },
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "reference_system",
+      "validators": "benap_is_choice_null"
+    },
+    {
        "field_name": "georeferencing_method",
       "label": {
         "en": "Georeferencing method",
@@ -588,7 +607,7 @@
       },
       "form_snippet": "form_tags.html",
       "required": "true",
-      "validators": "scheming_required tag_string_convert"
+      "validators": "scheming_required benap_tag_string_convert benap_fluent_tags_validator"
     },
     {
       "field_name": "frequency",
