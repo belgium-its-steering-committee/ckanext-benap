@@ -517,7 +517,8 @@ def get_translated_tag(tag, lang):
     tags.append(tuple([DATASET_TYPE]))
     tags.append(tuple([NAP_TYPE]))
     try:
-        return filter(lambda x: x[0] == tag['name'], [translated_tag for translated_taglist in
+
+        return filter(lambda x: x[0] == benap_tag_mapping(tag['name']), [translated_tag for translated_taglist in
                                                       [categorized_tags[0] for categorized_tags in
                                                        tags] for translated_tag in
                                                       translated_taglist])[0][1][lang]
@@ -748,7 +749,7 @@ def filter_default_tags_only(items):
             tags.append(translated_tag[0])
     for item in items:
         for tag in tags:
-            if item['name'] == tag:
+            if benap_tag_mapping(item['name']) == tag:
                 filtered_items.append(item)
     return filtered_items
 
@@ -951,3 +952,14 @@ def benap_tag_update_helper(data, choices):
 
     else:
         return None
+
+def benap_tag_mapping(tag_name):
+    """
+    Create dictionary of tag mapping (tag name in table tag and url in table package_extra, fluent_tags)
+    """
+    urls = [item[0] for sublist, _ in get_translated_tags() for item in sublist]
+    tag_mapping = {
+        url.split("/")[-1].replace("-", " ").capitalize(): url
+        for url in urls
+    }
+    return tag_mapping.get(tag_name)
