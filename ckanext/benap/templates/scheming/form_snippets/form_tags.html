@@ -19,7 +19,7 @@ fieldset.checkboxes label input {
     id='field-' + field.field_name,
     label=h.scheming_language_text(field.label),
     placeholder=h.scheming_language_text(field.form_placeholder),
-    value=data[field.field_name],
+    value=h.benap_tag_update_helper(data[field.field_name], h.get_translated_tags()),
     error=errors[field.field_name],
     classes=field.classes if 'classes' in field else ['control-medium'],
     attrs=dict({"class": "form-control"}, **(field.get('form_attrs', {}))),
