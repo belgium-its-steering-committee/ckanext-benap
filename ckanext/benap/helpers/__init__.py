@@ -936,3 +936,18 @@ def benap_retrieve_raw_choices_list(field_name):
     """
     from ckanext.benap.helpers import lists
     return getattr(lists, field_name.upper())
+
+def benap_tag_update_helper(data, choices):
+    """
+    Helper to remove old unused tags
+    """
+    if data:
+        elements = data.split(',')
+        valid_choices = [item[0] for sublist, _ in choices for item in sublist]
+        filtered_elements = [element for element in elements if element in valid_choices]
+        filtered_data = ','.join(filtered_elements)
+
+        return filtered_data
+
+    else:
+        return None
