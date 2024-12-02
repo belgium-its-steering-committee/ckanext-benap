@@ -12,7 +12,7 @@ from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallba
     forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element, get_organization_by_id, benap_fluent_label, \
     translate_organization_filter, is_user_sysAdmin, is_nap_checked, convert_validation_list_to_JSON, benap_get_organization_field_by_id, \
     benap_get_organization_field_by_specified_field, benap_retrieve_dict_items_or_keys_or_values, get_translated_category_and_sub_category, \
-    benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper
+    benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper, benap_tag_mapping
 
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.validators import phone_number_validator, \
@@ -80,7 +80,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_get_translated_category_and_sub_category': get_translated_category_and_sub_category,
             'benap_retrieve_org_title_tel_email': benap_retrieve_org_title_tel_email,
             'benap_retrieve_raw_choices_list': benap_retrieve_raw_choices_list,
-            'benap_tag_update_helper': benap_tag_update_helper
+            'benap_tag_update_helper': benap_tag_update_helper,
+            'benap_tag_mapping': benap_tag_mapping
         }
 
     # IValidators

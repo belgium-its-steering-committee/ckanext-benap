@@ -225,6 +225,9 @@ def benap_tag_string_convert(key, flattened_data, errors, context):
                 if tag.strip()]
     else:
         tags = flattened_data[key]
+
+    tags = [url.split("/")[-1].capitalize() for url in tags]
+
     current_index = max( [int(k[1]) for k in flattened_data.keys() if len(k) == 3 and k[0] == 'tags'] + [-1] )
 
     for num, tag in zip(count(current_index+1), tags):
