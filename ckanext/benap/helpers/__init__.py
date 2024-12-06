@@ -959,7 +959,7 @@ def benap_tag_mapping(tag_name):
     """
     urls = [item[0] for sublist, _ in get_translated_tags() for item in sublist]
     tag_mapping = {
-        url.split("/")[-1].replace("-", " ").capitalize(): url
+        url.split("/")[-1].capitalize(): url
         for url in urls
     }
     return tag_mapping.get(tag_name)
