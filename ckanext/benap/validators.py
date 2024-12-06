@@ -201,7 +201,8 @@ def license_fields_conditional_validation(key, flattened_data, errors, context):
             if license_type == 'Other':
                 field_value = json.loads(field_value)
                 if not field_value.get('en'):
-                    raise Invalid(_('The license text is missing. This is required because "Other" was chosen as the license type.'))
+                    raise Invalid(_('The license text is missing. At least the EN license text is required because'
+                                    ' "Other" was chosen as the license type.'))
 
     else:
         if field_value:
@@ -244,3 +245,8 @@ def benap_tag_string_convert(key, flattened_data, errors, context):
             raise Invalid(
                 _('Tag "%s" length is more than maximum %i') % (tag, MAX_TAG_LENGTH)
             )
+
+        tagname_match = re.compile('[\w \-.]*$', re.UNICODE)
+        if not tagname_match.match(tag):
+            raise Invalid(_('Tag "%s" must be alphanumeric '
+                            'characters or symbols: -_.') % (value))
