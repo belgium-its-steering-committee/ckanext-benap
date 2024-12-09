@@ -1340,15 +1340,21 @@ APPLICATION_LAYER_PROTOCOL = [
         "fr": u"Autre",
         "nl": u"Andere",
         "de": u"Andere"
+    }),
+    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/ocit', {
+        "en": u"OCIT",
+        "fr": u"OCIT",
+        "nl": u"OCIT",
+        "de": u"OCIT"
     })
   ]
 
 FREQUENCY = [
     ('http://publications.europa.eu/resource/authority/frequency/IRREG', {
-        "en": u"Irregular",
-        "fr": u"Irrégulier",
-        "nl": u"Onregelmatig",
-        "de": u"Unregelmäßig"
+        "en": u"On occurence",
+        "fr": u"Dès que disponible",
+        "nl": u"Zodra beschikbaar",
+        "de": u"Sofort"
     }),
     ('http://publications.europa.eu/resource/authority/frequency/1MIN', {
         "en": u"Every minute",
@@ -1445,6 +1451,12 @@ FREQUENCY = [
         "fr": u"Moins qu'une fois par an",
         "nl": u"Minder vaak dan één keer per jaar",
         "de": u"Weniger häufig als einmal pro Jahr"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/IRREG', {
+        "en": u"Irregular",
+        "fr": u"Irrégulier",
+        "nl": u"Onregelmatig",
+        "de": u"Unregelmäßig"
     })
 ]
 
@@ -1508,12 +1520,6 @@ DATA_MODEL = [
         "fr": u"Autre",
         "nl": u"Andere",
         "de": u"Andere"
-    }),
-    ('https://w3id.org/mobilitydcat-ap/application-layer-protocol/ocit', {
-        "en": u"OCIT",
-        "fr": u"OCIT",
-        "nl": u"OCIT",
-        "de": u"OCIT"
     }),
     ('https://w3id.org/mobilitydcat-ap/mobility-data-standard/tn-its', {
         "en": u"TN-ITS (CEN/TS 17268)",

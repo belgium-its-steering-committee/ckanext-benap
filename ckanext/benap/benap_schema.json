@@ -539,15 +539,15 @@
       "field_name": "reference_system",
       "label": {
         "en": "Coordinate reference system",
-        "fr": "Système de référence de coordonnées",
-        "nl": "Coördinatenreferentiesysteem",
+        "fr": "Système de coordonnées de référence",
+        "nl": "Coördinaten referentiesysteem",
         "de": "Koordinatenreferenzsystem"
       },
       "preset": "multiple_select",
       "help_text": {
           "en": "Describes the coordinate reference system used in the data set. It is possible to select multiple options.",
-          "fr": "Décrit le système de référence de coordonnées utilisé dans le jeu de données. Il est possible de sélectionner plusieurs options.",
-          "nl": "Beschrijft het coördinatenreferentiesysteem dat in de dataset wordt gebruikt. Het is mogelijk om meerdere opties te selecteren.",
+          "fr": "Décrit le système de coordonnées de référence utilisé dans le jeu de données. Il est possible de sélectionner plusieurs options.",
+          "nl": "Beschrijft het coördinaten referentiesysteem dat in de dataset wordt gebruikt. Het is mogelijk om meerdere opties te selecteren.",
           "de": "Beschreibt das verwendete Koordinatenreferenzsystem im Datensatz. Es ist möglich, mehrere Optionen auszuwählen."
       },
       "choices_helper": "benap_ontology_helper",
@@ -942,10 +942,10 @@
         "de": "Rechte"
       },
       "help_text": {
-        "en": "Describes the conditions for access and usage of the data set (rights).",
-        "fr": "Décrit les conditions d'accès et d'utilisation du jeu de données (droits).",
-        "nl": "Beschrijft de toegangs- en gebruiksvoorwaarden van de dataset (rechten).",
-        "de": "Beschreibt die Zugangs- und Nutzungsbedingungen des Datensatzes (Rechte)."
+        "en": "Describes the conditions for access and usage of the data (rights).",
+        "fr": "Décrit les conditions d'accès et d'utilisation des données (droits).",
+        "nl": "Beschrijft de toegangs- en gebruiksvoorwaarden van de gegevens (rechten).",
+        "de": "Beschreibt die Zugangs- und Nutzungsbedingungen der Daten (Rechte)."
       },
       "form_snippet": "nested_field_license.html",
       "display_snippet": null,
@@ -1034,7 +1034,7 @@
       "output_validators": "fluent_core_translated_output",
       "validators": "fluent_text",
       "form_snippet": null,
-      "display_snippet": "fluent_markdown.html"
+      "display_snippet": "fluent_all_translations.html"
     },
     {
       "field_name": "license",
@@ -1072,10 +1072,10 @@
         "de": "Lizenztyp"
       },
       "help_text": {
-        "en": "Specify the license type (standard license) under which the data set is made available.",
-        "fr": "Spécifiez le type de licence (licence standard) sous laquelle le jeu de données est mis à disposition.",
-        "nl": "Geef het licentietype op (standaardlicentie) waaronder de dataset beschikbaar wordt gesteld.",
-        "de": "Geben Sie den Lizenztyp (Standardlizenz) an, unter dem der Datensatz verfügbar gemacht wird."
+        "en": "Specify the license type (standard license) under which the data is made available.",
+        "fr": "Spécifiez le type de licence (licence standard) sous laquelle les données sont mises à disposition.",
+        "nl": "Geef het licentietype op (standaardlicentie) waaronder de gegevens beschikbaar worden gesteld.",
+        "de": "Geben Sie den Lizenztyp (Standardlizenz) an, unter dem die Daten verfügbar gemacht werden."
       },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "license_type",
@@ -1109,7 +1109,7 @@
         "de"
       ],
       "form_snippet": null,
-      "display_snippet": "fluent_markdown_large_text.html",
+      "display_snippet": "fluent_large_text_all_translations.html",
       "error_snippet": "fluent_text.html",
       "output_validators": "fluent_core_translated_output",
       "validators": "fluent_text benap_is_choice_null benap_license_fields_conditional_validation"

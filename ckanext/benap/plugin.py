@@ -112,12 +112,15 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     def dataset_facets(self, facets_dict, package_type):
         facets_dict = OrderedDict([
             (u'nap_type', u'NAP Type'),
-            (u'its_dataset_type', u'Dataset Type'),
+            #TODO make new mobility theme (old its_dataset_type) work in filters
+            # (u'its_dataset_type', u'Dataset Type'),
             (u'tags', u'Tags'),
-            (u'regions_covered', u'Area covered by publication'),
+            #TODO make new regions_covered field values work in filters
+            # (u'regions_covered', u'Area covered by publication'),
             (u'organization', u'Organizations'),
-            (u'res_format', u'Formats'),
-            (u'license_id', u'Licenses'),
+            #TODO make new format and licenses fields work in filters
+            # (u'res_format', u'Formats'),
+            # (u'license_id', u'Licenses'),
         ])
         return facets_dict
 
