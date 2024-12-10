@@ -1,27 +1,33 @@
 <div role="main" class="hero">
   <div class="container">
-    {% block search %}
-      {% snippet 'home/snippets/search.html' %}
-    {% endblock %}
+          {% block search %}
+            {% snippet 'home/snippets/search.html' %}
+          {% endblock %}
+
   </div>
 </div>
+
 <div id="content-box" role="main" style="padding-top: 25px;">
+ <div class="container">
+   <div class="row">
+        {% snippet 'home/snippets/maintenanceBanner.html' %}
+    </div>
+ </div>
   <div class="container">
 
-    <div class="row">
-      <div class="col col-md-6 col2">
-        <div class="row special-row">
-          <div class="special-col col col-12" style="padding-bottom: 0; padding-top: 0;">
+    <div class="row" style="display:flex;">
+      <div id="one" class="col-md-6 col-xs-12" style="flex:1;">
+          <div style="padding: 0px 15px;">
             {% block feedback %}
               {% snippet 'home/snippets/feedback.html' %}
             {% endblock %}
           </div>
-          <div class="special-col col col-12" style="padding-bottom: 0;">
+          <div style="padding: 25px 15px;">
             {% block report %}
               {% snippet 'home/snippets/report.html' %}
             {% endblock %}
           </div>
-          <div class="special-col col col-12" style="padding-bottom: 0;">
+          <div style="padding: 0px 15px;">
               <div class="flex-center border-grey" style="justify-content: start !important; align-items: center;">
                 <!--img src="/images/newsletter.jpg" style="padding: 0 15px 0 0; min-width: 67px; max-width: 67px; max-height: 53px;"/-->
                 <i class="fa fa-newspaper-o fa-3x" style="padding-right: 16px;" aria-hidden="true"></i>
@@ -38,33 +44,15 @@
                 </div>
               </div>
           </div>
-        </div>
       </div>
-
-      <style>
-        .video-row-col {
-            padding-top: 50px;
-            height: 420px;
-         }
-
-
-        @media only screen and (min-width: 992px) {
-          .video-row-col {
-            position: absolute;
-            left: 50%;
-            padding-bottom: 0;
-            padding-top: 0;
-            height: 100%;
-            min-height: 100%;
-          }
-        }
-      </style>
-
-      <div class="special-col col col-md-6 col2 video-row-col" style="">
-           <iframe style="min-width: 100%; min-height: 100%;"
-            src="{{ h.getTranslatedVideoUrl(h.lang()) }}">
+      <div id="two" class="col-md-6 col-xs-12" style="flex:1;">
+           <iframe
+               style="min-width: 100%; min-height: 100%;"
+               src="{{ h.getTranslatedVideoUrl(h.lang()) }}"
+               frameborder="0"
+               allowfullscreen>
            </iframe>
-      </div>
+      </div >
     </div>
 
     <div class="row" style="display: flex; flex-wrap: wrap;">
@@ -101,3 +89,21 @@
     #}
   </div>
 </div>
+  <!--style>
+        .video-row-col {
+            padding-top: 50px;
+            height: 420px;
+         }
+
+
+        @media only screen and (min-width: 992px) {
+          .video-row-col {
+            position: absolute;
+            left: 50%;
+            padding-bottom: 0;
+            padding-top: 0;
+            height: 100%;
+            min-height: 100%;
+          }
+        }
+      </style-->
