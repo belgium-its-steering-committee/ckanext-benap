@@ -1,60 +1,14 @@
 {% set url = h.full_current_url() %}
 <div class="container bg-warning">
     <div class="row justify-content-center border-grey">
-        {%if url != 'https://www.transportdata.be' %}
-        <div class="col-sm-7">
-        {% else %}
         <div class="col-md-auto">
-        {% endif %}
             <h1 class="uppercase" style="word-break: break-word;">
-                {{ _('Temporary Standstill: Implementing MobilityDCAT for Enhanced Data Management') }}
+                {{ _('ATTENTION: DUE TO MAINTENANCE IT IS NOT POSSIBLE TO REGISTER NEW DATASETS BETWEEN MONDAY 16/12 AND FRIDAY 20/12.') }}
             </h1>
-            <h2 class="text-danger">{{ _('Monday 16 december 2025 to friday 20 december 2025')}}</h2>
             <p class="fs-20 font-italic" style="word-break: break-word;">
-                {{ _('We are taking a brief, one-week pause to transition our datasets to the new MobilityDCAT-AP standard and streamline our operations. This upgrade ensures better data interoperability, accessibility, and alignment with EU best practices. Thank you for your patience and understanding as we enhance our services for the future.') }}
+                {{ _('Transportdata.be remains available for queries and searches. In case of questions, please contact the') }}
+                <a href="mailto:contact@transportdata.be">NAP Helpdesk</a>.
             </p>
-        </div>
-        {%if url != 'https://www.transportdata.be' %}
-        <div class="col-md-auto ">
-            <pre class="text-success" style="font-weight:bold">
-                    ____
-                  ;`    `'-._
-                 / \        /\
-               /`   \      |  ;
-              /      \     |  |
-             /        `\   |  |
-            /           \_ /  |
-           ;            / `\  |
-          ,|_  __       \__/  |
-          _\_o/_(             |_
-         /`"=/\==""=="=="=="=="`\
-         |   )/                 |
-         \                      /
-         /';=""==""==""==""==";`\
-         |  /`   /~\  /~\   `\  |
-         |  \  _ \o/  \o/ _  /  |
-         \  ; (_)   __   (_) ;  /
-         /  |\_.-""(__)""-._/|  \
-        |   \       /\       /   |
-       /     '.___.'__'.___.'     \
-      |             \/             |
-      |                            |
-      \                            /
-      |                            |
-       \                          /
-        '.                      .'
-          '-.__            __.-'
-               '---'--'---'
-
-------------------------------------------------
-Thank you for the trust in GeoSolutions
-Wishing the NGI team a warm Christmas and Happy New Year
-Frank, Mauk & Felten
-
-            </pre>
-        </div>
-        {% endif %}
-    </div>
         </div>
     </div>
 </div>
