@@ -493,7 +493,7 @@
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "EU_COUNTRY",
       "required": "true",
-      "validators": "scheming_required scheming_multiple_choice benap_countries_covered_belgium"
+      "validators": "scheming_multiple_choice scheming_required benap_countries_covered_belgium"
     },
     {
       "field_name": "regions_covered",
@@ -552,7 +552,7 @@
       },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "reference_system",
-      "validators": "benap_is_choice_null"
+      "validators": "scheming_multiple_choice benap_is_choice_null"
     },
     {
        "field_name": "georeferencing_method",
@@ -571,7 +571,7 @@
       },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "georeferencing_method",
-      "validators": "benap_is_choice_null"
+      "validators": "scheming_multiple_choice benap_is_choice_null"
     },
     {
       "field_name": "spatial",
@@ -656,7 +656,7 @@
         "de"
       ],
       "form_snippet": "fluent_markdown.html",
-      "display_snippet": "fluent_markdown.html",
+      "display_snippet": "fluent_markdown_fallback.html",
       "error_snippet": "fluent_text.html",
       "output_validators": "fluent_core_translated_output",
       "validators": "fluent_text"
@@ -777,7 +777,7 @@
         "de"
       ],
       "form_snippet": "fluent_markdown.html",
-      "display_snippet": "fluent_markdown.html",
+      "display_snippet": "fluent_markdown_fallback.html",
       "error_snippet": "fluent_text.html",
       "output_validators": "fluent_core_translated_output",
       "validators": "fluent_text"
@@ -1034,7 +1034,7 @@
       "output_validators": "fluent_core_translated_output",
       "validators": "fluent_text",
       "form_snippet": null,
-      "display_snippet": "fluent_all_translations.html"
+      "display_snippet": "fluent_markdown_fallback.html"
     },
     {
       "field_name": "license",
@@ -1045,10 +1045,10 @@
         "de": "Lizenz"
       },
       "help_text": {
-        "en": "Describes the license under which the data set is made available.",
-        "fr": "Décrit la licence sous laquelle le jeu de données est mis à disposition.",
-        "nl": "Beschrijft de licentie waaronder de dataset beschikbaar wordt gesteld.",
-        "de": "Beschreibt die Lizenz, unter der der Datensatz verfügbar gemacht wird."
+        "en": "Describes the license under which the data is made available.",
+        "fr": "Décrit la licence sous laquelle les données sont mises à disposition.",
+        "nl": "Beschrijft de licentie waaronder de gegevens beschikbaar worden gesteld.",
+        "de": "Beschreibt die Lizenz, unter dem die Daten verfügbar gemacht werden."
       },
       "form_snippet": null,
       "display_snippet": null,
@@ -1109,7 +1109,7 @@
         "de"
       ],
       "form_snippet": null,
-      "display_snippet": "fluent_large_text_all_translations.html",
+      "display_snippet": "fluent_large_text_fallback.html",
       "error_snippet": "fluent_text.html",
       "output_validators": "fluent_core_translated_output",
       "validators": "fluent_text benap_is_choice_null benap_license_fields_conditional_validation"
