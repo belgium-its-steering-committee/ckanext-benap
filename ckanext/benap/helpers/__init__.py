@@ -3,7 +3,7 @@ import json
 import ckan.plugins.toolkit as toolkit
 from ckan.common import config
 import logging
-from decorators import decorator_timer
+from .decorators import decorator_timer
 from itertools import chain
 
 from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
@@ -810,7 +810,7 @@ def benap_fluent_label(field_name, field_label, lang):
     """
     schema = scheming_get_dataset_schema('dataset')
     if schema:
-        field_metadata = filter(lambda x: x['field_name'] == field_name, schema['dataset_fields'])
+        field_metadata = list(filter(lambda x: x['field_name'] == field_name, schema['dataset_fields']))
         if len(field_metadata) > 0:
             return field_metadata[0]['label'][lang]
 
@@ -911,7 +911,7 @@ def benap_retrieve_org_title_tel_email():
         },
         {})
     context = {u'user': user[u'name']}
-    available_orgs_for_user = [org['name'].encode("utf-8") for org in h.organizations_available('create_dataset')]
+    available_orgs_for_user = [org['name'] for org in h.organizations_available('create_dataset')]
     data = toolkit.get_action(u'organization_list')(context,
                                                     {
                                                         u'include_dataset_count': False,
