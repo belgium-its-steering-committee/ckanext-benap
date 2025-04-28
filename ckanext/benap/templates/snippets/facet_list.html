@@ -91,18 +91,12 @@ within_tertiary
                 <ul class="{{ nav_class or 'list-unstyled nav nav-simple nav-facet' }}">
                   {#items list needs to show all tags when "show more is selected" #}
                   <script>
-                    console.log("3 SCRIPT")
-                    console.log('{{name}}')
                     var itemsNr = '{{items | length}}' 
                     itemsNr= parseInt(itemsNr)
                     if(itemsNr> 10){
-                        console.log('K::', itemsNr)
-                        console.log("open sesamie")
-                        console.log('{{title}}')
                         var ulElement = $('#collapse-{{ name }}')
                         ulElement.attr('data-module', 'openEnveloppeDueToShowMore')
                       }
-                    console.log("3 SCRIPT END")
                   </script>
                   {% for item in items %}
                     {% set href = h.remove_url_param(name, item.name, extras=extras, alternative_url=alternative_url) if item.active else h.add_url_param(new_params={name: item.name}, extras=extras, alternative_url=alternative_url) %}
@@ -138,8 +132,6 @@ within_tertiary
         </section>
 
         <script>
-            console.log("1 SCRIPT")
-            console.log('{{name}}')
             //open 'tags' envelope on every page load
             if ('tags' === '{{name}}' || $('#collapse-{{ name }}[data-module="openEnveloppeDueToShowMore"]').length > 0){
               //'open' caret not visible, 'close' caret visible
@@ -159,7 +151,6 @@ within_tertiary
               //'close' caret
               $('#collapse-{{ name }}-close').toggle();
             });
-            console.log("1 SCRIPT END")
         </script>
       {% endblock %}
     {% endif %}
