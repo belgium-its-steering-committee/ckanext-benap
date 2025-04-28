@@ -1,3 +1,4 @@
+{% set dataset_type = h.default_package_type() %}
 {% set tags = h.get_facet_items_dict('tags', limit=3) %}
 {% set lang = h.lang() %}
 {% set placeholder = _('E.g. environment') %}
@@ -8,7 +9,7 @@
 <div class="flex flex-responsive-sm search-flex">
     <div class="searchbox">
         <h2>{{ _("SEARCH FOR DATA SETS") }}</h2>
-        <form class="flex" style="align-items: center" method="get" action="{% url_for controller='package', action='search' %}">
+        <form class="flex" style="align-items: center" method="get" action="{% url_for dataset_type ~ '.search' %}">
             <input placeholder="{{ _('ex. transport, cars, trains, ...') }}" id="field-main-search" type="text" class="form-control" name="q" autocomplete="off"/>
             <div>
                 <button type="submit" style="height:45px;font-size:18px;"><i class="fa fa-search"></i></button>
@@ -19,7 +20,7 @@
 
             {% for tag in tags %}
                 {% set testingx = h.get_translated_tag(tag, h.lang()) %}
-                <a class="rounded btn btn-light" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(h.get_translated_tag(tag, lang), 22) }}</a>
+                <a class="rounded btn btn-light" href="{% url_for 'dataset.search', tags=tag.name %}">{{ h.truncate(h.get_translated_tag(tag, lang), 22) }}</a>
             {% endfor %}
         </div>
     </div>
@@ -28,7 +29,7 @@
         <div class="register-flex">
             <p class="lh-1-2">{{ _("Data providers can easily add data to the catalogue.") }}</p>
             {% if c.userobj %}
-                <button class="bt-large" style="height: auto; min-width: 136px;" onclick="location.href='{{ h.url_for(controller='package', action='search') }}'">{{ _("Add Data") }}</button>
+                <button class="bt-large" style="height: auto; min-width: 136px;" onclick="location.href='{{ h.url_for("dataset.search") }}'">{{ _("Add Data") }}</button>
             {% else %}
                 <button class="bt-large" style="height: auto;" onclick="location.href='{{ h.url_for(controller='user', action='login') }}'">{{ _('Log in') }}</button>
             {% endif %}

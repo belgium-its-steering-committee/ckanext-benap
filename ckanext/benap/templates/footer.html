@@ -7,7 +7,7 @@
           <ul class="footer-link list-unstyled">
             {% block footer_links_without_broken_links %}
               <li><a href="https://www.linkedin.com/showcase/transportdata.be" target="_blank">{{ _('Follow us on LinkedIn') }}</a></li>
-              <li><a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='pages_show', page='/about') }}">{{ _('About Transportdata.be') }}</a></li>
+              <li><a href="{{ h.url_for('pages_show', page='/about') }}">{{ _('About Transportdata.be') }}</a></li>
             {% endblock %}
           </ul>
           <ul class="footer-link list-unstyled">
