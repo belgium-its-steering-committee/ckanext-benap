@@ -125,7 +125,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         return facets_dict
 
     # IPackageController
-    def before_index(self, pkg_dict):
+    def before_dataset_index(self, pkg_dict):
         if "regions_covered" in pkg_dict:
             pkg_dict["regions_covered"] = json.loads(pkg_dict["regions_covered"])
         if "nap_type" in pkg_dict:
@@ -140,7 +140,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
 
         return pkg_dict
 
-    def before_view(self, pkg_dict):
+    def before_dataset_view(self, pkg_dict):
         from ckantoolkit import h
         # Remove 'agreement_declaration_nap' from the dictionary if it exists
         pkg_dict.pop('agreement_declaration_nap', None)
