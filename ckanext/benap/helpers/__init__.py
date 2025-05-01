@@ -29,200 +29,200 @@ def ontology_helper(context):
     if ontology == "language":
         return map_for_form_select([
             ('http://publications.europa.eu/resource/authority/language/FRA', {
-                "en": u"French",
-                "fr": u"Français",
-                "nl": u"Frans",
-                "de": u"Französisch"
+                "en": "French",
+                "fr": "Français",
+                "nl": "Frans",
+                "de": "Französisch"
             }),
             ('http://publications.europa.eu/resource/authority/language/ENG', {
-                "en": u"English",
-                "fr": u"Anglais",
-                "nl": u"Engels",
-                "de": u"Englisch"
+                "en": "English",
+                "fr": "Anglais",
+                "nl": "Engels",
+                "de": "Englisch"
             }),
             ('http://publications.europa.eu/resource/authority/language/NLD', {
-                "en": u"Dutch",
-                "fr": u"Néerlandais",
-                "nl": u"Nederlands",
-                "de": u"Niederländisch"
+                "en": "Dutch",
+                "fr": "Néerlandais",
+                "nl": "Nederlands",
+                "de": "Niederländisch"
             }),
             ('http://publications.europa.eu/resource/authority/language/DEU', {
-                "en": u"German",
-                "fr": u"Allemand",
-                "nl": u"Duits",
-                "de": u"Deutsch"
+                "en": "German",
+                "fr": "Allemand",
+                "nl": "Duits",
+                "de": "Deutsch"
             }),
         ])
 
     elif ontology == "EU_COUNTRY":
         return map_for_form_select([
             ('http://publications.europa.eu/resource/authority/country/BEL', {
-                "en": u"Belgium",
-                "fr": u"Belgique",
-                "nl": u"België",
-                "de": u"Belgien"
+                "en": "Belgium",
+                "fr": "Belgique",
+                "nl": "België",
+                "de": "Belgien"
             }),
             ('http://publications.europa.eu/resource/authority/country/NLD', {
-                "en": u"Netherlands",
-                "fr": u"Pays-Bas",
-                "nl": u"Nederland",
-                "de": u"Niederlande"
+                "en": "Netherlands",
+                "fr": "Pays-Bas",
+                "nl": "Nederland",
+                "de": "Niederlande"
             }),
             ('http://publications.europa.eu/resource/authority/country/FRA', {
-                "en": u"France",
-                "fr": u"France",
-                "nl": u"Frankrijk",
-                "de": u"Frankreich"
+                "en": "France",
+                "fr": "France",
+                "nl": "Frankrijk",
+                "de": "Frankreich"
             }),
             ('http://publications.europa.eu/resource/authority/country/DEU', {
-                "en": u"Germany",
-                "fr": u"Allemagne",
-                "nl": u"Duitsland",
-                "de": u"Deutschland"
+                "en": "Germany",
+                "fr": "Allemagne",
+                "nl": "Duitsland",
+                "de": "Deutschland"
             }),
             ('http://publications.europa.eu/resource/authority/country/LUX', {
-                "en": u"Luxembourg",
-                "fr": u"Luxembourg",
-                "nl": u"Luxemburg",
-                "de": u"Luxemburg"
+                "en": "Luxembourg",
+                "fr": "Luxembourg",
+                "nl": "Luxemburg",
+                "de": "Luxemburg"
             }),
             ('http://publications.europa.eu/resource/authority/country/GBR', {
-                "en": u"United Kingdom",
-                "fr": u"Royaume-Uni",
-                "nl": u"Verenigd Koninkrijk",
-                "de": u"Vereinigtes Königreich"
+                "en": "United Kingdom",
+                "fr": "Royaume-Uni",
+                "nl": "Verenigd Koninkrijk",
+                "de": "Vereinigtes Königreich"
             }),
             ('http://publications.europa.eu/resource/authority/country/BGR', {
-                "en": u"Bulgaria",
-                "fr": u"Bulgarie",
-                "nl": u"Bulgarije",
-                "de": u"Bulgarien"
+                "en": "Bulgaria",
+                "fr": "Bulgarie",
+                "nl": "Bulgarije",
+                "de": "Bulgarien"
             }),
             ('http://publications.europa.eu/resource/authority/country/CZE', {
-                "en": u"Czechia",
-                "fr": u"Tchéquie",
-                "nl": u"Tsjechië",
-                "de": u"Tschechien"
+                "en": "Czechia",
+                "fr": "Tchéquie",
+                "nl": "Tsjechië",
+                "de": "Tschechien"
             }),
             ('http://publications.europa.eu/resource/authority/country/DNK', {
-                "en": u"Denmark",
-                "fr": u"Danemark",
-                "nl": u"Denemarken",
-                "de": u"Dänemark"
+                "en": "Denmark",
+                "fr": "Danemark",
+                "nl": "Denemarken",
+                "de": "Dänemark"
             }),
             ('http://publications.europa.eu/resource/authority/country/EST', {
-                "en": u"Estonia",
-                "fr": u"Estonie",
-                "nl": u"Estland",
-                "de": u"Estland"
+                "en": "Estonia",
+                "fr": "Estonie",
+                "nl": "Estland",
+                "de": "Estland"
             }),
             ('http://publications.europa.eu/resource/authority/country/IRL', {
-                "en": u"Ireland",
-                "fr": u"Irlande",
-                "nl": u"Ierland",
-                "de": u"Irland"
+                "en": "Ireland",
+                "fr": "Irlande",
+                "nl": "Ierland",
+                "de": "Irland"
             }),
             ('http://publications.europa.eu/resource/authority/country/GRC', {
-                "en": u"Greece",
-                "fr": u"Grèce",
-                "nl": u"Griekenland",
-                "de": u"Griechenland"
+                "en": "Greece",
+                "fr": "Grèce",
+                "nl": "Griekenland",
+                "de": "Griechenland"
             }),
             ('http://publications.europa.eu/resource/authority/country/ESP', {
-                "en": u"Spain",
-                "fr": u"Espagne",
-                "nl": u"Spanje",
-                "de": u"Spanien"
+                "en": "Spain",
+                "fr": "Espagne",
+                "nl": "Spanje",
+                "de": "Spanien"
             }),
             ('http://publications.europa.eu/resource/authority/country/HRV', {
-                "en": u"Croatia",
-                "fr": u"Croatie",
-                "nl": u"Kroatië",
-                "de": u"Kroatien"
+                "en": "Croatia",
+                "fr": "Croatie",
+                "nl": "Kroatië",
+                "de": "Kroatien"
             }),
             ('http://publications.europa.eu/resource/authority/country/ITA', {
-                "en": u"Italy",
-                "fr": u"Italie",
-                "nl": u"Italië",
-                "de": u"Italien"
+                "en": "Italy",
+                "fr": "Italie",
+                "nl": "Italië",
+                "de": "Italien"
             }),
             ('http://publications.europa.eu/resource/authority/country/CYP', {
-                "en": u"Cyprus",
-                "fr": u"Chypre",
-                "nl": u"Cyprus",
-                "de": u"Zypern"
+                "en": "Cyprus",
+                "fr": "Chypre",
+                "nl": "Cyprus",
+                "de": "Zypern"
             }),
             ('http://publications.europa.eu/resource/authority/country/LVA', {
-                "en": u"Latvia",
-                "fr": u"Lettonie",
-                "nl": u"Letland",
-                "de": u"Lettland"
+                "en": "Latvia",
+                "fr": "Lettonie",
+                "nl": "Letland",
+                "de": "Lettland"
             }),
             ('http://publications.europa.eu/resource/authority/country/LTU', {
-                "en": u"Lithuania",
-                "fr": u"Lituanie",
-                "nl": u"Litouwen",
-                "de": u"Litauen"
+                "en": "Lithuania",
+                "fr": "Lituanie",
+                "nl": "Litouwen",
+                "de": "Litauen"
             }),
             ('http://publications.europa.eu/resource/authority/country/HUN', {
-                "en": u"Hungary",
-                "fr": u"Hongrie",
-                "nl": u"Hongarije",
-                "de": u"Ungarn"
+                "en": "Hungary",
+                "fr": "Hongrie",
+                "nl": "Hongarije",
+                "de": "Ungarn"
             }),
             ('http://publications.europa.eu/resource/authority/country/MLT', {
-                "en": u"Malta",
-                "fr": u"Malte",
-                "nl": u"Malta",
-                "de": u"Malta"
+                "en": "Malta",
+                "fr": "Malte",
+                "nl": "Malta",
+                "de": "Malta"
             }),
             ('http://publications.europa.eu/resource/authority/country/AUT', {
-                "en": u"Austria",
-                "fr": u"Autriche",
-                "nl": u"Oostenrijk",
-                "de": u"Österreich"
+                "en": "Austria",
+                "fr": "Autriche",
+                "nl": "Oostenrijk",
+                "de": "Österreich"
             }),
             ('http://publications.europa.eu/resource/authority/country/POL', {
-                "en": u"Poland",
-                "fr": u"Pologne",
-                "nl": u"Polen",
-                "de": u"Polen"
+                "en": "Poland",
+                "fr": "Pologne",
+                "nl": "Polen",
+                "de": "Polen"
             }),
             ('http://publications.europa.eu/resource/authority/country/PRT', {
-                "en": u"Portugal",
-                "fr": u"Portugal",
-                "nl": u"Portugal",
-                "de": u"Portugal"
+                "en": "Portugal",
+                "fr": "Portugal",
+                "nl": "Portugal",
+                "de": "Portugal"
             }),
             ('http://publications.europa.eu/resource/authority/country/ROU', {
-                "en": u"Romania",
-                "fr": u"Roumanie",
-                "nl": u"Roemenië",
-                "de": u"Rumänien"
+                "en": "Romania",
+                "fr": "Roumanie",
+                "nl": "Roemenië",
+                "de": "Rumänien"
             }),
             ('http://publications.europa.eu/resource/authority/country/SVN', {
-                "en": u"Slovenia",
-                "fr": u"Slovénie",
-                "nl": u"Slovenië",
-                "de": u"Slowenien"
+                "en": "Slovenia",
+                "fr": "Slovénie",
+                "nl": "Slovenië",
+                "de": "Slowenien"
             }),
             ('http://publications.europa.eu/resource/authority/country/SVK', {
-                "en": u"Slovakia",
-                "fr": u"Slovaquie",
-                "nl": u"Slowakije",
-                "de": u"Slowakei"
+                "en": "Slovakia",
+                "fr": "Slovaquie",
+                "nl": "Slowakije",
+                "de": "Slowakei"
             }),
             ('http://publications.europa.eu/resource/authority/country/FIN', {
-                "en": u"Finland",
-                "fr": u"Finlande",
-                "nl": u"Finland",
-                "de": u"Finnland"
+                "en": "Finland",
+                "fr": "Finlande",
+                "nl": "Finland",
+                "de": "Finnland"
             }),
             ('http://publications.europa.eu/resource/authority/country/SWE', {
-                "en": u"Sweden",
-                "fr": u"Suède",
-                "nl": u"Zweden",
-                "de": u"Schweden"
+                "en": "Sweden",
+                "fr": "Suède",
+                "nl": "Zweden",
+                "de": "Schweden"
             }),
         ])
     elif ontology == "NUTS1_BE":
@@ -230,172 +230,172 @@ def ontology_helper(context):
     elif ontology == "NUTS3_BE":
         return map_for_form_select([
             ('http://data.europa.eu/nuts/code/BE100', {
-                "en": u"Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad",
-                "fr": u"Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad",
-                "nl": u"Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad",
-                "de": u"Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad"
+                "en": "Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad",
+                "fr": "Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad",
+                "nl": "Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad",
+                "de": "Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad"
             }),
             ('http://data.europa.eu/nuts/code/BE211', {
-                "en": u"Arr. Antwerpen",
-                "fr": u"Arr. Antwerpen",
-                "nl": u"Arr. Antwerpen",
-                "de": u"Arr. Antwerpen"
+                "en": "Arr. Antwerpen",
+                "fr": "Arr. Antwerpen",
+                "nl": "Arr. Antwerpen",
+                "de": "Arr. Antwerpen"
             }),
             ('http://data.europa.eu/nuts/code/BE212', {
-                "en": u"Arr. Mechelen",
-                "fr": u"Arr. Mechelen",
-                "nl": u"Arr. Mechelen",
-                "de": u"Arr. Mechelen"
+                "en": "Arr. Mechelen",
+                "fr": "Arr. Mechelen",
+                "nl": "Arr. Mechelen",
+                "de": "Arr. Mechelen"
             }),
             ('http://data.europa.eu/nuts/code/BE213', {
-                "en": u"Arr. Turnhout",
-                "fr": u"Arr. Turnhout",
-                "nl": u"Arr. Turnhout",
-                "de": u"Arr. Turnhout"
+                "en": "Arr. Turnhout",
+                "fr": "Arr. Turnhout",
+                "nl": "Arr. Turnhout",
+                "de": "Arr. Turnhout"
             }),
             ('http://data.europa.eu/nuts/code/BE221', {
-                "en": u"Arr. Hasselt",
-                "fr": u"Arr. Hasselt",
-                "nl": u"Arr. Hasselt",
-                "de": u"Arr. Hasselt"
+                "en": "Arr. Hasselt",
+                "fr": "Arr. Hasselt",
+                "nl": "Arr. Hasselt",
+                "de": "Arr. Hasselt"
             }),
             ('http://data.europa.eu/nuts/code/BE222', {
-                "en": u"Arr. Maaseik",
-                "fr": u"Arr. Maaseik",
-                "nl": u"Arr. Maaseik",
-                "de": u"Arr. Maaseik"
+                "en": "Arr. Maaseik",
+                "fr": "Arr. Maaseik",
+                "nl": "Arr. Maaseik",
+                "de": "Arr. Maaseik"
             }),
             ('http://data.europa.eu/nuts/code/BE223', {
-                "en": u"Arr. Tongeren",
-                "fr": u"Arr. Tongeren",
-                "nl": u"Arr. Tongeren",
-                "de": u"Arr. Tongeren"
+                "en": "Arr. Tongeren",
+                "fr": "Arr. Tongeren",
+                "nl": "Arr. Tongeren",
+                "de": "Arr. Tongeren"
             }),
             ('http://data.europa.eu/nuts/code/BE231', {
-                "en": u"Arr. Aalst",
-                "fr": u"Arr. Aalst",
-                "nl": u"Arr. Aalst",
-                "de": u"Arr. Aalst"
+                "en": "Arr. Aalst",
+                "fr": "Arr. Aalst",
+                "nl": "Arr. Aalst",
+                "de": "Arr. Aalst"
             }),
             ('http://data.europa.eu/nuts/code/BE232', {
-                "en": u"Arr. Dendermonde",
-                "fr": u"Arr. Dendermonde",
-                "nl": u"Arr. Dendermonde",
-                "de": u"Arr. Dendermonde"
+                "en": "Arr. Dendermonde",
+                "fr": "Arr. Dendermonde",
+                "nl": "Arr. Dendermonde",
+                "de": "Arr. Dendermonde"
             }),
             ('http://data.europa.eu/nuts/code/BE233', {
-                "en": u"Arr. Eeklo",
-                "fr": u"Arr. Eeklo",
-                "nl": u"Arr. Eeklo",
-                "de": u"Arr. Eeklo"
+                "en": "Arr. Eeklo",
+                "fr": "Arr. Eeklo",
+                "nl": "Arr. Eeklo",
+                "de": "Arr. Eeklo"
             }),
             ('http://data.europa.eu/nuts/code/BE234', {
-                "en": u"Arr. Gent",
-                "fr": u"Arr. Gent",
-                "nl": u"Arr. Gent",
-                "de": u"Arr. Gent"
+                "en": "Arr. Gent",
+                "fr": "Arr. Gent",
+                "nl": "Arr. Gent",
+                "de": "Arr. Gent"
             }),
             ('http://data.europa.eu/nuts/code/BE235', {
-                "en": u"Arr. Oudenaarde",
-                "fr": u"Arr. Oudenaarde",
-                "nl": u"Arr. Oudenaarde",
-                "de": u"Arr. Oudenaarde"
+                "en": "Arr. Oudenaarde",
+                "fr": "Arr. Oudenaarde",
+                "nl": "Arr. Oudenaarde",
+                "de": "Arr. Oudenaarde"
             }),
             ('http://data.europa.eu/nuts/code/BE236', {
-                "en": u"Arr. Sint-Niklaas",
-                "fr": u"Arr. Sint-Niklaas",
-                "nl": u"Arr. Sint-Niklaas",
-                "de": u"Arr. Sint-Niklaas"
+                "en": "Arr. Sint-Niklaas",
+                "fr": "Arr. Sint-Niklaas",
+                "nl": "Arr. Sint-Niklaas",
+                "de": "Arr. Sint-Niklaas"
             }),
             ('http://data.europa.eu/nuts/code/BE241', {
-                "en": u"Arr. Halle-Vilvoorde",
-                "fr": u"Arr. Halle-Vilvoorde",
-                "nl": u"Arr. Halle-Vilvoorde",
-                "de": u"Arr. Halle-Vilvoorde"
+                "en": "Arr. Halle-Vilvoorde",
+                "fr": "Arr. Halle-Vilvoorde",
+                "nl": "Arr. Halle-Vilvoorde",
+                "de": "Arr. Halle-Vilvoorde"
             }),
             ('http://data.europa.eu/nuts/code/BE242', {
-                "en": u"Arr. Leuven",
-                "fr": u"Arr. Leuven",
-                "nl": u"Arr. Leuven",
-                "de": u"Arr. Leuven"
+                "en": "Arr. Leuven",
+                "fr": "Arr. Leuven",
+                "nl": "Arr. Leuven",
+                "de": "Arr. Leuven"
             }),
             ('http://data.europa.eu/nuts/code/BE251', {
-                "en": u"Arr. Brugge",
-                "fr": u"Arr. Brugge",
-                "nl": u"Arr. Brugge",
-                "de": u"Arr. Brugge"
+                "en": "Arr. Brugge",
+                "fr": "Arr. Brugge",
+                "nl": "Arr. Brugge",
+                "de": "Arr. Brugge"
             }),
             ('http://data.europa.eu/nuts/code/BE252', {
-                "en": u"Arr. Diksmuide",
-                "fr": u"Arr. Diksmuide",
-                "nl": u"Arr. Diksmuide",
-                "de": u"Arr. Diksmuide"
+                "en": "Arr. Diksmuide",
+                "fr": "Arr. Diksmuide",
+                "nl": "Arr. Diksmuide",
+                "de": "Arr. Diksmuide"
             }),
             ('http://data.europa.eu/nuts/code/BE253', {
-                "en": u"Arr. Ieper",
-                "fr": u"Arr. Ieper",
-                "nl": u"Arr. Ieper",
-                "de": u"Arr. Ieper"
+                "en": "Arr. Ieper",
+                "fr": "Arr. Ieper",
+                "nl": "Arr. Ieper",
+                "de": "Arr. Ieper"
             }),
             ('http://data.europa.eu/nuts/code/BE254', {
-                "en": u"Arr. Kortrijk",
-                "fr": u"Arr. Kortrijk",
-                "nl": u"Arr. Kortrijk",
-                "de": u"Arr. Kortrijk"
+                "en": "Arr. Kortrijk",
+                "fr": "Arr. Kortrijk",
+                "nl": "Arr. Kortrijk",
+                "de": "Arr. Kortrijk"
             }),
             ('http://data.europa.eu/nuts/code/BE255', {
-                "en": u"Arr. Oostende",
-                "fr": u"Arr. Oostende",
-                "nl": u"Arr. Oostende",
-                "de": u"Arr. Oostende"
+                "en": "Arr. Oostende",
+                "fr": "Arr. Oostende",
+                "nl": "Arr. Oostende",
+                "de": "Arr. Oostende"
             }),
             ('http://data.europa.eu/nuts/code/BE256', {
-                "en": u"Arr. Roeselare",
-                "fr": u"Arr. Roeselare",
-                "nl": u"Arr. Roeselare",
-                "de": u"Arr. Roeselare"
+                "en": "Arr. Roeselare",
+                "fr": "Arr. Roeselare",
+                "nl": "Arr. Roeselare",
+                "de": "Arr. Roeselare"
             }),
             ('http://data.europa.eu/nuts/code/BE257', {
-                "en": u"Arr. Tielt",
-                "fr": u"Arr. Tielt",
-                "nl": u"Arr. Tielt",
-                "de": u"Arr. Tielt"
+                "en": "Arr. Tielt",
+                "fr": "Arr. Tielt",
+                "nl": "Arr. Tielt",
+                "de": "Arr. Tielt"
             }),
             ('http://data.europa.eu/nuts/code/BE258', {
-                "en": u"Arr. Veurne",
-                "fr": u"Arr. Veurne",
-                "nl": u"Arr. Veurne",
-                "de": u"Arr. Veurne"
+                "en": "Arr. Veurne",
+                "fr": "Arr. Veurne",
+                "nl": "Arr. Veurne",
+                "de": "Arr. Veurne"
             }),
             ('http://data.europa.eu/nuts/code/BE310', {
-                "en": u"Arr. Nivelles",
-                "fr": u"Arr. Nivelles",
-                "nl": u"Arr. Nivelles",
-                "de": u"Arr. Nivelles"
+                "en": "Arr. Nivelles",
+                "fr": "Arr. Nivelles",
+                "nl": "Arr. Nivelles",
+                "de": "Arr. Nivelles"
             }),
             ('http://data.europa.eu/nuts/code/BE321', {
-                "en": u"Arr. Ath",
-                "fr": u"Arr. Ath",
-                "nl": u"Arr. Ath",
-                "de": u"Arr. Ath"
+                "en": "Arr. Ath",
+                "fr": "Arr. Ath",
+                "nl": "Arr. Ath",
+                "de": "Arr. Ath"
             }),
             ('http://data.europa.eu/nuts/code/BE322', {
-                "en": u"Arr. Charleroi",
-                "fr": u"Arr. Charleroi",
-                "nl": u"Arr. Charleroi",
-                "de": u"Arr. Charleroi"
+                "en": "Arr. Charleroi",
+                "fr": "Arr. Charleroi",
+                "nl": "Arr. Charleroi",
+                "de": "Arr. Charleroi"
             }),
             ('http://data.europa.eu/nuts/code/BE323', {
-                "en": u"Arr. Mons",
-                "fr": u"Arr. Mons",
-                "nl": u"Arr. Mons",
-                "de": u"Arr. Mons"
+                "en": "Arr. Mons",
+                "fr": "Arr. Mons",
+                "nl": "Arr. Mons",
+                "de": "Arr. Mons"
             }),
             ('http://data.europa.eu/nuts/code/BE324', {
-                "en": u"Arr. Mouscron",
-                "fr": u"Arr. Mouscron",
-                "nl": u"Arr. Mouscron",
-                "de": u"Arr. Mouscron"
+                "en": "Arr. Mouscron",
+                "fr": "Arr. Mouscron",
+                "nl": "Arr. Mouscron",
+                "de": "Arr. Mouscron"
             }),
         ])
 
@@ -420,10 +420,10 @@ def ontology_helper(context):
     elif ontology == "data-theme":
         return map_for_form_select([
             ('http://publications.europa.eu/resource/authority/data-theme/TRAN', {
-                "en": u"Transport",
-                "fr": u"Transports",
-                "nl": u"Vervoer",
-                "de": u"Verkehr"
+                "en": "Transport",
+                "fr": "Transports",
+                "nl": "Vervoer",
+                "de": "Verkehr"
             })
         ])
     elif ontology == "frequency":
@@ -496,7 +496,7 @@ def forum_url():
 
 def organisation_names_for_autocomplete():
     from ckantoolkit import h
-    return map(lambda org: org['title'].encode("utf-8"), h.organizations_available('create_dataset'))
+    return [org['title'].encode("utf-8") for org in h.organizations_available('create_dataset')]
 
 
 def format_datetime(datetime):
@@ -518,10 +518,10 @@ def get_translated_tag(tag, lang):
     tags.append(tuple([NAP_TYPE]))
     try:
 
-        return filter(lambda x: x[0] == benap_tag_mapping(tag['name']), [translated_tag for translated_taglist in
+        return [x for x in [translated_tag for translated_taglist in
                                                       [categorized_tags[0] for categorized_tags in
                                                        tags] for translated_tag in
-                                                      translated_taglist])[0][1][lang]
+                                                      translated_taglist] if x[0] == benap_tag_mapping(tag['name'])][0][1][lang]
     except:
         try:
             return tag['display_name']
@@ -529,7 +529,7 @@ def get_translated_tag(tag, lang):
             try:
                 if isinstance(tag, str):
                     return tag
-                print('tag not found: ' + json.dumps(tag))
+                print(('tag not found: ' + json.dumps(tag)))
             except:
                 print('tag not found')
 
@@ -539,198 +539,198 @@ def get_translated_tags():
         ([
             ("https://w3id.org/mobilitydcat-ap/transport-mode/air",
              {
-                 "en": u"Air",
-                 "fr": u"Aérien",
-                 "nl": u"Vliegtuig",
-                 "de": u"Luftverkehr"
+                 "en": "Air",
+                 "fr": "Aérien",
+                 "nl": "Vliegtuig",
+                 "de": "Luftverkehr"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/long-distance-rail",
              {
-                 "en": u"Rail (including high speed rail)",
-                 "fr": u"Ferroviaire (y compris ferroviaire à grande vitesse)",
-                 "nl": u"Trein (m.i.v. hogesnelheidstrein)",
-                 "de": u"Eisenbahn (einschl. Hochgeschwindigkeit)"
+                 "en": "Rail (including high speed rail)",
+                 "fr": "Ferroviaire (y compris ferroviaire à grande vitesse)",
+                 "nl": "Trein (m.i.v. hogesnelheidstrein)",
+                 "de": "Eisenbahn (einschl. Hochgeschwindigkeit)"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/regional-and-local-rail",
              {
-                 "en": u"Conventional rail",
-                 "fr": u"Ferroviaire conventionnel",
-                 "nl": u"Klassieke trein",
-                 "de": u"Konventioneller Bahnverkehr"
+                 "en": "Conventional rail",
+                 "fr": "Ferroviaire conventionnel",
+                 "nl": "Klassieke trein",
+                 "de": "Konventioneller Bahnverkehr"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/long-distance-coach",
              {
-                 "en": u"Long-distance coach",
-                 "fr": u"Autocar longue distance",
-                 "nl": u"Langeafstandsbus",
-                 "de": u"Fernbus"
+                 "en": "Long-distance coach",
+                 "fr": "Autocar longue distance",
+                 "nl": "Langeafstandsbus",
+                 "de": "Fernbus"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/maritime",
              {
-                 "en": u"Maritime (including ferry)",
-                 "fr": u"Maritime (y compris les ferries)",
-                 "nl": u"Schip (m.i.v. veerboten)",
-                 "de": u"Schifffahrt (einschließlich Fähre)"
+                 "en": "Maritime (including ferry)",
+                 "fr": "Maritime (y compris les ferries)",
+                 "nl": "Schip (m.i.v. veerboten)",
+                 "de": "Schifffahrt (einschließlich Fähre)"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/metro-subway-train",
              {
-                 "en": u"Metro",
-                 "fr": u"Métro",
-                 "nl": u"Metro",
-                 "de": u"Untergrundbahn"
+                 "en": "Metro",
+                 "fr": "Métro",
+                 "nl": "Metro",
+                 "de": "Untergrundbahn"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/tram-light-rail",
              {
-                 "en": u"Tram, Light rail",
-                 "fr": u"Tram, Ferroviaire léger",
-                 "nl": u"Tram, Light rail",
-                 "de": u"Straßenbahn, Stadtbahn"
+                 "en": "Tram, Light rail",
+                 "fr": "Tram, Ferroviaire léger",
+                 "nl": "Tram, Light rail",
+                 "de": "Straßenbahn, Stadtbahn"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/bus",
              {
-                 "en": u"Bus",
-                 "fr": u"Bus",
-                 "nl": u"Bus",
-                 "de": u"Bus"
+                 "en": "Bus",
+                 "fr": "Bus",
+                 "nl": "Bus",
+                 "de": "Bus"
              })
         ], {
-             "en": u"Scheduled",
-             "nl": u"Openbaar vervoer",
-             "fr": u"Services réguliers",
-             "de": u"Linienverkehrsdienste"
+             "en": "Scheduled",
+             "nl": "Openbaar vervoer",
+             "fr": "Services réguliers",
+             "de": "Linienverkehrsdienste"
          }),
         ([
             ("https://w3id.org/mobilitydcat-ap/transport-mode/shuttle-bus",
              {
-                 "en": u"Shuttle bus",
-                 "fr": u"Bus",
-                 "nl": u"Shuttlebus",
-                 "de": u"Pendelbus"
+                 "en": "Shuttle bus",
+                 "fr": "Bus",
+                 "nl": "Shuttlebus",
+                 "de": "Pendelbus"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/shuttle-ferry",
              {
-                 "en": u"Shuttle ferry",
-                 "fr": u"Ferry",
-                 "nl": u"Shuttleveerboot",
-                 "de": u"Pendelfähre"
+                 "en": "Shuttle ferry",
+                 "fr": "Ferry",
+                 "nl": "Shuttleveerboot",
+                 "de": "Pendelfähre"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/taxi",
              {
-                 "en": u"Taxi",
-                 "fr": u"Taxi",
-                 "nl": u"Taxi",
-                 "de": u"Taxi"
+                 "en": "Taxi",
+                 "fr": "Taxi",
+                 "nl": "Taxi",
+                 "de": "Taxi"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/car-sharing",
              {
-                 "en": u"Car-sharing",
-                 "fr": u"Voitures partagées",
-                 "nl": u"Deelauto",
-                 "de": u"Gemeinsame Pkw-Nutzung (Car-Sharing)"
+                 "en": "Car-sharing",
+                 "fr": "Voitures partagées",
+                 "nl": "Deelauto",
+                 "de": "Gemeinsame Pkw-Nutzung (Car-Sharing)"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/car-pooling",
              {
-                 "en": u"Car-pooling",
-                 "fr": u"Covoiturage",
-                 "nl": u"Carpooling",
-                 "de": u"Fahrgemeinschaften (Car-Pooling)"
+                 "en": "Car-pooling",
+                 "fr": "Covoiturage",
+                 "nl": "Carpooling",
+                 "de": "Fahrgemeinschaften (Car-Pooling)"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/car-hire",
              {
-                 "en": u"Car-hire",
-                 "fr": u"Location de voitures",
-                 "nl": u"Huurauto",
-                 "de": u"Mietwagen"
+                 "en": "Car-hire",
+                 "fr": "Location de voitures",
+                 "nl": "Huurauto",
+                 "de": "Mietwagen"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/bike-sharing",
              {
-                 "en": u"Bike-sharing",
-                 "fr": u"Vélos partagés",
-                 "nl": u"Deelfiets",
-                 "de": u"Gemeinsame Nutzung von Fahrrädern (Bike-Sharing)"
+                 "en": "Bike-sharing",
+                 "fr": "Vélos partagés",
+                 "nl": "Deelfiets",
+                 "de": "Gemeinsame Nutzung von Fahrrädern (Bike-Sharing)"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/bike-hire",
              {
-                 "en": u"Bike-hire",
-                 "fr": u"Vélos en libre service",
-                 "nl": u"Huurfiets",
-                 "de": u"Leihfahrrad"
+                 "en": "Bike-hire",
+                 "fr": "Vélos en libre service",
+                 "nl": "Huurfiets",
+                 "de": "Leihfahrrad"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/ride-pooling",
              {
-                 "en": u"Ride-pooling",
-                 "fr": u"Trajets partagés",
-                 "nl": u"Gedeelde ritten",
-                 "de": u"Mitfahrdienst"
+                 "en": "Ride-pooling",
+                 "fr": "Trajets partagés",
+                 "nl": "Gedeelde ritten",
+                 "de": "Mitfahrdienst"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/e-scooter",
              {
-                 "en": u"E-scooter",
-                 "fr": u"Trottinettes électriques",
-                 "nl": u"E-scooter",
-                 "de": u"E-rollern"
+                 "en": "E-scooter",
+                 "fr": "Trottinettes électriques",
+                 "nl": "E-scooter",
+                 "de": "E-rollern"
              })
         ], {
-             "en": u"Demand-responsive",
-             "nl": u"Aanbod afhankelijke inzet",
-             "fr": u"Services à la demande",
-             "de": u"Abruf-Verkehrsdienste"
+             "en": "Demand-responsive",
+             "nl": "Aanbod afhankelijke inzet",
+             "fr": "Services à la demande",
+             "de": "Abruf-Verkehrsdienste"
          }),
         ([
             ("https://w3id.org/mobilitydcat-ap/transport-mode/car",
              {
-                 "en": u"Car",
-                 "fr": u"Voiture",
-                 "nl": u"Auto",
-                 "de": u"Pkw"
+                 "en": "Car",
+                 "fr": "Voiture",
+                 "nl": "Auto",
+                 "de": "Pkw"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/truck",
              {
-                 "en": u"Truck",
-                 "fr": u"Camion",
-                 "nl": u"Vrachtwagen",
-                 "de": u"Lastwagen"
+                 "en": "Truck",
+                 "fr": "Camion",
+                 "nl": "Vrachtwagen",
+                 "de": "Lastwagen"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/motorcycle",
              {
-                 "en": u"Motorcycle",
-                 "fr": u"Moto",
-                 "nl": u"Motorfiets",
-                 "de": u"Motorrad"
+                 "en": "Motorcycle",
+                 "fr": "Moto",
+                 "nl": "Motorfiets",
+                 "de": "Motorrad"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/bicycle",
              {
-                 "en": u"Cycle",
-                 "fr": u"Vélo",
-                 "nl": u"Fiets",
-                 "de": u"Fahrrad"
+                 "en": "Cycle",
+                 "fr": "Vélo",
+                 "nl": "Fiets",
+                 "de": "Fahrrad"
              }),
             ("https://w3id.org/mobilitydcat-ap/transport-mode/pedestrian",
              {
-                 "en": u"Pedestrian",
-                 "fr": u"Piéton",
-                 "nl": u"Voetganger",
-                 "de": u"Fußgänger"
+                 "en": "Pedestrian",
+                 "fr": "Piéton",
+                 "nl": "Voetganger",
+                 "de": "Fußgänger"
              })
         ], {
-             "en": u"Personal",
-             "nl": u"Persoonlijk vervoer",
-             "fr": u"Modes personnels",
-             "de": u"Individualverkehr"
+             "en": "Personal",
+             "nl": "Persoonlijk vervoer",
+             "fr": "Modes personnels",
+             "de": "Individualverkehr"
          }),
         ([
             ("https://w3id.org/mobilitydcat-ap/transport-mode/other",
              {
-                 "en": u"Other",
-                 "fr": u"Autre",
-                 "nl": u"Andere",
-                 "de": u"Andere"
+                 "en": "Other",
+                 "fr": "Autre",
+                 "nl": "Andere",
+                 "de": "Andere"
              })
         ], {
-             "en": u"Not applicable",
-             "nl": u"Niet toepasbaar",
-             "fr": u"Non applicable",
-             "de": u"Nicht anwendbar"
+             "en": "Not applicable",
+             "nl": "Niet toepasbaar",
+             "fr": "Non applicable",
+             "de": "Nicht anwendbar"
          }
         )
 ]
@@ -774,22 +774,22 @@ def getTranslatedVideoUrl(lang):
 
 
 def get_organization_by_id(id):
-    user = toolkit.get_action(u'get_site_user')(
+    user = toolkit.get_action('get_site_user')(
         {
-            u'ignore_auth': True
+            'ignore_auth': True
         },
         {})
 
-    context = {u'user': user[u'name']}
+    context = {'user': user['name']}
 
-    organization = toolkit.get_action(u'organization_show')(context,
+    organization = toolkit.get_action('organization_show')(context,
     {
-        u'id': id,
-        u'include_dataset_count':False,
-        u'include_users': False,
-        u'include_groups': False,
-        u'include_tags': False,
-        u'include_followers': False,
+        'id': id,
+        'include_dataset_count':False,
+        'include_users': False,
+        'include_groups': False,
+        'include_tags': False,
+        'include_followers': False,
     })
     field = 'display_title_' + user_language()
     to_show_name = organization.get(field)
@@ -810,7 +810,7 @@ def benap_fluent_label(field_name, field_label, lang):
     """
     schema = scheming_get_dataset_schema('dataset')
     if schema:
-        field_metadata = list(filter(lambda x: x['field_name'] == field_name, schema['dataset_fields']))
+        field_metadata = [x for x in schema['dataset_fields'] if x['field_name'] == field_name]
         if len(field_metadata) > 0:
             return field_metadata[0]['label'][lang]
 
@@ -849,20 +849,20 @@ def benap_get_organization_field_by_id(org_id, field_name):
     """
     Retrieve the specified field value from an organization's data based on the organization id.
     """
-    user = toolkit.get_action(u'get_site_user')(
+    user = toolkit.get_action('get_site_user')(
         {
-            u'ignore_auth': True
+            'ignore_auth': True
         },
         {})
-    context = {u'user': user[u'name']}
-    org_data = toolkit.get_action(u'organization_show')(context,
+    context = {'user': user['name']}
+    org_data = toolkit.get_action('organization_show')(context,
                                                         {
-                                                            u'id': org_id,
-                                                            u'include_dataset_count': False,
-                                                            u'include_users': False,
-                                                            u'include_groups': False,
-                                                            u'include_tags': False,
-                                                            u'include_followers': False,
+                                                            'id': org_id,
+                                                            'include_dataset_count': False,
+                                                            'include_users': False,
+                                                            'include_groups': False,
+                                                            'include_tags': False,
+                                                            'include_followers': False,
                                                         })
 
     field_value = org_data.get(field_name)
@@ -893,9 +893,9 @@ def benap_retrieve_dict_items_or_keys_or_values(data, return_type):
         if return_type == "keys":
             return list(data.keys())
         elif return_type == "values":
-            return list(chain.from_iterable(data.values()))
+            return list(chain.from_iterable(list(data.values())))
         elif return_type == "items":
-            return data.items()
+            return list(data.items())
     else:
         return []
 
@@ -905,23 +905,23 @@ def benap_retrieve_org_title_tel_email():
     including only the organization's title, telephone number, and email.
     """
     from ckantoolkit import h
-    user = toolkit.get_action(u'get_site_user')(
+    user = toolkit.get_action('get_site_user')(
         {
-            u'ignore_auth': True
+            'ignore_auth': True
         },
         {})
-    context = {u'user': user[u'name']}
+    context = {'user': user['name']}
     available_orgs_for_user = [org['name'] for org in h.organizations_available('create_dataset')]
-    data = toolkit.get_action(u'organization_list')(context,
+    data = toolkit.get_action('organization_list')(context,
                                                     {
-                                                        u'include_dataset_count': False,
-                                                        u'all_fields': True,
-                                                        u'include_users': False,
-                                                        u'include_groups': False,
-                                                        u'include_tags': False,
-                                                        u'include_followers': False,
-                                                        u'include_extras': True,
-                                                        u'organizations': available_orgs_for_user
+                                                        'include_dataset_count': False,
+                                                        'all_fields': True,
+                                                        'include_users': False,
+                                                        'include_groups': False,
+                                                        'include_tags': False,
+                                                        'include_followers': False,
+                                                        'include_extras': True,
+                                                        'organizations': available_orgs_for_user
                                                     })
     keys_to_keep = ["title", "do_tel", "do_email"]
     filtered_data = [
@@ -963,3 +963,4 @@ def benap_tag_mapping(tag_name):
         for url in urls
     }
     return tag_mapping.get(tag_name)
+
