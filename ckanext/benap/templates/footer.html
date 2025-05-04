@@ -37,12 +37,12 @@
       <div id="lang" class="flex-col attribution w-33">
         <div class="ml-50 ml-0-media-max-982px">
           {% block footer_attribution %}
-            <p>{% trans %}Powered by <a href="http://ckan.org">CKAN</a>{% endtrans %}</p>
+            <span>{% trans %}Powered by <a href="http://ckan.org">CKAN</a>{% endtrans %}</span>
           {% endblock %}
           {% block footer_lang %}
             {% snippet "snippets/language_selector.html" %}
           {% endblock %}
-          <p id="manage-cookies" style="margin-top: 8px; cursor: pointer;">{{ _('Manage Cookies') }}</p>
+          <p id="manage-cookies" style="cursor: pointer;">{{ _('Manage Cookies') }}</p>
           <script>
 
             $('#manage-cookies').on('click', (event) => {
@@ -75,7 +75,7 @@
   </div>
 
 </footer>
-<footer class="site-footer mt-1px flex-center pb-5px px-5">
+<footer id="ngi-copyright" class="site-footer mt-1px pb-5px px-5">
   <img src="/images/copyright.svg" class="pb-0 pt-0 pr-1"/>
   <p class="m-0">{{ _('2022 - By the National Geographic Institute on behalf of the ITS steering commitee.') }}</p>
 </footer>
