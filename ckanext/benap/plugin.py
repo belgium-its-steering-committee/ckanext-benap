@@ -141,38 +141,42 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         return pkg_dict
 
     def before_dataset_view(self, pkg_dict):
-        from ckantoolkit import h
         # Remove 'agreement_declaration_nap' from the dictionary if it exists
         pkg_dict.pop('agreement_declaration_nap', None)
 
         # Get the organization ID associated with the dataset
         org_id = pkg_dict.get('organization', {}).get('id')
 
-        # Define required organization fields to retrieve
-        fields = ['do_website', 'do_email', 'do_tel', 'country', 'administrative_area', 'postal_code', 'city',
-                  'street_address']
-
-        # Retrieve organization field values by ID and store them in a dictionary
-        values = {field: benap_get_organization_field_by_id(org_id, field) for field in fields}
+        org_data = toolkit.get_action('organization_show')(
+            {}, 
+            {
+                'id': org_id,
+                'include_dataset_count': False,
+                'include_users': False,
+                'include_groups': False,
+                'include_tags': False,
+                'include_followers': False,
+            }
+        )
 
         # Update package dictionary with organization details and publisher name
         pkg_dict.update({
-            'publisher_url': values['do_website'],
-            'publisher_email': values['do_email'],
-            'publisher_telephone_number': values['do_tel'],
-            'publisher_country': values['country'],
-            'publisher_administrative_area': values['administrative_area'],
-            'publisher_postal_code': values['postal_code'],
-            'publisher_city': values['city'],
-            'publisher_street_address': values['street_address'],
+            'publisher_url': org_data.get('do_website'),
+            'publisher_email': org_data.get('do_email'),
+            'publisher_telephone_number': org_data.get('do_tel'),
+            'publisher_country': org_data.get('country'),
+            'publisher_administrative_area': org_data.get('administrative_area'),
+            'publisher_postal_code': org_data.get('postal_code'),
+            'publisher_city': org_data.get('city'),
+            'publisher_street_address': org_data.get('street_address'),
 
             # Combine address components into a nested dictionary for complete address details
             'publisher_address': {
-                'street_address': values['street_address'],
-                'postal_code': values['postal_code'],
-                'city': values['city'],
-                'administrative_area': values['administrative_area'],
-                'country': values['country']
+                'street_address': org_data.get('street_address'),
+                'postal_code': org_data.get('postal_code'),
+                'city': org_data.get('city'),
+                'administrative_area': org_data.get('administrative_area'),
+                'country': org_data.get('country')
             },
 
             # Combine publisher name components into a nested dictionary for complete publisher name details
@@ -181,4 +185,5 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
                 'publisher_surname': pkg_dict.get(u'publisher_surname')
             }
         })
+
         return pkg_dict
