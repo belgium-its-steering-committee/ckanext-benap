@@ -129,11 +129,14 @@
    crossorigin=""></script>
 
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main-css.css" />
     <script
 			  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 			  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
 			  crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block custom_styles %}
+    <link rel="stylesheet" href="/css/main-css.css" />
 {% endblock %}
 
 {% block links %}
