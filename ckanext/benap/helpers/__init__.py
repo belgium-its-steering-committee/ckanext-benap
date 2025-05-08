@@ -496,7 +496,7 @@ def forum_url():
 
 def organisation_names_for_autocomplete():
     from ckantoolkit import h
-    return [org['title'].encode("utf-8") for org in h.organizations_available('create_dataset')]
+    return [org['title'] for org in h.organizations_available('create_dataset')]
 
 
 def format_datetime(datetime):
@@ -911,25 +911,33 @@ def benap_retrieve_org_title_tel_email():
         },
         {})
     context = {'user': user['name']}
-    available_orgs_for_user = [org['name'] for org in h.organizations_available('create_dataset')]
-    data = toolkit.get_action('organization_list')(context,
-                                                    {
-                                                        'include_dataset_count': False,
-                                                        'all_fields': True,
-                                                        'include_users': False,
-                                                        'include_groups': False,
-                                                        'include_tags': False,
-                                                        'include_followers': False,
-                                                        'include_extras': True,
-                                                        'organizations': available_orgs_for_user
-                                                    })
+
+    # organization_list has a limit of 25 orgs request at a time when all_fields is enabled
+    # https://github.com/ckan/ckan/blob/2.11/ckan/logic/action/get.py#L346
+    start = 0
+    batch_size = 25
+    all_orgs = []
+
+    while True:
+        batch = toolkit.get_action('organization_list')({}, {
+            'include_dataset_count': False,
+            'all_fields': True,
+            'include_extras': True,
+            'limit': batch_size,
+            'offset': start
+        })
+
+        if not batch:
+            break
+
+        all_orgs.extend(batch)
+        start += batch_size   
     keys_to_keep = ["title", "do_tel", "do_email"]
-    filtered_data = [
+    filtered_props = [
         {key: item.get(key) for key in keys_to_keep}
-        for item in data
+        for item in all_orgs
     ]
-    json_data = json.dumps(filtered_data, ensure_ascii=False)
-    return json_data
+    return filtered_props
 
 def benap_retrieve_raw_choices_list(field_name):
     """
