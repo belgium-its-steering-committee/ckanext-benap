@@ -4,6 +4,40 @@
   "about": "A CKAN schema for the Belgian NAP",
   "about_url": "https://github.com/belgium-its-steering-committee/ckanext-benap",
   "dataset_fields": [
+    {
+      "field_name": "title",
+      "label": {
+        "en": "Name of dataset",
+        "fr": "Nom du jeu de données",
+        "nl": "Naam van de dataset",
+        "de": "Name des Datensatzes"
+      },
+      "preset": "title",
+      "form_placeholder": {
+        "en": "e.g. Highway Network",
+        "fr": "par ex. réseau d'autoroutes",
+        "nl": "bv. snelwegennet",
+        "de": "zum B. Autobahnennetz"
+      },
+      "help_text": {
+        "en": "Describes the dataset in generic terms or gives a short description. The author is encouraged to write a meaningful description in one of the selected metadata language.",
+        "fr": "Décrit le jeu de données en termes génériques ou donne une brève description. L'auteur est invité à écrire une description significative dans l'une des langues des métadonnées sélectionnées.",
+        "nl": "Beschrijft de dataset in generieke termen of geeft een beknopte beschrijving. De auteur wordt verzocht een zinvolle beschrijving in één van de talen van de geselecteerde metadata te schrijven.",
+        "de": "Beschreibt den Datensatz in grossen Zügen oder gibt eine kurze Beschreibung. Der Verfasser wird ersucht eine sinnvolle Beschreibung in einer der Sprachen  der ausgewählten Metadaten zu schreiben."
+      },
+      "required": "true"
+    },
+    {
+      "field_name": "name",
+      "label": "URL",
+      "preset": "dataset_slug",
+      "form_placeholder": {
+        "en": "e.g. Highway Network",
+        "fr": "par ex. réseau d'autoroutes",
+        "nl": "bv. snelwegennet",
+        "de": "zum B. Autobahnennetz"
+      }
+    },
     { 
       "field_name": "nap_checked",
       "label":"NAP check",
@@ -54,29 +88,6 @@
       "required": "true"
     },
     {
-      "field_name": "title",
-      "label": {
-        "en": "Name of dataset",
-        "fr": "Nom du jeu de données",
-        "nl": "Naam van de dataset",
-        "de": "Name des Datensatzes"
-      },
-      "preset": "title",
-      "form_placeholder": {
-        "en": "e.g. Highway Network",
-        "fr": "par ex. réseau d'autoroutes",
-        "nl": "bv. snelwegennet",
-        "de": "zum B. Autobahnennetz"
-      },
-      "help_text": {
-        "en": "Describes the dataset in generic terms or gives a short description. The author is encouraged to write a meaningful description in one of the selected metadata language.",
-        "fr": "Décrit le jeu de données en termes génériques ou donne une brève description. L'auteur est invité à écrire une description significative dans l'une des langues des métadonnées sélectionnées.",
-        "nl": "Beschrijft de dataset in generieke termen of geeft een beknopte beschrijving. De auteur wordt verzocht een zinvolle beschrijving in één van de talen van de geselecteerde metadata te schrijven.",
-        "de": "Beschreibt den Datensatz in grossen Zügen oder gibt eine kurze Beschreibung. Der Verfasser wird ersucht eine sinnvolle Beschreibung in einer der Sprachen  der ausgewählten Metadaten zu schreiben."
-      },
-      "required": "true"
-    },
-    {
       "field_name": "nap_type",
       "label": {
         "en": "NAP type",
@@ -117,17 +128,6 @@
       "benap_helper_ontology": "mobility_theme",
       "required": "true",
       "validators": "scheming_required scheming_valid_json_object benap_category_sub_category_validator"
-    },
-    {
-      "field_name": "name",
-      "label": "URL",
-      "preset": "dataset_slug",
-      "form_placeholder": {
-        "en": "e.g. Highway Network",
-        "fr": "par ex. réseau d'autoroutes",
-        "nl": "bv. snelwegennet",
-        "de": "zum B. Autobahnennetz"
-      }
     },
     {
       "field_name": "notes_translated",
