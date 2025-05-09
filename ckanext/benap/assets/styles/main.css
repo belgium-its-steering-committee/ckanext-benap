@@ -595,7 +595,7 @@ span.item-label {
     text-transform: uppercase;
 }
 
-span.item-count {
+.module-narrow .nav-item > a .badge {
     background: #efefef;
     color: #666;
 }
