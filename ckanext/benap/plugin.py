@@ -45,8 +45,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     def update_config(self, config_):
         toolkit.add_template_directory(config_, 'templates')
         toolkit.add_public_directory(config_, 'public')
-        toolkit.add_resource('fanstatic', 'benap')
-        toolkit.add_resource('fanstatic', 'nap_checked_pill_style.css')
+        toolkit.add_resource('assets', 'benap')
+        # toolkit.add_resource('fanstatic', 'nap_checked_pill_style.css')
 
     # ITemplateHelpers
 
@@ -126,6 +126,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
 
     # IPackageController
     def before_dataset_index(self, pkg_dict):
+        return pkg_dict
+        # TODO needs fixing (indexing error for multiple values for nap type)
         if "regions_covered" in pkg_dict:
             pkg_dict["regions_covered"] = json.loads(pkg_dict["regions_covered"])
         if "nap_type" in pkg_dict:
