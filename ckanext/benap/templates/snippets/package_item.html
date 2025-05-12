@@ -25,7 +25,7 @@
 {% block notes %}
     {% if notes_translated_fallback %}
         <div>
-            {{ h.render_markdown(notes_translated_fallback) | truncate }}
+            {{ h.render_markdown(notes_translated_fallback) | truncate(300) }}
         </div>
     {% else %}
         <p class="empty">
