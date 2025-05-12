@@ -126,8 +126,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
 
     # IPackageController
     def before_dataset_index(self, pkg_dict):
-        return pkg_dict
-        # TODO needs fixing (indexing error for multiple values for nap type)
         if "regions_covered" in pkg_dict:
             pkg_dict["regions_covered"] = json.loads(pkg_dict["regions_covered"])
         if "nap_type" in pkg_dict:
