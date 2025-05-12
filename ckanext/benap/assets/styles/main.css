@@ -574,8 +574,19 @@ span.item-label {
     color: #666 !important;
 }
 
-.nav-item.active > a {
+.module-narrow .nav-item.active > a,
+.module-narrow .nav-aside li.active a {
     background-color: #11406e;
+}
+
+.module-narrow .nav-item.active > a::before,
+.module-narrow .nav-aside li.active a::before {
+    border-left-color: #11406e;
+}
+
+.module-narrow .nav-item.active > a:hover::before,
+.module-narrow .nav-aside li.active a:hover::before {
+    border-left-color: rgb(100, 122, 130);
 }
 
 .media-grid {
