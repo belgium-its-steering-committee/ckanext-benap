@@ -8,7 +8,7 @@
         <span class="facet">{{ facets.titles.get(field) }}:</span>
         {% for value in facets.fields[field] %}
           <span class="filtered pill">
-              {{ h.get_translated_tag_with_name(value, h.lang()) }}
+              {{ h.get_translated_tag_with_name(value, h.lang()) or value }}
             <a href="{{ facets.remove_field(field, value) }}" class="remove" title="{{ _('Remove') }}"><i class="fa fa-times"></i></a>
           </span>
         {% endfor %}
