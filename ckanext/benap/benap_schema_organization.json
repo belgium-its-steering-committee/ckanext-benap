@@ -157,7 +157,7 @@
       "upload_field": "image_upload",
       "upload_clear": "clear_upload",
       "upload_label": "organisation_Logo",
-      "validators": "not_empty unicode logo_extensions",
+      "validators": "not_empty unicode_safe logo_extensions",
       "required":true
     },
     {
@@ -409,7 +409,7 @@
         "nl": "Verklaring van overeenstemming RTTI",
         "de": "Konformitätserklärung RTTI"
       },
-      "validators": "unicode remove_whitespace benap_https_validator doc_validator",
+      "validators": "unicode_safe remove_whitespace benap_https_validator doc_validator",
       "help_text": {
         "en": "",
         "fr": "",
@@ -434,7 +434,7 @@
         "nl": "Verklaring van overeenstemming SRTI",
         "de": "Konformitätserklärung SRTI"
       },
-      "validators": "unicode remove_whitespace benap_https_validator doc_validator ",
+      "validators": "unicode_safe remove_whitespace benap_https_validator doc_validator ",
       "help_text": {
         "en": "",
         "fr": "",
@@ -459,7 +459,7 @@
         "nl": "Verklaring van overeenstemming SSTP",
         "de": "Konformitätserklärung SSTP"
       },
-      "validators": "unicode remove_whitespace benap_https_validator doc_validator",
+      "validators": "unicode_safe remove_whitespace benap_https_validator doc_validator",
       "help_text": {
         "en": "",
         "fr": "",
