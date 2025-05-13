@@ -161,12 +161,14 @@ h1.logo span {
     max-width: 150px;
 }
 
-.hero {
+.homepage .hero {
     background: url("/images/main-image.jpg") no-repeat fixed !important;
     width:100%;
     height:350px;
     margin:0;
     padding:0;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
 }
 
 .large-title {
@@ -721,9 +723,11 @@ span.item-label {
 }
 
 @media only screen and (max-width: 995px) {
-    .hero {
+    .homepage .hero {
         background: #fff !important;
         height: auto;
+        padding-top: 0.6rem;
+        padding-bottom: 0;
     }
 
     .flex-responsive-sm {

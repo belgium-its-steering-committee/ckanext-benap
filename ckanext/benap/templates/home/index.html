@@ -2,17 +2,15 @@
 
 {% block primary_content %}
 <div role="main">
-  <div class="main hero">
-    <div role="main" class="hero">
+    <div class="main hero" >
       <div class="container">
         {% block search %}
         {% snippet 'home/snippets/search.html', search_facets=search_facets %}
         {% endblock %}
       </div>
     </div>
-  </div>
 </div>
-<div id="content-box" role="main" class="mb-5">
+<div id="content-box" role="main" class="mb-5 mt-4">
   <div id="homepage-grid-container" class="container">
       <div>
         <div class="flex flex-col gap-4">
