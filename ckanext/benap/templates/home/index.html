@@ -1,3 +1,4 @@
+{# Adapted from https://github.com/belgium-its-steering-committee/ckanext-benap/blob/CKAN-2.11-upgrade/ckanext/benap/templates/home/layout3.html #}
 {% ckan_extends %}
 
 {% block primary_content %}
@@ -12,58 +13,56 @@
 </div>
 <div id="content-box" role="main" class="mb-5 mt-4">
   <div id="homepage-grid-container" class="container">
+    <div class="flex flex-col gap-4 justify-content-between">
       <div>
-        <div class="flex flex-col gap-4">
-          <div>
-            {% block feedback %}
-            {% snippet 'home/snippets/feedback.html' %}
-            {% endblock %}
+        {% block feedback %}
+        {% snippet 'home/snippets/feedback.html' %}
+        {% endblock %}
+      </div>
+      <div>
+        {% block report %}
+        {% snippet 'home/snippets/report.html' %}
+        {% endblock %}
+      </div>
+      <div class="flex align-items-center border-grey gap-4">
+        <i class="fa fa-newspaper-o fa-3x" aria-hidden="true"></i>
+        <div class="flex flex-col w-100">
+          <div class="flex-col justify-content-center">
+            <p class="m-0 fs-20" style="word-break: break-word;">
+              {{ _('Subscribe to our newsletter and stay informed') }}
+            </p>
           </div>
-          <div>
-            {% block report %}
-            {% snippet 'home/snippets/report.html' %}
-            {% endblock %}
-          </div>
-          <div>
-            <div class="flex align-items-center border-grey gap-4">
-              <i class="fa fa-newspaper-o fa-3x" aria-hidden="true"></i>
-              <div class="flex" style="flex-direction: column">
-                <div class="flex-col" style="justify-content: center;">
-                  <p class="m-0 fs-20" style="word-break: break-word;">
-                    {{ _('Subscribe to our newsletter and stay informed') }}
-                  </p>
-                </div>
-                <form id="subscribe-mailinglist-form" class="dataset-form mt-5px" style="width: 100%;" method="post"
-                  action="/{{h.lang()}}/newsletter/subscribe">
-                  <input id="contact-email" name="email" class="input-email pl-5"
-                    placeholder="{{ _('Enter your email address') }}" type="text" autocomplete="off">
-                  <button class="bt-large button-width button-height-34px" name="save" type="submit">{{ _('Subscribe')
-                    }}</button>
-                </form>
-              </div>
-            </div>
-          </div>
+          <form id="subscribe-mailinglist-form" class="dataset-form mt-5px flex" style="width: 100%;" method="post"
+            action="/{{h.lang()}}/newsletter/subscribe">
+            <input id="contact-email" name="email" class="input-email pl-5 flex-grow-1"
+              placeholder="{{ _('Enter your email address') }}" type="text" autocomplete="off">
+            <button class="bt-large button-width button-height-34px" name="save" type="submit">{{ _('Subscribe')
+              }}</button>
+          </form>
         </div>
       </div>
+    </div>
 
-      <div class="video-wrapper flex align-items-center">
+    <div class="h-100 w-100 flex align-items-center highlight-box">
+      <div class="video-wrapper">
         <iframe 
           src="{{ h.getTranslatedVideoUrl(h.lang()) }}"
           allowfullscreen
         >
         </iframe>
       </div>
+    </div>
 
-      <div>
-        {% block promoted %}
-        {% snippet 'home/snippets/promoted.html' %}
-        {% endblock %}
-      </div>
-      <div>
-        {% block community %}
-        {% snippet 'home/snippets/community.html' %}
-        {% endblock %}
-      </div>
+    <div>
+      {% block promoted %}
+      {% snippet 'home/snippets/promoted.html' %}
+      {% endblock %}
+    </div>
+    <div>
+      {% block community %}
+      {% snippet 'home/snippets/community.html' %}
+      {% endblock %}
+    </div>
   </div>
 </div>
 {% endblock %}
