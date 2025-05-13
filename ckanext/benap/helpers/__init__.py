@@ -450,6 +450,9 @@ def ontology_helper(context):
     return None
 
 
+# TODO: This should not be needed
+# Should work out of the box using CKAN, figure out why it does not
+# and remove this
 def translate_organization_filter(facet_title, lang):
     translated_titles = {"en": "Organizations", "nl": "Organisaties", "fr": "Organisations", "de": "Organisationen"}
     if facet_title == "Organizations":
