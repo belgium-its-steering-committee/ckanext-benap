@@ -450,14 +450,23 @@ def ontology_helper(context):
     return None
 
 
-# TODO: This should not be needed
-# Should work out of the box using CKAN, figure out why it does not
-# and remove this
+# TODO: This translation should be done using the plugin translation mechanism
+# It should be done in the IFacets implementation of this plugin
 def translate_organization_filter(facet_title, lang):
-    translated_titles = {"en": "Organizations", "nl": "Organisaties", "fr": "Organisations", "de": "Organisationen"}
     if facet_title == "Organizations":
-        return translated_titles[lang]
+        return {
+            "en": "Organizations", 
+            "nl": "Organisaties", 
+            "fr": "Organisations", 
+            "de": "Organisationen"}[lang]
+    elif facet_title == "NAP Type":
+        return {
+            "en": "NAP type", 
+            "nl": "NAP type", 
+            "fr": "Type de NAP", 
+            "de": "NAP typ"}[lang]
     return facet_title
+
 
 
 def scheming_language_text_fallback(field_data, language_data):
