@@ -113,7 +113,6 @@
 {% endblock %}
 
 {% block styles %}
-    {% asset 'benap/benap-css' %}
     {{ super() }}
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -129,6 +128,7 @@
    crossorigin=""></script>
 
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
+    {% asset 'benap/benap-css' %}
     <script
 			  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 			  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
