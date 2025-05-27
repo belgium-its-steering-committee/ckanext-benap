@@ -25,7 +25,7 @@
         {% endblock %}
       </div>
       <div class="flex align-items-center border-grey gap-4">
-        <i class="fa fa-newspaper-o fa-3x" aria-hidden="true"></i>
+        <i class="fa fa-newspaper fa-3x" aria-hidden="true"></i>
         <div class="flex flex-col w-100">
           <div class="flex-col justify-content-center">
             <p class="m-0 fs-20" style="word-break: break-word;">
@@ -34,6 +34,7 @@
           </div>
           <form id="subscribe-mailinglist-form" class="dataset-form mt-5px flex" style="width: 100%;" method="post"
             action="/{{h.lang()}}/newsletter/subscribe">
+            {{ h.csrf_input() }} 
             <input id="contact-email" name="email" class="input-email pl-5 flex-grow-1"
               placeholder="{{ _('Enter your email address') }}" type="text" autocomplete="off">
             <button class="bt-large button-width button-height-34px" name="save" type="submit">{{ _('Subscribe')
