@@ -248,7 +248,6 @@
         "nl": "Het \\\"contactpunt\\\" beschrijft een organisatie, of een persoon indien van toepassing, die verantwoordelijk is voor de aanmaak en bijwerking van de metadata. Deze persoon of organisatie is het één contactpunt voor deze set van metadata.",
         "de": "Der \"Kontaktpunkt\" beschreibt eine Organisation, oder gegebenenfalls eine Person, die für die Herstellung und Aktualisierung von Metadaten verantwortlich ist. Diese Person oder Organisation ist der einzige Kontaktpunkt für diesen Metadatensatz."
       },
-      "required": "true",
       "form_snippet": null,
       "form_placeholder": "Aristarchus of Samothrace",
       "required": "true"
