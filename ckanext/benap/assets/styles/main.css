@@ -24,9 +24,14 @@ a, a:hover {
     border-color: #c9302c;
 }
 
-.btn-success, .btn-success:hover {
+.btn-success {
     background: #449d44;
     border-color: #449d44;
+}
+
+.btn-success:hover {
+    background: #3a873a;
+    border-color: #3a873a;
 }
 
 .rounded {
