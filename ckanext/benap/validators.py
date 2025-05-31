@@ -90,7 +90,7 @@ def modified_by_sysadmin(schema_value, package):
     if isinstance(schema_value, str):
         lowerValue = schema_value.strip().lower()
         if lowerValue in trueValues:
-            flag == True
+            flag = True
 
     if user is not None:
         if not user.sysadmin and flag:
