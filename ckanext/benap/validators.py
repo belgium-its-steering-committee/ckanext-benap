@@ -189,12 +189,15 @@ def category_sub_category_validator(key, flattened_data, errors, context):
                         errors[key].append(_('unexpected choice "%s"') % sub_url)
 
 def license_fields_conditional_validation(key, flattened_data, errors, context):
-    conditions_usage = flattened_data.get((u'resources', 0, 'conditions_usage'))
+    _, index, key_field_name = key
+    def create_key(field_name):
+        return ('resources', index, field_name)
+    license_type = flattened_data.get(create_key('license_type'))
+    conditions_usage = flattened_data.get(create_key('conditions_usage'))
     field_value = flattened_data.get(key)
-    license_type = flattened_data.get((u'resources', 0, 'license_type'))
 
     if conditions_usage == 'https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided':
-        if key == (u'resources', 0, 'license_type'):
+        if key_field_name == 'license_type':
             if not field_value:
                 raise Invalid(_('The license type is missing. This is required because "License" was chosen as the condition for usage.'))
         else:
@@ -206,7 +209,7 @@ def license_fields_conditional_validation(key, flattened_data, errors, context):
 
     else:
         if field_value:
-            if key == (u'resources', 0, 'license_type'):
+            if key_field_name == 'license_type':
                 raise Invalid(_('No license type should be given. "Contract" is chosen as the condition for usage.'))
             else:
                 field_value = json.loads(field_value)
