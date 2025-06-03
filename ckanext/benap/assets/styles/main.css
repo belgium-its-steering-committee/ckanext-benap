@@ -644,12 +644,12 @@ span.item-label {
         margin-left: 16px
     }
 
-    ul.nav {
+    .filters ul.nav {
         display: flex;
         flex-wrap: wrap;
     }
 
-    ul.nav li.nav-item {
+    .filters ul.nav li.nav-item {
         border: none;
     }
 
