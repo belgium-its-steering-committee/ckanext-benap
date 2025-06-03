@@ -799,3 +799,18 @@ span.item-label {
         max-height: 225px;
     }
 }
+
+.benap-resource-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.benap-resource-table th {
+  width: 30%;
+  word-wrap: break-word;
+}
+
+.benap-resource-table td {
+  width: 70%;
+  word-wrap: break-word;
+}
