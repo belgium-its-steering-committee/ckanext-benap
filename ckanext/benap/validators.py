@@ -82,6 +82,11 @@ def https_validator(value, context):
 
 
 def modified_by_sysadmin(schema_value, package):
+    # TODO: fix and re-enable this validator
+    # Current implementation does not make sense, it is possible for
+    # a non sysadmin user to set the value from true to false, this is not intended.
+    return schema_value
+    
     user = package.get("auth_user_obj")
     # parse schema_value
     trueValues = {"true"}

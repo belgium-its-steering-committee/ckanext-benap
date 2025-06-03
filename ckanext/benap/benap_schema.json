@@ -634,8 +634,8 @@
     { 
       "field_name": "nap_checked",
       "label":"NAP check",
-      "form_include_blank_choice":"false",
-      "required": "true",
+      "form_include_blank_choice":false,
+      "required": true,
       "display_snippet" : null,
       "validators": "benap_modified_by_sysadmin",
       "output_validators": "boolean_validator",
@@ -643,13 +643,11 @@
       "choices": [
           {
             "label": "Not checked",
-            "value": "False",
-            "selected":"true"
+            "value": "False"
           },
           {
             "label": "Checked",
-            "value": "True",
-            "selected" : "false"
+            "value": "True"
           }
         ],
       "display_property": null,
@@ -657,7 +655,7 @@
         "en":"Only for system administrators",
         "fr":"Réservé aux administrateurs de système",
         "de":"Nur für Systemadministratoren",
-        "nl":"Enkel voor systeem beheerders"
+        "nl":"Enkel voor systeembeheerders"
       }
     },
     {

@@ -828,18 +828,6 @@ def benap_fluent_label(field_name, field_label, lang):
 
     return field_label
 
-def is_user_sysAdmin(user):
-    userFetched = toolkit.get_action('user_show')(data_dict={'id':user})
-    if userFetched.get('sysadmin') is not None and userFetched['sysadmin'] :
-        return True
-    return False
-
-def is_nap_checked(datasetID):
-    if not datasetID:
-        return "False"
-    datasetFetched = toolkit.get_action('package_show')(data_dict={'id':datasetID})
-    return "True" if datasetFetched.get("nap_checked") is not None and datasetFetched['nap_checked'] else "False"
-
 def convert_validation_list_to_JSON(data):
     """
     Converts a string containing a JSON-like structure into a proper JSON list format.

@@ -10,7 +10,7 @@ from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallba
     package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete, \
     get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, get_translated_tag_with_name, \
     forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element, get_organization_by_id, benap_fluent_label, \
-    translate_organization_filter, is_user_sysAdmin, is_nap_checked, convert_validation_list_to_JSON, benap_get_organization_field_by_id, \
+    translate_organization_filter, convert_validation_list_to_JSON, benap_get_organization_field_by_id, \
     benap_get_organization_field_by_specified_field, benap_retrieve_dict_items_or_keys_or_values, get_translated_category_and_sub_category, \
     benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper, benap_tag_mapping
 
@@ -71,8 +71,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'translate_organization_filter': translate_organization_filter,
             'show_element': show_element,
             'benap_fluent_label': benap_fluent_label,
-            'benap_is_user_sysAdmin': is_user_sysAdmin,
-            'benap_is_nap_checked':is_nap_checked,
             'benap_convert_validation_list_to_JSON': convert_validation_list_to_JSON,
             'benap_get_organization_field_by_id': benap_get_organization_field_by_id,
             'benap_get_organization_field_by_specified_field': benap_get_organization_field_by_specified_field,
