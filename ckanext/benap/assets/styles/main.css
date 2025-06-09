@@ -94,7 +94,7 @@ h1.logo span {
 }
 
 .masthead {
-    padding: 0;
+    padding: 0 !important;
 }
 
 .masthead  .nav > li > a, .nav > li > a {

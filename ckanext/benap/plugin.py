@@ -5,6 +5,7 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckan.lib.plugins import DefaultTranslation
 import json
+from flask import Blueprint
 
 from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallback, json_loads, \
     package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete, \
@@ -21,6 +22,7 @@ from ckanext.benap.validators import phone_number_validator, \
     license_fields_conditional_validation, benap_tag_string_convert, fluent_tags_validator, category_sub_category_validator
 
 from ckanext.benap.logic.auth.get import user_list
+from ckanext.benap.custom_group import CreateGroupView, EditGroupView
 
 class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTranslation):
     plugins.implements(plugins.ITranslation)
@@ -30,6 +32,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     plugins.implements(plugins.IAuthFunctions, inherit=False)
     plugins.implements(plugins.IFacets, inherit=True)
     plugins.implements(plugins.IPackageController, inherit=True)
+    plugins.implements(plugins.IBlueprint, inherit=True)
 
     geographic_granularity_map = [('', ''),
                                   ('national', 'National'),
@@ -121,6 +124,37 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             # (u'license_id', u'Licenses'),
         ])
         return facets_dict
+
+    # IBlueprint
+    def get_blueprint(self):
+        '''
+        Was required for something called uploadFix and copied from here
+        https://github.com/belgium-its-steering-committee/ckanext-scheming/blob/MobilityDCAT/root/ckanext/scheming/controllers/customGroup.py#L134-L135
+        Is required for multiple uploads on the organization create/edit page
+        '''
+        blueprint = Blueprint(
+            'organization_custom', 
+            __name__,
+            url_prefix='/organization',
+            url_defaults={
+                'group_type': 'organization',
+                'is_organization': True
+            }
+        )
+
+        blueprint.add_url_rule(
+            '/new',
+            view_func=CreateGroupView.as_view('new'),
+            methods=['GET', 'POST']
+        )
+
+        blueprint.add_url_rule(
+            '/edit/<id>',
+            view_func=EditGroupView.as_view('edit'),
+            methods=['GET', 'POST']
+        )
+    
+        return blueprint
 
     # IPackageController
     def before_dataset_index(self, pkg_dict):
