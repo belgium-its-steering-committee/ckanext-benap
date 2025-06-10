@@ -194,7 +194,7 @@ def category_sub_category_validator(key, flattened_data, errors, context):
                         errors[key].append(_('unexpected choice "%s"') % sub_url)
 
 def license_fields_conditional_validation(key, flattened_data, errors, context):
-    _, index, key_field_name = key
+    _type, index, key_field_name = key
     def create_key(field_name):
         return ('resources', index, field_name)
     license_type = flattened_data.get(create_key('license_type'))
