@@ -73,7 +73,7 @@ msgstr ""
 
 #: ckanext/benap/templates/footer.html:85
 msgid ""
-"2022 - By the National Geographic Institute on behalf of the ITS steering "
+"2025 - By the National Geographic Institute on behalf of the ITS steering "
 "commitee."
 msgstr ""
 
