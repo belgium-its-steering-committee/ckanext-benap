@@ -21,7 +21,7 @@ from ckanext.benap.validators import phone_number_validator, \
     is_choice_null, contact_point_org_fields_consistency_check, \
     license_fields_conditional_validation, benap_tag_string_convert, fluent_tags_validator, category_sub_category_validator
 
-from ckanext.benap.logic.auth.get import user_list
+from ckanext.benap.logic.auth.get import user_autocomplete, user_list
 from ckanext.benap.custom_group import CreateGroupView, EditGroupView
 
 class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTranslation):
@@ -107,6 +107,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     def get_auth_functions(self):
         return {
             'user_list': user_list,
+            'user_autocomplete': user_autocomplete,
         }
 
     # IFacets
