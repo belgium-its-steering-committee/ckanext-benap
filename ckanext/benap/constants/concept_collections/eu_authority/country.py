@@ -1,4 +1,4 @@
-EU_AUTH_EU_COUNTRIES = [
+EU_COUNTRIES = [
     ('http://publications.europa.eu/resource/authority/country/BEL', {
         "en": "Belgium",
         "fr": "Belgique",

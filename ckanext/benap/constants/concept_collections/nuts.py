@@ -1,3 +1,25 @@
+
+NUTS1_BE = [
+            ('http://data.europa.eu/nuts/code/BE1', {
+                "en": "RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
+                "fr": "RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
+                "nl": "RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST",
+                "de": "RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST"
+            }),
+            ('http://data.europa.eu/nuts/code/BE2', {
+                "en": "VLAAMS GEWEST",
+                "fr": "VLAAMS GEWEST",
+                "nl": "VLAAMS GEWEST",
+                "de": "VLAAMS GEWEST"
+            }),
+            ('http://data.europa.eu/nuts/code/BE3', {
+                "en": "RÉGION WALLONNE",
+                "fr": "RÉGION WALLONNE",
+                "nl": "RÉGION WALLONNE",
+                "de": "RÉGION WALLONNE"
+            }),
+        ]
+
 NUTS3_BE = [
     ('http://data.europa.eu/nuts/code/BE100', {
         "en": "Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad",

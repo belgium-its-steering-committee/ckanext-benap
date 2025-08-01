@@ -10,8 +10,8 @@ from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASE
                                          MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE, FREQUENCY,
                                          REFERENCE_SYSTEM, DATA_MODEL, SYNTAX, APPLICATION_LAYER_PROTOCOL, COMMUNICATION_METHOD, 
                                          GRAMMAR, ENCODING)
-import ckanext.benap.constants.eu_authority as EU_AUTH_LISTS
-from ckanext.benap.constants.nuts3_be import NUTS3_BE
+from ckanext.benap.constants.concept_collections.eu_authority.country import EU_COUNTRIES
+from ckanext.benap.constants.concept_collections.nuts import NUTS3_BE
 from ckanext.benap.constants.mobilitydcat_ap.transport_mode import BY_CATEGORY as TRANSPORT_MODE_BY_CATEGORY
 
 from ckanext.benap.util.forms import map_for_form_select
@@ -58,7 +58,7 @@ def ontology_helper(context):
         ])
 
     elif ontology == "EU_COUNTRY":
-        return map_for_form_select(EU_AUTH_LISTS.EU_COUNTRIES)
+        return map_for_form_select(EU_COUNTRIES)
     elif ontology == "NUTS1_BE":
         return map_for_form_select(NUTS1_BE)
     elif ontology == "NUTS3_BE":
