@@ -188,7 +188,7 @@ def get_translated_tag_with_name(tagName, lang):
 
 
 def get_translated_tag(tag, lang):
-    tags = get_translated_tags()
+    tags = get_translated_tags().copy()
     tags.append(tuple([NUTS1_BE]))
     tags.append(tuple([DATASET_TYPE]))
     tags.append(tuple([NAP_TYPE]))
