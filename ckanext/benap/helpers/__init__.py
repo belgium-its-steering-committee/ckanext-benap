@@ -7,9 +7,10 @@ from .decorators import decorator_timer
 from itertools import chain
 
 from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
-                                         MOBILITY_THEME, CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE, FREQUENCY,
+                                         CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE, FREQUENCY,
                                          REFERENCE_SYSTEM, DATA_MODEL, SYNTAX, APPLICATION_LAYER_PROTOCOL, COMMUNICATION_METHOD, 
                                          GRAMMAR, ENCODING)
+from ckanext.benap.constants.mobility_theme_form import MOBILITY_THEME
 from ckanext.benap.constants.concept_collections.eu_authority.country import EU_COUNTRIES
 from ckanext.benap.constants.concept_collections.nuts import NUTS3_BE
 from ckanext.benap.constants.mobilitydcat_ap.transport_mode import BY_CATEGORY as TRANSPORT_MODE_BY_CATEGORY
