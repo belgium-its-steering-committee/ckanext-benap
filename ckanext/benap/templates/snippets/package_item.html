@@ -40,7 +40,7 @@
             <a 
                 href="{{ h.url_for(package.type ~ '.read', id=package.name) }}" 
                 class="badge badge-default"
-                data-format="{{ resource.lower() }}">{{ resource.split("/")[-1] }}
+                data-format="{{ resource.lower() }}">{{ h._c(resource) }}
             </a>
         </li>
     {% endfor %}
