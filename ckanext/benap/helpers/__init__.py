@@ -192,11 +192,6 @@ def format_datetime(datetime):
 def scheming_language_text(field_data, language_data):
     return field_data[language_data]
 
-
-def get_translated_tag_with_name(tagName, lang):
-    return get_translated_tag(dict([(key, tagName) for key in {'name'}]), lang)
-
-
 def get_translated_tag(tag, lang):
     tags = get_translated_tags().copy()
     tags.append(tuple([NUTS1_BE]))
