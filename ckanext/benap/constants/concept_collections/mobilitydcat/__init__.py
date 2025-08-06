@@ -18,7 +18,10 @@ GEOREFERENCING_METHOD = OrderedDict(georeferencing_method.GEOREFERENCING_METHOD)
 GRAMMAR = OrderedDict(grammar.GRAMMAR)
 MOBILITY_DATA_STANDARD = OrderedDict(mobility_data_standard.MOBILITY_DATA_STANDARD)
 NETWORK_COVERAGE = OrderedDict(network_coverage.NETWORK_COVERAGE)
-TRANSPORT_MODE = OrderedDict(transport_mode.DEMAND_RESPONSIVE + transport_mode.PERSONAL + transport_mode.SCHEDULED + transport_mode.OTHER)
+TRANSPORT_MODE = OrderedDict(transport_mode.DEMAND_RESPONSIVE + \
+                             transport_mode.PERSONAL + \
+                             transport_mode.SCHEDULED + \
+                             transport_mode.OTHER)
 MOBILITY_THEME = {**mt.CYCLE_NETWORK_DATA,
                   **mt.DYNAMIC_TRAFFIC_SIGNS_AND_REGULATIONS,
                   **mt.FILLING_AND_CHARGING_STATIONS,

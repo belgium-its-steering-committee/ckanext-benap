@@ -15,6 +15,7 @@ from ckanext.benap.constants.mobility_theme_form import MOBILITY_THEME
 from ckanext.benap.constants.concept_collections.eu_authority.country import EU_COUNTRIES
 from ckanext.benap.constants.concept_collections.nuts import NUTS3_BE
 from ckanext.benap.constants.mobilitydcat_ap.transport_mode import BY_CATEGORY as TRANSPORT_MODE_BY_CATEGORY
+from ckanext.benap.constants.concept_collections.mobilitydcat import TRANSPORT_MODE as TRANSPORT_MODE_CONCEPTS
 
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
@@ -202,7 +203,7 @@ def get_translated_tag(tag, lang):
         return [x for x in [translated_tag for translated_taglist in
                                                       [categorized_tags[0] for categorized_tags in
                                                        tags] for translated_tag in
-                                                      translated_taglist] if x[0] == benap_tag_mapping(tag['name'])][0][1][lang]
+                                                      translated_taglist] if x[0] == ckan_tag_to_transport_mode_concept_uri(tag['name'])][0][1][lang]
     except:
         try:
             return tag['display_name']
@@ -231,7 +232,7 @@ def filter_default_tags_only(items):
             tags.append(translated_tag[0])
     for item in items:
         for tag in tags:
-            if benap_tag_mapping(item['name']) == tag:
+            if ckan_tag_to_transport_mode_concept_uri(item['name']) == tag:
                 filtered_items.append(item)
     return filtered_items
 
@@ -431,11 +432,12 @@ def benap_tag_update_helper(data, choices):
     else:
         return None
 
-def benap_tag_mapping(tag_name):
+def ckan_tag_to_transport_mode_concept_uri(tag_name):
     """
-    Create dictionary of tag mapping (tag name in table tag and url in table package_extra, fluent_tags)
+    Return the transport mode skos:Concept uri for the supplied CKAN dataset "tag" name.
+    The tag names correspond to the (capitalized) last portion of the concept uri
     """
-    urls = [item[0] for sublist, _ in get_translated_tags() for item in sublist]
+    urls = TRANSPORT_MODE_CONCEPTS.keys()
     tag_mapping = {
         url.split("/")[-1].capitalize(): url
         for url in urls
