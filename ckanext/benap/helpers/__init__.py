@@ -1,6 +1,7 @@
 # coding=utf-8
 import json
 import ckan.plugins.toolkit as toolkit
+from ckantoolkit import h
 from ckan.common import config
 import logging
 from .decorators import decorator_timer
@@ -17,8 +18,16 @@ from ckanext.benap.constants.mobilitydcat_ap.transport_mode import BY_CATEGORY a
 
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.scheming.helpers import scheming_get_dataset_schema
+from .concepts import get_concept_label
 
 log = logging.getLogger(__name__)
+
+def _c(concept_uri):
+    """
+A helper function striving to be the Python Babel equivalent of _(), but for skos concepts,
+Taking the concept URI as an argument, and returning the localized label
+    """
+    return get_concept_label(concept_uri, h.lang())
 
 def user_language():
     try:

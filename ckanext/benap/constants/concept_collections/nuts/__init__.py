@@ -190,3 +190,8 @@ NUTS3_BE = [
         "de": "Arr. Mouscron"
     }),
 ]
+
+CONCEPTS = {
+    **dict(NUTS1_BE),
+    **dict(NUTS3_BE),
+}
