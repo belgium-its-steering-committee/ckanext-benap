@@ -12,10 +12,12 @@ def get_concept_label(concept_uri, lang, collection=CONCEPTS):
         if isinstance(concept, dict):
             try:
                 return concept[lang]
-            except KeyError:
+            except KeyError as e:
                 log.error(f"No language {lang} known for concept \"{concept_uri}\"")
+                raise e
         else:
             # The same string value for all languages
             return concept
-    except KeyError:
+    except KeyError as e:
         log.error(f"No concept known by uri \"{concept_uri}\"")
+        raise e

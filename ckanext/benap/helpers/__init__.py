@@ -194,16 +194,11 @@ def scheming_language_text(field_data, language_data):
     return field_data[language_data]
 
 def get_translated_tag(tag, lang):
-    tags = get_translated_tags().copy()
-    tags.append(tuple([NUTS1_BE]))
-    tags.append(tuple([DATASET_TYPE]))
-    tags.append(tuple([NAP_TYPE]))
+    # TODO: needs more refactoring. Kept same behavior as legacy, but clarified its working
     try:
-
-        return [x for x in [translated_tag for translated_taglist in
-                                                      [categorized_tags[0] for categorized_tags in
-                                                       tags] for translated_tag in
-                                                      translated_taglist] if x[0] == ckan_tag_to_transport_mode_concept_uri(tag['name'])][0][1][lang]
+        transport_mode_concept_uri = ckan_tag_to_transport_mode_concept_uri(tag['name'])
+        transport_mode_label = get_concept_label(transport_mode_concept_uri, lang)
+        return transport_mode_label
     except:
         try:
             return tag['display_name']
