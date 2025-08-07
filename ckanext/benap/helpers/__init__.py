@@ -201,23 +201,6 @@ def format_datetime(datetime):
 def scheming_language_text(field_data, language_data):
     return field_data[language_data]
 
-def get_translated_tag(tag, lang):
-    # TODO: needs more refactoring. Kept same behavior as legacy, but clarified its working
-    try:
-        transport_mode_concept_uri = ckan_tag_to_transport_mode_concept_uri(tag['name'])
-        transport_mode_label = get_concept_label(transport_mode_concept_uri, lang)
-        return transport_mode_label
-    except:
-        try:
-            return tag['display_name']
-        except KeyError:
-            try:
-                if isinstance(tag, str):
-                    return tag
-                print(('tag not found: ' + json.dumps(tag)))
-            except:
-                print('tag not found')
-
 
 def get_translated_tags():
     return TRANSPORT_MODE_BY_CATEGORY
