@@ -13,13 +13,14 @@ from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallba
     forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element, get_organization_by_id, benap_fluent_label, \
     translate_organization_filter, convert_validation_list_to_JSON, benap_get_organization_field_by_id, \
     benap_get_organization_field_by_specified_field, benap_retrieve_dict_items_or_keys_or_values, get_translated_category_and_sub_category, \
-    benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper, _c
+    benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper, _c, get_facet_label_function
 
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.validators import phone_number_validator, \
     countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin, \
     is_choice_null, contact_point_org_fields_consistency_check, \
     license_fields_conditional_validation, benap_tag_string_convert, fluent_tags_validator, category_sub_category_validator
+from ckanext.benap.helpers.concepts import get_concept_label
 
 from ckanext.benap.logic.auth.get import user_autocomplete, user_list
 from ckanext.benap.custom_group import CreateGroupView, EditGroupView
@@ -82,6 +83,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_retrieve_org_title_tel_email': benap_retrieve_org_title_tel_email,
             'benap_retrieve_raw_choices_list': benap_retrieve_raw_choices_list,
             'benap_tag_update_helper': benap_tag_update_helper,
+            'get_facet_label_function': get_facet_label_function,
         }
 
     # IValidators
@@ -116,8 +118,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             #TODO make new mobility theme (old its_dataset_type) work in filters
             # (u'its_dataset_type', u'Dataset Type'),
             ('tags', 'Tags'),
-            #TODO make new regions_covered field values work in filters
-            # (u'regions_covered', u'Area covered by publication'),
+            ('regions_covered_uri', 'Area covered by publication'),
             ('organization', 'Organizations'),
             #TODO make new format and licenses fields work in filters
             # (u'res_format', u'Formats'),
@@ -159,7 +160,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     # IPackageController
     def before_dataset_index(self, pkg_dict):
         if "regions_covered" in pkg_dict:
-            pkg_dict["regions_covered"] = json.loads(pkg_dict["regions_covered"])
+            pkg_dict["regions_covered_uri"] = json.loads(pkg_dict["regions_covered"])
+            pkg_dict["regions_covered_label"] = list(map(lambda uri: get_concept_label(uri, 'en'), json.loads(pkg_dict["regions_covered"])))
         if "nap_type" in pkg_dict:
             pkg_dict["nap_type"] = json.loads(pkg_dict["nap_type"])
         if "its_dataset_type" in pkg_dict:
