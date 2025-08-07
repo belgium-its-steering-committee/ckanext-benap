@@ -30,14 +30,21 @@ Taking the concept URI as an argument, and returning the localized label
     """
     return get_concept_label(concept_uri, h.lang())
 
-def get_facet_label_function(facet):
+def get_facet_name_label_function(facet_name):
     facet_mapping = {
-        'regions_covered_uri': lambda facet_item: _c(facet_item['name']),
-        'mobility_theme_uri': lambda facet_item: _c(facet_item['name']),
-        'tags': lambda facet_item: ckan_tag_to_transport_mode_concept_label(facet_item['name']),
+        'regions_covered_uri': _c,
+        'mobility_theme_uri': _c,
+        'tags': ckan_tag_to_transport_mode_concept_label,
     }
-    if facet in facet_mapping:
-        return facet_mapping[facet]
+    if facet_name in facet_mapping:
+        return facet_mapping[facet_name]
+
+def get_facet_label_function(facet_name):
+    fun = get_facet_name_label_function(facet_name)
+    if fun:
+        def fun_for_facet(_facet):
+            return fun(_facet['name'])
+        return fun_for_facet
 
 def user_language():
     try:
