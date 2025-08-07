@@ -181,13 +181,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             pkg_dict["license_uri"] = list(set(licenses))  # uniquify
         if "nap_type" in pkg_dict:
             pkg_dict["nap_type"] = json.loads(pkg_dict["nap_type"])
-        if "its_dataset_type" in pkg_dict:
-            try:
-                ## only when validation is used in json schema is next fct needed
-                converted_list = convert_validation_list_to_JSON(pkg_dict["its_dataset_type"])
-                pkg_dict["its_dataset_type"] = json.loads(converted_list)
-            except Exception:
-                pkg_dict["its_dataset_type"] = json.loads(pkg_dict["its_dataset_type"])
 
         return pkg_dict
 
