@@ -119,6 +119,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             # (u'its_dataset_type', u'Dataset Type'),
             ('tags', 'Tags'),
             ('regions_covered_uri', 'Area covered by publication'),
+            ('mobility_theme_uri', 'Mobility Theme'),
             ('organization', 'Organizations'),
             #TODO make new format and licenses fields work in filters
             # (u'res_format', u'Formats'),
@@ -162,6 +163,15 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         if "regions_covered" in pkg_dict:
             pkg_dict["regions_covered_uri"] = json.loads(pkg_dict["regions_covered"])
             pkg_dict["regions_covered_label"] = list(map(lambda uri: get_concept_label(uri, 'en'), json.loads(pkg_dict["regions_covered"])))
+        if "mobility_theme" in pkg_dict:
+            # 2 lvl concept scheme
+            mob_theme_dict = json.loads(pkg_dict["mobility_theme"])
+            mob_themes = []
+            for broader_theme_uri, narrower_themes in mob_theme_dict.items():
+                mob_themes.append(broader_theme_uri)
+                mob_themes = mob_themes + narrower_themes
+            pkg_dict["mobility_theme_uri"] = mob_themes
+            pkg_dict["mobility_theme_label"] = list(map(lambda uri: get_concept_label(uri, 'en'), mob_themes))
         if "nap_type" in pkg_dict:
             pkg_dict["nap_type"] = json.loads(pkg_dict["nap_type"])
         if "its_dataset_type" in pkg_dict:

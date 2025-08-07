@@ -33,6 +33,7 @@ Taking the concept URI as an argument, and returning the localized label
 def get_facet_label_function(facet):
     facet_mapping = {
         'regions_covered_uri': lambda facet_item: _c(facet_item['name']),
+        'mobility_theme_uri': lambda facet_item: _c(facet_item['name']),
         'tags': lambda facet_item: ckan_tag_to_transport_mode_concept_label(facet_item['name']),
     }
     if facet in facet_mapping:
