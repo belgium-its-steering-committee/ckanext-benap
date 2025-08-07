@@ -34,6 +34,8 @@ def get_facet_name_label_function(facet_name):
     facet_mapping = {
         'regions_covered_uri': _c,
         'mobility_theme_uri': _c,
+        'format_uri': _c,
+        'license_uri': _c,
         'tags': ckan_tag_to_transport_mode_concept_label,
     }
     if facet_name in facet_mapping:

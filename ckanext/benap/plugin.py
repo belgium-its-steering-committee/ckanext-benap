@@ -117,15 +117,12 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     def dataset_facets(self, facets_dict, package_type):
         facets_dict = OrderedDict([
             ('nap_type', 'NAP Type'),
-            #TODO make new mobility theme (old its_dataset_type) work in filters
-            # (u'its_dataset_type', u'Dataset Type'),
             ('tags', 'Tags'),
             ('regions_covered_uri', 'Area covered by publication'),
             ('mobility_theme_uri', 'Mobility Theme'),
+            ('license_uri', 'License'),
+            ('format_uri', 'Format'),
             ('organization', 'Organizations'),
-            #TODO make new format and licenses fields work in filters
-            # (u'res_format', u'Formats'),
-            # (u'license_id', u'Licenses'),
         ])
         return facets_dict
 
@@ -162,6 +159,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
 
     # IPackageController
     def before_dataset_index(self, pkg_dict):
+        # TODO: Are some of these labels meant to be searchable? If so, consider multilang indexing?
+        # Currently only english labels are indexed
         if "regions_covered" in pkg_dict:
             pkg_dict["regions_covered_uri"] = json.loads(pkg_dict["regions_covered"])
             pkg_dict["regions_covered_label"] = list(map(lambda uri: get_concept_label(uri, 'en'), json.loads(pkg_dict["regions_covered"])))
@@ -174,6 +173,12 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
                 mob_themes = mob_themes + narrower_themes
             pkg_dict["mobility_theme_uri"] = mob_themes
             pkg_dict["mobility_theme_label"] = list(map(lambda uri: get_concept_label(uri, 'en'), mob_themes))
+        resources = json.loads(pkg_dict["data_dict"])["resources"]
+        if resources:
+            formats = [res.get("format") for res in resources if res.get("format")]
+            pkg_dict["format_uri"] = list(set(formats))  # uniquify
+            licenses = [res.get("license_type") for res in resources if res.get("license_type")]
+            pkg_dict["license_uri"] = list(set(licenses))  # uniquify
         if "nap_type" in pkg_dict:
             pkg_dict["nap_type"] = json.loads(pkg_dict["nap_type"])
         if "its_dataset_type" in pkg_dict:
