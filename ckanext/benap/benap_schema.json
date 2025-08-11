@@ -503,7 +503,7 @@
         "nl":"Netwerkdekking beschrijft het deel van het transportnetwerk dat door de geleverde inhoud wordt gedekt.",
         "de":"Netzabdeckung beschreibt den Teil des Verkehrsnetzes, der durch den gelieferten Inhalt abgedeckt wird."
       },
-      "validators":"benap_is_choice_null"
+      "validators":"scheming_multiple_choice benap_is_choice_null"
     },
     {
       "field_name": "reference_system",
