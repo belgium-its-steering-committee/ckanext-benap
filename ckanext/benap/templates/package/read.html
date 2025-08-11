@@ -2,7 +2,7 @@
 
 {% block package_description %}
     {% if pkg.private %}
-      <span class="dataset-private label label-inverse pull-right">
+      <span class="dataset-private badge badge-inverse pull-right">
         <i class="fa fa-lock"></i>
         {{ _('Private') }}
       </span>
@@ -28,6 +28,4 @@
         </div>
       {% endif %}
     {% endblock %}
-    {# FIXME why is this here? seems wrong #}
-    <span class="insert-comment-thread"></span>
   {% endblock %}

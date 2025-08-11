@@ -1,59 +1,47 @@
 {% ckan_extends %}
 
-{% block content%}
-    <div id="dataset-content-heightdiv" class="dataset-content" style="height:4.5em; overflow:hidden;">
-        {% block heading %}
-        <h3 class="dataset-heading" style="display: inline;">
-            {% block heading_private %}
-                {% if package.private %}
-                    <span class="dataset-private label label-inverse">
-                        <i class="fa fa-lock"></i>
-                        {{ _('Private') }}
-                    </span>
-                {% endif %}
-                {% if package.nap_checked %}
-                    {% snippet "package/snippets/nap_checked_pill.html" %}
-                {% endif %}
-            {% endblock %}
-            {% block heading_title %}
-                {{ h.link_to(h.truncate(title, truncate_title), h.url_for(package.type + '_read', controller='package', action='read', id=package.name)) }}
-            {% endblock %}
-            {% block heading_meta %}
-                {% if package.get('state', '').startswith('draft') %}
-                    <span class="label label-info">{{ _('Draft') }}</span>
-                {% elif package.get('state', '').startswith('deleted') %}
-                    <span class="label label-danger">{{ _('Deleted') }}</span>
-                {% endif %}
-                {{ h.popular('recent views', package.tracking_summary.recent, min=10) if package.tracking_summary }}
-            {% endblock %}
-        </h3>
-        <a  href="{{ h.url_for(package.organization.type ~ '_read', action='read', id=package.organization.name) }}" style="display: inline; padding-left: 8px;">
-            <i id="helper_fctie">{{h.benap_get_organization_by_id(package.organization.name)}}</i>
+{% block heading %}
+    <div id="td-dataset-heading" class="flex mb-1">
+        {{ super() }}
+        <a 
+            href="{{ h.url_for('organization.read', id=package.organization.name) }}"
+            style="display: inline; padding-left: 6px; font-size: 14px"
+        >
+            <i>
+                {{h.benap_get_organization_by_id(package.organization.name)}}
+            </i>
         </a>
-    {% endblock %}
-
-        {% block notes %}
-    {% if h.benap_package_notes_translated_fallback(package) %}
-        <div>{{ h.render_markdown(h.benap_package_notes_translated_fallback(package)) }}</div>
-    {% else %}
-        <p class="empty">{{ _("This dataset has no description") }}</p>
-    {% endif %}
-    {% endblock %}
-    </div>
-     {% block resources %}
-        {% if package.resources and not hide_resources %}
-          {% block resources_outer %}
-            <ul class="dataset-resources list-unstyled">
-              {% block resources_inner %}
-                {% for resource in h.dict_list_reduce(package.resources, 'format') %}
-                <li>
-                  <a href="{{ h.url_for(controller='package', action='read', id=package.name) }}" class="label label-default" data-format="{{ resource.lower() }}">{{ resource }}</a>
-                </li>
-                {% endfor %}
-              {% endblock %}
-            </ul>
-          {% endblock %}
+        <div class="flex-grow-1"></div>
+        {% if package.nap_checked %}
+            <div class="align-self-end">
+                {% snippet "package/snippets/nap_checked_pill.html" %}
+            </div>
         {% endif %}
-      {% endblock %}
+    </div>
+{% endblock %}
 
+{% set notes_translated_fallback = h.benap_package_notes_translated_fallback(package) %}
+
+{% block notes %}
+    {% if notes_translated_fallback %}
+        <div>
+            {{ h.render_markdown(notes_translated_fallback) | truncate(300) }}
+        </div>
+    {% else %}
+        <p class="empty">
+            {{ _("This dataset has no description") }}
+        </p>
+    {% endif %}
+{% endblock %}
+
+{% block resources_inner %}
+    {% for resource in h.dict_list_reduce(package.resources, 'format') %}
+        <li>
+            <a 
+                href="{{ h.url_for(package.type ~ '.read', id=package.name) }}" 
+                class="badge badge-default"
+                data-format="{{ resource.lower() }}">{{ resource.split("/")[-1] }}
+            </a>
+        </li>
+    {% endfor %}
 {% endblock %}

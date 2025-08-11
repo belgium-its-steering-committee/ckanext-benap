@@ -1,5 +1,11 @@
-{% block header_wrapper %} {% block header_account %}
+{% ckan_extends %}
 
+{% set dataset_type = h.default_package_type() %}
+
+{% block header_account %}
+{# TODO: the code below should definitely not be here
+        has to be moved to an asset and imported in base.html
+ #}
 <style>
         #overlay-cookies {
             position: fixed; /* Sit on top of the page content */
@@ -85,7 +91,7 @@
                     {{
                         _('Transportdata.be uses cookies to improve your experience. These cookies are used to gather and analyse information about your visit. For the best experience of the website, choose “Accept all cookies”. If you prefer to specify which information you want to share with Transportdata.be, choose “Set preferences”. Transportdata.be saves your cookie preferences. You can change your cookie preferences by clicking “Manage cookies”. Want to know more? ')
                     }}
-                    <a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='pages_show', page='/privacy-declaration') }}">{{
+                    <a href="{{ h.url_for('pages_show', page='privacy-declaration') }}">{{
                         _('Consult our Privacy declaration.')
                     }}</a>
                 </p>
@@ -275,109 +281,19 @@
         }
 
     </script>
-
-<header class="account-masthead">
-  <div class="container">
-    {% block header_account_container_content %} {% if c.userobj %}
-    <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
-      <ul class="list-unstyled">
-        {% block header_account_logged %} {% if c.userobj.sysadmin %}
-        <li>
-          <a href="{{ h.url_for(controller='admin', action='index') }}" title="{{ _('Sysadmin settings') }}">
-            <i class="fa fa-gavel" aria-hidden="true"></i>
-            <span class="text">{{ _('Admin') }}</span>
-          </a>
-        </li>
-        {% endif %}
-        <li>
-          <a href="{{ h.url_for('user.read', id=c.userobj.name) }}" class="image" title="{{ _('View profile') }}">
-                  {{ h.gravatar((c.userobj.email_hash if c and c.userobj else ''), size=22) }}
-                  <span class="username">{{ c.userobj.display_name }}</span>
-                </a>
-        </li>
-        <li>
-            {% block header_lang %}
-                {% snippet "snippets/language_selector.html" %}
-            {% endblock %}
-        </li>
-        {% set new_activities = h.new_activities() %}
-        <li class="notifications {% if new_activities > 0 %}notifications-important{% endif %}">
-          {% set notifications_tooltip = ngettext('Dashboard (%(num)d new item)', 'Dashboard (%(num)d new items)', new_activities)
-          %}
-          <a href="{{ h.url_for('dashboard.index') }}" title="{{ notifications_tooltip }}">
-            <i class="fa fa-tachometer" aria-hidden="true"></i>
-            <span class="text">{{ _('Dashboard') }}</span>
-            <span class="badge">{{ new_activities }}</span>
-          </a>
-        </li>
-        {% block header_account_settings_link %}
-        <li>
-          <a href="{{ h.url_for('user.edit', id=c.userobj.name) }}" title="{{ _('Edit settings') }}">
-            <i class="fa fa-cog" aria-hidden="true"></i>
-            <span class="text">{{ _('Settings') }}</span>
-          </a>
-        </li>
-        {% endblock %} {% block header_account_log_out_link %}
-        <li>
-          <a href="{{ h.url_for('/user/_logout') }}" title="{{ _('Log out') }}">
-            <i class="fa fa-sign-out" aria-hidden="true"></i>
-            <span class="text">{{ _('Log out') }}</span>
-          </a>
-        </li>
-        {% endblock %} {% endblock %}
-      </ul>
-    </div>
-    {% else %}
-    <nav class="account not-authed">
-      <ul class="list-unstyled">
-        {% block header_account_notlogged %}
-        <li>
-            {% block header_lang_notlogged %}
-                {% snippet "snippets/language_selector.html" %}
-            {% endblock %}
-        </li>
-        <li>{% link_for _('Log in'), named_route='user.login' %}</li>
-        {% if h.check_access('user_create') %}
-        <li>{% link_for _('Register'), named_route='user.register', class_='sub' %}</li>
-        {% endif %} {% endblock %}
-      </ul>
-    </nav>
-    {% endif %} {% endblock %}
-  </div>
-</header>
+    {{super()}}
 {% endblock %}
-<header class="navbar navbar-static-top masthead header-menu">
-  {% block header_debug %} {% if g.debug and not g.debug_supress_header %}
-  <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
-  {% endif %} {% endblock %}
-  <div id="header-container" class="container">
-      <hgroup id="header-logo">
-          <a href="{{ h.url_for('home.index') }}"><h1 class="logo">TRANSPORTDATA<span>.BE</span></h1></a>
-        </hgroup>
-      <div id="header-content">
-          <div>
-              <button data-target="#main-navigation-toggle" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-                  <span class="fa fa-bars"></span>
-              </button>
-          </div>
-          <div class="collapse navbar-collapse align-middle" id="main-navigation-toggle">
-              {% block header_site_navigation %}
-              <nav id="nav-menu-items" class="section navigation">
-                  <ul class="nav">
-                      {% block header_site_navigation_tabs %} {{ h.build_nav_main( ('search', _('Datasets')), ('organizations_index', _('Organizations')),
-                      ('group_index', _('Groups')), ('home.about', _('About')) ) }} {% endblock %}
-                   </ul>
-              </nav>
-              {% endblock %}{% block header_site_search %}
-              <form id="header-search" class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
-                  <div class="field">
-                      <input id="field-sitewide-search" type="text" class="form-control" name="q" placeholder="{{ _('Search') }}" />
-                      <button class="btn-search" type="submit"><i class="fa fa-search"></i></button>
-                  </div>
-              </form>
-              {% endblock %}
-          </div>
-      </div>
-  </div>
-</header>
+
+{% block header_account_logged %}
+    <li>
+        {% snippet "snippets/language_selector.html" %}
+    </li>
+    {{ super() }}
+{% endblock %}
+
+{% block header_account_notlogged %}
+    <li>
+        {% snippet "snippets/language_selector.html" %}
+    </li>
+    {{ super() }}
 {% endblock %}

@@ -1,7 +1,8 @@
-<span class="dataset-checked pull-right label label-checked-inverse ">
+<span class="dataset-checked pull-right badge label-checked-inverse ">
     <i class="fa fa-check"></i>
     {% set host_tuple = h.get_site_protocol_and_host() %}
     {% set user_lang = h.lang()%}
     {% set host = host_tuple[0]+"://"+ host_tuple[1]+"/"+user_lang+"/" %}
-    {{h.link_to(_('metadata checked & verified'), host+"pages/metadata-checked-and-verified", id="nap_checked", target="_blank")}}
+    {{h.link_to(_('metadata checked & verified'), host+"pages/metadata-checked-and-verified", id="nap_checked",
+    target="_blank")}}
 </span>

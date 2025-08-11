@@ -4,10 +4,9 @@
 <div class="filters">
   <h2 class="module-heading">{{ _('Filters') }}</h2>
   <div>
-    {% for facet in c.facet_titles %}
-      {{ h.snippet('snippets/facet_list.html', title=h.translate_organization_filter(c.facet_titles[facet], h.lang()), name=facet) }}
+    {% for facet in facet_titles %}
+      {% snippet 'snippets/facet_list.html', title=h.translate_organization_filter(facet_titles[facet], h.lang()), name=facet, search_facets=search_facets %}
     {% endfor %}
-    {# {{ h.snippet('snippets/facet_list.html', title='regions_covered', name='regions_covered') }} #}
   </div>
   <a class="close no-text hide-filters"><i class="fa fa-times-circle"></i><span class="text">{{_('close')}}</span></a>
 </div>

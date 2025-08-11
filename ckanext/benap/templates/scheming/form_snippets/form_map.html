@@ -48,7 +48,6 @@ is_required=h.scheming_field_required(field)
     map.on('pm:create',  function (e) {
        layer = e.layer;
        var layerGeoJSON = layer.toGeoJSON()["geometry"];
-       console.log(layerGeoJSON);
        drawnItems.addLayer(layer);
        var input_field = document.getElementById('field-{{field.field_name}}');
        input_field.value = JSON.stringify(layerGeoJSON, null);
@@ -57,7 +56,6 @@ is_required=h.scheming_field_required(field)
     map.on('pm:remove',  function (e) {
        layer = e.layer;
        var layerGeoJSON = layer.toGeoJSON()["geometry"];
-       console.log(layerGeoJSON);
        var input_field = document.getElementById('field-{{field.field_name}}');
        input_field.value = null;
     });

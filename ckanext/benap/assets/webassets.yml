@@ -1,0 +1,15 @@
+# benap-js:
+#   filter: rjsmin
+#   output: ckanext-benap/%(version)s-benap.js
+#   contents:
+#     - js/benap.js
+#   extra:
+#     preload:
+#       - base/main
+
+benap-css:
+  filter: cssrewrite
+  output: ckanext-benap/%(version)s-benap.css
+  contents:
+    - styles/main.css
+    - styles/nap_checked_pill_style.css

@@ -4,54 +4,6 @@
   "about": "A CKAN schema for the Belgian NAP",
   "about_url": "https://github.com/belgium-its-steering-committee/ckanext-benap",
   "dataset_fields": [
-    { "field_name": "nap_checked",
-      "label":"NAP check",
-      "form_include_blank_choice":"false",
-      "required": "true",
-      "display_snippet" : null,
-      "validators": "benap_modified_by_sysadmin",
-      "output_validators": "boolean_validator",
-      "form_snippet":"nap_checked.html",
-      "choices": [
-          {
-            "label": "Not checked",
-            "value": "False",
-            "selected":"true"
-          },
-          {
-            "label": "Checked",
-            "value": "True",
-            "selected" : "false"
-          }
-        ],
-      "display_property": null,
-      "help_text": {
-        "en":"Only for system administrators",
-        "fr":"Réservé aux administrateurs de système",
-        "de":"Nur für Systemadministratoren",
-        "nl":"Enkel voor systeem beheerders"
-      }
-    },
-    {
-      "field_name": "language",
-      "label": {
-        "en": "Metadata language",
-        "fr": "Langue des métadonnées",
-        "nl": "Metadata taal",
-        "de": "Metadatensprache"
-      },
-      "display_property": "dct:language",
-      "preset": "multiple_select",
-      "help_text": {
-        "en": "Describes the language(s) in which you will fill in the metadata in this form.",
-        "fr": "Décrit la(les) langue(s) dans laquelle (lesquelles) vous compléterez les métadonnées dans ce formulaire.",
-        "nl": "Beschrijft de taal(talen) waarin je de metadata in deze formulier zal invullen.",
-        "de": "Beschreibt die Sprache(n), in denen Sie die Metadaten in diesem Formular ausfüllen werden."
-      },
-      "choices_helper": "benap_ontology_helper",
-      "benap_helper_ontology": "language",
-      "required": "true"
-    },
     {
       "field_name": "title",
       "label": {
@@ -76,6 +28,37 @@
       "required": "true"
     },
     {
+      "field_name": "name",
+      "label": "URL",
+      "preset": "dataset_slug",
+      "form_placeholder": {
+        "en": "e.g. Highway Network",
+        "fr": "par ex. réseau d'autoroutes",
+        "nl": "bv. snelwegennet",
+        "de": "zum B. Autobahnennetz"
+      }
+    },
+    {
+      "field_name": "language",
+      "label": {
+        "en": "Metadata language",
+        "fr": "Langue des métadonnées",
+        "nl": "Metadata taal",
+        "de": "Metadatensprache"
+      },
+      "display_property": "dct:language",
+      "preset": "multiple_select",
+      "help_text": {
+        "en": "Describes the language(s) in which you will fill in the metadata in this form.",
+        "fr": "Décrit la(les) langue(s) dans laquelle (lesquelles) vous compléterez les métadonnées dans ce formulaire.",
+        "nl": "Beschrijft de taal(talen) waarin je de metadata in deze formulier zal invullen.",
+        "de": "Beschreibt die Sprache(n), in denen Sie die Metadaten in diesem Formular ausfüllen werden."
+      },
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "language",
+      "required": "true"
+    },
+    {
       "field_name": "nap_type",
       "label": {
         "en": "NAP type",
@@ -97,34 +80,25 @@
       "required": "true"
     },
     {
-      "field_name": "its_dataset_type",
+      "field_name": "mobility_theme",
       "label": {
-        "en": "Dataset Type",
-        "fr": "Type du jeu de données",
-        "nl": "Type van de dataset",
-        "de": "Datensatztyp"
+        "en": "Mobility Theme",
+        "fr": "Thème de la mobilité",
+        "nl": "Mobiliteitsthema",
+        "de": "Mobilitätsthema"
       },
-      "preset": "multiple_checkbox",
       "help_text": {
-        "en": "Choose one or multiple relevant dataset types.",
-        "fr": "Choisissez un ou plusieurs types de données pertinents.",
-        "nl": "Kies een of meerdere relevante dataset types.",
-        "de": "Wählen Sie einen oder mehrere relevante Datensatztypen aus."
+        "en": "Choose one or multiple relevant mobility-related themes. At least one main category is required. The subcategories are optional.",
+        "fr": "Choisissez un ou plusieurs thèmes de mobilité pertinents. Il est obligatoire de sélectionner au moins une catégorie principale. Les sous-catégories sont optionnelles.",
+        "nl": "Kies één of meerdere relevante mobiliteitsthema's. Ten minste één hoofdcategorie is verplicht. De subcategorieën zijn optioneel.",
+        "de": "Wählen Sie ein oder mehrere relevante Mobilitätsthemen aus. Es muss mindestens eine Hauptkategorie ausgewählt werden. Die Unterkategorien sind optional."
       },
+      "form_snippet": "category_sub_category.html",
+      "display_snippet": "category_sub_category.html",
       "choices_helper": "benap_ontology_helper",
-      "benap_helper_ontology": "dataset_type",
-      "validators": "benap_is_choice_null"
-    },
-    {
-      "field_name": "name",
-      "label": "URL",
-      "preset": "dataset_slug",
-      "form_placeholder": {
-        "en": "e.g. Highway Network",
-        "fr": "par ex. réseau d'autoroutes",
-        "nl": "bv. snelwegennet",
-        "de": "zum B. Autobahnennetz"
-      }
+      "benap_helper_ontology": "mobility_theme",
+      "required": "true",
+      "validators": "scheming_required scheming_valid_json_object benap_category_sub_category_validator"
     },
     {
       "field_name": "notes_translated",
@@ -156,7 +130,7 @@
       "display_snippet": "fluent_markdown.html",
       "error_snippet": "fluent_text.html",
       "output_validators": "fluent_core_translated_output",
-      "validators": "fluent_text"
+      "validators": "fluent_text fluent_conditional_language_requirement"
     },
     {
       "field_name": "cont_res",
@@ -198,10 +172,10 @@
     {
       "field_name": "owner_org",
       "label": {
-        "en": "Organisation name [contact point]",
-        "fr": "Nom de l'organisation [point de contact] ",
-        "nl": "Naam van de organisatie  [contactpunt]",
-        "de": "Name der Organisation  [Kontaktpunkt]"
+        "en": "Organisation name [publisher]",
+        "fr": "Nom de l'organisation [éditeur] ",
+        "nl": "Naam van de organisatie [uitgever]",
+        "de": "Name der Organisation  [Herausgeber]"
       },
       "label_dataset_organization":{
         "en": "Visibility",
@@ -211,10 +185,10 @@
       },
       "preset": "dataset_organization",
       "help_text": {
-        "en": "The \"contact point\", describes an organisation, if applicable a person, which is responsible for the creation and maintenance of the metadata. This person or organization is the single point of contact for the present metadata set. The next field may be used to keep the dataset \"private\" within the organisation for internal review before effective publication.",
-        "fr": "Le \"point de contact\" décrit une organisation, ou une personne si d'application, qui est responsable de la création et de la mise à jour des métadonnées. Cette personne ou organisation est le point de contact unique pour le présent jeu de métadonnées.  Le champ suivant peut être utilisé pour garder le jeu de données \"privé\" au sein de l'organisation pour révision interne avant publication effective.",
-        "nl": "Het \"contactpunt\" beschrijft een organisatie, of een persoon indien van toepassing, die verantwoordelijk is voor de aanmaak en bijwerking van de metadata. Deze persoon of organisatie is het één contactpunt voor deze set van metadata. Het volgende veld kan gebruikt worden om ter interne herziening voor effectieve publicatie de dataset \"privé\" te houden binnen de organisatie.",
-        "de": "Der \"Kontaktpunkt\" beschreibt eine Organisation, oder gegebenenfalls eine Person, die für die Herstellung und Aktualisierung von Metadaten verantwortlich ist. Diese Person oder Organisation ist der einzige Kontaktpunkt für diesen Metadatensatz. Das folgende Feld kann benutzt werden, um für interne Prüfung vor der effektiven Publikation den Datensatz \"privat\" zu halten innerhalb von der Organisation. "
+        "en": "The \"publisher\" describes an organization that publishes the datasets (we are not refering to the metadata here, but rather to the data themselves). The publisher is responsible for the given information and must be contacted by data consumers if a contract needs to be concluded. The next field may be used to keep the dataset \"private\" within the organisation for internal review before effective publication.",
+        "fr": "L'\"éditeur\" décrit une organisation qui publie les jeux de données (nous ne nous référons pas ici aux métadonnées mais plutôt aux données elles-mêmes). L'éditeur est responsable des informations données et doit être contacté(e) par les consommateurs de données si un contrat doit être conclu. Le champ suivant peut être utilisé pour garder le jeu de données \"privé\" au sein de l'organisation pour révision interne avant publication effective.",
+        "nl": "De \"uitgever\" beschrijft een organisatie die de datasets publiceert (we verwijzen hier niet naar de metadata maar eerder naar de gegevens zelfs). De uitgever is verantwoordelijk voor de gegeven informatie en moet door gegevensverbruikers gecontacteerd worden indien een overeenkomst moet worden gesloten. Het volgende veld kan gebruikt worden om ter interne herziening voor effectieve publicatie de dataset \"privé\" te houden binnen de organisatie.",
+        "de": "Der \"Herausgeber\" beschreibt eine organisation, die die Datensätze publiziert (wir beziehen uns hier nicht auf die Metadaten sondern eher auf die Daten selbst). Der Herausgeber ist verantwortlich für die gegebene Information und muss von Datenverbrauchern kontaktiert werden, wenn ein Vertrag geschlossen werden muss. Das folgende Feld kann benutzt werden, um für interne Prüfung vor der effektiven Publikation den Datensatz \"privat\" zu halten innerhalb von der Organisation."
       },
       "required": "true",
       "help_text_visibility":{
@@ -229,36 +203,93 @@
         "fr": "ici.",
         "nl": "hier.",
         "de": "hier."
-      }
+      },
+      "display_snippet": "organization.html"
     },
     {
-      "field_name": "contact_name",
+      "field_name": "contact_point",
+      "label": {
+        "en": "Contact point",
+        "fr": "Point de contact",
+        "nl": "Contactpunt",
+        "de": "Kontaktpunkt"
+      },
+      "help_text": {
+        "en": "The contact point of the metadata, divided into three fields: name (mandatory), email (mandatory), and phone number (optional).",
+        "fr": "Le point de contact des métadonnées, divisé en trois champs : nom (obligatoire), email (obligatoire) et numéro de téléphone (optionnel).",
+        "nl": "Het contactpunt van de metadata, verdeeld in drie velden: naam (verplicht), e-mail (verplicht) en telefoonnummer (optioneel).",
+        "de": "Der Ansprechpartner der Metadaten, unterteilt in drei Felder: Name (verpflichtend), E-Mail (verpflichtend) und Telefonnummer (optional)."
+      },
+      "form_snippet": "nested_field_with_autocomplete.html",
+      "display_snippet": null,
+      "nested_fields": [
+        {
+            "field_name": "contact_point_name"
+        },
+        {
+            "field_name": "contact_point_email"
+        },
+        {
+            "field_name": "contact_point_tel"
+        }
+      ]
+    },
+    {
+      "field_name": "contact_point_name",
       "label": {
         "en": "Name [contact point]",
         "fr": "Nom [point de contact]",
         "nl": "Naam [contactpunt]",
         "de": "Name [Kontaktpunkt]"
       },
-      "form_placeholder": "John Doe",
-      "display_property": "dc:creator",
+      "help_text": {
+        "en": "The \"contact point\", describes an organisation, if applicable a person, which is responsible for the creation and maintenance of the metadata. This person or organization is the single point of contact for the present metadata set.",
+        "fr": "Le \\\"point de contact\\\" décrit une organisation, ou une personne si d'application, qui est responsable de la création et de la mise à jour des métadonnées. Cette personne ou organisation est le point de contact unique pour le présent jeu de métadonnées.",
+        "nl": "Het \\\"contactpunt\\\" beschrijft een organisatie, of een persoon indien van toepassing, die verantwoordelijk is voor de aanmaak en bijwerking van de metadata. Deze persoon of organisatie is het één contactpunt voor deze set van metadata.",
+        "de": "Der \"Kontaktpunkt\" beschreibt eine Organisation, oder gegebenenfalls eine Person, die für die Herstellung und Aktualisierung von Metadaten verantwortlich ist. Diese Person oder Organisation ist der einzige Kontaktpunkt für diesen Metadatensatz."
+      },
+      "form_snippet": null,
+      "form_placeholder": "Aristarchus of Samothrace",
       "required": "true"
     },
     {
-      "field_name": "publisher_org",
+      "field_name": "contact_point_email",
       "label": {
-        "en": "Organisation name [publisher]",
-        "fr": "Nom de l'organisation [éditeur] ",
-        "nl": "Naam van de organisatie [uitgever]",
-        "de": "Name der Organisation  [Herausgeber]"
+        "en": "E-mail [contact point]",
+        "fr": "E-mail [point de contact]",
+        "nl": "E-mail [contactpunt]",
+        "de": "E-mail [Kontaktpunkt]"
       },
       "help_text": {
-        "en": "The \"publisher\" describes an entity (company and person) that publishes the datasets (we are not refering to the metadata here, but rather to the data themselves). He or she is responsible for the given information and must be contacted by data consumers if a contract needs to be concluded.",
-        "fr": "L'\"éditeur\" décrit une entité (entreprise et personne) qui publie les jeux de données (nous ne nous référons pas ici aux métadonnées mais plutôt aux données elles-mêmes). Il ou elle est responsable des informations données et doit être contacté(e) par les consommateurs de données si un contrat doit être conclu.",
-        "nl": "De \"uitgever\" beschrijft een entiteit (bedrijf of persoon) die de datasets publiceert (we verwijzen hier niet naar de metadata maar eerder naar de gegevens zelfs). Hij of zij is verantwoordelijk voor de gegeven informatie en moet door gegevensverbruikers gecontacteerd worden indien een overeenkomst moet worden gesloten. ",
-        "de": "Der \"Herausgeber\" beschreibt eine Entität (Unternehmen oder Person), die die Datensätze publiziert (wir beziehen uns hier nicht auf die Metadaten sondern eher auf die Daten selbst). Er oder sie ist verantwortlich für die gegebene Information und muss von Datenverbrauchern kontaktiert werden, wenn ein Vertrag geschlossen werden muss."
+          "en": "The email address must contain @ and a dot. The field will be automatically filled when the contact point is an organization.",
+          "fr": "L'adresse e-mail doit contenir @ et un point. Le champ sera automatiquement rempli lorsque le point de contact est une organisation.",
+          "nl": "Het e-mailadres moet @ en een punt inhouden. Het veld wordt automatisch ingevuld wanneer het contactpunt een organisatie is.",
+          "de": "Die E-Mail muss @ und einen Punkt beinhalten. Das Feld wird automatisch ausgefüllt, wenn der Kontaktpunkt eine Organisation ist."
       },
-      "form_snippet": "text_autocomplete.html",
-      "required": "true"
+      "required": "true",
+      "form_snippet": null,
+      "display_snippet": "email.html",
+      "display_email_name_field": "contact_point_name",
+      "form_placeholder": "example@example.com",
+      "validators": "email_validator not_empty benap_contact_point_org_fields_consistency_check"
+    },
+    {
+      "field_name": "contact_point_tel",
+      "label": {
+        "en": "Telephone number [contact point]",
+        "fr": "Numéro de téléphone [point de contact]",
+        "nl": "Telefoonnummer [contactpunt]",
+        "de": "Telefonnummer [Kontaktpunkt]"
+      },
+      "help_text": {
+        "en": "The telephone number must start with the country prefix (e.g. \",+32\" for Belgium) and may only contain numbers from 0 to 9 besides the \"+\" sign. The field will be automatically filled when the contact point is an organization.",
+        "fr": "Le numéro de téléphone doit commencer par le préfixe du pays (par ex. \"+32\" pour la Belgique) et ne peut contenir que des chiffres de 0 à 9 en plus du signe \"+\". Le champ sera automatiquement rempli lorsque le point de contact est une organisation.",
+        "nl": "Het telefoonnummer moet met het netnummer van het land beginnen (bv. \"+32\" voor België) en kan naast de teken \"+\" alleen maar cijfers van 0 tot 9 inhouden. Het veld wordt automatisch ingevuld wanneer het contactpunt een organisatie is.",
+        "de": "Die Telefonnummer muss mit der Vorwahl des Landes anfangen (zum B. \"+32\" für Belgien) und kann neben dem Zeichen \"+\" nur Zahlen von 0 bis 9 beinhalten. Das Feld wird automatisch ausgefüllt, wenn der Kontaktpunkt eine Organisation ist."
+    },
+      "form_placeholder": "+32XXXXXXXX",
+      "form_snippet": null,
+      "validators": "phone_number_validator benap_contact_point_org_fields_consistency_check"
     },
     {
       "field_name": "publisher_name",
@@ -268,19 +299,73 @@
         "nl": "Naam [uitgever]",
         "de": "Name [Herausgeber]"
       },
-      "form_placeholder": "John Doe",
+      "help_text": {
+          "en": "Describes a person within an organization who is responsible for the dataset. This field is divided into two parts: first name and surname.",
+          "fr": "Décrit une personne au sein d'une organisation qui est responsable du jeu de données. Ce champ est divisé en deux parties : prénom et nom.",
+          "nl": "Beschrijft een persoon binnen een organisatie die verantwoordelijk is voor de dataset. Dit veld is opgedeeld in twee delen: voornaam en achternaam.",
+          "de": "Beschreibt eine Person innerhalb einer Organisation, die für den Datensatz verantwortlich ist. Dieses Feld ist in zwei Teile unterteilt: Vorname und Nachname."
+      },
+      "display_snippet": "full_name.html",
+      "form_snippet": "nested_field.html",
+      "nested_fields": [
+        {
+            "field_name": "publisher_firstname",
+            "form_snippet": "text.html"
+        },
+        {
+            "field_name": "publisher_surname",
+            "form_snippet": "text.html"
+        }
+      ]
+    },
+    {
+      "field_name": "publisher_firstname",
+      "label": {
+        "en": "First name [publisher]",
+        "fr": "Prénom [éditeur]",
+        "nl": "Voornaam [uitgever]",
+        "de": "Vorname [Herausgeber]"
+      },
+      "form_snippet": null,
+      "form_placeholder": "Zenodotus",
+      "help_text": {
+        "en": "The first name of a person within the organization who is responsible for the dataset.",
+        "fr": "Le prénom d'une personne au sein de l'organisation qui est responsable du jeu de données.",
+        "nl": "De voornaam van een persoon binnen de organisatie die verantwoordelijk is voor de dataset.",
+        "de": "Der Vorname einer Person innerhalb der Organisation, die für den Datensatz verantwortlich ist."
+      },
+      "display_snippet": null,
       "required": "true"
     },
     {
-      "field_name": "p_address",
+      "field_name": "publisher_surname",
+      "label": {
+        "en": "Surname [publisher]",
+        "fr": "Nom [éditeur]",
+        "nl": "Familienaam [uitgever]",
+        "de": "Familienname [Herausgeber]"
+      },
+      "form_snippet": null,
+      "form_placeholder": "Of Ephesus",
+      "help_text": {
+        "en": "The surname of a person within the organization who is responsible for the dataset.",
+        "fr": "Le nom de famille d'une personne au sein de l'organisation qui est responsable du jeu de données.",
+        "nl": "De achternaam van een persoon binnen de organisatie die verantwoordelijk is voor de dataset.",
+        "de": "Der Nachname einer Person innerhalb der Organisation, die für den Datensatz verantwortlich ist."
+      },
+      "display_snippet": null,
+      "required": "true"
+    },
+    {
+      "field_name": "publisher_address",
       "label": {
         "en": "Address [publisher]",
-        "fr": "Adresse  [éditeur]",
+        "fr": "Adresse [éditeur]",
         "nl": "Adres [uitgever]",
         "de": "Adresse [Herausgeber]"
       },
-      "form_placeholder": "Boulevard Anspach, 1 - 1000 Bruxelles (Belgique)",
-      "required": "true"
+      "form_snippet": null,
+      "display_snippet": "address.html"
     },
     {
       "field_name": "publisher_email",
@@ -290,52 +375,29 @@
         "nl": "E-mail [uitgever]",
         "de": "E-Mail [Herausgeber]"
       },
-      "form_placeholder": "example@example.com",
       "display_snippet": "email.html",
-      "display_email_name_field": "publisher_name",
-      "help_text": {
-        "en": "Please use a general e-mail address (not a personal one). The email adress must contain @ and a dot.",
-        "fr": "Veuillez utiliser une adresse e-mail générale (et non personnelle). L'adresse e-mail doit contenir @ et un point.",
-        "nl": "Gelieve bij voorkeer een algemeen e-mailadres te gebruiken (geen persoonlijk). Het e-mailadres moet  @ en een punt inhouden.",
-        "de": "Bitte verwenden Sie eine allgemeine E-Mail-Adresse (keine persönliche). Die E-Mail muss  @ und einen Punkt beinhalten."
-      },
-      "required": "true",
-      "validators": "email_validator not_empty"
+      "form_snippet": null
     },
     {
       "field_name": "publisher_url",
       "label": {
         "en": "Website [publisher]",
-        "fr": "Site web  [éditeur]",
-        "nl": "Website [uitgever] ",
+        "fr": "Site web [éditeur]",
+        "nl": "Website [uitgever]",
         "de": "Website [Herausgeber]"
       },
       "display_snippet": "link.html",
-      "help_text": {
-        "en": "The website address must start with \"http://\", or \"https://\".",
-        "fr": "L'adresse du site web doit commencer par \"http://\" ou \"https://\".",
-        "nl": "Het adres van de website moet met  \"http://\" of \"https://\" beginnen.",
-        "de": "Die Adresse der Website muss mit \"http://\" of \"https://\" anfangen. "
-      },
-      "validators": "url_validator benap_is_choice_null"
+      "form_snippet": null
     },
     {
-      "field_name": "p_tel",
+      "field_name": "publisher_telephone_number",
       "label": {
         "en": "Telephone number [publisher]",
         "fr": "Numéro de téléphone [éditeur]",
-        "nl": "Telefoonnummer [uitgever] ",
-        "de": "Telefonnummer  [Herausgeber]"
+        "nl": "Telefoonnummer [uitgever]",
+        "de": "Telefonnummer [Herausgeber]"
       },
-      "form_placeholder": "+322XXXXXXX",
-      "help_text": {
-        "en": "The telephone number must start with the country prefix (e.g. \",+32\" for Belgium) and may only contain numbers from 0 to 9 besides the \"+\" sign.",
-        "fr": "Le numéro de téléphone doit commencer par le préfixe du pays (ex. \"+32\" pour la Belgique) et ne peut contenir que des chiffres de 0 à 9 en plus du signe \"+\".",
-        "nl": "Het telefoonnummer moet met het netnummer van het land beginnen (bv. \"+32\" voor België) en kan naast de teken \"+\" alleen maar cijfers van 0 tot 9 inhouden.",
-        "de": "Die Telefonnummer muss mit der Vorwahl des Landes (zum B. \"+32\" für Belgien) und kann nur neben dem Zeichen \"+\" Zahlen von 0 bis 9 beinhalten."
-      },
-      "required": "true",
-      "validators": "phone_number_validator not_empty"
+      "form_snippet": null
     },
     {
       "field_name": "temporal_start",
@@ -401,7 +463,7 @@
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "EU_COUNTRY",
       "required": "true",
-      "validators": "scheming_required scheming_multiple_choice benap_countries_covered_belgium"
+      "validators": "scheming_multiple_choice scheming_required benap_countries_covered_belgium"
     },
     {
       "field_name": "regions_covered",
@@ -421,6 +483,65 @@
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "NUTS1_BE",
       "required": "true"
+    },
+    {
+      "field_name": "network_coverage",
+      "label": {
+        "en": "Network coverage",
+        "fr": "Couverture du réseau",
+        "nl": "Netwerkdekking",
+        "de": "Netzabdeckung"
+      },
+      "display_snippet": "multiple_choice.html",
+      "preset": "multiple_checkbox",
+      "sorted_choices": "true",
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "network_coverage",
+      "help_text":{
+        "en":"Network coverage describes the part of the transport network that is covered by the delivered content.",
+        "fr":"La couverture du réseau décrit la partie du réseau de transport couverte par le contenu fourni.",
+        "nl":"Netwerkdekking beschrijft het deel van het transportnetwerk dat door de geleverde inhoud wordt gedekt.",
+        "de":"Netzabdeckung beschreibt den Teil des Verkehrsnetzes, der durch den gelieferten Inhalt abgedeckt wird."
+      },
+      "validators":"benap_is_choice_null"
+    },
+    {
+      "field_name": "reference_system",
+      "label": {
+        "en": "Coordinate reference system",
+        "fr": "Système de coordonnées de référence",
+        "nl": "Coördinaten referentiesysteem",
+        "de": "Koordinatenreferenzsystem"
+      },
+      "preset": "multiple_select",
+      "help_text": {
+          "en": "Describes the coordinate reference system used in the data set. It is possible to select multiple options.",
+          "fr": "Décrit le système de coordonnées de référence utilisé dans le jeu de données. Il est possible de sélectionner plusieurs options.",
+          "nl": "Beschrijft het coördinaten referentiesysteem dat in de dataset wordt gebruikt. Het is mogelijk om meerdere opties te selecteren.",
+          "de": "Beschreibt das verwendete Koordinatenreferenzsystem im Datensatz. Es ist möglich, mehrere Optionen auszuwählen."
+      },
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "reference_system",
+      "validators": "scheming_multiple_choice benap_is_choice_null"
+    },
+    {
+       "field_name": "georeferencing_method",
+      "label": {
+        "en": "Georeferencing method",
+        "fr": "Méthode de géoréférencement",
+        "nl": "Georeferentie methode",
+        "de": "Georeferenzierungsmethode"
+      },
+      "preset": "multiple_select",
+      "help_text": {
+        "en": "Define the georeferencing method if the dataset consists of geographically referenced data.",
+        "fr": "Spécifiez la méthode de géoréférencement si le jeu de données est constitué de données géographiquement référencées.",
+        "nl": "Beschrijf de georefentiemethode indien de dataset gegeorefereerde data bevat.",
+        "de": "Bestimmen Sie die Georeferenzierungsmethode, wenn der Datensatz aus räumlich referenzierten Daten besteht."
+      },
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "georeferencing_method",
+      "validators": "scheming_multiple_choice benap_is_choice_null"
     },
     {
       "field_name": "spatial",
@@ -456,43 +577,7 @@
       },
       "form_snippet": "form_tags.html",
       "required": "true",
-      "validators": "scheming_required tag_string_convert"
-    },
-    {
-      "field_name": "contract_license",
-      "label": {
-        "en": "Contract or license",
-        "fr": "Contrat ou licence",
-        "nl": "Contract of licentie",
-        "de": "Vertrag oder Lizenz"
-      },
-      "preset": "select",
-      "choices_helper": "benap_ontology_helper",
-      "help_text": {
-        "en": "Describes the conditions of use of the data set.",
-        "fr": "Décrit les conditions d'utilisation du jeu de données.",
-        "nl": "Beschrijft de gebruiksvoorwaarden van de dataset.",
-        "de": "Beschreibt die Nutzungsbedingungen des Datensatzes."
-      },
-      "benap_helper_ontology": "contract_license",
-      "required": "true"
-    },
-    {
-      "field_name": "license_id",
-      "label": {
-        "en": "License type",
-        "fr": "Type de licence",
-        "nl": "Type licentie",
-        "de": "Lizenz-Typ"
-      },
-      "form_snippet": "license.html",
-      "help_text": {
-        "en": "Describes the conditions of use of the data set.",
-        "fr": "Décrit les conditions d'utilisation du jeu de données.",
-        "nl": "Beschrijft de gebruiksvoorwaarden van de dataset.",
-        "de": "Beschreibt die Nutzungsbedingungen des Datensatzes."
-      },
-      "required": "true"
+      "validators": "scheming_required benap_tag_string_convert benap_fluent_tags_validator"
     },
     {
       "field_name": "frequency",
@@ -541,22 +626,48 @@
         "de"
       ],
       "form_snippet": "fluent_markdown.html",
-      "display_snippet": "fluent_markdown.html",
+      "display_snippet": "fluent_markdown_fallback.html",
       "error_snippet": "fluent_text.html",
       "output_validators": "fluent_core_translated_output",
-      "validators": "fluent_text"
+      "validators": "fluent_text fluent_is_choice_null"
+    },
+    { 
+      "field_name": "nap_checked",
+      "label":"NAP check",
+      "form_include_blank_choice":false,
+      "required": true,
+      "display_snippet" : null,
+      "validators": "benap_modified_by_sysadmin",
+      "output_validators": "boolean_validator",
+      "form_snippet":"nap_checked.html",
+      "choices": [
+          {
+            "label": "Not checked",
+            "value": "False"
+          },
+          {
+            "label": "Checked",
+            "value": "True"
+          }
+        ],
+      "display_property": null,
+      "help_text": {
+        "en":"Only for system administrators",
+        "fr":"Réservé aux administrateurs de système",
+        "de":"Nur für Systemadministratoren",
+        "nl":"Enkel voor systeembeheerders"
+      }
     },
     {
       "field_name": "theme",
+      "preset": "hidden",
       "label": {
         "en": "Dataset theme",
         "fr": "Thème du jeu de données",
         "nl": "Thema dataset",
         "de": "Thema des Datensatzes"
       },
-
-      "display_property": "dcat:theme",
-      "preset": "select",
+      "default": "http://publications.europa.eu/resource/authority/data-theme/TRAN",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "data-theme",
       "required": "true"
@@ -635,6 +746,38 @@
         "de": "Beschreibt in grossen Zügen die Ressourcen, die Sie verbunden oder geüpload haben oder gibt eine kurze Beschreibung. Der Verfasser wird ersucht eine sinnvolle Beschreibung zu schreiben."
       },
       "required": "true"
+    },
+    {
+      "field_name": "description_resource_translated",
+      "label": {
+        "en": "Description of the resource",
+        "fr": "Description de la ressource",
+        "nl": "Beschrijving van de bron",
+        "de": "Beschreibung der Ressource"
+      },
+      "form_placeholder": {
+        "en": "“Description of the resource, including its purpose and key attributes”",
+        "fr": "“Description de la ressource, y compris son objectif et ses principales caractéristiques”",
+        "nl": "“Beschrijving van de bron, inclusief het doel en de belangrijkste kenmerken”",
+        "de": "“Beschreibung der Ressource, einschließlich ihres Zwecks und der wichtigsten Merkmale”"
+      },
+      "help_text": {
+        "en": "Gives the user more information about the content of the resource.",
+        "fr": "Donne à l'utilisateur plus d'informations sur le contenu de la ressource.",
+        "nl": "Geeft de gebruiker meer informatie over de inhoud van de bron.",
+        "de": "Gibt dem Benutzer mehr Informationen über den Inhalt der Ressource."
+      },
+      "form_languages": [
+        "en",
+        "nl",
+        "fr",
+        "de"
+      ],
+      "form_snippet": "fluent_markdown.html",
+      "display_snippet": "fluent_markdown_fallback.html",
+      "error_snippet": "fluent_text.html",
+      "output_validators": "fluent_core_translated_output",
+      "validators": "fluent_text fluent_is_choice_null"
     },
     {
       "field_name": "acc_enc",
@@ -788,43 +931,185 @@
       }
     },
     {
-      "field_name": "resource_language",
+      "field_name": "rights",
       "label": {
-        "en": "Dataset language",
-        "fr": "Langue du jeu de données",
-        "nl": "Taal van de dataset",
-        "de": "Sprache des Datensatzes"
+        "en": "Rights",
+        "fr": "Droits",
+        "nl": "Rechten",
+        "de": "Rechte"
       },
-      "display_property": "dct:language",
-      "preset": "select",
-      "choices_helper": "benap_ontology_helper",
-      "benap_helper_ontology": "EU-language",
       "help_text": {
-        "en": "Describes the language of the data contents (text fields, addresses etc.).",
-        "fr": "Décrit la langue des contenus de données (champs textuels, adresses, etc.). ",
-        "nl": "Beschrijft de taal van de gegevensinhouden (tekstvelden, adressen, enz.).",
-        "de": "Beschreibt die Sprache der Dateninhälte (Textfelde, Adressen, usw.)."
+        "en": "Describes the conditions for access and usage of the data (rights).",
+        "fr": "Décrit les conditions d'accès et d'utilisation des données (droits).",
+        "nl": "Beschrijft de toegangs- en gebruiksvoorwaarden van de gegevens (rechten).",
+        "de": "Beschreibt die Zugangs- und Nutzungsbedingungen der Daten (Rechte)."
       },
-      "required": "true"
+      "form_snippet": "nested_field_license.html",
+      "display_snippet": null,
+      "nested_fields": [
+        {
+          "field_name": "conditions_access",
+          "form_snippet": "select.html"
+        },
+        {
+          "field_name": "conditions_usage",
+          "form_snippet": "select.html"
+        },
+        {
+          "field_name": "additional_info_access_usage_translated",
+          "form_snippet": "fluent_markdown.html"
+        }
+      ]
     },
     {
-       "field_name": "cont_georef",
+      "field_name": "conditions_access",
       "label": {
-        "en": "Georeferencing method",
-        "fr": "Méthode de géoréférencement",
-        "nl": "Georeferentie methode",
-        "de": "Georeferenzierungsmethode"
+        "en": "Conditions for access",
+        "fr": "Conditions d'accès",
+        "nl": "Toegangsvoorwaarden",
+        "de": "Zugangsbedingungen"
       },
-      "preset": "multiple_select",
       "help_text": {
-        "en": "Define the georeferencing method if the dataset consists of geographically referenced data.",
-        "fr": "Spécifiez la méthode de géoréférencement si le jeu de données est constitué de données géographiquement référencées.",
-        "nl": "Beschrijf de georefentiemethode indien de dataset gegeorefereerde data bevat.",
-        "de": "Bestimmen Sie die Georeferenzierungsmethode, wenn der Datensatz aus räumlich referenzierten Daten besteht."
+        "en": "Specify the conditions under which the data can be accessed.",
+        "fr": "Spécifiez les conditions d'accès aux données.",
+        "nl": "Geef de voorwaarden op waaronder de gegevens toegankelijk zijn.",
+        "de": "Geben Sie die Bedingungen an, unter denen auf die Daten zugegriffen werden kann."
+    },
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "conditions_access",
+      "required": true,
+      "form_snippet": null,
+      "validators": "scheming_required scheming_choices"
+    },
+    {
+      "field_name": "conditions_usage",
+      "label": {
+        "en": "Conditions for usage",
+        "fr": "Conditions d'utilisation",
+        "nl": "Gebruiksvoorwaarden",
+        "de": "Nutzungsbedingungen"
+      },
+      "help_text": {
+        "en": "Specify the conditions under which the data can be used.",
+        "fr": "Spécifiez les conditions d'utilisation des données.",
+        "nl": "Geef de voorwaarden op waaronder de gegevens gebruikt mogen worden.",
+        "de": "Geben Sie die Bedingungen an, unter denen die Daten genutzt werden dürfen."
       },
       "choices_helper": "benap_ontology_helper",
-      "benap_helper_ontology": "georeferencing_method"
+      "benap_helper_ontology": "conditions_usage",
+      "required": true,
+      "form_snippet": null,
+      "validators": "scheming_required scheming_choices"
+    },
+    {
+      "field_name": "additional_info_access_usage_translated",
+      "label": {
+        "en": "Additional information for access and usage",
+        "fr": "Informations supplémentaires pour l'accès et l'utilisation",
+        "nl": "Aanvullende informatie voor toegang en gebruik",
+        "de": "Zusätzliche Informationen für den Zugriff und die Nutzung"
+      },
+      "help_text": {
+        "en": "Provide any additional information for access and usage (optional).",
+        "fr": "Fournissez toute information supplémentaire pour l'accès et l'utilisation (facultatif).",
+        "nl": "Geef aanvullende informatie voor toegang en gebruik (optioneel).",
+        "de": "Geben Sie zusätzliche Informationen für den Zugriff und die Nutzung an (optional)."
+      },
+      "form_placeholder": {
+        "en": "e.g., Additional details on access rights, usage restrictions, or licensing terms",
+        "fr": "ex. Informations supplémentaires sur les droits d'accès, les restrictions d'utilisation ou les conditions de licence",
+        "nl": "bv. Aanvullende details over toegangsrechten, gebruiksbeperkingen of licentievoorwaarden",
+        "de": "z. B. Zusätzliche Angaben zu Zugriffsrechten, Nutzungsbeschränkungen oder Lizenzbedingungen"
+      },
+      "form_languages": [
+        "en",
+        "nl",
+        "fr",
+        "de"
+      ],
+      "error_snippet": "fluent_text.html",
+      "output_validators": "fluent_core_translated_output",
+      "validators": "fluent_text",
+      "form_snippet": null,
+      "display_snippet": "fluent_markdown_fallback.html"
+    },
+    {
+      "field_name": "license",
+      "label": {
+        "en": "License",
+        "fr": "Licence",
+        "nl": "Licentie",
+        "de": "Lizenz"
+      },
+      "help_text": {
+        "en": "Describes the license under which the data is made available.",
+        "fr": "Décrit la licence sous laquelle les données sont mises à disposition.",
+        "nl": "Beschrijft de licentie waaronder de gegevens beschikbaar worden gesteld.",
+        "de": "Beschreibt die Lizenz, unter dem die Daten verfügbar gemacht werden."
+      },
+      "form_snippet": null,
+      "display_snippet": null,
+      "nested_fields": [
+        {
+          "field_name": "license_type",
+          "form_snippet": "select.html"
+        },
+        {
+          "field_name": "license_text_translated",
+          "form_snippet": "fluent_markdown.html"
+        }
+      ]
+    },
+    {
+      "field_name": "license_type",
+      "label": {
+        "en": "License type",
+        "fr": "Type de licence",
+        "nl": "Licentietype",
+        "de": "Lizenztyp"
+      },
+      "help_text": {
+        "en": "Specify the license type (standard license) under which the data is made available.",
+        "fr": "Spécifiez le type de licence (licence standard) sous laquelle les données sont mises à disposition.",
+        "nl": "Geef het licentietype op (standaardlicentie) waaronder de gegevens beschikbaar worden gesteld.",
+        "de": "Geben Sie den Lizenztyp (Standardlizenz) an, unter dem die Daten verfügbar gemacht werden."
+      },
+      "choices_helper": "benap_ontology_helper",
+      "benap_helper_ontology": "license_type",
+      "form_snippet": null,
+      "validators": "scheming_choices benap_is_choice_null benap_license_fields_conditional_validation"
+    },
+    {
+      "field_name": "license_text_translated",
+      "label": {
+        "en": "License text",
+        "fr": "Texte de la licence",
+        "nl": "Licentietekst",
+        "de": "Lizenztext"
+      },
+      "help_text": {
+        "en": "Provide the full text of a License Document. This field is mandatory when the license type is not specified in the field above.",
+        "fr": "Fournissez le texte complet d'un document de licence. Ce champ est obligatoire si le type de licence n'est pas spécifié dans le champ ci-dessus.",
+        "nl": "Geef de volledige tekst van een licentiedocument. Dit veld is verplicht wanneer het licentietype niet is gespecificeerd in het bovenstaande veld.",
+        "de": "Geben Sie den vollständigen Text eines Lizenzdokuments an. Dieses Feld ist obligatorisch, wenn der Lizenztyp im obigen Feld nicht angegeben ist."
+      },
+      "form_placeholder": {
+        "en": "e.g., Full license text or terms and conditions",
+        "fr": "ex. Texte complet de la licence ou termes et conditions",
+        "nl": "bv. Volledige licentietekst of voorwaarden",
+        "de": "z. B. Vollständiger Lizenztext oder Bedingungen"
+      },
+      "form_languages": [
+        "en",
+        "nl",
+        "fr",
+        "de"
+      ],
+      "form_snippet": null,
+      "display_snippet": "fluent_markdown_fallback.html",
+      "error_snippet": "fluent_text.html",
+      "output_validators": "fluent_core_translated_output",
+      "validators": "fluent_text benap_is_choice_null benap_license_fields_conditional_validation"
     }
   ]
 }
-
