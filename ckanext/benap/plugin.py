@@ -9,11 +9,11 @@ from flask import Blueprint
 
 from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallback, json_loads, \
     package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete, \
-    get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, get_translated_tag_with_name, \
+    get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, \
     forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element, get_organization_by_id, benap_fluent_label, \
     translate_organization_filter, convert_validation_list_to_JSON, benap_get_organization_field_by_id, \
     benap_get_organization_field_by_specified_field, benap_retrieve_dict_items_or_keys_or_values, get_translated_category_and_sub_category, \
-    benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper, benap_tag_mapping
+    benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper, _c
 
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.validators import phone_number_validator, \
@@ -55,6 +55,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
 
     def get_helpers(self):
         return {
+            '_c': _c,
             'benap_geographic_granularity_helper': lambda context: map_for_form_select(self.geographic_granularity_map),
             'benap_ontology_helper': ontology_helper,
             'benap_scheming_language_text_fallback': scheming_language_text_fallback,
@@ -62,7 +63,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_field_translated_fallback': field_translated_fallback,
             'json_loads': json_loads,
             'benap_organisation_names_for_autocomplete': organisation_names_for_autocomplete,
-            'get_translated_tag_with_name': get_translated_tag_with_name,
             'get_translated_tags': get_translated_tags,
             'get_translated_tag': get_translated_tag,
             'filter_default_tags_only': filter_default_tags_only,
@@ -82,7 +82,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_retrieve_org_title_tel_email': benap_retrieve_org_title_tel_email,
             'benap_retrieve_raw_choices_list': benap_retrieve_raw_choices_list,
             'benap_tag_update_helper': benap_tag_update_helper,
-            'benap_tag_mapping': benap_tag_mapping
         }
 
     # IValidators
