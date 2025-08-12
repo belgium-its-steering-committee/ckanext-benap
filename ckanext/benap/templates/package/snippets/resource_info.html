@@ -17,8 +17,7 @@ Example:
       <div class="nums">
         <dl>
           <dt>{{ _('Format') }}</dt>
-          <!-- TODO: Fix with correct translation mapping of format value -->
-          <dd>{{ h.get_translated(res, 'format').split("/")[-1] }}</dd>
+          <dd>{{ h._c(res.get('format')) }}</dd>
         </dl>
       </div>
     {% endblock %}
