@@ -192,7 +192,7 @@
 
             // Accordion toggle for category header
             $('.flex-between').click(function(event) {
-                if (!$(event.target).is('.category-checkbox')) { // Only toggle when clicking outside checkbox
+                if (!$(event.target).is('.flex-between *')) { // Only toggle when clicking outside checkbox
                     let tagContainer = $(this).siblings('.tag-container');
                     tagContainer.slideToggle();
                     $(this).find('.caret').toggleClass('dropup'); // Toggle caret icon direction
