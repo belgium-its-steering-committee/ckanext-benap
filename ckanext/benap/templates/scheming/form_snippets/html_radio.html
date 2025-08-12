@@ -1,5 +1,5 @@
 {# adapted from https://github.com/ckan/ckanext-scheming/blob/da2daad24b825dbe521325dee7e45d02ac6ec371/ckanext/scheming/templates/scheming/form_snippets/radio.html#L1 #}
-{# to allow html in radio choice label with "|safe" #}
+{# this version allows html in radio choice label with "|safe". This is the only code difference from the original #}
 
 {% import 'macros/form.html' as form %}
 
@@ -39,6 +39,7 @@
                 name="{{ field.field_name }}"
                 value="{{ c.value }}"
                 {{ "checked " if c.value == data[field.field_name] }} />
+            {# "|safe" added here to allow html in label #}
             {{ h.scheming_language_text(c.label)|safe }}
           </label>
         </div>
