@@ -356,14 +356,15 @@
       },
       "multi_help": "true",
       "preset": "multiple_radio_compliance",
+      "form_snippet": "html_radio.html",
       "choices": [
          {
           "value": "Y",
           "label": {
-              "en": "I hereby declare to be compliant to articles 3 to 8 of the European regulation (EU) 2017/1926.",
-              "fr": "Je déclare être en conformité avec les articles 3 à 8 du règlement délégué européen (UE) 2017/1926.",
-              "nl": "Ik verklaar voor deze dataset in overeenstemming te zijn met artikels 3 tot 8 van de Europese verordening (EU) 2017/1926.",
-              "de": "Hiermit erkläre ich, in Übereinstimmung mit den Artikeln 3 bis 8 der Europäischen Verordnung (EU) 2017/1926."
+              "en": "I hereby declare to be compliant to articles 3 to 8 of the European regulation (EU) 2017/1926 and its amendment <a target=\"_blank\"  href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202400490\">EU 2024/490</a>.",
+              "fr": "Je déclare être en conformité avec les articles 3 à 8 du règlement délégué européen (UE) 2017/1926 et son modification <a target=\"_blank\"  href=\"https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=OJ:L_202400490\">EU 2024/490</a>.",
+              "nl": "Ik verklaar voor deze dataset in overeenstemming te zijn met artikels 3 tot 8 van de Europese verordening (EU) 2017/1926 en zijn wijziging <a target=\"_blank\"  href=\"https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202400490\">EU 2024/490</a>.",
+              "de": "Hiermit erkläre ich, in Übereinstimmung mit den Artikeln 3 bis 8 der Europäischen Verordnung (EU) 2017/1926 und seine Änderung <a target=\"_blank\" href=\"https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=OJ:L_202400490\">EU 2024/490</a>."
             },
           "help_text": {
               "en": "For more information <a>click here</a>",
