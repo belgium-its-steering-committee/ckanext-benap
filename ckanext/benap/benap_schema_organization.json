@@ -392,13 +392,7 @@
               "fr": "Je déclare être en conformité avec les articles 3 à 8 du règlement délégué européen (UE) 2017/1926 et son modification <a href='https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=OJ:L_202400490'>EU 2024/490</a>.",
               "nl": "Ik verklaar voor deze dataset in overeenstemming te zijn met artikels 3 tot 8 van de Europese verordening (EU) 2017/1926 en zijn wijziging <a href='https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202400490'>EU 2024/490</a>.",
               "de": "Hiermit erkläre ich, in Übereinstimmung mit den Artikeln 3 bis 8 der Europäischen Verordnung (EU) 2017/1926 und seine Änderung <a href='https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=OJ:L_202400490'>EU 2024/490</a>."
-            },
-          "help_text": {
-              "en": "For more information <a href='/pages/declaration-of-compliance'>click here</a>",
-              "fr": "Pour de plus amples informations, <a href='/pages/declaration-of-compliance'>cliquez ici</a>",
-              "nl": "Voor meer info <a href='/pages/declaration-of-compliance'>klik hier</a>",
-              "de": "Für weitere Informationen, bitte <a href='/pages/declaration-of-compliance'>hier klicken</a>"
-           }
+            }
          },
         {
           "value": "N",
