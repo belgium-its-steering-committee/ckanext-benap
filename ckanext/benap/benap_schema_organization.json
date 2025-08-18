@@ -491,10 +491,10 @@
       },
       "validators": "doc_validator",
       "help_text": {
-        "en": "Upload the PDF 'Proxy agreement'",
-        "fr": "Télécharger la 'Convention proxy' au format PDF",
-        "nl": "Upload de PDF 'Proxy overeenkomst'",
-        "de": "Upload der PDF 'Vollmachtsvereinbarung'"
+        "en": "Upload the PDF <a href='/pages/information-for-dataproviders#anchor_proxy'>Proxy agreement</a>",
+        "fr": "Télécharger la <a href='/pages/information-for-dataproviders#anchor_proxy'>Convention proxy</a> au format PDF",
+        "nl": "Upload de PDF <a href='/pages/information-for-dataproviders#anchor_proxy'>Proxy overeenkomst</a>",
+        "de": "Upload der PDF <a href='/pages/information-for-dataproviders#anchor_proxy'>Vollmachtsvereinbarung</a>"
       },
       "form_snippet": "proxy_upload.html",
       "upload_field": "proxy_upload",
