@@ -668,10 +668,10 @@
     {
       "field_name": "agreement_declaration_nap",
       "label": {
-        "en": "Declaration of compliance",
-        "fr": "déclaration de conformité",
-        "nl": "Verklaring van overeenstemming",
-        "de": "Einhaltungserklärung"
+        "en": "Disclaimer Declarations of compliance",
+        "fr": "Avis de non-responsabilité Déclarations de conformité",
+        "nl": "Disclaimer Verklaringen van overeenstemming",
+        "de": "Haftungsausschluss Entsprechenserklärungen"
       },
       "preset": "multiple_checkbox_compliance",
       "choices": [
@@ -682,15 +682,15 @@
               "fr": "Je déclare être informé(e) de l’obligation d’introduire une déclaration de conformité pour chaque type de NAP pour lequel j’enregistre des jeux de données ou des services.",
               "nl": "Ik verklaar geïnformeerd te zijn over de verplichting om een verklaring van overeenstemming in te dienen voor elk type van NAP waarvoor ik datasets of diensten registreer.",
               "de": "Ich erkläre, daβ ich über die Plicht weiβ, eine Übereinstimmungserklärung für jeden Typ von NAP, wofür ich Datensätze oder Dienste registriere, einzutragen."
-            },
-          "help_text": {
-              "en": "For every NAP you register datasets or services (MMTIS, RTTI, SRTI, SSTP), your organization must submit a form in which it declares to be compliant to the respective European regulations regarding the NAP. <a href='/pages/declaration-of-compliance'>For more information click here.</a>\n\nRegistering this dataset or service might therefore require submitting an additional declaration of compliance or an update of the existing declaration(s) of your organization.",
-              "fr": "Pour chaque NAP sur lequel vous enregistrez des jeux de données ou des services (MMTIS, RTTI, SRTI, SSTP), votre organisation doit déclarer d’être en conformité avec les Règlements européens respectifs. <a href='/pages/declaration-of-compliance'>Pour de plus amples informations, cliquez ici.</a>\n\nLors de l’enregistrement de ce jeu de données ou service, il se peut dès lors que votre organisation doive introduire une déclaration de conformité supplémentaire ou actualiser une déclaration existante.",
-              "nl": "Voor elk NAP waarvoor u datasets of diensten  registreert (MMTIS, RTTI, SRTI, SSTP) moet uw organisatie een formulier indienen voor elk type NAP waarbij uw organisatie aangeeft in overeenstemming te zijn met de respectievelijke Europese Verordeningen betreffende het NAP. <a href='/pages/declaration-of-compliance'>Voor meer informatie klik hier.</a>\n\nDoor de registratie van deze dataset of dienst kan het daarom noodzakelijk zijn voor uw organisatie om een bijkomende verklaring van overeenstemming in te dienen of een bestaande verklaringen te updaten.",
-              "de": "Für jeden NAP, worauf Sie Datensätze oder Dienste registrieren (MMTIS, RTTI, SRTI, SSTP), muss Ihre Organisation ein Formular eintragen, wo sie ihre Beachtung der jeweiligen europäischen Verordnungen bestätigt. <a href='/pages/declaration-of-compliance'>Klicken Sie hier für weitere Informationen.</a>\n\nWenn Sie diesen Datensatz oder Dienst registrieren, kann es dadurch notwendig sein, daβ Ihre Organisation eine zusätzliche  Übereinstimmungserklärung einträgt oder eine bestehende Erklärung aktualisiert."
-           }
+            }
          }
       ],
+      "help_text": {
+        "en": "For every NAP you register datasets or services (MMTIS, RTTI, SRTI, SSTP), your organization must submit a form in which it declares to be compliant to the respective European regulations regarding the NAP. <a href='/pages/declaration-of-compliance'>For more information click here.</a>\n\nRegistering this dataset or service might therefore require submitting an additional declaration of compliance or an update of the existing declaration(s) of your organization.",
+        "fr": "Pour chaque NAP sur lequel vous enregistrez des jeux de données ou des services (MMTIS, RTTI, SRTI, SSTP), votre organisation doit déclarer d’être en conformité avec les Règlements européens respectifs. <a href='/pages/declaration-of-compliance'>Pour de plus amples informations, cliquez ici.</a>\n\nLors de l’enregistrement de ce jeu de données ou service, il se peut dès lors que votre organisation doive introduire une déclaration de conformité supplémentaire ou actualiser une déclaration existante.",
+        "nl": "Voor elk NAP waarvoor u datasets of diensten  registreert (MMTIS, RTTI, SRTI, SSTP) moet uw organisatie een formulier indienen voor elk type NAP waarbij uw organisatie aangeeft in overeenstemming te zijn met de respectievelijke Europese Verordeningen betreffende het NAP. <a href='/pages/declaration-of-compliance'>Voor meer informatie klik hier.</a>\n\nDoor de registratie van deze dataset of dienst kan het daarom noodzakelijk zijn voor uw organisatie om een bijkomende verklaring van overeenstemming in te dienen of een bestaande verklaringen te updaten.",
+        "de": "Für jeden NAP, worauf Sie Datensätze oder Dienste registrieren (MMTIS, RTTI, SRTI, SSTP), muss Ihre Organisation ein Formular eintragen, wo sie ihre Beachtung der jeweiligen europäischen Verordnungen bestätigt. <a href='/pages/declaration-of-compliance'>Klicken Sie hier für weitere Informationen.</a>\n\nWenn Sie diesen Datensatz oder Dienst registrieren, kann es dadurch notwendig sein, daβ Ihre Organisation eine zusätzliche  Übereinstimmungserklärung einträgt oder eine bestehende Erklärung aktualisiert."
+      },
       "required": "true"
     }
   ],
