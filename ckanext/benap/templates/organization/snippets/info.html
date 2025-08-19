@@ -1,0 +1,70 @@
+{# Had to copy entire file because CKAN (accidentaly?) removed the "organization" h2 element here: https://github.com/ckan/ckan/commit/9c6f899d951c2fd0c0d22e14a0d66a5aa6c998ca#diff-930781d7035511740e2ab8c16f580066eea0e7140423178ce457f4ac56ea2b70L21  #}
+{% ckan_extends %}
+{% block info %}
+  <section id="organization-info" class="module module-narrow">
+    <div class="module context-info">
+    {# Patch for incorrect nl translation #}
+    <h2 class="module-heading"><i class="fa fa-building"></i>{% if h.lang() == 'nl' %} Organisatie {% else %} {{ _('Organization') }} {% endif %}</h2>
+    <div class="module-content">
+      {% block inner %}
+      {% block image %}
+        <div class="image">
+          <a href="{{ url }}">
+            <img src="{{ organization.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" width="200" alt="{{ organization.name }}" />
+          </a>
+        </div>
+      {% endblock %}
+      {% block heading %}
+      <h1 class="heading">{{ organization.title or organization.name }}
+        {% if organization.state == 'deleted' %}
+          [{{ _('Deleted') }}]
+        {% endif %}
+      </h1>
+      {% endblock %}
+      {% block description %}
+        {% set description_translated = h.benap_field_translated_fallback(organization['description_translated']) %}
+        {% if description_translated %}
+          <p>
+            {{ h.markdown_extract(description_translated, 180) }}
+            {% link_for _('read more'), controller='organization', action='about', id=organization.name %}
+          </p>
+        {% else %}
+          <p class="empty">{{ _('There is no description for this organization') }}</p>
+        {% endif %}
+      {% endblock %}
+      {% if show_nums %}
+        {% block nums %}
+        {% set num_followers = h.follow_count('group', organization.id) %}
+        <div class="nums">
+          <dl>
+            <dt>{{ _('Followers') }}</dt>
+            <dd>{{ h.SI_number_span(num_followers) }}</dd>
+          </dl>
+          <dl>
+            <dt>{{ h.humanize_entity_type('package', dataset_type, 'facet label') or _('Datasets') }}</dt>
+            <dd>{{ h.SI_number_span(organization.package_count) }}</dd>
+          </dl>
+          <dl>
+            <dt>{{ _('Members') }}</dt>
+            <dd>{{ h.member_count(organization.id) }}</dd>
+          </dl>
+        </div>
+        {% endblock %}
+        {% block follow %}
+        {% if current_user.is_authenticated %}
+          {% if error_message %}
+            <div class="alert alert-danger">{{ error_message }}</div>
+          {% elif am_following %}
+            <a class="btn btn-danger" hx-post="{{ h.url_for('organization.unfollow', id=organization.id) }}" hx-target="#organization-info"><i class="fa-solid fa-circle-minus"></i> Unfollow</a>
+          {% else %}
+            <a class="btn btn-success" hx-post="{{ h.url_for('organization.follow', id=organization.id) }}" hx-target="#organization-info"><i class="fa-solid fa-circle-plus"></i> Follow</a>
+          {% endif %}
+        {% endif %}
+        {% endblock %}
+      {% endif %}
+      {% endblock %}
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+

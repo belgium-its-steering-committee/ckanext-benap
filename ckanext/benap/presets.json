@@ -1,0 +1,42 @@
+{
+  "scheming_presets_version": 1,
+  "about": "these are the default scheming field presets",
+  "about_url": "http://github.com/ckan/ckanext-scheming#preset",
+  "presets": [
+    {
+      "preset_name": "multiple_radio",
+      "values": {
+        "form_snippet": "multiple_radio.html",
+        "display_snippet": "multiple_choice.html",
+        "validators": "scheming_multiple_choice",
+        "output_validators": "scheming_multiple_choice_output"
+      }
+    },
+    {
+      "preset_name": "multiple_radio_compliance",
+      "values": {
+        "form_snippet": "multiple_radio_compliance.html",
+        "display_snippet": "multiple_choice.html",
+        "validators": "scheming_multiple_choice",
+        "output_validators": "scheming_multiple_choice_output"
+      }
+    },
+    {
+      "preset_name": "multiple_checkbox_compliance",
+      "values": {
+        "form_snippet": "multiple_checkbox_compliance.html",
+        "display_snippet": "multiple_choice.html",
+        "validators": "scheming_multiple_choice",
+        "output_validators": "scheming_multiple_choice_output"
+      }
+    },
+    {
+      "preset_name": "hidden",
+      "values": {
+        "form_snippet": "hidden.html",
+        "display_snippet": null,
+        "validators": "scheming_required scheming_choices"
+      }
+    }
+  ]
+}

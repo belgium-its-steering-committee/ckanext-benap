@@ -1,0 +1,13 @@
+{%- set values = data[field.field_name] -%}
+
+<ul>
+    {% for category, subcategories in h.benap_retrieve_dict_items_or_keys_or_values(values, "items") %}
+        <li>{{ h.scheming_choices_label(h.scheming_field_choices(field), category) }}
+            <ul style="margin-left: -30px;">
+                {% for subcategory in subcategories %}
+                    <li>{{ h.scheming_choices_label(h.scheming_field_choices(field), subcategory) }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ul>

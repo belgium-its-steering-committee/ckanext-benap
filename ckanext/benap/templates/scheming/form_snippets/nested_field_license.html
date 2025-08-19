@@ -1,0 +1,101 @@
+{% import 'macros/form.html' as form %}
+
+<fieldset id="rights-fieldset" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 40px;">
+    <legend style="font-weight: bold; margin-bottom: -5px;">
+        <label style="display: inline-block; width: 120px;">
+            <span style="color: rgb(198,137,139);">*</span> {{ h.scheming_language_text(field.label) }}</label>
+            {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
+    </legend>
+    {%- set schema_fields = c.scheming_fields if c.scheming_fields else h.scheming_get_dataset_schema('dataset').resource_fields -%}
+    {% for item in field.nested_fields %}
+        {% set matched_field = schema_fields | selectattr('field_name', 'equalto', item.field_name) | first %}
+        {% if matched_field %}
+            <div style="margin-bottom: -20px;">
+                {%- snippet 'scheming/form_snippets/' ~ item.form_snippet, field=matched_field, data=data, errors=errors -%}
+            </div>
+        {% endif %}
+    {% endfor %}
+</fieldset>
+
+{% set field = schema_fields | selectattr('field_name', 'equalto', 'license') | first %}
+<fieldset id="license-fieldset" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 40px;">
+    <legend style="font-weight: bold; margin-bottom: -5px;">
+        <label style="display: inline-block; width: 120px;">
+            <span id="star" style="color: rgb(198,137,139);">*</span> {{ h.scheming_language_text(field.label) }}</label>
+            {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
+    </legend>
+    {% for item in field.nested_fields %}
+        {% set matched_field = schema_fields | selectattr('field_name', 'equalto', item.field_name) | first %}
+        {% if matched_field %}
+            <div style="margin-bottom: -20px;">
+                {%- snippet 'scheming/form_snippets/' ~ item.form_snippet, field=matched_field, data=data, errors=errors -%}
+            </div>
+        {% endif %}
+    {% endfor %}
+</fieldset>
+
+<script>
+  $(document).ready(function() {
+    var $conditionsUsageField = $('#field-conditions_usage');
+    var $licenseTypeField = $('#field-license_type');
+    var $starElement = $('#star');
+    var $licenseFieldset = $('#license-fieldset');
+
+    function toggleFieldsetDisability($fieldset, hide) {
+      if(hide){
+        $fieldset.hide();
+        $fieldset.find('input, select, textarea').each(function(){
+          $(this).val('');
+        });
+      }else{
+        $fieldset.show();
+      }
+    }
+
+    function toggleRequiredFields(toggle) {
+      $('#field-license_text_translated-en').prop('required', toggle);
+      // option ro make multiple license text fields mandatory
+      // $('#field-license_text_translated-en', #field-license_text_translated-nl, #field-license_text_translated-de, #field-license_text_translated-fr').prop('required', toggle);
+    }
+
+    $conditionsUsageField.on('change', function() {
+      var selectedValue = $(this).val();
+      if (selectedValue === 'https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided') {
+        $licenseTypeField.prop('required', true);
+        $starElement.show();
+        toggleFieldsetDisability($licenseFieldset, false);
+      } else {
+        $licenseTypeField.prop('required', false);
+        toggleRequiredFields(false);
+        $starElement.hide();
+        toggleFieldsetDisability($licenseFieldset, true);
+      }
+    });
+
+    if ($conditionsUsageField.val() === 'https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided') {
+      $licenseTypeField.prop('required', true);
+      $starElement.show();
+      toggleFieldsetDisability($licenseFieldset, false);
+    } else {
+      $licenseTypeField.prop('required', false);
+      toggleRequiredFields(false);
+      $starElement.hide();
+      toggleFieldsetDisability($licenseFieldset, true);
+    }
+
+    $licenseTypeField.on('change', function() {
+      var licenseTypeValue = $(this).val();
+      if (licenseTypeValue === 'Other') {
+        toggleRequiredFields(true);
+      } else {
+        toggleRequiredFields(false);
+      }
+    });
+
+    if ($licenseTypeField.val() === 'Other') {
+      toggleRequiredFields(true);
+    } else {
+      toggleRequiredFields(false);
+    }
+  });
+</script>

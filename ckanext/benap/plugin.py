@@ -10,20 +10,23 @@ from flask import Blueprint
 from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallback, json_loads, \
     package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete, \
     get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, \
-    forum_url, filter_default_tags_only, getTranslatedVideoUrl, show_element, get_organization_by_id, benap_fluent_label, \
+    forum_url, filter_default_tags_only, getTranslatedVideoUrl, scheming_parse_embedded_links, show_element, get_organization_by_id, benap_fluent_label, \
     translate_organization_filter, convert_validation_list_to_JSON, benap_get_organization_field_by_id, \
     benap_get_organization_field_by_specified_field, benap_retrieve_dict_items_or_keys_or_values, get_translated_category_and_sub_category, \
-    benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper, _c
+    benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper, _c, transportdata_is_member_of_org
 
 from ckanext.benap.util.forms import map_for_form_select
-from ckanext.benap.validators import phone_number_validator, \
+from ckanext.benap.logic.validators import phone_number_validator, \
     countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin, \
     is_choice_null, contact_point_org_fields_consistency_check, \
     license_fields_conditional_validation, benap_tag_string_convert, fluent_tags_validator, category_sub_category_validator
 
-from ckanext.benap.logic.auth.get import user_autocomplete, user_list
+from ckanext.benap.logic.auth.get import member_list, user_autocomplete, user_list
 from ckanext.benap.custom_group import CreateGroupView, EditGroupView
+from ckanext.benap.uploader import OrganizationUploader
 
+
+@plugins.toolkit.blanket.actions # auto register all actions in logic/action.py
 class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTranslation):
     plugins.implements(plugins.ITranslation)
     plugins.implements(plugins.IConfigurer, inherit=True)
@@ -49,7 +52,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         toolkit.add_template_directory(config_, 'templates')
         toolkit.add_public_directory(config_, 'public')
         toolkit.add_resource('assets', 'benap')
-        # toolkit.add_resource('fanstatic', 'nap_checked_pill_style.css')
 
     # ITemplateHelpers
 
@@ -82,6 +84,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_retrieve_org_title_tel_email': benap_retrieve_org_title_tel_email,
             'benap_retrieve_raw_choices_list': benap_retrieve_raw_choices_list,
             'benap_tag_update_helper': benap_tag_update_helper,
+            'scheming_parse_embedded_links': scheming_parse_embedded_links,
+            'transportdata_is_member_of_org': transportdata_is_member_of_org,
         }
 
     # IValidators
@@ -107,6 +111,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         return {
             'user_list': user_list,
             'user_autocomplete': user_autocomplete,
+            'member_list': member_list,
         }
 
     # IFacets
@@ -219,3 +224,12 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         })
 
         return pkg_dict
+    
+    # IUploader
+    def get_uploader(self, upload_to, old_filename):
+        if upload_to == "group":
+            return OrganizationUploader(upload_to, old_filename)
+        return None
+
+    def get_resource_uploader(self, data_dict):
+        return None

@@ -1,0 +1,97 @@
+{% import 'macros/form.html' as form %}
+
+{% macro doc_upload(
+        data,
+        errors,
+        field_url='doc_url',
+        field_upload='doc_upload',
+        field_clear='clear_upload',
+        is_url_doc=false,
+        is_upload_doc=false,
+        is_upload_doc_enabled=false,
+        placeholder=false,
+        url_label='',
+        field_label='doc_url',
+        field_name='doc_url',
+        previous_upload=false)
+    %}
+
+    {% set placeholder = placeholder if placeholder else false %}
+    {% set url_label = url_label or ''  %}
+    {% set upload_label = upload_label or ''  %}
+    {% set previous_upload = data['previous_upload']%}
+
+    {% if is_upload_doc_enabled %}
+        <div class="scheming-doc_upload"
+        data-module="scheming-doc_upload"
+        data-module-is_url_doc="{{ 'true' if is_url_doc else 'false' }}"
+        data-module-is_upload_doc="{{ 'true' if is_upload_doc else 'false'  }}"
+        data-module-field_url="{{ field_url }}"
+        data-module-field_upload="{{ field_upload }}"
+        data-module-field_clear="{{ field_clear }}"
+        data-module-upload_label="{{ field_label }}"
+        data-module-field_name="{{ field_name }}"
+        data-module-previous_upload="{{ 'true' if previous_upload else 'false' }}"
+        data-module-data="{{data}}">
+    {% endif %}
+
+    {{ form.input(field_url, label=field_label, id='field-doc-url', type=type, placeholder=placeholder, value=data.get(field_url), error=errors.get(field_url), classes=['control-full']) }}
+
+    {% if is_upload_doc_enabled %}
+        
+        {{ form.input(field_upload, label=field_label, id='field-doc-upload', type='file', placeholder='', value='', error=errors.get(field_url), classes=['control-full']) }}
+            {% if is_upload_doc %}
+                {{ form.checkbox(field_clear, label=_('Clear Upload'), id='field-clear-upload', value='true', error='', classes=['control-full']) }}
+        
+        {% endif %}
+    
+    {% endif %}
+
+    {% if is_upload_doc_enabled %}</div>{% endif %}
+
+  {% endmacro %}
+
+
+{% if 'srti_doc_document_upload' in data and field.field_name == 'srti_doc_document_upload' %}
+    {% if (request.path == '/organization/new') and (errors == {}) or (request.path != '/organization/new') %}
+        {%- set is_upload_doc = (data.srti_doc_document_upload != '' ) -%}
+    {% else %}
+        {%- set is_upload_doc = false -%}
+    {% endif %}
+{% endif %}
+
+{% if 'sstp_doc_document_upload' in data and field.field_name == 'sstp_doc_document_upload'%}
+    {% if (request.path == '/organization/new') and (errors == {}) or (request.path != '/organization/new') %}
+        {%- set is_upload_doc = (data.sstp_doc_document_upload != '') -%}
+    {% else %}
+        {%- set is_upload_doc = false -%}
+    {% endif %}
+{% endif %}
+
+{% if 'rtti_doc_document_upload' in data and field.field_name == 'rtti_doc_document_upload' %}
+    {% if (request.path == '/organization/new') and (errors == {}) or (request.path != '/organization/new') %}
+        {%- set is_upload_doc = (data.rtti_doc_document_upload != '') -%}
+    {% else %}
+        {%- set is_upload_doc = false -%}
+    {% endif %}
+{% endif %}
+
+{{ doc_upload(
+    data,
+    errors,
+    field_url=field.field_name,
+    field_upload=field.upload_field,
+    field_clear=field.upload_clear,
+    is_upload_doc_enabled=true,
+    is_url_doc=data[field.field_name] and not is_upload_doc,
+    is_upload_doc=is_upload_doc,
+    field_label=h.scheming_language_text(field.upload_label),
+    url_label=h.scheming_language_text(field.label),
+    placeholder=field.form_placeholder,
+    previous_upload=previous_upload
+    )
+}}
+{# doc_upload macro doesn't support call #}
+
+{%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
+

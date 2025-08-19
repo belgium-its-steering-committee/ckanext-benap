@@ -1,0 +1,46 @@
+{% import 'macros/form.html' as form %}
+{% set date = data.get(field.field_name) %}
+
+{% if date %}
+    {% set parts = data.get(field.field_name).split('T') %}
+    {% set date = parts[0] %}
+    {% set time = parts[1] %}
+{% endif %}
+
+<div style="display:table-row;">
+    <div style="display:table-cell; width:50%;">
+{% call form.input(
+    field.field_name + '_date',
+    id='field-' + field.field_name +  '-date',
+    label= h.scheming_language_text(field.label),
+    type='date',
+    value=date,
+    error=errors[field.field_name + '_date'],
+    classes=['control-medium'],
+    attrs={"class": "form-control"},
+    is_required=h.scheming_field_required(field)
+    )
+%} {%- if field.help_text -%}
+    {{- form.info(
+        text=h.scheming_language_text(field.help_text),
+        inline=field.get('help_inline', false),
+        ) -}}
+{%- endif -%}
+{% endcall %}
+    </div>
+    <div style="display:table-cell; width:50%; padding-left:10px;">
+{% call form.input(
+    field.field_name + '_time',
+    id='field-' + field.field_name + '-time',
+    label= h.scheming_language_text(field.get('label_time', 'Time')),
+    type='time',
+    value=time,
+    error=errors[field.field_name + '_time'],
+    classes=['control-medium'],
+    attrs={"class": "form-control"},
+    is_required=h.scheming_field_required(field)
+    )
+%}
+{% endcall %}
+    </div>
+</div>

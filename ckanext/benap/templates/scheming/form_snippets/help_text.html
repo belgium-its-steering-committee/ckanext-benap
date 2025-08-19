@@ -1,0 +1,21 @@
+{% import 'macros/form.html' as form %}
+{% from 'macros/string_utils.html' import render_string_with_links %}
+
+{%- if id!="field_private" %}
+    {%- if field.get('help_text', false) -%}
+        <div class="info-block">
+            <i class="fa fa-info-circle"></i>
+            {{ render_string_with_links(h.scheming_language_text(field.help_text)) }}
+        </div>
+    {%- endif -%}
+{%- else%}
+    <!--help_tekst for dataset visibility. Sits in a data-module = "dataset-visbility" Had to be filterd out-->
+    {%- if field.get('help_text_field_private', false) -%}
+        <div class="info-block">
+            <i class="fa fa-info-circle"></i>
+            {{ render_string_with_links(h.scheming_language_text(field.help_text_field_private)) }}
+        </div>
+    {%- endif -%}  
+{%- endif -%}
+     
+

@@ -1,0 +1,10 @@
+<div class="address">
+    {% set address_data = data.get(field.field_name, {}) %}
+
+    {% if address_data is mapping %}
+        {{ address_data.get('street_address', '') }}<br>
+        {{ address_data.get('postal_code', '') }} {{ address_data.get('city', '') }}<br>
+        {{ address_data.get('administrative_area', '') }}<br>
+        {{ address_data.get('country', '') }}
+    {% endif %}
+</div>

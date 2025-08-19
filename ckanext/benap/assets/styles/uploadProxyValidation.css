@@ -1,0 +1,58 @@
+/* Copied from https://github.com/belgium-its-steering-committee/ckanext-scheming/tree/MobilityDCAT/root/ckanext/scheming/fanstatic */
+.js .scheming-proxy_upload #field-proxy-url{
+    border-color: blue;
+}
+
+.js .scheming-proxy_upload #field-proxy-upload{
+    border-color: red;
+}
+
+.js .scheming-proxy_upload #field-proxy-url{
+    padding-right:90px;
+}
+
+.js .scheming-proxy_upload #field-proxy-upload {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.js .scheming-proxy_upload .controls {
+    position: relative;
+}
+
+.js .scheming-proxy_upload .btn {
+    position: relative;
+    top: 0;
+    margin-right: 10px;
+    }
+
+.js .scheming-proxy_upload .btn.hover {
+    color: #333333;
+    text-decoration: none;
+    background-position: 0 -15px;
+    -webkit-transition: background-position 0.1s linear;
+    -o-transition: background-position 0.1s linear;
+    transition: background-position 0.1s linear;
+}
+
+.js .scheming-proxy_upload .btn-remove-url {
+    position: absolute;
+    margin-right: 0;
+    top: 6px;
+    right: 5px;
+    padding: 0 12px;
+    border-radius: 100px;
+}
+
+.js .scheming-proxy_upload .btn-remove-url .icon-remove {
+    margin-right: 0;
+    }
+    
+.js .scheming-proxy_upload .error-inline {
+    margin-top: 5px;
+    margin-left: 2px;
+    font-weight: bold;
+}

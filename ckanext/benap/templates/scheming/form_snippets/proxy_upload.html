@@ -1,0 +1,78 @@
+{% import 'macros/form.html' as form %}
+
+{% macro proxy_upload(
+    data,
+    errors,
+    field_url='proxy_pdf_url',
+    field_upload='proxy_upload_url',
+    field_clear='proxy_clear_upload',
+    is_url_proxy=false,
+    is_upload_proxy=true,
+    is_upload_proxy_enabled=true,
+    url_label='',
+    upload_label='',
+    field_name="proxy_pdf_url",
+    previous_upload=false
+    )
+%}
+
+{% set previous_upload = data['previous_upload'] %}
+{% set is_upload_proxy_enabled=true %}
+{% set type = '' %}
+
+
+{% if is_upload_proxy_enabled %}
+<div class="scheming-proxy_upload"
+    data-module="scheming-proxy_upload"
+    data-module-is_url_proxy="{{ 'true' if is_url_proxy else 'false' }}"
+    data-module-is_upload_proxy="{{ 'true' if is_upload_proxy else 'false'  }}"
+    data-module-field_upload="{{ field_upload }}"
+    data-module-field_url="{{ field_url }}"
+    data-module-field_clear="{{ field_clear }}"
+    data-module-upload_label="{{ upload_label }}"
+    data-module-field_name="{{ field_name }}"
+    data-module-previous_upload="{{ 'true' if previous_upload else 'false' }}">
+{% endif %}
+
+
+{{ form.input(field_url, label=url_label, id="field-proxy-url", type=type, value=data.get(field_url), error=errors.get(field_url), classes=['control-full'])  }}
+
+{% if is_upload_proxy_enabled%}
+    {{ form.input(field_upload, label=upload_label, id="field-proxy-upload", type="file", value='', error=errors.get(field_url), classes=['control-full'])}}
+    
+    {%if is_upload_proxy%}
+        {{ form.checkbox(field_clear, label=_('Clear Upload'), id="proxy_clear_upload", value="true", classes=['control-full'])}}
+    {%endif%}
+{%endif%}
+
+{% if is_upload_proxy_enabled %}</div>{%endif%}
+
+{% endmacro %}
+
+{% if ('proxy_pdf_url' in data)%}
+    {% if ((request.path == '/organization/new') and (errors == {})) or (request.path != '/organization/new') %}
+        {%- set is_upload_proxy = (data.proxy_pdf_url != '') -%}
+    {%else %}
+        {%-set is_upload_proxy = false -%}
+    {% endif %}
+{%endif%}
+
+
+
+{{ proxy_upload(
+    data,
+    errors,
+    field_url=field.field_name,
+    field_upload=field.upload_field,
+    field_name=field.field_name,
+    field_clear=field.upload_clear,
+    is_upload_proxy_enabled=h.uploads_enabled(),
+    is_upload_proxy=is_upload_proxy,
+    upload_label=h.scheming_language_text(field.upload_label),
+    url_label=h.scheming_language_text(field.label),
+    previous_upload=previous_upload
+)
+}}
+<div style="margin-top:-25px;margin-bottom:30px;">
+{%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
+</div>
