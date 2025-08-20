@@ -23,7 +23,7 @@ msgstr ""
 #: ckanext/benap/assets/js/scheming-logo_upload.js:72
 #: ckanext/benap/assets/js/scheming-proxy_upload.js:72
 msgid "Please select the file to upload again"
-msgstr ""
+msgstr "Veuillez sélectionner à nouveau le fichier à télécharger"
 
 #: ckanext/benap/assets/js/scheming-proxy_upload.js:121
 msgid "Proxy Agreement PDF:"
@@ -78,7 +78,7 @@ msgstr ""
 
 #: ckanext/benap/logic/validators.py:182
 msgid "Select at least one"
-msgstr ""
+msgstr "Sélectionnez-en moins une"
 
 #: ckanext/benap/logic/validators.py:188 ckanext/benap/logic/validators.py:194
 #, python-format
@@ -554,7 +554,7 @@ msgstr ""
 
 #: ckanext/benap/templates/scheming/organization/about.html:35
 msgid "Signed"
-msgstr ""
+msgstr "Signé"
 
 #: ckanext/benap/templates/scheming/package/read.html:14
 #: ckanext/benap/templates/scheming/package/snippets/package_form.html:15
@@ -857,22 +857,22 @@ msgid "Link"
 msgstr ""
 
 msgid "Link to a URL on the internet (you can also link to an API)"
-msgstr ""
+msgstr "Lien vers une URL sur l'internet (vous pouvez également établir un lien vers une API)"
 
 msgid "Upload"
-msgstr ""
+msgstr "Télécharger"
 
 msgid "Image"
-msgstr ""
+msgstr "Image"
 
 msgid "Upload a file on your computer"
-msgstr ""
+msgstr "Télécharger un fichier sur votre ordinateur"
 
 msgid "URL"
 msgstr ""
 
 msgid "File"
-msgstr ""
+msgstr "Fichier"
 
 #, python-format
 msgid "Tag \"%s\" length is less than minimum %s"
@@ -970,7 +970,7 @@ msgid "State"
 msgstr ""
 
 msgid "The form contains invalid entries:"
-msgstr ""
+msgstr "Le formulaire contient des entrées non valides"
 
 msgid "No License Provided"
 msgstr ""
@@ -1003,96 +1003,7 @@ msgid "Member Since"
 msgstr ""
 
 msgid "Visibility"
-msgstr ""
+msgstr "Visibilité"
 
 msgid "Edit"
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "HELP US"
-#~ msgstr "AIDEZ-NOUS"
-
-#~ msgid "GIVE SOME FEEDBACK"
-#~ msgstr "DONNEZ DU FEED-BACK"
-
-#~ msgid "SUBSCRIBE"
-#~ msgstr "INSCRIVEZ-VOUS"
-
-#~ msgid "TO NEWSLETTER"
-#~ msgstr "A LA LETTRE DE DIFFUSION"
-
-#~ msgid "LINK DOESN' T WORK?"
-#~ msgstr "UN LIEN ROMPU?"
-
-#~ msgid "REPORT IT HERE"
-#~ msgstr "SIGNALEZ-LE ICI"
-
-#~ msgid "Area covered by publication"
-#~ msgstr "Zone couverte par la publication"
-
-#~ msgid "Dataset Type"
-#~ msgstr "Jeux de données"
-
-#~ msgid "Upload"
-#~ msgstr "Télécharger"
-
-# scheming
-#~ msgid "Please select the file to upload again"
-#~ msgstr "Veuillez sélectionner à nouveau le fichier à télécharger"
-
-#~ msgid "Signed"
-#~ msgstr "Signé"
-
-#~ msgid "Link to a URL on the internet (you can also link to an API)"
-#~ msgstr ""
-#~ "Lien vers une URL sur l'internet "
-#~ "(vous pouvez également établir un lien"
-#~ " vers une API)"
-
-#~ msgid "Image"
-#~ msgstr "Image"
-
-#~ msgid "Upload a file on your computer"
-#~ msgstr "Télécharger un fichier sur votre ordinateur"
-
-#~ msgid "File"
-#~ msgstr "Fichier"
-
-#~ msgid "Visibility"
-#~ msgstr "Visibilité"
-
-#~ msgid "The form contains invalid entries:"
-#~ msgstr "Le formulaire contient des entrées non valides"
-
-#~ msgid "Select at least one"
-#~ msgstr "Sélectionnez-en moins une"
-
-#~ msgid ""
-#~ " <p id=\"Une erreur\"><strong>There was "
-#~ "an error while searching.</strong> Please "
-#~ "try again.</p> "
-#~ msgstr ""
-#~ "<p id=\"Une erreur\"><strong>s'est produite "
-#~ "lors de la recherche. Veuillez "
-#~ "réessayer.</p>"
-
-# | msgid " <p class=\"extra\">Please try another search.</p> "
-#~ msgid "Please try another search."
-#~ msgstr "<p class=\"extra\">Veuillez essayer une autre recherche.</p> "
-
-#~ msgid "<strong>There was an error while searching.</strong> Please try again."
-#~ msgstr ""
-#~ "<strong>Une erreur s'est produite lors "
-#~ "de la recherche.</strong> Veuillez réessayer."
-
-#~ msgid "If yes, you will find more information on what to do in our "
-#~ msgstr ""
-#~ "Si oui, vous trouverez plus "
-#~ "d'informations sur ce qu'il faut faire"
-#~ " dans notre "
-
-#~ msgid "about section."
-#~ msgstr "section A propos."
-

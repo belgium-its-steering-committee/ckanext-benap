@@ -23,7 +23,7 @@ msgstr ""
 #: ckanext/benap/assets/js/scheming-logo_upload.js:72
 #: ckanext/benap/assets/js/scheming-proxy_upload.js:72
 msgid "Please select the file to upload again"
-msgstr ""
+msgstr "Gelieve het bestand te selecteren om opnieuw te uploaden"
 
 #: ckanext/benap/assets/js/scheming-proxy_upload.js:121
 msgid "Proxy Agreement PDF:"
@@ -78,7 +78,7 @@ msgstr ""
 
 #: ckanext/benap/logic/validators.py:182
 msgid "Select at least one"
-msgstr ""
+msgstr "Selecteer minstens één"
 
 #: ckanext/benap/logic/validators.py:188 ckanext/benap/logic/validators.py:194
 #, python-format
@@ -541,7 +541,7 @@ msgstr ""
 
 #: ckanext/benap/templates/scheming/organization/about.html:35
 msgid "Signed"
-msgstr ""
+msgstr "Ondertekend"
 
 #: ckanext/benap/templates/scheming/package/read.html:14
 #: ckanext/benap/templates/scheming/package/snippets/package_form.html:15
@@ -846,22 +846,22 @@ msgid "Link"
 msgstr ""
 
 msgid "Link to a URL on the internet (you can also link to an API)"
-msgstr ""
+msgstr "Link naar een URL op het internet (u kunt ook linken naar een API)"
 
 msgid "Upload"
-msgstr ""
+msgstr "Uploaden"
 
 msgid "Image"
-msgstr ""
+msgstr "Afbeelding"
 
 msgid "Upload a file on your computer"
-msgstr ""
+msgstr "Upload een bestand vanop uw computer"
 
 msgid "URL"
 msgstr ""
 
 msgid "File"
-msgstr ""
+msgstr "Bestand"
 
 #, python-format
 msgid "Tag \"%s\" length is less than minimum %s"
@@ -959,7 +959,7 @@ msgid "State"
 msgstr ""
 
 msgid "The form contains invalid entries:"
-msgstr ""
+msgstr "Het formulier bevat ongeldige gegevens"
 
 msgid "No License Provided"
 msgstr ""
@@ -992,86 +992,7 @@ msgid "Member Since"
 msgstr ""
 
 msgid "Visibility"
-msgstr ""
+msgstr "Zichtbaarheid"
 
 msgid "Edit"
-msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "HELP US"
-#~ msgstr "JE KAN ONS HELPEN"
-
-#~ msgid "GIVE SOME FEEDBACK"
-#~ msgstr "GEEF ONS FEEDBACK"
-
-#~ msgid "SUBSCRIBE"
-#~ msgstr "SCHRIJF IN"
-
-#~ msgid "TO NEWSLETTER"
-#~ msgstr "OP ONZE NIEUWSBRIEF"
-
-#~ msgid "LINK DOESN' T WORK?"
-#~ msgstr "WERKT EEN LINK NIET?"
-
-#~ msgid "REPORT IT HERE"
-#~ msgstr "MELD HET HIER"
-
-#~ msgid "Area covered by publication"
-#~ msgstr "Gebied gedekt door de publicatie"
-
-#~ msgid "Dataset Type"
-#~ msgstr "Datasets"
-
-#~ msgid "RRTI"
-#~ msgstr "Realtimeverkeersinformatiediensten (RTTI)"
-
-#~ msgid "RRTIS"
-#~ msgstr "RRTIS"
-
-# scheming
-#~ msgid "Please select the file to upload again"
-#~ msgstr "Gelieve het bestand te selecteren om opnieuw te uploaden"
-
-#~ msgid "Signed"
-#~ msgstr "Ondertekend"
-
-#~ msgid "Link to a URL on the internet (you can also link to an API)"
-#~ msgstr "Link naar een URL op het internet (u kunt ook linken naar een API)"
-
-#~ msgid "Upload"
-#~ msgstr "Uploaden"
-
-#~ msgid "Image"
-#~ msgstr "Afbeelding"
-
-#~ msgid "Upload a file on your computer"
-#~ msgstr "Upload een bestand vanop uw computer"
-
-#~ msgid "File"
-#~ msgstr "Bestand"
-
-#~ msgid "Visibility"
-#~ msgstr "Zichtbaarheid"
-
-#~ msgid "The form contains invalid entries:"
-#~ msgstr "Het formulier bevat ongeldige gegevens"
-
-#~ msgid "Select at least one"
-#~ msgstr "Selecteer minstens één"
-
-#~ msgid "Edit"
-#~ msgstr "Bewerk"
-
-# | msgid " <p class=\"extra\">Please try another search.</p> "
-#~ msgid "Please try another search."
-#~ msgstr "Gelieve een andere zoekterm te gebruiken"
-
-# | msgid "" " <p id=\"search-error\"><strong>There was an error while "
-# | "searching.</strong> Please try again.</p> "
-#~ msgid "<strong>There was an error while searching.</strong> Please try again."
-#~ msgstr ""
-#~ "<strong>Er was een fout tijdens het "
-#~ "zoeken.</strong> Gelieve opnieuw te proberen."
-
+msgstr "Bewerk"

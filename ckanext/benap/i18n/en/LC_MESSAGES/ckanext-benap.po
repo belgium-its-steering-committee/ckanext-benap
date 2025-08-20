@@ -996,34 +996,3 @@ msgstr ""
 
 msgid "Edit"
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "HELP US"
-#~ msgstr "HELP US"
-
-#~ msgid "GIVE SOME FEEDBACK"
-#~ msgstr "GIVE SOME FEEDBACK"
-
-#~ msgid "SUBSCRIBE"
-#~ msgstr "SUBSCRIBE"
-
-#~ msgid "TO NEWSLETTER"
-#~ msgstr "TO NEWSLETTER"
-
-#~ msgid "LINK DOESN' T WORK?"
-#~ msgstr "LINK DOESN' T WORK?"
-
-#~ msgid "REPORT IT HERE"
-#~ msgstr "REPORT IT HERE"
-
-#~ msgid "SEARCH FOR DATASETS & SERVICES"
-#~ msgstr "SEARCH FOR DATA SETS"
-
-#~ msgid "Area covered by publication"
-#~ msgstr ""
-
-#~ msgid "Dataset Type"
-#~ msgstr "Datasets"
-
