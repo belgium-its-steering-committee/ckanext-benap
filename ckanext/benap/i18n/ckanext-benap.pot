@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 2.0.4\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-20 14:47+0000\n"
+"POT-Creation-Date: 2025-08-20 15:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -426,6 +426,10 @@ msgstr ""
 
 #: ckanext/benap/templates/home/index.html:40
 msgid "Subscribe"
+msgstr ""
+
+#: ckanext/benap/templates/home/index.html:50
+msgid "https://www.youtube.com/embed/0-M48xzlWzI?rel=0&enablejsapi=1"
 msgstr ""
 
 #: ckanext/benap/templates/home/snippets/community.html:7

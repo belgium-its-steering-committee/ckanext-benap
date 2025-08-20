@@ -243,17 +243,6 @@ def is_default_tag(item):
     show_element(item)
     return False
 
-
-def getTranslatedVideoUrl(lang):
-    switcher = {
-        'en': 'https://www.youtube.com/embed/0-M48xzlWzI?rel=0&enablejsapi=1',
-        'nl': 'https://www.youtube.com/embed/jle8RPRW1Do?rel=0&enablejsapi=1',
-        'fr': 'https://www.youtube.com/embed/p8b9hIYM9hE?rel=0&enablejsapi=1',
-        'de': 'https://www.youtube.com/embed/kB75uVs8oVo?rel=0&enablejsapi=1'
-    }
-    return switcher.get(lang, switcher.get('en'))
-
-
 def get_organization_by_id(id):
     user = toolkit.get_action('get_site_user')(
         {

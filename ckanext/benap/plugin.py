@@ -10,7 +10,7 @@ from flask import Blueprint
 from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallback, json_loads, \
     package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete, \
     get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, \
-    forum_url, filter_default_tags_only, getTranslatedVideoUrl, scheming_parse_embedded_links, show_element, get_organization_by_id, benap_fluent_label, \
+    forum_url, filter_default_tags_only, scheming_parse_embedded_links, show_element, get_organization_by_id, benap_fluent_label, \
     translate_organization_filter, convert_validation_list_to_JSON, benap_get_organization_field_by_id, \
     benap_get_organization_field_by_specified_field, benap_retrieve_dict_items_or_keys_or_values, get_translated_category_and_sub_category, \
     benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper, _c, transportdata_is_member_of_org
@@ -71,7 +71,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_scheming_language_text': scheming_language_text,
             'format_datetime': format_datetime,
             'benap_forum_url': forum_url,
-            'getTranslatedVideoUrl': getTranslatedVideoUrl,
             'benap_get_organization_by_id': get_organization_by_id,
             'translate_organization_filter': translate_organization_filter,
             'show_element': show_element,

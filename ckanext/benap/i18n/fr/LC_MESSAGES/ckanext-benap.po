@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-20 14:47+0000\n"
+"POT-Creation-Date: 2025-08-20 15:01+0000\n"
 "PO-Revision-Date: 2019-10-14 16:52+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -392,6 +392,10 @@ msgstr "Entrez votre adresse email"
 #: ckanext/benap/templates/home/index.html:40
 msgid "Subscribe"
 msgstr "Inscrivez-vous"
+
+#: ckanext/benap/templates/home/index.html:50
+msgid "https://www.youtube.com/embed/0-M48xzlWzI?rel=0&enablejsapi=1"
+msgstr "https://www.youtube.com/embed/p8b9hIYM9hE?rel=0&enablejsapi=1"
 
 #: ckanext/benap/templates/home/snippets/community.html:7
 msgid "JOIN OUR COMMUNITY FORUM"
@@ -857,7 +861,9 @@ msgid "Link"
 msgstr ""
 
 msgid "Link to a URL on the internet (you can also link to an API)"
-msgstr "Lien vers une URL sur l'internet (vous pouvez également établir un lien vers une API)"
+msgstr ""
+"Lien vers une URL sur l'internet (vous pouvez également établir un lien "
+"vers une API)"
 
 msgid "Upload"
 msgstr "Télécharger"
@@ -1007,3 +1013,4 @@ msgstr "Visibilité"
 
 msgid "Edit"
 msgstr ""
+
