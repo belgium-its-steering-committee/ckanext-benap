@@ -8,8 +8,10 @@
             onclick="location.ref='{{ h.url_for('pages_show', page='about') }}'">
           <h3>{{ _('Have you just just created an account?') }}</h3>
           <p>
-              {{ _('If yes, you will find more information on what to do in our ') }}
-              <a href="{{ h.get_site_protocol_and_host()[0] }}://{{ h.get_site_protocol_and_host()[1] }}/{{ h.lang() }}/pages/information-data-providers">{{ _('about section.') }}</a>
+              {% set page_info = h.url_for('pages.show', page='information-data-providers') %}
+              {% trans %}
+              If yes, you will find more information on what to do in our <a href="{{page_info}}">about section.</a>
+              {% endtrans %}
           </p>
           <p>
               {{ _('Make sure to check your spam folder for the subscription e-mail.') }}

@@ -2,10 +2,14 @@
     <i class="fa fa-book fa-3x" aria-hidden="true"></i>
     <div>
         <p class="m-0 fs-20">
-            {{ _('More detailed instructions on how to register your dataset(s) and or services can be found in the ') }}
-            <a href="/{{h.lang()}}/pages/about">{{ _('about section') }}</a>
-            {{ _(' and in our ') }}
-            <a href="https://youtu.be/xbmt9XcywvA" target="_blank">{{ _('instruction video') }}</a>
+            {% set page_about = h.url_for('pages.show', page='about') %}
+            {% set vide_url = "https://youtu.be/xbmt9XcywvA" %}
+            {% trans %}
+            More detailed instructions on how to register your dataset(s) and or services can be found in the
+            <a href="{{page_about}}">about section</a>
+            and in our
+            <a href="{{video_url}}" target="_blank">instruction video</a>.
+            {% endtrans%}
         </p>
     </div>
 </div>

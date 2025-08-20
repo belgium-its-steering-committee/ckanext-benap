@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-20 13:03+0000\n"
+"POT-Creation-Date: 2025-08-20 14:47+0000\n"
 "PO-Revision-Date: 2019-09-20 17:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: nl\n"
@@ -467,26 +467,14 @@ msgstr ""
 "Raadpleeg praktische informatie over hoe u uw organisatie, datasets en "
 "diensten kan registreren."
 
-#: ckanext/benap/templates/home/snippets/report.html:5
+#: ckanext/benap/templates/home/snippets/report.html:7
+#, python-format
 msgid ""
 "More detailed instructions on how to register your dataset(s) and or "
-"services can be found in the "
+"services can be found in the <a href=\"%(page_about)s\">about section</a>"
+" and in our <a href=\"%(video_url)s\" target=\"_blank\">instruction "
+"video</a>."
 msgstr ""
-"Meer informatie met betrekking tot het registreren van datasets en/of "
-"diensten vind u in de sectie "
-
-#: ckanext/benap/templates/home/snippets/report.html:6
-#: ckanext/benap/templates/user/new.html:29
-msgid "about section"
-msgstr "&#8220;over&#8221;"
-
-#: ckanext/benap/templates/home/snippets/report.html:7
-msgid " and in our "
-msgstr " en in onze "
-
-#: ckanext/benap/templates/home/snippets/report.html:8
-msgid "instruction video"
-msgstr "instructie video"
 
 #: ckanext/benap/templates/home/snippets/search.html:7
 msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
@@ -611,15 +599,16 @@ msgstr "Instellingen aanpassen"
 msgid "Have you just just created an account?"
 msgstr "Heeft u zojuist een account aangemaakt?"
 
-#: ckanext/benap/templates/user/dashboard_datasets.html:11
-msgid "If yes, you will find more information on what to do in our "
-msgstr "Indien wel, dan vind u meer informatie over wat u kan doen op onze "
-
 #: ckanext/benap/templates/user/dashboard_datasets.html:12
-msgid "about section."
-msgstr "pagina 'Over'."
+#, python-format
+msgid ""
+"If yes, you will find more information on what to do in our <a "
+"href=\"%(page_info)s\">about section.</a>"
+msgstr ""
+"Indien wel, dan vind u meer informatie over wat u kan doen op onze <a "
+"href=\"%(page_info)s\">pagina 'Over'.</a>"
 
-#: ckanext/benap/templates/user/dashboard_datasets.html:15
+#: ckanext/benap/templates/user/dashboard_datasets.html:17
 msgid "Make sure to check your spam folder for the subscription e-mail."
 msgstr "Zorg ervoor dat u uw spam-map controleert voor de abbonerings e-mail."
 
@@ -637,19 +626,18 @@ msgstr ""
 "target=\"_top\">contact@transportdata.be</a> met uw naam en, indien van "
 "toepassing, uw organisatie."
 
-#: ckanext/benap/templates/user/new.html:29
-msgid "Check our "
-msgstr "Raadpleeg onze "
+#: ckanext/benap/templates/user/new.html:30
+#, python-format
+msgid "Check our <a href=\"%(page_about)s\">about section</a> to know more!"
+msgstr ""
+"Raadpleeg onze <a href=\"%(page_about)s\">&#8220;over&#8221;</a> voor "
+"meer informatie!"
 
-#: ckanext/benap/templates/user/new.html:29
-msgid " to know more!"
-msgstr " voor meer informatie!"
-
-#: ckanext/benap/templates/user/new.html:31
+#: ckanext/benap/templates/user/new.html:34
 msgid "How to sign up?"
 msgstr "Hoe aanmelden?"
 
-#: ckanext/benap/templates/user/new.html:33
+#: ckanext/benap/templates/user/new.html:36
 msgid ""
 "Please choose a username (and make sure never to forget it) containing "
 "only lowercase letters and no special character except - and _ Fill in "
@@ -729,9 +717,8 @@ msgid ""
 "href=\"http://opendatacommons.org/licenses/odbl/1-0/\">Open Database "
 "License</a>."
 msgstr ""
-"By submitting this form,"
-" you agree to release the <i>metadata</i> values that you enter into the "
-"form under the <a "
+"By submitting this form, you agree to release the <i>metadata</i> values "
+"that you enter into the form under the <a "
 "href=\"http://opendatacommons.org/licenses/odbl/1-0/\">Open Database "
 "License</a>."
 

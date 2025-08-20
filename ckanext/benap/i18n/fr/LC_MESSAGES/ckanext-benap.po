@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-20 13:04+0000\n"
+"POT-Creation-Date: 2025-08-20 14:47+0000\n"
 "PO-Revision-Date: 2019-10-14 16:52+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -476,26 +476,18 @@ msgstr ""
 "Obtenez des informations pratiques sur la manière d'enregistrer votre "
 "organisation, vos ensembles de données et vos services. "
 
-#: ckanext/benap/templates/home/snippets/report.html:5
+#: ckanext/benap/templates/home/snippets/report.html:7
+#, python-format
 msgid ""
 "More detailed instructions on how to register your dataset(s) and or "
-"services can be found in the "
+"services can be found in the <a href=\"%(page_about)s\">about section</a>"
+" and in our <a href=\"%(video_url)s\" target=\"_blank\">instruction "
+"video</a>."
 msgstr ""
 "Des instructions plus détaillées sur la façon d'enregistrer vos données "
-"et services peuvent être consultées dans "
-
-#: ckanext/benap/templates/home/snippets/report.html:6
-#: ckanext/benap/templates/user/new.html:29
-msgid "about section"
-msgstr "la section à propos"
-
-#: ckanext/benap/templates/home/snippets/report.html:7
-msgid " and in our "
-msgstr " ou par l'intermédiaire de notre "
-
-#: ckanext/benap/templates/home/snippets/report.html:8
-msgid "instruction video"
-msgstr "vidéo d'instructions"
+"et services peuvent être consultées dans <a href=\"%(page_about)s\">la "
+"section à propos</a> ou par l'intermédiaire de notre <a "
+"href=\"%(video_url)s\" target=\"_blank\">vidéo d'instructions</a>."
 
 #: ckanext/benap/templates/home/snippets/search.html:7
 msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
@@ -620,17 +612,16 @@ msgstr "Editer les paramètres"
 msgid "Have you just just created an account?"
 msgstr "Vous venez de créer un compte?"
 
-#: ckanext/benap/templates/user/dashboard_datasets.html:11
-msgid "If yes, you will find more information on what to do in our "
+#: ckanext/benap/templates/user/dashboard_datasets.html:12
+#, python-format
+msgid ""
+"If yes, you will find more information on what to do in our <a "
+"href=\"%(page_info)s\">about section.</a>"
 msgstr ""
 "Si oui, vous trouverez plus d'informations sur ce qu'il faut faire dans "
-"notre "
+"notre <a href=\"%(page_info)s\">section à propos.</a>"
 
-#: ckanext/benap/templates/user/dashboard_datasets.html:12
-msgid "about section."
-msgstr "section A propos."
-
-#: ckanext/benap/templates/user/dashboard_datasets.html:15
+#: ckanext/benap/templates/user/dashboard_datasets.html:17
 msgid "Make sure to check your spam folder for the subscription e-mail."
 msgstr "Assurez-vous de vérifier votre dossier de spam pour l'e-mail d'abonnement."
 
@@ -648,19 +639,18 @@ msgstr ""
 "target=\"_top\">contact@transportdata.be</a> en mentionnant votre nom et,"
 " le cas échéant, votre organisation."
 
-#: ckanext/benap/templates/user/new.html:29
-msgid "Check our "
-msgstr "consultez notre "
+#: ckanext/benap/templates/user/new.html:30
+#, python-format
+msgid "Check our <a href=\"%(page_about)s\">about section</a> to know more!"
+msgstr ""
+"Consultez notre <a href=\"%(page_about)s\">section à propos</a> pour en "
+"savoir plus!"
 
-#: ckanext/benap/templates/user/new.html:29
-msgid " to know more!"
-msgstr " pour en savoir plus!"
-
-#: ckanext/benap/templates/user/new.html:31
+#: ckanext/benap/templates/user/new.html:34
 msgid "How to sign up?"
 msgstr "Comment s'inscrire?"
 
-#: ckanext/benap/templates/user/new.html:33
+#: ckanext/benap/templates/user/new.html:36
 msgid ""
 "Please choose a username (and make sure never to forget it) containing "
 "only lowercase letters and no special character except - and _ Fill in "
@@ -1096,4 +1086,13 @@ msgstr ""
 #~ msgstr ""
 #~ "<strong>Une erreur s'est produite lors "
 #~ "de la recherche.</strong> Veuillez réessayer."
+
+#~ msgid "If yes, you will find more information on what to do in our "
+#~ msgstr ""
+#~ "Si oui, vous trouverez plus "
+#~ "d'informations sur ce qu'il faut faire"
+#~ " dans notre "
+
+#~ msgid "about section."
+#~ msgstr "section A propos."
 
