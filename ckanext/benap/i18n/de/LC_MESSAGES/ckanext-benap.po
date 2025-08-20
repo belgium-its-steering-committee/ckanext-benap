@@ -8,40 +8,119 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-14 13:40+0200\n"
+"POT-Creation-Date: 2025-08-20 13:04+0000\n"
 "PO-Revision-Date: 2019-09-20 17:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
 "Language-Team: de <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ckanext/benap/validators.py:26
+#: ckanext/benap/assets/js/scheming-doc_upload.js:78
+#: ckanext/benap/assets/js/scheming-logo_upload.js:72
+#: ckanext/benap/assets/js/scheming-proxy_upload.js:72
+msgid "Please select the file to upload again"
+msgstr ""
+
+#: ckanext/benap/assets/js/scheming-proxy_upload.js:121
+msgid "Proxy Agreement PDF:"
+msgstr ""
+
+#: ckanext/benap/logic/validators.py:31
 msgid "Phone number {number} is not a valid format"
 msgstr "Die Telefonnummer {number} ist nicht in einem  gultigen Format."
 
-#: ckanext/benap/validators.py:33
+#: ckanext/benap/logic/validators.py:38
 msgid "Belgium is a required country"
 msgstr "Belgien ist ein erforderliches Land"
 
-#: ckanext/benap/validators.py:60
+#: ckanext/benap/logic/validators.py:65
 msgid "Start date must be before end date"
 msgstr "Das Startdatum muss vor dem Enddatum liegen"
 
-#: ckanext/benap/validators.py:75
+#: ckanext/benap/logic/validators.py:80
 msgid "URL {url} has to start with https://"
 msgstr "Die URL {url} muss mit https:// beginnen."
 
-#: ckanext/benap/validators.py:92
+#: ckanext/benap/logic/validators.py:102
 msgid "Modification must done by a system administrator"
 msgstr "Änderungen müssen von einem Systemadministrator vorgenommen werden"
 
-#: ckanext/benap/validators.py:96
+#: ckanext/benap/logic/validators.py:106
 msgid "Logged in one must be"
 msgstr "Eingeloggt muss man sein"
+
+#: ckanext/benap/logic/validators.py:133
+msgid ""
+"The contact point email must match the contact point organization's "
+"email: {}"
+msgstr ""
+
+#: ckanext/benap/logic/validators.py:140
+msgid ""
+"The contact point telephone number must match the contact point "
+"organization's telephone number: {}"
+msgstr ""
+
+#: ckanext/benap/logic/validators.py:152
+msgid ""
+"Invalid format. Ensure the value is a comma-separated list of non-empty "
+"words."
+msgstr ""
+
+#: ckanext/benap/logic/validators.py:158
+#, python-format
+msgid "Unexpected choice \"%s\"."
+msgstr ""
+
+#: ckanext/benap/logic/validators.py:182
+msgid "Select at least one"
+msgstr ""
+
+#: ckanext/benap/logic/validators.py:188 ckanext/benap/logic/validators.py:194
+#, python-format
+msgid "unexpected choice \"%s\""
+msgstr ""
+
+#: ckanext/benap/logic/validators.py:207
+msgid ""
+"The license type is missing. This is required because \"License\" was "
+"chosen as the condition for usage."
+msgstr ""
+
+#: ckanext/benap/logic/validators.py:212
+msgid ""
+"The license text is missing. At least the EN license text is required "
+"because \"Other\" was chosen as the license type."
+msgstr ""
+
+#: ckanext/benap/logic/validators.py:218
+msgid ""
+"No license type should be given. \"Contract\" is chosen as the condition "
+"for usage."
+msgstr ""
+
+#: ckanext/benap/logic/validators.py:222
+msgid ""
+"No license text should be given. \"Contract\" is chosen as the condition "
+"for usage."
+msgstr ""
+
+#: ckanext/benap/logic/validators.py:259
+#, python-format
+msgid "Tag \"%s\" must be alphanumeric characters or symbols: -_."
+msgstr ""
+
+#: ckanext/benap/logic/validators.py:265
+msgid "Only supported image formats are allowed: jpeg, jpg, bmp, png"
+msgstr ""
+
+#: ckanext/benap/logic/validators.py:271
+msgid "Only PDF is allowed"
+msgstr ""
 
 #: ckanext/benap/templates/base.html:107
 #, fuzzy
@@ -64,10 +143,6 @@ msgstr "Über Transportdata.be"
 msgid "Github"
 msgstr "Github"
 
-#: ckanext/benap/templates/footer.html:17
-msgid "CKAN API"
-msgstr "CKAN API"
-
 #: ckanext/benap/templates/footer.html:40
 msgid "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 msgstr "Powered by <a href=\"http://ckan.org\">CKAN</a>"
@@ -76,7 +151,7 @@ msgstr "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 msgid "Manage Cookies"
 msgstr "Cookies verwalten"
 
-#: ckanext/benap/templates/footer.html:85
+#: ckanext/benap/templates/footer.html:80
 msgid ""
 "2025 - By the National Geographic Institute on behalf of the ITS steering"
 " commitee."
@@ -84,11 +159,7 @@ msgstr ""
 "2025 - By the National Geographic Institute on behalf of the ITS steering"
 " committee."
 
-#: ckanext/benap/templates/header.html:83
-msgid "Welcome"
-msgstr "Wilkommen"
-
-#: ckanext/benap/templates/header.html:86
+#: ckanext/benap/templates/header.html:92
 msgid ""
 "Transportdata.be uses cookies to improve your experience. These cookies "
 "are used to gather and analyse information about your visit. For the best"
@@ -107,32 +178,32 @@ msgstr ""
 "können Ihre Cookie-Einstellungen ändern, indem Sie auf “Cookies "
 "verwalten” klicken. Möchten Sie mehr wissen?"
 
-#: ckanext/benap/templates/header.html:89
+#: ckanext/benap/templates/header.html:95
 msgid "Consult our Privacy declaration."
 msgstr "Konsultieren Sie unsere Datenschutzerklärung."
 
-#: ckanext/benap/templates/header.html:93
-#: ckanext/benap/templates/header.html:101
+#: ckanext/benap/templates/header.html:99
+#: ckanext/benap/templates/header.html:107
 msgid "Accept all cookies"
 msgstr "Alle Cookies akzeptieren"
 
-#: ckanext/benap/templates/header.html:95
+#: ckanext/benap/templates/header.html:101
 msgid "Set preferences"
 msgstr "Einstellungen festlegen"
 
-#: ckanext/benap/templates/header.html:100
+#: ckanext/benap/templates/header.html:106
 msgid "Types of Cookies"
 msgstr "Arten von Cookies"
 
-#: ckanext/benap/templates/header.html:105
+#: ckanext/benap/templates/header.html:111
 msgid "Essential"
 msgstr "Essenziell"
 
-#: ckanext/benap/templates/header.html:106
+#: ckanext/benap/templates/header.html:112
 msgid "Always enabled"
 msgstr "Immer aktiviert"
 
-#: ckanext/benap/templates/header.html:111
+#: ckanext/benap/templates/header.html:117
 msgid ""
 "Essential cookies are cookies that are required for the correct "
 "functioning of the website."
@@ -141,70 +212,63 @@ msgstr ""
 "Funktionieren einer Website sind, wie z. B. Cookies zur Verwaltung der "
 "Ladezeit von Webseiten."
 
-#: ckanext/benap/templates/header.html:115
-#: ckanext/benap/templates/header.html:136
-#: ckanext/benap/templates/header.html:156
-#: ckanext/benap/templates/header.html:178
+#: ckanext/benap/templates/header.html:121
+#: ckanext/benap/templates/header.html:142
+#: ckanext/benap/templates/header.html:162
+#: ckanext/benap/templates/header.html:184
 msgid "Cookie"
 msgstr "Cookie"
 
-#: ckanext/benap/templates/header.html:115
-#: ckanext/benap/templates/header.html:136
-#: ckanext/benap/templates/header.html:156
-#: ckanext/benap/templates/header.html:178
-msgid "Type"
-msgstr "Art"
-
-#: ckanext/benap/templates/header.html:115
-#: ckanext/benap/templates/header.html:136
-#: ckanext/benap/templates/header.html:156
-#: ckanext/benap/templates/header.html:178
+#: ckanext/benap/templates/header.html:121
+#: ckanext/benap/templates/header.html:142
+#: ckanext/benap/templates/header.html:162
+#: ckanext/benap/templates/header.html:184
 msgid "Expiry"
 msgstr "Aufbewahrungsfrist"
 
-#: ckanext/benap/templates/header.html:115
-#: ckanext/benap/templates/header.html:136
-#: ckanext/benap/templates/header.html:156
-#: ckanext/benap/templates/header.html:178
+#: ckanext/benap/templates/header.html:121
+#: ckanext/benap/templates/header.html:142
+#: ckanext/benap/templates/header.html:162
+#: ckanext/benap/templates/header.html:184
 msgid "Purpose"
 msgstr "Ziel"
 
-#: ckanext/benap/templates/header.html:118
+#: ckanext/benap/templates/header.html:124
 msgid "ckan"
 msgstr "ckan"
 
-#: ckanext/benap/templates/header.html:118
-#: ckanext/benap/templates/header.html:119
+#: ckanext/benap/templates/header.html:124
+#: ckanext/benap/templates/header.html:125
 msgid "Basic functionality"
 msgstr "Basisfunktionalitäten"
 
-#: ckanext/benap/templates/header.html:118
-#: ckanext/benap/templates/header.html:119
-#: ckanext/benap/templates/header.html:181
+#: ckanext/benap/templates/header.html:124
+#: ckanext/benap/templates/header.html:125
+#: ckanext/benap/templates/header.html:187
 msgid "session"
 msgstr "Sitzung"
 
-#: ckanext/benap/templates/header.html:118
-#: ckanext/benap/templates/header.html:119
+#: ckanext/benap/templates/header.html:124
+#: ckanext/benap/templates/header.html:125
 msgid "This cookie is used for the basic functionalities of the website."
 msgstr "Wird für die Basisfunktionalitäten der Website verwendet."
 
-#: ckanext/benap/templates/header.html:119
-#: ckanext/benap/templates/header.html:139
+#: ckanext/benap/templates/header.html:125
+#: ckanext/benap/templates/header.html:145
 msgid "transportdata_cookies"
 msgstr "transportdata_cookies"
 
-#: ckanext/benap/templates/header.html:127
+#: ckanext/benap/templates/header.html:133
 msgid "Functional"
 msgstr "Funktional"
 
-#: ckanext/benap/templates/header.html:128
-#: ckanext/benap/templates/header.html:148
-#: ckanext/benap/templates/header.html:170
+#: ckanext/benap/templates/header.html:134
+#: ckanext/benap/templates/header.html:154
+#: ckanext/benap/templates/header.html:176
 msgid "Disabled"
 msgstr "Behindert"
 
-#: ckanext/benap/templates/header.html:132
+#: ckanext/benap/templates/header.html:138
 msgid ""
 "Functional cookies record information about the user's choices and "
 "preferences and may store language settings, for instance."
@@ -213,23 +277,23 @@ msgstr ""
 "Präferenzen des Nutzers und bieten beispielsweise die Möglichkeit, "
 "Spracheinstellungen zu speichern."
 
-#: ckanext/benap/templates/header.html:139
+#: ckanext/benap/templates/header.html:145
 msgid "Proper functionality"
 msgstr " Basisfunktionalitäten"
 
-#: ckanext/benap/templates/header.html:139
+#: ckanext/benap/templates/header.html:145
 msgid "1 year"
 msgstr "1 Jahr"
 
-#: ckanext/benap/templates/header.html:139
+#: ckanext/benap/templates/header.html:145
 msgid "This cookie is used to store user preferences."
 msgstr "Dieses Cookie wird zum Speichern von Benutzereinstellungen verwendet."
 
-#: ckanext/benap/templates/header.html:147
+#: ckanext/benap/templates/header.html:153
 msgid "Analytical"
 msgstr "Analytisch"
 
-#: ckanext/benap/templates/header.html:152
+#: ckanext/benap/templates/header.html:158
 msgid ""
 "These cookies collect information about the user's behaviour to measure "
 "the performance of the website and improve the user experience."
@@ -238,22 +302,22 @@ msgstr ""
 "Nutzungsverhalten, um die Leistungen der betreffenden Website zu messen "
 "und die Nutzungserfahrung zu verbessern."
 
-#: ckanext/benap/templates/header.html:159
+#: ckanext/benap/templates/header.html:165
 msgid "_ga"
 msgstr "_ga"
 
-#: ckanext/benap/templates/header.html:159
-#: ckanext/benap/templates/header.html:160
-#: ckanext/benap/templates/header.html:161
+#: ckanext/benap/templates/header.html:165
+#: ckanext/benap/templates/header.html:166
+#: ckanext/benap/templates/header.html:167
 msgid "Statistics, HTTP"
 msgstr "Statistik, HTTP"
 
-#: ckanext/benap/templates/header.html:159
+#: ckanext/benap/templates/header.html:165
 msgid "2 years"
 msgstr "2 Jahre"
 
-#: ckanext/benap/templates/header.html:159
-#: ckanext/benap/templates/header.html:161
+#: ckanext/benap/templates/header.html:165
+#: ckanext/benap/templates/header.html:167
 msgid ""
 "Registers a unique ID that is used to generate statistical data on how "
 "the visitor uses the website."
@@ -261,30 +325,30 @@ msgstr ""
 "Registriert eine einzigartige ID, die verwendet wird, um statistische "
 "Daten über die Nutzung der Website durch die Nutzer zu erheben."
 
-#: ckanext/benap/templates/header.html:160
+#: ckanext/benap/templates/header.html:166
 msgid "_gat"
 msgstr "_gat"
 
-#: ckanext/benap/templates/header.html:160
-#: ckanext/benap/templates/header.html:161
+#: ckanext/benap/templates/header.html:166
+#: ckanext/benap/templates/header.html:167
 msgid "1 day"
 msgstr "1 Tag"
 
-#: ckanext/benap/templates/header.html:160
+#: ckanext/benap/templates/header.html:166
 msgid "Used By Google Analytics to throttle request rate."
 msgstr ""
 "Wird von Google Analytics verwendet, um die Anfragegeschwindigkeit zu "
 "verlangsamen."
 
-#: ckanext/benap/templates/header.html:161
+#: ckanext/benap/templates/header.html:167
 msgid "_gid"
 msgstr "_gid"
 
-#: ckanext/benap/templates/header.html:169
+#: ckanext/benap/templates/header.html:175
 msgid "Marketing"
 msgstr "Marketing"
 
-#: ckanext/benap/templates/header.html:174
+#: ckanext/benap/templates/header.html:180
 msgid ""
 "Marketing cookies follow the user's browsing behaviour in order to "
 "compose customer profiles or user profiles. These profiles are commonly "
@@ -298,15 +362,15 @@ msgstr ""
 "der jeweiligen Nutzer entsprechen. Außerdem werden Sie genutzt, um die "
 "Effizienz von Werbekampagnen zu messen und Marktanalysen durchzuführen."
 
-#: ckanext/benap/templates/header.html:181
+#: ckanext/benap/templates/header.html:187
 msgid "r/collect"
 msgstr "r/collect"
 
-#: ckanext/benap/templates/header.html:181
+#: ckanext/benap/templates/header.html:187
 msgid "Marketing, Pixel"
 msgstr "Marketing, Pixel"
 
-#: ckanext/benap/templates/header.html:181
+#: ckanext/benap/templates/header.html:187
 msgid ""
 "This cookie is used to send data to Google Analytics about the visitor's "
 "device and behavior. It tracks the visitor across devices and marketing "
@@ -316,89 +380,19 @@ msgstr ""
 "weiterzuleiten. Das Cookie verfolgt den Benutzer über verschiedene Geräte"
 " und Marketingkanäle."
 
-#: ckanext/benap/templates/header.html:188
+#: ckanext/benap/templates/header.html:194
 msgid "Save preferences"
 msgstr "Einstellungen speichern"
 
-#: ckanext/benap/templates/header.html:286
-msgid "Sysadmin settings"
-msgstr "Parameter des Systemadministrators"
-
-#: ckanext/benap/templates/header.html:288
-msgid "Admin"
-msgstr "Administrator"
-
-#: ckanext/benap/templates/header.html:293
-msgid "View profile"
-msgstr "Profil ansehen"
-
-#: ckanext/benap/templates/header.html:305
-#, python-format
-msgid "Dashboard (%(num)d new item)"
-msgid_plural "Dashboard (%(num)d new items)"
-msgstr[0] "Dashboard (%(num)d neuer Punkt)"
-msgstr[1] "Dashboard (%(num)d neue Punkte)"
-
-#: ckanext/benap/templates/header.html:309
-msgid "Dashboard"
-msgstr "Dashboard"
-
-#: ckanext/benap/templates/header.html:315
-#: ckanext/benap/templates/user/dashboard.html:6
-msgid "Edit settings"
-msgstr "Parameter editieren"
-
-#: ckanext/benap/templates/header.html:317
-msgid "Settings"
-msgstr "Parameter"
-
-#: ckanext/benap/templates/header.html:322
-#: ckanext/benap/templates/header.html:324
-msgid "Log out"
-msgstr "Abmeldung"
-
-#: ckanext/benap/templates/header.html:339
-#: ckanext/benap/templates/home/snippets/search.html:33
-msgid "Log in"
-msgstr "Anmeldung"
-
-#: ckanext/benap/templates/header.html:341
-#: ckanext/benap/templates/user/new.html:3
-msgid "Register"
-msgstr "Registrieren"
-
-#: ckanext/benap/templates/header.html:367
-msgid "Datasets"
-msgstr "Datensätze"
-
-#: ckanext/benap/templates/header.html:367
-msgid "Organizations"
-msgstr "Organisationen"
-
-#: ckanext/benap/templates/header.html:368
-msgid "Groups"
-msgstr "Gruppen"
-
-#: ckanext/benap/templates/header.html:368
-msgid "About"
-msgstr "Über"
-
-#: ckanext/benap/templates/header.html:374
-msgid "Search"
-msgstr "Suche"
-
-#: ckanext/benap/templates/home/layout3.html:31
-#: ckanext/benap/templates/home/snippets/newsletter.html:7
+#: ckanext/benap/templates/home/index.html:32
 msgid "Subscribe to our newsletter and stay informed"
 msgstr "Abonnieren Sie unseren Newsletter und bleiben Sie informiert"
 
-#: ckanext/benap/templates/home/layout3.html:35
-#: ckanext/benap/templates/home/snippets/newsletter.html:13
+#: ckanext/benap/templates/home/index.html:39
 msgid "Enter your email address"
 msgstr "Geben sie ihre E-Mailadresse ein"
 
-#: ckanext/benap/templates/home/layout3.html:36
-#: ckanext/benap/templates/home/snippets/newsletter.html:14
+#: ckanext/benap/templates/home/index.html:40
 msgid "Subscribe"
 msgstr "Abonnieren"
 
@@ -428,15 +422,15 @@ msgstr ""
 msgid "Join"
 msgstr "Melden Sie sich an"
 
-#: ckanext/benap/templates/home/snippets/feedback.html:6
+#: ckanext/benap/templates/home/snippets/feedback.html:5
 msgid "Need help? "
 msgstr "Brauchen Sie Hilfe?"
 
-#: ckanext/benap/templates/home/snippets/feedback.html:7
+#: ckanext/benap/templates/home/snippets/feedback.html:6
 msgid "Contact"
 msgstr "Kontaktieren"
 
-#: ckanext/benap/templates/home/snippets/feedback.html:8
+#: ckanext/benap/templates/home/snippets/feedback.html:7
 msgid " our helpdesk."
 msgstr " Sie unseren Helpdesk"
 
@@ -485,7 +479,7 @@ msgstr ""
 "Praktische Informationen erhalten über wie Sie Ihre Organisation, Ihre "
 "Datensätze und Ihre Dienste registrieren können."
 
-#: ckanext/benap/templates/home/snippets/report.html:6
+#: ckanext/benap/templates/home/snippets/report.html:5
 msgid ""
 "More detailed instructions on how to register your dataset(s) and or "
 "services can be found in the "
@@ -493,38 +487,34 @@ msgstr ""
 "Ausführlichere Anweisungen zur Registrierung Ihrer Datensätze und Dienste"
 " finden Sie im "
 
-#: ckanext/benap/templates/home/snippets/report.html:7
+#: ckanext/benap/templates/home/snippets/report.html:6
 #: ckanext/benap/templates/user/new.html:29
 msgid "about section"
 msgstr "Abschnitt &quot;Über&quot;"
 
-#: ckanext/benap/templates/home/snippets/report.html:8
+#: ckanext/benap/templates/home/snippets/report.html:7
 msgid " and in our "
 msgstr " und in unserem "
 
-#: ckanext/benap/templates/home/snippets/report.html:9
+#: ckanext/benap/templates/home/snippets/report.html:8
 msgid "instruction video"
 msgstr "Anleitungsvideo"
 
-#: ckanext/benap/templates/home/snippets/search.html:3
-msgid "E.g. environment"
-msgstr "Zum B. Umwelt"
-
-#: ckanext/benap/templates/home/snippets/search.html:6
+#: ckanext/benap/templates/home/snippets/search.html:7
 msgid "BELGIUM'S NATIONAL ACCESS POINT FOR MULTIMODAL TRAVEL INFORMATION SERVICES"
 msgstr ""
 "Nationales belgischer Zugangspunkt für intelligente Verkehrssysteme (NAP "
 "ITS)"
 
-#: ckanext/benap/templates/home/snippets/search.html:10
+#: ckanext/benap/templates/home/snippets/search.html:11
 msgid "SEARCH FOR DATA SETS"
 msgstr "SUCHEN NACH DATENSÄTZEN UND DIENSTEN"
 
-#: ckanext/benap/templates/home/snippets/search.html:12
+#: ckanext/benap/templates/home/snippets/search.html:13
 msgid "ex. transport, cars, trains, ..."
 msgstr "z.B. Carsharing, Zug, Fahrradvermietung, usw."
 
-#: ckanext/benap/templates/home/snippets/search.html:18
+#: ckanext/benap/templates/home/snippets/search.html:19
 msgid "Popular Tags"
 msgstr "Frequente Tags"
 
@@ -542,53 +532,13 @@ msgstr ""
 msgid "Add Data"
 msgstr "Daten hinzufügen"
 
-#: ckanext/benap/templates/organization/snippets/organization_item.html:57
-msgid "{num} Dataset"
-msgid_plural "{num} Datasets"
-msgstr[0] "{num} Datensätz"
-msgstr[1] "{num} Datensätze"
-
-#: ckanext/benap/templates/organization/snippets/organization_item.html:59
-#, fuzzy
-msgid "0 Datasets"
-msgstr "0 Datensätze"
-
-#: ckanext/benap/templates/organization/snippets/organization_item.html:68
-#: ckanext/benap/templates/organization/snippets/organization_item.html:69
-#, fuzzy
-msgid "View {organization_name}"
-msgstr "meine Organisationen"
-
-#: ckanext/benap/templates/package/read.html:7
-#: ckanext/benap/templates/snippets/package_item.html:11
-msgid "Private"
-msgstr "Privat"
-
-#: ckanext/benap/templates/package/read.html:17
-#: ckanext/benap/templates/snippets/package_item.html:23
-msgid "Draft"
-msgstr "Entworf"
-
-#: ckanext/benap/templates/package/read.html:20
-#: ckanext/benap/templates/snippets/package_item.html:25
-msgid "Deleted"
-msgstr "gelöscht"
-
-#: ckanext/benap/templates/package/search.html:5
-msgid "Filters"
-msgstr "Filter"
-
-#: ckanext/benap/templates/package/search.html:12
+#: ckanext/benap/templates/package/search.html:11
 msgid "close"
 msgstr "schließen"
 
-#: ckanext/benap/templates/package/snippets/nap_checked_pill.html:3
+#: ckanext/benap/templates/package/snippets/nap_checked_pill.html:6
 msgid "metadata checked & verified"
 msgstr "metadaten geprüft und verifiziert"
-
-#: ckanext/benap/templates/package/snippets/resource_help.html:2
-msgid "What's a resource?"
-msgstr "Was ist eine Ressource?"
 
 #: ckanext/benap/templates/package/snippets/resource_help.html:4
 msgid ""
@@ -614,124 +564,79 @@ msgstr ""
 "Das Hinzufügen eines Links (oder das Hochladen einer Datei) ist gemäß der"
 " delegierten Verordnung (EU) 2017/1926 der Kommission obligatorisch."
 
-#: ckanext/benap/templates/snippets/facet_list.html:126
-msgid "Show More {facet_type}"
-msgstr "Mehr anzeigen {facet_type}"
+#: ckanext/benap/templates/scheming/organization/about.html:35
+msgid "Signed"
+msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:129
-msgid "Show Only Popular {facet_type}"
-msgstr "Beliebte"
+#: ckanext/benap/templates/scheming/package/read.html:14
+#: ckanext/benap/templates/scheming/package/snippets/package_form.html:15
+#: ckanext/benap/templates/scheming/package/snippets/resource_form.html:15
+msgid ""
+"dataset_type not passed to template. your version of CKAN\n"
+"    might not be compatible with ckanext-scheming"
+msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:133
-msgid "There are no {facet_type} that match this search"
-msgstr "Es gibt keine {facet_type}, die dieser Suche entsprechen"
+#: ckanext/benap/templates/scheming/package/read.html:35
+msgid "Transportation modes covered"
+msgstr ""
 
-#: ckanext/benap/templates/snippets/language_selector.html:3
-msgid "Language"
-msgstr "Sprache"
+#: ckanext/benap/templates/scheming/package/read.html:38
+msgid "Vervoerswijzen gedekt"
+msgstr ""
 
-#: ckanext/benap/templates/snippets/language_selector.html:11
-#: ckanext/benap/templates/snippets/search_form.html:42
-msgid "Go"
-msgstr "Gehen"
+#: ckanext/benap/templates/scheming/package/read.html:41
+msgid "Modes de transport couverts"
+msgstr ""
 
-#: ckanext/benap/templates/snippets/package_item.html:39
+#: ckanext/benap/templates/scheming/package/read.html:44
+msgid "Transportarten abgedeckt"
+msgstr ""
+
+#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:19
+msgid "ID"
+msgstr ""
+
+#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:30
+msgid "Metadata date"
+msgstr ""
+
+#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:33
+msgid "Datum metadata"
+msgstr ""
+
+#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:36
+msgid "Date des métadonnées"
+msgstr ""
+
+#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:39
+msgid "Datum der Metadaten"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/package_item.html:32
 msgid "This dataset has no description"
 msgstr "Dieser Datensatz hat keine Beschreibung."
 
-#: ckanext/benap/templates/snippets/search_form.html:3
-msgid "Search datasets..."
-msgstr "Datensätze durchsuchen..."
+#: ckanext/benap/templates/user/dashboard.html:6
+msgid "Edit settings"
+msgstr "Parameter editieren"
 
-#: ckanext/benap/templates/snippets/search_form.html:4
-msgid "Name Ascending"
-msgstr "Name Aufsteigend"
-
-#: ckanext/benap/templates/snippets/search_form.html:4
-msgid "Name Descending"
-msgstr "Name Absteigend"
-
-#: ckanext/benap/templates/snippets/search_form.html:33
-msgid "Order by"
-msgstr "Sortieren nach"
-
-#: ckanext/benap/templates/snippets/search_form.html:65
-msgid "Remove"
-msgstr "Entfernen"
-
-#: ckanext/benap/templates/snippets/search_form.html:70
-msgid "Filter Results"
-msgstr "Ergebnisse filtern"
-
-#: ckanext/benap/templates/snippets/search_form.html:77
-msgid "Please try another search."
-msgstr ""
-
-#: ckanext/benap/templates/snippets/search_form.html:82
-msgid "<strong>There was an error while searching.</strong> Please try again."
-msgstr ""
-"<strong>Es ist ein Fehler bei der Suche aufgetreten.</strong> Bitte "
-"versuchen Sie es erneut."
-
-#: ckanext/benap/templates/user/dashboard.html:9
-#: ckanext/benap/templates/user/dashboard.html:32
-msgid "News feed"
-msgstr "Neuigkeiten"
-
-#: ckanext/benap/templates/user/dashboard.html:10
-#, fuzzy
-msgid "My Datasets"
-msgstr "meine Datensätze"
-
-#: ckanext/benap/templates/user/dashboard.html:11
-msgid "My Organizations"
-msgstr "meine Organisationen"
-
-#: ckanext/benap/templates/user/dashboard.html:20
+#: ckanext/benap/templates/user/dashboard_datasets.html:9
 msgid "Have you just just created an account?"
 msgstr "Haben Sie gerade ein Benutzerkonto erstellt?"
 
-#: ckanext/benap/templates/user/dashboard.html:22
+#: ckanext/benap/templates/user/dashboard_datasets.html:11
 msgid "If yes, you will find more information on what to do in our "
 msgstr "Wenn ja, konsultieren Sie unseren Abschnitt für "
 
-#: ckanext/benap/templates/user/dashboard.html:23
+#: ckanext/benap/templates/user/dashboard_datasets.html:12
 msgid "about section."
 msgstr "weitere Informationen."
 
-#: ckanext/benap/templates/user/dashboard.html:26
+#: ckanext/benap/templates/user/dashboard_datasets.html:15
 msgid "Make sure to check your spam folder for the subscription e-mail."
 msgstr ""
 "Achten Sie darauf, Ihren Spam-Ordner für das Abonnement E-Mail zu "
 "überprüfen."
-
-#: ckanext/benap/templates/user/dashboard.html:34
-msgid "Activity from items that I'm following"
-msgstr "Aktivität von Elementen, denen ich folge"
-
-#: ckanext/benap/templates/user/login.html:8
-msgid "Need an Account?"
-msgstr "Benötigen Sie ein Benutzerkonto?"
-
-#: ckanext/benap/templates/user/login.html:10
-msgid "Then sign right up, it only takes a minute."
-msgstr "Dann registrieren Sie sich, es dauert nur eine Minute."
-
-#: ckanext/benap/templates/user/login.html:13
-msgid "Create an Account"
-msgstr "Erstelle ein Benutzerkonto"
-
-#: ckanext/benap/templates/user/login.html:25
-msgid "Forgotten your password?"
-msgstr "Haben Sie Ihr Kennwort vergessen?"
-
-#: ckanext/benap/templates/user/login.html:27
-msgid "No problem, use our password recovery form to reset it."
-msgstr "Kein Problem, nutzen Sie unser Formular um Ihr Passwort zurückzusetzen."
-
-#: ckanext/benap/templates/user/login.html:30
-msgid "Forgot your password?"
-msgstr "Haben Sie Ihr Kennwort vergessen?"
 
 #: ckanext/benap/templates/user/login.html:39
 msgid "Forgotten your username?"
@@ -746,18 +651,6 @@ msgstr ""
 "Senden Sie uns eine E-Mail an <a href=\"mailto:contact@transportdata.be\""
 " target=\"_top\">contact@transportdata.be</a> und nennen Sie Ihren Namen "
 "und gegebenenfalls Ihre Organisation."
-
-#: ckanext/benap/templates/user/new.html:6
-msgid "Registration"
-msgstr "Registrierung"
-
-#: ckanext/benap/templates/user/new.html:14
-msgid "Register for an Account"
-msgstr "Registrieren Sie sich für ein Konto"
-
-#: ckanext/benap/templates/user/new.html:26
-msgid "Why Sign Up?"
-msgstr "Warum anmelden?"
 
 #: ckanext/benap/templates/user/new.html:29
 msgid "Check our "
@@ -781,18 +674,350 @@ msgstr ""
 "nur Kleinbuchstaben und keine Sonderzeichen außer - und _ enthält. Füllen"
 " Sie die anderen Felder aus und drücken Sie \"Konto erstellen\"."
 
-#: ckanext/benap/templates/package/snippets/package_form.html:5
-msgid ""
-"The <i>data license</i> you select above only applies to the contents of any"
-" resource files that you add to this dataset. By submitting this form, you "
-"agree to release the <i>metadata</i> values that you enter into the form "
-"under the <a href=\"http://opendatacommons.org/licenses/odbl/1-0/\">Open "
-"Database License</a>."
+#: ckanext/benap/templates/user/snippets/info.html:26
+msgid "Last Active"
 msgstr ""
-"Wenn Sie dieses Formular "
-"absenden, stimmen Sie zu, die <i>Metadaten</i> unter der <a "
+
+#. -------- Translations specific to ckan source --------
+msgid "Sysadmin settings"
+msgstr "Parameter des Systemadministrators"
+
+msgid "Admin"
+msgstr "Administrator"
+
+msgid "View profile"
+msgstr "Profil ansehen"
+
+#, python-format
+msgid "Dashboard (%(num)d new item)"
+msgid_plural "Dashboard (%(num)d new items)"
+msgstr[0] "Dashboard (%(num)d neuer Punkt)"
+msgstr[1] "Dashboard (%(num)d neue Punkte)"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Settings"
+msgstr "Parameter"
+
+msgid "Log out"
+msgstr "Abmeldung"
+
+msgid "Organizations"
+msgstr "Organisationen"
+
+msgid "Groups"
+msgstr "Gruppen"
+
+msgid "Search"
+msgstr "Suche"
+
+msgid "Search datasets..."
+msgstr "Datensätze durchsuchen..."
+
+msgid "Name Ascending"
+msgstr "Name Aufsteigend"
+
+msgid "Name Descending"
+msgstr "Name Absteigend"
+
+msgid "Order by"
+msgstr "Sortieren nach"
+
+#: ckan/templates/snippets/search_form.html:83
+msgid " <p class=\"extra\">Please try another search.</p> "
+msgstr ""
+
+msgid ""
+" <p id=\"search-error\"><strong>There was an error while "
+"searching.</strong> Please try again.</p> "
+msgstr ""
+
+msgid "Activity from items that I'm following"
+msgstr "Aktivität von Elementen, denen ich folge"
+
+msgid ""
+"The <i>data license</i> you select above only applies to the contents of "
+"any resource files that you add to this dataset. By submitting this form,"
+" you agree to release the <i>metadata</i> values that you enter into the "
+"form under the <a "
 "href=\"http://opendatacommons.org/licenses/odbl/1-0/\">Open Database "
-"License</a> zu veröffentlichen."
+"License</a>."
+msgstr ""
+"Wenn Sie dieses Formular absenden, stimmen Sie zu, die <i>Metadaten</i> "
+"unter der <a href=\"http://opendatacommons.org/licenses/odbl/1-0/\">Open "
+"Database License</a> zu veröffentlichen."
+
+msgid "Why Sign Up?"
+msgstr "Warum anmelden?"
+
+msgid "Register for an Account"
+msgstr "Registrieren Sie sich für ein Konto"
+
+msgid "News feed"
+msgstr "Neuigkeiten"
+
+msgid "Go"
+msgstr "Gehen"
+
+msgid "There are no {facet_type} that match this search"
+msgstr "Es gibt keine {facet_type}, die dieser Suche entsprechen"
+
+msgid "Show Only Popular {facet_type}"
+msgstr "Beliebte"
+
+msgid "Show More {facet_type}"
+msgstr "Mehr anzeigen {facet_type}"
+
+msgid "Draft"
+msgstr "Entworf"
+
+#, fuzzy
+msgid "View {organization_name}"
+msgstr "meine Organisationen"
+
+#, fuzzy
+msgid "0 Datasets"
+msgstr "0 Datensätze"
+
+msgid "{num} Dataset"
+msgid_plural "{num} Datasets"
+msgstr[0] "{num} Datensätz"
+msgstr[1] "{num} Datensätze"
+
+msgid "Deleted"
+msgstr "gelöscht"
+
+msgid "About"
+msgstr "Über"
+
+msgid "E.g. environment"
+msgstr "Zum B. Umwelt"
+
+msgid "Type"
+msgstr "Art"
+
+msgid "Welcome"
+msgstr "Wilkommen"
+
+msgid "CKAN API"
+msgstr "CKAN API"
+
+msgid "Registration"
+msgstr "Registrierung"
+
+msgid "Register"
+msgstr "Registrieren"
+
+msgid "Forgot your password?"
+msgstr "Haben Sie Ihr Kennwort vergessen?"
+
+msgid "No problem, use our password recovery form to reset it."
+msgstr "Kein Problem, nutzen Sie unser Formular um Ihr Passwort zurückzusetzen."
+
+msgid "Forgotten your password?"
+msgstr "Haben Sie Ihr Kennwort vergessen?"
+
+msgid "Create an Account"
+msgstr "Erstelle ein Benutzerkonto"
+
+msgid "Then sign right up, it only takes a minute."
+msgstr "Dann registrieren Sie sich, es dauert nur eine Minute."
+
+msgid "Need an Account?"
+msgstr "Benötigen Sie ein Benutzerkonto?"
+
+msgid "My Organizations"
+msgstr "meine Organisationen"
+
+#, fuzzy
+msgid "My Datasets"
+msgstr "meine Datensätze"
+
+msgid "Filter Results"
+msgstr "Ergebnisse filtern"
+
+msgid "Language"
+msgstr "Sprache"
+
+msgid "What's a resource?"
+msgstr "Was ist eine Ressource?"
+
+msgid "Filters"
+msgstr "Filter"
+
+msgid "Log in"
+msgstr "Anmeldung"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+msgid "UK Open Government Licence (OGL)"
+msgstr ""
+
+msgid "Unauthorized to create a group"
+msgstr ""
+
+msgid "Integrity Error"
+msgstr ""
+
+msgid "Group not found"
+msgstr ""
+
+msgid "Link"
+msgstr ""
+
+msgid "Link to a URL on the internet (you can also link to an API)"
+msgstr ""
+
+msgid "Upload"
+msgstr ""
+
+msgid "Image"
+msgstr ""
+
+msgid "Upload a file on your computer"
+msgstr ""
+
+msgid "URL"
+msgstr ""
+
+msgid "File"
+msgstr ""
+
+#, python-format
+msgid "Tag \"%s\" length is less than minimum %s"
+msgstr ""
+
+#, python-format
+msgid "Tag \"%s\" length is more than maximum %i"
+msgstr ""
+
+msgid "Datasets"
+msgstr "Datensätze"
+
+msgid "Members"
+msgstr ""
+
+msgid "Organization"
+msgstr ""
+
+msgid "read more"
+msgstr ""
+
+msgid "There is no description for this organization"
+msgstr ""
+
+msgid "Followers"
+msgstr ""
+
+msgid "Private"
+msgstr "Privat"
+
+msgid "New view"
+msgstr ""
+
+msgid "Unfollow"
+msgstr ""
+
+msgid "Follow"
+msgstr ""
+
+msgid "Format"
+msgstr ""
+
+msgid "Explore"
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "More information"
+msgstr ""
+
+msgid "Download"
+msgstr ""
+
+msgid "Go to resource"
+msgstr ""
+
+msgid "Edit resource"
+msgstr ""
+
+msgid "Views"
+msgstr ""
+
+msgid "Clear Upload"
+msgstr ""
+
+msgid "Public"
+msgstr ""
+
+msgid "http://example.com/my-image.jpg"
+msgstr ""
+
+msgid "Image URL"
+msgstr ""
+
+msgid "Additional Information"
+msgstr ""
+
+msgid "Field"
+msgstr ""
+
+msgid "Value"
+msgstr ""
+
+msgid "Last updated"
+msgstr ""
+
+msgid "unknown"
+msgstr ""
+
+msgid "Created"
+msgstr ""
+
+msgid "State"
+msgstr ""
+
+msgid "The form contains invalid entries:"
+msgstr ""
+
+msgid "No License Provided"
+msgstr ""
+
+msgid "License"
+msgstr ""
+
+msgid "This dataset satisfies the Open Definition."
+msgstr ""
+
+msgid "You haven't created any datasets."
+msgstr ""
+
+msgid "Create one now?"
+msgstr ""
+
+msgid "Open ID"
+msgstr ""
+
+msgid "Username"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "This means only you can see this"
+msgstr ""
+
+msgid "Member Since"
+msgstr ""
+
+msgid "Visibility"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
 
 #~ msgid ""
 #~ msgstr ""
@@ -863,4 +1088,13 @@ msgstr ""
 #~ "an error while searching.</strong> Please "
 #~ "try again.</p> "
 #~ msgstr ""
+
+#~ msgid "Please try another search."
+#~ msgstr ""
+
+#~ msgid "<strong>There was an error while searching.</strong> Please try again."
+#~ msgstr ""
+#~ "<strong>Es ist ein Fehler bei der "
+#~ "Suche aufgetreten.</strong> Bitte versuchen "
+#~ "Sie es erneut."
 
