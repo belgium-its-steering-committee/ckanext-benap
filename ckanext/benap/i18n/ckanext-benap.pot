@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 2.0.4\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-20 15:01+0000\n"
+"POT-Creation-Date: 2025-08-21 09:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -507,7 +507,7 @@ msgid ""
 "and services."
 msgstr ""
 
-#: ckanext/benap/templates/home/snippets/report.html:7
+#: ckanext/benap/templates/home/snippets/report.html:5
 #, python-format
 msgid ""
 "More detailed instructions on how to register your dataset(s) and or services"
@@ -836,7 +836,7 @@ msgid "News feed"
 msgstr ""
 
 #: ckanext/benap/templates/user/dashboard.html:10
-#: ckanext/benap/templates/user/dashboard_datasets.html:27
+#: ckanext/benap/templates/user/dashboard_datasets.html:26
 msgid "My Datasets"
 msgstr ""
 
@@ -848,22 +848,22 @@ msgstr ""
 msgid "Have you just just created an account?"
 msgstr ""
 
-#: ckanext/benap/templates/user/dashboard_datasets.html:12
+#: ckanext/benap/templates/user/dashboard_datasets.html:11
 #, python-format
 msgid ""
 "If yes, you will find more information on what to do in our <a "
 "href=\"%(page_info)s\">about section.</a>"
 msgstr ""
 
-#: ckanext/benap/templates/user/dashboard_datasets.html:17
+#: ckanext/benap/templates/user/dashboard_datasets.html:16
 msgid "Make sure to check your spam folder for the subscription e-mail."
 msgstr ""
 
-#: ckanext/benap/templates/user/dashboard_datasets.html:32
+#: ckanext/benap/templates/user/dashboard_datasets.html:31
 msgid "You haven't created any datasets."
 msgstr ""
 
-#: ckanext/benap/templates/user/dashboard_datasets.html:34
+#: ckanext/benap/templates/user/dashboard_datasets.html:33
 msgid "Create one now?"
 msgstr ""
 
@@ -918,16 +918,16 @@ msgstr ""
 msgid "Why Sign Up?"
 msgstr ""
 
-#: ckanext/benap/templates/user/new.html:30
+#: ckanext/benap/templates/user/new.html:29
 #, python-format
 msgid "Check our <a href=\"%(page_about)s\">about section</a> to know more!"
 msgstr ""
 
-#: ckanext/benap/templates/user/new.html:34
+#: ckanext/benap/templates/user/new.html:33
 msgid "How to sign up?"
 msgstr ""
 
-#: ckanext/benap/templates/user/new.html:36
+#: ckanext/benap/templates/user/new.html:35
 msgid ""
 "Please choose a username (and make sure never to forget it) containing only "
 "lowercase letters and no special character except - and _ Fill in the other "

@@ -2,9 +2,7 @@
     <i class="fa fa-book fa-3x" aria-hidden="true"></i>
     <div>
         <p class="m-0 fs-20">
-            {% set page_about = h.url_for('pages.show', page='about') %}
-            {% set vide_url = "https://youtu.be/xbmt9XcywvA" %}
-            {% trans %}
+            {% trans page_about = h.url_for('pages.show', page='about'), vide_url = "https://youtu.be/xbmt9XcywvA" %}
             More detailed instructions on how to register your dataset(s) and or services can be found in the
             <a href="{{page_about}}">about section</a>
             and in our

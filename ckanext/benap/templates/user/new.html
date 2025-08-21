@@ -26,8 +26,7 @@
     <h2 class="module-heading">{{ _('Why Sign Up?') }}</h2>
     <div class="module-content">
         <p>
-            {% set page_about = h.url_for('pages.show', page='about') %}
-            {% trans %}
+            {% trans page_about = h.url_for('pages.show', page='about') %}
             Check our <a href="{{page_about}}">about section</a> to know more!
             {% endtrans %}
         </p>

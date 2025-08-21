@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-20 15:01+0000\n"
+"POT-Creation-Date: 2025-08-21 09:08+0000\n"
 "PO-Revision-Date: 2019-10-14 16:52+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -480,7 +480,7 @@ msgstr ""
 "Obtenez des informations pratiques sur la manière d'enregistrer votre "
 "organisation, vos ensembles de données et vos services. "
 
-#: ckanext/benap/templates/home/snippets/report.html:7
+#: ckanext/benap/templates/home/snippets/report.html:5
 #, python-format
 msgid ""
 "More detailed instructions on how to register your dataset(s) and or "
@@ -616,7 +616,7 @@ msgstr "Editer les paramètres"
 msgid "Have you just just created an account?"
 msgstr "Vous venez de créer un compte?"
 
-#: ckanext/benap/templates/user/dashboard_datasets.html:12
+#: ckanext/benap/templates/user/dashboard_datasets.html:11
 #, python-format
 msgid ""
 "If yes, you will find more information on what to do in our <a "
@@ -625,7 +625,7 @@ msgstr ""
 "Si oui, vous trouverez plus d'informations sur ce qu'il faut faire dans "
 "notre <a href=\"%(page_info)s\">section à propos.</a>"
 
-#: ckanext/benap/templates/user/dashboard_datasets.html:17
+#: ckanext/benap/templates/user/dashboard_datasets.html:16
 msgid "Make sure to check your spam folder for the subscription e-mail."
 msgstr "Assurez-vous de vérifier votre dossier de spam pour l'e-mail d'abonnement."
 
@@ -643,18 +643,18 @@ msgstr ""
 "target=\"_top\">contact@transportdata.be</a> en mentionnant votre nom et,"
 " le cas échéant, votre organisation."
 
-#: ckanext/benap/templates/user/new.html:30
+#: ckanext/benap/templates/user/new.html:29
 #, python-format
 msgid "Check our <a href=\"%(page_about)s\">about section</a> to know more!"
 msgstr ""
 "Consultez notre <a href=\"%(page_about)s\">section à propos</a> pour en "
 "savoir plus!"
 
-#: ckanext/benap/templates/user/new.html:34
+#: ckanext/benap/templates/user/new.html:33
 msgid "How to sign up?"
 msgstr "Comment s'inscrire?"
 
-#: ckanext/benap/templates/user/new.html:36
+#: ckanext/benap/templates/user/new.html:35
 msgid ""
 "Please choose a username (and make sure never to forget it) containing "
 "only lowercase letters and no special character except - and _ Fill in "
