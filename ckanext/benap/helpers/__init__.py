@@ -231,7 +231,6 @@ def is_default_tag(item):
         for translated_tag in categorized_tags[0]:
             if item['name'] == translated_tag[0]:
                 return True
-    show_element(item)
     return False
 
 def organization_name(organization):
@@ -261,11 +260,6 @@ def get_organization_by_id(id):
         'include_followers': False,
     })
     return organization_name(organization)
-
-
-def show_element(x):
-    return x
-
 
 def benap_fluent_label(field_name, field_label, lang):
     """
