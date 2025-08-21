@@ -7,7 +7,11 @@ CKAN_BASE=ckan/ckan-base:2.11
 docker run --rm --entrypoint bash -u root -v .:/external "$CKAN_BASE" -lc '
     apt-get -y install gettext
     cd /external
-    python setup.py extract_messages
+    
+    if ! python setup.py extract_messages; then
+        echo "!! Error while extracting strings, extraction cancelled. !!"
+        exit 1
+    fi
 
     # as ckan does not provide "en" translations, but only "en_GB", make the assmuption it falls back
     # to "en_GB" when the locale is "en". Note: was not explicitely checked.
@@ -47,6 +51,6 @@ docker run --rm --entrypoint bash -u root -v .:/external "$CKAN_BASE" -lc '
     
     # use the merged pot file to update the translations in .po files of plugin.
     python setup.py update_catalog --no-fuzzy-matching -i "$TMP_MERGED_POT" 
-  '
 
-echo "!! make sure to run compile_translations.sh to update the .po files after adjusting the missing translations. !!"
+    echo "!! make sure to run compile_translations.sh to update the .po files after adjusting the missing translations. !!"
+  '
