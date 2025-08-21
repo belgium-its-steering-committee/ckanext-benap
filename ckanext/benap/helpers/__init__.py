@@ -241,6 +241,14 @@ def is_default_tag(item):
     show_element(item)
     return False
 
+def organization_name(organization):
+    field = 'display_title_' + user_language()
+    to_show_name = organization.get(field)
+    if (to_show_name):
+        return to_show_name
+    else:
+        return organization.get('display_name')
+
 def get_organization_by_id(id):
     user = toolkit.get_action('get_site_user')(
         {
@@ -259,13 +267,7 @@ def get_organization_by_id(id):
         'include_tags': False,
         'include_followers': False,
     })
-    field = 'display_title_' + user_language()
-    to_show_name = organization.get(field)
-
-    if (to_show_name):
-        return to_show_name
-    else:
-        return organization.get('display_name')
+    return organization_name(organization)
 
 
 def show_element(x):

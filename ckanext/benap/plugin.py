@@ -7,7 +7,7 @@ from ckan.lib.plugins import DefaultTranslation
 import json
 from flask import Blueprint
 
-from ckanext.benap.helpers import ontology_helper, scheming_language_text_fallback, json_loads, \
+from ckanext.benap.helpers import ontology_helper, organization_name, scheming_language_text_fallback, json_loads, \
     package_notes_translated_fallback, field_translated_fallback, organisation_names_for_autocomplete, \
     get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, \
     forum_url, filter_default_tags_only, scheming_parse_embedded_links, show_element, get_organization_by_id, benap_fluent_label, \
@@ -71,6 +71,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_scheming_language_text': scheming_language_text,
             'format_datetime': format_datetime,
             'benap_forum_url': forum_url,
+            'benap_organization_name': organization_name,
             'benap_get_organization_by_id': get_organization_by_id,
             'translate_organization_filter': translate_organization_filter,
             'show_element': show_element,
