@@ -1,2 +1,1 @@
-{{ h.render_markdown(h.scheming_language_text(data[field.field_name]) or
-h.benap_scheming_language_text_fallback(data[field.field_name], data['language'])) }}
+{{ h.render_markdown(h.benap_lang_text(data[field.field_name], data['language'])) }}

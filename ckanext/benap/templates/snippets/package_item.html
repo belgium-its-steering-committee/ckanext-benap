@@ -8,7 +8,7 @@
             style="display: inline; padding-left: 6px; font-size: 14px"
         >
             <i>
-                {{h.benap_get_organization_by_id(package.organization.name)}}
+                {{h.benap_organization_name_by_id(package.organization.name)}}
             </i>
         </a>
         <div class="flex-grow-1"></div>
@@ -20,12 +20,12 @@
     </div>
 {% endblock %}
 
-{% set notes_translated_fallback = h.benap_package_notes_translated_fallback(package) %}
+{% set notes_translated = h.benap_lang_text(package.notes_translated) %}
 
 {% block notes %}
-    {% if notes_translated_fallback %}
+    {% if notes_translated %}
         <div>
-            {{ h.render_markdown(notes_translated_fallback) | truncate(300) }}
+            {{ h.render_markdown(notes_translated) | truncate(300) }}
         </div>
     {% else %}
         <p class="empty">

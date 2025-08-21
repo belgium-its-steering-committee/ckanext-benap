@@ -5,7 +5,7 @@
     if not, the link is kept as is.
     #}
 {% macro render_string_with_links(text_content) %}
-    {%- set parts = h.scheming_parse_embedded_links(text_content) -%}
+    {%- set parts = h.benap_parse_embedded_links(text_content) -%}
     {%- for part in parts -%}
         {%- if part.href -%}
             <a target="_blank" href="{{ part.href }}" style="color: #1c71bf;font-style: italic;">{{ part.text }}</a>

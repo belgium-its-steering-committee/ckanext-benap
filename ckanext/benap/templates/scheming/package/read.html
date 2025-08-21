@@ -5,8 +5,7 @@
 {% block package_notes %}
     {% if pkg['notes_translated'] %}
         <p>
-            {{ h.render_markdown(h.scheming_language_text(pkg['notes_translated']) or
-            h.benap_scheming_language_text_fallback(pkg['notes_translated'], pkg['language'])) }}
+            {{ h.render_markdown(h.benap_lang_text(pkg['notes_translated'], pkg['language'])) }}
         </p>
     {% endif %}
   {%- if not dataset_type -%}
