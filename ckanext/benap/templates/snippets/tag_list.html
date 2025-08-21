@@ -8,7 +8,7 @@ tags: list of tags
     {% for tag in tags %}
       <li>
         <a class="{% block tag_list_item_class %}tag{% endblock %}" href="{% url_for 'dataset.search', tags=tag.name %}">
-            {{ h.get_translated_tag(tag, h.lang()) }}
+            {{ h.get_translated_tag(tag) }}
         </a>
       </li>
     {% endfor %}

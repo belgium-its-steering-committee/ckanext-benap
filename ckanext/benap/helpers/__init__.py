@@ -1,7 +1,6 @@
 # coding=utf-8
 import json
 import ckan.plugins.toolkit as toolkit
-from ckantoolkit import h
 from ckan.common import config
 import logging
 from .decorators import decorator_timer
@@ -31,12 +30,11 @@ def _c(concept_uri):
 A helper function striving to be the Python Babel equivalent of _(), but for skos concepts,
 Taking the concept URI as an argument, and returning the localized label
     """
-    return get_concept_label(concept_uri, h.lang())
+    return get_concept_label(concept_uri)
 
 def user_language():
     try:
-        from ckantoolkit import h
-        return h.lang()
+        return lang()
     except TypeError:
         return None  # lang() call will fail when no user language available
 
@@ -196,7 +194,7 @@ def format_datetime(datetime):
 def scheming_language_text(field_data, language_data):
     return field_data[language_data]
 
-def get_translated_tag(tag, lang):
+def get_translated_tag(tag, lang = None):
     # TODO: needs more refactoring. Kept same behavior as legacy, but clarified its working
     try:
         transport_mode_concept_uri = ckan_tag_to_transport_mode_concept_uri(tag['name'])
