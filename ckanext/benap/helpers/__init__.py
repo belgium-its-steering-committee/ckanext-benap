@@ -32,13 +32,6 @@ Taking the concept URI as an argument, and returning the localized label
     """
     return get_concept_label(concept_uri)
 
-def user_language():
-    try:
-        return lang()
-    except TypeError:
-        return None  # lang() call will fail when no user language available
-
-
 def ontology_helper(context):
     ontology = context.get("benap_helper_ontology", None)
     if ontology == "language":
@@ -151,7 +144,7 @@ def scheming_language_text_fallback(field_data, language_data):
 
 def package_notes_translated_fallback(package):
     notes_value = None
-    user_lang = user_language()
+    user_lang = lang()
     notes_translated = package.get('notes_translated', None)
     if notes_translated:
         if user_lang:
@@ -164,7 +157,7 @@ def package_notes_translated_fallback(package):
 
 def field_translated_fallback(translated_field):
     field_value = None
-    user_lang = user_language()
+    user_lang = lang()
     if translated_field:
         if user_lang:
             field_value = translated_field.get(user_lang, None)
@@ -242,7 +235,7 @@ def is_default_tag(item):
     return False
 
 def organization_name(organization):
-    field = 'display_title_' + user_language()
+    field = 'display_title_' + lang()
     to_show_name = organization.get(field)
     if (to_show_name):
         return to_show_name
