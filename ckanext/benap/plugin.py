@@ -7,9 +7,9 @@ from ckan.lib.plugins import DefaultTranslation
 import json
 from flask import Blueprint
 
-from ckanext.benap.helpers import ontology_helper, organization_name, scheming_language_text_fallback, json_loads, organisation_names_for_autocomplete, \
+from ckanext.benap.helpers import ontology_helper, organization_name, scheming_language_text_fallback, organisation_names_for_autocomplete, \
     get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, \
-    filter_default_tags_only, parse_embedded_links, organization_name_by_id, benap_fluent_label, lang_text, \
+    parse_embedded_links, organization_name_by_id, lang_text, \
     translate_organization_filter, convert_validation_list_to_JSON, benap_get_organization_field_by_id, \
     benap_get_organization_field_by_specified_field, benap_retrieve_dict_items_or_keys_or_values, get_translated_category_and_sub_category, \
     benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper, _c, is_member_of_org
@@ -61,18 +61,15 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_ontology_helper': ontology_helper,
             # TODO: remove after replacing this with lang_text in fluent fork
             'benap_scheming_language_text_fallback': scheming_language_text_fallback,
-            'json_loads': json_loads,
             'benap_organisation_names_for_autocomplete': organisation_names_for_autocomplete,
             'benap_lang_text': lang_text,
             'get_translated_tags': get_translated_tags,
             'get_translated_tag': get_translated_tag,
-            'filter_default_tags_only': filter_default_tags_only,
             'benap_scheming_language_text': scheming_language_text,
             'format_datetime': format_datetime,
             'benap_organization_name': organization_name,
             'benap_organization_name_by_id': organization_name_by_id,
             'translate_organization_filter': translate_organization_filter,
-            'benap_fluent_label': benap_fluent_label,
             'benap_convert_validation_list_to_JSON': convert_validation_list_to_JSON,
             'benap_get_organization_field_by_id': benap_get_organization_field_by_id,
             'benap_get_organization_field_by_specified_field': benap_get_organization_field_by_specified_field,

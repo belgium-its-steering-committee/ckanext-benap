@@ -162,10 +162,6 @@ def scheming_language_text_fallback(field_data, language_data):
     return lang_text(field_data)
 
 
-def json_loads(data):
-    return json.dumps(json.loads(data))
-
-
 def organisation_names_for_autocomplete():
     return [org['title'] for org in organizations_available('create_dataset')]
 
@@ -208,26 +204,6 @@ def get_translated_category_and_sub_category():
     return MOBILITY_THEME
 
 
-def filter_default_tags_only(items):
-    filtered_items = []
-    tags = []
-    for categorized_tags in get_translated_tags():
-        for translated_tag in categorized_tags[0]:
-            tags.append(translated_tag[0])
-    for item in items:
-        for tag in tags:
-            if ckan_tag_to_transport_mode_concept_uri(item['name']) == tag:
-                filtered_items.append(item)
-    return filtered_items
-
-
-def is_default_tag(item):
-    for categorized_tags in get_translated_tags():
-        for translated_tag in categorized_tags[0]:
-            if item['name'] == translated_tag[0]:
-                return True
-    return False
-
 def organization_name(organization):
     field = 'display_title_' + lang()
     to_show_name = organization.get(field)
@@ -259,17 +235,6 @@ def organization_by_id(id):
 def organization_name_by_id(id):    
     return organization_name(organization_by_id(id))
 
-def benap_fluent_label(field_name, field_label, lang):
-    """
-    Return a label for the input label for the given language
-    """
-    schema = scheming_get_dataset_schema('dataset')
-    if schema:
-        field_metadata = [x for x in schema['dataset_fields'] if x['field_name'] == field_name]
-        if len(field_metadata) > 0:
-            return field_metadata[0]['label'][lang]
-
-    return field_label
 
 def convert_validation_list_to_JSON(data):
     """
