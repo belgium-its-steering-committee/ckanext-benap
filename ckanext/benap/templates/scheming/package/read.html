@@ -31,19 +31,8 @@
 {% block package_tags %}
     {% if pkg.tags %}
         <section class="tags">
-            {% if h.lang() == 'en' %}
-                <h3>{{ _('Transportation modes covered') }}</h3>
-            {% endif %}
-            {% if h.lang() == 'nl' %}
-                <h3>{{ _('Vervoerswijzen gedekt') }}</h3>
-            {% endif %}
-            {% if h.lang() == 'fr' %}
-                <h3>{{ _('Modes de transport couverts') }}</h3>
-            {% endif %}
-            {% if h.lang() == 'de' %}
-                <h3>{{ _('Transportarten abgedeckt') }}</h3>
-            {% endif %}
-                {% snippet 'snippets/tag_list.html', tags=pkg.tags, _class='tag-list well' %}
+            <h3>{{ _('Transportation modes covered') }}</h3>
+            {% snippet 'snippets/tag_list.html', tags=pkg.tags, _class='tag-list well' %}
         </section>
     {% endif %}
 {% endblock %}

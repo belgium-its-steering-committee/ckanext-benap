@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 2.0.4\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-21 09:08+0000\n"
+"POT-Creation-Date: 2025-08-21 10:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -552,12 +552,12 @@ msgid "Log in"
 msgstr ""
 
 #: ckanext/benap/templates/organization/read_base.html:4
-#: ckanext/benap/templates/organization/snippets/info.html:44
+#: ckanext/benap/templates/organization/snippets/info.html:43
 msgid "Datasets"
 msgstr ""
 
 #: ckanext/benap/templates/organization/read_base.html:6
-#: ckanext/benap/templates/organization/snippets/info.html:48
+#: ckanext/benap/templates/organization/snippets/info.html:47
 msgid "Members"
 msgstr ""
 
@@ -565,49 +565,49 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: ckanext/benap/templates/organization/snippets/info.html:7
+#: ckanext/benap/templates/organization/snippets/info.html:6
 msgid "Organization"
 msgstr ""
 
-#: ckanext/benap/templates/organization/snippets/info.html:20
-#: ckanext/benap/templates/package/read.html:20
+#: ckanext/benap/templates/organization/snippets/info.html:19
+#: ckanext/benap/templates/package/read.html:21
 msgid "Deleted"
 msgstr ""
 
-#: ckanext/benap/templates/organization/snippets/info.html:29
+#: ckanext/benap/templates/organization/snippets/info.html:28
 msgid "read more"
 msgstr ""
 
-#: ckanext/benap/templates/organization/snippets/info.html:32
+#: ckanext/benap/templates/organization/snippets/info.html:31
 msgid "There is no description for this organization"
 msgstr ""
 
-#: ckanext/benap/templates/organization/snippets/info.html:40
+#: ckanext/benap/templates/organization/snippets/info.html:39
 msgid "Followers"
 msgstr ""
 
-#: ckanext/benap/templates/organization/snippets/organization_item.html:57
+#: ckanext/benap/templates/organization/snippets/organization_item.html:33
 msgid "{num} Dataset"
 msgid_plural "{num} Datasets"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ckanext/benap/templates/organization/snippets/organization_item.html:59
+#: ckanext/benap/templates/organization/snippets/organization_item.html:35
 msgid "0 Datasets"
 msgstr ""
 
-#: ckanext/benap/templates/organization/snippets/organization_item.html:68
-#: ckanext/benap/templates/organization/snippets/organization_item.html:69
+#: ckanext/benap/templates/organization/snippets/organization_item.html:44
+#: ckanext/benap/templates/organization/snippets/organization_item.html:45
 msgid "View {organization_name}"
 msgstr ""
 
-#: ckanext/benap/templates/package/read.html:7
+#: ckanext/benap/templates/package/read.html:8
 #: ckanext/benap/templates/scheming/form_snippets/organization.html:29
 #: ckanext/benap/templates/user/snippets/info.html:16
 msgid "Private"
 msgstr ""
 
-#: ckanext/benap/templates/package/read.html:17
+#: ckanext/benap/templates/package/read.html:18
 msgid "Draft"
 msgstr ""
 
@@ -631,7 +631,7 @@ msgstr ""
 msgid "Follow"
 msgstr ""
 
-#: ckanext/benap/templates/package/snippets/nap_checked_pill.html:6
+#: ckanext/benap/templates/package/snippets/nap_checked_pill.html:3
 msgid "metadata checked & verified"
 msgstr ""
 
@@ -717,20 +717,8 @@ msgid ""
 "    might not be compatible with ckanext-scheming"
 msgstr ""
 
-#: ckanext/benap/templates/scheming/package/read.html:35
+#: ckanext/benap/templates/scheming/package/read.html:34
 msgid "Transportation modes covered"
-msgstr ""
-
-#: ckanext/benap/templates/scheming/package/read.html:38
-msgid "Vervoerswijzen gedekt"
-msgstr ""
-
-#: ckanext/benap/templates/scheming/package/read.html:41
-msgid "Modes de transport couverts"
-msgstr ""
-
-#: ckanext/benap/templates/scheming/package/read.html:44
-msgid "Transportarten abgedeckt"
 msgstr ""
 
 #: ckanext/benap/templates/scheming/package/resource_read.html:18
@@ -762,29 +750,22 @@ msgstr ""
 msgid "ID"
 msgstr ""
 
-#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:30
+#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:29
 msgid "Metadata date"
 msgstr ""
 
-#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:33
-msgid "Datum metadata"
-msgstr ""
-
-#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:36
-msgid "Date des métadonnées"
-msgstr ""
-
-#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:39
-msgid "Datum der Metadaten"
-msgstr ""
-
-#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:62
+#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:50
 #: ckanext/benap/templates/user/snippets/info.html:31
+msgctxt "Status"
 msgid "State"
 msgstr ""
 
 #: ckanext/benap/templates/scheming/snippets/errors.html:6
 msgid "The form contains invalid entries:"
+msgstr ""
+
+#: ckanext/benap/templates/snippets/facet_list.html:6
+msgid "Transportation modes"
 msgstr ""
 
 #: ckanext/benap/templates/snippets/facet_list.html:50

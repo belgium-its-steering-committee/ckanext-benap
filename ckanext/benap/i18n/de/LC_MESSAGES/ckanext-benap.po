@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-21 09:08+0000\n"
+"POT-Creation-Date: 2025-08-21 10:49+0000\n"
 "PO-Revision-Date: 2019-09-20 17:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -532,7 +532,7 @@ msgstr "Daten hinzufügen"
 msgid "close"
 msgstr "schließen"
 
-#: ckanext/benap/templates/package/snippets/nap_checked_pill.html:6
+#: ckanext/benap/templates/package/snippets/nap_checked_pill.html:3
 msgid "metadata checked & verified"
 msgstr "metadaten geprüft und verifiziert"
 
@@ -572,41 +572,27 @@ msgid ""
 "    might not be compatible with ckanext-scheming"
 msgstr ""
 
-#: ckanext/benap/templates/scheming/package/read.html:35
+#: ckanext/benap/templates/scheming/package/read.html:34
 msgid "Transportation modes covered"
-msgstr ""
-
-#: ckanext/benap/templates/scheming/package/read.html:38
-msgid "Vervoerswijzen gedekt"
-msgstr ""
-
-#: ckanext/benap/templates/scheming/package/read.html:41
-msgid "Modes de transport couverts"
-msgstr ""
-
-#: ckanext/benap/templates/scheming/package/read.html:44
-msgid "Transportarten abgedeckt"
-msgstr ""
+msgstr "Transportarten abgedeckt"
 
 #: ckanext/benap/templates/scheming/package/snippets/additional_info.html:19
 msgid "ID"
 msgstr ""
 
-#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:30
+#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:29
 msgid "Metadata date"
+msgstr "Datum der Metadaten"
+
+#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:50
+#: ckanext/benap/templates/user/snippets/info.html:31
+msgctxt "Status"
+msgid "State"
 msgstr ""
 
-#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:33
-msgid "Datum metadata"
-msgstr ""
-
-#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:36
-msgid "Date des métadonnées"
-msgstr ""
-
-#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:39
-msgid "Datum der Metadaten"
-msgstr ""
+#: ckanext/benap/templates/snippets/facet_list.html:6
+msgid "Transportation modes"
+msgstr "Transportmittel"
 
 #: ckanext/benap/templates/snippets/package_item.html:32
 msgid "This dataset has no description"

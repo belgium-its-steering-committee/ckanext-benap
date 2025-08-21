@@ -26,18 +26,7 @@
         </td>
     </tr>
     <tr>
-        {% if h.lang() == 'en' %}
-            <th scope="row" class="dataset-label">{{ _('Metadata date') }}</th>
-        {% endif %}
-        {% if h.lang() == 'nl' %}
-            <th scope="row" class="dataset-label">{{ _('Datum metadata') }}</th>
-        {% endif %}
-        {% if h.lang() == 'fr' %}
-            <th scope="row" class="dataset-label">{{ _('Date des métadonnées') }}</th>
-        {% endif %}
-        {% if h.lang() == 'de' %}
-            <th scope="row" class="dataset-label">{{ _('Datum der Metadaten') }}</th>
-        {% endif %}
+        <th scope="row" class="dataset-label">{{ _('Metadata date') }}</th>
         <td id="metadata_modified" class="dataset-details">
             {{ h.format_datetime(pkg_dict.metadata_modified) }}
         </td>
@@ -58,11 +47,7 @@
   {% if h.check_access('package_update',{'id':pkg_dict.id}) %}
     <tr>
       <th scope="row" class="dataset-label">
-          {% if h.lang() != 'nl' %}
-            {{ _("State") }}
-          {% else %}
-            Status
-          {%- endif -%}
+        {{ pgettext('Status', 'State') }}
       </th>
       <td class="dataset-details">{{ _(pkg_dict.state) }}</td>
     </tr>
