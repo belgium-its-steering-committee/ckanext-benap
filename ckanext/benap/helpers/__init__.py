@@ -170,11 +170,14 @@ def lang_text(translations, language = None, fallback = True):
     If no dict is passed, the function will return the result without any changes.
     This is a useful default for fields that can be both just a string or a dict of translations.
     """
-    translation = translations[language or lang()] or None
-    if not translation and fallback:
-        # TODO: this order could come from ckan.locale_order config key
-        translation = translations['en'] or translations['nl'] or translations['fr'] or translations['de'] or None
-    return translation
+    if translations and hasattr(translations, 'get'):
+        translation = translations.get(language or lang(), None)
+        if not translation and fallback:
+            # TODO: this order could come from ckan.locale_order config key
+            translation = translations.get('en') or translations.get('nl') or translations.get('fr') or translations.get('de') or None
+        return translation
+    else:
+        return translations
 
 # TODO: remove after replacing this with lang_text in fluent fork
 def scheming_language_text_fallback(field_data, language_data):
