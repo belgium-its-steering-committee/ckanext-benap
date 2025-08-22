@@ -20,7 +20,7 @@
     </div>
 {% endblock %}
 
-{% set notes_translated = h.benap_lang_text(package.notes_translated) %}
+{% set notes_translated = h.benap_lang_text(package.get('notes_translated')) %}
 
 {% block notes %}
     {% if notes_translated %}
