@@ -30,6 +30,24 @@ Taking the concept URI as an argument, and returning the localized label
     """
     return get_concept_label(concept_uri, h.lang())
 
+def get_facet_name_label_function(facet_name):
+    facet_mapping = {
+        'regions_covered_uri': _c,
+        'mobility_theme_uri': _c,
+        'format_uri': _c,
+        'license_uri': _c,
+        'tags': ckan_tag_to_transport_mode_concept_label,
+    }
+    if facet_name in facet_mapping:
+        return facet_mapping[facet_name]
+
+def get_facet_label_function(facet_name):
+    fun = get_facet_name_label_function(facet_name)
+    if fun:
+        def fun_for_facet(_facet):
+            return fun(_facet['name'])
+        return fun_for_facet
+
 def user_language():
     try:
         from ckantoolkit import h
@@ -192,23 +210,6 @@ def format_datetime(datetime):
 
 def scheming_language_text(field_data, language_data):
     return field_data[language_data]
-
-def get_translated_tag(tag, lang):
-    # TODO: needs more refactoring. Kept same behavior as legacy, but clarified its working
-    try:
-        transport_mode_concept_uri = ckan_tag_to_transport_mode_concept_uri(tag['name'])
-        transport_mode_label = get_concept_label(transport_mode_concept_uri, lang)
-        return transport_mode_label
-    except:
-        try:
-            return tag['display_name']
-        except KeyError:
-            try:
-                if isinstance(tag, str):
-                    return tag
-                print(('tag not found: ' + json.dumps(tag)))
-            except:
-                print('tag not found')
 
 
 def get_translated_tags():
@@ -439,3 +440,7 @@ def ckan_tag_to_transport_mode_concept_uri(tag_name):
     }
     return tag_mapping.get(tag_name)
 
+def ckan_tag_to_transport_mode_concept_label(tag_name):
+    transport_mode_concept_uri = ckan_tag_to_transport_mode_concept_uri(tag_name)
+    transport_mode_label = _c(transport_mode_concept_uri)
+    return transport_mode_label
