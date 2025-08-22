@@ -5,8 +5,7 @@
 {% block package_notes %}
     {% if pkg['notes_translated'] %}
         <p>
-            {{ h.render_markdown(h.scheming_language_text(pkg['notes_translated']) or
-            h.benap_scheming_language_text_fallback(pkg['notes_translated'], pkg['language'])) }}
+            {{ h.render_markdown(h.benap_lang_text(pkg['notes_translated'])) }}
         </p>
     {% endif %}
   {%- if not dataset_type -%}
@@ -31,19 +30,8 @@
 {% block package_tags %}
     {% if pkg.tags %}
         <section class="tags">
-            {% if h.lang() == 'en' %}
-                <h3>{{ _('Transportation modes covered') }}</h3>
-            {% endif %}
-            {% if h.lang() == 'nl' %}
-                <h3>{{ _('Vervoerswijzen gedekt') }}</h3>
-            {% endif %}
-            {% if h.lang() == 'fr' %}
-                <h3>{{ _('Modes de transport couverts') }}</h3>
-            {% endif %}
-            {% if h.lang() == 'de' %}
-                <h3>{{ _('Transportarten abgedeckt') }}</h3>
-            {% endif %}
-                {% snippet 'snippets/tag_list.html', tags=pkg.tags, _class='tag-list well' %}
+            <h3>{{ _('Transportation modes covered') }}</h3>
+            {% snippet 'snippets/tag_list.html', tags=pkg.tags, _class='tag-list well' %}
         </section>
     {% endif %}
 {% endblock %}

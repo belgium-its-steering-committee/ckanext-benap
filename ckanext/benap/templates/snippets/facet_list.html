@@ -2,17 +2,7 @@
 
 {% block facet_list_item %}
   {% if 'Tags' == title %}
-    {% if h.lang() == 'en' %}
-      {% set title = 'Transportation modes' %}
-    {% elif h.lang() == 'nl' %}
-      {% set title = 'Vervoersmodi' %}
-    {% elif h.lang() == 'fr' %}
-      {% set title = 'Modes de transport' %}
-    {% elif h.lang() == 'de' %}
-      {% set title = 'Transportmittel' %}
-    {% else %}
-      {% set title = 'Transportation modes' %}
-    {% endif %}
+    {% set title = _('Transportation modes') %}
   {% endif %}
   <section class="module module-narrow module-shallow" data-module="collapsible-section">
       <div class="flex justify-content-between align-items-center">

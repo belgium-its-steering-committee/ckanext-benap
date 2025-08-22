@@ -33,7 +33,7 @@
             </p>
           </div>
           <form id="subscribe-mailinglist-form" class="dataset-form mt-5px flex" style="width: 100%;" method="post"
-            action="/{{h.lang()}}/newsletter/subscribe">
+            action="{{h.url_for('mailchimp.subscribe')}}">
             {{ h.csrf_input() }} 
             <input id="contact-email" name="email" class="input-email pl-5 flex-grow-1"
               placeholder="{{ _('Enter your email address') }}" type="text" autocomplete="off">
@@ -47,7 +47,7 @@
     <div class="h-100 w-100 flex align-items-center highlight-box">
       <div class="video-wrapper">
         <iframe 
-          src="{{ h.getTranslatedVideoUrl(h.lang()) }}"
+          src="{{ _('https://www.youtube.com/embed/0-M48xzlWzI?rel=0&enablejsapi=1') }}"
           allowfullscreen
         >
         </iframe>

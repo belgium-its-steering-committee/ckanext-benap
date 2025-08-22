@@ -1,14 +1,13 @@
 # coding=utf-8
 import json
 import ckan.plugins.toolkit as toolkit
-from ckantoolkit import h
 from ckan.common import config
 import logging
 from .decorators import decorator_timer
 from itertools import chain
 from ckan.logic import NotAuthorized
 import re
-from ckan.lib.helpers import get_site_protocol_and_host, lang
+from ckan.lib.helpers import get_site_protocol_and_host, lang, organizations_available
 
 from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
                                          CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE, FREQUENCY,
@@ -31,7 +30,7 @@ def _c(concept_uri):
 A helper function striving to be the Python Babel equivalent of _(), but for skos concepts,
 Taking the concept URI as an argument, and returning the localized label
     """
-    return get_concept_label(concept_uri, h.lang())
+    return get_concept_label(concept_uri)
 
 def get_facet_name_label_function(facet_name):
     facet_mapping = {
@@ -50,13 +49,6 @@ def get_facet_label_function(facet_name):
         def fun_for_facet(_facet):
             return fun(_facet['name'])
         return fun_for_facet
-
-def user_language():
-    try:
-        from ckantoolkit import h
-        return h.lang()
-    except TypeError:
-        return None  # lang() call will fail when no user language available
 
 
 def ontology_helper(context):
@@ -150,67 +142,58 @@ def ontology_helper(context):
 # It should be done in the IFacets implementation of this plugin
 def translate_organization_filter(facet_title, lang):
     if facet_title == "Organizations":
-        return {
+        return lang_text({
             "en": "Organizations", 
             "nl": "Organisaties", 
             "fr": "Organisations", 
-            "de": "Organisationen"}[lang]
+            "de": "Organisationen"}, lang)
     elif facet_title == "NAP Type":
-        return {
+        return lang_text({
             "en": "NAP type", 
             "nl": "NAP type", 
             "fr": "Type de NAP", 
-            "de": "NAP typ"}[lang]
+            "de": "NAP typ"}, lang)
     return facet_title
 
+def lang_text(translations, language = None, fallback = True):
+    """
+    return the translation (of current user locale by default) of a dict of translated strings in form:
+    {
+        "en": "English text",
+        "nl": "Dutch text",
+        "fr": "French text",
+        "de": "German text"
+    }
+    If the chosen language is missing, it will fallback to other languages in order: en, nl, fr, de.
+    This can be disabled by setting fallback to False.
 
+    If no dict is passed, the function will return the result without any changes.
+    This is a useful default for fields that can be both just a string or a dict of translations.
+    """
+    translation = translations[language or lang()] or None
+    if not translation and fallback:
+        # TODO: this order could come from ckan.locale_order config key
+        translation = translations['en'] or translations['nl'] or translations['fr'] or translations['de'] or None
+    return translation
 
+# TODO: remove after replacing this with lang_text in fluent fork
 def scheming_language_text_fallback(field_data, language_data):
-    return field_data['en'] or field_data['nl'] or field_data['fr'] or field_data['de']
-
-
-def package_notes_translated_fallback(package):
-    notes_value = None
-    user_lang = user_language()
-    notes_translated = package.get('notes_translated', None)
-    if notes_translated:
-        if user_lang:
-            notes_value = notes_translated.get(user_lang, None)
-        if not notes_value:
-            notes_value = notes_translated['en'] or notes_translated['nl'] or notes_translated['fr'] \
-                          or notes_translated['de'] or None
-    return notes_value
-
-
-def field_translated_fallback(translated_field):
-    field_value = None
-    user_lang = user_language()
-    if translated_field:
-        if user_lang:
-            field_value = translated_field.get(user_lang, None)
-        if not field_value:
-            field_value = translated_field['en'] or translated_field['nl'] or translated_field['fr'] \
-                          or translated_field['de'] or None
-    return field_value
-
-
-def json_loads(data):
-    return json.dumps(json.loads(data))
-
-
-def forum_url():
-    return config.get('ckan.pages.forum.link', '')
+    return lang_text(field_data)
 
 
 def organisation_names_for_autocomplete():
-    from ckantoolkit import h
-    return [org['title'] for org in h.organizations_available('create_dataset')]
+    return [org['title'] for org in organizations_available('create_dataset')]
 
 
 def format_datetime(datetime):
     return datetime.replace('T', ' ')[:-7]
 
 
+# see lang_text for this with fallback (to all languages in order).
+# Note that scheming_language_text helper comes from the scheming plugin (which fallbacks only to `en`),
+# while this helper is refered to as benap_scheming_language_text (which does not fallback)
+# TODO: this is a mess in the templates, both used in conjunction, and should be refactored.
+# However note this is no trivial task: it is unclear for every usage if the fallback is desired or not.
 def scheming_language_text(field_data, language_data):
     return field_data[language_data]
 
@@ -223,39 +206,16 @@ def get_translated_category_and_sub_category():
     return MOBILITY_THEME
 
 
-def filter_default_tags_only(items):
-    filtered_items = []
-    tags = []
-    for categorized_tags in get_translated_tags():
-        for translated_tag in categorized_tags[0]:
-            tags.append(translated_tag[0])
-    for item in items:
-        for tag in tags:
-            if ckan_tag_to_transport_mode_concept_uri(item['name']) == tag:
-                filtered_items.append(item)
-    return filtered_items
+def organization_name(organization):
+    field = 'display_title_' + lang()
+    to_show_name = organization.get(field)
+    if (to_show_name):
+        return to_show_name
+    else:
+        return organization.get('display_name')
 
 
-def is_default_tag(item):
-    for categorized_tags in get_translated_tags():
-        for translated_tag in categorized_tags[0]:
-            if item['name'] == translated_tag[0]:
-                return True
-    show_element(item)
-    return False
-
-
-def getTranslatedVideoUrl(lang):
-    switcher = {
-        'en': 'https://www.youtube.com/embed/0-M48xzlWzI?rel=0&enablejsapi=1',
-        'nl': 'https://www.youtube.com/embed/jle8RPRW1Do?rel=0&enablejsapi=1',
-        'fr': 'https://www.youtube.com/embed/p8b9hIYM9hE?rel=0&enablejsapi=1',
-        'de': 'https://www.youtube.com/embed/kB75uVs8oVo?rel=0&enablejsapi=1'
-    }
-    return switcher.get(lang, switcher.get('en'))
-
-
-def get_organization_by_id(id):
+def organization_by_id(id):
     user = toolkit.get_action('get_site_user')(
         {
             'ignore_auth': True
@@ -273,30 +233,11 @@ def get_organization_by_id(id):
         'include_tags': False,
         'include_followers': False,
     })
-    field = 'display_title_' + user_language()
-    to_show_name = organization.get(field)
+    return organization
 
-    if (to_show_name):
-        return to_show_name
-    else:
-        return organization.get('display_name')
+def organization_name_by_id(id):
+    return organization_name(organization_by_id(id))
 
-
-def show_element(x):
-    return x
-
-
-def benap_fluent_label(field_name, field_label, lang):
-    """
-    Return a label for the input label for the given language
-    """
-    schema = scheming_get_dataset_schema('dataset')
-    if schema:
-        field_metadata = [x for x in schema['dataset_fields'] if x['field_name'] == field_name]
-        if len(field_metadata) > 0:
-            return field_metadata[0]['label'][lang]
-
-    return field_label
 
 def convert_validation_list_to_JSON(data):
     """
@@ -319,31 +260,15 @@ def benap_get_organization_field_by_id(org_id, field_name):
     """
     Retrieve the specified field value from an organization's data based on the organization id.
     """
-    user = toolkit.get_action('get_site_user')(
-        {
-            'ignore_auth': True
-        },
-        {})
-    context = {'user': user['name']}
-    org_data = toolkit.get_action('organization_show')(context,
-                                                        {
-                                                            'id': org_id,
-                                                            'include_dataset_count': False,
-                                                            'include_users': False,
-                                                            'include_groups': False,
-                                                            'include_tags': False,
-                                                            'include_followers': False,
-                                                        })
-
-    field_value = org_data.get(field_name)
+    organization = organization_by_id(org_id)
+    field_value = organization.get(field_name)
     return field_value
 
 def benap_get_organization_field_by_specified_field(org_value, field_name, search_field):
     """
     Retrieve the specified field value from an organization's data based on a specified search field.
     """
-    from ckantoolkit import h
-    org_list = h.organizations_available('create_dataset')
+    org_list = organizations_available('create_dataset')
 
     org_data = next((org for org in org_list if org.get(search_field) == org_value), None)
 
@@ -374,7 +299,6 @@ def benap_retrieve_org_title_tel_email():
     Retrieves a list of organizations where the current user can create datasets,
     including only the organization's title, telephone number, and email.
     """
-    from ckantoolkit import h
     user = toolkit.get_action('get_site_user')(
         {
             'ignore_auth': True
@@ -443,7 +367,7 @@ def ckan_tag_to_transport_mode_concept_uri(tag_name):
     }
     return tag_mapping.get(tag_name)
 
-def scheming_parse_embedded_links(string_with_links):
+def parse_embedded_links(string_with_links):
     """
     Parse string text that contains links. Links should be added as `<a href="/your/link">link text</a>`.
     If the link start with `/`, it is considered as a relative link
@@ -485,7 +409,7 @@ def scheming_parse_embedded_links(string_with_links):
     return parts_list
 
 
-def transportdata_is_member_of_org(org_id, user_id):
+def is_member_of_org(org_id, user_id):
     if not user_id:
         return False
     try:

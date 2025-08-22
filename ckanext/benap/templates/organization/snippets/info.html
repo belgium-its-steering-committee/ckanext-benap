@@ -3,8 +3,7 @@
 {% block info %}
   <section id="organization-info" class="module module-narrow">
     <div class="module context-info">
-    {# Patch for incorrect nl translation #}
-    <h2 class="module-heading"><i class="fa fa-building"></i>{% if h.lang() == 'nl' %} Organisatie {% else %} {{ _('Organization') }} {% endif %}</h2>
+    <h2 class="module-heading"><i class="fa fa-building"></i>{{ _('Organization') }}</h2>
     <div class="module-content">
       {% block inner %}
       {% block image %}
@@ -22,7 +21,7 @@
       </h1>
       {% endblock %}
       {% block description %}
-        {% set description_translated = h.benap_field_translated_fallback(organization['description_translated']) %}
+        {% set description_translated = h.benap_lang_text(organization['description_translated']) %}
         {% if description_translated %}
           <p>
             {{ h.markdown_extract(description_translated, 180) }}
