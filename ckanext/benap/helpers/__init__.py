@@ -32,6 +32,25 @@ Taking the concept URI as an argument, and returning the localized label
     """
     return get_concept_label(concept_uri)
 
+def get_facet_name_label_function(facet_name):
+    facet_mapping = {
+        'regions_covered_uri': _c,
+        'mobility_theme_uri': _c,
+        'format_uri': _c,
+        'license_uri': _c,
+        'tags': ckan_tag_to_transport_mode_concept_label,
+    }
+    if facet_name in facet_mapping:
+        return facet_mapping[facet_name]
+
+def get_facet_label_function(facet_name):
+    fun = get_facet_name_label_function(facet_name)
+    if fun:
+        def fun_for_facet(_facet):
+            return fun(_facet['name'])
+        return fun_for_facet
+
+
 def ontology_helper(context):
     ontology = context.get("benap_helper_ontology", None)
     if ontology == "language":
@@ -147,15 +166,15 @@ def lang_text(translations, language = None, fallback = True):
     }
     If the chosen language is missing, it will fallback to other languages in order: en, nl, fr, de.
     This can be disabled by setting fallback to False.
-    
-    If no dict is passed, the function will return the result without any changes. 
+
+    If no dict is passed, the function will return the result without any changes.
     This is a useful default for fields that can be both just a string or a dict of translations.
     """
     translation = translations[language or lang()] or None
     if not translation and fallback:
         # TODO: this order could come from ckan.locale_order config key
         translation = translations['en'] or translations['nl'] or translations['fr'] or translations['de'] or None
-    return translation    
+    return translation
 
 # TODO: remove after replacing this with lang_text in fluent fork
 def scheming_language_text_fallback(field_data, language_data):
@@ -177,23 +196,6 @@ def format_datetime(datetime):
 # However note this is no trivial task: it is unclear for every usage if the fallback is desired or not.
 def scheming_language_text(field_data, language_data):
     return field_data[language_data]
-
-def get_translated_tag(tag, lang = None):
-    # TODO: needs more refactoring. Kept same behavior as legacy, but clarified its working
-    try:
-        transport_mode_concept_uri = ckan_tag_to_transport_mode_concept_uri(tag['name'])
-        transport_mode_label = get_concept_label(transport_mode_concept_uri, lang)
-        return transport_mode_label
-    except:
-        try:
-            return tag['display_name']
-        except KeyError:
-            try:
-                if isinstance(tag, str):
-                    return tag
-                print(('tag not found: ' + json.dumps(tag)))
-            except:
-                print('tag not found')
 
 
 def get_translated_tags():
@@ -233,7 +235,7 @@ def organization_by_id(id):
     })
     return organization
 
-def organization_name_by_id(id):    
+def organization_name_by_id(id):
     return organization_name(organization_by_id(id))
 
 
@@ -375,10 +377,10 @@ def parse_embedded_links(string_with_links):
     :return: list of parts with text and href information. If no links, will contain one (normal-text) part
     """
     parts_list = []
-    
+
     # match <a href='...'>link text</a>
     pattern = r'<a\s+href=["\']([^"\']+)["\'][^>]*>([^<]+)</a>'
-    
+
     last_link_match_end = 0
     for match in re.finditer(pattern, string_with_links):
         # text starting from end last link (or beginning) till before this link
@@ -386,7 +388,7 @@ def parse_embedded_links(string_with_links):
             "text": string_with_links[last_link_match_end:match.start()],
             "href": None
         })
-        
+
         # link itself
         href = match.group(1)
         link_text = match.group(2)
@@ -395,15 +397,15 @@ def parse_embedded_links(string_with_links):
             protocol, host = get_site_protocol_and_host()
             if protocol and host:
                 href = f"{protocol}://{host}/{lang()}{href}"
-        
+
         parts_list.append({ "text": link_text,"href": href })
-        
+
         last_link_match_end = match.end()
-    
+
     # text after last link
     if last_link_match_end < len(string_with_links):
         parts_list.append({ "text": string_with_links[last_link_match_end:], "href": None })
-    
+
     return parts_list
 
 
@@ -416,8 +418,14 @@ def is_member_of_org(org_id, user_id):
         })
 
         return any(
-            member_type == 'user' and member_id == user_id 
+            member_type == 'user' and member_id == user_id
             for member_id, member_type, _ in members
         )
     except NotAuthorized:
         return False
+
+
+def ckan_tag_to_transport_mode_concept_label(tag_name):
+    transport_mode_concept_uri = ckan_tag_to_transport_mode_concept_uri(tag_name)
+    transport_mode_label = _c(transport_mode_concept_uri)
+    return transport_mode_label

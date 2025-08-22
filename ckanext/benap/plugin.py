@@ -8,17 +8,18 @@ import json
 from flask import Blueprint
 
 from ckanext.benap.helpers import ontology_helper, organization_name, scheming_language_text_fallback, organisation_names_for_autocomplete, \
-    get_translated_tags, scheming_language_text, format_datetime, get_translated_tag, \
+    get_translated_tags, scheming_language_text, format_datetime, ckan_tag_to_transport_mode_concept_label,\
     parse_embedded_links, organization_name_by_id, lang_text, \
-    translate_organization_filter, convert_validation_list_to_JSON, benap_get_organization_field_by_id, \
+    translate_organization_filter, convert_validation_list_to_JSON, benap_get_organization_field_by_id,\
     benap_get_organization_field_by_specified_field, benap_retrieve_dict_items_or_keys_or_values, get_translated_category_and_sub_category, \
-    benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper, _c, is_member_of_org
+    benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper, _c, is_member_of_org, get_facet_label_function, get_facet_name_label_function
 
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.logic.validators import phone_number_validator, \
     countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin, \
     is_choice_null, contact_point_org_fields_consistency_check, \
     license_fields_conditional_validation, benap_tag_string_convert, fluent_tags_validator, category_sub_category_validator
+from ckanext.benap.helpers.concepts import get_concept_label
 
 from ckanext.benap.logic.auth.get import member_list, user_autocomplete, user_list
 from ckanext.benap.custom_group import CreateGroupView, EditGroupView
@@ -64,7 +65,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_organisation_names_for_autocomplete': organisation_names_for_autocomplete,
             'benap_lang_text': lang_text,
             'get_translated_tags': get_translated_tags,
-            'get_translated_tag': get_translated_tag,
+            'ckan_tag_to_transport_mode_concept_label': ckan_tag_to_transport_mode_concept_label,
             'benap_scheming_language_text': scheming_language_text,
             'format_datetime': format_datetime,
             'benap_organization_name': organization_name,
@@ -80,6 +81,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_tag_update_helper': benap_tag_update_helper,
             'benap_parse_embedded_links': parse_embedded_links,
             'benap_is_member_of_org': is_member_of_org,
+            'get_facet_name_label_function': get_facet_name_label_function,
+            'get_facet_label_function': get_facet_label_function,
         }
 
     # IValidators
@@ -112,15 +115,12 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     def dataset_facets(self, facets_dict, package_type):
         facets_dict = OrderedDict([
             ('nap_type', 'NAP Type'),
-            #TODO make new mobility theme (old its_dataset_type) work in filters
-            # (u'its_dataset_type', u'Dataset Type'),
             ('tags', 'Tags'),
-            #TODO make new regions_covered field values work in filters
-            # (u'regions_covered', u'Area covered by publication'),
+            ('regions_covered_uri', 'Area covered by publication'),
+            ('mobility_theme_uri', 'Mobility Theme'),
+            ('license_uri', 'License'),
+            ('format_uri', 'Format'),
             ('organization', 'Organizations'),
-            #TODO make new format and licenses fields work in filters
-            # (u'res_format', u'Formats'),
-            # (u'license_id', u'Licenses'),
         ])
         return facets_dict
 
@@ -157,17 +157,28 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
 
     # IPackageController
     def before_dataset_index(self, pkg_dict):
+        # TODO: Are some of these labels meant to be searchable? If so, consider multilang indexing?
+        # Currently only english labels are indexed
         if "regions_covered" in pkg_dict:
-            pkg_dict["regions_covered"] = json.loads(pkg_dict["regions_covered"])
+            pkg_dict["regions_covered_uri"] = json.loads(pkg_dict["regions_covered"])
+            pkg_dict["regions_covered_label"] = list(map(lambda uri: get_concept_label(uri, 'en'), json.loads(pkg_dict["regions_covered"])))
+        if "mobility_theme" in pkg_dict:
+            # 2 lvl concept scheme
+            mob_theme_dict = json.loads(pkg_dict["mobility_theme"])
+            mob_themes = []
+            for broader_theme_uri, narrower_themes in mob_theme_dict.items():
+                mob_themes.append(broader_theme_uri)
+                mob_themes = mob_themes + narrower_themes
+            pkg_dict["mobility_theme_uri"] = mob_themes
+            pkg_dict["mobility_theme_label"] = list(map(lambda uri: get_concept_label(uri, 'en'), mob_themes))
+        resources = json.loads(pkg_dict["data_dict"])["resources"]
+        if resources:
+            formats = [res.get("format") for res in resources if res.get("format")]
+            pkg_dict["format_uri"] = list(set(formats))  # uniquify
+            licenses = [res.get("license_type") for res in resources if res.get("license_type")]
+            pkg_dict["license_uri"] = list(set(licenses))  # uniquify
         if "nap_type" in pkg_dict:
             pkg_dict["nap_type"] = json.loads(pkg_dict["nap_type"])
-        if "its_dataset_type" in pkg_dict:
-            try:
-                ## only when validation is used in json schema is next fct needed
-                converted_list = convert_validation_list_to_JSON(pkg_dict["its_dataset_type"])
-                pkg_dict["its_dataset_type"] = json.loads(converted_list)
-            except Exception:
-                pkg_dict["its_dataset_type"] = json.loads(pkg_dict["its_dataset_type"])
 
         return pkg_dict
 
@@ -218,7 +229,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         })
 
         return pkg_dict
-    
+
     # IUploader
     def get_uploader(self, upload_to, old_filename):
         if upload_to == "group":

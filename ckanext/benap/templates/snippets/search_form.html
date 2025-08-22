@@ -4,12 +4,21 @@
   {% if facets %}
     <p class="filter-list">
       {% for field in facets.fields %}
-        {% set search_facets_items = facets.search.get(field)['items'] %}
         <span class="facet">{{ facets.titles.get(field) }}:</span>
         {% for value in facets.fields[field] %}
+          {# Same label_function logic as in snippets/facet_list.html
+              In facet_list it is part of stock ckan functionality. Here it is a custom addition #}
+          {% set label_function=h.get_facet_name_label_function(field) %}
+          {% set label = label_function(value) if label_function else value %}
+          {% set label_truncated = label|truncate(22) if not label_function else label %}
           <span class="filtered pill">
-              {{ value }}
-            <a href="{{ facets.remove_field(field, value) }}" class="remove" title="{{ _('Remove') }}"><i class="fa fa-times"></i></a>
+              {{ label_truncated }}
+            <a
+                href="{{ facets.remove_field(field, value) }}"
+                class="remove"
+                title="{{ _('Remove') }}">
+              <i class="fa fa-times"></i>
+            </a>
           </span>
         {% endfor %}
       {% endfor %}

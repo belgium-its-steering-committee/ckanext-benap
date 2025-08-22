@@ -19,7 +19,11 @@
             <h3 id="pop-tags">{{ _('Popular Tags') }}</h3>
 
             {% for tag in tags %}
-                <a class="rounded btn btn-light" href="{% url_for 'dataset.search', tags=tag.name %}">{{ h.get_translated_tag(tag) | truncate(22) }}</a>
+                <a
+                    class="rounded btn btn-light"
+                    href="{% url_for 'dataset.search', tags=tag.name %}">
+                    {{ h.ckan_tag_to_transport_mode_concept_label(tag.name) | truncate(22) }}
+                </a>
             {% endfor %}
         </div>
     </div>
