@@ -231,6 +231,7 @@ def organization_by_id(id):
         'include_tags': False,
         'include_followers': False,
     })
+    return organization
 
 def organization_name_by_id(id):    
     return organization_name(organization_by_id(id))
