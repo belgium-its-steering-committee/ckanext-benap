@@ -1,0 +1,5 @@
+{% set publisher_name_data = data.get(field.field_name, {}) %}
+
+{% if publisher_name_data is mapping %}
+    {{ publisher_name_data.get('publisher_firstname', '') }} {{ publisher_name_data.get('publisher_surname', '') }}
+{% endif %}

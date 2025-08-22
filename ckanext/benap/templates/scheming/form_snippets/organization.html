@@ -1,0 +1,40 @@
+{# This is specific to datasets' owner_org field and won't work #}
+{# if used with other fields #}
+
+{% import 'macros/form.html' as form %}
+
+{% macro organization_option_tag(organization, selected_org) %}
+  {% block organization_option scoped %}
+    <option value="{{ organization.id }}"{%
+      if selected_org %} selected="selected"{% endif
+      %}>{{ organization.display_name }}</option>
+  {% endblock %}
+{% endmacro %}
+
+  <div data-module="dataset-visibility">
+  {% snippet "scheming/form_snippets/_organization_select.html",
+    field=field,
+    data=data,
+    errors=errors,
+    organizations_available=h.organizations_available('create_dataset'),
+    org_required=not h.check_config_permission('create_unowned_dataset')
+      or h.scheming_field_required(field),
+    organization_option_tag=organization_option_tag %}
+  {% block package_metadata_fields_visibility %}
+    {% call form.select(
+      name='private',
+      id='field-private',
+      label=h.scheming_language_text(field.label_dataset_organization),
+      options=[
+        {'value': 'True', 'text': _('Private')},
+        {'value': 'False', 'text': _('Public')}
+      ],
+      selected=data.private or 'False',
+      error=errors.private,
+      classes=['control-medium']
+    ) %}
+      {%- snippet 'scheming/form_snippets/help_text.html', field=field, id="field_private" -%}
+    {% endcall %}
+  {% endblock %}
+
+  </div>

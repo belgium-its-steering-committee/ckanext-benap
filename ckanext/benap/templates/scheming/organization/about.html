@@ -1,0 +1,43 @@
+{% extends "organization/about.html" %}
+
+{% block primary_content_inner %}
+<h2> {{ c.group_dict['title'] }} </h2>
+<p> {{ h.render_markdown(h.benap_field_translated_fallback(c.group_dict['description_translated'])) }} </p>
+<br/>
+<dl>
+{% for f in c.scheming_fields if f.field_name not in ('title','description_translated','name', 'image_url') and f.display_snippet is not none %}
+    {% if f.field_name == 'address' %}
+        <dt>{{ h.scheming_language_text(f.label) }}:</dt>
+        <dd>
+            {{ c.group_dict['street_address'] }}<br>
+            {{ c.group_dict['postal_code'] }} {{ c.group_dict['city'] }}<br>
+            {{ c.group_dict['administrative_area'] }}<br>
+            {{ c.group_dict['country'] }}
+        </dd>
+    {% elif f.field_name == 'do_website' %}
+        <dt>{{ h.scheming_language_text(f.label) }}:</dt>
+        <dd><a href="{{ c.group_dict[f.field_name] or ('&nbsp;'|safe) }}" target="_blank">{{ c.group_dict[f.field_name] or ("&nbsp;"|safe) }}</a></dd>
+    {% elif f.field_name == 'do_email' %}
+        <dt>{{ h.scheming_language_text(f.label) }}:</dt>
+        <dd><a href="mailto:{{ c.group_dict[f.field_name] or ('&nbsp;'|safe) }}">{{ c.group_dict[f.field_name] or ("&nbsp;"|safe) }}</a></dd>
+    {% elif f.field_name in ('rtti_doc_document_upload', 'srti_doc_document_upload', 'sstp_doc_document_upload', 'proxy_pdf_url') %}
+        {% if h.check_access('organization_update', {'id': c.group_dict.id}) %}
+        <dt>{{ h.scheming_language_text(f.label) }}:</dt>
+        <dd>
+            <a href="{{ h.get_site_protocol_and_host()[0] }}://{{ h.get_site_protocol_and_host()[1] }}/uploads/organization/{{ c.group_dict['name'] }}/{{ c.group_dict[f.field_name] }}" target="_blank">
+            {{ c.group_dict[f.field_name] or ("&nbsp;"|safe) }}
+            </a>
+        </dd>
+        {% endif %}
+    {% elif f.field_name in ('agreement_declaration_mmtis', 'organization_agreement_declaration_nap', 'optional_comment') %}
+        {% if h.check_access('organization_update', {'id': c.group_dict.id}) %}
+            <dt>{{ h.scheming_language_text(f.label) }}:</dt>
+            <dd>{{ _('Signed') if c.group_dict[f.field_name] == ["Y"] else ("&nbsp;"|safe) }}</dd>
+        {% endif %}
+    {% else %}
+        <dt>{{ h.scheming_language_text(f.label) }}:</dt>
+        <dd>{{ c.group_dict[f.field_name] or ("&nbsp;"|safe) }}</dd>
+    {% endif %}
+{% endfor %}
+</dl>
+{% endblock %}

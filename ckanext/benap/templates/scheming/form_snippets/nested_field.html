@@ -1,0 +1,18 @@
+{% import 'macros/form.html' as form %}
+
+<fieldset style="border: 1px solid #ccc; padding: 20px; margin-bottom: 40px;">
+    <legend style="font-weight: bold; margin-bottom: -5px;">
+        <label style="display: inline-block; width: 120px;">
+            <span style="color: rgb(198,137,139);">*</span> {{ h.scheming_language_text(field.label) }}</label>
+            {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
+    </legend>
+    {%- set schema_fields = c.scheming_fields if c.scheming_fields else h.scheming_get_dataset_schema('dataset').dataset_fields -%}
+    {% for item in field.nested_fields %}
+        {% set matched_field = schema_fields | selectattr('field_name', 'equalto', item.field_name) | first %}
+        {% if matched_field %}
+            <div style="margin-bottom: -20px;">
+                {%- snippet 'scheming/form_snippets/' ~ item.form_snippet, field=matched_field, data=data, errors=errors -%}
+            </div>
+        {% endif %}
+    {% endfor %}
+</fieldset>

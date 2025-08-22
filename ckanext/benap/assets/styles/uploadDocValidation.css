@@ -1,0 +1,70 @@
+/* Copied from https://github.com/belgium-its-steering-committee/ckanext-scheming/tree/MobilityDCAT/root/ckanext/scheming/fanstatic */
+/*dif & js styles for doc/image upload validation error*/
+table.diff {
+    font-family: 'Courier New';
+    border: medium;
+}
+.diff_header{
+    background-color: #e0e0e0;
+}
+.td.diff_header{
+    text-align: right;
+}
+.diff_next{
+    background-color: #c0c0c0;;
+}
+.diff_add{
+    background-color: #aaffaa;
+}
+.diff_chg{
+    background-color: #ffff77;
+}
+.diff_sub{
+    background-color: #ffaaaa;
+}
+
+/*js scheming-doc_upload css*/
+.js .scheming-doc_upload #field-doc-url {
+padding-right: 90px;
+}
+.js .scheming-doc_upload #field-doc-upload {
+cursor: pointer;
+position: absolute;
+z-index: 1;
+filter: alpha(opacity=0);
+opacity: 0;
+}
+.js .scheming-doc_upload .controls {
+position: relative;
+}
+.js .scheming-doc_upload .btn {
+position: relative;
+top: 0;
+margin-right: 10px;
+}
+.js .scheming-doc_upload .btn.hover {
+color: #333333;
+text-decoration: none;
+background-position: 0 -15px;
+-webkit-transition: background-position 0.1s linear;
+-o-transition: background-position 0.1s linear;
+transition: background-position 0.1s linear;
+}
+.js .scheming-doc_upload .btn-remove-url {
+position: absolute;
+margin-right: 0;
+top: 6px;
+right: 5px;
+padding: 0 12px;
+border-radius: 100px;
+}
+
+.js .scheming-doc_upload .btn-remove-url .icon-remove {
+margin-right: 0;
+}
+
+.js .scheming-doc_upload .error-inline {
+    margin-top: 5px;
+    margin-left: 2px;
+    font-weight: bold;
+}

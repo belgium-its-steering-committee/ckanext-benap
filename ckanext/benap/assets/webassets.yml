@@ -13,3 +13,26 @@ benap-css:
   contents:
     - styles/main.css
     - styles/nap_checked_pill_style.css
+
+transportdata-js:
+  filter: rjsmin
+  output: ckanext-transportdata/%(version)s-transportdata.js
+  contents:
+    - js/transportdata.js
+    - js/scheming-doc_upload.js
+    - js/scheming-logo_upload.js
+    - js/scheming-proxy_upload.js
+    - js/scheming-upload.js
+  extra:
+    preload:
+      - base/main
+
+transportdata-css:
+  filter: cssrewrite
+  output: ckanext-transportdata/%(version)s-transportdata.css
+  contents:
+    - styles/main-transportdata.css
+    - styles/uploadDocValidation.css
+    - styles/uploadLogoValidation.css
+    - styles/uploadProxyValidation.css
+

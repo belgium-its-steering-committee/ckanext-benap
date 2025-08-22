@@ -1,0 +1,16 @@
+{#
+    Renders a string with links as `<a href="/your/link"></a>`
+    If the link start with `/`, it is considered as a relative link
+    and will automatically get prefixed with the correct language code. (e.g. `/pages/your-page` becomes `/en/pages/your-page`)
+    if not, the link is kept as is.
+    #}
+{% macro render_string_with_links(text_content) %}
+    {%- set parts = h.scheming_parse_embedded_links(text_content) -%}
+    {%- for part in parts -%}
+        {%- if part.href -%}
+            <a target="_blank" href="{{ part.href }}" style="color: #1c71bf;font-style: italic;">{{ part.text }}</a>
+        {%- else -%}
+            {{ part.text }}
+        {%- endif -%}
+    {%- endfor -%}
+{% endmacro %} 

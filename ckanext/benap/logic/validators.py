@@ -258,3 +258,15 @@ def benap_tag_string_convert(key, flattened_data, errors, context):
         if not tagname_match.match(tag):
             raise Invalid(_('Tag "%s" must be alphanumeric '
                             'characters or symbols: -_.') % (value))
+
+def logo_extensions(value):
+    if value and len(value) > 0:
+        if not value.endswith(('jpeg', 'JPEG', 'jpg','JPG','bmp','BMP', "PNG", "png")):
+            raise toolkit.Invalid(toolkit._('Only supported image formats are allowed: jpeg, jpg, bmp, png'))
+    return value
+
+def doc_validator(value):
+    if value and len(value) > 0:
+        if not value.endswith(('pdf', 'PDF')):
+            raise toolkit.Invalid(toolkit._('Only PDF is allowed').format(url=value))
+    return value

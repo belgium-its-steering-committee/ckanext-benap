@@ -1,0 +1,89 @@
+{% import 'macros/form.html' as form %}
+
+{#
+Adjusted organisation_logo_uploader that uses the standard CKAN image upload process.
+Two attributes need to be linked to the CKAN attributes:
+//benap_schema_organisation.json needs:
+- upload_field: image_upload --> this is where the file is attached to the datadict
+//macro function:
+- field_url='image_url' --> this is where the html <img scr/> is linked to the path
+#}
+
+{% macro logo_upload(
+    data,
+    errors,
+    field_url='image_url',
+    field_upload='image_upload',
+    field_clear='clear_upload',
+    is_url_logo=false,
+    is_upload_logo=true,
+    is_upload_logo_enabled=true,
+    field_label='logo_label',
+    field_name="logo_name",
+    previous_upload=false
+    )
+%}
+
+{% set previous_upload = data['previous_upload'] %}
+{% set is_upload_logo_enabled=true %}
+{% set type = '' %}
+
+
+{% if is_upload_logo_enabled %}
+<div class="scheming-organisation_upload_logo"
+    data-module="scheming-logo_upload"
+    data-module-is_url_logo="{{ 'true' if is_url_logo else 'false' }}"
+    data-module-is_upload_logo="{{ 'true' if is_upload_logo else 'false'  }}"
+    data-module-field_upload="{{ field_upload }}"
+    data-module-field_url="{{ field_url }}"
+    data-module-field_clear="{{ field_clear }}"
+    data-module-upload_label="{{ field_label }}"
+    data-module-field_name="{{ field_name }}"
+    data-module-previous_upload="{{ 'true' if previous_upload else 'false' }}"
+    >
+{% endif %}
+
+
+{{ form.input(field_url, label=field_label, id="field-logo-file", type=type, value=data.get(field_url), error=errors.get(field_url), classes=['control-full'])  }}
+
+{% if is_upload_logo_enabled%}
+    {{ form.input(field_upload, label=field_label, id="field-logo-upload", type="file", value='', error=errors.get(field_url), classes=['control-full'])}}
+    
+    {%if is_upload_logo%}
+        {{ form.checkbox(field_clear, label=_('Clear Upload'), id="field-clear-upload-logo", value="true", classes=['control-full'])}}
+    {%endif%}
+{%endif%}
+
+{% if is_upload_logo_enabled %}
+</div>
+{%endif%}
+
+{% endmacro %}
+
+{% if ('image_url' in data)%}
+    {% if ((request.path == '/organization/new') and (errors == {})) or (request.path != '/organization/new') %}
+        {%- set is_upload_logo = (data.image_url != ' ') -%}
+    {%else %}
+        {%-set is_upload_logo = false -%}
+    {% endif %}
+{%endif%}
+
+
+
+{{ logo_upload(
+    data,
+    errors,
+    field_url=field.field_name,
+    field_upload=field.upload_field,
+    field_name=field.field_name,
+    field_clear=field.upload_clear,
+    is_upload_logo_enabled=h.uploads_enabled(),
+    is_upload_logo=is_upload_logo,
+    field_label=h.scheming_language_text(field.label),
+    previous_upload=previous_upload
+)
+}}
+<div style="margin-top:-25px;margin-bottom:30px;">
+{{ form.required_message() }}
+{%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
+</div>
