@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-21 10:49+0000\n"
+"POT-Creation-Date: 2025-08-22 13:44+0000\n"
 "PO-Revision-Date: 2019-09-20 17:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -19,6 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
+#. nl, fr, de
 #: ckanext/benap/assets/js/scheming-doc_upload.js:78
 #: ckanext/benap/assets/js/scheming-logo_upload.js:72
 #: ckanext/benap/assets/js/scheming-proxy_upload.js:72
@@ -505,19 +506,19 @@ msgstr "e.g. car sharing, train, bike hire,…"
 msgid "Popular Tags"
 msgstr "Popular Tags"
 
-#: ckanext/benap/templates/home/snippets/search.html:27
+#: ckanext/benap/templates/home/snippets/search.html:31
 msgid "ADD NEW DATA"
 msgstr "Add datasets and services"
 
-#: ckanext/benap/templates/home/snippets/search.html:29
+#: ckanext/benap/templates/home/snippets/search.html:33
 msgid "Data providers can easily add data to the catalogue."
 msgstr "Data providers can easily register datasets and services on the NAP ITS."
 
-#: ckanext/benap/templates/home/snippets/search.html:31
+#: ckanext/benap/templates/home/snippets/search.html:35
 msgid "Add Data"
 msgstr "Add Data"
 
-#: ckanext/benap/templates/package/search.html:11
+#: ckanext/benap/templates/package/search.html:17
 msgid "close"
 msgstr ""
 
@@ -551,7 +552,7 @@ msgstr ""
 msgid "Signed"
 msgstr ""
 
-#: ckanext/benap/templates/scheming/package/read.html:14
+#: ckanext/benap/templates/scheming/package/read.html:13
 #: ckanext/benap/templates/scheming/package/snippets/package_form.html:15
 #: ckanext/benap/templates/scheming/package/snippets/resource_form.html:15
 msgid ""
@@ -559,7 +560,7 @@ msgid ""
 "    might not be compatible with ckanext-scheming"
 msgstr ""
 
-#: ckanext/benap/templates/scheming/package/read.html:34
+#: ckanext/benap/templates/scheming/package/read.html:33
 msgid "Transportation modes covered"
 msgstr "Transportation modes covered"
 
@@ -577,7 +578,7 @@ msgctxt "Status"
 msgid "State"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:6
+#: ckanext/benap/templates/snippets/facet_list.html:5
 msgid "Transportation modes"
 msgstr ""
 
@@ -647,60 +648,17 @@ msgstr ""
 msgid "Sysadmin settings"
 msgstr "Sysadmin settings"
 
-msgid "Admin"
-msgstr "Admin"
-
-msgid "View profile"
-msgstr "View profile"
-
-#, python-format
-msgid "Dashboard (%(num)d new item)"
-msgid_plural "Dashboard (%(num)d new items)"
-msgstr[0] "Dashboard (%(num)d new item)"
-msgstr[1] "Dashboard (%(num)d new items)"
-
-msgid "Dashboard"
-msgstr "Dashboard"
-
-msgid "Settings"
-msgstr "Settings"
-
-msgid "Log out"
-msgstr "Log out"
-
-msgid "Organizations"
-msgstr "Organizations"
-
-msgid "Groups"
-msgstr "Groups"
-
-msgid "Search"
-msgstr "Search"
-
-msgid "Search datasets..."
+#. fr, nl
+msgid "<p class=\"extra\">Please try another search.</p>"
 msgstr ""
 
-msgid "Name Ascending"
-msgstr "Name Ascending"
-
-msgid "Name Descending"
-msgstr "Name Descending"
-
-msgid "Order by"
-msgstr "Order by"
-
-#: ckan/templates/snippets/search_form.html:83
-msgid " <p class=\"extra\">Please try another search.</p> "
-msgstr ""
-
+#. fr, nl, de
 msgid ""
-" <p id=\"search-error\"><strong>There was an error while "
-"searching.</strong> Please try again.</p> "
+"<p id=\"search-error\"><strong>There was an error while "
+"searching.</strong> Please try again.</p>"
 msgstr ""
 
-msgid "Activity from items that I'm following"
-msgstr "Activity from items that I'm following"
-
+#. fr, nl, de, en - remove first sentence
 msgid ""
 "The <i>data license</i> you select above only applies to the contents of "
 "any resource files that you add to this dataset. By submitting this form,"
@@ -714,276 +672,198 @@ msgstr ""
 "href=\"http://opendatacommons.org/licenses/odbl/1-0/\">Open Database "
 "License</a>."
 
+#. nl
+msgid "Edit"
+msgstr ""
+
+#. nl, fr
+msgid "Admin"
+msgstr ""
+
+#. nl, fr
+msgid "View profile"
+msgstr ""
+
+#. de
+msgid "Dashboard"
+msgstr ""
+
+msgid "Settings"
+msgstr "Settings"
+
+#. de
+msgid "Log out"
+msgstr ""
+
+#. en, fr
+msgid "Organizations"
+msgstr "Organizations"
+
+#. fr
+msgid "Search"
+msgstr ""
+
+#. nl, fr, de
+msgid "Search datasets..."
+msgstr ""
+
+#. nl, de
+msgid "Name Ascending"
+msgstr ""
+
+#. nl, de
+msgid "Name Descending"
+msgstr ""
+
+#. nl, fr
+msgid "Order by"
+msgstr ""
+
+#. nl, fr, de
+msgid "Activity from items that I'm following"
+msgstr ""
+
+#. nl, fr, de
 msgid "Why Sign Up?"
-msgstr "Why Sign Up?"
+msgstr ""
 
+#. nl, fr, de
 msgid "Register for an Account"
-msgstr "Register for an Account"
+msgstr ""
 
+#. nl, fr, de
 msgid "News feed"
-msgstr "News feed"
+msgstr ""
 
+#. fr, de
 msgid "Go"
-msgstr "Go"
+msgstr ""
 
+#. nl, fr, de
 msgid "There are no {facet_type} that match this search"
 msgstr ""
 
+#. nl, fr, de
 msgid "Show Only Popular {facet_type}"
 msgstr ""
 
+#. fr, de
 msgid "Show More {facet_type}"
 msgstr ""
 
+#. nl, de
 msgid "Draft"
-msgstr "Draft"
+msgstr ""
 
+#. nl, en, fr, de
 #, fuzzy
 msgid "View {organization_name}"
 msgstr "Organizations"
 
+#. fr, de
 #, fuzzy
 msgid "0 Datasets"
 msgstr "0 Datasets"
 
-msgid "{num} Dataset"
-msgid_plural "{num} Datasets"
-msgstr[0] "{num} Dataset"
-msgstr[1] "{num} Datasets"
-
+#. de
 msgid "Deleted"
-msgstr "Deleted"
+msgstr ""
 
+#. fr, de
 msgid "About"
-msgstr "About"
+msgstr ""
 
+#. nl, fr, de
 msgid "E.g. environment"
-msgstr "E.g. environment"
+msgstr ""
 
+#. de
 msgid "Type"
-msgstr "Type"
+msgstr ""
 
+#. de
 msgid "Welcome"
-msgstr "Welcome"
+msgstr ""
 
+#. fr, de
 msgid "CKAN API"
-msgstr "CKAN API"
+msgstr ""
 
+#. nl, en, fr
 #, fuzzy
 msgid "Registration"
 msgstr "Organizations"
 
+#. nl, fr
 msgid "Register"
-msgstr "Register"
+msgstr ""
 
+#. nl, fr, de
 msgid "Forgot your password?"
-msgstr "Forgot your password?"
+msgstr ""
 
+#. nl
 msgid "No problem, use our password recovery form to reset it."
-msgstr "No problem, use our password recovery form to reset it."
+msgstr ""
 
+#. fr
 msgid "Forgotten your password?"
-msgstr "Forgotten your password?"
+msgstr ""
 
-msgid "Create an Account"
-msgstr "Create an Account"
-
+#. nl
 msgid "Then sign right up, it only takes a minute."
-msgstr "Then sign right up, it only takes a minute."
+msgstr ""
 
+#. nl, fr
 msgid "Need an Account?"
-msgstr "Need an Account?"
+msgstr ""
 
+#. en, de
 #, fuzzy
 msgid "My Organizations"
 msgstr "Organizations"
 
+#. en, de
 #, fuzzy
 msgid "My Datasets"
 msgstr "Datasets"
 
+#. nl, fr
 msgid "Filter Results"
 msgstr ""
 
-msgid "Language"
-msgstr "Language"
-
+#. fr
 msgid "What's a resource?"
-msgstr "What's a resource?"
-
-msgid "Filters"
 msgstr ""
 
+#. de
 msgid "Log in"
-msgstr "Log in"
-
-msgid "Remove"
 msgstr ""
 
+#. en
 msgid "UK Open Government Licence (OGL)"
 msgstr "UK Open Government License (OGL)"
 
-msgid "Unauthorized to create a group"
-msgstr ""
-
-msgid "Integrity Error"
-msgstr ""
-
-msgid "Group not found"
-msgstr ""
-
-msgid "Link"
-msgstr ""
-
+#. nl, fr, de
 msgid "Link to a URL on the internet (you can also link to an API)"
 msgstr ""
 
+#. nl, fr
 msgid "Upload"
 msgstr ""
 
-msgid "Image"
-msgstr ""
-
+#. nl, de
 msgid "Upload a file on your computer"
 msgstr ""
 
-msgid "URL"
-msgstr ""
-
-msgid "File"
-msgstr ""
-
-#, python-format
-msgid "Tag \"%s\" length is less than minimum %s"
-msgstr ""
-
-#, python-format
-msgid "Tag \"%s\" length is more than maximum %i"
-msgstr ""
-
-msgid "Datasets"
-msgstr "Datasets"
-
-msgid "Members"
-msgstr ""
-
+#. nl
 msgid "Organization"
 msgstr ""
 
-msgid "read more"
-msgstr ""
-
-msgid "There is no description for this organization"
-msgstr ""
-
-msgid "Followers"
-msgstr ""
-
+#. nl, fr
 msgid "Private"
-msgstr "Private"
-
-msgid "New view"
 msgstr ""
 
-msgid "Unfollow"
-msgstr ""
-
-msgid "Follow"
-msgstr ""
-
-msgid "Format"
-msgstr ""
-
-msgid "Explore"
-msgstr ""
-
-msgid "Preview"
-msgstr ""
-
-msgid "More information"
-msgstr ""
-
-msgid "Download"
-msgstr ""
-
-msgid "Go to resource"
-msgstr ""
-
-msgid "Edit resource"
-msgstr ""
-
-msgid "Views"
-msgstr ""
-
-msgid "Clear Upload"
-msgstr ""
-
-msgid "Public"
-msgstr ""
-
-msgid "http://example.com/my-image.jpg"
-msgstr ""
-
-msgid "Image URL"
-msgstr ""
-
-msgid "Additional Information"
-msgstr ""
-
-msgid "Field"
-msgstr ""
-
-msgid "Value"
-msgstr ""
-
-msgid "Last updated"
-msgstr ""
-
-msgid "unknown"
-msgstr ""
-
-msgid "Created"
-msgstr ""
-
-msgid "State"
-msgstr ""
-
+#. nl, fr, de
 msgid "The form contains invalid entries:"
 msgstr ""
-
-msgid "No License Provided"
-msgstr ""
-
-msgid "License"
-msgstr ""
-
-msgid "This dataset satisfies the Open Definition."
-msgstr ""
-
-msgid "You haven't created any datasets."
-msgstr ""
-
-msgid "Create one now?"
-msgstr ""
-
-msgid "Open ID"
-msgstr ""
-
-msgid "Username"
-msgstr ""
-
-msgid "Email"
-msgstr ""
-
-msgid "This means only you can see this"
-msgstr ""
-
-msgid "Member Since"
-msgstr ""
-
-msgid "Visibility"
-msgstr ""
-
-msgid "Edit"
-msgstr ""
-

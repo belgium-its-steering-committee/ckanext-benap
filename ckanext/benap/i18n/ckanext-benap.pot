@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: ckanext-benap 2.0.4\n"
+"Project-Id-Version: ckanext-benap 4.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-21 10:49+0000\n"
+"POT-Creation-Date: 2025-08-22 13:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgstr ""
 #: ckanext/benap/assets/js/scheming-doc_upload.js:82
 #: ckanext/benap/assets/js/scheming-logo_upload.js:76
 #: ckanext/benap/assets/js/scheming-proxy_upload.js:76
-#: ckanext/benap/templates/snippets/search_form.html:12
+#: ckanext/benap/templates/snippets/search_form.html:19
 msgid "Remove"
 msgstr ""
 
@@ -535,19 +535,19 @@ msgstr ""
 msgid "Popular Tags"
 msgstr ""
 
-#: ckanext/benap/templates/home/snippets/search.html:27
+#: ckanext/benap/templates/home/snippets/search.html:31
 msgid "ADD NEW DATA"
 msgstr ""
 
-#: ckanext/benap/templates/home/snippets/search.html:29
+#: ckanext/benap/templates/home/snippets/search.html:33
 msgid "Data providers can easily add data to the catalogue."
 msgstr ""
 
-#: ckanext/benap/templates/home/snippets/search.html:31
+#: ckanext/benap/templates/home/snippets/search.html:35
 msgid "Add Data"
 msgstr ""
 
-#: ckanext/benap/templates/home/snippets/search.html:33
+#: ckanext/benap/templates/home/snippets/search.html:37
 msgid "Log in"
 msgstr ""
 
@@ -570,7 +570,7 @@ msgid "Organization"
 msgstr ""
 
 #: ckanext/benap/templates/organization/snippets/info.html:19
-#: ckanext/benap/templates/package/read.html:21
+#: ckanext/benap/templates/package/read.html:20
 msgid "Deleted"
 msgstr ""
 
@@ -601,13 +601,13 @@ msgstr ""
 msgid "View {organization_name}"
 msgstr ""
 
-#: ckanext/benap/templates/package/read.html:8
+#: ckanext/benap/templates/package/read.html:7
 #: ckanext/benap/templates/scheming/form_snippets/organization.html:29
 #: ckanext/benap/templates/user/snippets/info.html:16
 msgid "Private"
 msgstr ""
 
-#: ckanext/benap/templates/package/read.html:18
+#: ckanext/benap/templates/package/read.html:17
 msgid "Draft"
 msgstr ""
 
@@ -619,7 +619,7 @@ msgstr ""
 msgid "Filters"
 msgstr ""
 
-#: ckanext/benap/templates/package/search.html:11
+#: ckanext/benap/templates/package/search.html:17
 msgid "close"
 msgstr ""
 
@@ -709,7 +709,7 @@ msgstr ""
 msgid "Signed"
 msgstr ""
 
-#: ckanext/benap/templates/scheming/package/read.html:14
+#: ckanext/benap/templates/scheming/package/read.html:13
 #: ckanext/benap/templates/scheming/package/snippets/package_form.html:15
 #: ckanext/benap/templates/scheming/package/snippets/resource_form.html:15
 msgid ""
@@ -717,7 +717,7 @@ msgid ""
 "    might not be compatible with ckanext-scheming"
 msgstr ""
 
-#: ckanext/benap/templates/scheming/package/read.html:34
+#: ckanext/benap/templates/scheming/package/read.html:33
 msgid "Transportation modes covered"
 msgstr ""
 
@@ -764,19 +764,19 @@ msgstr ""
 msgid "The form contains invalid entries:"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:6
+#: ckanext/benap/templates/snippets/facet_list.html:5
 msgid "Transportation modes"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:50
+#: ckanext/benap/templates/snippets/facet_list.html:40
 msgid "Show More {facet_type}"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:53
+#: ckanext/benap/templates/snippets/facet_list.html:43
 msgid "Show Only Popular {facet_type}"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:57
+#: ckanext/benap/templates/snippets/facet_list.html:47
 msgid "There are no {facet_type} that match this search"
 msgstr ""
 
@@ -804,7 +804,7 @@ msgstr ""
 msgid "This dataset has no description"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/search_form.html:17
+#: ckanext/benap/templates/snippets/search_form.html:26
 msgid "Filter Results"
 msgstr ""
 
