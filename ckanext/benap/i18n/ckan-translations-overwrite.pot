@@ -16,351 +16,232 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-### Usage ###
+# ## Usage ###
 # Translations template for overwriting translation in the ckan sourcecode
 # Can also be used to overwrite translations of other plugins in the same way.
 # Sometimes a translation only needs overwriting in one language.
-# Add a comment (via #.) to make this clear. This comment will appear in
-# every .po file. e.g. "only NL, FR". Any translations kept empty will get
-# the ckan translation
+# Add a comment (via #) starting with a space and then the languages (comma-separated)
+# that should be translated. 
+# example:
+# `# fr,nl,de`
 
 #. -------- Translations specific to ckan source --------
+
+# fr,nl,de,en
 msgid "Sysadmin settings"
 msgstr ""
 
-#. fr, nl
+# fr,nl
 msgid "<p class=\"extra\">Please try another search.</p>"
 msgstr ""
 
-#. fr, nl, de
-msgid "<p id=\"search-error\"><strong>There was an error while "
-"searching.</strong> Please try again.</p>"
+# fr,nl,de
+msgid ""
+"<p id=\"search-error\"><strong>There was an error while searching.</strong> "
+"Please try again.</p>"
 msgstr ""
 
-#. fr, nl, de, en - remove first sentence
+# fr,nl,de,en - remove first sentence
 msgid ""
-"The <i>data license</i> you select above"
-" only applies to the contents of "
-"any resource files that you add to"
-" this dataset. By submitting this "
-"form, you agree to release the "
-"<i>metadata</i> values that you enter "
-"into the form under the <a "
-"href=\"http://opendatacommons.org/licenses/odbl/1-0/\">Open "
+"The <i>data license</i> you select above only applies to the contents of any "
+"resource files that you add to this dataset. By submitting this form, you "
+"agree to release the <i>metadata</i> values that you enter into the form "
+"under the <a href=\"http://opendatacommons.org/licenses/odbl/1-0/\">Open "
 "Database License</a>."
 msgstr ""
 
-#. nl, fr, de
+# nl,fr,de
 msgid "Please select the file to upload again"
 msgstr ""
 
-#. nl
+# nl
 msgid "Edit"
 msgstr ""
 
-#. nl, fr
+# nl,fr
 msgid "Admin"
 msgstr ""
 
-#. nl, fr
+# nl,fr
 msgid "View profile"
 msgstr ""
 
-#. de
+# de
 msgid "Dashboard"
 msgstr ""
 
 msgid "Settings"
 msgstr ""
 
-#. de
+# de
 msgid "Log out"
 msgstr ""
 
-#. en, fr
+# en,fr
 msgid "Organizations"
 msgstr ""
 
-#. fr
+# fr
 msgid "Search"
 msgstr ""
 
-#. nl, fr, de
+# nl,fr,de
 msgid "Search datasets..."
 msgstr ""
 
-#. nl, de
+# nl,de
 msgid "Name Ascending"
 msgstr ""
 
-#. nl, de
+# nl,de
 msgid "Name Descending"
 msgstr ""
 
-#. nl, fr
+# nl,fr
 msgid "Order by"
 msgstr ""
 
-#. nl, fr, de
+# nl,fr,de
 msgid "Activity from items that I'm following"
 msgstr ""
 
-#. nl, fr, de
+# nl,fr,de
 msgid "Why Sign Up?"
 msgstr ""
 
-#. nl, fr, de
+# nl,fr,de
 msgid "Register for an Account"
 msgstr ""
 
-#. nl, fr, de
+# nl,fr,de
 msgid "News feed"
 msgstr ""
 
-#. fr, de
+# fr,de
 msgid "Go"
 msgstr ""
 
-#. nl, fr, de
+# nl,fr,de
 msgid "There are no {facet_type} that match this search"
 msgstr ""
 
-#. nl, fr, de
+# nl,fr,de
 msgid "Show Only Popular {facet_type}"
 msgstr ""
 
-#. fr, de
+# fr,de
 msgid "Show More {facet_type}"
 msgstr ""
 
-#. nl, de
+# nl,de
 msgid "Draft"
 msgstr ""
 
-#. nl, en, fr, de
+# nl,en,fr,de
 msgid "View {organization_name}"
 msgstr ""
 
-#. fr, de
+# fr,de
 msgid "0 Datasets"
 msgstr ""
 
-#. de
+# de
 msgid "Deleted"
 msgstr ""
 
-#. fr, de
+# fr,de
 msgid "About"
 msgstr ""
 
-#. nl, fr, de
+# nl,fr,de
 msgid "E.g. environment"
 msgstr ""
 
-#. de
+# de
 msgid "Type"
 msgstr ""
 
-#. de
+# de
 msgid "Welcome"
 msgstr ""
 
-#. fr, de
+# fr,de
 msgid "CKAN API"
 msgstr ""
 
-#. nl, en, fr
+# nl,en,fr
 msgid "Registration"
 msgstr ""
 
-#. nl, fr
+# nl,fr
 msgid "Register"
 msgstr ""
 
-#. nl, fr, de
+# nl,fr,de
 msgid "Forgot your password?"
 msgstr ""
 
-#. nl
+# nl
 msgid "No problem, use our password recovery form to reset it."
 msgstr ""
 
-#. fr
+# fr
 msgid "Forgotten your password?"
 msgstr ""
 
-#. nl
+# nl
 msgid "Then sign right up, it only takes a minute."
 msgstr ""
 
-#. nl, fr
+# nl,fr
 msgid "Need an Account?"
 msgstr ""
 
-#. en, de
+# en,de
 msgid "My Organizations"
 msgstr ""
 
-#. en, de
+# en,de
 msgid "My Datasets"
 msgstr ""
 
-#. nl, fr
+# nl,fr
 msgid "Filter Results"
 msgstr ""
 
-#. fr
+# fr
 msgid "What's a resource?"
 msgstr ""
 
-#. de
+# de
 msgid "Log in"
 msgstr ""
 
-#. en
+# en
 msgid "UK Open Government Licence (OGL)"
 msgstr ""
 
-#. nl, fr, de
+# nl,fr,de
 msgid "Link to a URL on the internet (you can also link to an API)"
 msgstr ""
 
-#. nl, fr
+# nl,fr
 msgid "Upload"
 msgstr ""
 
-#. nl, de
+# nl,de
 msgid "Upload a file on your computer"
 msgstr ""
 
-#. fr, de
-msgid "CKAN API"
-msgstr ""
-
-#. de
-msgid "Welcome"
-msgstr ""
-
-#. de
-msgid "Type"
-msgstr ""
-
-#. nl, fr, de
-msgid "E.g. environment"
-msgstr ""
-
-#. de
-msgid "Log in"
-msgstr ""
-
-#. fr, de
-msgid "About"
-msgstr ""
-
-#. nl
+# nl
 msgid "Organization"
 msgstr ""
 
-#. de
-msgid "Deleted"
-msgstr ""
-
-#. fr, de
-msgid "0 Datasets"
-msgstr ""
-
-#. nl, en, fr, de
-msgid "View {organization_name}"
-msgstr ""
-
-#. nl, fr
+# nl,fr
 msgid "Private"
 msgstr ""
 
-#. nl, de
-msgid "Draft"
-msgstr ""
-
-#. fr
-msgid "What's a resource?"
-msgstr ""
-
-#. nl, fr, de
+# nl,fr,de
 msgid "The form contains invalid entries:"
 msgstr ""
 
-#. fr, de
-msgid "Show More {facet_type}"
-msgstr ""
-
-#. nl, fr, de
-msgid "Show Only Popular {facet_type}"
-msgstr ""
-
-#. nl, fr, de
-msgid "There are no {facet_type} that match this search"
-msgstr ""
-
-#. fr, de
-msgid "Go"
-msgstr ""
-
-#. nl, fr
-msgid "Filter Results"
-msgstr ""
-
-#. nl, fr, de
-msgid "News feed"
-msgstr ""
-
-#. en, de
-msgid "My Datasets"
-msgstr ""
-
-#. en, de
-msgid "My Organizations"
-msgstr ""
-
-#. nl, fr
-msgid "Need an Account?"
-msgstr ""
-
-#. nl
-msgid "Then sign right up, it only takes a minute."
-msgstr ""
-
-#. fr
-msgid "Forgotten your password?"
-msgstr ""
-
-#. nl
-msgid "No problem, use our password recovery form to reset it."
-msgstr ""
-
-#. nl, fr, de
-msgid "Forgot your password?"
-msgstr ""
-
-#. nl, fr
-msgid "Register"
-msgstr ""
-
-#. nl, en, fr
-msgid "Registration"
-msgstr ""
-
-#. nl, fr, de
-msgid "Register for an Account"
-msgstr ""
-
-#. nl, fr, de
-msgid "Why Sign Up?"
-msgstr ""
-
-#. nl, fr
-msgid "Upload"
-msgstr ""
-
-#. nl, de
-msgid "Upload a file on your computer"
-msgstr ""

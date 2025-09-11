@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-22 13:44+0000\n"
+"POT-Creation-Date: 2025-09-11 16:20+0000\n"
 "PO-Revision-Date: 2019-09-20 17:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -19,7 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#. nl, fr, de
 #: ckanext/benap/assets/js/scheming-doc_upload.js:78
 #: ckanext/benap/assets/js/scheming-logo_upload.js:72
 #: ckanext/benap/assets/js/scheming-proxy_upload.js:72
@@ -648,17 +647,6 @@ msgstr ""
 msgid "Sysadmin settings"
 msgstr "Sysadmin settings"
 
-#. fr, nl
-msgid "<p class=\"extra\">Please try another search.</p>"
-msgstr ""
-
-#. fr, nl, de
-msgid ""
-"<p id=\"search-error\"><strong>There was an error while "
-"searching.</strong> Please try again.</p>"
-msgstr ""
-
-#. fr, nl, de, en - remove first sentence
 msgid ""
 "The <i>data license</i> you select above only applies to the contents of "
 "any resource files that you add to this dataset. By submitting this form,"
@@ -672,198 +660,25 @@ msgstr ""
 "href=\"http://opendatacommons.org/licenses/odbl/1-0/\">Open Database "
 "License</a>."
 
-#. nl
-msgid "Edit"
-msgstr ""
-
-#. nl, fr
-msgid "Admin"
-msgstr ""
-
-#. nl, fr
-msgid "View profile"
-msgstr ""
-
-#. de
-msgid "Dashboard"
-msgstr ""
-
-msgid "Settings"
-msgstr "Settings"
-
-#. de
-msgid "Log out"
-msgstr ""
-
-#. en, fr
 msgid "Organizations"
 msgstr "Organizations"
 
-#. fr
-msgid "Search"
-msgstr ""
-
-#. nl, fr, de
-msgid "Search datasets..."
-msgstr ""
-
-#. nl, de
-msgid "Name Ascending"
-msgstr ""
-
-#. nl, de
-msgid "Name Descending"
-msgstr ""
-
-#. nl, fr
-msgid "Order by"
-msgstr ""
-
-#. nl, fr, de
-msgid "Activity from items that I'm following"
-msgstr ""
-
-#. nl, fr, de
-msgid "Why Sign Up?"
-msgstr ""
-
-#. nl, fr, de
-msgid "Register for an Account"
-msgstr ""
-
-#. nl, fr, de
-msgid "News feed"
-msgstr ""
-
-#. fr, de
-msgid "Go"
-msgstr ""
-
-#. nl, fr, de
-msgid "There are no {facet_type} that match this search"
-msgstr ""
-
-#. nl, fr, de
-msgid "Show Only Popular {facet_type}"
-msgstr ""
-
-#. fr, de
-msgid "Show More {facet_type}"
-msgstr ""
-
-#. nl, de
-msgid "Draft"
-msgstr ""
-
-#. nl, en, fr, de
 #, fuzzy
 msgid "View {organization_name}"
 msgstr "Organizations"
 
-#. fr, de
-#, fuzzy
-msgid "0 Datasets"
-msgstr "0 Datasets"
-
-#. de
-msgid "Deleted"
-msgstr ""
-
-#. fr, de
-msgid "About"
-msgstr ""
-
-#. nl, fr, de
-msgid "E.g. environment"
-msgstr ""
-
-#. de
-msgid "Type"
-msgstr ""
-
-#. de
-msgid "Welcome"
-msgstr ""
-
-#. fr, de
-msgid "CKAN API"
-msgstr ""
-
-#. nl, en, fr
 #, fuzzy
 msgid "Registration"
 msgstr "Organizations"
 
-#. nl, fr
-msgid "Register"
-msgstr ""
-
-#. nl, fr, de
-msgid "Forgot your password?"
-msgstr ""
-
-#. nl
-msgid "No problem, use our password recovery form to reset it."
-msgstr ""
-
-#. fr
-msgid "Forgotten your password?"
-msgstr ""
-
-#. nl
-msgid "Then sign right up, it only takes a minute."
-msgstr ""
-
-#. nl, fr
-msgid "Need an Account?"
-msgstr ""
-
-#. en, de
 #, fuzzy
 msgid "My Organizations"
 msgstr "Organizations"
 
-#. en, de
 #, fuzzy
 msgid "My Datasets"
 msgstr "Datasets"
 
-#. nl, fr
-msgid "Filter Results"
-msgstr ""
-
-#. fr
-msgid "What's a resource?"
-msgstr ""
-
-#. de
-msgid "Log in"
-msgstr ""
-
-#. en
 msgid "UK Open Government Licence (OGL)"
 msgstr "UK Open Government License (OGL)"
 
-#. nl, fr, de
-msgid "Link to a URL on the internet (you can also link to an API)"
-msgstr ""
-
-#. nl, fr
-msgid "Upload"
-msgstr ""
-
-#. nl, de
-msgid "Upload a file on your computer"
-msgstr ""
-
-#. nl
-msgid "Organization"
-msgstr ""
-
-#. nl, fr
-msgid "Private"
-msgstr ""
-
-#. nl, fr, de
-msgid "The form contains invalid entries:"
-msgstr ""

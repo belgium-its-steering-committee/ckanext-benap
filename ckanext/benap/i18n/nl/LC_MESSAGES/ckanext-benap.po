@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-22 13:44+0000\n"
+"POT-Creation-Date: 2025-09-11 16:20+0000\n"
 "PO-Revision-Date: 2019-09-20 17:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: nl\n"
@@ -19,7 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#. nl, fr, de
 #: ckanext/benap/assets/js/scheming-doc_upload.js:78
 #: ckanext/benap/assets/js/scheming-logo_upload.js:72
 #: ckanext/benap/assets/js/scheming-proxy_upload.js:72
@@ -646,11 +645,9 @@ msgstr ""
 msgid "Sysadmin settings"
 msgstr "Instellingen van systeemadministrator"
 
-#. fr, nl
 msgid "<p class=\"extra\">Please try another search.</p>"
 msgstr "<p class=\"extra\">Gelieve een andere zoekterm te gebruiken.</p>"
 
-#. fr, nl, de
 msgid ""
 "<p id=\"search-error\"><strong>There was an error while "
 "searching.</strong> Please try again.</p>"
@@ -658,7 +655,6 @@ msgstr ""
 "<p id=\"search-error\"><strong>Er was een fout tijdens het "
 "zoeken.</strong> Gelieve opnieuw te proberen.</p>"
 
-#. fr, nl, de, en - remove first sentence
 msgid ""
 "The <i>data license</i> you select above only applies to the contents of "
 "any resource files that you add to this dataset. By submitting this form,"
@@ -672,200 +668,93 @@ msgstr ""
 "href=\"http://opendatacommons.org/licenses/odbl/1-0/\">Open Database "
 "License</a>."
 
-#. nl
 msgid "Edit"
 msgstr "Bewerk"
 
-#. nl, fr
 msgid "Admin"
 msgstr "Admin"
 
-#. nl, fr
 msgid "View profile"
 msgstr "Profiel bekijken"
 
-#. de
-msgid "Dashboard"
-msgstr ""
-
-msgid "Settings"
-msgstr "Instellingen"
-
-#. de
-msgid "Log out"
-msgstr ""
-
-#. en, fr
-msgid "Organizations"
-msgstr ""
-
-#. fr
-msgid "Search"
-msgstr ""
-
-#. nl, fr, de
 msgid "Search datasets..."
 msgstr "Zoek datasets..."
 
-#. nl, de
 msgid "Name Ascending"
 msgstr "Naam Aflopend"
 
-#. nl, de
 msgid "Name Descending"
 msgstr "Naam Oplopend"
 
-#. nl, fr
 msgid "Order by"
 msgstr "Sorteren op"
 
-#. nl, fr, de
 msgid "Activity from items that I'm following"
 msgstr "Activiteit van items die ik volg"
 
-#. nl, fr, de
 msgid "Why Sign Up?"
 msgstr "Waarom registreren?"
 
-#. nl, fr, de
 msgid "Register for an Account"
 msgstr "Registreer voor een account"
 
-#. nl, fr, de
 msgid "News feed"
 msgstr "Nieuwsfeed"
 
-#. fr, de
-msgid "Go"
-msgstr ""
-
-#. nl, fr, de
 msgid "There are no {facet_type} that match this search"
 msgstr "Er zijn geen {facet_type} dat overeenstemmen met deze zoekactie"
 
-#. nl, fr, de
 msgid "Show Only Popular {facet_type}"
 msgstr "Popular {facet_type}"
 
-#. fr, de
-msgid "Show More {facet_type}"
-msgstr ""
-
-#. nl, de
 msgid "Draft"
 msgstr "Concept"
 
-#. nl, en, fr, de
 #, fuzzy
 msgid "View {organization_name}"
 msgstr "Organisaties"
 
-#. fr, de
-#, fuzzy
-msgid "0 Datasets"
-msgstr "0 Datasets"
-
-#. de
-msgid "Deleted"
-msgstr ""
-
-#. fr, de
-msgid "About"
-msgstr ""
-
-#. nl, fr, de
 msgid "E.g. environment"
 msgstr "Bv. leefmilieu"
 
-#. de
-msgid "Type"
-msgstr ""
-
-#. de
-msgid "Welcome"
-msgstr ""
-
-#. fr, de
-msgid "CKAN API"
-msgstr ""
-
-#. nl, en, fr
 #, fuzzy
 msgid "Registration"
 msgstr "Organisaties"
 
-#. nl, fr
 msgid "Register"
 msgstr "Registreren"
 
-#. nl, fr, de
 msgid "Forgot your password?"
 msgstr "Uw wachtwoord vergeten?"
 
-#. nl
 msgid "No problem, use our password recovery form to reset it."
 msgstr ""
 "Geen probleem, gebruik ons wachtwoord herstelformulier om uw wachtwoord "
 "opnieuw in te stellen."
 
-#. fr
-msgid "Forgotten your password?"
-msgstr ""
-
-#. nl
 msgid "Then sign right up, it only takes a minute."
 msgstr "Schrijf u nu in, het neemt slechts een minuut."
 
-#. nl, fr
 msgid "Need an Account?"
 msgstr "Heeft uw een Account nodig?"
 
-#. en, de
-#, fuzzy
-msgid "My Organizations"
-msgstr "Mijn organisaties"
-
-#. en, de
-#, fuzzy
-msgid "My Datasets"
-msgstr "Mijn Datasets"
-
-#. nl, fr
 msgid "Filter Results"
 msgstr "Resulaten filteren"
 
-#. fr
-msgid "What's a resource?"
-msgstr ""
-
-#. de
-msgid "Log in"
-msgstr ""
-
-#. en
-msgid "UK Open Government Licence (OGL)"
-msgstr ""
-
-#. nl, fr, de
 msgid "Link to a URL on the internet (you can also link to an API)"
 msgstr "Link naar een URL op het internet (u kunt ook linken naar een API)"
 
-#. nl, fr
 msgid "Upload"
 msgstr "Uploaden"
 
-#. nl, de
 msgid "Upload a file on your computer"
 msgstr "Upload een bestand vanop uw computer"
 
-#. nl
 msgid "Organization"
 msgstr "Organisatie"
 
-#. nl, fr
 msgid "Private"
 msgstr "Privaat"
 
-#. nl, fr, de
 msgid "The form contains invalid entries:"
 msgstr "Het formulier bevat ongeldige gegevens"
