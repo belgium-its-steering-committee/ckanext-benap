@@ -6,7 +6,6 @@ $(document).ready(function(){
         $( "div[data-module-field_upload|='srti_upload_doc']>div.form-group>label" ).text( $("div[data-module-field_upload|='srti_upload_doc']" ).attr("data-module-upload_label") );
         $( "div[data-module-field_upload|='sstp_upload_doc']>div.form-group>label" ).text( $("div[data-module-field_upload|='sstp_upload_doc']" ).attr("data-module-upload_label") );
         $( "div[data-module-field_upload|='image_upload']>div.form-group>label" ).text( $("div[data-module-field_upload|='image_upload']" ).attr("data-module-upload_label") );
-        $( "label[for|='field-organization_agreement_declaration_nap-Y']" ).addClass('remove-after');
         $('head').append("<style>.remove-after::after{ content:None }</style>");
     },1000);
   });

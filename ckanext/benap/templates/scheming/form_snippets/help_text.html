@@ -3,10 +3,13 @@
 
 {%- if id!="field_private" %}
     {%- if field.get('help_text', false) -%}
-        <div class="info-block">
-            <i class="fa fa-info-circle"></i>
-            {{ render_string_with_links(h.scheming_language_text(field.help_text)) }}
-        </div>
+        {% set help_text = h.scheming_language_text(field.help_text) %}
+        {% if help_text %}
+          <div class="info-block">
+              <i class="fa fa-info-circle"></i>
+              {{ render_string_with_links(help_text) }}
+          </div>
+        {% endif %}
     {%- endif -%}
 {%- else%}
     <!--help_tekst for dataset visibility. Sits in a data-module = "dataset-visbility" Had to be filterd out-->
