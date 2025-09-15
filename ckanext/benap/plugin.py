@@ -7,7 +7,7 @@ from ckan.lib.plugins import DefaultTranslation
 import json
 from flask import Blueprint
 
-from ckanext.benap.helpers import ontology_helper, organization_name, scheming_language_text_fallback, organisation_names_for_autocomplete, \
+from ckanext.benap.helpers import ontology_helper, organization_name, organisation_names_for_autocomplete, \
     get_translated_tags, scheming_language_text, format_datetime, ckan_tag_to_transport_mode_concept_label,\
     parse_embedded_links, organization_name_by_id, lang_text, \
     translate_organization_filter, convert_validation_list_to_JSON, benap_get_organization_field_by_id,\
@@ -60,8 +60,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             '_c': _c,
             'benap_geographic_granularity_helper': lambda context: map_for_form_select(self.geographic_granularity_map),
             'benap_ontology_helper': ontology_helper,
-            # TODO: remove after replacing this with lang_text in fluent fork
-            'benap_scheming_language_text_fallback': scheming_language_text_fallback,
             'benap_organisation_names_for_autocomplete': organisation_names_for_autocomplete,
             'benap_lang_text': lang_text,
             'get_translated_tags': get_translated_tags,

@@ -179,11 +179,6 @@ def lang_text(translations, language = None, fallback = True):
     else:
         return translations
 
-# TODO: remove after replacing this with lang_text in fluent fork
-def scheming_language_text_fallback(field_data, language_data):
-    return lang_text(field_data)
-
-
 def organisation_names_for_autocomplete():
     return [org['title'] for org in organizations_available('create_dataset')]
 
