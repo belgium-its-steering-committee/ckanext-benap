@@ -36,6 +36,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     plugins.implements(plugins.IFacets, inherit=True)
     plugins.implements(plugins.IPackageController, inherit=True)
     plugins.implements(plugins.IBlueprint, inherit=True)
+    plugins.implements(plugins.IUploader, inherit=True)
 
     geographic_granularity_map = [('', ''),
                                   ('national', 'National'),
