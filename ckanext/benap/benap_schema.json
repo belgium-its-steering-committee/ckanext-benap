@@ -691,7 +691,8 @@
         "nl": "Voor elk NAP waarvoor u datasets of diensten  registreert (MMTIS, RTTI, SRTI, SSTP) moet uw organisatie een formulier indienen voor elk type NAP waarbij uw organisatie aangeeft in overeenstemming te zijn met de respectievelijke Europese Verordeningen betreffende het NAP. <a href='/pages/declaration-of-compliance'>Voor meer informatie klik hier.</a>\n\nDoor de registratie van deze dataset of dienst kan het daarom noodzakelijk zijn voor uw organisatie om een bijkomende verklaring van overeenstemming in te dienen of een bestaande verklaringen te updaten.",
         "de": "Für jeden NAP, worauf Sie Datensätze oder Dienste registrieren (MMTIS, RTTI, SRTI, SSTP), muss Ihre Organisation ein Formular eintragen, wo sie ihre Beachtung der jeweiligen europäischen Verordnungen bestätigt. <a href='/pages/declaration-of-compliance'>Klicken Sie hier für weitere Informationen.</a>\n\nWenn Sie diesen Datensatz oder Dienst registrieren, kann es dadurch notwendig sein, daβ Ihre Organisation eine zusätzliche  Übereinstimmungserklärung einträgt oder eine bestehende Erklärung aktualisiert."
       },
-      "required": "true"
+      "required": "true",
+      "always_unset": true
     }
   ],
   "resource_fields": [

@@ -373,7 +373,8 @@
               "de": "Für jeden NAP, worauf Sie Datensätze oder Dienste registrieren (MMTIS, RTTI, SRTI, SSTP), muss Ihre Organisation ein Formular eintragen, wo sie ihre Beachtung der jeweiligen europäischen Verordnungen bestätigt. <a href='/pages/declaration-of-compliance'>Klicken Sie hier für weitere Informationen.</a>\n\nWenn Ihre Organisation im Sektor der für die Straßenverkehrssicherheit relevanter Verkehrsmeldungen (NAP SRTI) tätig ist, muss Ihre Organisation möglicherweise eine Übereinstimmungserklärung eintragen, selbst wenn Sie keine Datensätze oder Dienste registrieren. "
       },
       "required": "true",
-      "display_snippet": null
+      "display_snippet": null,
+      "always_unset": true
     },
  {
       "field_name": "agreement_declaration_mmtis",

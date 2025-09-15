@@ -1,5 +1,13 @@
 {% import 'macros/form.html' as form %}
 {% from 'macros/string_utils.html' import render_string_with_links %}
+
+{# specific variables:
+ # always_unset: if true, none of the checkboxes will be checked, regardless of the value
+ # sub_text: the text below the checkbox(es), shown in the same style as the title
+ # help_text: the help text above the checkboxes
+ # choices[help_text]: the help text below the checkboxes
+ #}
+
 {% macro help_text(help_text_content) %}
     {%- if help_text_content -%}
         <div style="padding-left: 24px;">
@@ -43,7 +51,7 @@
                         name="{{ field.field_name }}"
                         value="{{ val }}"
                         style="width: auto; top: 0;"
-                        checked={{ val in field.value }} />    
+                        {{ "checked " if (not field.always_unset and val in data[field.field_name]) }} />    
                     <div style="padding-left: 8px;">{{ render_string_with_links(label) }}</div>
                 </div>
             </label> 
