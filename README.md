@@ -16,14 +16,14 @@ Afterwards, run `./extract_translatable_strings.sh`. This script does the follow
 
 The owner of the files might be invalid, so you might need to `chown` the files afterwards.
 
-Afterwards write the translations as needed in the pot files. When done, make sure to run the command `./compile_translations.sh` to compile the .po files to .mo files. Otherwise the translations will not work. In development, you'll need to `bin/reload` the app to see the new translations in effect.
+Afterwards write the translations as needed in the .po files. When done, make sure to run the command `./compile_translations.sh` to compile the .po files to .mo files. Otherwise the translations will not work. In development, you'll need to `bin/reload` the app to see the new translations in effect.
 
 ### overwriting ckan core translations
-To overwrite translations of ckan core, or from a different plugin, add these inside ckan-translations-overwrite.pot. Add them as:
+To overwrite translations of ckan core, or from a different plugin, add these inside ckan-translations-overwrite.pot. Add them as `# ` (with a space) and afterwards a comma-separated list of the languages to overwrite (options are `nl`, `fr`, `de` and `en`)
 ```
-#. optional comment that will appear as help in translating. E.g. "translate only in NL and FR"
+# nl,fr,de
 msgid "text"
 msgstr ""
 ```
 
-Then follow the same steps as above. You can decide to *not* translate for a specific language (by setting msgstr as `msgstr ""`). In this case, the ckan core translation will be used as fallback. This is perfect where ckan has a faulty translation in one language, as you can just overwrite that one language and leave the rest intact. Make this clear with a comment (via `#. your comment`).
+For languages not specified, the msgid will not be added to the .po file and the ckan core translation will be used instead (because of fallback). This is perfect where ckan has a faulty translation in one language, as you can just overwrite that one language and leave the rest intact.

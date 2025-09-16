@@ -16,6 +16,7 @@ docker run --rm --entrypoint bash -u root -v .:/external "$CKAN_BASE" -lc '
     # as ckan does not provide "en" translations, but only "en_GB", make the assmuption it falls back
     # to "en_GB" when the locale is "en". Note: was not explicitely checked.
     LOCALES="nl en_GB de fr"
+    LOCALES_PLUGIN="nl en de fr"
     # location of core CKAN translations in ckan-base docker image
     CKAN_I18N_DIR="/srv/app/src/ckan/ckan/i18n"
 
@@ -23,7 +24,6 @@ docker run --rm --entrypoint bash -u root -v .:/external "$CKAN_BASE" -lc '
     OVERWRITE_POT="./ckanext/benap/i18n/ckan-translations-overwrite.pot"
     TMP_ALL_CORE_POT="/tmp/all_lang_core.pot"
     TMP_FILTERED_PLUGIN_POT="/tmp/plugin_filtered.pot"
-    TMP_MERGED_POT="/tmp/merged.pot"
 
     ALL_FILES=()
     for lang in $LOCALES; do        
@@ -40,17 +40,26 @@ docker run --rm --entrypoint bash -u root -v .:/external "$CKAN_BASE" -lc '
     # and plugin => keeps translations in plugin that did not exist in core
     msgcomm --more-than=1 "$PLUGIN_POT" "$TMP_FILTERED_PLUGIN_POT" -o "$TMP_FILTERED_PLUGIN_POT"
 
-    # merge plugin translations and ckan overwrite translations
-    # where plugin translations already translated in CKAN core will not be added
-    xgettext -o "$TMP_MERGED_POT" "$TMP_FILTERED_PLUGIN_POT" "$OVERWRITE_POT"
+    # For each language, only add overwrite entries that specify that language via
+    # a comment (line startin with # ) containing this at the start (comma-separated, e.g. `# nl,fr`)
+    for lang in $LOCALES_PLUGIN; do
+        TMP_OVERWRITE_LANG_POT="/tmp/overwrite_${lang}.pot"
+        TMP_MERGED_LANG_POT="/tmp/merged_${lang}.pot"
 
-    # xgettext adds some headers that create a crash. Fix these here, even though they have no meaning in a .pot file
-    # alternatively they could be removed?
-    sed -i "s/Language: /Language: en/" "$TMP_MERGED_POT"
-    sed -i "s/Plural-Forms: nplurals=INTEGER; plural=EXPRESSION/Plural-Forms: nplurals=2; plural=n != 1/" "$TMP_MERGED_POT"
-    
-    # use the merged pot file to update the translations in .po files of plugin.
-    python setup.py update_catalog --no-fuzzy-matching -i "$TMP_MERGED_POT" 
+        # match comment for this language
+        msggrep -C -E -e "^((nl|fr|en|de),)*${lang}(,(nl|fr|en|de))*" "$OVERWRITE_POT" -o "$TMP_OVERWRITE_LANG_POT"
+
+        # Merge plugin translation with overwrite (where lang specified in comment)
+        xgettext -o "$TMP_MERGED_LANG_POT" "$TMP_FILTERED_PLUGIN_POT" "$TMP_OVERWRITE_LANG_POT"
+
+        # xgettext adds some headers that create a crash. Fix these here, even though they have no meaning in a .pot file
+        # alternatively they could be removed?
+        sed -i "s/Language: /Language: en/" "$TMP_MERGED_LANG_POT"
+        sed -i "s/Plural-Forms: nplurals=INTEGER; plural=EXPRESSION/Plural-Forms: nplurals=2; plural=n != 1/" "$TMP_MERGED_LANG_POT"
+        
+        # update .po file for this specific language (the filtered plugin translations and overwrites with specified language in comments)
+        python setup.py update_catalog --no-fuzzy-matching -i "$TMP_MERGED_LANG_POT" -l "$lang"
+    done
 
     echo "!! make sure to run compile_translations.sh to update the .po files after adjusting the missing translations. !!"
   '
