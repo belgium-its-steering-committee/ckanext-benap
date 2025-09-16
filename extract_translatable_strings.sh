@@ -5,6 +5,7 @@
 
 CKAN_BASE=ckan/ckan-base:2.11
 docker run --rm --entrypoint bash -u root -v .:/external "$CKAN_BASE" -lc '
+    apt-get update
     apt-get -y install gettext
     cd /external
     
