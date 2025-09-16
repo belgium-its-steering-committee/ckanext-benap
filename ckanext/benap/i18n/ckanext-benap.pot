@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 4.1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-09-11 16:20+0000\n"
+"POT-Creation-Date: 2025-09-16 08:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,6 +28,35 @@ msgstr ""
 #: ckanext/benap/custom_group.py:156 ckanext/benap/custom_group.py:243
 #: ckanext/benap/custom_group.py:274 ckanext/benap/custom_group.py:321
 msgid "Group not found"
+msgstr ""
+
+#: ckanext/benap/plugin.py:119
+msgid "NAP Type"
+msgstr ""
+
+#: ckanext/benap/plugin.py:120
+msgid "Transportation modes"
+msgstr ""
+
+#: ckanext/benap/plugin.py:121
+msgid "Area covered by publication"
+msgstr ""
+
+#: ckanext/benap/plugin.py:122
+msgid "Mobility Theme"
+msgstr ""
+
+#: ckanext/benap/plugin.py:123 ckanext/benap/templates/snippets/license.html:22
+msgid "License"
+msgstr ""
+
+#: ckanext/benap/plugin.py:124
+#: ckanext/benap/templates/package/snippets/resource_info.html:19
+msgid "Format"
+msgstr ""
+
+#: ckanext/benap/plugin.py:125
+msgid "Organizations"
 msgstr ""
 
 #: ckanext/benap/assets/js/scheming-doc_upload.js:65
@@ -654,10 +683,6 @@ msgid ""
 " Regulation (EU) 2017/1926."
 msgstr ""
 
-#: ckanext/benap/templates/package/snippets/resource_info.html:19
-msgid "Format"
-msgstr ""
-
 #: ckanext/benap/templates/package/snippets/resource_item.html:9
 msgid "Explore"
 msgstr ""
@@ -764,19 +789,15 @@ msgstr ""
 msgid "The form contains invalid entries:"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:5
-msgid "Transportation modes"
-msgstr ""
-
-#: ckanext/benap/templates/snippets/facet_list.html:40
+#: ckanext/benap/templates/snippets/facet_list.html:37
 msgid "Show More {facet_type}"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:43
+#: ckanext/benap/templates/snippets/facet_list.html:40
 msgid "Show Only Popular {facet_type}"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:47
+#: ckanext/benap/templates/snippets/facet_list.html:44
 msgid "There are no {facet_type} that match this search"
 msgstr ""
 
@@ -790,10 +811,6 @@ msgstr ""
 
 #: ckanext/benap/templates/snippets/license.html:15
 msgid "No License Provided"
-msgstr ""
-
-#: ckanext/benap/templates/snippets/license.html:22
-msgid "License"
 msgstr ""
 
 #: ckanext/benap/templates/snippets/license.html:29
