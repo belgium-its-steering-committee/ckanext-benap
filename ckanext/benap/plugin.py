@@ -3,6 +3,7 @@ from collections import OrderedDict
 
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
+from ckan.plugins.toolkit import _
 from ckan.lib.plugins import DefaultTranslation
 import json
 from flask import Blueprint
@@ -10,7 +11,7 @@ from flask import Blueprint
 from ckanext.benap.helpers import ontology_helper, organization_name, organisation_names_for_autocomplete, \
     get_translated_tags, scheming_language_text, format_datetime, ckan_tag_to_transport_mode_concept_label,\
     parse_embedded_links, organization_name_by_id, lang_text, \
-    translate_organization_filter, convert_validation_list_to_JSON, benap_get_organization_field_by_id,\
+    convert_validation_list_to_JSON, benap_get_organization_field_by_id,\
     benap_get_organization_field_by_specified_field, benap_retrieve_dict_items_or_keys_or_values, get_translated_category_and_sub_category, \
     benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper, _c, is_member_of_org, get_facet_label_function, get_facet_name_label_function
 
@@ -69,7 +70,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'format_datetime': format_datetime,
             'benap_organization_name': organization_name,
             'benap_organization_name_by_id': organization_name_by_id,
-            'translate_organization_filter': translate_organization_filter,
             'benap_convert_validation_list_to_JSON': convert_validation_list_to_JSON,
             'benap_get_organization_field_by_id': benap_get_organization_field_by_id,
             'benap_get_organization_field_by_specified_field': benap_get_organization_field_by_specified_field,
@@ -114,14 +114,17 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
 
     # IFacets
     def dataset_facets(self, facets_dict, package_type):
+        # This overrides the full facets list, which is not recommended by the docs, as the order
+        # that plugins add facets now matters. However, the assumption that this is done 
+        # is too far coupled in code too easily factor away. So leave this for now.
         facets_dict = OrderedDict([
-            ('nap_type', 'NAP Type'),
-            ('tags', 'Tags'),
-            ('regions_covered_uri', 'Area covered by publication'),
-            ('mobility_theme_uri', 'Mobility Theme'),
-            ('license_uri', 'License'),
-            ('format_uri', 'Format'),
-            ('organization', 'Organizations'),
+            ('nap_type', _('NAP Type')),
+            ('tags', _('Transportation modes')),
+            ('regions_covered_uri', _('Area covered by publication')),
+            ('mobility_theme_uri', _('Mobility Theme')),
+            ('license_uri', _('License')),
+            ('format_uri', _('Format')),
+            ('organization', _('Organizations')),
         ])
         return facets_dict
 
