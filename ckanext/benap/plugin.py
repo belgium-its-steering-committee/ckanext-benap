@@ -1,12 +1,14 @@
 # coding=utf-8
 from collections import OrderedDict
 
+from ckan import authz
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckan.plugins.toolkit import _
 from ckan.lib.plugins import DefaultTranslation
 import json
-from flask import Blueprint
+from flask import Blueprint, send_from_directory
+from ckan.common import current_user
 
 from ckanext.benap.helpers import ontology_helper, organization_name, organisation_names_for_autocomplete, \
     get_translated_tags, scheming_language_text, format_datetime, ckan_tag_to_transport_mode_concept_label,\
@@ -24,7 +26,7 @@ from ckanext.benap.helpers.concepts import get_concept_label
 
 from ckanext.benap.logic.auth.get import member_list, user_autocomplete, user_list
 from ckanext.benap.custom_group import CreateGroupView, EditGroupView
-from ckanext.benap.uploader import OrganizationUploader
+from ckanext.benap.uploader import OrganizationUploader, organization_storage_dir
 
 
 @plugins.toolkit.blanket.actions # auto register all actions in logic/action.py
@@ -156,8 +158,36 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             view_func=EditGroupView.as_view('edit'),
             methods=['GET', 'POST']
         )
-    
-        return blueprint
+        
+        # Intercept GET /uploads/organization to specify file access rights for org files
+        # Alternatively IMiddleware could also work
+        files_access_blueprint = Blueprint(
+            'files_access_intercept',
+            __name__,
+            url_prefix='/uploads/organization'
+        )
+
+        def _check_org_file_rights(org_id, file_id):
+          logo_filename = benap_get_organization_field_by_id(org_id, 'image_url')
+          user_id = getattr(current_user, 'id', None)
+          if not (logo_filename == file_id # public access for organization logo
+                  or authz.has_user_permission_for_group_or_org(org_id, user_id, 'read') 
+                  or user_id == 'napcontrolbody'):
+            toolkit.abort(404)
+
+          org_directory = organization_storage_dir(org_id)
+          if not org_directory:
+            toolkit.abort(404)
+
+          return send_from_directory(org_directory, file_id)
+
+        files_access_blueprint.add_url_rule(
+            '/<org_id>/<file_id>',
+            view_func=_check_org_file_rights,
+            methods=['GET']
+        )
+
+        return [blueprint, files_access_blueprint]
 
     # IPackageController
     def before_dataset_index(self, pkg_dict):

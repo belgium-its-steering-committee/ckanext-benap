@@ -1,21 +1,17 @@
 # Copied from https://github.com/belgium-its-steering-committee/ckanext-scheming/blob/MobilityDCAT/root/ckanext/scheming/lib/uploader.py#L2
 # encoding: utf-8
 import cgi
-from distutils import errors
 import logging
 
 import os
 import datetime
-import magic
-import mimetypes
-from pathlib import Path
 import ckan.lib.munge as munge
 import ckan.logic as logic
-import ckan.plugins as plugins
 
 from ckan.lib.uploader import get_storage_path
 from werkzeug.datastructures import FileStorage as FlaskFileStorage
-from ckan.common import config
+
+from ckanext.benap.helpers import benap_get_organization_field_by_id
 
 
 ALLOWED_UPLOAD_TYPES = (cgi.FieldStorage, FlaskFileStorage)
@@ -27,6 +23,11 @@ _storage_path = None
 _max_resource_size = None
 _max_image_size = None
 
+def organization_storage_dir(org_id):
+    path = get_storage_path()
+    if not path:
+        return None
+    return os.path.join(path, 'storage', 'uploads', 'organization', org_id)  
 
 def _copy_file(input_file, output_file, max_size):
     input_file.seek(0)
@@ -167,6 +168,8 @@ class OrganizationUploader(object):
         
         # hack into this to upload NAP DOC
         # SSTP
+        # very hacky because old_filename is not passed correctly and touching the brittle upload code is too likely to break.
+        self.sstp_doc_old_filename = benap_get_organization_field_by_id(data_dict.get('name'), 'sstp_doc_document_upload')
         if self.sstp_doc_old_filename:
             self.sstp_doc_old_filepath = os.path.join(self.storage_path, data_dict.get('name'), self.sstp_doc_old_filename)
 
@@ -194,6 +197,8 @@ class OrganizationUploader(object):
                 data_dict['sstp_doc_document_upload'] = ''
 
         # SRTI
+        # very hacky because old_filename is not passed correctly and touching the brittle upload code is too likely to break.
+        self.srti_doc_old_filename = benap_get_organization_field_by_id(data_dict.get('name'), 'srti_doc_document_upload')
         if self.srti_doc_old_filename:
             self.srti_doc_old_filepath = os.path.join(self.storage_path, data_dict.get('name'),
                                                  self.srti_doc_old_filename)
@@ -221,6 +226,8 @@ class OrganizationUploader(object):
                 data_dict['srti_doc_document_upload'] = ''
 
         # RTTI
+        # very hacky because old_filename is not passed correctly and touching the brittle upload code is too likely to break.
+        self.rtti_doc_old_filename = benap_get_organization_field_by_id(data_dict.get('name'), 'rtti_doc_document_upload')
         if self.rtti_doc_old_filename:
             self.rtti_doc_old_filepath = os.path.join(self.storage_path, data_dict.get('name'), self.rtti_doc_old_filename)
         self.rtti_doc_clear = data_dict.pop('rtti_clear_upload_doc', None)
@@ -245,10 +252,11 @@ class OrganizationUploader(object):
             if self.rtti_doc_clear and self.rtti_doc_url == self.rtti_doc_old_filename:
                 data_dict['rtti_doc_document_upload'] = ''
         # end NAP DOC hack
-        
         # hack into this to upload PROXY DOC
+        # very hacky because old_filename is not passed correctly and touching the brittle upload code is too likely to break.
+        self.proxy_doc_old_filename = benap_get_organization_field_by_id(data_dict.get('name'), 'proxy_pdf_url')
         if self.proxy_doc_old_filename:
-            self.proxy_doc_filepath = os.path.join(self.storage_path, data_dict.get('name'), self.proxy_doc_old_filename)
+            self.proxy_doc_old_filepath = os.path.join(self.storage_path, data_dict.get('name'), self.proxy_doc_old_filename)
         self.proxy_doc_clear = data_dict.pop('proxy_clear_upload', None)
         self.proxy_doc_file_field='proxy_upload'
         self.proxy_doc_upload_field_storage  = data_dict.pop(self.proxy_doc_file_field, None)
