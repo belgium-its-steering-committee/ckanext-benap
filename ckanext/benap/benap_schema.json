@@ -1014,7 +1014,7 @@
       ],
       "error_snippet": "fluent_text.html",
       "output_validators": "fluent_core_translated_output",
-      "validators": "fluent_text",
+      "validators": "default({}) fluent_text",
       "form_snippet": null,
       "display_snippet": "fluent_markdown_fallback.html"
     },
@@ -1094,7 +1094,7 @@
       "display_snippet": "fluent_markdown_fallback.html",
       "error_snippet": "fluent_text.html",
       "output_validators": "fluent_core_translated_output",
-      "validators": "fluent_text benap_is_choice_null benap_license_fields_conditional_validation"
+      "validators": "default({}) fluent_text benap_is_choice_null benap_license_fields_conditional_validation"
     }
   ]
 }
