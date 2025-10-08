@@ -282,7 +282,7 @@
     },
       "form_placeholder": "+32XXXXXXXX",
       "form_snippet": null,
-      "validators": "phone_number_validator benap_contact_point_org_fields_consistency_check"
+      "validators": "default('') phone_number_validator benap_contact_point_org_fields_consistency_check"
     },
     {
       "field_name": "publisher_name",
