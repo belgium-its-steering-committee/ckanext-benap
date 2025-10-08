@@ -257,7 +257,7 @@ def benap_tag_string_convert(key, flattened_data, errors, context):
         tagname_match = re.compile('[\w \-.]*$', re.UNICODE)
         if not tagname_match.match(tag):
             raise Invalid(_('Tag "%s" must be alphanumeric '
-                            'characters or symbols: -_.') % (value))
+                            'characters or symbols: -_.') % (tag))
 
 def logo_extensions(value):
     if value and len(value) > 0:
