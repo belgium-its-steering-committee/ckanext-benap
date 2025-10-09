@@ -35,3 +35,14 @@ ckan.module("collapsible-section", function ($) {
     }
   };
 });
+
+ckan.module("manage-cookies", function ($) {
+  return {
+    initialize: function () {
+      this.el.on('click', this._openOverlay);
+    },
+    _openOverlay: function () {
+      $('#overlay-cookies').css('display', 'flex');
+    }
+  };
+});
