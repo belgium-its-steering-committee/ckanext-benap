@@ -13,7 +13,7 @@ benap-css:
   contents:
     - styles/main.css
     - styles/nap_checked_pill_style.css
-    - styles/fieldset-checkboxes.css
+    - styles/forms.css
 
 transportdata-js:
   filter: rjsmin

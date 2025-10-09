@@ -1,34 +1,5 @@
 {% import 'macros/form.html' as form %}
 
-<style>
-    /* Styling for the accordion-style categories and tags */
-    .category-header {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        justify-content: space-between;
-    }
-
-    .category-checkbox {
-        margin-right: 8px;
-    }
-
-    .category-name {
-        font-weight: bold;
-    }
-
-    .tag-container {
-        padding-left: 20px;
-        margin-top: 5px; /* Reduced margin between category and tags */
-        display: none; /* Initially hidden */
-    }
-
-    .tag-container input[type="checkbox"] {
-        margin-right: 5px;
-        margin-bottom: 2px; /* Reduced margin between tags */
-    }
-</style>
-
 {% call form.input(
     field.field_name,
     id='field-' + field.field_name,

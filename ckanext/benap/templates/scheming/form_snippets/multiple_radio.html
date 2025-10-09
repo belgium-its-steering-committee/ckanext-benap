@@ -1,19 +1,5 @@
 {% import 'macros/form.html' as form %}
 
-<style>
-fieldset.radios label {
-    font-weight: normal;
-    display: block;
-}
-fieldset.radios label:after {
-    content: none;
-}
-fieldset.radios label input {
-    width: auto;
-    top: 0;
-}
-</style>
-
 {%- call form.input_block(
     label=h.scheming_language_text(field.label),
     classes=['control-medium'],

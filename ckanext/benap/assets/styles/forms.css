@@ -1,0 +1,55 @@
+/* Styling for the accordion-style categories and tags */
+.category-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.category-checkbox {
+  margin-right: 8px;
+}
+
+.category-name {
+  font-weight: bold;
+}
+
+.tag-container {
+  padding-left: 20px;
+  margin-top: 5px; /* Reduced margin between category and tags */
+  display: none; /* Initially hidden */
+}
+
+.tag-container input[type="checkbox"] {
+  margin-right: 5px;
+  margin-bottom: 2px; /* Reduced margin between tags */
+}
+
+/* fieldset Checkboxes */
+fieldset.checkboxes label {
+  font-weight: normal;
+  display: block;
+}
+fieldset.checkboxes label:after {
+  content: none;
+}
+fieldset.checkboxes label input {
+  width: auto;
+  top: 0;
+}
+.no-bottom-margin {
+  margin-bottom: 4px;
+}
+
+/* fieldset Radio buttons */
+fieldset.radios label {
+  font-weight: normal;
+  display: block;
+}
+fieldset.radios label:after {
+  content: none;
+}
+fieldset.radios label input {
+  width: auto;
+  top: 0;
+}
