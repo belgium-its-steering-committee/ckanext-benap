@@ -37,3 +37,22 @@ transportdata-css:
     - styles/uploadLogoValidation.css
     - styles/uploadProxyValidation.css
 
+# assets to include for using leaflet map-display or map-form module
+leaflet-maps-js:
+  filter: rjsmin
+  output: ckanext-transportdata/%(version)s-map-display.js
+  contents:
+    - vendor/leaflet/leaflet.js
+    - vendor/leaflet/leaflet.pm.min.js
+    - js/map-display.js
+    - js/map-form.js
+  extra:
+    preload:
+      - base/main
+
+leaflet-maps-css:
+  filter: cssrewrite
+  output: ckanext-transportdata/%(version)s-map-form.css
+  contents:
+    - vendor/leaflet/leaflet.css
+    - vendor/leaflet/leaflet.pm.css
