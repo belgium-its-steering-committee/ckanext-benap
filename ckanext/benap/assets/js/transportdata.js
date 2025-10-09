@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-ckan.module("collapsible-section", function ($) {
+ckan.module('collapsible-section', function ($) {
   return {
     initialize: function () {
       this.isOpen = true;
@@ -11,10 +11,16 @@ ckan.module("collapsible-section", function ($) {
       this.headingContainer.appendChild(this.caret);
       this.headingContainer.style['cursor'] = 'pointer';
       this.collapsiblePart = this.sectionEl.children[1];
-      this.headingContainer.addEventListener('mousedown', this._toggleCollapsed.bind(this));
+      this.headingContainer.addEventListener(
+        'mousedown',
+        this._toggleCollapsed.bind(this)
+      );
     },
     teardown: function () {
-      this.headingContainer.removeEventListener('mousedown', this._toggleCollapsed.bind(this));
+      this.headingContainer.removeEventListener(
+        'mousedown',
+        this._toggleCollapsed.bind(this)
+      );
     },
     _toggleCollapsed: function () {
       this.isOpen = !this.isOpen;
@@ -32,17 +38,40 @@ ckan.module("collapsible-section", function ($) {
       caret.style['transform'] = 'rotate(180deg)';
 
       return caret;
-    }
+    },
   };
 });
 
-ckan.module("manage-cookies", function ($) {
+ckan.module('manage-cookies', function ($) {
   return {
     initialize: function () {
       this.el.on('click', this._openOverlay);
     },
     _openOverlay: function () {
       $('#overlay-cookies').css('display', 'flex');
-    }
+    },
+  };
+});
+
+// Basic simple fix. Not the cleanest but works for simple select implementations.
+// Better would be to have a list of checkboxes
+ckan.module('multiple-select-no-ctrl-key', function ($) {
+  return {
+    initialize: function () {
+      let options = this.el.find('option');
+
+      options.each((index, element) => {
+        element.addEventListener(
+          'mousedown',
+          (e) => {
+            e.preventDefault();
+            element.parentElement.focus();
+            element.selected = !element.selected;
+            return false;
+          },
+          false
+        );
+      });
+    },
   };
 });
