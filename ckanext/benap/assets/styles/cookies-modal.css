@@ -1,0 +1,75 @@
+#overlay-cookies {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+  z-index: 100; /* Specify a stack order in case you're using a different order for other elements */
+  display: none; /* initially hidden only visible when no cookies are found in js */
+  justify-content: center;
+  align-items: center;
+}
+#overlay-cookies-content {
+  display: flex;
+  width: 50%;
+  background: #DDD;
+  border: 2px solid #666;
+  padding: 16px;
+}
+div#wrapper-cookies-2>div:nth-child(n+2) {
+  margin-top: 10px;
+}
+
+#wrapper-cookies-2 .category-item-nav label {
+  margin-right: 10px;
+  font-weight: normal;
+}
+
+#wrapper-cookies-2 .category-item-nav label:after {
+  display: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+.clickable:hover {
+  text-decoration: underline;
+}
+.class, .category-item-nav:hover {
+  background-color: #ccc;
+}
+.category-item-description {
+  display: none;
+  overflow: hidden;
+}
+.accept-all {
+  font-size: 18px;
+  background-color: #11406e;
+  color: white;
+  padding: 0 5px;
+}
+.w50 {
+  font-size: 18px;
+  width: 50%;
+  float: left;
+  margin-bottom:5px;
+}
+cookie-table tr {
+  border: 1px gray solid;
+}
+cookie-table thead tr {
+  background-color: #11406e;
+  color: white;
+}
+cookie-table th {
+  padding: 5px;
+}
+cookie-table td {
+  padding: 5px;
+}
+cookie-table tbody td {
+  vertical-align: top;
+}
