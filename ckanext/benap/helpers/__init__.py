@@ -1,5 +1,7 @@
 # coding=utf-8
 import json
+
+import pytz
 import ckan.plugins.toolkit as toolkit
 from ckan.common import config
 import logging
@@ -7,7 +9,8 @@ from .decorators import decorator_timer
 from itertools import chain
 from ckan.logic import NotAuthorized
 import re
-from ckan.lib.helpers import get_site_protocol_and_host, lang, organizations_available
+from ckan.lib.helpers import get_site_protocol_and_host, lang, organizations_available, get_display_timezone
+from datetime import datetime
 from ckan.lib.i18n import get_available_locales
 
 from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
@@ -423,3 +426,24 @@ def benap_get_available_locales_sorted():
       locale = next((l for l in locales if l.short_name == lang), None)
       locales_sorted.append(locale)
     return locales_sorted
+
+
+
+def benap_datetime_string_now(part = None):
+    """
+    Return dict with:
+    'date': yyyy-mm-dd
+    'time': hh:mm
+    'iso': iso format
+    """
+    # Always use Europe/Brussels timezone (Belgium)
+    # As datetimes are saved without timezone info in database anyway
+    # so the assumption is made that any inputted time is Belgium time.
+    tz = pytz.timezone('Europe/Brussels')
+    now = datetime.now(tz)
+    formats = {
+        'date': now.strftime('%Y-%m-%d'),
+        'time': now.strftime('%H:%M'),
+        'iso': now.isoformat()
+    }
+    return formats[part] if part else formats

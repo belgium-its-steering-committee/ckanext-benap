@@ -19,6 +19,7 @@ transportdata-js:
     - js/form-tags.js
     - js/category-sub-category.js
     - js/nested-field-license.js
+    - js/hide-control.js
   extra:
     preload:
       - base/main

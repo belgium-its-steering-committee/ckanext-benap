@@ -407,6 +407,7 @@
         "de": "Zeit"
       },
       "preset": "datetime_tz",
+      "default_to_today": true,
       "help_text": {
         "en": "Describes from which date and time on the data delivery is applicable. If left empty, the publication is considered as available immediately.",
         "fr": "Décrit à partir de quelle date et heure s'applique la livraison des  données. Si laissé vide, la publication est considérée comme disponible immédiatement.",

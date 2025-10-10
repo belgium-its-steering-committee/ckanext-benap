@@ -3,19 +3,27 @@
 {% set time = data.get(field.field_name + '_time') %}
 {% set tz = data.get(field.field_name + '_tz', h.get_display_timezone().zone) %}
 
-
 {% if not date is string and not time is string %}
-    {% set date = data.get(field.field_name) %}
+    {% set combined = data.get(field.field_name) %}
 
-    {% if date %}
+    {% if combined %}
         {% set tz = h.get_display_timezone().zone %}
-        {% set localdate = h.scheming_datetime_to_tz(h.date_str_to_datetime(date), tz).isoformat() %}
-
+        {% set localdate = h.scheming_datetime_to_tz(h.date_str_to_datetime(combined), tz).isoformat() %}
         {% set parts = localdate.split('T') %}
         {% set date = parts[0] %}
         {% set time = parts[1] %}
     {% endif %}
 {% endif %}
+
+{% if field.default_to_today %}
+    {% if not date %}
+        {% set date = h.benap_datetime_string_now('date') %}
+    {% endif %}
+    {% if not time %}
+        {% set time = h.benap_datetime_string_now('time') %}
+    {% endif %}
+{% endif %}
+
 <div style="display:table-row;">
     <div style="display:table-cell; width:50%;">
 {% call form.input(
@@ -60,53 +68,11 @@
     selected=tz,
     error=errors[field.field_name + '_tz'],
     classes=['control-medium'],
-    attrs=dict({"class": "form-control"}, **(field.get('form_attrs', {}))),
+    attrs=dict({"data-module": "hide-control",
+        "data-module-hide-id": "field-" + field.field_name + "-tz",
+        "class": "form-control"}, **(field.get('form_attrs', {}))),
     is_required=h.scheming_field_required(field)
     )
 %}
     {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
 {% endcall %}
-    <script>
-        $('#field-{{ field.field_name }}-tz').parent().parent().toggle();
-
-        setDatetimeIfEmpty();
-
-        function setDatetimeIfEmpty() {
-            if ("{{ field.field_name }}" === "temporal_start") {
-                let dateField = $('#field-temporal_start-date');
-                if (dateField.val() === "") {
-                    dateField.val(getToday());
-                }
-                let timeField = $('#field-temporal_start-time');
-                if (timeField.val() === "") {
-                    timeField.val(getTime());
-                }
-            }
-        }
-
-        function getToday() {
-            let today = new Date();
-            let day = today.getDate();
-            let month = today.getMonth() + 1;
-            if (day < 10) {
-                day = '0' + day;
-            }
-            if (month < 10) {
-                month = '0' + month;
-            }
-            return today.getFullYear() + "-" + month + "-" + day ;
-        }
-
-        function getTime() {
-            let today = new Date();
-            let hours = today.getHours();
-            let minutes = today.getMinutes();
-            if (hours < 10) {
-                hours = '0' + hours;
-            }
-            if (minutes < 10) {
-                minutes = '0' + minutes;
-            }
-            return hours + ":" + minutes;
-        }
-    </script>
