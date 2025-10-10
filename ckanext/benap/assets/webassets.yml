@@ -1,12 +1,3 @@
-# benap-js:
-#   filter: rjsmin
-#   output: ckanext-benap/%(version)s-benap.js
-#   contents:
-#     - js/benap.js
-#   extra:
-#     preload:
-#       - base/main
-
 benap-css:
   filter: cssrewrite
   output: ckanext-benap/%(version)s-benap.css
@@ -15,6 +6,7 @@ benap-css:
     - styles/nap_checked_pill_style.css
     - styles/forms.css
 
+# Always loaded, for data-modules
 transportdata-js:
   filter: rjsmin
   output: ckanext-transportdata/%(version)s-transportdata.js
@@ -24,6 +16,7 @@ transportdata-js:
     - js/scheming-logo_upload.js
     - js/scheming-proxy_upload.js
     - js/scheming-upload.js
+    - js/category-sub-category.js
   extra:
     preload:
       - base/main

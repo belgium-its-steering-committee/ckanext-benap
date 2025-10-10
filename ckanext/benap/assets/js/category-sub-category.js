@@ -1,0 +1,145 @@
+/*
+ * use with category-sub-category.html template
+ *
+ *  on fieldset: data-module="category-sub-category"
+ *  data-module-field-id="#field-{{ field.field_name }}"
+ *
+ */
+
+ckan.module('category-sub-category', function ($) {
+  return {
+    initialize: function () {
+      const options = this.options;
+      console.warn('category-sub-category: initialize', options);
+
+      const fieldId = `#${options.fieldId}`;
+
+      $(fieldId).toggle();
+
+      // Dictionary to store categories and their corresponding tag values
+      let categoryTags = {};
+
+      // Initialize categoryTags from the hidden field if it has a value
+      const initialData = $(fieldId).val();
+      if (initialData) {
+        categoryTags = JSON.parse(initialData);
+        // Open tag containers for categories that already have selected tags
+        for (const category in categoryTags) {
+          if (categoryTags[category].length > 0) {
+            // Show the tag container for this category
+            const tagContainer = $(`.tag-checkbox[data-category="${category}"]`)
+              .closest('.category-container')
+              .find('.tag-container');
+            tagContainer.slideDown();
+            // Check the appropriate tag checkboxes
+            categoryTags[category].forEach((tagValue) => {
+              const tagCheckbox = tagContainer.find(
+                `.tag-checkbox[value="${tagValue}"]`
+              );
+              if (tagCheckbox.length) {
+                tagCheckbox.prop('checked', true);
+              }
+            });
+          }
+        }
+      }
+
+      // Function to update the hidden field with the JSON string
+      function updateField() {
+        if (Object.keys(categoryTags).length === 0) {
+          $(fieldId).val(null);
+        } else {
+          $(fieldId).val(JSON.stringify(categoryTags));
+        }
+      }
+
+      // Function to check if any tags are selected for a given category
+      function hasSelectedTags(categoryValue) {
+        const tagCheckboxes = $(
+          `.tag-checkbox[data-category="${categoryValue}"]`
+        );
+        return tagCheckboxes.is(':checked');
+      }
+
+      // Toggle display of tags and enable/disable based on category selection
+      $('.category-checkbox').on('change', function () {
+        let categoryValue = $(this).data('category'); // Use data-category for the selected category
+        let tagContainer = $(this)
+          .closest('.category-container')
+          .find('.tag-container');
+        let tagCheckboxes = tagContainer.find('.tag-checkbox');
+
+        if (this.checked) {
+          tagContainer.slideDown();
+          tagCheckboxes.prop('disabled', false); // Enable tag checkboxes
+
+          // Ensure the category is added to categoryTags with an empty array if no tags are selected
+          if (!(categoryValue in categoryTags)) {
+            categoryTags[categoryValue] = [];
+          }
+
+          // Check if there are already selected tags and open the container if so
+          if (hasSelectedTags(categoryValue)) {
+            tagContainer.slideDown();
+          }
+        } else {
+          tagContainer.slideUp();
+          tagCheckboxes.prop('disabled', true); // Disable tag checkboxes
+          tagCheckboxes.prop('checked', false); // Uncheck all tags if category is unchecked
+          delete categoryTags[categoryValue]; // Remove category from categoryTags
+        }
+
+        // Update the field with the current tags as a JSON string
+        updateField();
+      });
+
+      // Event listener for the tag-checkboxes
+      $('.tag-checkbox').change(function () {
+        // Get the category value
+        let category = $(this).data('category');
+
+        // Ensure the category is in categoryTags
+        if (!(category in categoryTags)) {
+          categoryTags[category] = [];
+        }
+
+        if (this.checked) {
+          // Add tag value to the array for the corresponding category
+          if (!categoryTags[category].includes(this.value)) {
+            categoryTags[category].push(this.value);
+          }
+        } else {
+          // Remove tag value from the array for the corresponding category
+          categoryTags[category] = categoryTags[category].filter(
+            (tag) => tag !== this.value
+          );
+          // If there are no tags left for this category, set the value to an empty array
+          if (categoryTags[category].length === 0) {
+            delete categoryTags[category]; // Remove the category if no tags are left
+          }
+        }
+
+        // Check if any tags are selected for the category and toggle the tag container
+        const tagContainer = $(this).closest('.tag-container');
+        if (hasSelectedTags(category)) {
+          tagContainer.slideDown(); // Open if any tag is selected
+        } else {
+          tagContainer.slideUp(); // Close if no tags are selected
+        }
+
+        // Update the field with the current tags as a JSON string
+        updateField();
+      });
+
+      // Accordion toggle for category header
+      $('.flex-between').click(function (event) {
+        if (!$(event.target).is('.flex-between *')) {
+          // Only toggle when clicking outside checkbox
+          let tagContainer = $(this).siblings('.tag-container');
+          tagContainer.slideToggle();
+          $(this).find('.caret').toggleClass('dropup'); // Toggle caret icon direction
+        }
+      });
+    },
+  };
+});
