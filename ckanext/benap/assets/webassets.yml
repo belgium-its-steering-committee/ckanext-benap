@@ -16,6 +16,7 @@ transportdata-js:
     - js/scheming-logo_upload.js
     - js/scheming-proxy_upload.js
     - js/scheming-upload.js
+    - js/form-tags.js
     - js/category-sub-category.js
   extra:
     preload:
