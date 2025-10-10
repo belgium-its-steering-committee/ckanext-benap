@@ -213,7 +213,7 @@
         "nl": "Het contactpunt van de metadata, verdeeld in drie velden: naam (verplicht), e-mail (verplicht) en telefoonnummer (optioneel).",
         "de": "Der Ansprechpartner der Metadaten, unterteilt in drei Felder: Name (verpflichtend), E-Mail (verpflichtend) und Telefonnummer (optional)."
       },
-      "form_snippet": "nested_field_with_autocomplete.html",
+      "form_snippet": "contact_point_with_autocomplete.html",
       "display_snippet": null,
       "nested_fields": [
         {
