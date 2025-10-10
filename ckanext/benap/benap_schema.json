@@ -449,8 +449,8 @@
       "preset": "multiple_select",
       "help_text": {
         "en": "Describes the countries covered by the data set (Belgium is mandatory).",
-        "fr": "Beschrijft de EU-lidstaten gedekt door de dataset.",
-        "nl": "Décrit les Etats membres de l'UE couverts par le jeu de données.",
+        "fr": "Décrit les Etats membres de l'UE couverts par le jeu de données.",
+        "nl": "Beschrijft de EU-lidstaten gedekt door de dataset.",
         "de": "Beschreibt die EU-Mitgliedstaaten, die vom Datensatz gedeckt werden."
       },
       "choices_helper": "benap_ontology_helper",
