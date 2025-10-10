@@ -237,8 +237,8 @@
       },
       "help_text": {
         "en": "The \"contact point\", describes an organisation, if applicable a person, which is responsible for the creation and maintenance of the metadata. This person or organization is the single point of contact for the present metadata set.",
-        "fr": "Le \\\"point de contact\\\" décrit une organisation, ou une personne si d'application, qui est responsable de la création et de la mise à jour des métadonnées. Cette personne ou organisation est le point de contact unique pour le présent jeu de métadonnées.",
-        "nl": "Het \\\"contactpunt\\\" beschrijft een organisatie, of een persoon indien van toepassing, die verantwoordelijk is voor de aanmaak en bijwerking van de metadata. Deze persoon of organisatie is het één contactpunt voor deze set van metadata.",
+        "fr": "Le \"point de contact\" décrit une organisation, ou une personne si d'application, qui est responsable de la création et de la mise à jour des métadonnées. Cette personne ou organisation est le point de contact unique pour le présent jeu de métadonnées.",
+        "nl": "Het \"contactpunt\" beschrijft een organisatie, of een persoon indien van toepassing, die verantwoordelijk is voor de aanmaak en bijwerking van de metadata. Deze persoon of organisatie is het één contactpunt voor deze set van metadata.",
         "de": "Der \"Kontaktpunkt\" beschreibt eine Organisation, oder gegebenenfalls eine Person, die für die Herstellung und Aktualisierung von Metadaten verantwortlich ist. Diese Person oder Organisation ist der einzige Kontaktpunkt für diesen Metadatensatz."
       },
       "form_snippet": null,
