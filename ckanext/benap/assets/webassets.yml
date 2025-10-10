@@ -18,6 +18,7 @@ transportdata-js:
     - js/scheming-upload.js
     - js/form-tags.js
     - js/category-sub-category.js
+    - js/nested-field-license.js
   extra:
     preload:
       - base/main

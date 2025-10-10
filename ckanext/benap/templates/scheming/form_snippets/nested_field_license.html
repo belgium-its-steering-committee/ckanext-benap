@@ -1,5 +1,7 @@
 {% import 'macros/form.html' as form %}
 
+<div data-module="nested-field-license" data-module-field-id="field-{{ field.field_name }}">
+
 <fieldset id="rights-fieldset" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 40px;">
     <legend style="font-weight: bold; margin-bottom: -5px;">
         <label style="display: inline-block; width: 120px;">
@@ -33,69 +35,3 @@
         {% endif %}
     {% endfor %}
 </fieldset>
-
-<script>
-  $(document).ready(function() {
-    var $conditionsUsageField = $('#field-conditions_usage');
-    var $licenseTypeField = $('#field-license_type');
-    var $starElement = $('#star');
-    var $licenseFieldset = $('#license-fieldset');
-
-    function toggleFieldsetDisability($fieldset, hide) {
-      if(hide){
-        $fieldset.hide();
-        $fieldset.find('input, select, textarea').each(function(){
-          $(this).val('');
-        });
-      }else{
-        $fieldset.show();
-      }
-    }
-
-    function toggleRequiredFields(toggle) {
-      $('#field-license_text_translated-en').prop('required', toggle);
-      // option ro make multiple license text fields mandatory
-      // $('#field-license_text_translated-en', #field-license_text_translated-nl, #field-license_text_translated-de, #field-license_text_translated-fr').prop('required', toggle);
-    }
-
-    $conditionsUsageField.on('change', function() {
-      var selectedValue = $(this).val();
-      if (selectedValue === 'https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided') {
-        $licenseTypeField.prop('required', true);
-        $starElement.show();
-        toggleFieldsetDisability($licenseFieldset, false);
-      } else {
-        $licenseTypeField.prop('required', false);
-        toggleRequiredFields(false);
-        $starElement.hide();
-        toggleFieldsetDisability($licenseFieldset, true);
-      }
-    });
-
-    if ($conditionsUsageField.val() === 'https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided') {
-      $licenseTypeField.prop('required', true);
-      $starElement.show();
-      toggleFieldsetDisability($licenseFieldset, false);
-    } else {
-      $licenseTypeField.prop('required', false);
-      toggleRequiredFields(false);
-      $starElement.hide();
-      toggleFieldsetDisability($licenseFieldset, true);
-    }
-
-    $licenseTypeField.on('change', function() {
-      var licenseTypeValue = $(this).val();
-      if (licenseTypeValue === 'Other') {
-        toggleRequiredFields(true);
-      } else {
-        toggleRequiredFields(false);
-      }
-    });
-
-    if ($licenseTypeField.val() === 'Other') {
-      toggleRequiredFields(true);
-    } else {
-      toggleRequiredFields(false);
-    }
-  });
-</script>
