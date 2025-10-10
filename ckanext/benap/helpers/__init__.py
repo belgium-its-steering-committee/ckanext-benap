@@ -8,6 +8,7 @@ from itertools import chain
 from ckan.logic import NotAuthorized
 import re
 from ckan.lib.helpers import get_site_protocol_and_host, lang, organizations_available
+from ckan.lib.i18n import get_available_locales
 
 from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
                                          CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE, FREQUENCY,
@@ -408,3 +409,17 @@ def ckan_tag_to_transport_mode_concept_label(tag_name):
     transport_mode_concept_uri = ckan_tag_to_transport_mode_concept_uri(tag_name)
     transport_mode_label = _c(transport_mode_concept_uri)
     return transport_mode_label
+
+
+def benap_get_available_locales_sorted():
+    """
+    get_available_locals but in order en, nl, fr, de.
+    """
+    locales = get_available_locales()
+    order = ['en', 'nl', 'fr', 'de'] # todo: get from .env file?
+
+    locales_sorted = []
+    for lang in order:
+      locale = next((l for l in locales if l.short_name == lang), None)
+      locales_sorted.append(locale)
+    return locales_sorted
