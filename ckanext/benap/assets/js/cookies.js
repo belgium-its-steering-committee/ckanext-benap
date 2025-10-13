@@ -221,4 +221,18 @@ ckan.module('cookies', function (jQuery, _) {
   };
 });
 
+ckan.module('youtube-consent-button', function (jQuery, _) {
+  return {
+    initialize: function () {
+      const src = this.options.youtubeSrc;
+      const button = this.el
+      var iframe = $('[youtube-consent-button-iframe]');
 
+      button.on('click', function () {
+        iframe.attr('src', src);
+        iframe.show();
+        button.hide();
+      });
+    },
+  };
+});
