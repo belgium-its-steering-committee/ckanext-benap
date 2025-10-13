@@ -217,24 +217,6 @@ def organization_by_id(id):
 def organization_name_by_id(id):
     return organization_name(organization_by_id(id))
 
-
-def convert_validation_list_to_JSON(data):
-    """
-    Converts a string containing a JSON-like structure into a proper JSON list format.
-
-    If the input string contains curly braces ('{', '}'), it is assumed to be a
-    JSON-like structure and is converted by replacing the curly braces with square
-    brackets ('[', ']'). If not, the string is wrapped in a JSON array format.
-
-    This function is particularly useful for handling cases where a validation
-    process converts a JSON string into a list format unexpectedly.
-    """
-    if '{' in data:
-        data_string = data.replace('{', '[').replace('}', ']')
-    else:
-        data_string = '["{}"]'.format(data)
-    return data_string
-
 def benap_get_organization_field_by_id(org_id, field_name):
     """
     Retrieve the specified field value from an organization's data based on the organization id.

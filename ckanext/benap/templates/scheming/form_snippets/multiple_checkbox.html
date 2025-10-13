@@ -21,8 +21,7 @@
                     name="{{ field.field_name }}"
                     value="{{ val }}"
                     {%- set field_value = data[field.field_name] -%}
-                    {%- set converted_value = h.benap_convert_validation_list_to_JSON(field_value) -%}
-                    {{ "checked " if val in field_value or val in converted_value }} />
+                    {{ "checked " if val in field_value }} />
                 {{ label }}
             </label>
         {%- endfor -%}

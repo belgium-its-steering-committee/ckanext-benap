@@ -30,7 +30,7 @@
     {%- for val, label in choices -%}
       <option id="field-{{ field.field_name }}-{{ val }}"
           value="{{ val }}"
-          {{"selected " if val in h.benap_convert_validation_list_to_JSON(data[field.field_name]) }} />
+          {{"selected " if val in data[field.field_name] }} />
         {{ label }}
       </option>
     {%- endfor -%}
