@@ -1,5 +1,5 @@
 /*
- * used inside form-tags.html template
+ * used inside form_tags.html template
  *
  *  on the <input>: 
  *    data-module="form-tags"
@@ -13,9 +13,6 @@ ckan.module('form-tags', function ($) {
       const dataFieldId= this.options.dataFieldId;
       // target might be out of the scope of this module
       const dataField = $('#'+dataFieldId); 
-
-      // Hide the original data text field
-      dataField.hide();
 
       this.el.change(function () {
         if (this.checked) {
@@ -37,5 +34,4 @@ ckan.module('form-tags', function ($) {
     },
   };
 });
-
 

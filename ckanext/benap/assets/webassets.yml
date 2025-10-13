@@ -20,6 +20,7 @@ transportdata-js:
     - js/category-sub-category.js
     - js/nested-field-license.js
     - js/contact_point_autocomplete.js
+    - js/toggle-section.js
   extra:
     preload:
       - base/main
