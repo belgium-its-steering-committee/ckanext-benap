@@ -222,12 +222,11 @@ ckan.module('cookies', function (jQuery, _) {
 });
 
 // crude one-time script for this consent button
-ckan.module('youtube-consent-button', function (jQuery, _) {
+ckan.module('youtube-consent-button', function ($, _) {
   return {
     initialize: function () {
       const src = this.options.youtubeSrc;
       const button = this.el;
-      // Select the element itself if it is an iframe, or any descendant iframe(s)
       const consentElement = $('[youtube-consent-button-iframe]');
       var iframe = $('[youtube-consent-button-iframe] iframe');
 

@@ -1,5 +1,3 @@
-'use strict';
-
 ckan.module('collapsible-section', function ($) {
   return {
     initialize: function () {
