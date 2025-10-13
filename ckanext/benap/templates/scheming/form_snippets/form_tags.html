@@ -1,19 +1,5 @@
 {% import 'macros/form.html' as form %}
 
-<style>
-fieldset.checkboxes label {
-    font-weight: normal;
-    display: block;
-}
-fieldset.checkboxes label:after {
-    content: none;
-}
-fieldset.checkboxes label input {
-    width: auto;
-    top: 0;
-}
-</style>
-
 {% call form.input(
     field.field_name,
     id='field-' + field.field_name,
@@ -22,7 +8,7 @@ fieldset.checkboxes label input {
     value=h.benap_tag_update_helper(data[field.field_name], h.get_translated_tags()),
     error=errors[field.field_name],
     classes=field.classes if 'classes' in field else ['control-medium'],
-    attrs=dict({"class": "form-control"}, **(field.get('form_attrs', {}))),
+    attrs=dict({"class": "hide-control form-control"}, **(field.get('form_attrs', {}))),
     is_required=h.scheming_field_required(field)
     )
 %}
@@ -34,60 +20,35 @@ fieldset.checkboxes label input {
   {%- endif -%}
     <fieldset class="checkboxes">
         {%- for tags, category in choices -%}
-            <div id="collapse-{{ h.benap_scheming_language_text(category, english).replace(' ', '-') }}" class="flex-between border-1" style="padding: 6px 12px">
+            <div data-module="toggle-section">
+            <div class="flex-between border-1" toggle-section-on-click style="padding: 6px 12px">
                 <h3 class="m-0" style="font-size: 14px; font-weight: bold;">
                     {{ h.benap_scheming_language_text(category, lang) }}
                 </h3>
-                <div id="collapse-{{ h.benap_scheming_language_text(category, english).replace(' ', '-') }}-open" style="padding-right: 4px; font-size: 10px;">
-                    <span class="caret"></span>
+                <div toggle-section-target style="padding: 4px; font-size: 10px;">
+                  <span class="caret"></span>
                 </div>
-                <div id="collapse-{{ h.benap_scheming_language_text(category, english).replace(' ', '-') }}-close" style="padding-right: 4px; font-size: 10px;">
-                    <span class="dropup">
-                        <span class="caret"></span>
-                    </span>
+                <div toggle-section-target class="hide-control" style="padding-right: 4px; font-size: 10px;">
+                  <span class="dropup">
+                    <span class="caret"></span>
+                  </span> 
                 </div>
             </div>
-            <div id="collapse-content-{{ h.benap_scheming_language_text(category, english).replace(' ', '-') }}" class="border-1 pl-12 transport-mode-collapse-content">
+            <div toggle-section-target class="hide-control border-1 pl-12 transport-mode-collapse-content" >
                 {%- for val, label in tags -%}
                     <label for="field-{{ field.field_name }}-{{ val }}">
                         <input id="field-{{ field.field_name }}-{{ val }}"
                             type="checkbox"
                             value="{{ val }}"
+                            data-module="form-tags"
+                            data-module-data-field-id="field-{{ field.field_name }}"
+                            data-module-val="{{ val }}"
                             {{ "checked " if val in data[field.field_name] }} />
                         {{ h.benap_scheming_language_text(label, lang) }}
-                        <script>
-                            $('#field-{{ field.field_name }}').hide();
-
-                            $('input[value="{{ val }}"]').change(function() {
-                                if (this.checked) {
-                                    let tags = $('#field-{{ field.field_name }}').val().split(',');
-                                    tags.push(this.value);
-                                    $('#field-{{ field.field_name }}').val(tags.join().replace(/^,/, ''));
-                                } else {
-                                    let tags = $('#field-{{ field.field_name }}').val().split(',');
-                                    let remainingTags = [];
-                                    tags.forEach(tag => {
-                                        if (tag.trim() !== this.value) {
-                                            remainingTags.push(tag);
-                                        }
-                                    });
-                                    remainingTags.join();
-                                    $('#field-{{ field.field_name }}').val(remainingTags);
-                                }
-                            });
-                        </script>
                     </label>
                 {%- endfor -%}
             </div>
-            <script>
-                $('#collapse-content-{{ h.benap_scheming_language_text(category, english).replace(" ", "-") }}').toggle();
-                $('#collapse-{{ h.benap_scheming_language_text(category, english).replace(" ", "-") }}-close').toggle();
-                $('#collapse-{{ h.benap_scheming_language_text(category, english).replace(" ", "-") }}').click(function() {
-                    $('#collapse-content-{{ h.benap_scheming_language_text(category, english).replace(" ", "-") }}').toggle();
-                    $('#collapse-{{ h.benap_scheming_language_text(category, english).replace(" ", "-") }}-close').toggle();
-                    $('#collapse-{{ h.benap_scheming_language_text(category, english).replace(" ", "-") }}-open').toggle();
-                });
-            </script>
+            </div>
         {%- endfor -%}
 
     </fieldset>

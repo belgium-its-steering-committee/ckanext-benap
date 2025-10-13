@@ -1,23 +1,6 @@
 {% import 'macros/form.html' as form %}
 {% from 'macros/string_utils.html' import render_string_with_links %}
 
-<style>
-fieldset.radios label {
-    font-weight: normal;
-    display: block;
-}
-fieldset.radios label:after {
-    content: none;
-}
-fieldset.radios label input {
-    width: auto;
-    top: 0;
-}
-.no-bottom-margin {
-    margin-bottom: 4px;
-}
-</style>
-
 {% macro help_text(help_text_content) %}
     {%- if help_text_content -%}
         <div style="padding-left: 24px;">

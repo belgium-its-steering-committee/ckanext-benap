@@ -814,3 +814,9 @@ span.item-label {
   width: 70%;
   word-wrap: break-word;
 }
+
+@-moz-document url-prefix() {
+  #nap-its {
+      filter: brightness(75%);
+  }
+}

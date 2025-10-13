@@ -1,18 +1,7 @@
 
 
-<div id="extent_map" style="height: 180px; "></div>
-
-<script language="JavaScript">
-    var mymap = L.map('extent_map').setView([50.859933, 4.351969], 7);
-
-    L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-         attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
-     }).addTo(mymap);
-
-    var geojsonFeature = {{ data[field.field_name]|safe }} ;
-
-    var geoJSONLayer = L.geoJSON(geojsonFeature);
-    geoJSONLayer.addTo(mymap);
-    mymap.fitBounds(geoJSONLayer.getBounds());
-
-</script>
+<div id="extent_map" data-module="map-display" 
+      data-module-geojson='{{ data[field.field_name]|safe }}' 
+      style="height: 180px; "></div>
+{% asset 'benap/leaflet-maps-css' %}
+{% asset 'benap/leaflet-maps-js' %}
