@@ -20,7 +20,6 @@ from ckanext.benap.constants.mobilitydcat_ap.transport_mode import BY_CATEGORY a
 from ckanext.benap.constants.concept_collections.mobilitydcat import TRANSPORT_MODE as TRANSPORT_MODE_CONCEPTS
 
 from ckanext.benap.util.forms import map_for_form_select
-from ckanext.scheming.helpers import scheming_get_dataset_schema
 from .concepts import get_concept_label
 
 log = logging.getLogger(__name__)
@@ -137,24 +136,6 @@ def ontology_helper(context):
         return map_for_form_select(REFERENCE_SYSTEM)
     return None
 
-
-# TODO: This translation should be done using the plugin translation mechanism
-# It should be done in the IFacets implementation of this plugin
-def translate_organization_filter(facet_title, lang):
-    if facet_title == "Organizations":
-        return lang_text({
-            "en": "Organizations", 
-            "nl": "Organisaties", 
-            "fr": "Organisations", 
-            "de": "Organisationen"}, lang)
-    elif facet_title == "NAP Type":
-        return lang_text({
-            "en": "NAP type", 
-            "nl": "NAP type", 
-            "fr": "Type de NAP", 
-            "de": "NAP typ"}, lang)
-    return facet_title
-
 def lang_text(translations, language = None, fallback = True):
     """
     return the translation (of current user locale by default) of a dict of translated strings in form:
@@ -178,11 +159,6 @@ def lang_text(translations, language = None, fallback = True):
         return translation
     else:
         return translations
-
-# TODO: remove after replacing this with lang_text in fluent fork
-def scheming_language_text_fallback(field_data, language_data):
-    return lang_text(field_data)
-
 
 def organisation_names_for_autocomplete():
     return [org['title'] for org in organizations_available('create_dataset')]

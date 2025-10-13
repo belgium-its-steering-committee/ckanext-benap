@@ -7,7 +7,7 @@
     {% for facet in facet_titles %}
       {% snippet
         'snippets/facet_list.html',
-        title=h.translate_organization_filter(facet_titles[facet], h.lang()),
+        title=facet_titles[facet],
         name=facet,
         search_facets=search_facets,
         label_function=h.get_facet_label_function(facet)

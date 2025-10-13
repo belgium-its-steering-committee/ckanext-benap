@@ -3,19 +3,20 @@ from collections import OrderedDict
 
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
+from ckan.plugins.toolkit import _
 from ckan.lib.plugins import DefaultTranslation
 import json
 from flask import Blueprint
 
-from ckanext.benap.helpers import ontology_helper, organization_name, scheming_language_text_fallback, organisation_names_for_autocomplete, \
+from ckanext.benap.helpers import ontology_helper, organization_name, organisation_names_for_autocomplete, \
     get_translated_tags, scheming_language_text, format_datetime, ckan_tag_to_transport_mode_concept_label,\
     parse_embedded_links, organization_name_by_id, lang_text, \
-    translate_organization_filter, convert_validation_list_to_JSON, benap_get_organization_field_by_id,\
+    convert_validation_list_to_JSON, benap_get_organization_field_by_id,\
     benap_get_organization_field_by_specified_field, benap_retrieve_dict_items_or_keys_or_values, get_translated_category_and_sub_category, \
     benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper, _c, is_member_of_org, get_facet_label_function, get_facet_name_label_function
 
 from ckanext.benap.util.forms import map_for_form_select
-from ckanext.benap.logic.validators import phone_number_validator, \
+from ckanext.benap.logic.validators import doc_validator, logo_extensions, phone_number_validator, \
     countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin, \
     is_choice_null, contact_point_org_fields_consistency_check, \
     license_fields_conditional_validation, benap_tag_string_convert, fluent_tags_validator, category_sub_category_validator
@@ -36,6 +37,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     plugins.implements(plugins.IFacets, inherit=True)
     plugins.implements(plugins.IPackageController, inherit=True)
     plugins.implements(plugins.IBlueprint, inherit=True)
+    plugins.implements(plugins.IUploader, inherit=True)
 
     geographic_granularity_map = [('', ''),
                                   ('national', 'National'),
@@ -60,8 +62,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             '_c': _c,
             'benap_geographic_granularity_helper': lambda context: map_for_form_select(self.geographic_granularity_map),
             'benap_ontology_helper': ontology_helper,
-            # TODO: remove after replacing this with lang_text in fluent fork
-            'benap_scheming_language_text_fallback': scheming_language_text_fallback,
             'benap_organisation_names_for_autocomplete': organisation_names_for_autocomplete,
             'benap_lang_text': lang_text,
             'get_translated_tags': get_translated_tags,
@@ -70,7 +70,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'format_datetime': format_datetime,
             'benap_organization_name': organization_name,
             'benap_organization_name_by_id': organization_name_by_id,
-            'translate_organization_filter': translate_organization_filter,
             'benap_convert_validation_list_to_JSON': convert_validation_list_to_JSON,
             'benap_get_organization_field_by_id': benap_get_organization_field_by_id,
             'benap_get_organization_field_by_specified_field': benap_get_organization_field_by_specified_field,
@@ -100,6 +99,8 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_tag_string_convert': benap_tag_string_convert,
             'benap_fluent_tags_validator': fluent_tags_validator,
             'benap_category_sub_category_validator': category_sub_category_validator,
+            'benap_logo_extensions': logo_extensions,
+            'benap_doc_validator': doc_validator,
         }
 
     # IAuthFunctions
@@ -113,14 +114,17 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
 
     # IFacets
     def dataset_facets(self, facets_dict, package_type):
+        # This overrides the full facets list, which is not recommended by the docs, as the order
+        # that plugins add facets now matters. However, the assumption that this is done 
+        # is too far coupled in code too easily factor away. So leave this for now.
         facets_dict = OrderedDict([
-            ('nap_type', 'NAP Type'),
-            ('tags', 'Tags'),
-            ('regions_covered_uri', 'Area covered by publication'),
-            ('mobility_theme_uri', 'Mobility Theme'),
-            ('license_uri', 'License'),
-            ('format_uri', 'Format'),
-            ('organization', 'Organizations'),
+            ('nap_type', _('NAP Type')),
+            ('tags', _('Transportation modes')),
+            ('regions_covered_uri', _('Area covered by publication')),
+            ('mobility_theme_uri', _('Mobility Theme')),
+            ('license_uri', _('License')),
+            ('format_uri', _('Format')),
+            ('organization', _('Organizations')),
         ])
         return facets_dict
 

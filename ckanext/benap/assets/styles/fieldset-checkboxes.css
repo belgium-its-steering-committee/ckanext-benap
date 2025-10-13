@@ -1,0 +1,11 @@
+fieldset.checkboxes label {
+  font-weight: normal;
+  display: block;
+}
+fieldset.checkboxes label:after {
+  content: none;
+}
+fieldset.checkboxes label input {
+  width: auto;
+  top: 0;
+}
