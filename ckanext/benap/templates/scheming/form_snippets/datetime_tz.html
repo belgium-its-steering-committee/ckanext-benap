@@ -68,9 +68,7 @@
     selected=tz,
     error=errors[field.field_name + '_tz'],
     classes=['control-medium'],
-    attrs=dict({"data-module": "hide-control",
-        "data-module-hide-id": "field-" + field.field_name + "-tz",
-        "class": "form-control"}, **(field.get('form_attrs', {}))),
+    attrs=dict({"class": "hide-control form-control"}, **(field.get('form_attrs', {}))),
     is_required=h.scheming_field_required(field)
     )
 %}
