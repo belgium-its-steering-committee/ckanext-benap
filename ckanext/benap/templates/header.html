@@ -7,7 +7,7 @@
         has to be moved to an asset and imported in base.html
  #}
 {% asset 'benap/cookies-modal-css' %}
-    <div id="overlay-cookies">
+    <div id="overlay-cookies" data-module="cookies">
         <div id="overlay-cookies-content">
             <div id="wrapper-cookies-1" style="width: 100%">
                 <h2 style="margin: 0 0 16px 0;">{{ _('Welcome') }}!</h2>
@@ -121,90 +121,7 @@
         </div>
     </div>
 
-    <script>
-        function labelText(event) {
-            let enabledText = "Enabled";
-            let disabledText = "Disabled";
-            let regexp = /^.*\/nl/;
-            if (regexp.test(event.target.baseURI)) {
-                enabledText = "Ingeschakeld";
-                disabledText = "Uitgeschakeld";
-            }
-
-            if (event.target.checked == true){
-                event.target.previousElementSibling.innerText = enabledText;
-
-            }
-            else {
-                event.target.previousElementSibling.innerText = disabledText;
-
-            }
-        }
-
-        // change the label of the inboxes onclick
-        const checkboxF = document.getElementById('functional');
-        checkboxF.onclick = (event) => {
-            labelText(event);
-        };
-        const checkboxA = document.getElementById('analytical');
-        checkboxA.onclick = (event) => {
-            labelText(event);
-        };
-        const checkboxM = document.getElementById('marketing');
-        checkboxM.onclick = (event) => {
-            labelText(event);
-        };
-
-        // cookie stuff
-        // cookie is already declared in base.html
-        cookie = readTransportDataCookie('transportdata_cookies');
-        if (!cookie || !cookie.necessary) {
-            $('#overlay-cookies').css('display', 'flex');
-        }
-
-        $('#wrapper-cookies-2').hide();
-        $('#preferences').on('click', (event) => {
-            $('#wrapper-cookies-1').hide();
-        $('#wrapper-cookies-2').show();
-        });
-
-        $('.accept-all').on('click', (event) => {
-            const x = {necessary: true, functional: true, analytical: true, marketing: true};
-            setAllCookies(x);
-            $('#overlay-cookies').css('display', 'none');
-        });
-
-        $('#accept-preferences').on('click', (event) => {
-            const x = {
-                necessary: $('#necessary').is(":checked"),
-                functional: $('#functional').is(":checked"),
-                analytical: $('#analytical').is(":checked"),
-                marketing: $('#marketing').is(":checked")
-            };
-            setAllCookies(x);
-            $('#overlay-cookies').css('display', 'none');
-
-        });
-
-    </script>
-
-    <script>
-
-        const acc = document.getElementsByClassName("category-item-nav");
-        for(let i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function(){
-                this.classList.toggle("active");
-                const panel = this.nextElementSibling;
-                if(panel.style.display === "block") {
-                    panel.style.display = "none";
-                }
-                else {
-                    panel.style.display = "block";
-                }
-            });
-        }
-
-    </script>
+    
     {{super()}}
 {% endblock %}
 

@@ -12,6 +12,7 @@ transportdata-js:
   output: ckanext-transportdata/%(version)s-transportdata.js
   contents:
     - js/transportdata.js
+    - js/cookies.js
     - js/scheming-doc_upload.js
     - js/scheming-logo_upload.js
     - js/scheming-proxy_upload.js
