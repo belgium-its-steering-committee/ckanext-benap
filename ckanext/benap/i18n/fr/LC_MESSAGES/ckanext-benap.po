@@ -410,8 +410,8 @@ msgid "Subscribe"
 msgstr "Inscrivez-vous"
 
 #: ckanext/benap/templates/home/index.html:50
-msgid "https://www.youtube.com/embed/0-M48xzlWzI?rel=0&enablejsapi=1"
-msgstr "https://www.youtube.com/embed/p8b9hIYM9hE?rel=0&enablejsapi=1"
+msgid "https://www.youtube-nocookie.com/embed/0-M48xzlWzI?rel=0&enablejsapi=1"
+msgstr "https://www.youtube-nocookie.com/embed/p8b9hIYM9hE?rel=0&enablejsapi=1"
 
 #: ckanext/benap/templates/home/snippets/community.html:7
 msgid "JOIN OUR COMMUNITY FORUM"
