@@ -34,12 +34,8 @@ transportdata-css:
     - styles/uploadDocValidation.css
     - styles/uploadLogoValidation.css
     - styles/uploadProxyValidation.css
-
-cookies-modal-css:
-  filter: cssrewrite
-  output: ckanext-transportdata/%(version)s-cookies-modal.css
-  contents:
     - styles/cookies-modal.css
+    
 
 # assets to include for using leaflet map-display or map-form module
 leaflet-maps-js:
