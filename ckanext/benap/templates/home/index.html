@@ -45,13 +45,21 @@
     </div>
 
     <div class="h-100 w-100 flex align-items-center highlight-box">
-      <div class="video-wrapper">
-        <iframe 
-          src="{{ _('https://www.youtube-nocookie.com/embed/0-M48xzlWzI?rel=0&enablejsapi=1') }}"
-          allowfullscreen
-        >
-        </iframe>
-      </div>
+        <div data-module="youtube-consent-button"
+        data-module-youtube-src="{{ _('https://www.youtube-nocookie.com/embed/0-M48xzlWzI?rel=0&enablejsapi=1') }}"
+        class="youtube-consent-prompt">
+          Click to accept YouTube cookies and watch the video
+        </div>
+        <div class="video-wrapper">
+          <iframe
+            youtube-consent-button-iframe
+            class="hide-control"
+            sandbox="allow-scripts allow-same-origin allow-presentation"
+            referrerpolicy="no-referrer"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
     </div>
 
     <div>

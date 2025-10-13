@@ -1,5 +1,7 @@
 # coding=utf-8
 import json
+
+import pytz
 import ckan.plugins.toolkit as toolkit
 from ckan.common import config
 import logging
@@ -7,7 +9,9 @@ from .decorators import decorator_timer
 from itertools import chain
 from ckan.logic import NotAuthorized
 import re
-from ckan.lib.helpers import get_site_protocol_and_host, lang, organizations_available
+from ckan.lib.helpers import get_site_protocol_and_host, lang, organizations_available, get_display_timezone
+from datetime import datetime
+from ckan.lib.i18n import get_available_locales
 
 from ckanext.benap.helpers.lists import (NUTS1_BE, GEOREFERENCING_METHOD, DATASET_TYPE, NAP_TYPE, NETWORK_COVERAGE,
                                          CONDITIONS_USAGE, CONDITIONS_ACCESS, LICENSE_TYPE, FREQUENCY,
@@ -217,24 +221,6 @@ def organization_by_id(id):
 def organization_name_by_id(id):
     return organization_name(organization_by_id(id))
 
-
-def convert_validation_list_to_JSON(data):
-    """
-    Converts a string containing a JSON-like structure into a proper JSON list format.
-
-    If the input string contains curly braces ('{', '}'), it is assumed to be a
-    JSON-like structure and is converted by replacing the curly braces with square
-    brackets ('[', ']'). If not, the string is wrapped in a JSON array format.
-
-    This function is particularly useful for handling cases where a validation
-    process converts a JSON string into a list format unexpectedly.
-    """
-    if '{' in data:
-        data_string = data.replace('{', '[').replace('}', ']')
-    else:
-        data_string = '["{}"]'.format(data)
-    return data_string
-
 def benap_get_organization_field_by_id(org_id, field_name):
     """
     Retrieve the specified field value from an organization's data based on the organization id.
@@ -408,3 +394,38 @@ def ckan_tag_to_transport_mode_concept_label(tag_name):
     transport_mode_concept_uri = ckan_tag_to_transport_mode_concept_uri(tag_name)
     transport_mode_label = _c(transport_mode_concept_uri)
     return transport_mode_label
+
+
+def benap_get_available_locales_sorted():
+    """
+    get_available_locals but in order en, nl, fr, de.
+    """
+    locales = get_available_locales()
+    order = ['en', 'nl', 'fr', 'de'] # todo: get from .env file?
+
+    locales_sorted = []
+    for lang in order:
+      locale = next((l for l in locales if l.short_name == lang), None)
+      locales_sorted.append(locale)
+    return locales_sorted
+
+
+
+def benap_datetime_string_now(part = None):
+    """
+    Return dict with:
+    'date': yyyy-mm-dd
+    'time': hh:mm
+    'iso': iso format
+    """
+    # Always use Europe/Brussels timezone (Belgium)
+    # As datetimes are saved without timezone info in database anyway
+    # so the assumption is made that any inputted time is Belgium time.
+    tz = pytz.timezone('Europe/Brussels')
+    now = datetime.now(tz)
+    formats = {
+        'date': now.strftime('%Y-%m-%d'),
+        'time': now.strftime('%H:%M'),
+        'iso': now.isoformat()
+    }
+    return formats[part] if part else formats

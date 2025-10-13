@@ -2,8 +2,8 @@
 <form class="form-inline lang-select" action="{% url_for 'util.internal_redirect' %}" data-module="select-switch" method="POST">
   {{ h.csrf_input() }} 
   <label for="field-lang-select" class="m-0">{{ _('Language') }}</label>
-  <select id="field-lang-select" class="m-0" name="url" data-module-dropdown-class="lang-dropdown" data-module-container-class="lang-container">
-    {% for locale in h.get_available_locales() %}
+  <select id="field-lang-select" class="m-0" name="url">
+    {% for locale in h.benap_get_available_locales_sorted() %}
       <option class="lang-option" value="{% url_for h.current_url(), locale=locale.short_name %}" {% if locale.identifier == current_lang %}selected="selected"{% endif %}>
           {{ locale.short_name | upper or locale.english_name }}
       </option>
@@ -11,21 +11,3 @@
   </select>
   <button class="btn btn-default js-hide" hidden type="submit">{{ _('Go') }}</button>
 </form>
-
-<script>
-    var my_options = $("footer #field-lang-select .lang-option");
-    var selected = $("footer #field-lang-select").val();
-
-    my_options.sort(function(a,b) {
-        if (a.text > b.text) return 1;
-        if (a.text < b.text) return -1;
-        return 0
-    })
-    var temp_lang = my_options[0];
-    my_options[0] = my_options[1];
-    my_options[1] = my_options[3];
-    my_options[3] = temp_lang;
-
-    $("footer #field-lang-select").empty().append( my_options );
-    $("footer #field-lang-select").val(selected);
-</script>

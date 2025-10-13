@@ -13,55 +13,14 @@ attrs=dict({"class": "form-control", "style": "display:none; visibility:hidden;"
 is_required=h.scheming_field_required(field)
 )
 %}
-<div id="form_extent_map" style="height: 280px; "></div>
+<div id="form_extent_map" data-module="map-form" 
+      data-module-input-id="field-{{field.field_name}}"
+      style="height: 280px; "></div>
 {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
 {% endcall %}
 
-<script language="JavaScript">
-    var map = L.map('form_extent_map').setView([50.859933, 4.351969], 7);
-    L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-         attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    var drawnItems = new L.FeatureGroup();
-    map.addLayer(drawnItems, {crs: L.CRS.EPSG4326});
-    map.pm.addControls({
-        position: 'topleft',
-        drawMarker: false,
-        drawCircleMarker: false,
-        drawPolyline: false,
-        drawRectangle: true,
-        drawPolygon: false,
-        drawCircle: false,
-        editMode: false,
-        dragMode: false,
-        cutPolygon: false,
-        removalMode: true,
-    });
-
-     var input_field = document.getElementById('field-{{field.field_name}}');
-     if(input_field.value){
-        var layer = L.geoJSON(JSON.parse(input_field.value));
-        drawnItems.addLayer(layer);
-     }
-
-    map.on('pm:create',  function (e) {
-       layer = e.layer;
-       var layerGeoJSON = layer.toGeoJSON()["geometry"];
-       drawnItems.addLayer(layer);
-       var input_field = document.getElementById('field-{{field.field_name}}');
-       input_field.value = JSON.stringify(layerGeoJSON, null);
-    });
-
-    map.on('pm:remove',  function (e) {
-       layer = e.layer;
-       var layerGeoJSON = layer.toGeoJSON()["geometry"];
-       var input_field = document.getElementById('field-{{field.field_name}}');
-       input_field.value = null;
-    });
-
-
-</script>
+{% asset 'benap/leaflet-maps-css' %}
+{% asset 'benap/leaflet-maps-js' %}
 
 <br/>
 

@@ -1,19 +1,22 @@
 # coding=utf-8
 from collections import OrderedDict
 
+from ckan import authz
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckan.plugins.toolkit import _
 from ckan.lib.plugins import DefaultTranslation
 import json
-from flask import Blueprint
+from flask import Blueprint, send_from_directory
+from ckan.common import current_user
 
 from ckanext.benap.helpers import ontology_helper, organization_name, organisation_names_for_autocomplete, \
     get_translated_tags, scheming_language_text, format_datetime, ckan_tag_to_transport_mode_concept_label,\
     parse_embedded_links, organization_name_by_id, lang_text, \
-    convert_validation_list_to_JSON, benap_get_organization_field_by_id,\
+    benap_get_organization_field_by_id,\
     benap_get_organization_field_by_specified_field, benap_retrieve_dict_items_or_keys_or_values, get_translated_category_and_sub_category, \
-    benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper, _c, is_member_of_org, get_facet_label_function, get_facet_name_label_function
+    benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper, _c, is_member_of_org, get_facet_label_function, get_facet_name_label_function, \
+    benap_get_available_locales_sorted, benap_datetime_string_now
 
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.logic.validators import doc_validator, logo_extensions, phone_number_validator, \
@@ -24,7 +27,7 @@ from ckanext.benap.helpers.concepts import get_concept_label
 
 from ckanext.benap.logic.auth.get import member_list, user_autocomplete, user_list
 from ckanext.benap.custom_group import CreateGroupView, EditGroupView
-from ckanext.benap.uploader import OrganizationUploader
+from ckanext.benap.uploader import OrganizationUploader, organization_storage_dir
 
 
 @plugins.toolkit.blanket.actions # auto register all actions in logic/action.py
@@ -64,13 +67,13 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_ontology_helper': ontology_helper,
             'benap_organisation_names_for_autocomplete': organisation_names_for_autocomplete,
             'benap_lang_text': lang_text,
+            'benap_get_available_locales_sorted': benap_get_available_locales_sorted,
             'get_translated_tags': get_translated_tags,
             'ckan_tag_to_transport_mode_concept_label': ckan_tag_to_transport_mode_concept_label,
             'benap_scheming_language_text': scheming_language_text,
             'format_datetime': format_datetime,
             'benap_organization_name': organization_name,
             'benap_organization_name_by_id': organization_name_by_id,
-            'benap_convert_validation_list_to_JSON': convert_validation_list_to_JSON,
             'benap_get_organization_field_by_id': benap_get_organization_field_by_id,
             'benap_get_organization_field_by_specified_field': benap_get_organization_field_by_specified_field,
             'benap_retrieve_dict_items_or_keys_or_values': benap_retrieve_dict_items_or_keys_or_values,
@@ -82,6 +85,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_is_member_of_org': is_member_of_org,
             'get_facet_name_label_function': get_facet_name_label_function,
             'get_facet_label_function': get_facet_label_function,
+            'benap_datetime_string_now': benap_datetime_string_now,
         }
 
     # IValidators
@@ -156,8 +160,36 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             view_func=EditGroupView.as_view('edit'),
             methods=['GET', 'POST']
         )
-    
-        return blueprint
+        
+        # Intercept GET /uploads/organization to specify file access rights for org files
+        # Alternatively IMiddleware could also work
+        files_access_blueprint = Blueprint(
+            'files_access_intercept',
+            __name__,
+            url_prefix='/uploads/organization'
+        )
+
+        def _check_org_file_rights(org_id, file_id):
+          logo_filename = benap_get_organization_field_by_id(org_id, 'image_url')
+          user_id = getattr(current_user, 'id', None)
+          if not (logo_filename == file_id # public access for organization logo
+                  or authz.has_user_permission_for_group_or_org(org_id, user_id, 'read') 
+                  or user_id == 'napcontrolbody'):
+            toolkit.abort(404)
+
+          org_directory = organization_storage_dir(org_id)
+          if not org_directory:
+            toolkit.abort(404)
+
+          return send_from_directory(org_directory, file_id)
+
+        files_access_blueprint.add_url_rule(
+            '/<org_id>/<file_id>',
+            view_func=_check_org_file_rights,
+            methods=['GET']
+        )
+
+        return [blueprint, files_access_blueprint]
 
     # IPackageController
     def before_dataset_index(self, pkg_dict):

@@ -37,6 +37,16 @@
         "display_snippet": null,
         "validators": "scheming_required scheming_choices"
       }
+    },
+    {
+      "preset_name": "fluent_markdown",
+      "values": {
+        "form_snippet": "fluent_markdown.html",
+        "display_snippet": "fluent_markdown.html",
+        "error_snippet": "fluent_text.html",
+        "validators": "default({}) fluent_text",
+        "output_validators": "fluent_text_output"
+      }
     }
   ]
 }

@@ -213,7 +213,7 @@
         "nl": "Het contactpunt van de metadata, verdeeld in drie velden: naam (verplicht), e-mail (verplicht) en telefoonnummer (optioneel).",
         "de": "Der Ansprechpartner der Metadaten, unterteilt in drei Felder: Name (verpflichtend), E-Mail (verpflichtend) und Telefonnummer (optional)."
       },
-      "form_snippet": "nested_field_with_autocomplete.html",
+      "form_snippet": "contact_point_with_autocomplete.html",
       "display_snippet": null,
       "nested_fields": [
         {
@@ -237,8 +237,8 @@
       },
       "help_text": {
         "en": "The \"contact point\", describes an organisation, if applicable a person, which is responsible for the creation and maintenance of the metadata. This person or organization is the single point of contact for the present metadata set.",
-        "fr": "Le \\\"point de contact\\\" décrit une organisation, ou une personne si d'application, qui est responsable de la création et de la mise à jour des métadonnées. Cette personne ou organisation est le point de contact unique pour le présent jeu de métadonnées.",
-        "nl": "Het \\\"contactpunt\\\" beschrijft een organisatie, of een persoon indien van toepassing, die verantwoordelijk is voor de aanmaak en bijwerking van de metadata. Deze persoon of organisatie is het één contactpunt voor deze set van metadata.",
+        "fr": "Le \"point de contact\" décrit une organisation, ou une personne si d'application, qui est responsable de la création et de la mise à jour des métadonnées. Cette personne ou organisation est le point de contact unique pour le présent jeu de métadonnées.",
+        "nl": "Het \"contactpunt\" beschrijft een organisatie, of een persoon indien van toepassing, die verantwoordelijk is voor de aanmaak en bijwerking van de metadata. Deze persoon of organisatie is het één contactpunt voor deze set van metadata.",
         "de": "Der \"Kontaktpunkt\" beschreibt eine Organisation, oder gegebenenfalls eine Person, die für die Herstellung und Aktualisierung von Metadaten verantwortlich ist. Diese Person oder Organisation ist der einzige Kontaktpunkt für diesen Metadatensatz."
       },
       "form_snippet": null,
@@ -282,7 +282,7 @@
     },
       "form_placeholder": "+32XXXXXXXX",
       "form_snippet": null,
-      "validators": "phone_number_validator benap_contact_point_org_fields_consistency_check"
+      "validators": "default('') phone_number_validator benap_contact_point_org_fields_consistency_check"
     },
     {
       "field_name": "publisher_name",
@@ -407,6 +407,7 @@
         "de": "Zeit"
       },
       "preset": "datetime_tz",
+      "default_to_today": true,
       "help_text": {
         "en": "Describes from which date and time on the data delivery is applicable. If left empty, the publication is considered as available immediately.",
         "fr": "Décrit à partir de quelle date et heure s'applique la livraison des  données. Si laissé vide, la publication est considérée comme disponible immédiatement.",
@@ -449,8 +450,8 @@
       "preset": "multiple_select",
       "help_text": {
         "en": "Describes the countries covered by the data set (Belgium is mandatory).",
-        "fr": "Beschrijft de EU-lidstaten gedekt door de dataset.",
-        "nl": "Décrit les Etats membres de l'UE couverts par le jeu de données.",
+        "fr": "Décrit les Etats membres de l'UE couverts par le jeu de données.",
+        "nl": "Beschrijft de EU-lidstaten gedekt door de dataset.",
         "de": "Beschreibt die EU-Mitgliedstaaten, die vom Datensatz gedeckt werden."
       },
       "choices_helper": "benap_ontology_helper",
@@ -1014,7 +1015,7 @@
       ],
       "error_snippet": "fluent_text.html",
       "output_validators": "fluent_core_translated_output",
-      "validators": "fluent_text",
+      "validators": "default({}) fluent_text",
       "form_snippet": null,
       "display_snippet": "fluent_markdown_fallback.html"
     },
@@ -1094,7 +1095,7 @@
       "display_snippet": "fluent_markdown_fallback.html",
       "error_snippet": "fluent_text.html",
       "output_validators": "fluent_core_translated_output",
-      "validators": "fluent_text benap_is_choice_null benap_license_fields_conditional_validation"
+      "validators": "default({}) fluent_text benap_is_choice_null benap_license_fields_conditional_validation"
     }
   ]
 }
