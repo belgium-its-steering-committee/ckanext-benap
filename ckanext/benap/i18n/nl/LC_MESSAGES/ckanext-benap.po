@@ -771,3 +771,63 @@ msgstr "Privaat"
 msgid "The form contains invalid entries:"
 msgstr "Het formulier bevat ongeldige gegevens"
 
+msgid "A little information about yourself"
+msgstr "Een beetje informatie over jezelf"
+
+msgid "Are you sure you want to delete this User?"
+msgstr "Ben je zeker dat je deze Gebruiker wil verwijderen?"
+
+msgid "Change details"
+msgstr "Contactgegevens veranderen"
+
+msgid "Change password"
+msgstr "Paswoord wijzigen"
+
+msgid "Confirm"
+msgstr "Bevestigen"
+
+msgid "Confirm Password"
+msgstr "Paswoord bevestigen"
+
+msgid "Create Account"
+msgstr "Account creëren"
+
+msgid "Email"
+msgstr "e-mail"
+
+msgid "Full Name"
+msgstr "Volle naam"
+
+msgid "Full name"
+msgstr "Volle naam"
+
+msgid "Joe Bloggs"
+msgstr "Joe Bloggs"
+
+msgid "Old Password"
+msgstr "Oud paswoord"
+
+msgid "Password"
+msgstr "Paswoord"
+
+msgid "Subscribe to notification emails"
+msgstr "Schrijf in op e-mail alerten"
+
+msgid "Sysadmin Password"
+msgstr "Paswoord van systeemadministrator"
+
+msgid "Update Profile"
+msgstr "Profiel bijwerken"
+
+msgid "eg. Joe Bloggs"
+msgstr "bv. Joe Bloggs"
+
+msgid "eg. joe@example.com"
+msgstr "bv. joe@voorbeeld.com"
+
+msgid "joe@example.com"
+msgstr "joe@voorbeeld.com"
+
+msgid "username"
+msgstr "Gebruikersnaam"
+
