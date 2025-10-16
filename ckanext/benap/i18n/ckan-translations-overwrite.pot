@@ -245,3 +245,83 @@ msgstr ""
 msgid "The form contains invalid entries:"
 msgstr ""
 
+# de,fr,nl
+msgid "A little information about yourself"
+msgstr ""
+
+# de,fr,nl
+msgid "Are you sure you want to delete this User?"
+msgstr ""
+
+# de,fr,nl
+msgid "Change details"
+msgstr ""
+
+# de,nl
+msgid "Change password"
+msgstr ""
+
+# fr,nl
+msgid "Confirm"
+msgstr ""
+
+# de,fr,nl
+msgid "Confirm Password"
+msgstr ""
+
+# de,fr,nl
+msgid "Create Account"
+msgstr ""
+
+# de,nl
+msgid "Email"
+msgstr ""
+
+# fr,nl
+msgid "Full Name"
+msgstr ""
+
+# nl
+msgid "Full name"
+msgstr ""
+
+# de,fr,nl
+msgid "Joe Bloggs"
+msgstr ""
+
+# de,nl
+msgid "Old Password"
+msgstr ""
+
+# nl
+msgid "Password"
+msgstr ""
+
+# de,fr,nl
+msgid "Subscribe to notification emails"
+msgstr ""
+
+# de,nl
+msgid "Sysadmin Password"
+msgstr ""
+
+# de,fr,nl
+msgid "Update Profile"
+msgstr ""
+
+# de,fr,nl
+msgid "eg. Joe Bloggs"
+msgstr ""
+
+# de,fr,nl
+msgid "eg. joe@example.com"
+msgstr ""
+
+# de,fr,nl
+msgid "joe@example.com"
+msgstr ""
+
+# nl
+msgid "username"
+msgstr ""
+

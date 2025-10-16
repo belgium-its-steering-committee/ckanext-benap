@@ -788,3 +788,42 @@ msgstr "Privé"
 msgid "The form contains invalid entries:"
 msgstr "Le formulaire contient des entrées non valides"
 
+msgid "A little information about yourself"
+msgstr "Quelques informations sur vous"
+
+msgid "Are you sure you want to delete this User?"
+msgstr "Êtes-vous sûr de vouloir supprimer cet Utilisateur?"
+
+msgid "Change details"
+msgstr "Changer les coordonnées"
+
+msgid "Confirm"
+msgstr "Confirmer"
+
+msgid "Confirm Password"
+msgstr "Confirmer mot de passe"
+
+msgid "Create Account"
+msgstr "Créer Compte"
+
+msgid "Full Name"
+msgstr "Nom complet"
+
+msgid "Joe Bloggs"
+msgstr "Joe Bloggs"
+
+msgid "Subscribe to notification emails"
+msgstr "Inscrivez-vous aux e-mails de notification"
+
+msgid "Update Profile"
+msgstr "Mise à jour du profil"
+
+msgid "eg. Joe Bloggs"
+msgstr "ex. Joe Bloggs"
+
+msgid "eg. joe@example.com"
+msgstr "ex. joe@exemple.com"
+
+msgid "joe@example.com"
+msgstr "joe@exemple.com"
+
