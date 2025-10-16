@@ -6,6 +6,8 @@ This plugin supports translating strings in its own code as well as overwriting 
 
 Add translatable strings with `{% trans %}text{% endtrans %}` or `_('text')`. See https://docs.ckan.org/en/2.11/contributing/string-i18n.html .
 
+Helper scripts for translations are run in docker. You (only) need docker installed to run these scripts.
+
 
 ### Adjusting translations
 Afterwards, run `./extract_translatable_strings.sh`. This script does the following:

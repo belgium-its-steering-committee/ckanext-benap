@@ -1,2 +1,9 @@
-python setup.py compile_catalog
-echo "!! make sure to bin/reload the app to see the changes in a running dev instance !!"
+CKAN_BASE=ckan/ckan-base:2.11
+docker run --rm --entrypoint bash -u root -v .:/external "$CKAN_BASE" -lc '
+    cd /external
+    
+    if ! python setup.py compile_catalog; then 
+        echo "!! Error while compiling translations, compilation cancelled. !!"
+        exit 1
+    fi
+  '

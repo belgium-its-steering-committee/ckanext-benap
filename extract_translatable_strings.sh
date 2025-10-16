@@ -62,5 +62,5 @@ docker run --rm --entrypoint bash -u root -v .:/external "$CKAN_BASE" -lc '
         python setup.py update_catalog --no-fuzzy-matching -i "$TMP_MERGED_LANG_POT" -l "$lang"
     done
 
-    echo "!! make sure to run compile_translations.sh to update the .po files after adjusting the missing translations. !!"
+    echo "!! make sure to run compile_translations.sh to update the .mo files after adjusting the missing translations. !!"
   '
