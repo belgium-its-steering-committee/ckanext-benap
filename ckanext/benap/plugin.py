@@ -171,10 +171,11 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
 
         def _check_org_file_rights(org_id, file_id):
           logo_filename = benap_get_organization_field_by_id(org_id, 'image_url')
+          user_name = getattr(current_user, 'name', None)
           user_id = getattr(current_user, 'id', None)
           if not (logo_filename == file_id # public access for organization logo
                   or authz.has_user_permission_for_group_or_org(org_id, user_id, 'read') 
-                  or user_id == 'napcontrolbody'):
+                  or user_name == 'napcontrolbody'):
             toolkit.abort(404)
 
           org_directory = organization_storage_dir(org_id)
