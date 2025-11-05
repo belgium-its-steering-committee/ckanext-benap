@@ -3,7 +3,9 @@
 {% set dataset_type = h.default_package_type() %}
 
 {% block header_account %}
-    <div id="overlay-cookies" data-module="cookies">
+    <div id="overlay-cookies" data-module="cookies" 
+         data-module-google-tag-id="{{ h.benap_get_config('ckan.google.tag_id') }}"
+         data-module-cookie-domain="{{ h.benap_get_config('ckan.cookie_domain') }}">
         <div id="overlay-cookies-content">
             <div id="wrapper-cookies-1" style="width: 100%">
                 <h2 style="margin: 0 0 16px 0;">{{ _('Welcome') }}!</h2>
