@@ -64,8 +64,13 @@ def organization_list(original_action, context, data_dict):
     group_type = data_dict.get('type', 'organization')
     q = u'%{0}%'.format(q_original)
 
-    title_keys = ['display_title_en', 'display_title_fr', 
+    # The description is a {en: .., fr: ..} field, but for search this can just be seen as plain text.
+    # however, will return everything if q equal to 'fr', 'nl', 'de' or 'en', so don't include
+    # it in those cases.
+    extra_keys = ['display_title_en', 'display_title_fr', 
                    'display_title_nl', 'display_title_de']
+    if q_original not in ['en', 'fr', 'nl', 'de']:
+        extra_keys.append('description_translated')
 
     query = model.Session.query(model.Group.name) \
       .filter(model.Group.state == 'active') \
@@ -78,7 +83,7 @@ def organization_list(original_action, context, data_dict):
                         model.Group.name.ilike(q),
                         model.Group.title.ilike(q),
                         model.Group.description.ilike(q),
-                        sqlalchemy.and_(model.GroupExtra.key.in_(title_keys), model.GroupExtra.value.ilike(q))
+                        sqlalchemy.and_(model.GroupExtra.key.in_(extra_keys), model.GroupExtra.value.ilike(q)),
                     )) \
                  .distinct()
 
