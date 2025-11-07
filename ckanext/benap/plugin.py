@@ -19,7 +19,7 @@ from ckanext.benap.helpers import ontology_helper, organization_name, organisati
     benap_get_available_locales_sorted, benap_datetime_string_now
 
 from ckanext.benap.util.forms import map_for_form_select
-from ckanext.benap.logic.validators import doc_validator, logo_extensions, phone_number_validator, \
+from ckanext.benap.logic.validators import phone_number_validator, \
     countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin, \
     is_choice_null, contact_point_org_fields_consistency_check, \
     license_fields_conditional_validation, benap_tag_string_convert, fluent_tags_validator, category_sub_category_validator
@@ -104,8 +104,6 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_tag_string_convert': benap_tag_string_convert,
             'benap_fluent_tags_validator': fluent_tags_validator,
             'benap_category_sub_category_validator': category_sub_category_validator,
-            'benap_logo_extensions': logo_extensions,
-            'benap_doc_validator': doc_validator,
         }
 
     # IAuthFunctions

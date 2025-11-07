@@ -157,7 +157,7 @@
       "upload_field": "image_upload",
       "upload_clear": "clear_upload",
       "upload_label": "organisation_Logo",
-      "validators": "not_empty unicode_safe benap_logo_extensions",
+      "validators": "not_empty unicode_safe",
       "required":true
     },
     {
@@ -415,7 +415,7 @@
         "nl": "Verklaring van overeenstemming RTTI",
         "de": "Konformitätserklärung RTTI"
       },
-      "validators": "unicode_safe remove_whitespace benap_https_validator benap_doc_validator",
+      "validators": "unicode_safe remove_whitespace benap_https_validator",
       "help_text": {
         "en": "",
         "fr": "",
@@ -440,7 +440,7 @@
         "nl": "Verklaring van overeenstemming SRTI",
         "de": "Konformitätserklärung SRTI"
       },
-      "validators": "unicode_safe remove_whitespace benap_https_validator benap_doc_validator ",
+      "validators": "unicode_safe remove_whitespace benap_https_validator",
       "help_text": {
         "en": "",
         "fr": "",
@@ -465,7 +465,7 @@
         "nl": "Verklaring van overeenstemming SSTP",
         "de": "Konformitätserklärung SSTP"
       },
-      "validators": "unicode_safe remove_whitespace benap_https_validator benap_doc_validator",
+      "validators": "unicode_safe remove_whitespace benap_https_validator",
       "help_text": {
         "en": "",
         "fr": "",
@@ -490,7 +490,7 @@
         "nl": "Proxy overeenkomst",
         "de": "Vollmachtsvereinbarung"
       },
-      "validators": "benap_doc_validator",
+      "validators": "",
       "help_text": {
         "en": "Upload the PDF <a href='/pages/information-for-dataproviders#anchor_proxy'>Proxy agreement</a>",
         "fr": "Télécharger la <a href='/pages/information-for-dataproviders#anchor_proxy'>Convention proxy</a> au format PDF",
