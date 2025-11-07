@@ -8,7 +8,7 @@ from ckan.plugins.toolkit import _
 from ckan.lib.plugins import DefaultTranslation
 import json
 from flask import Blueprint, send_from_directory
-from ckan.common import current_user
+from ckan.common import current_user, config
 
 from ckanext.benap.helpers import ontology_helper, organization_name, organisation_names_for_autocomplete, \
     get_translated_tags, scheming_language_text, format_datetime, ckan_tag_to_transport_mode_concept_label,\
@@ -86,6 +86,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'get_facet_name_label_function': get_facet_name_label_function,
             'get_facet_label_function': get_facet_label_function,
             'benap_datetime_string_now': benap_datetime_string_now,
+            'benap_get_config': lambda key: (config.get(key, None)),
         }
 
     # IValidators

@@ -1,12 +1,20 @@
+/* example usage:
+<div id="overlay-cookies" data-module="cookies" 
+     data-module-google-tag-id="{{ h.benap_get_config('ckan.google.tag_id') }}"
+     data-module-site-url="{{ h.benap_get_config('ckan.site_url') }}">
+</div>
+*/
 ckan.module('cookies', function (jQuery, _) {
   return {
     initialize: function () {
+      const gtagId = this.options['googleTagId']
+      const cookieDomain = this.options['cookieDomain']
+
       function setCookie(name, value, days) {
         var expires = '';
         if (days) {
           var date = new Date();
           date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-          console.log = 'Aantal seconden:' + expires;
           expires = '; expires=' + date.toUTCString();
         }
         document.cookie = name + '=' + value + expires + '; path=/';
@@ -61,14 +69,56 @@ ckan.module('cookies', function (jQuery, _) {
         } else {
           setCookie('transportdata_cookies', x.necessary, false);
         }
-        if (x.analytical) {
+        if (gtagId && cookieDomain) {
+          if (x.analytical) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', gtagId, { cookie_domain: cookieDomain });
+            window[`ga-disable-${gtagId}`] = false;
+          } else {
+            let expires = '';
+            let date = new Date();
+            date.setTime(date.getTime() + -1 * 24 * 60 * 60 * 1000);
+            expires = '; expires=' + date.toUTCString();
+            document.cookie =
+              '_ga' +
+              '=' +
+              '' +
+              expires +
+              '; path=/; domain=' + cookieDomain;
+            document.cookie =
+              '_gid' +
+              '=' +
+              '' +
+              expires +
+              '; path=/; domain=' + cookieDomain;
+            document.cookie =
+              `_gat_gtag_${gtagId.replace('-', '_')}` +
+              '=' +
+              '' +
+              expires +
+              '; path=/; domain=' + cookieDomain;
+            window[`ga-disable-${gtagId}`] = true;
+          }
+        }
+        if (!x.marketing) {
+          setCookie('r/collect', '', -1);
+        }
+      }
+
+      let cookie = readTransportDataCookie('transportdata_cookies');
+      if(gtagId && cookieDomain) {
+        if (cookie && cookie.analytical) {
           window.dataLayer = window.dataLayer || [];
           function gtag() {
             dataLayer.push(arguments);
           }
           gtag('js', new Date());
-          gtag('config', 'UA-153119613-1');
-          window['ga-disable-UA-153119613-1'] = false;
+          gtag('config', gtagId, { cookie_domain: cookieDomain });
+          window[`ga-disable-${gtagId}`] = false;
         } else {
           let expires = '';
           let date = new Date();
@@ -79,59 +129,21 @@ ckan.module('cookies', function (jQuery, _) {
             '=' +
             '' +
             expires +
-            '; path=/; domain=.ec2-63-33-90-161.eu-west-1.compute.amazonaws.com';
+            '; path=/; domain=' + cookieDomain;
           document.cookie =
             '_gid' +
             '=' +
             '' +
             expires +
-            '; path=/; domain=.ec2-63-33-90-161.eu-west-1.compute.amazonaws.com';
+            '; path=/; domain=' + cookieDomain;
           document.cookie =
-            '_gat_gtag_UA-153119613-1' +
+            `_gat_gtag_${gtagId.replace('-', '_')}` +
             '=' +
             '' +
             expires +
-            '; path=/; domain=.ec2-63-33-90-161.eu-west-1.compute.amazonaws.com';
-          window['ga-disable-UA-153119613-1'] = true;
+            '; path=/; domain=' + cookieDomain;
+          window[`ga-disable-${gtagId}`] = true;
         }
-        if (!x.marketing) {
-          setCookie('r/collect', '', -1);
-        }
-      }
-
-      let cookie = readTransportDataCookie('transportdata_cookies');
-      if (cookie && cookie.analytical) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-153119613-1');
-        window['ga-disable-UA-153119613-1'] = false;
-      } else {
-        let expires = '';
-        let date = new Date();
-        date.setTime(date.getTime() + -1 * 24 * 60 * 60 * 1000);
-        expires = '; expires=' + date.toUTCString();
-        document.cookie =
-          '_ga' +
-          '=' +
-          '' +
-          expires +
-          '; path=/; domain=.ec2-63-33-90-161.eu-west-1.compute.amazonaws.com';
-        document.cookie =
-          '_gid' +
-          '=' +
-          '' +
-          expires +
-          '; path=/; domain=.ec2-63-33-90-161.eu-west-1.compute.amazonaws.com';
-        document.cookie =
-          '_gat_gtag_UA-153119613-1' +
-          '=' +
-          '' +
-          expires +
-          '; path=/; domain=.ec2-63-33-90-161.eu-west-1.compute.amazonaws.com';
-        window['ga-disable-UA-153119613-1'] = true;
       }
       if (cookie && !cookie.marketing) {
         setCookie('r/collect', '', -1);

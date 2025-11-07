@@ -10,7 +10,6 @@ ckan.module('category-sub-category', function ($) {
   return {
     initialize: function () {
       const options = this.options;
-      console.warn('category-sub-category: initialize', options);
 
       const fieldId = `#${options.fieldId}`;
 

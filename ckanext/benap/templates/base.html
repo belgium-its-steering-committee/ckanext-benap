@@ -1,9 +1,11 @@
 {% ckan_extends %}
 
 {% block meta %}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153119613-1"></script>
-    
+    {% set gtag_id = h.benap_get_config('ckan.google.tag_id') %}
+    {% if gtag_id %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ gtag_id }}"></script>
+    {% endif %}
+
     {{ super() }}
     <!--  META TAGS FOR SHARING  -->
     <meta property="og:url" content="{{ h.get_site_protocol_and_host()[0] }}://{{ h.get_site_protocol_and_host()[1] }}" />
