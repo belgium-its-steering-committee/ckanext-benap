@@ -280,6 +280,10 @@ def doc_validator(value):
 
 # any new nap_checked values will be either False or a date. 
 # But the database still contains nap_checked equal to True for older data.
+
+# Todo: If old data can be migrated away from (so no more "true" as value in database), 
+# the logic can be greatly simplified: only allow date or "empty" for nap_checked.
+# This way, any logic for handling booleans can be removed.
 def benap_convert_nap_checked(key, data, errors, context):
   old_value = _old_value(key, context)
   new_value = data.get(key)
