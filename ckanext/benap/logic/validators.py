@@ -10,7 +10,7 @@ import ckan.plugins.toolkit as toolkit
 from ckan.lib.navl.dictization_functions import Missing
 from ckanext.benap.helpers import (organisation_names_for_autocomplete, benap_get_organization_field_by_id,
                                    benap_get_organization_field_by_specified_field)
-
+from ckanext.benap.util.forms import soft_compare_strings
 # pattern from http://phoneregex.com/
 phone_number_pattern = re.compile(
     r"\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\d{1,14}$"
@@ -81,30 +81,27 @@ def https_validator(value, context):
     return value
 
 
-def modified_by_sysadmin(schema_value, package):
-    # TODO: fix and re-enable this validator
-    # Current implementation does not make sense, it is possible for
-    # a non sysadmin user to set the value from true to false, this is not intended.
-    return schema_value
+def modified_by_sysadmin(key, data, errors, context):
+    """
+    Validates if field is edited by sysadmin or napcontrolbody user
+    Denies request for any other user.
+    If field is not changed, allows the request.
+    """
+    new_value = data.get(key)
     
-    user = package.get("auth_user_obj")
-    # parse schema_value
-    trueValues = {"true"}
-    flag = False
+    package = context.get('package')
+    field_name = key[-1] # key is a tuple, but need just field name
+    old_value = package.get(field_name) or package.extras.get(field_name)
+    
+    is_changing = not soft_compare_strings(str(new_value), old_value)
+    
+    user = context.get("auth_user_obj")
+    user_name = getattr(user, 'name', None)
+    is_authorized = user.sysadmin or user_name == 'napcontrolbody'
+    if is_changing and not is_authorized:
+        raise Invalid(_('Modification must be done by system administrator or napcontrolbody'))
 
-    if isinstance(schema_value, str):
-        lowerValue = schema_value.strip().lower()
-        if lowerValue in trueValues:
-            flag = True
-
-    if user is not None:
-        if not user.sysadmin and flag:
-            raise Invalid(_('Modification must done by a system administrator'))
-        else:
-            return schema_value
-    else:
-        raise Invalid(_('Logged in one must be'))
-
+    return new_value
 
 def is_choice_null(value):
     if isinstance(value, Missing) or value == '':
