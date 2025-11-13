@@ -1,4 +1,5 @@
 # coding=utf-8
+from datetime import datetime
 import re
 import json
 from itertools import count
@@ -24,6 +25,10 @@ http_pattern = re.compile(
     r"^http:\/\/"
 )
 
+def _old_value(key, context):
+  package = context.get('package')
+  field_name = key[-1] # key is a tuple, but need just field name
+  return package.get(field_name) or package.extras.get(field_name)
 
 def phone_number_validator(value, context):
     if value:
@@ -89,9 +94,7 @@ def modified_by_sysadmin(key, data, errors, context):
     """
     new_value = data.get(key)
     
-    package = context.get('package')
-    field_name = key[-1] # key is a tuple, but need just field name
-    old_value = package.get(field_name) or package.extras.get(field_name)
+    old_value = _old_value(key, context)
     
     is_changing = not soft_compare_strings(str(new_value), old_value)
     
@@ -266,4 +269,46 @@ def doc_validator(value):
     if value and len(value) > 0:
         if not value.endswith(('pdf', 'PDF')):
             raise toolkit.Invalid(toolkit._('Only PDF is allowed').format(url=value))
+    return value
+
+
+# handle nap_checked field. The input is a boolean (so convert date to True before calling this validator).
+# This sets nap_checked field to the date the nap_checked was set to true in the form. This means:
+# If value set from false to true, set value to 'today'. Anything else:
+# - if set to true, but was already a date or true, keep the previous value
+# - if set to false, set to false (which might remove the previous checked date)
+
+# any new nap_checked values will be either False or a date. 
+# But the database still contains nap_checked equal to True for older data.
+def benap_convert_nap_checked(key, data, errors, context):
+  old_value = _old_value(key, context)
+  new_value = data.get(key)
+  
+  if new_value == True:
+    # false to true => set to today
+    if str(old_value) in ['False', 'false']:
+      data[key] = datetime.now().date().isoformat()
+      return data[key]
+    else: # true or date to true  => keep previous value
+      return old_value
+  
+  if new_value == False:
+    return False
+
+# convert a date to "true". Leave anything else as is.
+def benap_date_to_true(value):
+  if isinstance(value, datetime):
+      return True
+  try:
+      # check if string and ISO formatted date (YYYY-MM-DD or YYYY-MM-DDTHH:MM:SS)
+      _date = datetime.fromisoformat(value)
+      return True
+  except (ValueError, TypeError):
+      pass
+  return value
+
+def benap_to_boolean_if_bool(value):
+    if isinstance(value, str) and value.lower() in ['true', 'false']:
+        return value.lower() == 'true'
+
     return value

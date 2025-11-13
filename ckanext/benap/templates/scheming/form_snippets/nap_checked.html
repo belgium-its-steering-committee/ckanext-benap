@@ -18,20 +18,26 @@
 {%- endif -%}
 
 {# different form-call whenever a user is a sysadmin #}
-{%- if c.userobj.sysadmin -%}
+
+{%- if c.userobj.sysadmin or c.userobj.name == 'napcontrolbody' -%}
+  {% set is_date = not(data[field.field_name] in [true,false]) %}
   {% call form.select(
     field.field_name,
     id='field-' + field.field_name,
     label=h.scheming_language_text(field.label),
     options=options,
-    selected=data[field.field_name]|string|default("False"),
+    selected="True" if is_date else data[field.field_name]|string|default("False"),
     error=errors[field.field_name],
     classes=['control-medium'],
     attrs=dict({"class": "form-control"}, **(field.get('form_attrs', {}))),
     is_required=h.scheming_field_required(field)
     )
   %}
-    {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
+      {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
+      {%- if is_date -%}
+        {%- set help_text = _('Last set to checked on') + " " + data[field.field_name] -%}
+        {%- snippet 'scheming/form_snippets/help_text.html', field={'help_text': help_text} -%}
+      {%- endif -%}
   {% endcall %}
 {%- else -%}
   {# minimum form-call for non-sysadmins #}
