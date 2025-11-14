@@ -19,7 +19,7 @@
 
 {# different form-call whenever a user is a sysadmin #}
 
-{%- if c.userobj.sysadmin or c.userobj.name == 'napcontrolbody' -%}
+{%- if c.userobj.sysadmin -%}
   {% set is_date = not(data[field.field_name] in [true,false]) %}
   {% call form.select(
     field.field_name,

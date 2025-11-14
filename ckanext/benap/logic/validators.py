@@ -88,7 +88,7 @@ def https_validator(value, context):
 
 def modified_by_sysadmin(key, data, errors, context):
     """
-    Validates if field is edited by sysadmin or napcontrolbody user
+    Validates if field is edited by sysadmin
     Denies request for any other user.
     If field is not changed, allows the request.
     """
@@ -99,8 +99,7 @@ def modified_by_sysadmin(key, data, errors, context):
     is_changing = not soft_compare_strings(str(new_value), old_value)
     
     user = context.get("auth_user_obj")
-    user_name = getattr(user, 'name', None)
-    is_authorized = user.sysadmin or user_name == 'napcontrolbody'
+    is_authorized = user.sysadmin
     if is_changing and not is_authorized:
         raise Invalid(_('Modification must be done by system administrator or napcontrolbody'))
 
