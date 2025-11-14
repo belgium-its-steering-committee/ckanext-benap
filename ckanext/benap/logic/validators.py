@@ -101,9 +101,7 @@ def modified_by_sysadmin(key, data, errors, context):
     user = context.get("auth_user_obj")
     is_authorized = user.sysadmin
     if is_changing and not is_authorized:
-        raise Invalid(_('Modification must be done by system administrator or napcontrolbody'))
-
-    return new_value
+        raise Invalid(_('Modification must be done by system administrator'))
 
 def is_choice_null(value):
     if isinstance(value, Missing) or value == '':
@@ -286,17 +284,19 @@ def doc_validator(value):
 def benap_convert_nap_checked(key, data, errors, context):
   old_value = _old_value(key, context)
   new_value = data.get(key)
+
+  if new_value == False:
+    data[key] = False
+    return
   
   if new_value == True:
     # false to true => set to today
     if str(old_value) in ['False', 'false']:
       data[key] = datetime.now().date().isoformat()
-      return data[key]
     else: # true or date to true  => keep previous value
-      return old_value
+      data[key] = old_value 
   
-  if new_value == False:
-    return False
+
 
 # convert a date to "true". Leave anything else as is.
 def benap_date_to_true(value):
