@@ -404,8 +404,7 @@
         "fr": "zone de texte pour commentaire facultatif",
         "nl": "tekstveld voor optionele opmerking",
         "de": "Textfeld für optionalen Kommentar"
-      },
-      "classes": ["margin-left-24"]
+      }
     },
     {
       "field_name": "rtti_doc_document_upload",
