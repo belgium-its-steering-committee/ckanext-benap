@@ -271,7 +271,7 @@ def doc_validator(value):
 
 # handle nap_checked field. The input is a boolean (so convert date to True before calling this validator).
 # This sets nap_checked field to the date the nap_checked was set to true in the form. This means:
-# If value set from false to true, set value to 'today'. Anything else:
+# If value set from false (or "missing") to true, set value to 'today'. Anything else:
 # - if set to true, but was already a date or true, keep the previous value
 # - if set to false, set to false (which might remove the previous checked date)
 
@@ -291,7 +291,7 @@ def benap_convert_nap_checked(key, data, errors, context):
   
   if new_value == True:
     # false to true => set to today
-    if str(old_value) in ['False', 'false']:
+    if str(old_value) in ['False', 'false'] or old_value is None:
       data[key] = datetime.now().date().isoformat()
     else: # true or date to true  => keep previous value
       data[key] = old_value 
