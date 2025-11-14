@@ -21,7 +21,7 @@
         <dt>{{ h.scheming_language_text(f.label) }}:</dt>
         <dd><a href="mailto:{{ c.group_dict[f.field_name] or ('&nbsp;'|safe) }}">{{ c.group_dict[f.field_name] or ("&nbsp;"|safe) }}</a></dd>
     {% elif f.field_name in ('rtti_doc_document_upload', 'srti_doc_document_upload', 'sstp_doc_document_upload', 'proxy_pdf_url') %}
-        {% if h.check_access('organization_update', {'id': c.group_dict.id}) %}
+        {% if f.field_name in c.group_dict %}
           <dt>{{ h.scheming_language_text(f.label) }}:</dt>
           <dd>
               <a href="{{ h.get_site_protocol_and_host()[0] }}://{{ h.get_site_protocol_and_host()[1] }}/uploads/organization/{{ c.group_dict['name'] }}/{{ c.group_dict[f.field_name] }}" target="_blank">
@@ -30,12 +30,12 @@
           </dd>
         {% endif %}
     {% elif f.field_name in ('agreement_declaration_mmtis', 'organization_agreement_declaration_nap') %}
-        {% if h.check_access('organization_update', {'id': c.group_dict.id}) %}
+        {% if f.field_name in c.group_dict %}
             <dt>{{ h.scheming_language_text(f.label) }}:</dt>
             <dd>{{ _('Signed') if c.group_dict[f.field_name] == ["Y"] else ("&nbsp;"|safe) }}</dd>
         {% endif %}
     {% elif f.field_name in ('optional_comment') %}
-        {% if h.check_access('organization_update', {'id': c.group_dict.id}) %}
+        {% if f.field_name in c.group_dict %}
             <dt>{{ h.scheming_language_text(f.label) }}:</dt>
             <dd>{{ c.group_dict[f.field_name] or ("&nbsp;"|safe) }}</dd>
         {% endif %}
