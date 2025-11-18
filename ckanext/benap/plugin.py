@@ -132,6 +132,9 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             ('organization', _('Organizations')),
         ])
         return facets_dict
+      
+    def organization_facets(self, facets_dict, group_type, package_type):
+        return self.dataset_facets(facets_dict, package_type)
 
     # IBlueprint
     def get_blueprint(self):
