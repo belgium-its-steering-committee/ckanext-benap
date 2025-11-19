@@ -1,0 +1,9 @@
+{% ckan_extends %}
+
+{% block secondary %}
+{# Don't show the side panel for the FAQ pages
+   Overrides ckan-core page.html 'secondary' block via page-plugin template #}
+{% if c.parent.name != 'faq' %}
+  {{ super() }}
+{% endif %}
+{% endblock %}
