@@ -238,15 +238,16 @@ ckan.module('youtube-consent-button', function ($, _) {
   return {
     initialize: function () {
       const src = this.options.youtubeSrc;
-      const button = this.el;
+      const consentPrompt = this.el;
+      const consentButton = $('.consent-prompt');
       const consentElement = $('[youtube-consent-button-iframe]');
       var iframe = $('[youtube-consent-button-iframe] iframe');
 
-      button.on('click', function () {
+      consentButton.on('click', function () {
         iframe.attr('src', src);
         consentElement.show();
         iframe.show();
-        button.hide();
+        consentPrompt.hide();
       });
     },
   };

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 0.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-09-16 08:59+0000\n"
+"POT-Creation-Date: 2025-11-13 10:50+0000\n"
 "PO-Revision-Date: 2019-09-20 17:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: nl\n"
@@ -19,19 +19,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: ckanext/benap/plugin.py:119
+#: ckanext/benap/plugin.py:126
 msgid "NAP Type"
 msgstr "NAP Type"
 
-#: ckanext/benap/plugin.py:120
+#: ckanext/benap/plugin.py:127
 msgid "Transportation modes"
 msgstr "Vervoersmodi"
 
-#: ckanext/benap/plugin.py:121
+#: ckanext/benap/plugin.py:128
 msgid "Area covered by publication"
 msgstr "Gebied gedekt door publicatie"
 
-#: ckanext/benap/plugin.py:122
+#: ckanext/benap/plugin.py:129
 msgid "Mobility Theme"
 msgstr "Mobiliteitsthema"
 
@@ -138,7 +138,7 @@ msgstr ""
 msgid "Only PDF is allowed"
 msgstr ""
 
-#: ckanext/benap/templates/base.html:107
+#: ckanext/benap/templates/base.html:14
 msgid ""
 "Belgium&#39;s national access point for multimodal travel information "
 "services."
@@ -166,7 +166,7 @@ msgstr "Powered by <a href=\"http://ckan.org\">CKAN</a>"
 msgid "Manage Cookies"
 msgstr "Cookies beheren"
 
-#: ckanext/benap/templates/footer.html:80
+#: ckanext/benap/templates/footer.html:55
 msgid ""
 "2025 - By the National Geographic Institute on behalf of the ITS steering"
 " commitee."
@@ -174,7 +174,7 @@ msgstr ""
 "2025 - By the National Geographic Institute on behalf of the ITS steering"
 " committee."
 
-#: ckanext/benap/templates/header.html:92
+#: ckanext/benap/templates/header.html:14
 msgid ""
 "Transportdata.be uses cookies to improve your experience. These cookies "
 "are used to gather and analyse information about your visit. For the best"
@@ -192,32 +192,32 @@ msgstr ""
 "Transportdata.be bewaart uw cookievoorkeuren. U kan deze aanpassen via "
 "“cookies beheren”."
 
-#: ckanext/benap/templates/header.html:95
+#: ckanext/benap/templates/header.html:17
 msgid "Consult our Privacy declaration."
 msgstr "Lees onze Privacy verklaring."
 
-#: ckanext/benap/templates/header.html:99
-#: ckanext/benap/templates/header.html:107
+#: ckanext/benap/templates/header.html:21
+#: ckanext/benap/templates/header.html:29
 msgid "Accept all cookies"
 msgstr "Alle cookies toestaan"
 
-#: ckanext/benap/templates/header.html:101
+#: ckanext/benap/templates/header.html:23
 msgid "Set preferences"
 msgstr "Stel voorkeuren in"
 
-#: ckanext/benap/templates/header.html:106
+#: ckanext/benap/templates/header.html:28
 msgid "Types of Cookies"
 msgstr "Soorten Cookies"
 
-#: ckanext/benap/templates/header.html:111
+#: ckanext/benap/templates/header.html:33
 msgid "Essential"
 msgstr "Noodzakelijk"
 
-#: ckanext/benap/templates/header.html:112
+#: ckanext/benap/templates/header.html:34
 msgid "Always enabled"
 msgstr "Altijd ingeschakeld"
 
-#: ckanext/benap/templates/header.html:117
+#: ckanext/benap/templates/header.html:39
 msgid ""
 "Essential cookies are cookies that are required for the correct "
 "functioning of the website."
@@ -225,85 +225,85 @@ msgstr ""
 "Noodzakelijke cookies zijn cookies die ervoor zorgen dat alle onderdelen "
 "van de website goed werken."
 
-#: ckanext/benap/templates/header.html:121
-#: ckanext/benap/templates/header.html:142
-#: ckanext/benap/templates/header.html:162
-#: ckanext/benap/templates/header.html:184
+#: ckanext/benap/templates/header.html:43
+#: ckanext/benap/templates/header.html:64
+#: ckanext/benap/templates/header.html:84
+#: ckanext/benap/templates/header.html:106
 msgid "Cookie"
 msgstr "Cookie"
 
-#: ckanext/benap/templates/header.html:121
-#: ckanext/benap/templates/header.html:142
-#: ckanext/benap/templates/header.html:162
-#: ckanext/benap/templates/header.html:184
+#: ckanext/benap/templates/header.html:43
+#: ckanext/benap/templates/header.html:64
+#: ckanext/benap/templates/header.html:84
+#: ckanext/benap/templates/header.html:106
 msgid "Expiry"
 msgstr "Duur"
 
-#: ckanext/benap/templates/header.html:121
-#: ckanext/benap/templates/header.html:142
-#: ckanext/benap/templates/header.html:162
-#: ckanext/benap/templates/header.html:184
+#: ckanext/benap/templates/header.html:43
+#: ckanext/benap/templates/header.html:64
+#: ckanext/benap/templates/header.html:84
+#: ckanext/benap/templates/header.html:106
 msgid "Purpose"
 msgstr "Doel"
 
-#: ckanext/benap/templates/header.html:124
+#: ckanext/benap/templates/header.html:46
 msgid "ckan"
 msgstr "ckan"
 
-#: ckanext/benap/templates/header.html:124
-#: ckanext/benap/templates/header.html:125
+#: ckanext/benap/templates/header.html:46
+#: ckanext/benap/templates/header.html:47
 msgid "Basic functionality"
 msgstr "Basisfunctionaliteit"
 
-#: ckanext/benap/templates/header.html:124
-#: ckanext/benap/templates/header.html:125
-#: ckanext/benap/templates/header.html:187
+#: ckanext/benap/templates/header.html:46
+#: ckanext/benap/templates/header.html:47
+#: ckanext/benap/templates/header.html:109
 msgid "session"
 msgstr "sessie"
 
-#: ckanext/benap/templates/header.html:124
-#: ckanext/benap/templates/header.html:125
+#: ckanext/benap/templates/header.html:46
+#: ckanext/benap/templates/header.html:47
 msgid "This cookie is used for the basic functionalities of the website."
 msgstr "Deze cookie wordt gebruikt voor de basisfunctionaliteiten van de website"
 
-#: ckanext/benap/templates/header.html:125
-#: ckanext/benap/templates/header.html:145
+#: ckanext/benap/templates/header.html:47
+#: ckanext/benap/templates/header.html:67
 msgid "transportdata_cookies"
 msgstr "transportdata_cookies"
 
-#: ckanext/benap/templates/header.html:133
+#: ckanext/benap/templates/header.html:55
 msgid "Functional"
 msgstr "Functioneel"
 
-#: ckanext/benap/templates/header.html:134
-#: ckanext/benap/templates/header.html:154
-#: ckanext/benap/templates/header.html:176
+#: ckanext/benap/templates/header.html:56
+#: ckanext/benap/templates/header.html:76
+#: ckanext/benap/templates/header.html:98
 msgid "Disabled"
 msgstr "Uitgeschakeld"
 
-#: ckanext/benap/templates/header.html:138
+#: ckanext/benap/templates/header.html:60
 msgid ""
 "Functional cookies record information about the user's choices and "
 "preferences and may store language settings, for instance."
 msgstr "Functionele cookies onthouden uw voorkeursinstellingen."
 
-#: ckanext/benap/templates/header.html:145
+#: ckanext/benap/templates/header.html:67
 msgid "Proper functionality"
 msgstr "Basisfunctionaliteiten"
 
-#: ckanext/benap/templates/header.html:145
+#: ckanext/benap/templates/header.html:67
 msgid "1 year"
 msgstr "1 jaar"
 
-#: ckanext/benap/templates/header.html:145
+#: ckanext/benap/templates/header.html:67
 msgid "This cookie is used to store user preferences."
 msgstr "Deze cookie slaat de gebruikersinstellingen op."
 
-#: ckanext/benap/templates/header.html:153
+#: ckanext/benap/templates/header.html:75
 msgid "Analytical"
 msgstr "Analytisch"
 
-#: ckanext/benap/templates/header.html:158
+#: ckanext/benap/templates/header.html:80
 msgid ""
 "These cookies collect information about the user's behaviour to measure "
 "the performance of the website and improve the user experience."
@@ -311,22 +311,22 @@ msgstr ""
 "Analytische cookies meten het websitebezoek. Deze gegevens laten ons toe "
 "om de structuur, navigatie en inhoud van onze website te verbeteren."
 
-#: ckanext/benap/templates/header.html:165
+#: ckanext/benap/templates/header.html:87
 msgid "_ga"
 msgstr "_ga"
 
-#: ckanext/benap/templates/header.html:165
-#: ckanext/benap/templates/header.html:166
-#: ckanext/benap/templates/header.html:167
+#: ckanext/benap/templates/header.html:87
+#: ckanext/benap/templates/header.html:88
+#: ckanext/benap/templates/header.html:89
 msgid "Statistics, HTTP"
 msgstr "Statistieken, HTTP"
 
-#: ckanext/benap/templates/header.html:165
+#: ckanext/benap/templates/header.html:87
 msgid "2 years"
 msgstr "2 jaar"
 
-#: ckanext/benap/templates/header.html:165
-#: ckanext/benap/templates/header.html:167
+#: ckanext/benap/templates/header.html:87
+#: ckanext/benap/templates/header.html:89
 msgid ""
 "Registers a unique ID that is used to generate statistical data on how "
 "the visitor uses the website."
@@ -334,28 +334,28 @@ msgstr ""
 "Registreert een unieke ID die gebruikt wordt om statistische data te "
 "genereren over het gebruik van de website door de gebruikers."
 
-#: ckanext/benap/templates/header.html:166
+#: ckanext/benap/templates/header.html:88
 msgid "_gat"
 msgstr "_gat"
 
-#: ckanext/benap/templates/header.html:166
-#: ckanext/benap/templates/header.html:167
+#: ckanext/benap/templates/header.html:88
+#: ckanext/benap/templates/header.html:89
 msgid "1 day"
 msgstr "1 dag"
 
-#: ckanext/benap/templates/header.html:166
+#: ckanext/benap/templates/header.html:88
 msgid "Used By Google Analytics to throttle request rate."
 msgstr "Gebruikt door Google Analytics om verzoeksnelheid te vertragen."
 
-#: ckanext/benap/templates/header.html:167
+#: ckanext/benap/templates/header.html:89
 msgid "_gid"
 msgstr "_gid"
 
-#: ckanext/benap/templates/header.html:175
+#: ckanext/benap/templates/header.html:97
 msgid "Marketing"
 msgstr "Marketing"
 
-#: ckanext/benap/templates/header.html:180
+#: ckanext/benap/templates/header.html:102
 msgid ""
 "Marketing cookies follow the user's browsing behaviour in order to "
 "compose customer profiles or user profiles. These profiles are commonly "
@@ -366,15 +366,15 @@ msgstr ""
 "U dient marketing cookies in te schakelen om op de website inhoud te "
 "tonen die afkomstig is van derde partijen."
 
-#: ckanext/benap/templates/header.html:187
+#: ckanext/benap/templates/header.html:109
 msgid "r/collect"
 msgstr "r/collect"
 
-#: ckanext/benap/templates/header.html:187
+#: ckanext/benap/templates/header.html:109
 msgid "Marketing, Pixel"
 msgstr "Marketing, Pixel"
 
-#: ckanext/benap/templates/header.html:187
+#: ckanext/benap/templates/header.html:109
 msgid ""
 "This cookie is used to send data to Google Analytics about the visitor's "
 "device and behavior. It tracks the visitor across devices and marketing "
@@ -384,7 +384,7 @@ msgstr ""
 "sturen naar Google Analytics. De cookie trackt de gebruiker over "
 "verschillende devices en marketing kanalen."
 
-#: ckanext/benap/templates/header.html:194
+#: ckanext/benap/templates/header.html:116
 msgid "Save preferences"
 msgstr "Voorkeuren opslaan"
 
@@ -403,6 +403,14 @@ msgstr "Abonneren"
 #: ckanext/benap/templates/home/index.html:50
 msgid "https://www.youtube-nocookie.com/embed/0-M48xzlWzI?rel=0&enablejsapi=1"
 msgstr "https://www.youtube-nocookie.com/embed/jle8RPRW1Do?rel=0&enablejsapi=1"
+
+#: ckanext/benap/templates/home/index.html:53
+msgid "Introduction to transportdata.be"
+msgstr "Introductie Transportdata.be"
+
+#: ckanext/benap/templates/home/index.html:57
+msgid "Click to accept YouTube cookies and watch the video"
+msgstr "Klik om YouTube-cookies te accepteren en de video te bekijken"
 
 #: ckanext/benap/templates/home/snippets/community.html:7
 msgid "JOIN OUR COMMUNITY FORUM"
@@ -442,16 +450,16 @@ msgstr "Contacteer"
 msgid " our helpdesk."
 msgstr " onze helpdesk"
 
-#: ckanext/benap/templates/home/snippets/promoted.html:14
+#: ckanext/benap/templates/home/snippets/promoted.html:7
 msgid "DISCOVER TRANSPORTDATA.BE"
 msgstr "ONTDEK HET NAP ITS & REGISTREER CONTENT"
 
-#: ckanext/benap/templates/home/snippets/promoted.html:15
+#: ckanext/benap/templates/home/snippets/promoted.html:8
 msgid "AND HOW YOU ARE INVOLVED"
 msgstr "EN HOE U DAARIN BETROKKEN BENT"
 
-#: ckanext/benap/templates/home/snippets/promoted.html:19
-#: ckanext/benap/templates/home/snippets/promoted.html:34
+#: ckanext/benap/templates/home/snippets/promoted.html:12
+#: ckanext/benap/templates/home/snippets/promoted.html:27
 msgid ""
 "Transportdata.be is the preferred access point for information on "
 "Intelligent Transport Systems (ITS). This national platform aims to "
@@ -460,26 +468,26 @@ msgstr ""
 "Transportdata.be is het Belgische nationale toegangspunt voor "
 "intelligente transportsystemen en bevat data betreffende:"
 
-#: ckanext/benap/templates/home/snippets/promoted.html:22
+#: ckanext/benap/templates/home/snippets/promoted.html:15
 msgid "MMTIS"
 msgstr "Multimodale reisinformatie-diensten (MMTIS)"
 
-#: ckanext/benap/templates/home/snippets/promoted.html:23
+#: ckanext/benap/templates/home/snippets/promoted.html:16
 msgid "RRTI"
 msgstr "Real-Time verkeersinformatie (RRTI)"
 
-#: ckanext/benap/templates/home/snippets/promoted.html:24
+#: ckanext/benap/templates/home/snippets/promoted.html:17
 msgid "SRTI"
 msgstr "Verkeersveiligheidsinformatie (SRTI)"
 
-#: ckanext/benap/templates/home/snippets/promoted.html:25
+#: ckanext/benap/templates/home/snippets/promoted.html:18
 msgid "SSTP"
 msgstr ""
 "Informatiediensten voor veilige en beveiligde parkeerplaatsen voor "
 "Vrachtwagens en bedrijfsvoertuigen (SSTP)"
 
-#: ckanext/benap/templates/home/snippets/promoted.html:28
-#: ckanext/benap/templates/home/snippets/promoted.html:39
+#: ckanext/benap/templates/home/snippets/promoted.html:21
+#: ckanext/benap/templates/home/snippets/promoted.html:32
 msgid ""
 "Obtain practical information on how to register your organization, "
 "datasets and services."

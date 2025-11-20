@@ -45,19 +45,26 @@
     </div>
 
     <div class="h-100 w-100 flex align-items-center justify-content-center highlight-box">
-        <div data-module="youtube-consent-button"
+      <div data-module="youtube-consent-button"
+        class="youtube-with-consent-button"
         data-module-youtube-src="{{ _('https://www.youtube-nocookie.com/embed/0-M48xzlWzI?rel=0&enablejsapi=1') }}"
-        class="youtube-consent-prompt">
-          Click to accept YouTube cookies and watch the video
+      >
+        <img src="{{ h.url_for('/images/youtube-thumbnail.png') }}"
+              alt="{{ _('Introduction to transportdata.be') }}"
+              class="youtube-thumbnail"
+        />
+        <div class="consent-prompt">
+          {{ _('Click to accept YouTube cookies and watch the video') }}
         </div>
-        <div youtube-consent-button-iframe class="video-wrapper hide-control">
-          <iframe
-            sandbox="allow-scripts allow-same-origin allow-presentation"
-            referrerpolicy="no-referrer"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-        </div>
+      </div>
+      <div youtube-consent-button-iframe class="video-wrapper hide-control">
+        <iframe
+          sandbox="allow-scripts allow-same-origin allow-presentation"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
     </div>
 
     <div>
