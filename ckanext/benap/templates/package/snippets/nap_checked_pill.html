@@ -1,6 +1,7 @@
 <span class="dataset-checked pull-right badge label-checked-inverse ">
     <i class="fa fa-check"></i>
-    {{h.link_to(_('metadata checked & verified'), 
+    {% set nap_checked_year = h.benap_extract_year_from_date(nap_checked, -1) %}
+    {{h.link_to(_('metadata checked & verified') + (' - ' + nap_checked_year if nap_checked_year else ''), 
             h.url_for('pages.show', page='metadata-checked-and-verified'), 
             id="nap_checked",
         target="_blank")}}

@@ -14,7 +14,7 @@
         <div class="flex-grow-1"></div>
         {% if package.nap_checked %}
             <div class="align-self-end">
-                {% snippet "package/snippets/nap_checked_pill.html" %}
+                {% snippet "package/snippets/nap_checked_pill.html", nap_checked=package.nap_checked %}
             </div>
         {% endif %}
     </div>
