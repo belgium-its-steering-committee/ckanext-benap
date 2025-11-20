@@ -1,19 +1,16 @@
+{#
+ Add module-heading header.
+#}
 {% ckan_extends %}
 
 {% block secondary_content %}
 <div class="filters">
   <h2 class="module-heading">{{ _('Filters') }}</h2>
   <div>
-    {% for facet in facet_titles %}
-      {% snippet
-        'snippets/facet_list.html',
-        title=facet_titles[facet],
-        name=facet,
-        search_facets=search_facets,
-        label_function=h.get_facet_label_function(facet)
-      %}
-    {% endfor %}
-  </div>
+      {% for facet in facet_titles %}
+        {% snippet 'snippets/facet_list.html', title=facet_titles[facet], name=facet, search_facets=search_facets %}
+      {% endfor %}
+    </div>
   <a class="close no-text hide-filters"><i class="fa fa-times-circle"></i><span class="text">{{_('close')}}</span></a>
 </div>
 {% endblock %}

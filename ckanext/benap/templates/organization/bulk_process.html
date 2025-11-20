@@ -1,0 +1,7 @@
+{% ckan_extends %}
+{# bulk_process misses the filters class, which is added for all other usages of facets. #}
+{% block secondary_content %}
+<div class="filters">
+    {{ super() }}
+  </div>
+{% endblock %}
