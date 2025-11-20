@@ -2,7 +2,8 @@
 # encoding: utf-8
 import cgi
 import logging
-
+import mimetypes
+import magic
 import os
 import datetime
 import ckan.lib.munge as munge
@@ -289,7 +290,7 @@ class OrganizationUploader(object):
         max_size is size in MB maximum of the file"""
         if self.filename:
             assert self.upload_file and self.filepath
-
+            self.verify_type("image", "image_url", self.upload_file, self.upload_field_storage, self.filename)
             with open(self.tmp_filepath, 'wb+') as output_file:
                 try:
                     _copy_file(self.upload_file, output_file, max_size)
@@ -312,6 +313,7 @@ class OrganizationUploader(object):
         # hack into this to upload NAP DOC
         # SSTP
         if self.sstp_doc_filename:
+            self.verify_type("pdf", "sstp_doc_document_upload", self.sstp_doc_upload_file, self.sstp_doc_upload_field_storage, self.sstp_doc_filename)
             with open(self.sstp_doc_tmp_filepath, 'wb+') as output_file:
                 try:
                     _copy_file(self.sstp_doc_upload_file, output_file, max_size)
@@ -333,6 +335,7 @@ class OrganizationUploader(object):
 
         # SRTI
         if self.srti_doc_filename:
+            self.verify_type("pdf", "srti_doc_document_upload", self.srti_doc_upload_file, self.srti_doc_upload_field_storage, self.srti_doc_filename)
             with open(self.srti_doc_tmp_filepath, 'wb+') as output_file:
                 try:
                     _copy_file(self.srti_doc_upload_file, output_file, max_size)
@@ -354,6 +357,7 @@ class OrganizationUploader(object):
 
         # RTTI
         if self.rtti_doc_filename:
+            self.verify_type("pdf", "rtti_doc_document_upload", self.rtti_doc_upload_file, self.rtti_doc_upload_field_storage, self.rtti_doc_filename)
             with open(self.rtti_doc_tmp_filepath, 'wb+') as output_file:
                 try:
                     _copy_file(self.rtti_doc_upload_file, output_file, max_size)
@@ -376,6 +380,7 @@ class OrganizationUploader(object):
 
         # hack into this to upload PROXY DOC
         if self.proxy_doc_filename:
+            self.verify_type("pdf", "proxy_pdf_url", self.proxy_doc_upload_file, self.proxy_doc_upload_field_storage, self.proxy_doc_filename)
             with open(self.proxy_doc_tmp_filepath, 'wb+') as output_file:
                 try:
                     _copy_file(self.proxy_doc_upload_file, output_file, max_size)
@@ -395,3 +400,63 @@ class OrganizationUploader(object):
             except OSError:
                 pass
         #end PROXY DOC hack
+    
+    # adjustment from verify_type in ckan-core/ckan/lib/uploader.py 
+    # adjust to handle the code above and allow specifying more specific mimetypes for other uploads
+    # as the original functions works via .env variable, where you can only set the mimetype for all
+    # uploads of the organization, not per upload field.
+    # This is a bit hacky, but avoids changing the above code as much as possible.
+    def verify_type(self, type, file_field, upload_file, upload_field_storage, filename):
+        if not upload_file:
+            return
+        # allowed_types is the first "part" of the mimetype
+        if type == "image":
+          allowed_mimetypes = ["image/jpg", "image/jpeg", "image/png", "image/bmp"]
+          allowed_types = ["image"]
+          allowed_extensions = ['.jpeg', '.jpg', '.bmp', '.png']
+        elif type == "pdf":
+          allowed_mimetypes = ["application/pdf"]
+          allowed_types = ["application"]
+          allowed_extensions = ['.pdf']
+        else:
+          return  
+
+        # Check that the declared types in the request are supported
+        declared_mimetype_from_filename = mimetypes.guess_type(
+            upload_field_storage.filename
+        )[0]
+        declared_content_type = upload_field_storage.content_type
+        for declared_mimetype in (
+            declared_mimetype_from_filename,
+            declared_content_type,
+        ):
+            if (declared_mimetype and declared_mimetype not in allowed_mimetypes):
+                raise logic.ValidationError(
+                    {
+                        file_field: [
+                            f"Type error - Unsupported upload type: {declared_mimetype}"
+                        ]
+                    }
+                )
+
+        # Check that the actual type guessed from the contents is supported
+        # (2KB required for detecting xlsx mimetype)
+        content = upload_file.read(2048)
+        guessed_mimetype = magic.from_buffer(content, mime=True)
+
+        upload_file.seek(0, os.SEEK_SET)
+
+        err = {
+            file_field: [f"Type error - Unsupported upload type: {guessed_mimetype}"]
+        }
+
+        if guessed_mimetype not in allowed_mimetypes:
+            raise logic.ValidationError(err)
+
+        type_ = guessed_mimetype.split("/")[0]
+        if type_ not in allowed_types:
+            raise logic.ValidationError(err)
+
+        preferred_extension = mimetypes.guess_extension(guessed_mimetype)
+        if not (filename.lower().endswith(tuple(allowed_extensions))) or preferred_extension.lower() not in allowed_extensions:
+            raise logic.ValidationError({file_field: [f'{filename.lower()},{filename},{preferred_extension} | Extension error - Only supported file formats are allowed: {", ".join(allowed_extensions)}']}) 

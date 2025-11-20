@@ -95,9 +95,9 @@ def modified_by_sysadmin(key, data, errors, context):
     new_value = data.get(key)
     
     old_value = _old_value(key, context)
-    
+
     is_changing = not soft_compare_strings(str(new_value), old_value)
-    
+
     user = context.get("auth_user_obj")
     is_authorized = user.sysadmin
     if is_changing and not is_authorized:
@@ -256,29 +256,16 @@ def benap_tag_string_convert(key, flattened_data, errors, context):
             raise Invalid(_('Tag "%s" must be alphanumeric '
                             'characters or symbols: -_.') % (tag))
 
-def logo_extensions(value):
-    if value and len(value) > 0:
-        if not value.endswith(('jpeg', 'JPEG', 'jpg','JPG','bmp','BMP', "PNG", "png")):
-            raise toolkit.Invalid(toolkit._('Only supported image formats are allowed: jpeg, jpg, bmp, png'))
-    return value
-
-def doc_validator(value):
-    if value and len(value) > 0:
-        if not value.endswith(('pdf', 'PDF')):
-            raise toolkit.Invalid(toolkit._('Only PDF is allowed').format(url=value))
-    return value
-
-
 # handle nap_checked field. The input is a boolean (so convert date to True before calling this validator).
 # This sets nap_checked field to the date the nap_checked was set to true in the form. This means:
 # If value set from false (or "missing") to true, set value to 'today'. Anything else:
 # - if set to true, but was already a date or true, keep the previous value
 # - if set to false, set to false (which might remove the previous checked date)
 
-# any new nap_checked values will be either False or a date. 
+# any new nap_checked values will be either False or a date.
 # But the database still contains nap_checked equal to True for older data.
 
-# Todo: If old data can be migrated away from (so no more "true" as value in database), 
+# Todo: If old data can be migrated away from (so no more "true" as value in database),
 # the logic can be greatly simplified: only allow date or "empty" for nap_checked.
 # This way, any logic for handling booleans can be removed.
 def benap_convert_nap_checked(key, data, errors, context):
@@ -288,14 +275,14 @@ def benap_convert_nap_checked(key, data, errors, context):
   if new_value == False:
     data[key] = False
     return
-  
+
   if new_value == True:
     # false to true => set to today
     if str(old_value) in ['False', 'false'] or old_value is None:
       data[key] = datetime.now().date().isoformat()
     else: # true or date to true  => keep previous value
-      data[key] = old_value 
-  
+      data[key] = old_value
+
 
 
 # convert a date to "true". Leave anything else as is.
