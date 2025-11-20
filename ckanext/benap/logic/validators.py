@@ -1,4 +1,5 @@
 # coding=utf-8
+from datetime import datetime
 import re
 import json
 from itertools import count
@@ -10,7 +11,7 @@ import ckan.plugins.toolkit as toolkit
 from ckan.lib.navl.dictization_functions import Missing
 from ckanext.benap.helpers import (organisation_names_for_autocomplete, benap_get_organization_field_by_id,
                                    benap_get_organization_field_by_specified_field)
-
+from ckanext.benap.util.forms import soft_compare_strings
 # pattern from http://phoneregex.com/
 phone_number_pattern = re.compile(
     r"\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\d{1,14}$"
@@ -24,6 +25,10 @@ http_pattern = re.compile(
     r"^http:\/\/"
 )
 
+def _old_value(key, context):
+  package = context.get('package')
+  field_name = key[-1] # key is a tuple, but need just field name
+  return package.get(field_name) or package.extras.get(field_name)
 
 def phone_number_validator(value, context):
     if value:
@@ -81,30 +86,22 @@ def https_validator(value, context):
     return value
 
 
-def modified_by_sysadmin(schema_value, package):
-    # TODO: fix and re-enable this validator
-    # Current implementation does not make sense, it is possible for
-    # a non sysadmin user to set the value from true to false, this is not intended.
-    return schema_value
+def modified_by_sysadmin(key, data, errors, context):
+    """
+    Validates if field is edited by sysadmin
+    Denies request for any other user.
+    If field is not changed, allows the request.
+    """
+    new_value = data.get(key)
     
-    user = package.get("auth_user_obj")
-    # parse schema_value
-    trueValues = {"true"}
-    flag = False
-
-    if isinstance(schema_value, str):
-        lowerValue = schema_value.strip().lower()
-        if lowerValue in trueValues:
-            flag = True
-
-    if user is not None:
-        if not user.sysadmin and flag:
-            raise Invalid(_('Modification must done by a system administrator'))
-        else:
-            return schema_value
-    else:
-        raise Invalid(_('Logged in one must be'))
-
+    old_value = _old_value(key, context)
+    
+    is_changing = not soft_compare_strings(str(new_value), old_value)
+    
+    user = context.get("auth_user_obj")
+    is_authorized = user.sysadmin
+    if is_changing and not is_authorized:
+        raise Invalid(_('Modification must be done by system administrator'))
 
 def is_choice_null(value):
     if isinstance(value, Missing) or value == '':
@@ -269,4 +266,52 @@ def doc_validator(value):
     if value and len(value) > 0:
         if not value.endswith(('pdf', 'PDF')):
             raise toolkit.Invalid(toolkit._('Only PDF is allowed').format(url=value))
+    return value
+
+
+# handle nap_checked field. The input is a boolean (so convert date to True before calling this validator).
+# This sets nap_checked field to the date the nap_checked was set to true in the form. This means:
+# If value set from false (or "missing") to true, set value to 'today'. Anything else:
+# - if set to true, but was already a date or true, keep the previous value
+# - if set to false, set to false (which might remove the previous checked date)
+
+# any new nap_checked values will be either False or a date. 
+# But the database still contains nap_checked equal to True for older data.
+
+# Todo: If old data can be migrated away from (so no more "true" as value in database), 
+# the logic can be greatly simplified: only allow date or "empty" for nap_checked.
+# This way, any logic for handling booleans can be removed.
+def benap_convert_nap_checked(key, data, errors, context):
+  old_value = _old_value(key, context)
+  new_value = data.get(key)
+
+  if new_value == False:
+    data[key] = False
+    return
+  
+  if new_value == True:
+    # false to true => set to today
+    if str(old_value) in ['False', 'false'] or old_value is None:
+      data[key] = datetime.now().date().isoformat()
+    else: # true or date to true  => keep previous value
+      data[key] = old_value 
+  
+
+
+# convert a date to "true". Leave anything else as is.
+def benap_date_to_true(value):
+  if isinstance(value, datetime):
+      return True
+  try:
+      # check if string and ISO formatted date (YYYY-MM-DD or YYYY-MM-DDTHH:MM:SS)
+      _date = datetime.fromisoformat(value)
+      return True
+  except (ValueError, TypeError):
+      pass
+  return value
+
+def benap_to_boolean_if_bool(value):
+    if isinstance(value, str) and value.lower() in ['true', 'false']:
+        return value.lower() == 'true'
+
     return value

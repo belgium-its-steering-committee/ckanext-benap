@@ -8,7 +8,7 @@
       </span>
     {% endif %}
     {% if pkg.nap_checked %}
-      {% snippet "package/snippets/nap_checked_pill.html" %}
+      {% snippet "package/snippets/nap_checked_pill.html", nap_checked=pkg.nap_checked %}
     {% endif %}
     <h1>
       {% block page_heading %}

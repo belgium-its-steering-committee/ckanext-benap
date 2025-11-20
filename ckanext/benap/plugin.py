@@ -16,10 +16,10 @@ from ckanext.benap.helpers import ontology_helper, organization_name, organisati
     benap_get_organization_field_by_id,\
     benap_get_organization_field_by_specified_field, benap_retrieve_dict_items_or_keys_or_values, get_translated_category_and_sub_category, \
     benap_retrieve_org_title_tel_email, benap_retrieve_raw_choices_list, benap_tag_update_helper, _c, is_member_of_org, get_facet_label_function, get_facet_name_label_function, \
-    benap_get_available_locales_sorted, benap_datetime_string_now
+    benap_get_available_locales_sorted, benap_datetime_string_now, benap_extract_year_from_date 
 
 from ckanext.benap.util.forms import map_for_form_select
-from ckanext.benap.logic.validators import doc_validator, logo_extensions, phone_number_validator, \
+from ckanext.benap.logic.validators import benap_convert_nap_checked, benap_date_to_true, benap_to_boolean_if_bool, doc_validator, logo_extensions, phone_number_validator, \
     countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin, \
     is_choice_null, contact_point_org_fields_consistency_check, \
     license_fields_conditional_validation, benap_tag_string_convert, fluent_tags_validator, category_sub_category_validator
@@ -86,6 +86,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'get_facet_name_label_function': get_facet_name_label_function,
             'get_facet_label_function': get_facet_label_function,
             'benap_datetime_string_now': benap_datetime_string_now,
+            'benap_extract_year_from_date': benap_extract_year_from_date,
             'benap_get_config': lambda key: (config.get(key, None)),
         }
 
@@ -106,6 +107,9 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_category_sub_category_validator': category_sub_category_validator,
             'benap_logo_extensions': logo_extensions,
             'benap_doc_validator': doc_validator,
+            'benap_convert_nap_checked': benap_convert_nap_checked,
+            'benap_date_to_true': benap_date_to_true,
+            'benap_to_boolean_if_bool': benap_to_boolean_if_bool,
         }
 
     # IAuthFunctions

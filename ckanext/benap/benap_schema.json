@@ -631,8 +631,8 @@
       "form_include_blank_choice":false,
       "required": true,
       "display_snippet" : null,
-      "validators": "benap_modified_by_sysadmin",
-      "output_validators": "boolean_validator",
+      "validators": "benap_date_to_true boolean_validator benap_convert_nap_checked benap_modified_by_sysadmin",
+      "output_validators": "benap_to_boolean_if_bool",
       "form_snippet":"nap_checked.html",
       "choices": [
           {

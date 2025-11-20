@@ -429,3 +429,18 @@ def benap_datetime_string_now(part = None):
         'iso': now.isoformat()
     }
     return formats[part] if part else formats
+
+
+def benap_extract_year_from_date(date_string, offset=0):
+    """
+    extract year from iso date string. Optionally add an offset.
+    """
+    if not date_string:
+        return None
+    
+    try:
+        date_obj = datetime.fromisoformat(str(date_string))
+        year = date_obj.year + offset
+        return str(year)
+    except Exception:
+        return None
