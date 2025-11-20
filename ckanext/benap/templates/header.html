@@ -127,7 +127,38 @@
     <li>
         {% snippet "snippets/language_selector.html" %}
     </li>
-    {{ super() }}
+    {% if c.userobj.sysadmin %}
+      <li>
+        <a href="{{ h.url_for('pages.pages_index') }}" title="{{ _('Pages') }}">
+          <i class="fa fa-file icon-file"></i>
+        </a>
+      </li>
+    {% endif %}
+    {# Blog button removed from ckanext-pages removed #}
+
+    {# We want to override ckanext-pages page.html content.
+    As ckanext-pages does not provide its own block, we can't use super() of header_account_logged here.
+    Instead, copy/paste the content of ckan-core, to avoid going through ckanext-pages. #}
+    {% if c.userobj.sysadmin %}
+      <li>
+        <a href="{{ h.url_for('admin.index') }}" title="{{ _('Sysadmin settings') }}">
+          <i class="fa fa-gavel" aria-hidden="true"></i>
+          <span class="text">{{ _('Admin') }}</span>
+        </a>
+      </li>
+    {% endif %}
+    {% block header_account_profile %}
+      {{ super() }}
+    {% endblock %}
+    {% block header_dashboard %}
+      {{ super() }}
+    {% endblock %}
+    {% block header_account_settings_link %}
+      {{ super() }}
+    {% endblock %}
+    {% block header_account_log_out_link %}
+      {{ super() }}
+    {% endblock %}
 {% endblock %}
 
 {% block header_account_notlogged %}
