@@ -157,6 +157,7 @@ class OrganizationUploader(object):
                 self.upload_file = _get_underlying_file(
                     self.upload_field_storage)
                 self.tmp_filepath = self.filepath + '~'
+                self.verify_type("image", "image_url", self.upload_file, self.upload_field_storage, self.filename)
 
                 data_dict[url_field] = self.filename
 
@@ -189,6 +190,7 @@ class OrganizationUploader(object):
                 data_dict['url_type'] = 'upload'
                 self.sstp_doc_upload_file = _get_underlying_file(self.sstp_doc_upload_field_storage)
                 self.sstp_doc_tmp_filepath = self.sstp_doc_filepath + '~'
+                self.verify_type("pdf", "sstp_doc_document_upload", self.sstp_doc_upload_file, self.sstp_doc_upload_field_storage, self.sstp_doc_filename)
 
         # keep the file if there has been no change
         elif self.sstp_doc_old_filename and not self.sstp_doc_old_filename.startswith('http'):
@@ -219,6 +221,7 @@ class OrganizationUploader(object):
                 data_dict['url_type'] = 'upload'
                 self.srti_doc_upload_file = _get_underlying_file(self.srti_doc_upload_field_storage)
                 self.srti_doc_tmp_filepath = self.srti_doc_filepath + '~'
+                self.verify_type("pdf", "srti_doc_document_upload", self.srti_doc_upload_file, self.srti_doc_upload_field_storage, self.srti_doc_filename)
         # keep the file if there has been no change
         elif self.srti_doc_old_filename and not self.srti_doc_old_filename.startswith('http'):
             if not self.srti_doc_clear:
@@ -246,6 +249,7 @@ class OrganizationUploader(object):
                 data_dict['url_type'] = 'upload'
                 self.rtti_doc_upload_file = _get_underlying_file(self.rtti_doc_upload_field_storage)
                 self.rtti_doc_tmp_filepath = self.rtti_doc_filepath + '~'
+                self.verify_type("pdf", "rtti_doc_document_upload", self.rtti_doc_upload_file, self.rtti_doc_upload_field_storage, self.rtti_doc_filename)
         # keep the file if there has been no change
         elif self.rtti_doc_old_filename and not self.rtti_doc_old_filename.startswith('http'):
             if not self.rtti_doc_clear:
@@ -273,6 +277,7 @@ class OrganizationUploader(object):
                 data_dict['url_type'] = 'upload'
                 self.proxy_doc_upload_file = _get_underlying_file(self.proxy_doc_upload_field_storage)
                 self.proxy_doc_tmp_filepath = self.proxy_doc_filepath + '~'
+                self.verify_type("pdf", "proxy_pdf_url", self.proxy_doc_upload_file, self.proxy_doc_upload_field_storage, self.proxy_doc_filename)
         #keep the file if there has been no change
         elif self.proxy_doc_old_filename and not self.proxy_doc_old_filename.startswith('http'):
             if not self.proxy_doc_clear:
@@ -290,7 +295,6 @@ class OrganizationUploader(object):
         max_size is size in MB maximum of the file"""
         if self.filename:
             assert self.upload_file and self.filepath
-            self.verify_type("image", "image_url", self.upload_file, self.upload_field_storage, self.filename)
             with open(self.tmp_filepath, 'wb+') as output_file:
                 try:
                     _copy_file(self.upload_file, output_file, max_size)
@@ -313,7 +317,6 @@ class OrganizationUploader(object):
         # hack into this to upload NAP DOC
         # SSTP
         if self.sstp_doc_filename:
-            self.verify_type("pdf", "sstp_doc_document_upload", self.sstp_doc_upload_file, self.sstp_doc_upload_field_storage, self.sstp_doc_filename)
             with open(self.sstp_doc_tmp_filepath, 'wb+') as output_file:
                 try:
                     _copy_file(self.sstp_doc_upload_file, output_file, max_size)
@@ -335,7 +338,6 @@ class OrganizationUploader(object):
 
         # SRTI
         if self.srti_doc_filename:
-            self.verify_type("pdf", "srti_doc_document_upload", self.srti_doc_upload_file, self.srti_doc_upload_field_storage, self.srti_doc_filename)
             with open(self.srti_doc_tmp_filepath, 'wb+') as output_file:
                 try:
                     _copy_file(self.srti_doc_upload_file, output_file, max_size)
@@ -357,7 +359,6 @@ class OrganizationUploader(object):
 
         # RTTI
         if self.rtti_doc_filename:
-            self.verify_type("pdf", "rtti_doc_document_upload", self.rtti_doc_upload_file, self.rtti_doc_upload_field_storage, self.rtti_doc_filename)
             with open(self.rtti_doc_tmp_filepath, 'wb+') as output_file:
                 try:
                     _copy_file(self.rtti_doc_upload_file, output_file, max_size)
@@ -380,7 +381,6 @@ class OrganizationUploader(object):
 
         # hack into this to upload PROXY DOC
         if self.proxy_doc_filename:
-            self.verify_type("pdf", "proxy_pdf_url", self.proxy_doc_upload_file, self.proxy_doc_upload_field_storage, self.proxy_doc_filename)
             with open(self.proxy_doc_tmp_filepath, 'wb+') as output_file:
                 try:
                     _copy_file(self.proxy_doc_upload_file, output_file, max_size)
