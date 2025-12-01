@@ -7,7 +7,8 @@
 ckan.module('cookies', function (jQuery, _) {
   return {
     initialize: function () {
-      const gtagId = this.options['googleTagId']
+      // if setting google-tag-id="", it will set it as "true". But we actually set an empty string...
+      const gtagId = this.options['googleTagId'] === true ? '' : String(this.options['googleTagId'] || '');
       const cookieDomain = this.options['cookieDomain']
 
       function setCookie(name, value, days) {
