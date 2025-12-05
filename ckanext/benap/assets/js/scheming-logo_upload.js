@@ -81,7 +81,8 @@ ckan.module('scheming-logo_upload', function($){
             .insertBefore(this.field_url_input);
 
             // Update the main label (this is displayed when no data/image has been uploaded/linked)
-            $('label[for="field-logo-upload"]').text(options.upload_label || this._('Image'));
+            // ADJUSTED deactivated so * is kept
+            // $('label[for="field-logo-upload"]').text(options.upload_label || this._('Image'));
 
             // Setup the file upload input
             this.input

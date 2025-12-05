@@ -638,7 +638,7 @@ msgid ""
 msgstr ""
 "Send us an e-mail at <a href=\"mailto:contact@transportdata.be\" "
 "target=\"_top\">contact@transportdata.be</a> mentioning your name and, if"
-" applicable, your organisation. "
+" applicable, your organization. "
 
 #: ckanext/benap/templates/user/new.html:29
 #, python-format

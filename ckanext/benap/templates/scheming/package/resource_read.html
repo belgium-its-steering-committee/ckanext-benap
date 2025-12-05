@@ -26,8 +26,10 @@
       <tbody>
         {%- block resource_last_updated -%}
           <tr>
-            <th scope="row">{{ _('Last updated') }}</th>
-            <td>{{ h.render_datetime(Benap_Scheming_Res.r) 
+            <th scope="row">{{ _('Metadata date') }}</th>
+            {# should be metadata_modified. Rest kept as fallback because the reason of this code is unclear... #}
+            <td>{{  h.render_datetime(Benap_Scheming_Res.metadata_modified) 
+                    or h.render_datetime(Benap_Scheming_Res.r) 
                     or h.render_datetime(Benap_Scheming_Res.revision_timestamp) 
                     or h.render_datetime(Benap_Scheming_Res.created)
                     or h.render_datetime(Benap_Scheming_Res.Created)
@@ -37,6 +39,7 @@
         {%- block resource_created -%}
           <tr>
             <th scope="row">{{ _('Created') }}</th>
+            {# Fallback to "Created" kept, because the reason of this code is unclear... #}
             <td>{{ h.render_datetime(Benap_Scheming_Res.created)
                     or h.render_datetime(Benap_Scheming_Res.Created)
                     or _('unknown') }}</td>
