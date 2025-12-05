@@ -171,7 +171,11 @@ class OrganizationUploader(object):
         # hack into this to upload NAP DOC
         # SSTP
         # very hacky because old_filename is not passed correctly and touching the brittle upload code is too likely to break.
-        self.sstp_doc_old_filename = benap_get_organization_field_by_id(data_dict.get('name'), 'sstp_doc_document_upload')
+        try:
+          self.sstp_doc_old_filename = benap_get_organization_field_by_id(data_dict.get('name'), 'sstp_doc_document_upload')
+        except logic.NotFound:
+          self.sstp_doc_old_filename = None
+          
         if self.sstp_doc_old_filename:
             self.sstp_doc_old_filepath = os.path.join(self.storage_path, data_dict.get('name'), self.sstp_doc_old_filename)
 
@@ -201,7 +205,11 @@ class OrganizationUploader(object):
 
         # SRTI
         # very hacky because old_filename is not passed correctly and touching the brittle upload code is too likely to break.
-        self.srti_doc_old_filename = benap_get_organization_field_by_id(data_dict.get('name'), 'srti_doc_document_upload')
+        try:
+          self.srti_doc_old_filename = benap_get_organization_field_by_id(data_dict.get('name'), 'srti_doc_document_upload')
+        except logic.NotFound:
+          self.srti_doc_old_filename = None
+          
         if self.srti_doc_old_filename:
             self.srti_doc_old_filepath = os.path.join(self.storage_path, data_dict.get('name'),
                                                  self.srti_doc_old_filename)
@@ -231,7 +239,11 @@ class OrganizationUploader(object):
 
         # RTTI
         # very hacky because old_filename is not passed correctly and touching the brittle upload code is too likely to break.
-        self.rtti_doc_old_filename = benap_get_organization_field_by_id(data_dict.get('name'), 'rtti_doc_document_upload')
+        try:
+          self.rtti_doc_old_filename = benap_get_organization_field_by_id(data_dict.get('name'), 'rtti_doc_document_upload')
+        except logic.NotFound:
+          self.rtti_doc_old_filename = None
+          
         if self.rtti_doc_old_filename:
             self.rtti_doc_old_filepath = os.path.join(self.storage_path, data_dict.get('name'), self.rtti_doc_old_filename)
         self.rtti_doc_clear = data_dict.pop('rtti_clear_upload_doc', None)
@@ -259,7 +271,11 @@ class OrganizationUploader(object):
         # end NAP DOC hack
         # hack into this to upload PROXY DOC
         # very hacky because old_filename is not passed correctly and touching the brittle upload code is too likely to break.
-        self.proxy_doc_old_filename = benap_get_organization_field_by_id(data_dict.get('name'), 'proxy_pdf_url')
+        try:
+          self.proxy_doc_old_filename = benap_get_organization_field_by_id(data_dict.get('name'), 'proxy_pdf_url')
+        except logic.NotFound:
+          self.proxy_doc_old_filename = None
+          
         if self.proxy_doc_old_filename:
             self.proxy_doc_old_filepath = os.path.join(self.storage_path, data_dict.get('name'), self.proxy_doc_old_filename)
         self.proxy_doc_clear = data_dict.pop('proxy_clear_upload', None)
