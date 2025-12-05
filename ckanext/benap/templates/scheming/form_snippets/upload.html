@@ -11,6 +11,7 @@
 {% macro image_upload(
     data, 
     errors, 
+    field,
     field_url='image_url', 
     field_upload='image_upload', 
     field_clear='clear_upload',
@@ -44,7 +45,7 @@
         data-module-data="{{data}}">
     {% endif %}
    
-    {{ form.input(field_url, label=url_label, id='field-image-url', type=type, placeholder=placeholder, value=data.get(field_url), error=errors.get(field_url), classes=['control-full']) }}
+    {{ form.input(field_url, label=url_label, id='field-image-url', type=type, placeholder=placeholder, value=data.get(field_url), error=errors.get(field_url), classes=['control-full'], is_required=h.scheming_field_required(field)) }}
 
     {% if is_upload_enabled %}
     {{ form.input(field_upload, label=upload_label, id='field-image-upload', type='file', placeholder='', value='', error='', classes=['control-full']) }}
@@ -65,11 +66,10 @@
     {% endif %}
 {% endif %}
 
-{% set astrix= '*' %}
-
 {{ image_upload(
     data,
     errors,
+    field=field,
     field_url=field.field_name,
     field_upload=field.upload_field,
     field_clear=field.upload_clear,
