@@ -7,14 +7,14 @@
     {
       "field_name": "title",
       "label": {
-        "en": "Organisation name (default)",
+        "en": "Organization name (default)",
         "fr": "Nom de l'organisation (défaut)",
         "nl": "Naam van de organisatie (standaard)",
         "de": "Name der Organisation (Standard)"
       },
       "required": true,
       "help_text": {
-        "en": "Indicate the name of your organisation in your preferred language. Do not provide the name in multiple languages here. By defaullt, this organisation name will be shown in all languages. If you wan to specify the organisation name in multiple languages, you can do so by filling in the fields below.",
+        "en": "Indicate the name of your organization in your preferred language. Do not provide the name in multiple languages here. By defaullt, this organization name will be shown in all languages. If you wan to specify the organization name in multiple languages, you can do so by filling in the fields below.",
         "fr": "Indiquez le nom de votre organisation dans votre langue de préférence. Ne donnez pas ici le nom dans différentes langues. Par défaut, ce nom d'organisation sera affiché dans toutes les langues. Si vous souhaitez préciser le nom de l'organisation dan différentes langues, vous pouvez le faire en remplissant les champs ci-dessous.",
         "nl": "Geef de naam van de organisatie in de taal bij voorkeur. Vul hier geen meerdere talen in. Standaard zal deze organisatienaam getoond worden in alle talen. Wenst u de organisatienaam in meerdere talen te specifiëren, dan kan dit door de velden hieronder in te vullen.",
         "de": "Geben Sie den Namen Ihrer Organisation in Ihrer bevorzugten Sprache an. Schreiben Sie bitte nicht hier den Namen in verschiedenen Sprachen. Standardmäβig wird dieser Name der Organisation in allen Sprachen angezeigt werden. Wenn Sie den Namen der Organisation in verschiedenen Sprachen angeben wollen, sollten Sie die Felder hier unten benutzen."
@@ -24,7 +24,7 @@
         "data-module": "slug-preview-target"
       },
       "form_placeholder": {
-        "en": "My Organization name",
+        "en": "My organization name",
         "fr": "Nom de mon organisation",
         "nl": "Naam van je organisatie",
         "de": "Name meiner Organisation"
@@ -141,13 +141,13 @@
     {
       "field_name": "image_url",
       "label": {
-        "en": "Organisation Logo",
-        "fr": "Logo d'organisation",
+        "en": "Organization Logo",
+        "fr": "Logo de l'organisation",
         "nl": "Organisatie Logo",
         "de": "Organisations Logo"
       },
       "help_text": {
-        "en": "The logo of your organisation, only .jpeg, .jpg, .bmp and .png extensions allowed",
+        "en": "The logo of your organization, only .jpeg, .jpg, .bmp and .png extensions allowed",
         "fr": "Le logo de votre organisation, que .jpeg, .jpg, .bmp et .png extensions accepté",
         "nl": "Het logo van je organisatie, enkel .jpeg, .jpg, .bmp en .png extensies toeglaten",
         "de": "Das Logo Ihrer Organisation, nûr .jpeg, .jpgn .bmp und .png erweiterungen erlaubt"
@@ -158,7 +158,7 @@
       "upload_clear": "clear_upload",
       "upload_label": "organisation_Logo",
       "validators": "not_empty unicode_safe",
-      "required":true
+      "required": true
     },
     {
       "field_name": "address",
@@ -207,7 +207,7 @@
         "de": "Land"
       },
       "help_text": {
-        "en": "The country of an address of your organisation.",
+        "en": "The country of an address of your organization.",
         "fr": "Le pays de l'adresse de votre organisation.",
         "nl": "Het land van het adres van uw organisatie.",
         "de": "Das Land der Adresse Ihrer Organisation."
@@ -226,7 +226,7 @@
         "de": "Verwaltungsgebiet"
       },
       "help_text": {
-        "en": "The administrative area of an address of your organisation.  Depending on the country, this corresponds to a province, a county, a region, or a state.",
+        "en": "The administrative area of an address of your organization.  Depending on the country, this corresponds to a province, a county, a region, or a state.",
         "fr": "La zone administrative de l'adresse de votre organisation. Selon le pays, cela correspond à une province, un arrondissement, une région ou un état.",
         "nl": "Het administratieve gebied van het adres van uw organisatie. Afhankelijk van het land komt dit overeen met een provincie, een district, een regio of een staat.",
         "de": "Das Verwaltungsgebiet der Adresse Ihrer Organisation. Je nach Land entspricht dies einer Provinz, einem Bezirk, einer Region oder einem Staat."
@@ -245,7 +245,7 @@
         "de": "Postleitzahl"
       },
       "help_text": {
-        "en": "The postal code of an address of your organisation.",
+        "en": "The postal code of an address of your organization.",
         "fr": "Le code postal de l'adresse de votre organisation.",
         "nl": "De postcode van het adres van uw organisatie.",
         "de": "Die Postleitzahl der Adresse Ihrer Organisation."
@@ -264,7 +264,7 @@
         "de": "Stadt"
       },
       "help_text": {
-        "en": "The city of an address of your organisation.",
+        "en": "The city of an address of your organization.",
         "fr": "La ville de l'adresse de votre organisation.",
         "nl": "De stad van het adres van uw organisatie.",
         "de": "Die Stadt der Adresse Ihrer Organisation."
@@ -283,7 +283,7 @@
         "de": "Straßenadresse"
       },
       "help_text": {
-        "en": "The street address of your organisation.",
+        "en": "The street address of your organization.",
         "fr": "Le nom et le numéro de rue de votre organisation.",
         "nl": "Het straatadres van uw organisatie.",
         "de": "Die Straßenadresse Ihrer Organisation."
