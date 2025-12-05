@@ -1,9 +1,22 @@
 {% ckan_extends %}
 
 {% block secondary %}
-{# Don't show the side panel for the FAQ pages
-   Overrides ckan-core page.html 'secondary' block via page-plugin template #}
-{% if c.parent.name != 'faq' %}
-  {{ super() }}
-{% endif %}
+  {# Don't show side panel for FAQ pages #}
+  {% if c.parent.name != 'faq' %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}
+
+{% block primary %}
+  {# fix CSS for FAQ pages #}
+  {% if c.parent.name == 'faq' %}
+    {# replace col-md-9 with col-md-12 #}
+    <div class="primary col-md-12 col-xs-12" role="main">
+      {% block primary_content %}
+        {{ super() }}
+      {% endblock %}
+    </div>
+  {% else %}
+    {{ super() }}
+  {% endif %}
 {% endblock %}
