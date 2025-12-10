@@ -26,9 +26,16 @@ http_pattern = re.compile(
 )
 
 def _old_value(key, context):
-  package = context.get('package')
+  package = context.get('package', None)
   field_name = key[-1] # key is a tuple, but need just field name
-  return package.get(field_name) or package.extras.get(field_name)
+  if not package:
+    return None
+  if field_name in package:
+    return package.get(field_name)
+  elif 'extras' in package:
+    return package.extras.get(field_name, None)
+  else:
+    return None
 
 def phone_number_validator(value, context):
     if value:
