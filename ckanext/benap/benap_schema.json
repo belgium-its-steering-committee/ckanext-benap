@@ -1002,10 +1002,10 @@
         "de": "Geben Sie zusätzliche Informationen für den Zugriff und die Nutzung an (optional)."
       },
       "form_placeholder": {
-        "en": "e.g., Additional details on access rights, usage restrictions, or licensing terms",
-        "fr": "ex. Informations supplémentaires sur les droits d'accès, les restrictions d'utilisation ou les conditions de licence",
-        "nl": "bv. Aanvullende details over toegangsrechten, gebruiksbeperkingen of licentievoorwaarden",
-        "de": "z. B. Zusätzliche Angaben zu Zugriffsrechten, Nutzungsbeschränkungen oder Lizenzbedingungen"
+        "en": "e.g., Additional details on access rights, usage restrictions, or terms and conditions",
+        "fr": "ex. Informations supplémentaires sur les droits d'accès, les restrictions d'utilisation ou termes et conditions",
+        "nl": "bv. Aanvullende details over toegangsrechten, gebruiksbeperkingen of voorwaarden",
+        "de": "z. B. Zusätzliche Angaben zu Zugriffsrechten, Nutzungsbeschränkungen oder Bedingungen"
       },
       "form_languages": [
         "en",
@@ -1055,10 +1055,10 @@
         "de": "Lizenztyp"
       },
       "help_text": {
-        "en": "Specify the license type (standard license) under which the data is made available.",
-        "fr": "Spécifiez le type de licence (licence standard) sous laquelle les données sont mises à disposition.",
-        "nl": "Geef het licentietype op (standaardlicentie) waaronder de gegevens beschikbaar worden gesteld.",
-        "de": "Geben Sie den Lizenztyp (Standardlizenz) an, unter dem die Daten verfügbar gemacht werden."
+        "en": "Select a standard license from the dropdown list or “Other” in case of custom-made license.",
+        "fr": "Sélectionnez une licence standard dans la liste déroulante ou “Autre” dans le cas d'une licence sur mesure.",
+        "nl": "Selecteer een standaardlicentie uit de vervolgkeuzelijst of “Andere” in het geval van een op maat gemaakte licentie.",
+        "de": "Wählen Sie eine Standardlizenz aus der Dropdown-Liste oder “Andere” im Falle einer maßgeschneiderten Lizenz aus."
       },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "license_type",
@@ -1080,10 +1080,10 @@
         "de": "Geben Sie den vollständigen Text eines Lizenzdokuments an. Dieses Feld ist obligatorisch, wenn der Lizenztyp im obigen Feld nicht angegeben ist."
       },
       "form_placeholder": {
-        "en": "e.g., Full license text or terms and conditions",
-        "fr": "ex. Texte complet de la licence ou termes et conditions",
-        "nl": "bv. Volledige licentietekst of voorwaarden",
-        "de": "z. B. Vollständiger Lizenztext oder Bedingungen"
+        "en": "e.g., Full license text",
+        "fr": "ex. Texte complet de la licence",
+        "nl": "bv. Volledige licentietekst",
+        "de": "z. B. Vollständiger Lizenztext"
       },
       "form_languages": [
         "en",
