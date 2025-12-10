@@ -20,7 +20,7 @@
 {# different form-call whenever a user is a sysadmin #}
 
 {%- if c.userobj.sysadmin -%}
-  {% set is_date = not(data.get(field.field_name, false) in [true,false]) %}
+  {% set is_date = data.get(field.field_name) not in [true, false, 'True', 'False', None, ''] %}
   {% call form.select(
     field.field_name,
     id='field-' + field.field_name,
