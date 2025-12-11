@@ -30,9 +30,9 @@ def _old_value(key, context):
   field_name = key[-1] # key is a tuple, but need just field name
   if not package:
     return None
-  if field_name in package:
+  if package.get(field_name, None) is not None:
     return package.get(field_name)
-  elif 'extras' in package:
+  elif package.get("extras", None) is not None:
     return package.extras.get(field_name, None)
   else:
     return None
