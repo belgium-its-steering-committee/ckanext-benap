@@ -20,7 +20,7 @@ from ckanext.benap.helpers import ontology_helper, organization_name, organisati
 
 from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.logic.validators import benap_convert_nap_checked, benap_date_to_true, benap_to_boolean_if_bool, phone_number_validator, \
-    countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin, \
+    countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin, benap_keep_value_if_not_sysadmin,\
     is_choice_null, contact_point_org_fields_consistency_check, \
     license_fields_conditional_validation, benap_tag_string_convert, fluent_tags_validator, category_sub_category_validator
 from ckanext.benap.helpers.concepts import get_concept_label
@@ -99,6 +99,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
             'benap_is_after_start': is_after_start,
             'benap_https_validator': https_validator,
             'benap_modified_by_sysadmin': modified_by_sysadmin,
+            'benap_keep_value_if_not_sysadmin': benap_keep_value_if_not_sysadmin,
             'benap_is_choice_null': is_choice_null,
             'benap_contact_point_org_fields_consistency_check': contact_point_org_fields_consistency_check,
             'benap_license_fields_conditional_validation': license_fields_conditional_validation,
