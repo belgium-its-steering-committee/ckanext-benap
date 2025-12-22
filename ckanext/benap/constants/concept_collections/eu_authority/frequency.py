@@ -1,11 +1,5 @@
 
 FREQUENCY = [
-    ('http://publications.europa.eu/resource/authority/frequency/IRREG', {
-        "en": "On occurence",
-        "fr": "Dès que disponible",
-        "nl": "Zodra beschikbaar",
-        "de": "Sofort"
-    }),
     ('http://publications.europa.eu/resource/authority/frequency/1MIN', {
         "en": "Every minute",
         "fr": "Toutes les minutes",
@@ -101,6 +95,12 @@ FREQUENCY = [
         "fr": "Moins qu'une fois par an",
         "nl": "Minder vaak dan één keer per jaar",
         "de": "Weniger häufig als einmal pro Jahr"
+    }),
+    ('http://publications.europa.eu/resource/authority/frequency/IRREG', {
+        "en": "On occurence",
+        "fr": "Dès que disponible",
+        "nl": "Zodra beschikbaar",
+        "de": "Sofort"
     }),
     ('http://publications.europa.eu/resource/authority/frequency/IRREG', {
         "en": "Irregular",
