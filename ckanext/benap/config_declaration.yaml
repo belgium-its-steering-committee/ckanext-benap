@@ -1,0 +1,10 @@
+version: 1
+
+groups:
+  - annotation: Benap config vars
+    options:
+      - key: ckan.max_pdf_size
+        type: int
+        default: 25
+        example: 25
+        description: Maximum size (in MB) for uploaded PDF file.
