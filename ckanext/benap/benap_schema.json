@@ -208,10 +208,10 @@
         "de": "Kontaktpunkt"
       },
       "help_text": {
-        "en": "The contact point of the metadata, divided into three fields: name (mandatory), email (mandatory), and phone number (optional).",
-        "fr": "Le point de contact des métadonnées, divisé en trois champs : nom (obligatoire), email (obligatoire) et numéro de téléphone (optionnel).",
-        "nl": "Het contactpunt van de metadata, verdeeld in drie velden: naam (verplicht), e-mail (verplicht) en telefoonnummer (optioneel).",
-        "de": "Der Ansprechpartner der Metadaten, unterteilt in drei Felder: Name (verpflichtend), E-Mail (verpflichtend) und Telefonnummer (optional)."
+        "en": "Please prioritize a role-based or generic email address (e.g. data@, products@) over a personal email address. This field is automatically filled in if the contact point corresponds to an organization.",
+        "fr": "Veuillez privilégier une adresse e-mail générique ou basée sur le rôle (par exemple, data@, products@) plutôt qu'une adresse e-mail personnelle. Ce champ est automatiquement rempli si le point de contact correspond à une organisation.",
+        "nl": "Geef de voorkeur aan een rolgebaseerd of algemeen e-mailadres (bv. data@, products@) boven een persoonlijk e-mailadres. Dit veld wordt automatisch ingevuld als het contactpunt overeenkomt met een organisatie.",
+        "de": "Bitte geben Sie einer rollenbasierten oder generischen E-Mail-Adresse (z. B. data@, products@) Vorrang vor einer persönlichen E-Mail-Adresse. Dieses Feld wird automatisch ausgefüllt, wenn der Ansprechpartner einer Organisation angehört."
       },
       "form_snippet": "contact_point_with_autocomplete.html",
       "display_snippet": null,

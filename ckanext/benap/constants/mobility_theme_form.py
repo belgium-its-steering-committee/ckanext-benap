@@ -13,8 +13,6 @@ MOBILITY_THEME_BROADER_NARROWER_MAPPING = (
         mt.FREIGHT_AND_LOGISTICS.items()),
     ("https://w3id.org/mobilitydcat-ap/mobility-theme/general-information-for-trip-planning",
         mt.GENERAL_INFORMATION_FOR_TRIP_PLANNING.items()),
-    ("https://w3id.org/mobilitydcat-ap/mobility-theme/other",
-        None),
     ("https://w3id.org/mobilitydcat-ap/mobility-theme/parking-service-and-rest-area-information",
         mt.PARKING_AREA_AND_REST_SERVICE_INFORMATION.items()),
     ("https://w3id.org/mobilitydcat-ap/mobility-theme/pedestrian-network-data",
@@ -38,7 +36,9 @@ MOBILITY_THEME_BROADER_NARROWER_MAPPING = (
     ("https://w3id.org/mobilitydcat-ap/mobility-theme/toll-information",
         mt.TOLL_INFORMATION.items()),
     ("https://w3id.org/mobilitydcat-ap/mobility-theme/waterways-and-water-bodies",
-        None)
+        None),
+    ("https://w3id.org/mobilitydcat-ap/mobility-theme/other",
+        None),
 )
 
 # Build structure expected by form logic for hierarchical concept-scheme-like forms
