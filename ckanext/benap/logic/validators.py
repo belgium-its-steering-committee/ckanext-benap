@@ -32,7 +32,7 @@ def _old_value(key, context):
     return None
   if package.get(field_name, None) is not None:
     return package.get(field_name)
-  elif package.get("extras", None) is not None:
+  elif hasattr(package, "extras"):
     return package.extras.get(field_name, None)
   else:
     return None
@@ -109,6 +109,17 @@ def modified_by_sysadmin(key, data, errors, context):
     is_authorized = user.sysadmin
     if is_changing and not is_authorized:
         raise Invalid(_('Modification must be done by system administrator'))
+
+def benap_keep_value_if_not_sysadmin(key, data, errors, context):
+    """
+    Keeps the old value if the user is not a sysadmin
+    """
+    user = context.get("auth_user_obj")
+    is_authorized = user.sysadmin
+    old_value = _old_value(key, context)
+    if not is_authorized:
+        data[key] = old_value
+
 
 def is_choice_null(value):
     if isinstance(value, Missing) or value == '':
