@@ -3,7 +3,7 @@ from collections import OrderedDict
 
 from ckan import authz
 import ckan.plugins as plugins
-import ckan.plugins.toolkit as toolkit
+import ckan.plugins.toolkit as tk
 from ckan.plugins.toolkit import _
 from ckan.lib.plugins import DefaultTranslation
 import json
@@ -30,8 +30,9 @@ from ckanext.benap.custom_group import CreateGroupView, EditGroupView
 from ckanext.benap.uploader import OrganizationUploader, organization_storage_dir
 
 
-@plugins.toolkit.blanket.actions # auto register all actions in logic/action.py
-class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTranslation):
+@tk.blanket.actions # auto register all actions in logic/action.py
+@tk.blanket.config_declarations # .env variables are declared in config_declaration.yaml
+class BenapPlugin(plugins.SingletonPlugin, tk.DefaultDatasetForm, DefaultTranslation):
     plugins.implements(plugins.ITranslation)
     plugins.implements(plugins.IConfigurer, inherit=True)
     plugins.implements(plugins.ITemplateHelpers, inherit=False)
@@ -54,9 +55,9 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
     # IConfigurer
 
     def update_config(self, config_):
-        toolkit.add_template_directory(config_, 'templates')
-        toolkit.add_public_directory(config_, 'public')
-        toolkit.add_resource('assets', 'benap')
+        tk.add_template_directory(config_, 'templates')
+        tk.add_public_directory(config_, 'public')
+        tk.add_resource('assets', 'benap')
 
     # ITemplateHelpers
 
@@ -183,11 +184,11 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
           if not (logo_filename == file_id # public access for organization logo
                   or authz.has_user_permission_for_group_or_org(org_id, user_id, 'read') 
                   or user_name == 'napcontrolbody'):
-            toolkit.abort(404)
+            tk.abort(404)
 
           org_directory = organization_storage_dir(org_id)
           if not org_directory:
-            toolkit.abort(404)
+            tk.abort(404)
 
           return send_from_directory(org_directory, file_id)
 
@@ -233,7 +234,7 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         # Get the organization ID associated with the dataset
         org_id = pkg_dict.get('organization', {}).get('id')
 
-        org_data = toolkit.get_action('organization_show')(
+        org_data = tk.get_action('organization_show')(
             {}, 
             {
                 'id': org_id,
@@ -275,9 +276,45 @@ class BenapPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, DefaultTr
         return pkg_dict
 
     # IUploader
-    def get_uploader(self, upload_to, old_filename):
+    # custom uploader for groups. Ignore all params: CKAN only passes logo upload params.
+    # See OrganizationUploader as standalone hook, not an "extension" (so ignores its input in function calls).
+    # IOrganizationController/IGroupForm hooks are unusable (happen too late or early in the pipeline of creation).
+    def get_uploader(self, upload_to, _old_filename):
         if upload_to == "group":
-            return OrganizationUploader(upload_to, old_filename)
+            # Configuration of extra file upload fields. These mirror the fields defined in benap_schema_organization.json
+            upload_fields = [
+                {
+                    "field_name": "image_url",
+                    "file_field": "image_upload",
+                    "clear_field": "clear_upload",
+                    "file_type": "image",
+                },
+                {
+                    "field_name": "sstp_doc_document_upload",
+                    "file_field": "sstp_upload_doc",
+                    "clear_field": "sstp_clear_upload_doc",
+                    "file_type": "pdf",
+                },
+                {
+                    "field_name": "srti_doc_document_upload",
+                    "file_field": "srti_upload_doc",
+                    "clear_field": "srti_clear_upload_doc",
+                    "file_type": "pdf",
+                },
+                {
+                    "field_name": "rtti_doc_document_upload",
+                    "file_field": "rtti_upload_doc",
+                    "clear_field": "rtti_clear_upload_doc",
+                    "file_type": "pdf",
+                },
+                {
+                    "field_name": "proxy_pdf_url",
+                    "file_field": "proxy_upload",
+                    "clear_field": "proxy_clear_upload",
+                    "file_type": "pdf",
+                },
+            ]
+            return OrganizationUploader(upload_fields)
         return None
 
     def get_resource_uploader(self, data_dict):
