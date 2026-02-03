@@ -175,7 +175,7 @@ class FileUploader(object):
         try:
             self.old_filename = benap_get_organization_field_by_id(
                 data_dict.get('name'), self.old_file_field_name)
-        except tk.NotFound:
+        except tk.ObjectNotFound:
             self.old_filename = None
 
         if self.old_filename:
