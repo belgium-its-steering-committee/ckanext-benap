@@ -23,7 +23,7 @@
 <fieldset id="license-fieldset" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 40px;">
     <legend style="font-weight: bold; margin-bottom: -5px;">
         <label style="display: inline-block; width: 120px;">
-            <span id="star" style="color: rgb(198,137,139);">*</span> {{ h.scheming_language_text(field.label) }}</label>
+            <span id="license-asterisk" class="control-required">*</span> {{ h.scheming_language_text(field.label) }}</label>
             {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
     </legend>
     {% for item in field.nested_fields %}

@@ -224,8 +224,12 @@ def license_fields_conditional_validation(key, flattened_data, errors, context):
             if license_type == 'Other':
                 field_value = json.loads(field_value)
                 if not field_value.get('en'):
-                    raise Invalid(_('The license text is missing. At least the EN license text is required because'
-                                    ' "Other" was chosen as the license type.'))
+                    error_key = key[:-1] + (key[-1] + '-' + 'en',)
+                    errors.setdefault(error_key, []).append(_(
+                        'The license text is missing. At least the EN license '
+                        'text is required because "Other" was chosen as the '
+                        'license type.'
+                    ))
 
     else:
         if field_value:

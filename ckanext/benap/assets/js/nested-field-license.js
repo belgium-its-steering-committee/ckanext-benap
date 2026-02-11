@@ -10,8 +10,10 @@ ckan.module('nested-field-license', function ($) {
     initialize: function () {
       var $conditionsUsageField = $('#field-conditions_usage');
       var $licenseTypeField = $('#field-license_type');
-      var $starElement = $('#star');
+      var $asteriskElement = $('#license-asterisk');
       var $licenseFieldset = $('#license-fieldset');
+      // Pluck an asterisk from somewhere else on the page, including localized title attribute.
+      var $asteriskTemplate = $('span.control-required').first()
 
       function toggleFieldsetDisability($fieldset, hide) {
         if (hide) {
@@ -24,57 +26,51 @@ ckan.module('nested-field-license', function ($) {
         }
       }
 
-      function toggleRequiredFields(toggle) {
-        $('#field-license_text_translated-en').prop('required', toggle);
-        // option ro make multiple license text fields mandatory
-        // $('#field-license_text_translated-en', #field-license_text_translated-nl, #field-license_text_translated-de, #field-license_text_translated-fr').prop('required', toggle);
+      function toggleFieldRequired(id, required) {
+        if (required) {
+          $('label[for=' + id + ']').prepend($asteriskTemplate.clone(), ' ');
+        } else {
+          $('label[for=' + id + '] > .control-required').remove();
+        }
       }
 
-      $conditionsUsageField.on('change', function () {
-        var selectedValue = $(this).val();
+      function toggleRequiredLicenseTextFields(toggle) {
+        toggleFieldRequired('field-license_text_translated-en', toggle)
+        // option to make multiple license text fields mandatory
+        // var fields = ['field-license_text_translated-en', 'field-license_text_translated-nl', 'field-license_text_translated-de', 'field-license_text_translated-fr']
+        // for (var field of fields) {
+        //   toggleFieldRequired(field, toggle)
+        // }
+      }
+
+      function updateConditionsForUsage() {
         if (
-          selectedValue ===
+          $conditionsUsageField.val() ===
           'https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided'
         ) {
-          $licenseTypeField.prop('required', true);
-          $starElement.show();
+          toggleFieldRequired('field-license_type', true);
+          $asteriskElement.show();
           toggleFieldsetDisability($licenseFieldset, false);
         } else {
-          $licenseTypeField.prop('required', false);
-          toggleRequiredFields(false);
-          $starElement.hide();
+          toggleFieldRequired('field-license_type', false);
+          toggleRequiredLicenseTextFields(false);
+          $asteriskElement.hide();
           toggleFieldsetDisability($licenseFieldset, true);
         }
-      });
-
-      if (
-        $conditionsUsageField.val() ===
-        'https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided'
-      ) {
-        $licenseTypeField.prop('required', true);
-        $starElement.show();
-        toggleFieldsetDisability($licenseFieldset, false);
-      } else {
-        $licenseTypeField.prop('required', false);
-        toggleRequiredFields(false);
-        $starElement.hide();
-        toggleFieldsetDisability($licenseFieldset, true);
       }
 
-      $licenseTypeField.on('change', function () {
-        var licenseTypeValue = $(this).val();
-        if (licenseTypeValue === 'Other') {
-          toggleRequiredFields(true);
+      $conditionsUsageField.on('change', updateConditionsForUsage);
+      updateConditionsForUsage();
+
+      function updateLicenseTextField() {
+        if ($licenseTypeField.val() === 'Other') {
+          toggleRequiredLicenseTextFields(true);
         } else {
-          toggleRequiredFields(false);
+          toggleRequiredLicenseTextFields(false);
         }
-      });
-
-      if ($licenseTypeField.val() === 'Other') {
-        toggleRequiredFields(true);
-      } else {
-        toggleRequiredFields(false);
       }
+      $licenseTypeField.on('change', updateLicenseTextField);
+      updateLicenseTextField();
     },
   };
 });
