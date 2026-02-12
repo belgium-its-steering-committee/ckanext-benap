@@ -8,12 +8,12 @@
 ckan.module('nested-field-license', function ($) {
   return {
     initialize: function () {
-      var $conditionsUsageField = $('#field-conditions_usage');
-      var $licenseTypeField = $('#field-license_type');
-      var $asteriskElement = $('#license-asterisk');
-      var $licenseFieldset = $('#license-fieldset');
+      const $conditionsUsageField = $('#field-conditions_usage');
+      const $licenseTypeField = $('#field-license_type');
+      const $asteriskElement = $('#license-asterisk');
+      const $licenseFieldset = $('#license-fieldset');
       // Pluck an asterisk from somewhere else on the page, including localized title attribute.
-      var $asteriskTemplate = $('span.control-required').first()
+      const $asteriskTemplate = $('span.control-required').first()
 
       function toggleFieldsetDisability($fieldset, hide) {
         if (hide) {
@@ -28,19 +28,14 @@ ckan.module('nested-field-license', function ($) {
 
       function toggleFieldRequired(id, required) {
         if (required) {
-          $('label[for=' + id + ']').prepend($asteriskTemplate.clone(), ' ');
+          $(`label[for=${id}]`).prepend($asteriskTemplate.clone(), ' ');
         } else {
-          $('label[for=' + id + '] > .control-required').remove();
+          $(`label[for=${id}] > .control-required`).remove();
         }
       }
 
       function toggleRequiredLicenseTextFields(toggle) {
         toggleFieldRequired('field-license_text_translated-en', toggle)
-        // option to make multiple license text fields mandatory
-        // var fields = ['field-license_text_translated-en', 'field-license_text_translated-nl', 'field-license_text_translated-de', 'field-license_text_translated-fr']
-        // for (var field of fields) {
-        //   toggleFieldRequired(field, toggle)
-        // }
       }
 
       function updateConditionsForUsage() {
