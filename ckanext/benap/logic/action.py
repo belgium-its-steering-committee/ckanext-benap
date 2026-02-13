@@ -1,7 +1,9 @@
 import ckan.plugins.toolkit as tk
 from ckan.logic.action.get import organization_show as vanilla_organization_show
 from ckan.lib.helpers import url_for_static
+from ckan import model
 import sqlalchemy
+from ckanext.benap.constants import DOC_FIELDS
 
 # Copied from https://github.com/belgium-its-steering-committee/ckanext-scheming/blob/MobilityDCAT/root/ckanext/scheming/logic.py#L85
 @tk.side_effect_free
@@ -96,5 +98,49 @@ def organization_list(original_action, context, data_dict):
       del data_dict['q']
       data_dict['organizations'] = matched_names
     return original_action(context, data_dict)
-  
-    
+
+@tk.chained_action
+def organization_create(original_action, context, data_dict):
+    return _organization_change(original_action, context, data_dict)
+@tk.chained_action
+def organization_update(original_action, context, data_dict):
+    return _organization_change(original_action, context, data_dict)
+@tk.chained_action
+def organization_patch(original_action, context, data_dict):
+    return _organization_change(original_action, context, data_dict)
+
+def _organization_change(original_action, context, data_dict):
+    organization = original_action(context, data_dict)
+
+    files = [data_dict[doc] for doc in DOC_FIELDS.keys() if data_dict[doc]]
+    if files:
+        # TODO: move this to a background job
+        sysadmins = \
+            model.Session.query(model.User) \
+            .filter(model.User.sysadmin) \
+            .all()
+
+        for sysadmin in sysadmins:
+            if not sysadmin.email:
+                continue
+            for file in files:
+                compliance_type = DOC_FIELDS[file.name]
+                render_vars = {
+                    'user_name': sysadmin.display_name or sysadmin.name,
+                    'organization_title': data_dict['title'],
+                    'organization_url': tk.url_for('organization.about', _external=True, id=data_dict['id']),
+                    'compliance_type': compliance_type
+                }
+                # TODO: i18n (for the sysadmin, not for the uploader)
+                subject = tk.render('emails/doc_notify_subject.txt', render_vars)
+                body = tk.render('emails/doc_notify.txt', render_vars)
+                body_html = tk.render('emails/doc_notify.html', render_vars)
+
+                tk.mail_user(
+                    recipient=sysadmin,
+                    subject=subject,
+                    body=body,
+                    body_html=body_html
+                )
+
+    return organization
