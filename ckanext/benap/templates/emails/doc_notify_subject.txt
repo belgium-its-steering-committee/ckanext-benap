@@ -1,0 +1,3 @@
+{% trans %}
+  Document of Compliance uploaded for {{ organization_title }}
+{% endtrans %}
