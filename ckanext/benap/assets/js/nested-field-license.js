@@ -26,16 +26,16 @@ ckan.module('nested-field-license', function ($) {
         }
       }
 
-      function toggleFieldRequired(id, required) {
+      function toggleFieldRequired(idPrefix, required) {
         if (required) {
-          $(`label[for=${id}]`).prepend($asteriskTemplate.clone(), ' ');
+          $(`label[for^=${idPrefix}]`).prepend($asteriskTemplate.clone(), ' ');
         } else {
-          $(`label[for=${id}] > .control-required`).remove();
+          $(`label[for^=${idPrefix}] > .control-required`).remove();
         }
       }
 
       function toggleRequiredLicenseTextFields(toggle) {
-        toggleFieldRequired('field-license_text_translated-en', toggle)
+        toggleFieldRequired('field-license_text_translated-', toggle)
       }
 
       function updateConditionsForUsage() {

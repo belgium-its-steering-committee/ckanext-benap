@@ -209,6 +209,8 @@ def category_sub_category_validator(key, flattened_data, errors, context):
                         errors[key].append(_('unexpected choice "%s"') % sub_url)
 
 def license_fields_conditional_validation(key, flattened_data, errors, context):
+    languages: list[str] = toolkit.config.get('ckan.locales_offered')
+
     _type, index, key_field_name = key
     def create_key(field_name):
         return ('resources', index, field_name)
@@ -223,13 +225,14 @@ def license_fields_conditional_validation(key, flattened_data, errors, context):
         else:
             if license_type == 'Other':
                 field_value = json.loads(field_value)
-                if not field_value.get('en'):
-                    error_key = key[:-1] + (key[-1] + '-' + 'en',)
-                    errors.setdefault(error_key, []).append(_(
-                        'The license text is missing. At least the EN license '
-                        'text is required because "Other" was chosen as the '
-                        'license type.'
-                    ))
+                if not any(field_value.get(lang) for lang in languages):
+                    for lang in languages:
+                        error_key = key[:-1] + (key[-1] + '-' + lang,)
+                        errors.setdefault(error_key, []).append(_(
+                            'The license text is missing. The license text is'
+                            ' required for at least one language because "Other"'
+                            ' was chosen as the license type.'
+                        ))
 
     else:
         if field_value:

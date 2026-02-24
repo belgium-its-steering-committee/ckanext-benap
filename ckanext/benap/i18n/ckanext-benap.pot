@@ -1,14 +1,14 @@
 # Translations template for ckanext-benap.
-# Copyright (C) 2025 ORGANIZATION
+# Copyright (C) 2026 ORGANIZATION
 # This file is distributed under the same license as the ckanext-benap project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-benap 4.1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-11-13 10:50+0000\n"
+"POT-Creation-Date: 2026-02-24 08:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,32 +30,32 @@ msgstr ""
 msgid "Group not found"
 msgstr ""
 
-#: ckanext/benap/plugin.py:126
+#: ckanext/benap/plugin.py:130
 msgid "NAP Type"
 msgstr ""
 
-#: ckanext/benap/plugin.py:127
+#: ckanext/benap/plugin.py:131
 msgid "Transportation modes"
 msgstr ""
 
-#: ckanext/benap/plugin.py:128
+#: ckanext/benap/plugin.py:132
 msgid "Area covered by publication"
 msgstr ""
 
-#: ckanext/benap/plugin.py:129
+#: ckanext/benap/plugin.py:133
 msgid "Mobility Theme"
 msgstr ""
 
-#: ckanext/benap/plugin.py:130 ckanext/benap/templates/snippets/license.html:22
+#: ckanext/benap/plugin.py:134 ckanext/benap/templates/snippets/license.html:22
 msgid "License"
 msgstr ""
 
-#: ckanext/benap/plugin.py:131
+#: ckanext/benap/plugin.py:135
 #: ckanext/benap/templates/package/snippets/resource_info.html:19
 msgid "Format"
 msgstr ""
 
-#: ckanext/benap/plugin.py:132
+#: ckanext/benap/plugin.py:136
 msgid "Organizations"
 msgstr ""
 
@@ -87,22 +87,21 @@ msgid "Remove"
 msgstr ""
 
 #: ckanext/benap/assets/js/scheming-doc_upload.js:90
-#: ckanext/benap/assets/js/scheming-logo_upload.js:84
 #: ckanext/benap/assets/js/scheming-proxy_upload.js:84
-#: ckanext/benap/templates/scheming/form_snippets/upload.html:29
+#: ckanext/benap/templates/scheming/form_snippets/upload.html:30
 msgid "Image"
 msgstr ""
 
 #: ckanext/benap/assets/js/scheming-doc_upload.js:97
-#: ckanext/benap/assets/js/scheming-logo_upload.js:91
+#: ckanext/benap/assets/js/scheming-logo_upload.js:92
 #: ckanext/benap/assets/js/scheming-proxy_upload.js:91
 msgid "Upload a file on your computer"
 msgstr ""
 
 #: ckanext/benap/assets/js/scheming-doc_upload.js:122
 #: ckanext/benap/assets/js/scheming-doc_upload.js:190
-#: ckanext/benap/assets/js/scheming-logo_upload.js:112
-#: ckanext/benap/assets/js/scheming-logo_upload.js:158
+#: ckanext/benap/assets/js/scheming-logo_upload.js:113
+#: ckanext/benap/assets/js/scheming-logo_upload.js:159
 #: ckanext/benap/assets/js/scheming-proxy_upload.js:112
 #: ckanext/benap/assets/js/scheming-proxy_upload.js:158
 msgid "URL"
@@ -110,8 +109,8 @@ msgstr ""
 
 #: ckanext/benap/assets/js/scheming-doc_upload.js:131
 #: ckanext/benap/assets/js/scheming-doc_upload.js:231
-#: ckanext/benap/assets/js/scheming-logo_upload.js:121
-#: ckanext/benap/assets/js/scheming-logo_upload.js:199
+#: ckanext/benap/assets/js/scheming-logo_upload.js:122
+#: ckanext/benap/assets/js/scheming-logo_upload.js:200
 #: ckanext/benap/assets/js/scheming-proxy_upload.js:199
 msgid "File"
 msgstr ""
@@ -120,103 +119,91 @@ msgstr ""
 msgid "Proxy Agreement PDF:"
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:31
+#: ckanext/benap/logic/validators.py:43
 msgid "Phone number {number} is not a valid format"
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:38
+#: ckanext/benap/logic/validators.py:50
 msgid "Belgium is a required country"
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:65
+#: ckanext/benap/logic/validators.py:77
 msgid "Start date must be before end date"
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:80
+#: ckanext/benap/logic/validators.py:92
 msgid "URL {url} has to start with https://"
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:102
-msgid "Modification must done by a system administrator"
+#: ckanext/benap/logic/validators.py:111
+msgid "Modification must be done by system administrator"
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:106
-msgid "Logged in one must be"
-msgstr ""
-
-#: ckanext/benap/logic/validators.py:133
+#: ckanext/benap/logic/validators.py:148
 msgid "The contact point email must match the contact point organization's email: {}"
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:140
+#: ckanext/benap/logic/validators.py:155
 msgid ""
 "The contact point telephone number must match the contact point "
 "organization's telephone number: {}"
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:152
+#: ckanext/benap/logic/validators.py:167
 msgid "Invalid format. Ensure the value is a comma-separated list of non-empty words."
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:158
+#: ckanext/benap/logic/validators.py:173
 #, python-format
 msgid "Unexpected choice \"%s\"."
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:182
+#: ckanext/benap/logic/validators.py:197
 msgid "Select at least one"
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:188 ckanext/benap/logic/validators.py:194
+#: ckanext/benap/logic/validators.py:203 ckanext/benap/logic/validators.py:209
 #, python-format
 msgid "unexpected choice \"%s\""
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:207
+#: ckanext/benap/logic/validators.py:224
 msgid ""
 "The license type is missing. This is required because \"License\" was chosen "
 "as the condition for usage."
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:212
+#: ckanext/benap/logic/validators.py:231
 msgid ""
-"The license text is missing. At least the EN license text is required because"
-" \"Other\" was chosen as the license type."
+"The license text is missing. The license text is required for at least one "
+"language because \"Other\" was chosen as the license type."
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:218
+#: ckanext/benap/logic/validators.py:240
 msgid ""
 "No license type should be given. \"Contract\" is chosen as the condition for "
 "usage."
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:222
+#: ckanext/benap/logic/validators.py:244
 msgid ""
 "No license text should be given. \"Contract\" is chosen as the condition for "
 "usage."
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:249
+#: ckanext/benap/logic/validators.py:271
 #, python-format
 msgid "Tag \"%s\" length is less than minimum %s"
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:254
+#: ckanext/benap/logic/validators.py:276
 #, python-format
 msgid "Tag \"%s\" length is more than maximum %i"
 msgstr ""
 
-#: ckanext/benap/logic/validators.py:259
+#: ckanext/benap/logic/validators.py:281
 #, python-format
 msgid "Tag \"%s\" must be alphanumeric characters or symbols: -_."
-msgstr ""
-
-#: ckanext/benap/logic/validators.py:265
-msgid "Only supported image formats are allowed: jpeg, jpg, bmp, png"
-msgstr ""
-
-#: ckanext/benap/logic/validators.py:271
-msgid "Only PDF is allowed"
 msgstr ""
 
 #: ckanext/benap/templates/base.html:14
@@ -445,6 +432,18 @@ msgstr ""
 msgid "Save preferences"
 msgstr ""
 
+#: ckanext/benap/templates/header.html:132
+msgid "Pages"
+msgstr ""
+
+#: ckanext/benap/templates/header.html:144
+msgid "Sysadmin settings"
+msgstr ""
+
+#: ckanext/benap/templates/header.html:146
+msgid "Admin"
+msgstr ""
+
 #: ckanext/benap/templates/home/index.html:32
 msgid "Subscribe to our newsletter and stay informed"
 msgstr ""
@@ -652,11 +651,11 @@ msgstr ""
 msgid "New view"
 msgstr ""
 
-#: ckanext/benap/templates/package/search.html:5
+#: ckanext/benap/templates/package/search.html:8
 msgid "Filters"
 msgstr ""
 
-#: ckanext/benap/templates/package/search.html:17
+#: ckanext/benap/templates/package/search.html:14
 msgid "close"
 msgstr ""
 
@@ -668,7 +667,7 @@ msgstr ""
 msgid "Follow"
 msgstr ""
 
-#: ckanext/benap/templates/package/snippets/nap_checked_pill.html:3
+#: ckanext/benap/templates/package/snippets/nap_checked_pill.html:4
 msgid "metadata checked & verified"
 msgstr ""
 
@@ -721,20 +720,24 @@ msgstr ""
 
 #: ckanext/benap/templates/scheming/form_snippets/doc_upload.html:44
 #: ckanext/benap/templates/scheming/form_snippets/proxy_upload.html:44
-#: ckanext/benap/templates/scheming/form_snippets/upload.html:52
+#: ckanext/benap/templates/scheming/form_snippets/upload.html:53
 #: ckanext/benap/templates/scheming/form_snippets/upload_organisation_logo.html:53
 msgid "Clear Upload"
+msgstr ""
+
+#: ckanext/benap/templates/scheming/form_snippets/nap_checked.html:38
+msgid "Last set to checked on"
 msgstr ""
 
 #: ckanext/benap/templates/scheming/form_snippets/organization.html:30
 msgid "Public"
 msgstr ""
 
-#: ckanext/benap/templates/scheming/form_snippets/upload.html:27
+#: ckanext/benap/templates/scheming/form_snippets/upload.html:28
 msgid "http://example.com/my-image.jpg"
 msgstr ""
 
-#: ckanext/benap/templates/scheming/form_snippets/upload.html:28
+#: ckanext/benap/templates/scheming/form_snippets/upload.html:29
 msgid "Image URL"
 msgstr ""
 
@@ -767,24 +770,21 @@ msgid "Value"
 msgstr ""
 
 #: ckanext/benap/templates/scheming/package/resource_read.html:29
-msgid "Last updated"
+#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:29
+msgid "Metadata date"
 msgstr ""
 
-#: ckanext/benap/templates/scheming/package/resource_read.html:34
-#: ckanext/benap/templates/scheming/package/resource_read.html:42
+#: ckanext/benap/templates/scheming/package/resource_read.html:36
+#: ckanext/benap/templates/scheming/package/resource_read.html:45
 msgid "unknown"
 msgstr ""
 
-#: ckanext/benap/templates/scheming/package/resource_read.html:39
+#: ckanext/benap/templates/scheming/package/resource_read.html:41
 msgid "Created"
 msgstr ""
 
 #: ckanext/benap/templates/scheming/package/snippets/additional_info.html:19
 msgid "ID"
-msgstr ""
-
-#: ckanext/benap/templates/scheming/package/snippets/additional_info.html:29
-msgid "Metadata date"
 msgstr ""
 
 #: ckanext/benap/templates/scheming/package/snippets/additional_info.html:50
@@ -797,15 +797,15 @@ msgstr ""
 msgid "The form contains invalid entries:"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:37
+#: ckanext/benap/templates/snippets/facet_list.html:39
 msgid "Show More {facet_type}"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:40
+#: ckanext/benap/templates/snippets/facet_list.html:42
 msgid "Show Only Popular {facet_type}"
 msgstr ""
 
-#: ckanext/benap/templates/snippets/facet_list.html:44
+#: ckanext/benap/templates/snippets/facet_list.html:46
 msgid "There are no {facet_type} that match this search"
 msgstr ""
 
