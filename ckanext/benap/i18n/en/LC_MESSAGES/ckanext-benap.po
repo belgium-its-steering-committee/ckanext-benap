@@ -701,22 +701,3 @@ msgstr "Datasets"
 msgid "UK Open Government Licence (OGL)"
 msgstr "UK Open Government License (OGL)"
 
-#~ msgid "Modification must done by a system administrator"
-#~ msgstr ""
-
-#~ msgid "Logged in one must be"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The license text is missing. At "
-#~ "least the EN license text is "
-#~ "required because \"Other\" was chosen as"
-#~ " the license type."
-#~ msgstr ""
-
-#~ msgid "Only supported image formats are allowed: jpeg, jpg, bmp, png"
-#~ msgstr ""
-
-#~ msgid "Only PDF is allowed"
-#~ msgstr ""
-

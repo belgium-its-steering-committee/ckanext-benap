@@ -835,22 +835,3 @@ msgstr "ex. joe@exemple.com"
 msgid "joe@example.com"
 msgstr "joe@exemple.com"
 
-#~ msgid "Modification must done by a system administrator"
-#~ msgstr "La modification doit être effectuée par un administrateur système"
-
-#~ msgid "Logged in one must be"
-#~ msgstr "La personne connectée doit être"
-
-#~ msgid ""
-#~ "The license text is missing. At "
-#~ "least the EN license text is "
-#~ "required because \"Other\" was chosen as"
-#~ " the license type."
-#~ msgstr ""
-
-#~ msgid "Only supported image formats are allowed: jpeg, jpg, bmp, png"
-#~ msgstr ""
-
-#~ msgid "Only PDF is allowed"
-#~ msgstr ""
-

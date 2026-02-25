@@ -838,15 +838,3 @@ msgstr "joe@voorbeeld.com"
 msgid "username"
 msgstr "Gebruikersnaam"
 
-#~ msgid "Modification must done by a system administrator"
-#~ msgstr "Wijziging moet worden uitgevoerd door een systeembeheerder"
-
-#~ msgid "Logged in one must be"
-#~ msgstr "Ingelogd moet men zijn"
-
-#~ msgid "Only supported image formats are allowed: jpeg, jpg, bmp, png"
-#~ msgstr ""
-
-#~ msgid "Only PDF is allowed"
-#~ msgstr ""
-
