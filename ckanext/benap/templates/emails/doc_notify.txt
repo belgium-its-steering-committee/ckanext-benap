@@ -1,0 +1,13 @@
+{% trans %}
+
+Dear {{ user_name }},
+
+Organization {{ organization_title }} uploaded a document of {{ compliance_type }} compliance.
+
+You can find the document here:
+
+{{ organization_url }}
+
+Have a nice day.
+
+{% endtrans %}
