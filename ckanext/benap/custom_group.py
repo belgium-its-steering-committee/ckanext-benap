@@ -27,7 +27,7 @@ from ckan.views.dataset import _get_search_details
 from flask import Blueprint, make_response
 from flask.views import MethodView
 from flask.wrappers import Response
-from ckan.types import Context, DataDict, Schema
+from ckan.types import Context, DataDict, FlattenDataDict, Schema
 
 
 NotFound = logic.NotFound
@@ -38,6 +38,22 @@ get_action = logic.get_action
 tuplize_dict = logic.tuplize_dict
 clean_dict = logic.clean_dict
 parse_params = logic.parse_params
+
+def tuplize_dict_with_lists(data_dict: dict[str, Any]) -> FlattenDataDict:
+    flat_dict: FlattenDataDict = logic.tuplize_dict(data_dict)
+    res_dict = {
+        key: value
+        for key, value in flat_dict.items()
+        if not isinstance(value, list)
+    }
+
+    for key, values in flat_dict.items():
+        if isinstance(values, list):
+            for index, value in enumerate(values):
+                new_key = (*key, index, 'value')
+                res_dict[new_key] = value
+
+    return res_dict
 
 log = logging.getLogger(__name__)
 
@@ -165,7 +181,7 @@ class CreateGroupView(MethodView):
                 data_dict[u'sstp_doc_document_upload'] = ''
                 data_dict[u'srti_doc_document_upload'] = ''
                 data_dict[u'rtti_doc_document_upload'] = ''
-                data_dict[u'proxy_pdf_url'] = ''
+                data_dict[u'proxy_pdf_urls'] = []
             return self.get(group_type, is_organization,
                             data_dict, errors, error_summary)
 
@@ -253,7 +269,7 @@ class EditGroupView(MethodView):
             data_dict = clean_dict(
                 dict_fns.unflatten(tuplize_dict(parse_params(request.form))))
             data_dict.update(clean_dict(
-                dict_fns.unflatten(tuplize_dict(parse_params(request.files)))
+                dict_fns.unflatten(tuplize_dict_with_lists(parse_params(request.files)))
             ))
         except dict_fns.DataError:
             base.abort(400, _(u'Integrity Error'))
@@ -278,25 +294,30 @@ class EditGroupView(MethodView):
             if data_dict.get('url_type') == 'upload':
                 def entry_is_updated(entry_key):
                     return (
-                        entry_key in group_data 
-                        and entry_key in data_dict 
+                        entry_key in group_data
+                        and entry_key in data_dict
                         and group_data[entry_key] != data_dict[entry_key]
                     )
 
                 data_dict['url_type'] = ''
                 data_dict['previous_upload'] = True
                 for entry_key in [
-                    'image_url', 
-                    'rtti_doc_document_upload', 
-                    'sstp_doc_document_upload', 
-                    'srti_doc_document_upload', 
-                    'proxy_pdf_url'
+                    'image_url',
+                    'rtti_doc_document_upload',
+                    'sstp_doc_document_upload',
+                    'srti_doc_document_upload',
                 ]:
                     data_dict[entry_key] = (
-                        '' 
-                        if entry_is_updated(entry_key) 
+                        ''
+                        if entry_is_updated(entry_key)
                         else group_data.get(entry_key, '')
                     )
+
+                data_dict['proxy_pdf_urls'] = (
+                    group_data['proxy_pdf_urls']
+                    if entry_is_updated('proxy_pdf_urls')
+                    else group_data.get('proxy_pdf_urls', [])
+                )
             assert id
             return self.get(id, group_type, is_organization,
                             data_dict, errors, error_summary)

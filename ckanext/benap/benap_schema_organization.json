@@ -177,24 +177,24 @@
       "form_snippet": "nested_field.html",
       "nested_fields": [
         {
-            "field_name": "country",
-            "form_snippet": "text.html"
+          "field_name": "country",
+          "form_snippet": "text.html"
         },
         {
-            "field_name": "administrative_area",
-            "form_snippet": "text.html"
+          "field_name": "administrative_area",
+          "form_snippet": "text.html"
         },
         {
-            "field_name": "postal_code",
-            "form_snippet": "text.html"
+          "field_name": "postal_code",
+          "form_snippet": "text.html"
         },
         {
-            "field_name": "city",
-            "form_snippet": "text.html"
+          "field_name": "city",
+          "form_snippet": "text.html"
         },
         {
-            "field_name": "street_address",
-            "form_snippet": "text.html"
+          "field_name": "street_address",
+          "form_snippet": "text.html"
         }
       ]
     },
@@ -356,27 +356,27 @@
       },
       "preset": "multiple_checkbox_compliance",
       "choices": [
-         {
+        {
           "value": "Y",
           "label": {
-              "en": "I hereby declare that I have been informed about the obligation to fill in a declaration of compliance for every type of NAP for which I register datasets or services.",
-              "fr": "Je déclare être informé(e) de l’obligation d’introduire une déclaration de conformité pour chaque type de NAP pour lequel j’enregistre des jeux de données ou des services.",
-              "nl": "Ik verklaar geïnformeerd te zijn over de verplichting om een verklaring van overeenstemming in te dienen voor elk type van NAP waarvoor ik datasets of diensten registreer.",
-              "de": "Ich erkläre, daβ ich über die Plicht weiβ, eine Übereinstimmungserklärung für jeden Typ von NAP, wofür ich Datensätze oder Dienste registriere, einzutragen."
-            }
-         }
+            "en": "I hereby declare that I have been informed about the obligation to fill in a declaration of compliance for every type of NAP for which I register datasets or services.",
+            "fr": "Je déclare être informé(e) de l’obligation d’introduire une déclaration de conformité pour chaque type de NAP pour lequel j’enregistre des jeux de données ou des services.",
+            "nl": "Ik verklaar geïnformeerd te zijn over de verplichting om een verklaring van overeenstemming in te dienen voor elk type van NAP waarvoor ik datasets of diensten registreer.",
+            "de": "Ich erkläre, daβ ich über die Plicht weiβ, eine Übereinstimmungserklärung für jeden Typ von NAP, wofür ich Datensätze oder Dienste registriere, einzutragen."
+          }
+        }
       ],
       "sub_text": {
-              "en": "For every NAP you register datasets or services (MMTIS, RTTI, SRTI, SSTP), your organization must submit a form in which it declares to be compliant to the respective European regulations <a href='/pages/declaration-of-compliance'>For more information click here.</a>\n \nIf your organization is operating in the domain of Safety Related Traffic Information (NAP SRTI), your organization might be required to provide a declaration of compliance even without registering datasets or services. ",
-              "fr": "Pour chaque NAP sur lequel vous enregistrez des jeux de données ou des services (MMTIS, RTTI, SRTI, SSTP), votre organisation doit introduire un formulaire où elle déclare être en conformité avec les Règlements européens respectifs. <a href='/pages/declaration-of-compliance'>Pour de plus amples informations, cliquez ici.</a>\n\nSi votre organisation exerce ses activités dans le domaine des informations sur la circulation liées à la sécurité routière (NAP SRTI), votre organisation doit peut-être introduire une déclaration de conformité même si vous n’enregistrez pas de jeux de données ou de services. ",
-              "nl": "Voor elk NAP waarvoor u datasets of diensten  registreert (MMTIS, RTTI, SRTI, SSTP) moet uw organisatie een formulier indienen voor elk type NAP waarbij uw organisatie aangeeft in overeenstemming te zijn met de respectievelijke Europese Verordeningen. <a href='/pages/declaration-of-compliance'>Voor meer informatie klik hier.</a>\n\nIndien uw organisatie opereert in het domein van verkeersveiligheidsinformatie (NAP SRTI) dient uw organisatie mogelijks een verklaring van overeenstemming in te dienen zelfs indien u geen datasets of diensten registreert. ",
-              "de": "Für jeden NAP, worauf Sie Datensätze oder Dienste registrieren (MMTIS, RTTI, SRTI, SSTP), muss Ihre Organisation ein Formular eintragen, wo sie ihre Beachtung der jeweiligen europäischen Verordnungen bestätigt. <a href='/pages/declaration-of-compliance'>Klicken Sie hier für weitere Informationen.</a>\n\nWenn Ihre Organisation im Sektor der für die Straßenverkehrssicherheit relevanter Verkehrsmeldungen (NAP SRTI) tätig ist, muss Ihre Organisation möglicherweise eine Übereinstimmungserklärung eintragen, selbst wenn Sie keine Datensätze oder Dienste registrieren. "
+        "en": "For every NAP you register datasets or services (MMTIS, RTTI, SRTI, SSTP), your organization must submit a form in which it declares to be compliant to the respective European regulations <a href='/pages/declaration-of-compliance'>For more information click here.</a>\n \nIf your organization is operating in the domain of Safety Related Traffic Information (NAP SRTI), your organization might be required to provide a declaration of compliance even without registering datasets or services. ",
+        "fr": "Pour chaque NAP sur lequel vous enregistrez des jeux de données ou des services (MMTIS, RTTI, SRTI, SSTP), votre organisation doit introduire un formulaire où elle déclare être en conformité avec les Règlements européens respectifs. <a href='/pages/declaration-of-compliance'>Pour de plus amples informations, cliquez ici.</a>\n\nSi votre organisation exerce ses activités dans le domaine des informations sur la circulation liées à la sécurité routière (NAP SRTI), votre organisation doit peut-être introduire une déclaration de conformité même si vous n’enregistrez pas de jeux de données ou de services. ",
+        "nl": "Voor elk NAP waarvoor u datasets of diensten  registreert (MMTIS, RTTI, SRTI, SSTP) moet uw organisatie een formulier indienen voor elk type NAP waarbij uw organisatie aangeeft in overeenstemming te zijn met de respectievelijke Europese Verordeningen. <a href='/pages/declaration-of-compliance'>Voor meer informatie klik hier.</a>\n\nIndien uw organisatie opereert in het domein van verkeersveiligheidsinformatie (NAP SRTI) dient uw organisatie mogelijks een verklaring van overeenstemming in te dienen zelfs indien u geen datasets of diensten registreert. ",
+        "de": "Für jeden NAP, worauf Sie Datensätze oder Dienste registrieren (MMTIS, RTTI, SRTI, SSTP), muss Ihre Organisation ein Formular eintragen, wo sie ihre Beachtung der jeweiligen europäischen Verordnungen bestätigt. <a href='/pages/declaration-of-compliance'>Klicken Sie hier für weitere Informationen.</a>\n\nWenn Ihre Organisation im Sektor der für die Straßenverkehrssicherheit relevanter Verkehrsmeldungen (NAP SRTI) tätig ist, muss Ihre Organisation möglicherweise eine Übereinstimmungserklärung eintragen, selbst wenn Sie keine Datensätze oder Dienste registrieren. "
       },
       "required": "true",
       "display_snippet": null,
       "always_unset": true
     },
- {
+    {
       "field_name": "agreement_declaration_mmtis",
       "label": {
         "en": "Declaration of compliance MMTIS",
@@ -386,15 +386,15 @@
       },
       "preset": "multiple_checkbox_compliance",
       "choices": [
-         {
+        {
           "value": "Y",
           "label": {
-              "en": "I hereby declare to be compliant to articles 3 to 8 of the European regulation (EU) 2017/1926 and its amendment <a href='https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202400490'>EU 2024/490</a>.",
-              "fr": "Je déclare être en conformité avec les articles 3 à 8 du règlement délégué européen (UE) 2017/1926 et son modification <a href='https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=OJ:L_202400490'>EU 2024/490</a>.",
-              "nl": "Ik verklaar voor deze dataset in overeenstemming te zijn met artikels 3 tot 8 van de Europese verordening (EU) 2017/1926 en zijn wijziging <a href='https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202400490'>EU 2024/490</a>.",
-              "de": "Hiermit erkläre ich, in Übereinstimmung mit den Artikeln 3 bis 8 der Europäischen Verordnung (EU) 2017/1926 und seine Änderung <a href='https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=OJ:L_202400490'>EU 2024/490</a>."
-            }
-         }
+            "en": "I hereby declare to be compliant to articles 3 to 8 of the European regulation (EU) 2017/1926 and its amendment <a href='https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202400490'>EU 2024/490</a>.",
+            "fr": "Je déclare être en conformité avec les articles 3 à 8 du règlement délégué européen (UE) 2017/1926 et son modification <a href='https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=OJ:L_202400490'>EU 2024/490</a>.",
+            "nl": "Ik verklaar voor deze dataset in overeenstemming te zijn met artikels 3 tot 8 van de Europese verordening (EU) 2017/1926 en zijn wijziging <a href='https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202400490'>EU 2024/490</a>.",
+            "de": "Hiermit erkläre ich, in Übereinstimmung mit den Artikeln 3 bis 8 der Europäischen Verordnung (EU) 2017/1926 und seine Änderung <a href='https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=OJ:L_202400490'>EU 2024/490</a>."
+          }
+        }
       ]
     },
     {
@@ -482,14 +482,16 @@
       }
     },
     {
-      "field_name": "proxy_pdf_url",
+      "field_name": "proxy_pdf_urls",
+      "multiple": true,
       "label": {
         "en": "Proxy agreement",
         "fr": "Convention proxy",
         "nl": "Proxy overeenkomst",
         "de": "Vollmachtsvereinbarung"
       },
-      "validators": "",
+      "validators": "scheming_multiple_text",
+      "output_validators": "convert_to_json_if_string",
       "help_text": {
         "en": "Upload the PDF <a href='/pages/information-for-dataproviders#anchor_proxy'>Proxy agreement</a>",
         "fr": "Télécharger la <a href='/pages/information-for-dataproviders#anchor_proxy'>Convention proxy</a> au format PDF",
@@ -497,6 +499,7 @@
         "de": "Upload der PDF <a href='/pages/information-for-dataproviders#anchor_proxy'>Vollmachtsvereinbarung</a>"
       },
       "form_snippet": "proxy_upload.html",
+      "display_snippet": "proxy_upload.html",
       "upload_field": "proxy_upload",
       "upload_clear": "proxy_clear_upload",
       "upload_label": {

@@ -5,16 +5,17 @@ ckan.module('scheming-proxy_upload', function($){
     return {
             /* options object can be extended using data-module-* attributes */
             options:{
-                is_url_proxy: false,  
+                is_url_proxy: false,
                 is_upload_proxy: false,
                 field_upload: 'proxy_upload',
                 field_url: 'proxy_pdf_url',
                 field_clear: 'proxy_clear_upload',
                 field_name: 'proxy_pdf_url',
                 upload_label: '',
-                previous_upload:false,
+                previous_upload: false,
+                files: '[]',
             },
-            
+
 
         /* Should be changed to true if user modifies resource's name
         *
@@ -36,27 +37,41 @@ ckan.module('scheming-proxy_upload', function($){
             var field_clear = 'input[name="' + options.field_clear + '"]';
             var field_name = 'input[name="' + options.field_name + '"]';
 
-            this.input = $(field_upload, this.el);
-            
-            this.field_url = $(field_url, this.el).parents('.form-group');
+            this.fileList = $('#existing-files', this.el);
+            this.uploadedFile = $('#uploaded-file', this.el);
+            this.uploadedFileName = $('#uploaded-file-name', this.el);
 
-            this.field_image = this.input.parents('.form-group');
-            
+            this.input = $(field_upload, this.el);
+
+            this.field_url = $(field_url, this.el).parents('.form-group').first();
+
+            this.field_image = this.input.parents('.form-group').first();
+
             this.field_url_input = $('input', this.field_url);
-            
+
+            this.files = JSON.parse(this.field_url_input.val());
+            this.newFiles = [];
+
             this.field_name = this.el.parents('form').find(field_name);
             // this is the location for the upload/link data/image label
-            this.label_location = $('label[for="field-proxy-url"]');
+            this.label_location = $('label[for="field-proxy-upload"]');
             // determines if the resource is a data resource
             this.is_data_resource = (this.options.field_url === 'url') && (this.options.field_upload === 'upload');
             this.previousUpload = this.options.previous_upload;
 
+            $('button[data-file]', this.fileList).on('click', (e) => {
+              e.preventDefault();
+              const btn = e.target;
+              const file = btn.dataset.file;
+              this._removeFile(file);
+            })
+
             // Is there a clear checkbox on the form already?
             var checkbox = $(field_clear, this.el);
             if (checkbox.length > 0) {
-            checkbox.parents('.form-group').remove();
+              checkbox.parents('.form-group').first().remove();
             }
-  
+
             // Adds the hidden clear input to the form
             this.field_clear = $('<input type="hidden" name="' + options.field_clear +'">')
             .appendTo(this.el);
@@ -74,11 +89,12 @@ ckan.module('scheming-proxy_upload', function($){
 
             // Button for resetting the form when there is a URL set
             var removeText = this._('Remove');
+
             $('<a href="javascript:;" class="btn btn-danger btn-remove-url">'
             + removeText + '</a>')
-            .prop('title', removeText)
-            .on('click', this._onRemove)
-            .insertBefore(this.field_url_input);
+              .prop('title', removeText)
+              .on('click', this._onRemove)
+              .insertBefore(this.uploadedFileName)
 
             // Update the main label (this is displayed when no data/image has been uploaded/linked)
             $('label[for="field-proxy-upload"]').text(options.upload_label || this._('Image'));
@@ -95,9 +111,9 @@ ckan.module('scheming-proxy_upload', function($){
             this.fields = $('<i />')
             .add(this.button_upload)
             .add(this.input)
-            .add(this.field_url)
+            // .add(this.field_url)
             .add(this.field_image);
-            
+
             // Disables autoName if user modifies name field
             this.field_name
                 .on('change', this._onModifyName);
@@ -108,10 +124,8 @@ ckan.module('scheming-proxy_upload', function($){
             }
 
             if (options.is_url) {
-                this._showOnlyFieldUrl();
                 this._updateUrlLabel(this._('URL'));
             }else if (options.is_upload_proxy) {
-                this._showOnlyFieldUrl();
 
                 this.field_url_input.prop('readonly', true);
                 // If the data is an uploaded file, the filename will display rather than whole url of the site
@@ -119,9 +133,10 @@ ckan.module('scheming-proxy_upload', function($){
                 //this.field_url_input.val(filename);
 
                 this._updateUrlLabel(this._('Proxy Agreement PDF:'));
+                this._showOnlyButtons();
             } else {
                 this._showOnlyButtons();
-            } 
+            }
         },
 
        /* Update the `this.label_location` text
@@ -137,90 +152,98 @@ ckan.module('scheming-proxy_upload', function($){
         if (! this.is_data_resource) {
           return;
         }
-  
+
         this.label_location.text(label_text);
       },
-  
-      /* Event listener for when someone sets the field to URL mode
-       *
-       * Returns nothing.
-       */
-      _onFromWeb: function() {
-        this._showOnlyFieldUrl();
-  
-        this.field_url_input.focus()
-          .on('blur', this._onFromWebBlur);
-  
-        if (this.options.is_upload) {
-          this.field_clear.val('true');
-        }
-  
-        this._updateUrlLabel(this._('URL'));
+
+      _updateUrlInput: function() {
+        this.field_url_input.val(
+          JSON.stringify(
+            this.files.concat(this.newFiles)
+          )
+        )
       },
-  
+
       /* Event listener for resetting the field back to the blank state
        *
        * Returns nothing.
        */
       _onRemove: function() {
+        // this._showOnlyButtons();
+
+        this.newFiles = [];
+        this._updateUrlInput();
         this._showOnlyButtons();
-  
-        this.field_url_input.val('');
-        this.field_url_input.prop('readonly', false);
-  
+
         this.field_clear.val('true');
       },
-  
+
+      _removeFile: function (file) {
+        const index = this.files.indexOf(file);
+        if (index === -1) {
+          return
+        }
+        this.files.splice(index, 1);
+        this._updateUrlInput();
+
+        const listItem = $(`li[data-file=${JSON.stringify(file)}]`, this.fileList);
+        listItem.remove();
+      },
+
       /* Event listener for when someone chooses a file to upload
        *
        * Returns nothing.
        */
       _onInputChange: function() {
-        var file_name = this.input.val().split(/^C:\\fakepath\\/).pop();
-  
         // Internet Explorer 6-11 and Edge 20+
         var isIE = !!document.documentMode;
         var isEdge = !isIE && !!window.StyleMedia;
-        // for IE/Edge when 'include filepath option' is enabled
-        if (isIE || isEdge) {
-          var fName = file_name.match(/[^\\\/]+$/);
-          file_name = fName ? fName[0] : file_name;
-        }
-  
-        this.field_url_input.val(file_name);
-        this.field_url_input.prop('readonly', true);
-  
+
+        const fileNames = Array.prototype.map.call(this.input[0].files, (file) => {
+          let fileName = file.name.split(/^C:\\fakepath\\/).pop();
+          // for IE/Edge when 'include filepath option' is enabled
+          if (isIE || isEdge) {
+            var fName = fileName.match(/[^\\\/]+$/);
+            fileName = fName ? fName[0] : fileName;
+          }
+          return fileName;
+        })
+
+        this.newFiles = fileNames;
+        this._updateUrlInput();
+
         this.field_clear.val('');
-  
-        this._showOnlyFieldUrl();
-  
-        this._autoName(file_name);
-  
+
+        this._showOnlyUploadedFile();
+
+        this.uploadedFileName.text(fileNames.join(", "));
+
         this._updateUrlLabel(this._('File'));
       },
-  
+
       /* Show only the buttons, hiding all others
        *
        * Returns nothing.
        */
       _showOnlyButtons: function() {
         this.fields.hide();
+        this.uploadedFile.hide();
         this.button_upload
           .add(this.field_image)
           .add(this.button_url)
           .add(this.input)
           .show();
       },
-  
+
       /* Show only the URL field, hiding all others
        *
        * Returns nothing.
        */
-      _showOnlyFieldUrl: function() {
+      _showOnlyUploadedFile: function() {
         this.fields.hide();
-        this.field_url.show();
+        this.uploadedFile.show();
       },
-  
+
       /* Event listener for when a user mouseovers the hidden file input
        *
        * Returns nothing.
@@ -228,7 +251,7 @@ ckan.module('scheming-proxy_upload', function($){
       _onInputMouseOver: function() {
         this.button_upload.addClass('hover');
       },
-  
+
       /* Event listener for when a user mouseouts the hidden file input
        *
        * Returns nothing.
@@ -236,7 +259,7 @@ ckan.module('scheming-proxy_upload', function($){
       _onInputMouseOut: function() {
         this.button_upload.removeClass('hover');
       },
-  
+
       /* Event listener for changes in resource's name by direct input from user
        *
        * Returns nothing
@@ -244,7 +267,7 @@ ckan.module('scheming-proxy_upload', function($){
       _onModifyName: function() {
         this._nameIsDirty = true;
       },
-  
+
       /* Event listener for when someone loses focus of URL field
        *
        * Returns nothing
@@ -255,17 +278,6 @@ ckan.module('scheming-proxy_upload', function($){
           this._autoName(url.pop());
         }
       },
-  
-      /* Automatically add file name into field Name
-       *
-       * Select by attribute [name] to be on the safe side and allow to change field id
-       * Returns nothing
-       */
-       _autoName: function(name) {
-          if (!this._nameIsDirty){
-            this.field_name.val(name);
-          }
-       }
 
     };
 })

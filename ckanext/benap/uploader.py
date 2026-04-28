@@ -1,23 +1,25 @@
 # Copied from https://github.com/belgium-its-steering-committee/ckanext-scheming/blob/MobilityDCAT/root/ckanext/scheming/lib/uploader.py#L2
 # encoding: utf-8
+from typing import TypeVar, TypeAlias, Any
 import cgi
 import logging
 import mimetypes
 import magic
 import os
 import datetime
+import json
 import ckan.lib.munge as munge
 from ckan.plugins import toolkit as tk
 
 from ckan.lib.uploader import get_storage_path, get_max_image_size, get_max_resource_size
 from werkzeug.datastructures import FileStorage as FlaskFileStorage
 
-from ckanext.benap.helpers import benap_get_organization_field_by_id
+from ckanext.benap.helpers import benap_get_organization_field_by_id, organization_by_id
 
 from ckanext.clamav.utils import scan_file_for_viruses as clamav_scan_file_for_viruses
 
-
 ALLOWED_UPLOAD_TYPES = (cgi.FieldStorage, FlaskFileStorage)
+UploadType: TypeAlias = cgi.FieldStorage | FlaskFileStorage
 MB = 1 << 20
 
 log = logging.getLogger(__name__)
@@ -25,6 +27,20 @@ log = logging.getLogger(__name__)
 _storage_path = None
 _max_resource_size = None
 _max_image_size = None
+
+_T = TypeVar('_T')
+def listize(obj_or_list: _T | list[_T]) -> list[_T]:
+    """
+    Turns obj_or_list into a list.
+
+    Returns obj_or_list if it is a list already, otherwise returns a list with
+    obj as its one item.
+    """
+
+    if isinstance(obj_or_list, list):
+        return obj_or_list
+    else:
+        return [obj_or_list]
 
 def scan_file_for_viruses(field_name, file):
     # plugin needs a "data_dict" with FileStorage in "upload"
@@ -101,10 +117,15 @@ class OrganizationUploader(object):
         self.file_uploaders = []
         for field_config in upload_fields:
             # backwards compatibility with how this code worked before: only proxy_pdf_url used non-legacy munge_filename
-            if field_config['field_name'] == 'proxy_pdf_url':
+            if field_config['field_name'] == 'proxy_pdf_urls':
                 field_config['use_munge_filename_legacy'] = False
-            
-            self.file_uploaders.append(FileUploader(field_config, self.storage_path))
+
+            if field_config.get('multiple', False):
+                cls = MultiFileUploader
+            else:
+                cls = FileUploader
+
+            self.file_uploaders.append(cls(field_config, self.storage_path))
 
     def update_data_dict(self, data_dict, _url_field, _file_field, _clear_field):
         """ Manipulate data from the data_dict. Ignore input parameters: these are focussed on logo upload only.
@@ -129,7 +150,7 @@ class OrganizationUploader(object):
 class FileUploader(object):
     def __init__(self, field_config, storage_path):
         """Initialize a FileUploader for a single upload field.
-        
+
         Args:
             field_config: Dictionary with keys: field_name, file_field, clear_field,
                          file_type, old_file_field_name (optional), max_size (optional)
@@ -201,10 +222,10 @@ class FileUploader(object):
                 self.filepath = os.path.join(organization_storagepath, self.filename)
                 data_dict[self.field_name] = self.filename
                 data_dict['url_type'] = 'upload'
-                self.upload_file = _get_underlying_file(self.upload_field_storage)
+                # self.upload_file = _get_underlying_file(self.upload_field_storage)
                 self.tmp_filepath = self.filepath + '~'
-                self._verify_type()
-                
+                self._verify_type(self.upload_field_storage)
+
                 scan_file_for_viruses(self.field_name, self.upload_field_storage)
 
         # Keep the file if there has been no change
@@ -240,18 +261,20 @@ class FileUploader(object):
             except OSError:
                 pass
 
-    def _verify_type(self):
+    def _verify_type(self, file: UploadType):
         """Verify the file type matches the expected type for this upload field.
         Adjustment from verify_type in ckan-core/ckan/lib/uploader.py to allow
         specifying more specific mimetypes per upload field.
         """
-        
+
+        file_contents = _get_underlying_file(file)
+
         def raise_upload_type_error(bad_type):
             raise tk.ValidationError(
                 { self.file_field: [ f"Type error - Unsupported upload type: {bad_type}" ] }
             )
-        
-        if not self.upload_file:
+
+        if not file:
             return
         # allowed_types is the first "part" of the mimetype
         if self.file_type == "image":
@@ -263,13 +286,13 @@ class FileUploader(object):
             allowed_types = ["application"]
             allowed_extensions = ['.pdf']
         else:
-            return  
+            return
 
         # Check that the declared types in the request are supported
         declared_mimetype_from_filename = mimetypes.guess_type(
-            self.upload_field_storage.filename
+            file.filename
         )[0]
-        declared_content_type = self.upload_field_storage.content_type
+        declared_content_type = file.content_type
         for declared_mimetype in (
             declared_mimetype_from_filename,
             declared_content_type,
@@ -278,10 +301,10 @@ class FileUploader(object):
                   raise_upload_type_error(declared_mimetype)
 
         # Check that the actual type guessed from the contents is supported
-        content = self.upload_file.read(2048)
+        content = file_contents.read(2048)
         guessed_mimetype = magic.from_buffer(content, mime=True)
 
-        self.upload_file.seek(0, os.SEEK_SET)
+        file_contents.seek(0, os.SEEK_SET)
 
         if guessed_mimetype not in allowed_mimetypes:
             raise_upload_type_error(guessed_mimetype)
@@ -292,9 +315,152 @@ class FileUploader(object):
 
         preferred_extension = mimetypes.guess_extension(guessed_mimetype)
         if (
-            not (self.filename.lower().endswith(tuple(allowed_extensions)))
+            not (file.filename.lower().endswith(tuple(allowed_extensions)))
             or preferred_extension.lower() not in allowed_extensions
         ):
             raise tk.ValidationError(
-                {self.file_field: [f'{self.filename.lower()},{self.filename},{preferred_extension} | Extension error - Only supported file formats are allowed: {", ".join(allowed_extensions)}']}
+                {self.file_field: [f'{file.filename.lower()},{file.filename},{preferred_extension} | Extension error - Only supported file formats are allowed: {", ".join(allowed_extensions)}']}
             )
+
+from dataclasses import dataclass, fields
+
+@dataclass
+class FileData:
+    filename: str
+    filepath: str
+    # old_filename: str
+    # old_filepath: str
+    tmp_filepath: str
+    uploaded_file: cgi.FieldStorage | FlaskFileStorage
+
+    def to_dict(self):
+        return {field.name: getattr(self, field.name) for field in fields(self)}
+
+    def upload(self, field_name, max_size):
+        if self.filename:
+            assert self.uploaded_file and self.filepath
+            with open(self.tmp_filepath, 'wb+') as output_file:
+                try:
+                    _copy_file(field_name, self.uploaded_file, output_file, max_size)
+                except tk.ValidationError:
+                    os.remove(self.tmp_filepath)
+                    raise
+                finally:
+                    self.uploaded_file.close()
+            os.rename(self.tmp_filepath, self.filepath)
+            self.clear = True
+
+        # if (self.clear and self.old_filename
+        #         and not self.old_filename.startswith('http')
+        #         and self.old_filepath):
+        #     try:
+        #         os.remove(self.old_filepath)
+        #     except OSError:
+        #         pass
+
+class MultiFileUploader(FileUploader):
+
+    def update_data_dict(self, data_dict: dict[str, Any]):
+        """Manipulate data from the data_dict for this upload field.
+        This needs to be called before it reaches any validators.
+        """
+
+        if not self.storage_path:
+            return
+
+        # get old filename from existing organization
+        old_filenames = set()
+        try:
+            old_organization = organization_by_id(data_dict.get('name'))
+
+
+            legacy_filename = old_organization.get(self.old_file_field_name)
+            if legacy_filename:
+                old_filenames.add(legacy_filename)
+            else:
+                old_filenames.update(old_organization.get(self.field_name))
+        except tk.ObjectNotFound:
+            old_filenames = None
+
+        keep_files = json.loads(data_dict[self.field_name]) if self.field_name in data_dict else []
+        delete_files = old_filenames.difference(keep_files)
+        keep_files = old_filenames.intersection(keep_files)
+
+        if old_filenames:
+            old_filepaths = map(lambda old_filename: os.path.join(
+                self.storage_path, data_dict.get('name'), old_filename), old_filenames)
+
+        self.clear = data_dict.get(self.clear_field, None)
+        upload_files = data_dict.get(self.file_field, None)
+
+        # Multiple files uploaded
+        if isinstance(upload_files, list):
+            self.upload_files = [f['value'] for f in upload_files]
+
+        # One file uploaded
+        elif isinstance(upload_files, ALLOWED_UPLOAD_TYPES):
+            self.upload_files = [upload_files]
+
+        # TODO: multiple
+        # Keep the file if there has been no change
+        # elif old_filenames:
+        #     if not self.clear:
+        #         data_dict[self.field_name] = [{'filename': old_filename} for old_filename in old_filenames if not old_filename.startswith('http')]
+        #     elif self.clear:
+        #         data_dict[self.field_name] = None
+
+        #     return
+
+        files: list[FileData] = []
+
+        for i, file in enumerate(self.upload_files):
+            if file.filename:
+                filename = file.filename
+                filename = str(datetime.datetime.utcnow()) + filename
+                if self.use_munge_filename_legacy:
+                    filename = munge.munge_filename_legacy(filename)
+                else:
+                    filename = munge.munge_filename(filename)
+
+                # this is still coupled with organization upload.
+                # If FileUploader needs to be used more broadly, refactor this.
+                organization_storagepath = os.path.join(self.storage_path, data_dict.get('name'))
+                _make_dirs_if_not_existing(organization_storagepath)
+                filepath = os.path.join(organization_storagepath, filename)
+                data_dict[self.field_name] = filename
+                data_dict['url_type'] = 'upload'
+                tmp_filepath = filepath + '~'
+                self._verify_type(file)
+
+                # TODO: should this be self.field_name ? Was originally here but seems weird to inclue.
+                scan_file_for_viruses(self.field_name, file)
+
+                files.append(FileData(
+                    filename=filename,
+                    filepath=filepath,
+                    tmp_filepath=tmp_filepath,
+                    uploaded_file=file,
+                ))
+
+                keep_files.add(filename)
+
+        self.files = files
+
+        updated_fields = {
+            self.old_file_field_name: None,
+            self.field_name: list(keep_files)
+        }
+
+        data_dict.update(updated_fields)
+
+        # raise Exception("DEBUG")
+
+    def upload(self, _max_size=None):
+        """Actually upload the file.
+        This should happen just before a commit but after the data has
+        been validated and flushed to the db. This is so we do not store
+        anything unless the request is actually good."""
+
+        for file in self.files:
+            file.upload(self.field_name, self.max_size)
+

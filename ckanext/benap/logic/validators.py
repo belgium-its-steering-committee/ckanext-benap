@@ -100,7 +100,7 @@ def modified_by_sysadmin(key, data, errors, context):
     If field is not changed, allows the request.
     """
     new_value = data.get(key)
-    
+
     old_value = _old_value(key, context)
 
     is_changing = not soft_compare_strings(str(new_value), old_value)

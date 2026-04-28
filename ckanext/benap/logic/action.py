@@ -27,7 +27,7 @@ def organization_show(context, data_dict):
         user_org_dict = tk.get_action('organization_list_for_user')(
             data_dict={'id': user_name})
 
-        return any(org['id'] == organization_id for org in user_org_dict) 
+        return any(org['id'] == organization_id for org in user_org_dict)
 
     if not user_name or (not user_is_member_of_org() and user_name != 'napcontrolbody'):
         #extra pops on NAP request
@@ -37,14 +37,14 @@ def organization_show(context, data_dict):
                    'optional_comment',
                    'agreement_declaration_mmtis',
                    'organization_agreement_declaration_nap',
-                   'proxy_pdf_url']
-        
+                   'proxy_pdf_urls']
+
         for item in popList:
             if item in result_dict:
                 result_dict.pop(item)
 
-    #END API restriction   
-    
+    #END API restriction
+
 
     image_url = result_dict.get('image_url', '')
     organization_name = result_dict.get('name', None)
@@ -70,7 +70,7 @@ def organization_list(original_action, context, data_dict):
     # The description is a {en: .., fr: ..} field, but for search this can just be seen as plain text.
     # however, will return everything if q equal to 'fr', 'nl', 'de' or 'en', so don't include
     # it in those cases.
-    extra_keys = ['display_title_en', 'display_title_fr', 
+    extra_keys = ['display_title_en', 'display_title_fr',
                    'display_title_nl', 'display_title_de']
     if q_original not in ['en', 'fr', 'nl', 'de']:
         extra_keys.append('description_translated')
@@ -80,8 +80,8 @@ def organization_list(original_action, context, data_dict):
       .filter(model.Group.is_organization == True) \
       .filter(model.Group.type == group_type)
 
-    query = query.outerjoin(model.GroupExtra, 
-                            model.GroupExtra.group_id == model.Group.id)  
+    query = query.outerjoin(model.GroupExtra,
+                            model.GroupExtra.group_id == model.Group.id)
     query = query.filter(sqlalchemy.or_(
                         model.Group.name.ilike(q),
                         model.Group.title.ilike(q),

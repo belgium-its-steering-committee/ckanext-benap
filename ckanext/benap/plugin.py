@@ -124,7 +124,7 @@ class BenapPlugin(plugins.SingletonPlugin, tk.DefaultDatasetForm, DefaultTransla
     # IFacets
     def dataset_facets(self, facets_dict, package_type):
         # This overrides the full facets list, which is not recommended by the docs, as the order
-        # that plugins add facets now matters. However, the assumption that this is done 
+        # that plugins add facets now matters. However, the assumption that this is done
         # is too far coupled in code too easily factor away. So leave this for now.
         facets_dict = OrderedDict([
             ('nap_type', _('NAP Type')),
@@ -148,7 +148,7 @@ class BenapPlugin(plugins.SingletonPlugin, tk.DefaultDatasetForm, DefaultTransla
         Is required for multiple uploads on the organization create/edit page
         '''
         blueprint = Blueprint(
-            'organization_custom', 
+            'organization_custom',
             __name__,
             url_prefix='/organization',
             url_defaults={
@@ -168,7 +168,7 @@ class BenapPlugin(plugins.SingletonPlugin, tk.DefaultDatasetForm, DefaultTransla
             view_func=EditGroupView.as_view('edit'),
             methods=['GET', 'POST']
         )
-        
+
         # Intercept GET /uploads/organization to specify file access rights for org files
         # Alternatively IMiddleware could also work
         files_access_blueprint = Blueprint(
@@ -182,7 +182,7 @@ class BenapPlugin(plugins.SingletonPlugin, tk.DefaultDatasetForm, DefaultTransla
           user_name = getattr(current_user, 'name', None)
           user_id = getattr(current_user, 'id', None)
           if not (logo_filename == file_id # public access for organization logo
-                  or authz.has_user_permission_for_group_or_org(org_id, user_id, 'read') 
+                  or authz.has_user_permission_for_group_or_org(org_id, user_id, 'read')
                   or user_name == 'napcontrolbody'):
             tk.abort(404)
 
@@ -235,7 +235,7 @@ class BenapPlugin(plugins.SingletonPlugin, tk.DefaultDatasetForm, DefaultTransla
         org_id = pkg_dict.get('organization', {}).get('id')
 
         org_data = tk.get_action('organization_show')(
-            {}, 
+            {},
             {
                 'id': org_id,
                 'include_dataset_count': False,
@@ -308,10 +308,12 @@ class BenapPlugin(plugins.SingletonPlugin, tk.DefaultDatasetForm, DefaultTransla
                     "file_type": "pdf",
                 },
                 {
-                    "field_name": "proxy_pdf_url",
+                    "field_name": "proxy_pdf_urls",
+                    "old_file_field_name": "proxy_pdf_url",
                     "file_field": "proxy_upload",
                     "clear_field": "proxy_clear_upload",
                     "file_type": "pdf",
+                    "multiple": True,
                 },
             ]
             return OrganizationUploader(upload_fields)
