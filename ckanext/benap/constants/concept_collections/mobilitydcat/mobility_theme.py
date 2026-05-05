@@ -490,26 +490,26 @@ SHARING_AND_HIRING_SERVICES = OrderedDict([
     ("https://w3id.org/mobilitydcat-ap/mobility-theme/bike-hiring-availability", {
         "en": "Bike-hiring availability",
         "nl": "Beschikbaarheid huurfietsen",
-        "fr": "Disponibilité de vélos en libre service",
-        "de": "Verfügbarkeit von Leihfahrrädern"
+        "fr": "Disponibilité de vélos en location",
+        "de": "Verfügbarkeit von Mietfahrrädern"
     }),
     ("https://w3id.org/mobilitydcat-ap/mobility-theme/bike-hiring-stations", {
         "en": "Bike-hiring stations",
         "nl": "Standplaatsen fietsverhuur",
-        "fr": "Stations de vélos en libre service",
-        "de": "Stellplätze für Leihfahrrädern"
+        "fr": "Stations de vélos en location",
+        "de": "Stationen für Mietfahrräder"
     }),
     ("https://w3id.org/mobilitydcat-ap/mobility-theme/bike-sharing-availability", {
         "en": "Bike sharing availability",
         "nl": "Beschikbaarheid deelfietsen",
-        "fr": "Disponibilité des vélos partagés",
-        "de": "Verfügbarkeit von gemeinsam genutzter Fahrräder (Bike-sharing)"
+        "fr": "Disponibilité de vélos partagés",
+        "de": "Verfügbarkeit von Bike-Sharing-Fahrrädern"
     }),
     ("https://w3id.org/mobilitydcat-ap/mobility-theme/bike-sharing-locations-and-stations", {
         "en": "Bike sharing locations and stations",
         "nl": "Locatie en standplaatsen deelfietsen",
         "fr": "Localisation et stations de vélos partagés",
-        "de": "Standorte und Stellplätze für gemeinsam genutzte Fahrräder (Bike-sharing)"
+        "de": "Standorte und Stationen von Bike-Sharing-Systemen"
     }),
     ("https://w3id.org/mobilitydcat-ap/mobility-theme/car-hiring-availability", {
         "en": "Car-hiring availability",
