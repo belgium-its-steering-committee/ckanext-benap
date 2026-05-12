@@ -1015,7 +1015,7 @@
       ],
       "error_snippet": "fluent_text.html",
       "output_validators": "fluent_core_translated_output",
-      "validators": "default({}) fluent_text",
+      "validators": "fluent_text default({})",
       "form_snippet": null,
       "display_snippet": "fluent_markdown_fallback.html"
     },
