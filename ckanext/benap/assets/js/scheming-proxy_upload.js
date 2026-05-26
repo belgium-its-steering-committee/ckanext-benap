@@ -49,7 +49,16 @@ ckan.module('scheming-proxy_upload', function($){
 
             this.field_url_input = $('input', this.field_url);
 
-            this.files = JSON.parse(this.field_url_input.val());
+            if (this.field_url_input.val() && this.field_url_input.val() != "") {
+              try {
+                this.files = JSON.parse(this.field_url_input.val());
+              } catch (e) {
+                console.error("Could not parse files", e);
+                this.files = [];
+              }
+            } else {
+              this.files = []
+            }
             this.newFiles = [];
 
             this.field_name = this.el.parents('form').find(field_name);
