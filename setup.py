@@ -82,6 +82,9 @@ setup(
         [ckan.plugins]
         benap=ckanext.benap.plugin:BenapPlugin
 
+        [ckan.rdf.profiles]
+        benap_rdf_profile=ckanext.benap.profiles:BenapProfile
+
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan
     ''',
