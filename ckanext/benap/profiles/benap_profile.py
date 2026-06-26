@@ -42,6 +42,9 @@ class BenapProfile(EuropeanMobilityDCATAPProfile):
     def parse_dataset(self, dataset_dict, dataset_ref):
         dataset_dict = super().parse_dataset(dataset_dict, dataset_ref)
 
+        dataset_dict["private"] = True
+        dataset_dict["cont_res"] = ''
+
         # Date fields
         temporal_start = self._get_dict_value(dataset_dict, 'temporal_start')
         if temporal_start:
@@ -98,6 +101,11 @@ class BenapProfile(EuropeanMobilityDCATAPProfile):
                     if resource_dict.get("conditions_usage") != CONDITIONS_USAGE_LICENSE:
                         resource_dict.pop("license_type", None)
                         resource_dict.pop("license_text_translated", None)
+
+                    # TODO: Hard Coded
+                    resource_dict["format"] = (
+                        "http://publications.europa.eu/resource/authority/file-type/XML"
+                    )
 
         dataset_dict['spatial'] = self._get_dataset_value(dataset_dict, 'spatial')
         dataset_dict['temporal_start_date'] = self._get_dataset_value(dataset_dict, 'temporal_start_date')

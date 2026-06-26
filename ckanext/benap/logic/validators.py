@@ -327,3 +327,9 @@ def benap_to_boolean_if_bool(value):
         return value.lower() == 'true'
 
     return value
+
+def benap_required_if_public(key, data, errors, context):
+    value = data[key]
+    public = data[("private",)] == 'False'
+    if not value and public:
+        raise Invalid(_("This field is required"))

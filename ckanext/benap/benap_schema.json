@@ -73,11 +73,10 @@
         "fr": "Sélectionnez pour quel(s) NAP(s) vous enregistrez le jeu de données ou le service. Il est possible de sélectionner plusieurs NAP. Il est essentiel de mentionner le(s) bon(s) NAP(s) pour être en conformité avec les Règlements délégués. Pour de plus amples informations à ce sujet et sure les différents NAP, consultez notre section A propos.",
         "de": "Wählen Sie aus, für welchen NAP Sie den Datensatz oder Dienst registrieren. Es ist möglich, mehrere NAPs auszuwählen. Es ist sehr wichting, den/die richtigen NAP(s) anzugeben, um mit den Delegierten Verordnungen zu übereinstimmen. Weitere Informationen dazu und über die verschiedenen NAPs finden Sie in unserer Seite Über."
       },
-
       "preset": "multiple_checkbox",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "nap_type",
-      "required": "true"
+      "validators": "benap_required_if_public scheming_multiple_choice"
     },
     {
       "field_name": "mobility_theme",
@@ -167,7 +166,7 @@
         "nl": "Door \"Reisinformatiedienst\" wordt een ITS dienst verstaan, die digitale kaarten inhoudt en aan gebruikers en eindgebruikers verkeers- en reisinformatie voor minstens één vervoersmiddel bezorgt. ",
         "de": "Mit \"Reiseinformationsdienst\" wird ein IVS-Dienst verstanden, der digitale Karten beinhaltet und Benutzern und End-Benutzern Verkehrs- und Reiseinformationen für zumindest ein Beförderungsmittel erteilt."
       },
-      "required": "true"
+      "validators": "benap_required_if_public scheming_choices"
     },
     {
       "field_name": "owner_org",
@@ -960,12 +959,12 @@
         "fr": "Spécifiez les conditions d'accès aux données.",
         "nl": "Geef de voorwaarden op waaronder de gegevens toegankelijk zijn.",
         "de": "Geben Sie die Bedingungen an, unter denen auf die Daten zugegriffen werden kann."
-    },
+      },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "conditions_access",
-      "required": true,
+      "required": false,
       "form_snippet": null,
-      "validators": "scheming_required scheming_choices"
+      "validators": "benap_required_if_public scheming_choices"
     },
     {
       "field_name": "conditions_usage",
@@ -983,9 +982,9 @@
       },
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "conditions_usage",
-      "required": true,
+      "required": false,
       "form_snippet": null,
-      "validators": "scheming_required scheming_choices"
+      "validators": "benap_required_if_public scheming_choices"
     },
     {
       "field_name": "additional_info_access_usage_translated",
