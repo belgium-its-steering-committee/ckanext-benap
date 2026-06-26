@@ -10,6 +10,30 @@ NARROW_THEMES = dict(
     for (narrower, _names) in narrowers
 )
 
+RIGHTS_MAPPING = dict(
+    (
+        f"https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/{key}",
+        (
+            f"https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/{access}" if access else None,
+            f"https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/{usage}" if usage else None,
+        ),
+    )
+    for key, (access, usage) in [
+        ("contractual-arrangement", (None, "contractual-arrangement")),
+        ("contractual-arrangement-fee-required", ("fee-required", "contractual-arrangement")),
+        ("contractual-arrangement-free-of-charge", ("free-of-charge", "contractual-arrangement")),
+        ("fee-required", ("fee-required", None)),
+        ("free-of-charge", ("free-of-charge", None)),
+        ("licence-provided", (None, "licence-provided")),
+        ("licence-provided-fee-required", ("fee-required", "licence-provided")),
+        ("licence-provided-free-of-charge", ("free-of-charge", "licence-provided")),
+        ("other", (None, None)),
+        ("royalty-free", ("free-of-charge", "licence-provided")),
+    ]
+)
+
+CONDITIONS_USAGE_LICENSE = "IRI: https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided"
+
 class BenapProfile(EuropeanMobilityDCATAPProfile):
 
     def parse_dataset(self, dataset_dict, dataset_ref):
@@ -47,6 +71,28 @@ class BenapProfile(EuropeanMobilityDCATAPProfile):
                 dataset_dict, new, self._get_dict_value(dataset_dict, old)
             )
 
+        # Resources
+        for distribution in self._distributions(dataset_ref):
+            distribution_ref = str(distribution)
+            for resource_dict in dataset_dict.get("resources", []):
+                # Match distribution in graph and distribution in resource dict
+                if resource_dict and distribution_ref == resource_dict.get(
+                    "distribution_ref"
+                ):
+
+                    rights_types = self._get_resource_value(resource_dict, 'rights_types')
+                    for right in rights_types:
+                        access, usage = self._access_usage_lookup(right)
+
+                        if access:
+                            resource_dict["conditions_access"] = access
+                        if usage:
+                            resource_dict["conditions_usage"] = usage
+
+                    if resource_dict["conditions_usage"] != CONDITIONS_USAGE_LICENSE:
+                        del resource_dict["license_type"]
+                        del resource_dict["license_text_translated"]
+
         dataset_dict['spatial'] = self._get_dataset_value(dataset_dict, 'spatial')
         dataset_dict['temporal_start_date'] = self._get_dataset_value(dataset_dict, 'temporal_start_date')
         dataset_dict['temporal_start_time'] = '00:00:00'
@@ -63,10 +109,17 @@ class BenapProfile(EuropeanMobilityDCATAPProfile):
 
         return dataset_dict
 
-    def _mobility_theme_lookup(self, mobility_theme):
+    def _mobility_theme_lookup(self, mobility_theme) -> tuple[str, str | None]:
         if mobility_theme in NARROW_THEMES:
             return (NARROW_THEMES[mobility_theme], mobility_theme)
         elif mobility_theme in BROAD_THEMES:
             return (mobility_theme, None)
         else:
             raise ValueError(f"Unknown mobility theme: '{mobility_theme}'")
+
+    def _access_usage_lookup(self, right) -> tuple[str | None, str | None]:
+        access_usage = RIGHTS_MAPPING.get(right)
+        if access_usage:
+            return access_usage
+        else:
+            raise ValueError(f"Unknown right type: {right}")
