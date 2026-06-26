@@ -1,6 +1,7 @@
 import json
 from ckanext.dcat_be_napits.profiles.euro_mobility_dcat_ap import EuropeanMobilityDCATAPProfile
 from ckanext.benap.constants.mobility_theme_form import MOBILITY_THEME_BROADER_NARROWER_MAPPING
+from ckanext.benap.constants.concept_collections.eu_authority.license_type import LICENSE_TYPE
 
 BROAD_THEMES = set(broader for (broader, _narrower) in MOBILITY_THEME_BROADER_NARROWER_MAPPING)
 NARROW_THEMES = dict(
@@ -32,7 +33,9 @@ RIGHTS_MAPPING = dict(
     ]
 )
 
-CONDITIONS_USAGE_LICENSE = "IRI: https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided"
+CONDITIONS_USAGE_LICENSE = "https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided"
+
+LICENSE_TYPE_URIS = set(uri for (uri, _text) in LICENSE_TYPE)
 
 class BenapProfile(EuropeanMobilityDCATAPProfile):
 
@@ -89,9 +92,12 @@ class BenapProfile(EuropeanMobilityDCATAPProfile):
                         if usage:
                             resource_dict["conditions_usage"] = usage
 
-                    if resource_dict["conditions_usage"] != CONDITIONS_USAGE_LICENSE:
-                        del resource_dict["license_type"]
-                        del resource_dict["license_text_translated"]
+                    if resource_dict["license"] in LICENSE_TYPE_URIS:
+                        resource_dict["license_type"] = resource_dict["license"]
+
+                    if resource_dict.get("conditions_usage") != CONDITIONS_USAGE_LICENSE:
+                        resource_dict.pop("license_type", None)
+                        resource_dict.pop("license_text_translated", None)
 
         dataset_dict['spatial'] = self._get_dataset_value(dataset_dict, 'spatial')
         dataset_dict['temporal_start_date'] = self._get_dataset_value(dataset_dict, 'temporal_start_date')
