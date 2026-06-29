@@ -85,6 +85,8 @@ class BenapProfile(EuropeanMobilityDCATAPProfile):
                 if resource_dict and distribution_ref == resource_dict.get(
                     "distribution_ref"
                 ):
+                    resource_dict["conditions_access"] = ''
+                    resource_dict["conditions_usage"] = ''
 
                     rights_types = self._get_resource_value(resource_dict, 'rights_types')
                     for right in rights_types:
