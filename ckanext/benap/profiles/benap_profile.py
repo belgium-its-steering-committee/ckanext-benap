@@ -1,4 +1,4 @@
-import json
+import ckan.plugins.toolkit as tk
 from ckanext.dcat_be_napits.profiles.euro_mobility_dcat_ap import EuropeanMobilityDCATAPProfile
 from ckanext.benap.constants.mobility_theme_form import MOBILITY_THEME_BROADER_NARROWER_MAPPING
 from ckanext.benap.constants.concept_collections.eu_authority.license_type import LICENSE_TYPE
@@ -114,6 +114,17 @@ class BenapProfile(EuropeanMobilityDCATAPProfile):
         dataset_dict['temporal_end_date'] = self._get_dataset_value(dataset_dict, 'temporal_end_date')
         dataset_dict['temporal_end_time'] = '00:00:00'
         dataset_dict['temporal_end_tz'] = 'UTC'
+
+        organizations = tk.get_action("organization_list")(
+            {}, {"q": dataset_dict["publisher_name"]}
+        )
+
+        if not organizations:
+            raise ValueError(f"Could not find organization: {dataset_dict['publisher_name']}")
+        elif len(organizations) > 1:
+            raise ValueError(f"Too many organizations match: {dataset_dict['publisher_name']}")
+        else:
+            dataset_dict['owner_org'] = organizations[0]
 
         dataset_dict['extras'] = [
             entry
