@@ -42,9 +42,6 @@ class BenapProfile(EuropeanMobilityDCATAPProfile):
     def parse_dataset(self, dataset_dict, dataset_ref):
         dataset_dict = super().parse_dataset(dataset_dict, dataset_ref)
 
-        dataset_dict["private"] = True
-        dataset_dict["cont_res"] = ''
-
         # Date fields
         temporal_start = self._get_dict_value(dataset_dict, 'temporal_start')
         if temporal_start:
@@ -85,8 +82,6 @@ class BenapProfile(EuropeanMobilityDCATAPProfile):
                 if resource_dict and distribution_ref == resource_dict.get(
                     "distribution_ref"
                 ):
-                    resource_dict["conditions_access"] = ''
-                    resource_dict["conditions_usage"] = ''
 
                     rights_types = self._get_resource_value(resource_dict, 'rights_types')
                     for right in rights_types:
