@@ -105,17 +105,21 @@ class BenapProfile(EuropeanMobilityDCATAPProfile):
                         resource_dict.pop("license_text_translated", None)
 
                     # TODO: Hard Coded
-                    resource_dict["format"] = (
-                        "http://publications.europa.eu/resource/authority/file-type/XML"
-                    )
+                    # resource_dict["format"] = (
+                    #     "http://publications.europa.eu/resource/authority/file-type/XML"
+                    # )
 
         dataset_dict['spatial'] = self._get_dataset_value(dataset_dict, 'spatial')
-        dataset_dict['temporal_start_date'] = self._get_dataset_value(dataset_dict, 'temporal_start_date')
-        dataset_dict['temporal_start_time'] = '00:00:00'
-        dataset_dict['temporal_start_tz'] = 'UTC'
-        dataset_dict['temporal_end_date'] = self._get_dataset_value(dataset_dict, 'temporal_end_date')
-        dataset_dict['temporal_end_time'] = '00:00:00'
-        dataset_dict['temporal_end_tz'] = 'UTC'
+        start_date = self._get_dataset_value(dataset_dict, 'temporal_start_date')
+        if start_date:
+            dataset_dict['temporal_start_date'] = start_date
+            dataset_dict['temporal_start_time'] = '00:00:00'
+            dataset_dict['temporal_start_tz'] = 'UTC'
+        end_date = self._get_dataset_value(dataset_dict, 'temporal_end_date')
+        if end_date:
+            dataset_dict['temporal_end_date'] = end_date
+            dataset_dict['temporal_end_time'] = '00:00:00'
+            dataset_dict['temporal_end_tz'] = 'UTC'
 
         organizations = tk.get_action("organization_list")(
             {}, {"q": dataset_dict["publisher_name"]}
