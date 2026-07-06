@@ -42,6 +42,7 @@ ckan.module('scheming-proxy_upload', function($){
             this.uploadedFileName = $('#uploaded-file-name', this.el);
 
             this.input = $(field_upload, this.el);
+            this.inputs = [this.input];
 
             this.field_url = $(field_url, this.el).parents('.form-group').first();
 
@@ -109,12 +110,7 @@ ckan.module('scheming-proxy_upload', function($){
             $('label[for="field-proxy-upload"]').text(options.upload_label || this._('Image'));
 
             // Setup the file upload input
-            this.input
-            .on('mouseover', this._onInputMouseOver)
-            .on('mouseout', this._onInputMouseOut)
-            .on('change', this._onInputChange)
-            .prop('title', this._('Upload a file on your computer'))
-            .css('width', this.button_upload.outerWidth());
+            this._setupInput();
 
             // Fields storage. Used in this.changeState
             this.fields = $('<i />')
@@ -148,6 +144,17 @@ ckan.module('scheming-proxy_upload', function($){
             }
         },
 
+      /* Setup the file upload input
+      */
+      _setupInput: function(input) {
+        (input ?? this.input)
+          .on('mouseover', this._onInputMouseOver)
+          .on('mouseout', this._onInputMouseOut)
+          .on('change', this._onInputChange)
+          .prop('title', this._('Upload a file on your computer'))
+          .css('width', this.button_upload.outerWidth());
+      },
+
        /* Update the `this.label_location` text
        *
        * If the upload/link is for a data resource, rather than an image,
@@ -178,7 +185,9 @@ ckan.module('scheming-proxy_upload', function($){
        * Returns nothing.
        */
       _onRemove: function() {
-        // this._showOnlyButtons();
+        this._cloneInput();
+        this.inputs.forEach((input) => input.val([]));
+        this.inputs = [this.input];
 
         this.newFiles = [];
         this._updateUrlInput();
@@ -208,26 +217,46 @@ ckan.module('scheming-proxy_upload', function($){
         var isIE = !!document.documentMode;
         var isEdge = !isIE && !!window.StyleMedia;
 
-        const fileNames = Array.prototype.map.call(this.input[0].files, (file) => {
-          let fileName = file.name.split(/^C:\\fakepath\\/).pop();
-          // for IE/Edge when 'include filepath option' is enabled
-          if (isIE || isEdge) {
-            var fName = fileName.match(/[^\\\/]+$/);
-            fileName = fName ? fName[0] : fileName;
-          }
-          return fileName;
-        })
+        const fileNames = this.inputs.flatMap(
+          (input) => {
+            return Array.prototype.map.call(input[0].files, (file) => {
+              let fileName = file.name.split(/^C:\\fakepath\\/).pop();
+              // for IE/Edge when 'include filepath option' is enabled
+              if (isIE || isEdge) {
+                var fName = fileName.match(/[^\\\/]+$/);
+                fileName = fName ? fName[0] : fileName;
+              }
+              return fileName;
+            });
+          });
 
         this.newFiles = fileNames;
         this._updateUrlInput();
 
         this.field_clear.val('');
 
-        this._showOnlyUploadedFile();
+        this.uploadedFile.show();
+        this._cloneInput();
 
         this.uploadedFileName.text(fileNames.join(", "));
 
         this._updateUrlLabel(this._('File'));
+
+        this._onInputMouseOut();
+      },
+
+      /* Clone and add new input element
+       */
+      _cloneInput() {
+        const oldInput = this.input.first();
+        const newInput = this.input.clone();
+        newInput.insertBefore(oldInput);
+        newInput.val([]);
+        oldInput.hide();
+        this.input = newInput;
+        this.inputs.push(newInput);
+        this._setupInput(newInput);
+        return newInput;
       },
 
       /* Show only the buttons, hiding all others
