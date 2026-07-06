@@ -99,11 +99,6 @@ class BenapProfile(EuropeanMobilityDCATAPProfile):
                         resource_dict.pop("license_type", None)
                         resource_dict.pop("license_text_translated", None)
 
-                    # TODO: Hard Coded
-                    # resource_dict["format"] = (
-                    #     "http://publications.europa.eu/resource/authority/file-type/XML"
-                    # )
-
         dataset_dict['spatial'] = self._get_dataset_value(dataset_dict, 'spatial')
         start_date = self._get_dataset_value(dataset_dict, 'temporal_start_date')
         if start_date:
