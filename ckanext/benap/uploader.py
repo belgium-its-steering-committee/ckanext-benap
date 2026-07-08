@@ -378,7 +378,7 @@ class MultiFileUploader(FileUploader):
             if legacy_filename:
                 old_filenames.add(legacy_filename)
             else:
-                old_filenames.update(old_organization.get(self.field_name))
+                old_filenames.update(old_organization.get(self.field_name, []))
         except tk.ObjectNotFound:
             old_filenames = None
 
