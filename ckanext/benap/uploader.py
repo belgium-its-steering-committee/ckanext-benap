@@ -222,7 +222,7 @@ class FileUploader(object):
                 self.filepath = os.path.join(organization_storagepath, self.filename)
                 data_dict[self.field_name] = self.filename
                 data_dict['url_type'] = 'upload'
-                # self.upload_file = _get_underlying_file(self.upload_field_storage)
+                self.upload_file = _get_underlying_file(self.upload_field_storage)
                 self.tmp_filepath = self.filepath + '~'
                 self._verify_type(self.upload_field_storage)
 
@@ -380,7 +380,7 @@ class MultiFileUploader(FileUploader):
             else:
                 old_filenames.update(old_organization.get(self.field_name, []))
         except tk.ObjectNotFound:
-            old_filenames = None
+            pass
 
         keep_files = json.loads(data_dict[self.field_name]) if self.field_name in data_dict else []
         delete_files = old_filenames.difference(keep_files)
