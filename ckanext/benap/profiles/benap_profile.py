@@ -2,6 +2,8 @@ import ckan.plugins.toolkit as tk
 from ckanext.dcat_be_napits.profiles.euro_mobility_dcat_ap import EuropeanMobilityDCATAPProfile
 from ckanext.benap.constants.mobility_theme_form import MOBILITY_THEME_BROADER_NARROWER_MAPPING
 from ckanext.benap.constants.concept_collections.eu_authority.license_type import LICENSE_TYPE
+from ckanext.dcat.profiles.base import URIRefOrLiteral, CleanedURIRef
+from ckanext.dcat.utils import resource_uri
 
 BROAD_THEMES = set(broader for (broader, _narrower) in MOBILITY_THEME_BROADER_NARROWER_MAPPING)
 NARROW_THEMES = dict(
@@ -84,20 +86,24 @@ class BenapProfile(EuropeanMobilityDCATAPProfile):
                 ):
 
                     rights_types = self._get_resource_value(resource_dict, 'rights_types')
+                    conditions_usage = set()
                     for right in rights_types or []:
                         access, usage = self._access_usage_lookup(right)
 
                         if access:
                             resource_dict["conditions_access"] = access
                         if usage:
-                            resource_dict["conditions_usage"] = usage
+                            conditions_usage.add(usage)
 
                     if resource_dict["license"] in LICENSE_TYPE_URIS:
                         resource_dict["license_type"] = resource_dict["license"]
 
-                    if resource_dict.get("conditions_usage") != CONDITIONS_USAGE_LICENSE:
+                    if CONDITIONS_USAGE_LICENSE not in conditions_usage:
                         resource_dict.pop("license_type", None)
                         resource_dict.pop("license_text_translated", None)
+
+                    if conditions_usage:
+                        resource_dict["conditions_usage"] = list(conditions_usage)
 
         dataset_dict['spatial'] = self._get_dataset_value(dataset_dict, 'spatial')
         start_date = self._get_dataset_value(dataset_dict, 'temporal_start_date')
