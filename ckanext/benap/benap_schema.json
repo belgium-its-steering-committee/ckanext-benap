@@ -583,6 +583,7 @@
       "display_property": "dct:accrualPeriodicity",
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
+      "form_snippet": "select_with_hidden.html",
       "help_text": {
         "en": "Describes the update rate of the data set.",
         "fr": "Décrit le taux de mise à jour du jeu de données.",
@@ -800,6 +801,7 @@
       "preset": "select",
       "choices_helper": "benap_ontology_helper",
       "benap_helper_ontology": "syntax",
+      "form_snippet": "select_with_hidden.html",
       "help_text": {
         "en": "This describes the base standard that specifies syntactically correct documents.",
         "fr": "Ceci décrit le standard de la base spécifiant les documents syntaxiquement corrects.",
@@ -1039,7 +1041,7 @@
       "nested_fields": [
         {
           "field_name": "license_type",
-          "form_snippet": "select.html"
+          "form_snippet": "select_with_hidden.html"
         },
         {
           "field_name": "license_text_translated",

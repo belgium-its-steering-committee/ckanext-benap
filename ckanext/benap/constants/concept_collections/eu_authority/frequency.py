@@ -8,6 +8,7 @@ FREQUENCY = [
             "nl": "Elke minuut",
             "de": "Minütlich",
         },
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/5MIN",
@@ -17,6 +18,7 @@ FREQUENCY = [
             "nl": "Om de vijf minuten",
             "de": "Alle fünf Minuten",
         },
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/10MIN",
@@ -26,6 +28,7 @@ FREQUENCY = [
             "nl": "Om de tien minuten",
             "de": "Alle zehn Minuten",
         },
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/15MIN",
@@ -35,6 +38,7 @@ FREQUENCY = [
             "nl": "Om de vijftien minuten",
             "de": "Viertelstündlich",
         },
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/30MIN",
@@ -44,6 +48,7 @@ FREQUENCY = [
             "nl": "Om de dertig minuten",
             "de": "Halbstündlich",
         },
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/HOURLY",
@@ -53,6 +58,7 @@ FREQUENCY = [
             "nl": "Om het uur",
             "de": "Stündlich",
         },
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/BIHOURLY",
@@ -62,6 +68,7 @@ FREQUENCY = [
             "nl": "Om de twee uur",
             "de": "Alle zwei Stunden",
         },
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/TRIHOURLY",
@@ -71,6 +78,7 @@ FREQUENCY = [
             "nl": "Om de drie uur",
             "de": "Alle drei Stunden",
         },
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/12HRS",
@@ -80,18 +88,22 @@ FREQUENCY = [
             "nl": "Om de twaalf uur",
             "de": "Alle zwölf Stunden",
         },
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/DAILY",
         {"en": "Daily", "fr": "Quotidien", "nl": "Dagelijks", "de": "Täglich"},
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/WEEKLY",
         {"en": "Weekly", "fr": "Hebdomadaire", "nl": "Wekelijks", "de": "Wöchentlich"},
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/MONTHLY",
         {"en": "Monthly", "fr": "Mensuel", "nl": "Maandelijks", "de": "Monatlich"},
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/QUARTERLY",
@@ -101,6 +113,7 @@ FREQUENCY = [
             "nl": "Driemaandelijks",
             "de": "Vierteljährlich",
         },
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/ANNUAL_2",
@@ -110,10 +123,12 @@ FREQUENCY = [
             "nl": "Halfjaarlijks",
             "de": "Halbjährlich",
         },
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
         {"en": "Annual", "fr": "Annuel", "nl": "Jaarlijks", "de": "Jährlich"},
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/IRREG",
@@ -123,6 +138,7 @@ FREQUENCY = [
             "nl": "Minder vaak dan één keer per jaar",
             "de": "Weniger häufig als einmal pro Jahr",
         },
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/IRREG",
@@ -132,6 +148,7 @@ FREQUENCY = [
             "nl": "Zodra beschikbaar",
             "de": "Sofort",
         },
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/IRREG",
@@ -141,10 +158,12 @@ FREQUENCY = [
             "nl": "Onregelmatig",
             "de": "Unregelmäßig",
         },
+        False,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/UNKNOWN",
         {"de": "Unknown", "en": "Unknown", "fr": "Inconnu", "nl": "Unknown"},
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/TRIDECENNIAL",
@@ -154,6 +173,7 @@ FREQUENCY = [
             "fr": "Tous les trente ans",
             "nl": "Tridecennial",
         },
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/DAILY_2",
@@ -163,6 +183,7 @@ FREQUENCY = [
             "fr": "Deux fois par jour",
             "nl": "Twice a day",
         },
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT",
@@ -172,10 +193,12 @@ FREQUENCY = [
             "fr": "Continuously updated",
             "nl": "Continuously updated",
         },
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/OTHER",
         {"de": "Other", "en": "Other", "fr": "Other", "nl": "Other"},
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/MONTHLY_3",
@@ -185,10 +208,12 @@ FREQUENCY = [
             "fr": "Three times a month",
             "nl": "Three times a month",
         },
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/SEXENNIAL",
         {"de": "Sexennial", "en": "Sexennial", "fr": "Sexennial", "nl": "Sexennial"},
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/MONTHLY_2",
@@ -198,6 +223,7 @@ FREQUENCY = [
             "fr": "Bimensuel",
             "nl": "Semimonthly",
         },
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/WEEKLY_5",
@@ -207,6 +233,7 @@ FREQUENCY = [
             "fr": "Five times a week",
             "nl": "Five times a week",
         },
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/BIDECENNIAL",
@@ -216,6 +243,7 @@ FREQUENCY = [
             "fr": "Tous les vingt ans",
             "nl": "Bidecennial",
         },
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/WEEKLY_3",
@@ -225,10 +253,12 @@ FREQUENCY = [
             "fr": "Trois fois par semaine",
             "nl": "Drie keer per week",
         },
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/DECENNIAL",
         {"de": "Decennial", "en": "Decennial", "fr": "Decennial", "nl": "Decennial"},
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/QUINQUENNIAL",
@@ -238,14 +268,17 @@ FREQUENCY = [
             "fr": "Tous les cinq ans",
             "nl": "Om de vijf jaar",
         },
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/AS_NEEDED",
         {"de": "As needed", "en": "As needed", "fr": "As needed", "nl": "As needed"},
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/BIENNIAL",
         {"de": "Biennial", "en": "Biennial", "fr": "Biennal", "nl": "Biennial"},
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/ANNUAL_3",
@@ -255,6 +288,7 @@ FREQUENCY = [
             "fr": "Trois fois par an",
             "nl": "Three times a year",
         },
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/QUADRENNIAL",
@@ -264,10 +298,12 @@ FREQUENCY = [
             "fr": "Tous les quatre ans",
             "nl": "Quadrennial",
         },
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/BIMONTHLY",
         {"de": "Bimonthly", "en": "Bimonthly", "fr": "Bimestriel", "nl": "Bimonthly"},
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/OP_DATPRO",
@@ -277,14 +313,17 @@ FREQUENCY = [
             "fr": "Provisional data",
             "nl": "Provisional data",
         },
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/TRIENNIAL",
         {"de": "Triennial", "en": "Triennial", "fr": "Triennial", "nl": "Triennial"},
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/BIWEEKLY",
         {"de": "Biweekly", "en": "Biweekly", "fr": "Biweekly", "nl": "Biweekly"},
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/WEEKLY_2",
@@ -294,6 +333,7 @@ FREQUENCY = [
             "fr": "Bihebdomadaire",
             "nl": "Twee keer per week",
         },
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/NOT_PLANNED",
@@ -303,13 +343,16 @@ FREQUENCY = [
             "fr": "Non planifié",
             "nl": "Not planned",
         },
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/NEVER",
         {"de": "Never", "en": "Never", "fr": "Jamais", "nl": "Never"},
+        True,
     ),
     (
         "http://publications.europa.eu/resource/authority/frequency/CONT",
         {"de": "Continuous", "en": "Continuous", "fr": "Continuel", "nl": "Continuous"},
+        True,
     ),
 ]
