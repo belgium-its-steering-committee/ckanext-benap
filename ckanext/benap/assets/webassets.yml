@@ -22,6 +22,7 @@ transportdata-js:
     - js/nested-field-license.js
     - js/contact_point_autocomplete.js
     - js/toggle-section.js
+    - js/benap-select-autocomplete.js
   extra:
     preload:
       - base/main

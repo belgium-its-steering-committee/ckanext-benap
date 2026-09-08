@@ -215,10 +215,14 @@ def license_fields_conditional_validation(key, flattened_data, errors, context):
     def create_key(field_name):
         return ('resources', index, field_name)
     license_type = flattened_data.get(create_key('license_type'))
-    conditions_usage = flattened_data.get(create_key('conditions_usage'))
+    conditions_usage_raw = flattened_data.get(create_key('conditions_usage'))
+    try:
+        conditions_usage = set(json.loads(conditions_usage_raw))
+    except json.JSONDecodeError:
+        conditions_usage = {conditions_usage_raw}
     field_value = flattened_data.get(key)
 
-    if conditions_usage == 'https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided':
+    if 'https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided' in conditions_usage:
         if key_field_name == 'license_type':
             if not field_value:
                 raise Invalid(_('The license type is missing. This is required because "License" was chosen as the condition for usage.'))
@@ -327,3 +331,9 @@ def benap_to_boolean_if_bool(value):
         return value.lower() == 'true'
 
     return value
+
+def benap_required_if_public(key, data, errors, context):
+    value = data[key]
+    public = data.get(("private",), 'True') == 'False'
+    if not value and public:
+        raise Invalid(_("This field is required"))
