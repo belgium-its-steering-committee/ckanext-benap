@@ -37,7 +37,7 @@ RIGHTS_MAPPING = dict(
 
 CONDITIONS_USAGE_LICENSE = "https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided"
 
-LICENSE_TYPE_URIS = set(uri for (uri, _text) in LICENSE_TYPE)
+LICENSE_TYPE_URIS = set(lt[0] for lt in LICENSE_TYPE)
 
 class BenapProfile(EuropeanMobilityDCATAPProfile):
 
