@@ -117,6 +117,8 @@ class BenapProfile(EuropeanMobilityDCATAPProfile):
             dataset_dict['temporal_end_time'] = '00:00:00'
             dataset_dict['temporal_end_tz'] = 'UTC'
 
+        if "publisher_name" not in dataset_dict:
+            raise ValueError("No publisher name given")
         organizations = tk.get_action("organization_list")(
             {}, {"q": dataset_dict["publisher_name"]}
         )
