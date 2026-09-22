@@ -156,4 +156,23 @@ def _organization_change(original_action, context, data_dict):
 
     return organization
 
+@tk.chained_action
+def package_update(original_action, context, data_dict):
+    """
+    Keep the extras field from the previous package if not provided.
+
+    This helps keep harvesting info after editing a record.
+    """
+    if "extras" not in data_dict:
+        show_context = {"ignore_auth": True, **context}
+        original_package = tk.get_action("package_show")(
+            show_context,
+            {
+                "id": data_dict["id"],
+            },
+        )
+        if "extras" in original_package:
+            data_dict["extras"] = original_package["extras"]
+
+    return original_action(context, data_dict)
 

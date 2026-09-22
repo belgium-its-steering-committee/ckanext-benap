@@ -9,6 +9,7 @@ ckan.module('nested-field-license', function ($) {
   return {
     initialize: function () {
       const $conditionsUsageField = $('#field-conditions_usage');
+      const licenseCheckbox = document.getElementById('field-conditions_usage-https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided')
       const $licenseTypeField = $('#field-license_type');
       const $asteriskElement = $('#license-asterisk');
       const $licenseFieldset = $('#license-fieldset');
@@ -39,10 +40,7 @@ ckan.module('nested-field-license', function ($) {
       }
 
       function updateConditionsForUsage() {
-        if (
-          $conditionsUsageField.val() ===
-          'https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided'
-        ) {
+        if (licenseCheckbox.checked) {
           toggleFieldRequired('field-license_type', true);
           $asteriskElement.show();
           toggleFieldsetDisability($licenseFieldset, false);
@@ -54,7 +52,7 @@ ckan.module('nested-field-license', function ($) {
         }
       }
 
-      $conditionsUsageField.on('change', updateConditionsForUsage);
+      licenseCheckbox.addEventListener('change', updateConditionsForUsage);
       updateConditionsForUsage();
 
       function updateLicenseTextField() {

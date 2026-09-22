@@ -22,7 +22,7 @@ from ckanext.benap.util.forms import map_for_form_select
 from ckanext.benap.logic.validators import benap_convert_nap_checked, benap_date_to_true, benap_to_boolean_if_bool, phone_number_validator, \
     countries_covered_belgium, is_after_start, https_validator, modified_by_sysadmin, benap_keep_value_if_not_sysadmin,\
     is_choice_null, contact_point_org_fields_consistency_check, \
-    license_fields_conditional_validation, benap_tag_string_convert, fluent_tags_validator, category_sub_category_validator
+    license_fields_conditional_validation, benap_tag_string_convert, fluent_tags_validator, category_sub_category_validator, benap_required_if_public
 from ckanext.benap.helpers.concepts import get_concept_label
 
 from ckanext.benap.logic.auth.get import member_list, user_autocomplete, user_list
@@ -110,6 +110,7 @@ class BenapPlugin(plugins.SingletonPlugin, tk.DefaultDatasetForm, DefaultTransla
             'benap_convert_nap_checked': benap_convert_nap_checked,
             'benap_date_to_true': benap_date_to_true,
             'benap_to_boolean_if_bool': benap_to_boolean_if_bool,
+            'benap_required_if_public': benap_required_if_public,
         }
 
     # IAuthFunctions

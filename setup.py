@@ -81,6 +81,10 @@ setup(
     entry_points='''
         [ckan.plugins]
         benap=ckanext.benap.plugin:BenapPlugin
+        benap_dcat_rdf_harvester=ckanext.benap.harvesters:BenapDCATRDFHarvester
+
+        [ckan.rdf.profiles]
+        benap_rdf_profile=ckanext.benap.profiles:BenapProfile
 
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan
