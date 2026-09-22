@@ -585,9 +585,10 @@
       "choices_helper": "benap_ontology_helper",
       "form_snippet": "select_with_hidden.html",
       "help_text": {
-        "en": "Describes the update rate of the data set.",
+        "_todo": "TODO: TRANSLATE",
+        "en": "Describes the update rate of the data set. Start typing to search all possible options.",
         "fr": "Décrit le taux de mise à jour du jeu de données.",
-        "nl": "Beschrijft de bijwerkingsfrequentie van de dataset.",
+        "nl": "Beschrijft de bijwerkingsfrequentie van de dataset. Begin te typen om alle opties te doorzoeken.",
         "de": "Beschreibt die Update-Rate des Datensatzes."
       },
       "benap_helper_ontology": "frequency",
@@ -803,9 +804,10 @@
       "benap_helper_ontology": "syntax",
       "form_snippet": "select_with_hidden.html",
       "help_text": {
-        "en": "This describes the base standard that specifies syntactically correct documents.",
+        "_todo": "TODO: TRANSLATE",
+        "en": "This describes the base standard that specifies syntactically correct documents. Start typing to search all possible options.",
         "fr": "Ceci décrit le standard de la base spécifiant les documents syntaxiquement corrects.",
-        "nl": "Dit beschrijft de databasestandaard die syntactisch correcte documenten bepaalt.",
+        "nl": "Dit beschrijft de databasestandaard die syntactisch correcte documenten bepaalt. Begin te typen om alle opties te doorzoeken.",
         "de": "Es beschreibt den Datenbankstandard, der syntaktisch korrekte Dokumente spezifiziert."
       },
       "required": "true"
@@ -1058,9 +1060,10 @@
         "de": "Lizenztyp"
       },
       "help_text": {
-        "en": "Select a standard license from the dropdown list or “Other” in case of custom-made license.",
+        "_todo": "TODO: TRANSLATE",
+        "en": "Select a standard license from the dropdown list or “Other” in case of custom-made license. Start typing to search all possible options.",
         "fr": "Sélectionnez une licence standard dans la liste déroulante ou “Autre” dans le cas d'une licence sur mesure.",
-        "nl": "Selecteer een standaardlicentie uit de vervolgkeuzelijst of “Andere” in het geval van een op maat gemaakte licentie.",
+        "nl": "Selecteer een standaardlicentie uit de vervolgkeuzelijst of “Andere” in het geval van een op maat gemaakte licentie. Begin te typen om alle opties te doorzoeken.",
         "de": "Wählen Sie eine Standardlizenz aus der Dropdown-Liste oder “Andere” im Falle einer maßgeschneiderten Lizenz aus."
       },
       "choices_helper": "benap_ontology_helper",
