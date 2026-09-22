@@ -1,7 +1,10 @@
 {% ckan_extends %}
-
-{# 
-  This is a patch for an upstream bug, can be removed if 
+{% block meta %}
+  {{ super() }}
+  <meta name="robots" content="noindex">
+{% endblock %}
+{#
+  This is a patch for an upstream bug, can be removed if
   https://github.com/ckan/ckan/pull/8975 is merged
  #}
 {% block secondary_content %}
