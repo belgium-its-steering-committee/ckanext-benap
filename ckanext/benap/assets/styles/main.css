@@ -820,3 +820,80 @@ span.item-label {
       filter: brightness(75%);
   }
 }
+
+/* Facet list rendered as an auto-submitting checkbox form (snippets/facet_list.html).
+   The checkboxes are visually hidden, the facet items are label elements.
+   These rules mirror the ckan core and benap `a`-based facet styling onto label. */
+.facet-form .nav-item input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    pointer-events: none;
+}
+
+.module-narrow .nav-item > label {
+    text-decoration: none;
+    display: block;
+    color: #333;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: -7px -25px;
+    padding: 10px 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.module-narrow .nav-item > label:hover {
+    text-decoration: none;
+    background-color: #eeeeee;
+}
+
+.module-narrow .nav-item > label::after {
+    content: "";
+}
+.module-narrow .nav-item > label .badge {
+    background: #efefef;
+    color: #666;
+    border-radius: 10px;
+}
+
+.module-narrow .nav-item.active > label {
+    position: relative;
+    color: #FFF;
+    background-color: #11406e;
+}
+
+.module-narrow .nav-item.active > label:hover {
+    color: #FFF;
+    background-color: rgb(100, 122, 130);
+}
+
+.module-narrow .nav-item.active > label::before {
+    content: " ";
+    position: absolute;
+    border: 20px solid transparent;
+    border-right: none;
+    border-left-color: #11406e;
+    border-left-width: 6px;
+    top: 0;
+    bottom: 0;
+    right: -6px;
+    width: 6px;
+    height: 34px;
+}
+
+.module-narrow .nav-item.active > label:hover::before {
+    border-left-color: rgb(100, 122, 130);
+}
+
+.module-narrow .nav-item.active > label span {
+    white-space: nowrap;
+}
+
+.module-narrow .nav-item > label:has(input:focus-visible) {
+    outline: 2px solid #11406e;
+    outline-offset: -2px;
+}

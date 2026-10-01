@@ -23,6 +23,7 @@ transportdata-js:
     - js/contact_point_autocomplete.js
     - js/toggle-section.js
     - js/benap-select-autocomplete.js
+    - js/facet-form.js
   extra:
     preload:
       - base/main
