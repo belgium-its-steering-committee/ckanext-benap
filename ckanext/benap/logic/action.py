@@ -1,3 +1,4 @@
+from itertools import chain
 import ckan.plugins.toolkit as tk
 from ckan.logic.action.get import organization_show as vanilla_organization_show
 from ckan.lib.helpers import url_for_static
@@ -114,7 +115,13 @@ def _organization_change(original_action, context, data_dict):
     logger = logging.getLogger('ckanext-benap')
     organization = original_action(context, data_dict)
 
-    files = [data_dict[doc] for doc in DOC_FIELDS.keys() if data_dict[doc]]
+    files = (data_dict[doc] for doc in DOC_FIELDS.keys() if data_dict[doc])
+    files = (
+        (f["value"] for f in file) if isinstance(file, list) else (file,)
+        for file in files
+    )
+    # Flatten generator
+    files = list(chain(*files))
     if files:
         logger.info("Mailing sysadmins...")
 
