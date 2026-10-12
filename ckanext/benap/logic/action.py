@@ -38,6 +38,7 @@ def organization_show(context, data_dict):
                    'optional_comment',
                    'agreement_declaration_mmtis',
                    'organization_agreement_declaration_nap',
+                   'proxy_pdf_url',
                    'proxy_pdf_urls']
 
         for item in popList:
