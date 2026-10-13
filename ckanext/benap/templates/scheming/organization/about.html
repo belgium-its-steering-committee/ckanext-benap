@@ -44,15 +44,6 @@
             </ul>
           </dd>
         {% endif %}
-    {% elif f.field_name in ('proxy_pdf_url',) %}
-        {% if f.field_name in c.group_dict %}
-          <dt>{{ h.scheming_language_text(f.label) }}:</dt>
-          <dd>
-            <a href="{{ h.get_site_protocol_and_host()[0] }}://{{ h.get_site_protocol_and_host()[1] }}/uploads/organization/{{ c.group_dict['name'] }}/{{ c.group_dict[f.field_name] }}" target="_blank">
-              {{ c.group_dict[f.field_name] }}
-            </a>
-          </dd>
-        {% endif %}
     {% elif f.field_name in ('agreement_declaration_mmtis', 'organization_agreement_declaration_nap') %}
         {% if f.field_name in c.group_dict %}
             <dt>{{ h.scheming_language_text(f.label) }}:</dt>

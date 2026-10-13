@@ -13,8 +13,19 @@ def organization_show(context, data_dict):
     """
     adjust contents of image_display_url
     """
+    data_dict['include_extras'] = True
 
     result_dict = vanilla_organization_show(context, data_dict)
+
+    # Get legacy proxy pdf
+    proxy_pdf = (
+        extra['value']
+        for extra in result_dict.get('extras', [])
+        if extra['key'] == 'proxy_pdf_url'
+    )
+
+    result_dict["proxy_pdf_urls"] = result_dict.get("proxy_pdf_urls", [])
+    result_dict["proxy_pdf_urls"].extend(proxy_pdf)
 
     #API restriction for not logged-in users
 
@@ -38,7 +49,6 @@ def organization_show(context, data_dict):
                    'optional_comment',
                    'agreement_declaration_mmtis',
                    'organization_agreement_declaration_nap',
-                   'proxy_pdf_url',
                    'proxy_pdf_urls']
 
         for item in popList:
